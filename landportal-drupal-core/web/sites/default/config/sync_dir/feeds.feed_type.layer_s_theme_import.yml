@@ -1,0 +1,90 @@
+uuid: 583f5244-30b3-4eb6-9adc-79f67328532a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.layer.field_related_themes
+    - taxonomy.vocabulary.layer
+  module:
+    - taxonomy
+label: 'Layer''s theme import'
+id: layer_s_theme_import
+description: 'In this feed we will import themes field inside layer''s vocabulary.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: layer
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  themes:
+    value: Themes
+    label: Themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: Themes1
+    label: Themes1
+    machine_name: themes1
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_related_themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

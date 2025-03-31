@@ -1,0 +1,18 @@
+uuid: 798f7a46-8710-4f17-a33b-f477e7b9f497
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.impact_story
+target_entity_type_id: node
+target_bundle: impact_story
+default_langcode: und
+language_alterable: false

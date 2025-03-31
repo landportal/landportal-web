@@ -1,0 +1,15 @@
+uuid: 18baa86e-b838-497a-96dc-118ac30fe9e2
+langcode: en
+status: true
+dependencies: {  }
+name: medium_large
+label: 'Medium Large(480x320)'
+effects:
+  e81f6b14-b447-4730-9ec0-1593850ff121:
+    uuid: e81f6b14-b447-4730-9ec0-1593850ff121
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

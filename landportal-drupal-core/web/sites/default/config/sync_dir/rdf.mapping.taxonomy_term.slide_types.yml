@@ -1,0 +1,14 @@
+uuid: a1b52b01-a82b-435d-9be4-1f4369606c96
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slide_types
+  module:
+    - taxonomy
+id: taxonomy_term.slide_types
+targetEntityType: taxonomy_term
+bundle: slide_types
+types:
+  - ''
+fieldMappings: {  }

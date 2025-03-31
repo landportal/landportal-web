@@ -1,0 +1,12 @@
+uuid: c11fba10-84e0-4216-bca7-779180e16df1
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_title
+label: 'Latest Events Title'
+classes: 'latest-events -title'
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

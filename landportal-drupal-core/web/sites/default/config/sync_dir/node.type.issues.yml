@@ -1,0 +1,17 @@
+uuid: 210367e3-0b62-48fa-a44f-4759796ed5cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Issue narrative'
+type: issues
+description: 'Issue narratives for the Landbook'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

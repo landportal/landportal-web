@@ -1,0 +1,130 @@
+{% set block__base_class = 'indicators' %}
+
+<div {{ bem(block__base_class) }}>
+  <div {{ bem('category', [], block__base_class) }}>
+    <div {{ bem('heading', [], block__base_class) }}>
+      {{ socio_economic_title }}
+      <a class="link" href="{{ socio_economic_more_url }}">{{ socio_economic_more_label }}</a>
+    </div>
+
+    <div {{ bem('data', [], block__base_class) }}>
+      <div class="column">
+        {% if land_area.value %}
+          {% set value = land_area.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: land_area.url,
+            indicator_title: land_area.title,
+            indicator_value: value,
+            indicator_unit: land_area.unit,
+            indicator_desc: land_area.description,
+          } %}
+        {% endif %}
+        {% if gini_index.value %}
+          {% set value = gini_index.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: gini_index.url,
+            indicator_title: gini_index.title,
+            indicator_value: value,
+            indicator_unit: gini_index.unit,
+            indicator_desc: gini_index.description,
+          } %}
+        {% endif %}
+        {% if gdp_capita.value %}
+          {% set value = gdp_capita.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: gdp_capita.url,
+            indicator_title: gdp_capita.title,
+            indicator_value: value,
+            indicator_unit: gdp_capita.unit,
+            indicator_desc: gdp_capita.description,
+          } %}
+        {% endif %}
+      </div>
+      <div class="column">
+        {% if total_population.value %}
+          {% set value = total_population.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: total_population.url,
+            indicator_title: total_population.title,
+            indicator_value: value,
+            indicator_unit: total_population.unit,
+            indicator_desc: total_population.description,
+          } %}
+        {% endif %}
+        {% if urban_population.value %}
+          {% set value = urban_population.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: urban_population.url,
+            indicator_title: urban_population.title,
+            indicator_value: value,
+            indicator_unit: urban_population.unit,
+            indicator_desc: urban_population.description,
+          } %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div {{ bem('category', ['data'], block__base_class) }}>
+    <div {{ bem('heading', [], block__base_class) }}>
+      {{ land_title }}
+      <a class="link" href="{{ land_more_url }}">{{ land_more_label }}</a>
+    </div>
+
+    <div {{ bem('data', [], block__base_class) }}>
+      <div class="column">
+        {% if agricultural_land.value %}
+          {% set value = agricultural_land.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: agricultural_land.url,
+            indicator_title: agricultural_land.title,
+            indicator_value: value,
+            indicator_unit: agricultural_land.unit,
+            indicator_desc: agricultural_land.description,
+          } %}
+        {% endif %}
+        {% if perceived_tenure_security.value %}
+          {% set value = perceived_tenure_security.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: perceived_tenure_security.url,
+            indicator_title: perceived_tenure_security.title,
+            indicator_value: value,
+            indicator_unit: perceived_tenure_security.unit,
+            indicator_desc: perceived_tenure_security.description,
+          } %}
+        {% endif %}
+        {% if primary_forests.value %}
+          {% set value = primary_forests.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: primary_forests.url,
+            indicator_title: primary_forests.title,
+            indicator_value: value,
+            indicator_unit: primary_forests.unit,
+            indicator_desc: primary_forests.description,
+          } %}
+        {% endif %}
+      </div>
+      <div class="column">
+        {% if women_owning_land.value %}
+          {% set value = women_owning_land.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: women_owning_land.url,
+            indicator_title: women_owning_land.title,
+            indicator_value: value,
+            indicator_unit: women_owning_land.unit,
+            indicator_desc: women_owning_land.description,
+          } %}
+        {% endif %}
+        {% if area_in_deals.value %}
+          {% set value = area_in_deals.value|number_format(1, '.', ',')|replace({".0" : ""}) %}
+          {% include '@molecules/indicators/indicator.twig' with {
+            indicator_url: area_in_deals.url,
+            indicator_title: area_in_deals.title,
+            indicator_value: value,
+            indicator_unit: area_in_deals.unit,
+            indicator_desc: area_in_deals.description,
+          } %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

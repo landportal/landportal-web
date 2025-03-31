@@ -1,0 +1,14 @@
+uuid: f2062057-966d-4df7-92c3-9951b2e84bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.issues
+  module:
+    - node
+id: node.issues
+targetEntityType: node
+bundle: issues
+types:
+  - ''
+fieldMappings: {  }

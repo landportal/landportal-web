@@ -1,0 +1,12 @@
+uuid: 2cabd15a-fa3c-4199-a3a2-3bd45c630450
+langcode: en
+status: true
+dependencies: {  }
+id: image_full_block
+label: 'Image Full'
+classes: layout--image-full
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

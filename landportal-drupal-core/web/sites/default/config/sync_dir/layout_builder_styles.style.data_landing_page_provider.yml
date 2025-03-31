@@ -1,0 +1,12 @@
+uuid: ced0f667-7cf8-4fd7-aa25-6d1c57fc4bf9
+langcode: en
+status: true
+dependencies: {  }
+id: data_landing_page_provider
+label: 'Data Landing Page Provider'
+classes: data-landing-page-provider
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

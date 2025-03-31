@@ -1,0 +1,19 @@
+uuid: 676d6328-b0fe-49af-bee1-05afa2459648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.title_field
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.title_field
+field_name: title_field
+entity_type: node
+bundle: landlibrary_resource
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

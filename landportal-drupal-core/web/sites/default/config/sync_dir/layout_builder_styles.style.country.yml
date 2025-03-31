@@ -1,0 +1,12 @@
+uuid: 458c22e9-8d28-4407-acd1-231aa3f4d476
+langcode: en
+status: true
+dependencies: {  }
+id: country
+label: country
+classes: user-countries
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

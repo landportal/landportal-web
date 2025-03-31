@@ -1,0 +1,18 @@
+uuid: 1aa790e4-0082-461f-a76d-a01d9b6a44a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.invest_responsible_land
+target_entity_type_id: block_content
+target_bundle: invest_responsible_land
+default_langcode: site_default
+language_alterable: true

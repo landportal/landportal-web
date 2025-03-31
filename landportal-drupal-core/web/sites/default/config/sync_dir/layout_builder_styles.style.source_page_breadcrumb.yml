@@ -1,0 +1,12 @@
+uuid: 435f211e-1f24-4532-a1ca-e6fcdd345d9c
+langcode: en
+status: true
+dependencies: {  }
+id: source_page_breadcrumb
+label: 'Source Page BreadCrumb'
+classes: source-page-breadCrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

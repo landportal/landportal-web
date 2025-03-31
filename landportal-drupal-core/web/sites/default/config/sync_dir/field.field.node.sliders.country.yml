@@ -1,0 +1,19 @@
+uuid: 99c391e1-4ded-43fb-a5a4-8c15d77e1de3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.country
+    - node.type.sliders
+id: node.sliders.country
+field_name: country
+entity_type: node
+bundle: sliders
+label: Country
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

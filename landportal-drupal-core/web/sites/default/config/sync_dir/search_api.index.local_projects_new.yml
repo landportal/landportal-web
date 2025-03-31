@@ -1,0 +1,357 @@
+uuid: bc4c1a16-19ac-40a4-81af-21bf8ec7409e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.contact_field
+    - field.storage.node.field_project_duration
+    - field.storage.node.field_currency
+    - field.storage.node.project_regions
+    - field.storage.taxonomy_term.field_iso3
+    - field.storage.node.field_value_decimal
+    - field.storage.node.field_related_impact
+    - field.storage.node.official_website
+    - field.storage.node.project_image
+    - field.storage.node.programme
+    - field.storage.node.project_concepts
+    - field.storage.node.project_logo
+    - field.storage.node.project_themes
+    - field.storage.node.related_projects
+    - field.storage.node.field_related_resources
+    - field.storage.node.field_related_provider
+    - field.storage.node.field_related_donor
+    - field.storage.node.field_related_organization
+    - search_api.server.local_solr
+  module:
+    - search_api_solr
+    - node
+    - taxonomy
+    - file
+    - search_api
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      specific_languages:
+        en: '0'
+        fr: '0'
+        pt-pt: '0'
+        es: '0'
+id: local_projects_new
+name: 'Local projects new'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  contact_field:
+    label: Contact
+    datasource_id: 'entity:node'
+    property_path: contact_field
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.contact_field
+  end_value:
+    label: 'Project duration » End date value'
+    datasource_id: 'entity:node'
+    property_path: 'field_project_duration:end_value'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_project_duration
+  field_currency:
+    label: 'Currency of project value'
+    datasource_id: 'entity:node'
+    property_path: field_currency
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_currency
+  field_iso3:
+    label: 'Geographical Scope » Taxonomy term » ISO3'
+    datasource_id: 'entity:node'
+    property_path: 'project_regions:entity:field_iso3'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.project_regions
+        - field.storage.taxonomy_term.field_iso3
+      module:
+        - taxonomy
+  field_project_duration:
+    label: 'Project duration'
+    datasource_id: 'entity:node'
+    property_path: field_project_duration
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_project_duration
+  field_value_decimal:
+    label: 'Project Value'
+    datasource_id: 'entity:node'
+    property_path: field_value_decimal
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_value_decimal
+  fullname:
+    label: 'Related content » Fullname'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_impact:fullname'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_related_impact
+  name:
+    label: 'Geographical Scope » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'project_regions:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.project_regions
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  official_website:
+    label: 'External Links'
+    datasource_id: 'entity:node'
+    property_path: official_website
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.official_website
+  official_website_title:
+    label: 'External Links » Link text'
+    datasource_id: 'entity:node'
+    property_path: 'official_website:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.official_website
+  page_banner_filename:
+    label: 'Page banner » File » Filename'
+    datasource_id: 'entity:node'
+    property_path: 'project_image:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.project_image
+      module:
+        - file
+  programme:
+    label: Programme
+    datasource_id: 'entity:node'
+    property_path: programme
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.programme
+  project_concepts:
+    label: 'Related concepts'
+    datasource_id: 'entity:node'
+    property_path: project_concepts
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.project_concepts
+  project_image:
+    label: 'Page banner'
+    datasource_id: 'entity:node'
+    property_path: project_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.project_image
+  project_logo:
+    label: 'Project Logo'
+    datasource_id: 'entity:node'
+    property_path: project_logo
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.project_logo
+  project_regions:
+    label: 'Geographical Scope'
+    datasource_id: 'entity:node'
+    property_path: project_regions
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.project_regions
+  project_themes:
+    label: 'Project Themes'
+    datasource_id: 'entity:node'
+    property_path: project_themes
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.project_themes
+  related_all_types_impact:
+    label: 'Related content » Related content Identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_impact:swid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_impact
+  related_projects:
+    label: 'Related Projects'
+    datasource_id: 'entity:node'
+    property_path: related_projects
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.related_projects
+  related_resources_library:
+    label: 'Related resources in library » Related content Identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_resources:swid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_resources
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  swid_data_provider:
+    label: 'Data providers » Related content Identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_provider:swid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_provider
+  swid_donors:
+    label: 'Donor(s) » Related content Identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_donor:swid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_donor
+  swid_imp_organization:
+    label: 'Implementing organization(s) » Related content Identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_organization:swid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_organization
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+  url:
+    label: 'Page banner » File » URI » Root-relative file URL'
+    datasource_id: 'entity:node'
+    property_path: 'project_image:entity:uri:url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.project_image
+      module:
+        - file
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - project
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: local_solr

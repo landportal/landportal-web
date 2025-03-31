@@ -1,0 +1,106 @@
+uuid: 9a90f114-fa79-41f1-9291-3088aba3917b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.issues.title
+    - core.entity_view_mode.node.teaser
+    - field.field.node.issues.additional_informations
+    - field.field.node.issues.feeds_item
+    - field.field.node.issues.issue_narrative_summary
+    - field.field.node.issues.issues_image
+    - field.field.node.issues.key_lessons
+    - field.field.node.issues.key_lessons_parent
+    - field.field.node.issues.parent_issue
+    - field.field.node.issues.slider_type
+    - field.field.node.issues.thematic_narrative
+    - node.type.issues
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          67c65c69-bd99-4193-9a52-6c998a067560:
+            uuid: 67c65c69-bd99-4193-9a52-6c998a067560
+            region: content
+            configuration:
+              id: 'field_block:node:issues:issues_image'
+              label: 'Issues Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          bbc13e0f-b883-4555-b6ba-e10109972e11:
+            uuid: bbc13e0f-b883-4555-b6ba-e10109972e11
+            region: content
+            configuration:
+              id: 'field_block:node:issues:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - title
+        third_party_settings: {  }
+id: node.issues.teaser
+targetEntityType: node
+bundle: issues
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  additional_informations: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  issue_narrative_summary: true
+  issues_image: true
+  key_lessons: true
+  key_lessons_parent: true
+  langcode: true
+  parent_issue: true
+  search_api_excerpt: true
+  slider_type: true
+  thematic_narrative: true

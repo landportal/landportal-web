@@ -1,0 +1,189 @@
+uuid: 9a5ca0b7-a0c1-4eb5-9f78-e29823db36a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.blog_post.title
+    - field.field.node.blog_post.field_noderef
+    - node.type.blog_post
+  module:
+    - node
+label: 'Blog Post Related Content Field'
+id: blog_post_related_content_field
+description: 'only Related Content'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: blog_post
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  related_content:
+    value: 'Related content'
+    label: 'Related content'
+    machine_name: related_content
+    type: csv
+  related_content1:
+    value: 'Related content1'
+    label: 'Related content1'
+    machine_name: related_content1
+    type: csv
+  related_content2:
+    value: 'Related content2'
+    label: 'Related content2'
+    machine_name: related_content2
+    type: csv
+  related_content3:
+    value: 'Related content3'
+    label: 'Related content3'
+    machine_name: related_content3
+    type: csv
+  related_content4:
+    value: 'Related content4'
+    label: 'Related content4'
+    machine_name: related_content4
+    type: csv
+  related_content5:
+    value: 'Related content5'
+    label: 'Related content5'
+    machine_name: related_content5
+    type: csv
+  related_content6:
+    value: 'Related content6'
+    label: 'Related content6'
+    machine_name: related_content6
+    type: csv
+  related_content7:
+    value: 'Related content7'
+    label: 'Related content7'
+    machine_name: related_content7
+    type: csv
+  related_content8:
+    value: 'Related content8'
+    label: 'Related content8'
+    machine_name: related_content8
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_noderef
+    map:
+      target_id: related_content
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

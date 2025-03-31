@@ -1,0 +1,29 @@
+uuid: de1f201e-3934-4301-af99-526070068e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_relationship
+    - node.type.organization
+    - taxonomy.vocabulary.organization_relation
+id: node.organization.field_organization_relationship
+field_name: field_organization_relationship
+entity_type: node
+bundle: organization
+label: 'Organization relationship'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organization_relation: organization_relation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

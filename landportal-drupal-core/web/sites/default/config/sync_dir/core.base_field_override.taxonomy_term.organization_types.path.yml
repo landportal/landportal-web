@@ -1,0 +1,20 @@
+uuid: f2fe1235-0026-46c0-b393-9350197ebadb
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_types
+  module:
+    - path
+id: taxonomy_term.organization_types.path
+field_name: path
+entity_type: taxonomy_term
+bundle: organization_types
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

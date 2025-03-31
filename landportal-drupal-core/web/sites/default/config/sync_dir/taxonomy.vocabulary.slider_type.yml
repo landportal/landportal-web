@@ -1,0 +1,8 @@
+uuid: 65275e21-252b-498b-8809-67c11ffbc491
+langcode: en
+status: true
+dependencies: {  }
+name: 'Slider Type'
+vid: slider_type
+description: ''
+weight: 0

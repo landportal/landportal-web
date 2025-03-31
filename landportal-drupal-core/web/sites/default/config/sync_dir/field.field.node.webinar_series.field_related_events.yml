@@ -1,0 +1,29 @@
+uuid: 708ac9e0-86b4-4c07-bb28-c21a0778ee5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_events
+    - node.type.event
+    - node.type.webinar_series
+id: node.webinar_series.field_related_events
+field_name: field_related_events
+entity_type: node
+bundle: webinar_series
+label: 'Webinars of the series'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

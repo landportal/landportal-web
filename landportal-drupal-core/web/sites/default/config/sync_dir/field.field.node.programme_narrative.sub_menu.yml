@@ -1,0 +1,21 @@
+uuid: ff475e45-1eee-42ce-8182-c0554bdd50da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sub_menu
+    - node.type.programme_narrative
+  module:
+    - options
+id: node.programme_narrative.sub_menu
+field_name: sub_menu
+entity_type: node
+bundle: programme_narrative
+label: 'Sub menu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

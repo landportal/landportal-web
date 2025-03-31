@@ -1,0 +1,28 @@
+uuid: cd14e5ed-fab6-4770-bef2-fa691cda7462
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sub_menu_children
+    - node.type.programme_narrative
+id: node.programme_narrative.sub_menu_children
+field_name: sub_menu_children
+entity_type: node
+bundle: programme_narrative
+label: 'Sub menu children'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      programme_narrative: programme_narrative
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

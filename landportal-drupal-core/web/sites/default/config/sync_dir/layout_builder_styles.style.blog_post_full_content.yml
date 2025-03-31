@@ -1,0 +1,12 @@
+uuid: 0587150e-69e3-424d-8e63-2ebbf9364c56
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_full_content
+label: 'Blog Post Full Content'
+classes: blog-post-full-content
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

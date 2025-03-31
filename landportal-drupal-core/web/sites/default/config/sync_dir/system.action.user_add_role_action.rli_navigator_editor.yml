@@ -1,0 +1,14 @@
+uuid: b3047c5a-4293-479d-a8d5-8b37d0797f58
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rli_navigator_editor
+  module:
+    - user
+id: user_add_role_action.rli_navigator_editor
+label: 'Add the RLI Navigator editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rli_navigator_editor

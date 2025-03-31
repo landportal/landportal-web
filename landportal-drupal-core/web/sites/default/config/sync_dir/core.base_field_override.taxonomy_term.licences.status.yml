@@ -1,0 +1,22 @@
+uuid: 04069869-3ecf-4555-b6c9-61d2f520213e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.licences
+id: taxonomy_term.licences.status
+field_name: status
+entity_type: taxonomy_term
+bundle: licences
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

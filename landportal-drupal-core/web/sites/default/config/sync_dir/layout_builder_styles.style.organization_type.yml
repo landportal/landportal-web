@@ -1,0 +1,12 @@
+uuid: d6ad4398-b3f2-4a42-abc2-99fb51161c6d
+langcode: en
+status: true
+dependencies: {  }
+id: organization_type
+label: 'Organization Type'
+classes: organization-type
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

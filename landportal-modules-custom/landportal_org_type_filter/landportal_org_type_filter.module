@@ -1,0 +1,150 @@
+<?php
+use Drupal\views\Plugin\views\display\DisplayPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
+use Drupal\Core\File\FileSystemInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function landportal_org_type_filter_cron(){
+  //\Drupal::logger('landportal_provider_filter_cron')->notice('Cron is working fine!');
+  createOrganizationThemeCSV();
+//   createLibraryLicenseCSV(); 
+  createResourceTypeCSV();
+  //createEventThemeCSV();
+} // hook_cron() end
+
+/**
+ * Save CSV data to a file.
+ *
+ * @param string $csv_data
+ *   The CSV data.
+ */
+// function saveCsvToFiles($csv_data, $file_name = 'organizationThemes.csv')
+// {
+//   $file_system = \Drupal::service('file_system');
+
+//   // Define the directory path within the public directory.
+//   $directory_path = 'public://csv/organizationtype';
+
+//   // Ensure the directory exists or create it.
+//   if (!$file_system->prepareDirectory($directory_path, FileSystemInterface::CREATE_DIRECTORY)) {
+//     // Handle error if needed.
+//   }
+
+//   // Define the file path within the directory.
+//   $file_path = $directory_path . '/' . $file_name;
+
+//   // Save the CSV data to the file.
+//   file_put_contents($file_path, $csv_data);
+
+//   return $file_path;
+// }
+
+// //this filter is used in these pages " /issues/*/organization/ "
+// function createOrganizationThemeCSV(){
+//     $query = \Drupal::entityQuery('node');
+//     $query->condition('type', 'organization');
+//     $nids = $query->execute();
+
+//     $csv_data = "organization_nid,theme_tid\n";
+//     foreach ($nids as $nid) {
+//         $node = Node::load($nid);
+//         // Get related theme term IDs from field_related_themes
+//         $theme_tids = $node->get('field_organization_type')->getValue();
+
+//         foreach ($theme_tids as $item) {
+//             $theme_tid = $item['target_id'];
+//             if (empty($theme_tid) || !is_numeric($theme_tid)) {
+//                 continue;
+//             }
+
+//             $csv_data .= $nid . ',' . $theme_tid . "\n";
+//         }
+//     }
+//     $csv_file_path = saveCsvToFiles($csv_data, 'organizationThemes.csv');
+// }
+
+
+
+function createOrganizationThemeCSV() {
+    // Define the field names for theme and concept.
+    $fields = [
+      'theme' => 'field_related_themes',
+      'concept' => 'field_related_concepts',
+    ];
+  
+    foreach ($fields as $field_type => $field_name) {
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'organization');
+      $nids = $query->execute();
+  
+      $csv_data = "organization_nid,{$field_type}_tid\n";
+      foreach ($nids as $nid) {
+        $node = Node::load($nid);
+        // Get related term IDs from the specified field.
+        $term_tids = $node->get($field_name)->getValue();
+  
+        foreach ($term_tids as $item) {
+          $term_tid = $item['target_id'];
+          if (!empty($term_tid) && is_numeric($term_tid)) {
+            $csv_data .= $nid . ',' . $term_tid . "\n";
+          }
+        }
+      }
+      saveCsvToFiles($csv_data, "organization{$field_type}Themes.csv");
+    }
+  }
+  
+
+
+
+// Page /library/browse/regions/* and the filter name is 'License of the resource' "
+function createLibraryLicenseCSV(){
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', 'landlibrary_resource');
+    $nids = $query->execute();
+
+    $csv_data = "landlibrary_nid,field_doc_licencing\n";
+    foreach ($nids as $nid) {
+        $node = Node::load($nid);
+        // Get related license term IDs from field_doc_licencing
+        $license_tids = $node->get('field_doc_licencing')->getValue();
+        foreach ($license_tids as $item) {
+            $license_tid = $item['target_id'];
+            if (empty($license_tid) || !is_numeric($license_tid)) {
+                continue;
+            }
+            $csv_data .= $nid . ',' . $license_tid . "\n";
+        }
+    }
+    $csv_file_path = saveCsvToFiles($csv_data, 'libraryLicense.csv');
+}
+
+// Page /library/browse/regions/* and the filter name is 'Resource type' "
+function createResourceTypeCSV() {
+    $query = \Drupal::entityQuery('node');
+    $query->condition('type', 'landlibrary_resource');
+    $nids = $query->execute();
+
+    $csv_data = "landlibrary_nid,field_doc_type\n";
+    foreach ($nids as $nid) {
+        $node = Node::load($nid);
+        // Get related license term IDs from field_doc_type
+        $license_tids = $node->get('field_doc_type')->getValue();
+
+        foreach ($license_tids as $item) {
+            $license_tid = $item['target_id'];
+            if (empty($license_tid) || !is_numeric($license_tid)) {
+                continue;
+            }
+            $csv_data .= $nid . ',' . $license_tid . "\n";
+        }
+    }
+    //\Drupal::logger('libraryLicense1')->notice(serialize($csv_data));
+    $csv_file_path = saveCsvToFiles($csv_data, 'Resourcetype.csv');
+    //\Drupal::logger('libraryLicense2')->notice(serialize($csv_file_path));
+}

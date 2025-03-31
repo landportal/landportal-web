@@ -1,0 +1,14 @@
+uuid: 43a37235-28ac-493d-8b4a-5afd0d77cb2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.editurlalias
+  module:
+    - user
+id: user_add_role_action.editurlalias
+label: 'Add the editURLalias role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editurlalias

@@ -1,0 +1,12 @@
+uuid: 050dfd32-20f3-4977-b4d8-4fac231af4df
+langcode: en
+status: true
+dependencies: {  }
+id: key_lesson
+label: 'Key Lesson'
+classes: key-lesson
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

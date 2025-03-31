@@ -1,0 +1,199 @@
+uuid: 28152acc-8826-41e5-887a-f4f5632c6102
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.node.country_narrative.full
+    - core.entity_view_display.node.landing_page.full
+    - media.type.country_narrative
+    - node.type.country_narrative
+    - node.type.landing_page
+    - node.type.project
+    - taxonomy.vocabulary.indicators
+    - taxonomy.vocabulary.regions
+  module:
+    - block
+    - block_content
+    - config_translation
+    - content_translation
+    - contextual
+    - csv_importer
+    - devel
+    - easy_breadcrumb
+    - entity_print
+    - eu_cookie_compliance
+    - field_ui
+    - file
+    - filter
+    - google_analytics
+    - image
+    - imagecache_external
+    - language
+    - layout_builder
+    - layout_builder_modal
+    - layout_builder_restrictions
+    - layout_builder_styles
+    - locale
+    - media
+    - menu_link_content
+    - metatag
+    - migrate_tools
+    - node
+    - path
+    - pathauto
+    - redirect
+    - simple_sitemap
+    - system
+    - taxonomy
+    - toolbar
+    - update
+    - views_ui
+id: developer
+label: Developer
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access csv importer'
+  - 'access devel information'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'add JS snippets for google analytics'
+  - 'administer account settings'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer content translation'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer easy breadcrumb'
+  - 'administer entity print'
+  - 'administer filters'
+  - 'administer google analytics'
+  - 'administer image styles'
+  - 'administer imagecache external'
+  - 'administer languages'
+  - 'administer layout builder modal'
+  - 'administer layout builder styles configuration'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer migrations'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer site configuration'
+  - 'administer sitemap settings'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer views'
+  - 'bypass entity print access'
+  - 'bypass node access'
+  - 'configure all country_narrative node layout overrides'
+  - 'configure all landing_page node layout overrides'
+  - 'configure any layout'
+  - 'configure editable country_narrative node layout overrides'
+  - 'configure editable landing_page node layout overrides'
+  - 'configure layout builder restrictions'
+  - 'create and edit custom blocks'
+  - 'create content translations'
+  - 'create country_narrative content'
+  - 'create country_narrative media'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create terms in indicators'
+  - 'create terms in regions'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any country_narrative content'
+  - 'delete any country_narrative media'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete any project content'
+  - 'delete content translations'
+  - 'delete country_narrative revisions'
+  - 'delete landing_page revisions'
+  - 'delete media'
+  - 'delete own country_narrative content'
+  - 'delete own country_narrative media'
+  - 'delete own landing_page content'
+  - 'delete terms in indicators'
+  - 'delete terms in regions'
+  - 'display eu cookie compliance popup'
+  - 'edit any country_narrative content'
+  - 'edit any country_narrative media'
+  - 'edit any landing_page content'
+  - 'edit own country_narrative content'
+  - 'edit own country_narrative media'
+  - 'edit own landing_page content'
+  - 'edit terms in indicators'
+  - 'edit terms in regions'
+  - 'entity print access bundle country_narrative'
+  - 'entity print access bundle indicators'
+  - 'entity print access bundle landing_page'
+  - 'entity print access bundle regions'
+  - 'entity print access type block_content'
+  - 'entity print access type file'
+  - 'entity print access type media'
+  - 'entity print access type menu_link_content'
+  - 'entity print access type node'
+  - 'entity print access type path_alias'
+  - 'entity print access type redirect'
+  - 'entity print access type taxonomy_term'
+  - 'entity print access type user'
+  - 'link to any page'
+  - 'manage layout builder styles'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'revert country_narrative revisions'
+  - 'revert landing_page revisions'
+  - 'select account cancellation method'
+  - 'switch users'
+  - 'translate any entity'
+  - 'translate block_content'
+  - 'translate configuration'
+  - 'translate country_narrative node'
+  - 'translate editable entities'
+  - 'translate indicators taxonomy_term'
+  - 'translate interface'
+  - 'translate landing_page node'
+  - 'translate menu_link_content'
+  - 'translate regions taxonomy_term'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'use PHP for google analytics tracking visibility'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view country_narrative revisions'
+  - 'view landing_page revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view update notifications'
+  - 'view user email addresses'

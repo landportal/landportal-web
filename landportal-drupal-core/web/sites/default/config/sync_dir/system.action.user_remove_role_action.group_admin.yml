@@ -1,0 +1,14 @@
+uuid: fca63cb6-9273-410b-9fd7-7829a7428491
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.group_admin
+  module:
+    - user
+id: user_remove_role_action.group_admin
+label: 'Remove the Group admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: group_admin

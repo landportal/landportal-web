@@ -1,0 +1,98 @@
+.view-coda { position: relative; overflow-wrap: break-word; }
+.view-coda .field-name-field-indicators { display: none; }
+.view-coda .highcharts-title, .view-coda .highcharts-subtitle { text-align: center; }
+.view-coda .loading { text-align: center; font-size: 1.4em; }
+.view-coda .view-coda-vis { padding: 0; }
+.view-coda footer { font-size: .8em; }
+
+.view-coda-form { padding: 15px 0; }
+.view-coda-form.form-items-2 > div > * { position: relative; float: left; width: 50%; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.view-coda-form.form-items-3 > div > * { position: relative; float: left; width: 33.33333333%; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.view-coda-form.form-items-4 > div > * { position: relative; float: left; width: 50%; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.view-coda-form .form-type-checkbox { float: left; clear: left; }
+.view-coda-form .form-item select { width: 100%; }
+.view-coda-form > div { margin-left: -15px; margin-right: -15px; }
+.view-coda-form > div:before, .view-coda-form > div:after { content: " "; display: table; }
+.view-coda-form > div:after { clear: both; }
+.view-coda-form > div .form-item:not(:first-of-type) { padding-left: 0; }
+.view-coda-form > div > .form-item-indicator { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+@media (min-width: 768px) { .view-coda-form > div > .form-item-indicator { float: left; width: 58.33333333%; } }
+@media (min-width: 992px) { .view-coda-form > div > .form-item-indicator { float: left; width: 66.66666667%; } }
+.view-coda-form > div > .form-item-country, .view-coda-form > div > .form-item-year { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+@media (min-width: 768px) { .view-coda-form > div > .form-item-country, .view-coda-form > div > .form-item-year { float: left; width: 25%; } }
+.view-coda-form > div > .actions { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; text-align: right; }
+@media (min-width: 768px) { .view-coda-form > div > .actions { float: left; width: 16.66666667%; } }
+@media (min-width: 992px) { .view-coda-form > div > .actions { float: left; width: 8.33333333%; } }
+
+/* .view-coda-map, */
+/* .view-coda-table, */
+/* .view-coda-ranking { */
+/*     .view-coda-form { */
+/*         .form-item-year { */
+/*             @include make-sm-column(3); */
+/*         } */
+/*     } */
+/* } */
+/* .view-coda-map .view-coda-form { */
+/*     .form-item-indicator { */
+/*         @include make-sm-column(8); */
+/*     } */
+/* } */
+.view-coda-charts .view-coda-form.form-items-4 .form-item-indicator { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+@media (min-width: 768px) { .view-coda-charts .view-coda-form.form-items-4 .form-item-indicator { float: left; width: 33.33333333%; } }
+.view-coda-charts .view-coda-form .years { padding: 0; }
+.view-coda-charts .view-coda-form .form-item-to, .view-coda-charts .view-coda-form .form-item-from { padding-right: 15px; float: left; width: 50%; }
+@media screen and (max-width: 767px) { .view-coda-charts .view-coda-form .form-item-to, .view-coda-charts .view-coda-form .form-item-from { padding-left: 15px; } }
+
+.view-coda-table { /* .indicator { */ /*     font-size: 1.2em; */ /* } */ }
+.view-coda-table .table > tbody > tr > td { vertical-align: middle; }
+.view-coda-table table { background-color: inherit; font-size: .9em; -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); margin-bottom: 20px; }
+.view-coda-table table th, .view-coda-table table td { min-height: 40px; }
+.view-coda-table table th:not(:first-of-type), .view-coda-table table td:not(:first-of-type) { text-align: center; }
+.view-coda-table table thead { background-color: #339966; color: #FFFFFF; text-transform: uppercase; }
+.view-coda-table table thead .form-group > .control-label, .view-coda-table table thead h1, .view-coda-table table thead h2, .view-coda-table table thead h3, .view-coda-table table thead h4, .view-coda-table table thead h5, .view-coda-table table thead p, .view-coda-table table thead span { color: #FFFFFF; }
+.field-name-field-doc-description .view-coda-table table thead, .field-name-description-field .view-coda-table table thead, .field-name-body .view-coda-table table thead { padding: 15px; }
+.view-coda-table table thead th:last-of-type { text-align: center; }
+@media screen and (max-width: 767px) { .view-coda-table table { overflow-y: scroll; } }
+
+.view-coda-pie div[id$="-wrapper"], .view-coda-spider div[id$="-wrapper"] { min-height: 400px; }
+
+.view-coda-ranking .view-coda-vis ul { padding: 0; -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); }
+.view-coda-ranking .value-a { background-color: #339966; }
+.view-coda-ranking .value-b { background-color: #CCCC00; }
+.view-coda-ranking .value-c { background-color: #CC3333; }
+.view-coda-ranking .value-na { background-color: #CCC; }
+
+.view-coda-ranking li { clear: both; list-style: none; background-color: white; border-bottom: 1px solid #EBEBE5; }
+.view-coda-ranking li:before, .view-coda-ranking li:after { content: " "; display: table; }
+.view-coda-ranking li:after { clear: both; }
+.view-coda-ranking li:last-of-type { border-bottom: 0; }
+.view-coda-ranking li .flag-icon { font-size: 50px; margin: .2em; }
+.view-coda-ranking li.expand { margin: .5em 0; }
+.view-coda-ranking li.expand a { cursor: pointer; display: block; padding: .5em 0; width: 100%; }
+.view-coda-ranking li .value { font-size: 1.2em; padding-top: .5em; }
+.view-coda-ranking span.rank { position: absolute; border: 2px solid #FFFFFF; background-color: #339966; color: white; display: inline-block; height: 32px; width: 32px; font-size: 14px; padding-top: 4px; text-align: center; font-weight: bold; z-index: 2; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; }
+
+div[id$='-map-wrapper'] { min-height: 500px; }
+
+#block-landbook-view-coda-lbvc-map-country { min-height: 200px; }
+
+#block-landbook-view-coda-lbcp-linechart { min-height: 600px; }
+
+/* LGAF Chart */
+#block-landbook-vggt-vis-vggt header:before, #block-landbook-vggt-vis-vggt header:after, #block-landbook-lgaf-vis header:before, #block-landbook-lgaf-vis header:after { content: " "; display: table; }
+#block-landbook-vggt-vis-vggt header:after, #block-landbook-lgaf-vis header:after { clear: both; }
+#block-landbook-vggt-vis-vggt .legend li, #block-landbook-vggt-vis-vggt .view-coda-vis ul, #block-landbook-lgaf-vis .legend li, #block-landbook-lgaf-vis .view-coda-vis ul { -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15); }
+#block-landbook-vggt-vis-vggt.view-coda li, #block-landbook-lgaf-vis.view-coda li { position: relative; padding: 15px 20px; background-color: #FFFFFF; }
+#block-landbook-vggt-vis-vggt.view-coda li:not(:last-of-type), #block-landbook-lgaf-vis.view-coda li:not(:last-of-type) { border-bottom: 2px solid #F2F2F2; }
+#block-landbook-vggt-vis-vggt.view-coda li span[class*="value"], #block-landbook-lgaf-vis.view-coda li span[class*="value"] { margin-right: .5em; width: 1em; height: 1em; display: inline-block; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; }
+#block-landbook-vggt-vis-vggt.view-coda li span[class*="value"]:nth-child(2), #block-landbook-lgaf-vis.view-coda li span[class*="value"]:nth-child(2) { width: .5em; margin-left: -1em; -moz-border-radius: 0 20px 20px 0; -webkit-border-radius: 0; border-radius: 0 20px 20px 0; }
+#block-landbook-vggt-vis-vggt .legend, #block-landbook-lgaf-vis .legend { font-size: .8em; padding: 5px; }
+#block-landbook-vggt-vis-vggt .legend li, #block-landbook-lgaf-vis .legend li { margin: 4px 2px; }
+
+#block-landbook-lgaf-vis .value-c { background-color: #E58517; }
+#block-landbook-lgaf-vis .value-d { background-color: #CC3333; }
+
+.page-field-collection-field-visualization div[class*="form-item-field-view-coda-und-"][class*="-vcc"], .page-node-edit .field-name-field-visualization div[class*="form-item-field-view-coda-und-"][class*="-vcc"] { display: none; }
+.page-field-collection-field-visualization .field-type-field-view-coda-vis, .page-node-edit .field-name-field-visualization .field-type-field-view-coda-vis { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+@media (min-width: 768px) { .page-field-collection-field-visualization .field-type-field-view-coda-vis, .page-node-edit .field-name-field-visualization .field-type-field-view-coda-vis { float: left; width: 100%; } }

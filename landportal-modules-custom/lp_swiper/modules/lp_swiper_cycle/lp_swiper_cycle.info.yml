@@ -1,0 +1,13 @@
+name: LandPortal Swiper Cycle
+type: module
+description: 'Adds a Rotating swiper mode to Lp Swiper.'
+package: Views
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - lp_swiper:lp_swiper
+
+# Information added by Drupal.org packaging script on 2020-09-28
+version: '8.x-4.8'
+project: 'lp_swiper'
+datestamp: 1601309227

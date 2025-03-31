@@ -1,0 +1,4 @@
+link_url: 'https://github.com/landportal-ds/landportal-design-system'
+link_content: 'This is my link button text'
+link_modifiers:
+  - 'button'

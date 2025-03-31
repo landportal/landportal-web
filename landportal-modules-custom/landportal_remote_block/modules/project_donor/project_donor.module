@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for project donor.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function project_donor_theme($existing, $type, $theme, $path) {
+  return [
+    'project_donor_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

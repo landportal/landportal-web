@@ -1,0 +1,146 @@
+.landup-podcast-page-css {
+
+    header {
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .total-counter {
+            display: inline-block;
+            min-width: 10px;
+            padding: 3px 7px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 1;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-align: center;
+            background-color: #777;
+            border-radius: 10px;
+        }
+    }
+
+    .views-row {
+        @media (min-width: $mdtab) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .views-col {
+            border-top: 5px solid #339;
+            margin-bottom: 15px;
+
+            @media (min-width: $md) {
+                width: 100% !important;
+            }
+
+            @media (min-width: $mdtab) {
+                width: 45% !important;
+                margin-left: 15px;
+                margin-right: 15px;
+
+            }
+
+            .views-field {
+                float: right;
+                clear: right;
+
+                @media (min-width: $md) {
+                    width: 70%;
+                }
+
+                @media (min-width: $mdtab) {
+                    width: 50%;
+                    padding-left: 15px;
+                }
+            }
+
+            .views-field-field-image {
+                float: left;
+                clear: left;
+                padding-left: 0; 
+
+                @media (min-width: $md) {
+                    width: 25%;
+                }
+
+                @media (min-width: $mdtab) {
+                    width: 50%;
+                }
+            }
+
+            .views-field-title {
+                font-size: 18px;
+                font-family: "Merriweather Sans", sans-serif;
+                font-weight: 700;
+                line-height: normal;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+
+                a {
+                    text-decoration: none;
+                    color: #06C;
+
+                    &:hover {
+                        color: #004080;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .views-field-field-pubdate {
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 13px;
+
+                div {
+                    &::before {
+                        content: "";
+                        padding: 0 3px 3px;
+                        background-image: url(../images/icons8-date-50.png);
+                        height: 16px;
+                        width: 16px;
+                        display: inline-block;
+                        background-size: cover;
+                        margin-right: 5px;
+                        vertical-align: text-bottom;
+                    }
+                }
+            }
+
+            .views-field-body {
+                font-size: 13px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+                max-height: 6.5em;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+////////// work for 15years and 15th Anniversary Celebration Messages landing page ///////////////////
+
+article.landing-page{
+    .blog-post-body{
+        img{
+            margin: auto;
+        }
+        .top-red{
+            border-top: 3px solid #C33;
+        }
+        .rtecenter{
+            text-align: center;
+            a{
+                &::after{
+                    background-image: none;
+                }
+            }
+        }
+    }
+}

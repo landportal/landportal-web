@@ -1,0 +1,273 @@
+uuid: c02cfce3-540f-413a-aa85-34febd5e0b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.path
+    - core.base_field_override.node.landlibrary_resource.status
+    - core.base_field_override.node.landlibrary_resource.title
+    - core.base_field_override.node.landlibrary_resource.uid
+    - field.field.node.landlibrary_resource.field_doc_copyrights_statement
+    - field.field.node.landlibrary_resource.field_doc_creation_date
+    - field.field.node.landlibrary_resource.field_doc_description
+    - field.field.node.landlibrary_resource.field_doc_identifier
+    - field.field.node.landlibrary_resource.field_doc_is_shown_at
+    - field.field.node.landlibrary_resource.field_doc_is_shown_by
+    - field.field.node.landlibrary_resource.field_doc_pagination
+    - field.field.node.landlibrary_resource.field_doc_people
+    - field.field.node.landlibrary_resource.field_image
+    - field.field.node.landlibrary_resource.promoted_to_library
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'LandLibrary Resource CT Import'
+id: landlibrary_resource_ct_import
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  resource_title:
+    value: 'Resource title'
+    label: 'Resource title'
+    machine_name: resource_title
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  abstract_or_description:
+    value: 'Abstract or Description'
+    label: 'Abstract or Description'
+    machine_name: abstract_or_description
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  isbn_resource_id:
+    value: 'ISBN / Resource ID'
+    label: 'ISBN / Resource ID'
+    machine_name: isbn_resource_id
+    type: csv
+  pages:
+    value: Pages
+    label: Pages
+    machine_name: pages
+    type: csv
+  copyright_details:
+    value: 'Copyright details'
+    label: 'Copyright details'
+    machine_name: copyright_details
+    type: csv
+  author_s_editor_s_contributor_s_:
+    value: 'Author(s), editor(s), contributor(s)'
+    label: 'Author(s), editor(s), contributor(s)'
+    machine_name: author_s_editor_s_contributor_s_
+    type: csv
+  originally_published_at:
+    value: 'Originally published at'
+    label: 'Originally published at'
+    machine_name: originally_published_at
+    type: csv
+  resource_url:
+    value: 'Resource URL'
+    label: 'Resource URL'
+    machine_name: resource_url
+    type: csv
+  uri:
+    value: uri
+    label: uri
+    machine_name: uri
+    type: csv
+  originally_published_a:
+    value: 'Originally published at'
+    label: 'Originally published at'
+    machine_name: originally_published_a
+    type: csv
+  promoted_to_library:
+    value: 'Promoted to Library'
+    label: 'Promoted to Library'
+    machine_name: promoted_to_library
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  language:
+    value: Language
+    label: Language
+    machine_name: language
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  published:
+    value: Published
+    label: Published
+    machine_name: published
+    type: csv
+  date_of_publication:
+    value: 'Date of publication'
+    label: 'Date of publication'
+    machine_name: date_of_publication
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_description
+    map:
+      value: abstract_or_description
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_doc_identifier
+    map:
+      value: isbn_resource_id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_pagination
+    map:
+      value: pages
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_copyrights_statement
+    map:
+      value: copyright_details
+    settings:
+      language: null
+  -
+    target: field_doc_people
+    map:
+      value: author_s_editor_s_contributor_s_
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_doc_is_shown_by
+    map:
+      uri: resource_url
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_doc_is_shown_at
+    map:
+      uri: originally_published_a
+      title: ''
+    settings:
+      language: null
+  -
+    target: promoted_to_library
+    map:
+      value: promoted_to_library
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: published
+    settings:
+      language: null
+  -
+    target: field_doc_creation_date
+    map:
+      value: date_of_publication
+    settings:
+      language: null
+      timezone: UTC

@@ -1,0 +1,51 @@
+        .swiper-paginationb-bullet{
+            width: 18px;
+            height: 18px;
+            border: 1px solid black;
+            background: #39c;
+        }
+
+        .swiper-paginationb-bullets{
+            padding-top: 3rem;
+            position: relative;
+        }
+
+        .lp-swiper-controls-bottom .swiper-paginationb {
+            display: none;
+        }
+
+        .lp-swiper-controls-bottom .swiper-pagination-horizontal {
+            display: block;
+        }
+
+        .lp-swiper-controls-bottom .swiper-paginationb-horizontal {
+            display: block;
+        }        
+
+        .swiper {
+            display: none;
+        }
+
+        .swiper.swiper-initialized {
+            display: block;
+            padding-bottom: 15px;
+        }        
+        .form-item-style-options-widgets-bottom-lp-swiper-slide-counter-enable{
+            display: none;
+        }
+        .form-item-style-options-widgets-bottom-lp-swiper-controls-enable{
+            display: none;
+        }
+        .form-item-style-options-widgets-top-lp-swiper-slide-counter-enable{
+            display: none;
+        }
+        .form-item-style-options-widgets-top-lp-swiper-controls-enable{
+            display: none;
+        }        
+        .form-item-style-options-widgets-top-lp-swiper-pager-enable{
+            display: none;
+        }
+
+        .vs-dependent-swiper{
+            display: none;
+        }

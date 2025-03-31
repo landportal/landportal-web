@@ -1,0 +1,12 @@
+uuid: e4c47ddb-03dc-4016-93f2-b7e2b9be9de0
+langcode: en
+status: true
+dependencies: {  }
+id: user_content_type_style
+label: 'User Content Type Style'
+classes: user-content-type-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,21 @@
+{#
+/**
+* @file
+* Landportal Organizations block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: Organizations' title.
+*   - url: Organizations' url.
+*   - date: Organizations' publish date.
+*   - image_url: Organizations' image url.
+*   - image_title: Organizations' image title.
+*   - image_alt: Organizations' image alt.
+* - more_news_url: More Organizations page url.
+*/
+#}
+{% include "@organisms/organisations-block/project-donors-carousel.twig" with {
+  more_url: more_url,
+  more_label: more_label,
+  items: items,
+} %}

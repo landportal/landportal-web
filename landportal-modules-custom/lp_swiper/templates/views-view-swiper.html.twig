@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views swiper.
+ *
+ * Available variables:
+ * - bottom_widget_rendered: Widget under the swiper with controls/data.
+ * - skin: The skin being applied to the swiper.
+ * - swiper: The swiper.
+ * - top_widget_rendered: Widget above the swiper with controls/data.
+ *
+ * @see _lp_swiper_preprocess_views_view_swiper()
+ *
+ * @ingroup vss_templates
+ */
+#}
+{% if swiper %}
+  <div class="skin-{{ skin }}">
+    {% if top_widget_rendered %}
+      <div class="lp-swiper-controls-top clearfix">
+        {{ top_widget_rendered }}
+      </div>
+    {% endif %}
+
+    {{ swiper }}
+
+    {% if bottom_widget_rendered %}
+      <div class="lp-swiper-controls-bottom clearfix">
+        {{ bottom_widget_rendered }}
+      </div>
+    {% endif %}
+    </div>
+{% endif %}

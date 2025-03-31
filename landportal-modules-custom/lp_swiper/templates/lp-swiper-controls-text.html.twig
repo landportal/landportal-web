@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views swiper text controls.
+ *
+ * Available variables:
+ * - classes: Classes to apply to the control.
+ * - rendered_control_next: Text next control.
+ * - rendered_control_pause: Text pause control.
+ * - rendered_control_previous: Text previous control.
+ * - vss_id: The swiper's id.
+ *
+ * @see template_preprocess_lp_swiper_controls_text()
+ *
+ * @ingroup vss_templates
+ */
+#}
+<div id="lp_swiper_controls_text_{{ vss_id }}" {{ attributes.addClass(classes) }}>
+  {{ rendered_control_previous }}
+  {{ rendered_control_pause }}
+  {{ rendered_control_next }}
+</div>

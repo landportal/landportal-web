@@ -1,0 +1,22 @@
+uuid: 0746a0ca-3275-412b-84a9-e14fe7a377c9
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+id: country_narrative
+label: 'Country Narrative'
+type: 'canonical_entities:node'
+pattern: 'book/countries/[node:title]'
+selection_criteria:
+  01d8539c-f79e-408d-a12b-2fc33e5b1d30:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 01d8539c-f79e-408d-a12b-2fc33e5b1d30
+    context_mapping:
+      node: node
+    bundles:
+      country_narrative: country_narrative
+selection_logic: and
+weight: -5
+relationships: {  }

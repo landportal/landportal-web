@@ -1,0 +1,35 @@
+{#
+/**
+* @file
+* Landportal Events block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: Events' title.
+*   - url: Events' url.
+*   - date: Events' publish date.
+*   - image_url: Events' image url.
+*   - image_title: Events' image title.
+*   - image_alt: Events' image alt.
+* - more_news_url: More Events page url.
+*/
+#}
+<div>
+  {% for item in items %}
+    <div>
+      <a href="{{ item.ss_url }}">
+        <img src="{{ item['tm_field_image$file$url'].0 }}" title="{{ item['tm_field_image$file$field_file_image_title_text'].0 }}" alt="{{ item.image_alt }}">
+      </a>
+      <h3>
+        <a href="{{ item.ss_url }}">{{ item.tm_title_field.0 }}</a>
+      </h3>
+      <div>{{ item.ds_field_pubdate|date(format='j F Y') }}</div>
+      {% if item['tm_body$summary'].0 is not empty %}
+        <div>{{ item['tm_body$summary'].0|striptags }}</div>
+      {% else %}
+        <div>{{ item['tm_body$value'].0|striptags|slice(0, 300) }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+  <p><a href="{{ more_url }}">{{ more_label }}</a></p>
+</div>

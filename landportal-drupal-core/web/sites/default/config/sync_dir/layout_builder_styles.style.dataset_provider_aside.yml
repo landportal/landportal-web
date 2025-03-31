@@ -1,0 +1,12 @@
+uuid: 1fc73193-6426-4f7b-9e04-3b969cad4a3d
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_provider_aside
+label: 'Dataset Provider aside'
+classes: dataset-provider-aside
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

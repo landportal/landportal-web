@@ -1,0 +1,99 @@
+/* LI */
+.main-menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  &:hover {
+    background-color: clr(background-light);
+    transition: all 0.2s;
+
+    .main-menu__link::after {
+      color: clr(text);
+    }
+
+    & > .main-menu--sub {
+      display: block;
+    }
+  }
+
+  @include medium {
+    display: inline-block;
+
+    /* Only top level */
+    &:not(.main-menu__item--sub) {
+      border-left: 2px solid clr(background-light);
+      margin-right: -5px; // Adjust for space between inline-block li elements.
+
+      &:last-of-type {
+        border-right: 2px solid clr(background-light);
+      }
+
+      &:hover {
+        background-color: clr(background-light);
+        transition: all 0.2s;
+
+        & > .main-menu--sub {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* Expand Button */
+.expand-sub {
+  background-color: clr(background-dark);
+  cursor: pointer;
+  display: block;
+  width: 20%;
+  color: $white;
+  position: relative;
+
+  @include medium {
+    display: none;
+  }
+
+  /* Down triangle */
+  &::after {
+    border: 15px solid;
+    border-bottom-color: transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    content: '';
+    display: block;
+    margin-right: -12px;
+    margin-top: -6px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 0;
+  }
+
+  /* See main-menu.js */
+  &--open {
+    background-color: clr(background-dark);
+    color: clr(background-light);
+
+    &::after {
+      border-top-color: transparent;
+      border-bottom: 15px solid;
+      margin-top: -20px;
+    }
+  }
+}
+
+/*
+ * Sub Navigation
+ */
+
+/* LI (Nested) */
+.main-menu__item--sub {
+  @include medium {
+    display: block;
+
+    &:not(:first-child) {
+      border-top: 1px solid clr(background-dark);
+    }
+  }
+}

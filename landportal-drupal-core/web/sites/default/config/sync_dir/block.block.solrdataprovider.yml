@@ -1,0 +1,24 @@
+uuid: 610960e5-40ac-4d0a-bab6-77ba97715ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_data_provider
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrdataprovider
+theme: landportal
+region: sidebar
+weight: -14
+provider: null
+plugin: 'facet_block:solr_data_provider'
+settings:
+  id: 'facet_block:solr_data_provider'
+  label: 'Filter by data provider:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrdataprovider
+visibility: {  }

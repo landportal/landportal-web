@@ -1,0 +1,6 @@
+name: Landportal Rdf
+type: module
+description: "This is our custom RDF module For Drupal 10."
+package: Custom
+version: 1.x
+core_version_requirement: ^9 || ^10.0

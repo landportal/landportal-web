@@ -1,0 +1,12 @@
+uuid: 44beb1ec-0ab8-4154-9b55-2b6c7fdfa5bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+id: rli_navigator_editor
+label: 'RLI Navigator editor'
+weight: 7
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'

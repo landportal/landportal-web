@@ -1,0 +1,23 @@
+uuid: 3ff0dd51-8c15-46b4-837f-0a70c1029da7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.issue_narrative_summary
+    - node.type.issues
+  module:
+    - text
+id: node.issues.issue_narrative_summary
+field_name: issue_narrative_summary
+entity_type: node
+bundle: issues
+label: 'Issue Narrative'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

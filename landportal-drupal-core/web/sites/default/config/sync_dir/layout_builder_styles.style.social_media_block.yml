@@ -1,0 +1,12 @@
+uuid: 2be031e4-4b09-4459-a128-7035f2832aa1
+langcode: en
+status: true
+dependencies: {  }
+id: social_media_block
+label: 'Social Media Block'
+classes: social-media-lock
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

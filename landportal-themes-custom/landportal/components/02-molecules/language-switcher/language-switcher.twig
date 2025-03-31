@@ -1,0 +1,15 @@
+{% set switcher__base_class = 'language-switcher-language-url' %}
+{% set switcher__link_class = 'language-link' %}
+
+<nav>
+  <div class="{{ switcher__base_class }}">
+    <h2 title="{{ 'Language' | t }}" }}>{{ 'Language' | t }}</h2>
+    <ul class="links">
+      {% for item in switcher_items %}
+        <li>
+          <a class="{{ switcher__link_class }} href="{{ item.url }}" title="{{ item.title }}" }}>{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

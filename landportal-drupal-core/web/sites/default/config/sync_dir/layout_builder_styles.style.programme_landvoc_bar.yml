@@ -1,0 +1,12 @@
+uuid: ed57625d-fb3d-4559-8185-8fa3a755fe4a
+langcode: en
+status: true
+dependencies: {  }
+id: programme_landvoc_bar
+label: 'Programme landvoc Bar'
+classes: programme-landvoc-bar
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 6acbd09b-45d6-4390-9b4b-dacc680e86c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_partners
+    - node.type.organization
+    - taxonomy.vocabulary.datasets
+id: taxonomy_term.datasets.field_partners
+field_name: field_partners
+entity_type: taxonomy_term
+bundle: datasets
+label: Partners
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

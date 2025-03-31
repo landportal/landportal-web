@@ -1,0 +1,4 @@
+name: LandPortal Alias Import
+description: 'Import multiple aliases'
+type: module
+core_version_requirement: ^9.4 || ^10

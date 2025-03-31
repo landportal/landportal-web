@@ -1,0 +1,50 @@
+{% set layout_modifiers = [] %}
+
+{% set main_base_class = main_base_class|default('main') %}
+{% set main_modifiers = [] %}
+
+{% set current_full_page = url("<current>") %}
+{% set current_page_url = current_full_page|render|render %}
+{% set current_page_url_arr = current_page_url|split('/') %}
+{% if ("/community/projects" in current_full_page|render|render ) and ( current_page_url_arr.5 == "" ) %}
+{% set main_content_base_class = main_content_base_class|default('main-content  community-projects-landing-page') %}
+{% elseif ("/community/projects" in current_full_page|render|render ) and ( current_page_url_arr.5 == "projects" ) and ( current_page_url_arr.6 == "" ) %}
+{% set main_content_base_class = main_content_base_class|default('main-content  community-projects-landing-page') %}
+{% else %}
+{% set main_content_base_class = main_content_base_class|default('main-content') %}
+{% endif %}
+
+
+{% set main_content_modifiers = [] %}
+
+{% if sidebar %}
+  {% set main_modifiers = main_modifiers|merge(['with-sidebar']) %}
+  {% set main_content_modifiers = main_content_modifiers|merge(['with-sidebar']) %}
+{% endif %}
+
+<div {{ bem('layout-container', layout_modifiers) }}>
+  {% block page_header %}
+    {% include "@organisms/site/site-header/site-header.twig" %}
+  {% endblock %}
+  {% block page_system %}
+  {% endblock %}
+  <div {{ bem(main_base_class, main_modifiers, main_blockname) }}>
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {% if sidebar %}
+      <aside class="main-sidebar" role="complementary">
+        {% block page_sidebar %}{% endblock %}
+      </aside>
+    {% endif %}
+    <main role="main" {{ bem(main_content_base_class, main_content_modifiers, main_content_blockname) }}>
+      <div {{ bem('secondary', [], header__base_class) }}>
+        {% block header__breadcrumbs %}
+          {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
+        {% endblock %}
+      </div>
+      {% block page_content %}{% endblock %}
+    </main>
+  </div>
+  {% block page_footer %}
+    {% include "@organisms/site/site-footer/site-footer.twig" %}
+  {% endblock %}
+</div>

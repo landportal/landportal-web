@@ -1,0 +1,4 @@
+settings:
+  text:
+    value: "<div class=\"country-map-key\">\r\n<ul>\r\n\t<li class=\"featured\"><span style=\"font-size:13px;\">Portfólios de países em destaque - editados com nossos parceiros locais</span></li>\r\n\t<li class=\"other\"><span style=\"font-size:13px;\">Outros portafolios de países disponíveis&nbsp;</span></li>\r\n\t<li class=\"none\"><span style=\"font-size:13px;\">Portfólio não disponível, mas uma coleção de informações relacionadas</span></li>\r\n</ul>\r\n</div>\r\n"
+    format: full_html

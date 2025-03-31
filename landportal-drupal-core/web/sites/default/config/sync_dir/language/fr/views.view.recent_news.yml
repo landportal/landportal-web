@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'Voir tous les nouvelles '
+      link_url: /fr/news
+      header:
+        area:
+          content:
+            value: "<p><a class=\"recent-button\" href=\"/fr/news\">Dernières nouvelles</a></p>\r\n"
+            format: full_html

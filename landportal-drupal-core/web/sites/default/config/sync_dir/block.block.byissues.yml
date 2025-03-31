@@ -1,0 +1,24 @@
+uuid: f022586e-6547-47ac-b655-667153ed7a03
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.by_issues
+  module:
+    - facets
+  theme:
+    - landportal
+id: byissues
+theme: landportal
+region: content
+weight: -15
+provider: null
+plugin: 'facet_block:by_issues'
+settings:
+  id: 'facet_block:by_issues'
+  label: 'By Issues'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: byissues
+visibility: {  }

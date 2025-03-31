@@ -1,0 +1,12 @@
+uuid: a2467a89-1138-47ed-8038-0d70db17fe49
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_body
+label: 'Landing Page Body'
+classes: landpagebody
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

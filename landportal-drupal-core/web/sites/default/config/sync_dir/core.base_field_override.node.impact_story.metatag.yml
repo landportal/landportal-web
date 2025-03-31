@@ -1,0 +1,18 @@
+uuid: d49831a5-e651-467d-a34f-af3d39c54689
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+id: node.impact_story.metatag
+field_name: metatag
+entity_type: node
+bundle: impact_story
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

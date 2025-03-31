@@ -1,0 +1,28 @@
+uuid: 2ea69d66-a133-4557-a3f8-114e6f0ab4c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.related_projects
+    - node.type.project
+id: node.project.related_projects
+field_name: related_projects
+entity_type: node
+bundle: project
+label: 'Related Projects'
+description: 'Write a title to select a related project.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

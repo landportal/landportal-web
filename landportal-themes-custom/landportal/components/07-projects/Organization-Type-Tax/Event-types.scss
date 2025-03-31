@@ -1,0 +1,190 @@
+.event-types-tax-class{
+    .views-row{
+        border-top: 5px solid #336;
+        .page-title{
+            display: none;
+        }
+        .libaray-image{
+            float: left;
+            clear: right;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            @media (min-width: $p-small){
+                width: 25%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+        .title{
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            max-height: 7.8em;
+            overflow: hidden;
+            margin-bottom: 10px;
+            span{
+                font-size: 18px;
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: 700;
+                line-height: normal;
+                a{
+                    color: #06C;
+                }
+                
+            }
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+        .date{
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            div{
+                color: #444;
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                &::before{
+                    content: "";
+                    padding: 0 3px 3px;
+                    background-image: url(../images/icons8-date-50.png);
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    background-size: cover;
+                    margin-right: 5px;
+                    vertical-align: sub;
+                }
+            }
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+
+        .location{
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            div{
+                color: #444;
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                &::before{
+                    content: '';
+                    background-image: url(../images/location.jpg);
+                    height: 17px;
+                    width: 17px;
+                    display: inline-block;
+                    background-size: cover;
+                    vertical-align: sub;
+                }
+            } 
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            } 
+        }
+        .event-city, .event-street, .event-country{
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            div{
+                color: #444;
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+            }
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+        .dataset-description {
+            float: right;
+            clear: right;
+            max-height: 5em;
+            overflow: hidden;   
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px; 
+            padding-bottom: 15px;
+        
+            div {
+                font-size: 13px;
+                color: #666;
+            }
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+        
+       
+        .provider-in-data {
+            float: right;
+            clear: right; 
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px; 
+            line-height: 1.42857143;
+        
+            div {
+                &:first-child:only-child::before {
+                    content: 'Organizers:';
+                    font-weight: bold;
+                    display: inline;
+                    color: #444;
+                    font-size: 13px;
+                    font-family: "Merriweather Sans",sans-serif;
+                    line-height: 1.42857143;
+                }
+                &:first-child:only-child > div::before { 
+                    content: '';
+                }
+        
+                div {
+                    display: inline;
+                    font-size: 13px;
+                    &::after {
+                        content: ',';
+                    }   
+                }
+                &:last-child div:last-child::after {
+                    content: none; // Remove the comma after the last div
+                }
+            }
+            @media (min-width: $p-small){
+                width: 75%;
+            }
+            @media (min-width: $p-large){
+                width: 50%;
+            }
+        }
+        
+        
+    }
+} 

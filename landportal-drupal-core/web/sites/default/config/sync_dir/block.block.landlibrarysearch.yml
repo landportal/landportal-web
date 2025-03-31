@@ -1,0 +1,30 @@
+uuid: 82afa684-d791-45d1-abca-8aa0bf6c1954
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card:27252d22-2091-4166-a504-42f76e20252a'
+  module:
+    - block_content
+    - system
+  theme:
+    - landportal
+id: landlibrarysearch
+theme: landportal
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:27252d22-2091-4166-a504-42f76e20252a'
+settings:
+  id: 'block_content:27252d22-2091-4166-a504-42f76e20252a'
+  label: 'Land Library Search'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /library/search

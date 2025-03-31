@@ -1,0 +1,38 @@
+uuid: f0860797-da73-4ac6-8318-c9ae5a0ab44e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.country_narrative.field_media_image
+    - image.style.thumbnail
+    - media.type.country_narrative
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: media.country_narrative.media_library
+targetEntityType: media
+bundle: country_narrative
+mode: media_library
+content:
+  field_media_image:
+    type: image_image
+    weight: -50
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+landportal_content_selection.autocomplete:
+  path: '/autocomplete/articles'
+  defaults:
+    _controller: '\Drupal\landportal_content_selection\Controller\JsonApiArticlesController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+
+landportal_content_selection.concepts_autocomplete:
+  path: '/autocomplete/concepts'
+  defaults:
+    _controller: '\Drupal\landportal_content_selection\Controller\JsonApiConceptsController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+
+# landportal_content_selection.form_autocomplete:
+#   path: '/autocomplete-form'
+#   defaults:
+#     _form:  '\Drupal\landportal_content_selection\Form\MyAutocompleteForm'
+#     _title: 'Autocomplete Form'
+#   requirements:
+#     _permission: 'access content'

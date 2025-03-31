@@ -1,0 +1,208 @@
+uuid: 29ff8f3a-33e3-4c76-8fad-8a1d326f0a74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landlibrary_resource.field_noderef
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Library Related Content Field'
+id: library_related_content_field
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: und
+  insert_new: 0
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  related_content:
+    value: related_content
+    label: related_content
+    machine_name: related_content
+    type: csv
+  related_content1:
+    value: related_content1
+    label: related_content1
+    machine_name: related_content1
+    type: csv
+  related_content2:
+    value: related_content2
+    label: related_content2
+    machine_name: related_content2
+    type: csv
+  related_content3:
+    value: related_content3
+    label: related_content3
+    machine_name: related_content3
+    type: csv
+  related_content4:
+    value: related_content4
+    label: related_content4
+    machine_name: related_content4
+    type: csv
+  related_content5:
+    value: related_content5
+    label: related_content5
+    machine_name: related_content5
+    type: csv
+  field_noderef6:
+    value: field_noderef6
+    label: field_noderef6
+    machine_name: field_noderef6
+    type: csv
+  related_content6:
+    value: related_content6
+    label: related_content6
+    machine_name: related_content6
+    type: csv
+  related_content7:
+    value: related_content7
+    label: related_content7
+    machine_name: related_content7
+    type: csv
+  related_content8:
+    value: related_content8
+    label: related_content8
+    machine_name: related_content8
+    type: csv
+  related_content9:
+    value: related_content9
+    label: related_content9
+    machine_name: related_content9
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_noderef
+    map:
+      target_id: related_content
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content9
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

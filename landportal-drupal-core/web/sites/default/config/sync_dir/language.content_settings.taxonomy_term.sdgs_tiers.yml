@@ -1,0 +1,18 @@
+uuid: f7018e93-f033-4932-a459-9dd1f74d7c59
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs_tiers
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.sdgs_tiers
+target_entity_type_id: taxonomy_term
+target_bundle: sdgs_tiers
+default_langcode: site_default
+language_alterable: false

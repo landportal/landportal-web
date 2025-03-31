@@ -1,0 +1,12 @@
+uuid: abb2446e-865a-4f72-8a5f-49f1c55aca83
+langcode: en
+status: true
+dependencies: {  }
+id: join_the_debate_landing_page
+label: 'Join The Debate Landing Page'
+classes: join-the-debate-landing-page
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

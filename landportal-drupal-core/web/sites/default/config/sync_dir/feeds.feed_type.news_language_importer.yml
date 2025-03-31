@@ -1,0 +1,104 @@
+uuid: 4174d25c-84b2-4361-be0d-bffe1cb84673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_language
+    - node.type.news
+  module:
+    - node
+label: 'News Language Importer'
+id: news_language_importer
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  language_news:
+    value: 'Language news'
+    label: 'Language news'
+    machine_name: language_news
+    type: csv
+  language_news1:
+    value: 'Language news1'
+    label: 'Language news1'
+    machine_name: language_news1
+    type: csv
+  language_news2:
+    value: 'Language news2'
+    label: 'Language news2'
+    machine_name: language_news2
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_language
+    map:
+      target_id: language_news
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: language_news1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: language_news2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

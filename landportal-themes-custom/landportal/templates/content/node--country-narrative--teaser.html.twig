@@ -1,0 +1,16 @@
+{% embed "@molecules/portfolio-card/portfolio-card.twig" %}
+
+  {% block portfolio_image %}
+    <a href="{{ content.geographical_focus[0]['#url'] }}">{{ content.picture }}</a>
+  {% endblock %}
+
+  {% block portfolio_title %}
+    {{ content.geographical_focus }}
+  {% endblock %}
+
+  {% block portfolio_summary %}
+    {% set text = content.narrative|render|striptags %}
+    {{ text|length > 250 ? text|truncate(250, true)|raw : text|raw }}
+  {% endblock %}
+
+{% endembed %}

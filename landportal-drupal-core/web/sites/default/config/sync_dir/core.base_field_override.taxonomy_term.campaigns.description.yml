@@ -1,0 +1,20 @@
+uuid: a79a84be-dc98-4e69-84ea-b311051abbed
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+  module:
+    - text
+id: taxonomy_term.campaigns.description
+field_name: description
+entity_type: taxonomy_term
+bundle: campaigns
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

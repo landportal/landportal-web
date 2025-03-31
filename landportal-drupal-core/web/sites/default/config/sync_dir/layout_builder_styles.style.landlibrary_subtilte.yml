@@ -1,0 +1,12 @@
+uuid: fd8a2a21-0967-4c1e-be34-9031ddc0dd53
+langcode: en
+status: true
+dependencies: {  }
+id: landlibrary_subtilte
+label: 'LandLibrary Subtilte'
+classes: library-subtilte
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

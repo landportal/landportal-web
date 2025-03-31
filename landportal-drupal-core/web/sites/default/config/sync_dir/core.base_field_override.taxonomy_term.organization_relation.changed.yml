@@ -1,0 +1,18 @@
+uuid: 9de7306b-7ba4-471e-8638-cda800febbd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_relation
+id: taxonomy_term.organization_relation.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: organization_relation
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

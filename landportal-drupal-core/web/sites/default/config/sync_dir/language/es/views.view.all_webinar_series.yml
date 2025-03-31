@@ -1,0 +1,14 @@
+display:
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>El Land Portal organiza debates dinámicos y bien preparados que tienen un impacto duradero, llegando al fondo de los temas discutidos. Este enfoque contribuye a crear comunidades de prácticas, garantizando una diversidad en la participación de las/los interesados y proporcionando resultados duraderos mediante registros profesionales que pueden consultarse en los años venideros. Esperamos con interés su participación en nuestros próximos webinarios.</p>\r\n"
+            format: full_html
+      pager:
+        options:
+          tags:
+            next: 'próximo ›'
+            previous: '‹ anterior'
+            last: 'última »'

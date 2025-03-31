@@ -1,0 +1,20 @@
+uuid: 3f597303-afdc-48d2-8437-4dca96078e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.theme
+  module:
+    - path
+id: taxonomy_term.theme.path
+field_name: path
+entity_type: taxonomy_term
+bundle: theme
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

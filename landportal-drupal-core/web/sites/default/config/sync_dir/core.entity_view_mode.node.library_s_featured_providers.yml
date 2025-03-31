@@ -1,0 +1,10 @@
+uuid: 6bf39c77-ada7-446d-ad8e-24f1d3a3caa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.library_s_featured_providers
+label: 'Library''s Featured Providers'
+targetEntityType: node
+cache: true

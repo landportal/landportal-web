@@ -1,0 +1,29 @@
+uuid: 3b3edcf3-f000-41af-bf0e-6b5defebf055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners
+    - node.type.organization
+    - node.type.sdgi
+id: node.sdgi.field_partners
+field_name: field_partners
+entity_type: node
+bundle: sdgi
+label: Partners
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

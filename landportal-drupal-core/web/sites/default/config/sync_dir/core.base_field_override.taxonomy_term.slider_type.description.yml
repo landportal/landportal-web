@@ -1,0 +1,20 @@
+uuid: 6633c700-b73c-47c1-805a-285636ec34a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_type
+  module:
+    - text
+id: taxonomy_term.slider_type.description
+field_name: description
+entity_type: taxonomy_term
+bundle: slider_type
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

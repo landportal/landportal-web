@@ -1,0 +1,12 @@
+uuid: 854a6042-71d8-4186-8f59-8044dcbfa191
+langcode: en
+status: true
+dependencies: {  }
+id: news_desclaimer
+label: 'News desclaimer'
+classes: news-desclaimer
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

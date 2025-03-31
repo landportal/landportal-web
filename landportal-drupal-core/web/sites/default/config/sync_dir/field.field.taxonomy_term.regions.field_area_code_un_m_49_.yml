@@ -1,0 +1,19 @@
+uuid: f222b804-37d6-4783-97d8-e0dda34afbde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_area_code_un_m_49_
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.regions.field_area_code_un_m_49_
+field_name: field_area_code_un_m_49_
+entity_type: taxonomy_term
+bundle: regions
+label: 'Area code (UN M.49)'
+description: '3 numbers code for the area (country/region). See the latest list of codes in the <a href="http://unstats.un.org/unsd/publications/statistical-yearbook">UN Statistical Yearbook</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: 432ebb20-9fd8-4d10-bd9f-1c6316ba1080
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sliders
+  module:
+    - node
+id: node.sliders
+targetEntityType: node
+bundle: sliders
+types:
+  - ''
+fieldMappings: {  }

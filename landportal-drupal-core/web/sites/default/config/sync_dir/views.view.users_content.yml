@@ -1,0 +1,1372 @@
+uuid: ddae441c-c5f4-4c46-86a3-2835938606cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.new_teaser
+    - field.storage.node.body
+    - field.storage.node.field_image
+    - node.type.country_narrative
+    - node.type.issues
+    - node.type.organization
+    - node.type.programme_narrative
+    - node.type.project
+    - taxonomy.vocabulary.concepts
+    - taxonomy.vocabulary.regions
+    - taxonomy.vocabulary.theme
+  content:
+    - 'taxonomy_term:concepts:00116c24-931d-4819-814c-04c705d04fce'
+    - 'taxonomy_term:concepts:0070fa77-83a4-4ade-bcbf-02002d7c5533'
+    - 'taxonomy_term:concepts:016ac2b0-ef90-4393-8cd5-ed6a63bb49f3'
+    - 'taxonomy_term:concepts:025ab5f5-39dc-414d-b798-afed982e8615'
+    - 'taxonomy_term:concepts:043c7af7-9911-404a-a8c2-4c0270a3996f'
+    - 'taxonomy_term:concepts:0473f636-5e3c-4a26-81a3-0f9af60ceab0'
+    - 'taxonomy_term:concepts:05b47208-44ef-4ea0-8741-2f551ed45757'
+    - 'taxonomy_term:concepts:0619bcbd-be79-4394-a7ce-53c3b88b1c63'
+    - 'taxonomy_term:concepts:065ffe72-417f-4988-bddd-7134c2088f69'
+    - 'taxonomy_term:concepts:06f8738f-dcc2-4653-aaeb-5e8e0b502606'
+    - 'taxonomy_term:concepts:09b5f676-473c-469b-84e8-d364ab1783af'
+    - 'taxonomy_term:concepts:0a3b9127-564c-45a7-929e-f6cc18c74bad'
+    - 'taxonomy_term:concepts:0a586ed1-8a39-4b85-939c-68e0bce53f49'
+    - 'taxonomy_term:concepts:0abeeddf-3dfe-4ab9-9890-25ffeccc6d7b'
+    - 'taxonomy_term:concepts:0ae21f91-d7d2-48ee-823c-94975a47fa4c'
+    - 'taxonomy_term:concepts:0b160dfc-b59b-40e6-8ca8-09e60fc16e0c'
+    - 'taxonomy_term:concepts:0bce79ce-b487-44ae-b589-ddc83719c303'
+    - 'taxonomy_term:concepts:0c788a33-7ce5-4c23-9f73-71eccc0a94da'
+    - 'taxonomy_term:concepts:0d12c6b4-6c1c-457b-a0d1-7466a4b38cb5'
+    - 'taxonomy_term:concepts:0d17d3ab-e2bb-4a3c-b93d-e94575c6dee0'
+    - 'taxonomy_term:concepts:0df399ef-021c-45c9-95ad-1a7077946dbc'
+    - 'taxonomy_term:concepts:0e58eb1a-12bd-4b46-9bd6-d150d3804146'
+    - 'taxonomy_term:concepts:0f60b296-f3ad-4538-bb2f-60cff5675814'
+    - 'taxonomy_term:concepts:0fcdd29d-678c-47bc-b234-832e7cf965cd'
+    - 'taxonomy_term:concepts:1075042b-b6ea-4f23-928a-b7e8985c9b73'
+    - 'taxonomy_term:concepts:11302d6a-3f79-49ce-8815-847a36e70681'
+    - 'taxonomy_term:concepts:12149e27-17c4-4b7c-b416-8a4c996c0e2f'
+    - 'taxonomy_term:concepts:12c3d2b4-29a7-429f-95fd-1e19b5229ca9'
+    - 'taxonomy_term:concepts:12cd205b-b09b-4d90-bcf9-38c0991e734b'
+    - 'taxonomy_term:concepts:15328359-592f-40bc-af57-b0dfaad840a2'
+    - 'taxonomy_term:concepts:155a2bb0-addd-4a27-b075-f58ab22022da'
+    - 'taxonomy_term:concepts:16ccd75a-2dd4-4840-81f3-fffd8e4c89a4'
+    - 'taxonomy_term:concepts:176084a0-655d-4469-a6de-e936bd44ef88'
+    - 'taxonomy_term:concepts:19ae7468-83f3-4b00-bc5b-0ec4f97402fb'
+    - 'taxonomy_term:concepts:1a8c04a5-9f8f-4e54-9a13-358f35c28657'
+    - 'taxonomy_term:concepts:1aebbca0-6725-47dc-a433-889bb37e1142'
+    - 'taxonomy_term:concepts:1cc515c1-dba0-44dc-9d73-3daee681f11e'
+    - 'taxonomy_term:concepts:1d08cc84-9391-47cb-8d3c-ae564af6e3c9'
+    - 'taxonomy_term:concepts:1d228a29-7dba-404d-8dd8-15af6d05da4f'
+    - 'taxonomy_term:concepts:1d6242ee-3092-4876-b1f4-f90468572458'
+    - 'taxonomy_term:concepts:1d6ba219-14f0-4a47-9a1e-cb8dd641bacd'
+    - 'taxonomy_term:concepts:1da24a64-2067-4335-b923-ff0f4d937913'
+    - 'taxonomy_term:concepts:1da52c95-0dda-4ba9-8ee1-b3bb62183264'
+    - 'taxonomy_term:concepts:1dc7c1d4-a71f-49c5-b289-96b92e203897'
+    - 'taxonomy_term:concepts:1deebee7-35fb-4b65-9a09-1246ae87c011'
+    - 'taxonomy_term:concepts:1eb5f8ad-4171-40ca-998c-beb7a080cfc2'
+    - 'taxonomy_term:concepts:1f491177-9e24-4960-95e2-06c82d4c8730'
+    - 'taxonomy_term:concepts:1fe6096b-e03d-4450-b324-37cb17deca3e'
+    - 'taxonomy_term:concepts:214939e8-6715-4140-a4ca-d9831dd5e6c4'
+    - 'taxonomy_term:concepts:2284314c-e5a6-4bab-aab9-7e6d1ec2e1a1'
+    - 'taxonomy_term:concepts:22dc6172-d23a-455a-8b1c-b8745c6d0255'
+    - 'taxonomy_term:concepts:24ec50d6-d8b4-4ff6-b163-aeef222dbbee'
+    - 'taxonomy_term:concepts:2598d0c3-7abe-4ab2-b723-4885efea6f31'
+    - 'taxonomy_term:concepts:28ab2517-39bf-4042-8fda-59cbc45891a5'
+    - 'taxonomy_term:concepts:293f0854-bbcc-45c6-aa15-1465200c1f4e'
+    - 'taxonomy_term:concepts:2a23f34a-dc75-411b-8094-920eb26b5444'
+    - 'taxonomy_term:concepts:2a284b63-6f0d-4d76-9fd3-1895f1d16f4f'
+    - 'taxonomy_term:concepts:2a4afcb7-ad60-4c23-ab00-278194ad0e34'
+    - 'taxonomy_term:concepts:2b9146f0-55a3-407b-9be6-ac26b0c4a2c1'
+    - 'taxonomy_term:concepts:2bca0ed3-4f4c-4732-9f8d-442baf70b8ac'
+    - 'taxonomy_term:concepts:2c9828d4-8db3-4484-9f56-6c05538b5374'
+    - 'taxonomy_term:concepts:2d30d394-c386-4976-821f-5f64d0452659'
+    - 'taxonomy_term:concepts:2ebe5fb9-0a25-4443-a416-dd280bc43fb7'
+    - 'taxonomy_term:concepts:2fa02bfb-2f8a-4755-8fca-2e34bdf0c819'
+    - 'taxonomy_term:concepts:2fcb0aeb-ff5a-474a-ba26-2f8f9191b3e2'
+    - 'taxonomy_term:concepts:30d6c878-be1a-4a0f-83f0-ff0a79647fc4'
+    - 'taxonomy_term:concepts:30f43575-a765-41ce-9889-338fd425f4a4'
+    - 'taxonomy_term:concepts:318d22b4-9fde-47e6-833c-f051a1850cc1'
+    - 'taxonomy_term:concepts:31c4f3ac-8eaa-4081-8e72-f3d0a595ff45'
+    - 'taxonomy_term:concepts:3216b29c-2bb7-48ad-bec7-fe4e2588df0e'
+    - 'taxonomy_term:concepts:324f2c91-7251-45e4-8858-5fde5c7e4840'
+    - 'taxonomy_term:concepts:325210e2-32bb-413a-b29b-e7f7c7516e72'
+    - 'taxonomy_term:concepts:32f38a91-5a2d-47b9-9b7e-418a86aad6d8'
+    - 'taxonomy_term:concepts:342761de-7d0c-4b5a-a8c4-ee0c70f13bf9'
+    - 'taxonomy_term:concepts:34aeb262-26e5-46a1-a643-47e7b44576d9'
+    - 'taxonomy_term:concepts:3631fc9b-23d9-4d29-9e98-c2e882c39c66'
+    - 'taxonomy_term:concepts:366fb8de-b1a6-4b45-a44c-9ce709a6fa99'
+    - 'taxonomy_term:concepts:373e82a2-7014-401e-8e8a-e4caec730c8f'
+    - 'taxonomy_term:concepts:374dc98e-dac7-4766-b2a5-512078bc6ee1'
+    - 'taxonomy_term:concepts:37e6ecc2-75c3-4b80-a8cc-f72973adb2b0'
+    - 'taxonomy_term:concepts:387f7329-6bd1-4535-b8d0-0f37dc888b6f'
+    - 'taxonomy_term:concepts:3a0c03ae-d36f-472a-bfe9-63e79f06ea47'
+    - 'taxonomy_term:concepts:3b8f00a8-cbd3-4513-9130-f57a0811bf28'
+    - 'taxonomy_term:concepts:3ba80692-d3a0-42a2-93ab-9b7b39edc72e'
+    - 'taxonomy_term:concepts:3d651f9a-645c-46d6-9973-7c8706082daf'
+    - 'taxonomy_term:concepts:3e3b1478-56f8-42a4-bcd7-9b8cb3072c76'
+    - 'taxonomy_term:concepts:3f50c4d7-dcf0-4d9e-990e-594b49a3aaa4'
+    - 'taxonomy_term:concepts:3f88c626-3f22-40e9-82d6-5350a0381db0'
+    - 'taxonomy_term:concepts:415ac7d9-6af9-4566-8c6d-33009e31f06f'
+    - 'taxonomy_term:concepts:41bdfe8b-6715-4340-b1c9-0bd0723e50f9'
+    - 'taxonomy_term:concepts:43261c0b-d18b-4b31-a400-b1c1c13e651b'
+    - 'taxonomy_term:concepts:43abd6fc-c839-45ae-b11c-f735d78d24f0'
+    - 'taxonomy_term:concepts:44748e2e-6b01-4d43-8a3a-e6a93aecdfea'
+    - 'taxonomy_term:concepts:45d14021-b664-4042-9ccc-37926efd9d9a'
+    - 'taxonomy_term:concepts:45da735c-06a9-42f9-ae87-6afa57f24ab4'
+    - 'taxonomy_term:concepts:46b08355-b641-4fe8-8ca1-d9f9e89c7060'
+    - 'taxonomy_term:concepts:46b64e0c-0a66-4397-b717-2aaae83054f2'
+    - 'taxonomy_term:concepts:493a86a7-f9a7-4aed-bc90-6eb42fa68c99'
+    - 'taxonomy_term:concepts:495f0832-3577-4c93-a756-56edb7b7f124'
+    - 'taxonomy_term:concepts:49865d92-1d04-4030-9621-f786df30aa89'
+    - 'taxonomy_term:concepts:499aa29f-e5b6-4d6f-8b0f-81bd6ce747b3'
+    - 'taxonomy_term:concepts:4b88e113-9a1f-4a3b-ad6a-aba756e6c700'
+    - 'taxonomy_term:concepts:4c5e4f38-b8e2-440d-955b-d81ea2a2325e'
+    - 'taxonomy_term:concepts:4c887b7d-3abe-45a3-89a5-bc06c0e455fe'
+    - 'taxonomy_term:concepts:4d010be8-30a6-4618-9c21-dada85728499'
+    - 'taxonomy_term:concepts:4d34b45a-2164-44a8-87d4-342d028e96da'
+    - 'taxonomy_term:concepts:4d61f3a3-7099-45a3-b914-e4206f1d82e4'
+    - 'taxonomy_term:concepts:4dbd4b67-54a7-4fc9-ba7f-ad540065a7fb'
+    - 'taxonomy_term:concepts:4de5f641-9836-4c66-b335-fb813022739b'
+    - 'taxonomy_term:concepts:4e2d687c-4db1-405b-8429-7790e9bc0124'
+    - 'taxonomy_term:concepts:4e87f621-91e9-49a0-8297-34e08147b371'
+    - 'taxonomy_term:concepts:4fa9ace7-7663-484b-bcbf-9b40ad214855'
+    - 'taxonomy_term:concepts:50e778d2-8556-4e55-b7e8-1363f9dc35d5'
+    - 'taxonomy_term:concepts:51800bd6-0cc9-4822-9783-a3e5978e27c1'
+    - 'taxonomy_term:concepts:519ebf89-a6c0-4d11-bb0b-306f87bb9609'
+    - 'taxonomy_term:concepts:51aaf624-b02f-4b20-b71c-3ff5494a1bc4'
+    - 'taxonomy_term:concepts:52605425-c3f7-44d3-aff4-6841def274cc'
+    - 'taxonomy_term:concepts:52cb5e85-5939-4e4c-b425-f94d78d26ea4'
+    - 'taxonomy_term:concepts:52ef8a33-b7ab-4a09-965d-42e23d6d2456'
+    - 'taxonomy_term:concepts:5349c8a6-e48c-47f9-b7d2-2e5042eb3431'
+    - 'taxonomy_term:concepts:53bbec7b-e69e-4f2a-b0b6-a385bfaa13ab'
+    - 'taxonomy_term:concepts:53e51c90-1eb0-43ed-b2f3-b6a595866346'
+    - 'taxonomy_term:concepts:57365dab-2965-416b-8df3-1c55a0778289'
+    - 'taxonomy_term:concepts:59e9ee1d-d9ab-4399-895e-8d9e84709664'
+    - 'taxonomy_term:concepts:59edec31-4945-4a87-a88a-e359cc79ed72'
+    - 'taxonomy_term:concepts:5c0cf64f-bf14-4a24-bfcc-b872ff8120f8'
+    - 'taxonomy_term:concepts:5efca12b-8408-46fa-80d0-18a2f71c1ab1'
+    - 'taxonomy_term:concepts:5f4e6b36-1e55-4523-bc3b-fbf0ca53ab2e'
+    - 'taxonomy_term:concepts:5f67a878-053b-4efb-bed7-f9ec99b58650'
+    - 'taxonomy_term:concepts:61885806-f88f-4674-8188-d4538b918472'
+    - 'taxonomy_term:concepts:61aba8b9-726c-44dc-bc1e-0ea7609d40fe'
+    - 'taxonomy_term:concepts:61e6e773-8ab8-4236-8630-c0881170e248'
+    - 'taxonomy_term:concepts:622cb8ed-667c-4acf-b750-fd6024c1bd36'
+    - 'taxonomy_term:concepts:62a800e3-faf1-46f3-8c7a-f4c537275c67'
+    - 'taxonomy_term:concepts:63d4de8d-ac1b-4f83-9cfd-e009b38a93aa'
+    - 'taxonomy_term:concepts:64578c60-c99e-4e4c-84b3-e13142a0a564'
+    - 'taxonomy_term:concepts:6481dbc9-6c18-4306-8cc9-38d9a81f9be3'
+    - 'taxonomy_term:concepts:6645f410-d07d-4513-8cbe-8cce4d0dd372'
+    - 'taxonomy_term:concepts:6661cc30-66a1-4d42-9ac7-0c07b1974fcc'
+    - 'taxonomy_term:concepts:668bf6f0-0c29-4f48-86f8-1ce6f20116fb'
+    - 'taxonomy_term:concepts:675c78f6-4ba6-4187-a649-3661251a67de'
+    - 'taxonomy_term:concepts:67af5479-74bf-4afe-94cc-db7a5e9864e0'
+    - 'taxonomy_term:concepts:69666c9e-a03c-4c69-af54-5716af407ede'
+    - 'taxonomy_term:concepts:6ace9cfe-d3fc-4344-9420-b47ee391c853'
+    - 'taxonomy_term:concepts:6ad3bb81-7a4c-46e9-8342-91c8ed54ff36'
+    - 'taxonomy_term:concepts:6aeaeb0e-6f7c-4787-8e51-a115b9a5a5a3'
+    - 'taxonomy_term:concepts:6b093bf8-03e7-4b2f-a26a-90838eea7d37'
+    - 'taxonomy_term:concepts:6b95f967-cf82-4ac0-9a3f-c8f705aca16f'
+    - 'taxonomy_term:concepts:6cbdadf9-a80e-4970-934f-d7cce6da459a'
+    - 'taxonomy_term:concepts:6d050401-ae1e-4f19-b09e-6399db060dfe'
+    - 'taxonomy_term:concepts:6ea140c2-580b-49d8-80ea-88fb3d04af95'
+    - 'taxonomy_term:concepts:6ea5ee8c-17ac-4ece-a90d-73a4952cd39b'
+    - 'taxonomy_term:concepts:71668696-c279-4a09-b433-d23f4ff32540'
+    - 'taxonomy_term:concepts:7181a194-c265-4317-9e10-0554e2b549b6'
+    - 'taxonomy_term:concepts:71f83e2a-c4c9-479c-bc24-a0f917bf88fd'
+    - 'taxonomy_term:concepts:7270a3dd-e16b-40de-a993-f10c54856110'
+    - 'taxonomy_term:concepts:72a8a2f0-f31e-4793-ab53-88d75e66f7a9'
+    - 'taxonomy_term:concepts:73d6c1a6-f44d-4e82-9e76-90b2290027a4'
+    - 'taxonomy_term:concepts:7406c66d-5951-415b-bd93-15789a4623ca'
+    - 'taxonomy_term:concepts:74675183-e510-437b-b5c5-f1bb0333bf72'
+    - 'taxonomy_term:concepts:7603d3ea-9b8c-4b56-9323-f9dff5cc8977'
+    - 'taxonomy_term:concepts:760ceb16-3f09-42ee-9bac-16015442c8e3'
+    - 'taxonomy_term:concepts:7655b64c-2b8e-48b1-acaf-000ee4a1efd5'
+    - 'taxonomy_term:concepts:799afd11-e40d-4957-bf32-8c4c0a699852'
+    - 'taxonomy_term:concepts:7a649701-6757-4d8d-99ac-355c5a9dfa23'
+    - 'taxonomy_term:concepts:7b1d2273-3ceb-4abc-a8ea-39e11041a7cc'
+    - 'taxonomy_term:concepts:7b3ebda7-ea7f-440f-a9b2-99053c824873'
+    - 'taxonomy_term:concepts:7be2c5e8-fe2d-4248-a90b-682d93b97f20'
+    - 'taxonomy_term:concepts:7c189db9-de03-4052-abdf-e3a81b22661b'
+    - 'taxonomy_term:concepts:7cb87a1a-148d-43dc-8966-cd8510773890'
+    - 'taxonomy_term:concepts:7d10a134-1fba-4223-a14e-8fbb69e18296'
+    - 'taxonomy_term:concepts:7eef9c3d-6a7e-4f20-a976-9f88f6dc4d24'
+    - 'taxonomy_term:concepts:7ef3ed59-7f7d-44f4-a268-5be3d3d9b7a1'
+    - 'taxonomy_term:concepts:805980d0-b44d-42aa-9ff1-018290784a39'
+    - 'taxonomy_term:concepts:82cf33dd-97d7-45cb-80c8-ca6560683d2f'
+    - 'taxonomy_term:concepts:83a53373-4395-4ba4-b623-b46f04a6412d'
+    - 'taxonomy_term:concepts:84c868c7-aa40-4d4e-8a08-cb3f32a5ec43'
+    - 'taxonomy_term:concepts:853b5831-5918-4956-a150-0b9c98f0d1ff'
+    - 'taxonomy_term:concepts:8790ba96-e267-4bad-8e16-1edc876e5898'
+    - 'taxonomy_term:concepts:8840b52b-a88e-4b1b-97b5-17ce38cf94bb'
+    - 'taxonomy_term:concepts:888f27e7-e52f-4b37-b3ea-307bfeb35df1'
+    - 'taxonomy_term:concepts:893e3ed6-f6b5-4a03-a9e1-c76c744e3737'
+    - 'taxonomy_term:concepts:8c2b9dfe-d77c-46a2-bf5b-c28aa627d199'
+    - 'taxonomy_term:concepts:8c3aa5f6-3188-4481-a80d-ecea1c7210ef'
+    - 'taxonomy_term:concepts:8d7087b2-7f18-4a6f-9897-3d4fc284da9d'
+    - 'taxonomy_term:concepts:90fb152d-4f62-4553-9a02-ddc7661d7364'
+    - 'taxonomy_term:concepts:919aba54-443f-4648-8664-b7bb1f02a9df'
+    - 'taxonomy_term:concepts:91b51419-b892-4b0d-aacd-b4f296715f33'
+    - 'taxonomy_term:concepts:9203c7e4-1f20-485d-a7ad-1abbc2413fd0'
+    - 'taxonomy_term:concepts:92f7f0fd-9d4d-44a0-abf6-e30c6d5961e0'
+    - 'taxonomy_term:concepts:941ff230-8ebf-4811-b691-6245b5e73e9f'
+    - 'taxonomy_term:concepts:9475a87a-8d38-4e56-ad81-76748886bce9'
+    - 'taxonomy_term:concepts:95060440-32d4-433a-b05c-e6f3b5925571'
+    - 'taxonomy_term:concepts:969c71e7-ca97-4c61-a3e6-2236eff90c51'
+    - 'taxonomy_term:concepts:96a9a4c7-2be0-4307-96ef-9403445db0de'
+    - 'taxonomy_term:concepts:97b68736-ad74-458b-9bc8-f6e7e19dfe9b'
+    - 'taxonomy_term:concepts:98662e18-b765-494c-a19b-023baab2812d'
+    - 'taxonomy_term:concepts:99a55a7c-bcd6-4ddd-ba05-c5b90c3e956f'
+    - 'taxonomy_term:concepts:9a1cf1a6-db70-450c-a5af-5be8cc20b08d'
+    - 'taxonomy_term:concepts:9a52dae9-3fda-462d-b264-6a8e6d2bbeca'
+    - 'taxonomy_term:concepts:9ab695aa-ec3e-4da0-a58e-6b89858c401e'
+    - 'taxonomy_term:concepts:9d418c39-18d9-4920-9009-eb07dc0dce7d'
+    - 'taxonomy_term:concepts:9df6489d-df05-46d4-ab76-71fd6b998c41'
+    - 'taxonomy_term:concepts:9df6555e-c56d-4633-8bdd-ccf4a2ed4164'
+    - 'taxonomy_term:concepts:9eb42e1b-1474-4114-b6f1-343a7301b991'
+    - 'taxonomy_term:concepts:9f80f3d7-90d6-4fb4-85cf-62ce978b87e5'
+    - 'taxonomy_term:concepts:9fce152c-3eda-44eb-b80b-9709a50c56f5'
+    - 'taxonomy_term:concepts:a02ca2ba-1ce7-48d3-9f83-3e09d3fa83be'
+    - 'taxonomy_term:concepts:a1b90372-17c5-437f-a478-5996ef49476b'
+    - 'taxonomy_term:concepts:a234e862-eaa2-466c-8f43-504b3e1e4048'
+    - 'taxonomy_term:concepts:a28cd420-3277-46c8-b776-bc350c56f277'
+    - 'taxonomy_term:concepts:a2f8d301-8766-41be-bc94-94eaac3b0ac0'
+    - 'taxonomy_term:concepts:a36b8137-5257-4ecc-b44e-a938ede420fc'
+    - 'taxonomy_term:concepts:a54d9b87-f669-452c-a9e2-e18f6b64f0ec'
+    - 'taxonomy_term:concepts:a86f7216-8273-478a-a6f9-c1c3d88654cb'
+    - 'taxonomy_term:concepts:a8e514bd-7e21-4921-9e75-0129cd7f30fa'
+    - 'taxonomy_term:concepts:a9261393-0f67-49db-9e4d-81fb8dd70c60'
+    - 'taxonomy_term:concepts:a9863f0b-ae4e-4799-8ab6-5a0665e7001f'
+    - 'taxonomy_term:concepts:aaabdabd-99b3-4416-afbf-022451f9c856'
+    - 'taxonomy_term:concepts:ac0dc0a1-58b3-4329-8ce0-1fe6424ac911'
+    - 'taxonomy_term:concepts:ac50dabd-7e05-40e2-8c14-1a0a28597e92'
+    - 'taxonomy_term:concepts:ae8f0f04-6980-46fa-ad91-17c00baa0639'
+    - 'taxonomy_term:concepts:af67f8c2-d1fb-4a6f-a543-421f9c3272a8'
+    - 'taxonomy_term:concepts:b1fd3fb7-5d9f-4339-823b-588dd600e09d'
+    - 'taxonomy_term:concepts:b6656998-7108-43fb-836c-99449a3fb043'
+    - 'taxonomy_term:concepts:b694612a-7b75-4512-acb9-7dc8e570107a'
+    - 'taxonomy_term:concepts:b7988b88-9029-4b99-b380-83de306b5f63'
+    - 'taxonomy_term:concepts:b79e24b7-7de2-4cc4-bb81-b4c607f99912'
+    - 'taxonomy_term:concepts:b972b7b0-2d57-42d5-9ca7-e0ee627964e4'
+    - 'taxonomy_term:concepts:bb70af28-f489-4ceb-b5e8-a8e0a8472e71'
+    - 'taxonomy_term:concepts:bca6b6d9-7f7e-4969-be60-b36af556827a'
+    - 'taxonomy_term:concepts:bd09ce9c-e64a-4584-909f-6dcba5cce15c'
+    - 'taxonomy_term:concepts:c0b57474-ad5d-4135-b099-ea682e9dd460'
+    - 'taxonomy_term:concepts:c183ca02-5120-451a-92e8-a306cac8b669'
+    - 'taxonomy_term:concepts:c1b3f143-871f-43ad-98cb-25ffea8e61bf'
+    - 'taxonomy_term:concepts:c22ecb0b-34a5-41fc-82ec-1a40df2f5c53'
+    - 'taxonomy_term:concepts:c3727b78-d192-4561-b69c-8cc3781eba07'
+    - 'taxonomy_term:concepts:c40ecb4e-2038-4d74-a56c-b8c32b6883cd'
+    - 'taxonomy_term:concepts:c41d8a1b-1836-4d58-b2b5-59246fe5a0fb'
+    - 'taxonomy_term:concepts:c632970e-9556-4fe5-8644-1494893db446'
+    - 'taxonomy_term:concepts:c6b61c15-fbcb-4bcd-b6a5-ee84b45738fe'
+    - 'taxonomy_term:concepts:c6bc58ce-5d74-486e-a2b5-d5f55b7a7ac8'
+    - 'taxonomy_term:concepts:c834f3df-f1ba-41ad-9a98-1b4266628477'
+    - 'taxonomy_term:concepts:c98cc68a-f548-416d-a08a-cb2a7704e8e5'
+    - 'taxonomy_term:concepts:c9a82e8c-4b11-4b41-9aff-be36ba6aa160'
+    - 'taxonomy_term:concepts:c9da36f8-a253-4a81-9070-f3161c6cfc76'
+    - 'taxonomy_term:concepts:cac561b4-de97-43f3-8c91-4af8c2c696c6'
+    - 'taxonomy_term:concepts:cb325382-e6ba-45fc-aa72-fbbcb3086f2f'
+    - 'taxonomy_term:concepts:cc5ef873-98c1-4574-ad68-c5714de24aa4'
+    - 'taxonomy_term:concepts:cd0a0ccd-a9aa-4195-9deb-d6387f8f6258'
+    - 'taxonomy_term:concepts:cd0c2861-ac23-4edc-8e7f-c3214c416701'
+    - 'taxonomy_term:concepts:cd33aad4-0476-40a8-a94d-214d2c7127f0'
+    - 'taxonomy_term:concepts:cf334f52-876e-42d7-b6b3-de7609cbfe7d'
+    - 'taxonomy_term:concepts:cf88dd96-d8ba-4d14-9813-6747dbfd04f2'
+    - 'taxonomy_term:concepts:d0f88bb7-6a41-4474-8cd2-67efe9288de8'
+    - 'taxonomy_term:concepts:d10c3425-1c26-40f4-ad37-a4c5840415b8'
+    - 'taxonomy_term:concepts:d2f54d52-0f1c-499d-97d4-392c34d2e9da'
+    - 'taxonomy_term:concepts:d32108c8-200d-4cb5-aa9c-a01ff3f9c35b'
+    - 'taxonomy_term:concepts:d4fa8f1d-fcf5-4ffd-8b98-fee278725926'
+    - 'taxonomy_term:concepts:d587c999-705d-4dd8-9508-c826b0034bc6'
+    - 'taxonomy_term:concepts:d58ed5ff-209d-4280-aff4-b37ce8a254d2'
+    - 'taxonomy_term:concepts:d5cf059a-1d33-4ecc-b1b7-c957062f1679'
+    - 'taxonomy_term:concepts:d5fa089d-7563-49a7-bfa5-5d22b094f563'
+    - 'taxonomy_term:concepts:d651538c-fdb1-41d4-8251-44b730dd6406'
+    - 'taxonomy_term:concepts:d6a436bd-df1e-491a-bab7-62cfa11f8459'
+    - 'taxonomy_term:concepts:d83dc940-5917-4632-b90c-715d69614beb'
+    - 'taxonomy_term:concepts:d84c9e14-3878-4676-9cfc-519fe06b62ab'
+    - 'taxonomy_term:concepts:d8a3756f-7678-4454-bcc6-2aaba2050cfd'
+    - 'taxonomy_term:concepts:d8d42a95-14da-450b-9ccc-06f77a0e39a1'
+    - 'taxonomy_term:concepts:da3b28b7-7011-4ce2-9b85-7cce45175650'
+    - 'taxonomy_term:concepts:dad3b8f1-b99d-4f84-b278-80839a62acde'
+    - 'taxonomy_term:concepts:dbbe56dc-2709-4ac2-aad6-d4ac777e464c'
+    - 'taxonomy_term:concepts:dc3652bb-6948-45af-b9dc-81cfcbba76bd'
+    - 'taxonomy_term:concepts:ddc5260f-a220-4a37-b976-760a793ee132'
+    - 'taxonomy_term:concepts:df85faca-7712-4c5d-85b8-be38cc427e0d'
+    - 'taxonomy_term:concepts:df8793f7-8b4d-4d92-9a71-7d7c0a78c98c'
+    - 'taxonomy_term:concepts:e0ce39a0-7993-49ac-bea2-939b85554f81'
+    - 'taxonomy_term:concepts:e1746101-acb3-4804-b600-8131067e746d'
+    - 'taxonomy_term:concepts:e17d215d-38bc-4094-987f-6f7339ae6e45'
+    - 'taxonomy_term:concepts:e32e1030-a626-443b-9081-112bc2769dca'
+    - 'taxonomy_term:concepts:e8291c1d-52f4-4f10-9368-36286029f2de'
+    - 'taxonomy_term:concepts:e88aee6a-31d7-401c-8bd8-82a1d66bbb0f'
+    - 'taxonomy_term:concepts:e8e7b28d-0b0d-4486-9f4b-70a26a94a472'
+    - 'taxonomy_term:concepts:e90786b6-beed-46ac-8e7d-1e1af34ad831'
+    - 'taxonomy_term:concepts:e99d8431-c70c-4008-a00b-11723979b127'
+    - 'taxonomy_term:concepts:e9fc7d46-c248-4b18-8066-edc1c01d8a15'
+    - 'taxonomy_term:concepts:ea96adb4-5a9e-46e2-9255-95fbda596dfe'
+    - 'taxonomy_term:concepts:ebd06a79-c901-4597-8e70-77de0a99f7d7'
+    - 'taxonomy_term:concepts:ecd53baa-0881-4d41-8e2c-292da4a65f5e'
+    - 'taxonomy_term:concepts:ed35e5dd-4c14-4572-8a85-ca1a31e11ab6'
+    - 'taxonomy_term:concepts:ed45b8bf-1ac7-44c4-9a04-d9b9f1ee5fd5'
+    - 'taxonomy_term:concepts:eea11532-8ef0-4bec-9318-4f37e0b376c0'
+    - 'taxonomy_term:concepts:efacaf5d-b9dd-447f-89b3-1f5f5e6ce276'
+    - 'taxonomy_term:concepts:f25c0b12-bb4d-4d53-b6aa-96b2bc016273'
+    - 'taxonomy_term:concepts:f3526737-f50e-495e-96ea-3e1d6bd7b907'
+    - 'taxonomy_term:concepts:f39ec4a6-31c7-4732-aa38-35016d4c914f'
+    - 'taxonomy_term:concepts:f3c0da85-26b4-412f-8156-c2b9a9149e52'
+    - 'taxonomy_term:concepts:f4edc3a0-410f-4869-a307-db7a68742d1e'
+    - 'taxonomy_term:concepts:f62f4581-bb9e-45be-9a8d-2ada6a46ffd0'
+    - 'taxonomy_term:concepts:f6577dd4-e094-4a10-bb9b-f559e9095221'
+    - 'taxonomy_term:concepts:f73038b0-3541-4df9-af91-fb0250a78b8a'
+    - 'taxonomy_term:concepts:f7af447c-e7e3-42d1-8bab-8ec8755c5f5c'
+    - 'taxonomy_term:concepts:fa32057a-e910-48d8-8cc6-ccfaca8850d6'
+    - 'taxonomy_term:concepts:fa958594-a028-4a16-b600-760b49d00e87'
+    - 'taxonomy_term:concepts:fb3fcc64-ee83-4719-aae9-6b9bab49a6cd'
+    - 'taxonomy_term:concepts:fc2572ed-b51a-4b54-95ec-525f50b565cc'
+    - 'taxonomy_term:concepts:fc547e1d-5578-467e-8f42-0c78febc7636'
+    - 'taxonomy_term:concepts:fd0cb3b3-784f-424b-8acf-4fde282ddccf'
+    - 'taxonomy_term:concepts:ff6420b0-09f4-4881-9dc3-0fbcc1ae627f'
+    - 'taxonomy_term:concepts:ffe2d40e-d372-4c13-b945-73e23141c8b5'
+  module:
+    - image
+    - node
+    - taxonomy
+    - text
+    - user
+id: users_content
+label: 'Users Content'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: Contributions
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: Title
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Body
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 200
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: ''
+            image_style: ''
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{{ title }}\r\n{{ body }}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filter
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      arguments:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 1
+            use_alias: false
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            country_narrative: country_narrative
+            issues: issues
+            organization: organization
+            programme_narrative: programme_narrative
+            project: project
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Title
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: Themes
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: theme
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        tid_1:
+          id: tid_1
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            3858: 3858
+            8859: 8859
+            8803: 8803
+            8788: 8788
+            8856: 8856
+            3777: 3777
+            3830: 3830
+            3795: 3795
+            8865: 8865
+            3750: 3750
+            3831: 3831
+            3769: 3769
+            8846: 8846
+            3690: 3690
+            8849: 8849
+            3837: 3837
+            3689: 3689
+            7448: 7448
+            6891: 6891
+            8839: 8839
+            8830: 8830
+            3778: 3778
+            8814: 8814
+            8796: 8796
+            8799: 8799
+            7439: 7439
+            8801: 8801
+            8854: 8854
+            8845: 8845
+            8848: 8848
+            8844: 8844
+            8841: 8841
+            8866: 8866
+            3859: 3859
+            3860: 3860
+            8822: 8822
+            8862: 8862
+            7450: 7450
+            3763: 3763
+            8826: 8826
+            8805: 8805
+            8850: 8850
+            6107: 6107
+            7254: 7254
+            3806: 3806
+            3807: 3807
+            3700: 3700
+            8827: 8827
+            7225: 7225
+            1268: 1268
+            7210: 7210
+            3707: 3707
+            3803: 3803
+            1255: 1255
+            8842: 8842
+            3732: 3732
+            3789: 3789
+            3787: 3787
+            3712: 3712
+            3730: 3730
+            3788: 3788
+            3759: 3759
+            3836: 3836
+            1240: 1240
+            3744: 3744
+            3838: 3838
+            8847: 8847
+            8792: 8792
+            3827: 3827
+            7454: 7454
+            8853: 8853
+            3864: 3864
+            3848: 3848
+            8852: 8852
+            3853: 3853
+            8810: 8810
+            8824: 8824
+            3693: 3693
+            3798: 3798
+            3805: 3805
+            7466: 7466
+            7457: 7457
+            3773: 3773
+            3849: 3849
+            8797: 8797
+            8831: 8831
+            8861: 8861
+            8843: 8843
+            3834: 3834
+            1251: 1251
+            1245: 1245
+            1250: 1250
+            3826: 3826
+            7223: 7223
+            8790: 8790
+            1254: 1254
+            1256: 1256
+            3801: 3801
+            3862: 3862
+            3813: 3813
+            3758: 3758
+            3845: 3845
+            3847: 3847
+            7443: 7443
+            8825: 8825
+            8795: 8795
+            3796: 3796
+            7442: 7442
+            3698: 3698
+            7046: 7046
+            3870: 3870
+            3719: 3719
+            3751: 3751
+            8838: 8838
+            3871: 3871
+            3873: 3873
+            7331: 7331
+            3776: 3776
+            3781: 3781
+            3874: 3874
+            8794: 8794
+            3825: 3825
+            8855: 8855
+            7301: 7301
+            8806: 8806
+            8837: 8837
+            3843: 3843
+            8834: 8834
+            8833: 8833
+            6487: 6487
+            3685: 3685
+            7246: 7246
+            3790: 3790
+            3686: 3686
+            8818: 8818
+            3842: 3842
+            1241: 1241
+            3814: 3814
+            3799: 3799
+            3810: 3810
+            3824: 3824
+            8808: 8808
+            3832: 3832
+            3822: 3822
+            8816: 8816
+            8857: 8857
+            7455: 7455
+            3823: 3823
+            8864: 8864
+            7287: 7287
+            3872: 3872
+            3863: 3863
+            7460: 7460
+            8823: 8823
+            8829: 8829
+            7307: 7307
+            1263: 1263
+            8807: 8807
+            8832: 8832
+            3850: 3850
+            3835: 3835
+            3723: 3723
+            3687: 3687
+            3688: 3688
+            3802: 3802
+            3705: 3705
+            7462: 7462
+            3699: 3699
+            3706: 3706
+            3708: 3708
+            3714: 3714
+            7452: 7452
+            3841: 3841
+            3743: 3743
+            3753: 3753
+            3756: 3756
+            3761: 3761
+            7461: 7461
+            3829: 3829
+            7445: 7445
+            3691: 3691
+            8174: 8174
+            3735: 3735
+            7463: 7463
+            3861: 3861
+            3766: 3766
+            3780: 3780
+            3731: 3731
+            3709: 3709
+            8800: 8800
+            3722: 3722
+            6894: 6894
+            3728: 3728
+            8835: 8835
+            8840: 8840
+            3694: 3694
+            3733: 3733
+            3734: 3734
+            3821: 3821
+            3820: 3820
+            7456: 7456
+            8813: 8813
+            1260: 1260
+            8815: 8815
+            6893: 6893
+            7300: 7300
+            3710: 3710
+            7271: 7271
+            1261: 1261
+            8819: 8819
+            3747: 3747
+            3717: 3717
+            8811: 8811
+            3785: 3785
+            3701: 3701
+            3740: 3740
+            3857: 3857
+            3765: 3765
+            3764: 3764
+            3782: 3782
+            7440: 7440
+            3783: 3783
+            3725: 3725
+            3726: 3726
+            3718: 3718
+            7446: 7446
+            8793: 8793
+            3804: 3804
+            3715: 3715
+            7436: 7436
+            3711: 3711
+            3742: 3742
+            3846: 3846
+            3695: 3695
+            7041: 7041
+            7447: 7447
+            3703: 3703
+            3716: 3716
+            8860: 8860
+            3696: 3696
+            7465: 7465
+            7245: 7245
+            7256: 7256
+            3702: 3702
+            3797: 3797
+            3697: 3697
+            3865: 3865
+            3866: 3866
+            3736: 3736
+            7444: 7444
+            7449: 7449
+            7451: 7451
+            3721: 3721
+            8851: 8851
+            8858: 8858
+            3748: 3748
+            8812: 8812
+            7459: 7459
+            3749: 3749
+            3752: 3752
+            3767: 3767
+            3855: 3855
+            8863: 8863
+            7467: 7467
+            7213: 7213
+            8828: 8828
+            3854: 3854
+            7441: 7441
+            1247: 1247
+            3720: 3720
+            8836: 8836
+            3856: 3856
+            3741: 3741
+            3771: 3771
+            3772: 3772
+            8817: 8817
+            8804: 8804
+            1239: 1239
+            3794: 3794
+            1244: 1244
+            1262: 1262
+            8820: 8820
+            1267: 1267
+            8798: 8798
+            1253: 1253
+            8791: 8791
+            3775: 3775
+            8789: 8789
+            8809: 8809
+            1259: 1259
+            8821: 8821
+            3808: 3808
+            3812: 3812
+            7437: 7437
+            3746: 3746
+            3774: 3774
+            7211: 7211
+            3839: 3839
+            3739: 3739
+            7438: 7438
+            1264: 1264
+            8802: 8802
+            1252: 1252
+            7216: 7216
+            3868: 3868
+            7458: 7458
+            3840: 3840
+            3869: 3869
+            1271: 1271
+            7332: 7332
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_1_op
+            label: 'Related concepts'
+            description: ''
+            use_operator: false
+            operator: tid_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: concepts
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+        tid_2:
+          id: tid_2
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_2_op
+            label: 'Geographical focus '
+            description: ''
+            use_operator: false
+            operator: tid_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: regions
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            country_narrative: country_narrative
+            issues: issues
+            organization: organization
+            programme_narrative: programme_narrative
+            project: project
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: new_teaser
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      css_class: user-profile-content
+      use_ajax: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_image'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_image'

@@ -1,0 +1,107 @@
+uuid: ae7868bb-f46e-4376-be27-1243b522c42d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+label: 'Add User Here'
+id: add_user_here
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values: {  }
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  mail:
+    value: mail
+    label: mail
+    machine_name: mail
+    type: csv
+  password:
+    value: password
+    label: password
+    machine_name: password
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  roles:
+    value: roles
+    label: roles
+    machine_name: roles
+    type: csv
+  uid:
+    value: Uid
+    label: Uid
+    machine_name: uid
+    type: csv
+mappings:
+  -
+    target: name
+    map:
+      value: name
+    settings: {  }
+    unique: {  }
+  -
+    target: mail
+    map:
+      value: mail
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: pass
+    map:
+      value: password
+    settings:
+      pass_encryption: plain
+  -
+    target: status
+    map:
+      value: status
+    settings: {  }
+  -
+    target: roles
+    map:
+      target_id: roles
+    settings:
+      reference_by: id
+      allowed_roles:
+        administrator: administrator
+        contributor: contributor
+        developer: developer
+      autocreate: false
+      revoke_roles: false
+  -
+    target: uid
+    map:
+      value: uid
+    settings: {  }
+    unique:
+      value: '1'

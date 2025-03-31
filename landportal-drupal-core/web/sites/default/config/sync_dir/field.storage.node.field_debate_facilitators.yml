@@ -1,0 +1,20 @@
+uuid: 9f95a57d-ca7a-4041-83be-f46cd16c9163
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_debate_facilitators
+field_name: field_debate_facilitators
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

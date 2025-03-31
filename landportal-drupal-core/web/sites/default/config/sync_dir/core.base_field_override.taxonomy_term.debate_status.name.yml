@@ -1,0 +1,18 @@
+uuid: a4b9a1b7-a859-4623-8776-2383f3ff4052
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+id: taxonomy_term.debate_status.name
+field_name: name
+entity_type: taxonomy_term
+bundle: debate_status
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

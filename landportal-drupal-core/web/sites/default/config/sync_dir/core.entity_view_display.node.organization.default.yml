@@ -1,0 +1,847 @@
+uuid: 2d39d960-4beb-4389-ae51-0fb806faf024
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.additionals
+    - field.field.node.organization.body
+    - field.field.node.organization.city
+    - field.field.node.organization.country
+    - field.field.node.organization.feeds_item
+    - field.field.node.organization.field_acronym
+    - field.field.node.organization.field_affiliated_organization
+    - field.field.node.organization.field_contact
+    - field.field.node.organization.field_email
+    - field.field.node.organization.field_file
+    - field.field.node.organization.field_geographical_focus
+    - field.field.node.organization.field_image
+    - field.field.node.organization.field_language
+    - field.field.node.organization.field_link
+    - field.field.node.organization.field_organization_relationship
+    - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_phone
+    - field.field.node.organization.field_postal_address
+    - field.field.node.organization.field_related_themes
+    - field.field.node.organization.field_related_topics
+    - field.field.node.organization.field_user
+    - field.field.node.organization.location_name
+    - field.field.node.organization.postal_code
+    - field.field.node.organization.seo_keywords
+    - field.field.node.organization.state_province
+    - field.field.node.organization.street
+    - node.type.organization
+    - views.view.organization_bread
+    - views.view.organization_members
+  module:
+    - addtoany
+    - file
+    - image
+    - landportal_content_selection
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: BreadCrumb
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_breadcrumb
+        components:
+          af1ddc4e-e2b2-49f5-abef-86ea5973e9f6:
+            uuid: af1ddc4e-e2b2-49f5-abef-86ea5973e9f6
+            region: content
+            configuration:
+              id: 'views_block:organization_bread-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Organization Title & Breadcrumb'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - organization_heading_title
+        components:
+          cb252690-1a3d-416f-8e86-acbd792514a3:
+            uuid: cb252690-1a3d-416f-8e86-acbd792514a3
+            region: content
+            configuration:
+              id: 'field_block:node:organization:title'
+              label: 'Organization Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Organization
+          context_mapping: {  }
+          column_widths: 33-67
+          layout_builder_styles_style:
+            - organization_full_content
+        components:
+          0d424973-8aba-4a4a-a139-ed5dddc4b1ac:
+            uuid: 0d424973-8aba-4a4a-a139-ed5dddc4b1ac
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_image'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - organization_logo
+          c9c1754d-7843-44e6-b4d9-e8d7d84be706:
+            uuid: c9c1754d-7843-44e6-b4d9-e8d7d84be706
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_acronym'
+              label: Acronym
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - organization_acronym
+          3290b0e8-349d-42e2-b5e8-ae514b8b8812:
+            uuid: 3290b0e8-349d-42e2-b5e8-ae514b8b8812
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_organization_type'
+              label: 'Organization type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - organization_type
+          b87fd9af-0ad5-45f6-81bf-5aeedc193431:
+            uuid: b87fd9af-0ad5-45f6-81bf-5aeedc193431
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_contact'
+              label: 'Focal point'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - organization_focal_point
+          fe98c037-50d5-43eb-abac-7729c5309e17:
+            uuid: fe98c037-50d5-43eb-abac-7729c5309e17
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_link'
+              label: Website
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - organization_website
+          e6d275c9-2b67-4219-806c-f33a9773afcd:
+            uuid: e6d275c9-2b67-4219-806c-f33a9773afcd
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_email'
+              label: Email
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: email_mailto
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional:
+              layout_builder_styles_style:
+                - organization_email
+          43f90a3e-6289-4316-996d-30152e019776:
+            uuid: 43f90a3e-6289-4316-996d-30152e019776
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_phone'
+              label: 'Phone number'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                - organization_phone_number
+          494de1b3-424b-4fa6-ac15-a4bb0cbe1c70:
+            uuid: 494de1b3-424b-4fa6-ac15-a4bb0cbe1c70
+            region: first
+            configuration:
+              id: 'inline_block:card'
+              label: Location
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 46
+              block_serialized: null
+            weight: 9
+            additional:
+              layout_builder_styles_style:
+                - organization_location
+          aff733c9-df5b-4b17-b502-1da3ec63ab15:
+            uuid: aff733c9-df5b-4b17-b502-1da3ec63ab15
+            region: first
+            configuration:
+              id: 'field_block:node:organization:location_name'
+              label: 'Location name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 10
+            additional:
+              layout_builder_styles_style:
+                - organization_location_name
+          72473f26-d0a1-4acd-a991-1dd978cf5836:
+            uuid: 72473f26-d0a1-4acd-a991-1dd978cf5836
+            region: first
+            configuration:
+              id: 'field_block:node:organization:street'
+              label: Street
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 12
+            additional:
+              layout_builder_styles_style:
+                - organization_street
+          5e3835ad-e48e-4149-b803-e870dbc9f31d:
+            uuid: 5e3835ad-e48e-4149-b803-e870dbc9f31d
+            region: first
+            configuration:
+              id: 'field_block:node:organization:additionals'
+              label: Additional
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 13
+            additional:
+              layout_builder_styles_style:
+                - organization_additional
+          94564b23-9708-493c-b24f-ac6bb74f917a:
+            uuid: 94564b23-9708-493c-b24f-ac6bb74f917a
+            region: first
+            configuration:
+              id: 'field_block:node:organization:postal_code'
+              label: 'Postal code'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 14
+            additional:
+              layout_builder_styles_style:
+                - organization_postal_code
+          69faa525-e82a-4610-b82d-7b9723d71ae1:
+            uuid: 69faa525-e82a-4610-b82d-7b9723d71ae1
+            region: first
+            configuration:
+              id: 'field_block:node:organization:city'
+              label: City
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 15
+            additional:
+              layout_builder_styles_style:
+                - organization_city
+          66fd48ac-6c3f-4167-9723-cd722b9d9134:
+            uuid: 66fd48ac-6c3f-4167-9723-cd722b9d9134
+            region: first
+            configuration:
+              id: 'field_block:node:organization:state_province'
+              label: State/Province
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 17
+            additional:
+              layout_builder_styles_style:
+                - organization_state
+          7b1da1da-f08a-47c9-88e2-78f7a0198af6:
+            uuid: 7b1da1da-f08a-47c9-88e2-78f7a0198af6
+            region: first
+            configuration:
+              id: 'field_block:node:organization:country'
+              label: Country
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 18
+            additional:
+              layout_builder_styles_style:
+                - organization_country
+          27970934-968f-43ab-9cc0-dab1a69bf2b4:
+            uuid: 27970934-968f-43ab-9cc0-dab1a69bf2b4
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_postal_address'
+              label: 'Postal address'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 19
+            additional:
+              layout_builder_styles_style:
+                - organization_postal_address
+          df6f5110-14e1-4c9f-bd0e-668e250fc3b4:
+            uuid: df6f5110-14e1-4c9f-bd0e-668e250fc3b4
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_language'
+              label: 'Working languages'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 21
+            additional:
+              layout_builder_styles_style:
+                - organization_working_languages
+          b34cf59b-1f7c-4748-84ec-bfd337abd4ba:
+            uuid: b34cf59b-1f7c-4748-84ec-bfd337abd4ba
+            region: second
+            configuration:
+              id: 'field_block:node:organization:field_geographical_focus'
+              label: 'Geographical focus'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - organization_regions
+          092e18a3-08c2-497b-9c29-ddc9e8b89b2d:
+            uuid: 092e18a3-08c2-497b-9c29-ddc9e8b89b2d
+            region: second
+            configuration:
+              id: 'field_block:node:organization:field_related_themes'
+              label: Themes
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - organization_themes
+          ee3f41ce-9424-4b60-97ed-47f6dd7df7bc:
+            uuid: ee3f41ce-9424-4b60-97ed-47f6dd7df7bc
+            region: second
+            configuration:
+              id: 'field_block:node:organization:field_related_topics'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - organization_concepts
+          7eab0cc7-6c9c-4ae2-a120-7904469e66eb:
+            uuid: 7eab0cc7-6c9c-4ae2-a120-7904469e66eb
+            region: second
+            configuration:
+              id: 'field_block:node:organization:body'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - organization_description
+          7bd61720-c02c-4278-b099-41d0ba17732d:
+            uuid: 7bd61720-c02c-4278-b099-41d0ba17732d
+            region: second
+            configuration:
+              id: 'views_block:organization_members-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - ''
+          f2282797-6b30-4515-8676-6b470c3a94ba:
+            uuid: f2282797-6b30-4515-8676-6b470c3a94ba
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_affiliated_organization'
+              label: 'Affiliated Organization'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: ContentSelectionDefaultFormatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 22
+            additional:
+              layout_builder_styles_style:
+                - affiliated_organization_style
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          3f476946-db35-41df-8844-f0f3823e1145:
+            uuid: 3f476946-db35-41df-8844-f0f3823e1145
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.organization.default
+targetEntityType: node
+bundle: organization
+mode: default
+content:
+  additionals:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_acronym:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_affiliated_organization:
+    type: ContentSelectionDefaultFormatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_contact:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_organization_relationship:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_organization_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_postal_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  location_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  postal_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  seo_keywords:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  state_province:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  street:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 118
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

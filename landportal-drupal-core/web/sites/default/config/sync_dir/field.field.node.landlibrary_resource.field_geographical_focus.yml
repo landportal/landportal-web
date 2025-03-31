@@ -1,0 +1,29 @@
+uuid: 0923014a-107f-4967-b3fc-368061b894a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geographical_focus
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.regions
+id: node.landlibrary_resource.field_geographical_focus
+field_name: field_geographical_focus
+entity_type: node
+bundle: landlibrary_resource
+label: 'Geographical focus'
+description: 'The geographical focus of the resource (possible to select several).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

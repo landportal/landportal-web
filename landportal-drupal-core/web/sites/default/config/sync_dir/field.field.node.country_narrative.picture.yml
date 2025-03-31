@@ -1,0 +1,28 @@
+uuid: 795509fa-6cfc-48b1-af7a-b2f870bb458f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.picture
+    - media.type.country_narrative
+    - node.type.country_narrative
+id: node.country_narrative.picture
+field_name: picture
+entity_type: node
+bundle: country_narrative
+label: Picture
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      country_narrative: country_narrative
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

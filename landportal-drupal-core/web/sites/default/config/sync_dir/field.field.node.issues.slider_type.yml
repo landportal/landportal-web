@@ -1,0 +1,29 @@
+uuid: 58fde0ea-0991-43dd-8bd4-06b23b397bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.slider_type
+    - node.type.issues
+    - taxonomy.vocabulary.slider_type
+id: node.issues.slider_type
+field_name: slider_type
+entity_type: node
+bundle: issues
+label: 'Slider Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      slider_type: slider_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

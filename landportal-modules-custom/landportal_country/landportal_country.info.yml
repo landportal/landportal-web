@@ -1,0 +1,7 @@
+name: 'Landportal Country'
+description: 'Support for Country taxonomies and pages'
+package: Landportal
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
+dependencies:
+  landportal_view_coda:landportal_view_coda

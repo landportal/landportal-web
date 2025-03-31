@@ -1,0 +1,49 @@
+# Migration configuration for 'Regions' vocabulary.
+id: regions_translations
+label: 'Migrate - regions'
+migration_group: landportal_migration
+migration_tags:
+  - Drupal 7
+  - translation
+  - Content
+  - Multilingual
+  - landportal_migration
+deriver: Drupal\taxonomy\Plugin\migrate\D7TaxonomyTermDeriver
+source:
+  plugin: d7_taxonomy_term_entity_translation
+  bundle: regions
+process:
+  # Taxonomy term properties.
+  tid: entity_id
+  name: name
+  description/value: description
+  description/format: format
+  langcode:
+    -
+      plugin: static_map
+      source: language
+      map:
+        'es': 'es'
+        'fr': 'fr'
+        'pt': 'pt-pt'
+  status: status
+  content_translation_source: source
+  content_translation_outdated: translate
+  content_translation_uid: uid
+  content_translation_created: created
+  changed: changed
+  forum_container: is_container
+destination:
+  plugin: entity:taxonomy_term
+  translations: true
+  destination_module: content_translation
+  default_bundle: regions
+migration_dependencies:
+  required:
+    - regions
+
+# Define a forced module dependency.
+dependencies:
+  enforced:
+    module:
+      - landportal_migration

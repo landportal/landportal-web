@@ -1,0 +1,934 @@
+uuid: 2ab7a709-fead-4aef-ae2c-f41f20159f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_related_topics
+    - node.type.organization
+  module:
+    - node
+label: 'Import Concepts for Organization'
+id: import_concepts_for_organization
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  related_concepts:
+    value: 'Related concepts'
+    label: 'Related concepts'
+    machine_name: related_concepts
+    type: csv
+  related_concepts1:
+    value: 'Related concepts1'
+    label: 'Related concepts1'
+    machine_name: related_concepts1
+    type: csv
+  related_concepts2:
+    value: 'Related concepts2'
+    label: 'Related concepts2'
+    machine_name: related_concepts2
+    type: csv
+  related_concepts3:
+    value: 'Related concepts3'
+    label: 'Related concepts3'
+    machine_name: related_concepts3
+    type: csv
+  related_concepts4:
+    value: 'Related concepts4'
+    label: 'Related concepts4'
+    machine_name: related_concepts4
+    type: csv
+  related_concepts5:
+    value: 'Related concepts5'
+    label: 'Related concepts5'
+    machine_name: related_concepts5
+    type: csv
+  related_concepts6:
+    value: 'Related concepts6'
+    label: 'Related concepts6'
+    machine_name: related_concepts6
+    type: csv
+  related_concepts7:
+    value: 'Related concepts7'
+    label: 'Related concepts7'
+    machine_name: related_concepts7
+    type: csv
+  related_concepts8:
+    value: 'Related concepts8'
+    label: 'Related concepts8'
+    machine_name: related_concepts8
+    type: csv
+  related_concepts9:
+    value: 'Related concepts9'
+    label: 'Related concepts9'
+    machine_name: related_concepts9
+    type: csv
+  related_concepts10:
+    value: 'Related concepts10'
+    label: 'Related concepts10'
+    machine_name: related_concepts10
+    type: csv
+  related_concepts11:
+    value: 'Related concepts11'
+    label: 'Related concepts11'
+    machine_name: related_concepts11
+    type: csv
+  related_concepts12:
+    value: 'Related concepts12'
+    label: 'Related concepts12'
+    machine_name: related_concepts12
+    type: csv
+  related_concepts13:
+    value: 'Related concepts13'
+    label: 'Related concepts13'
+    machine_name: related_concepts13
+    type: csv
+  related_concepts14:
+    value: 'Related concepts14'
+    label: 'Related concepts14'
+    machine_name: related_concepts14
+    type: csv
+  related_concepts15:
+    value: 'Related concepts15'
+    label: 'Related concepts15'
+    machine_name: related_concepts15
+    type: csv
+  related_concepts16:
+    value: 'Related concepts16'
+    label: 'Related concepts16'
+    machine_name: related_concepts16
+    type: csv
+  related_concepts17:
+    value: 'Related concepts17'
+    label: 'Related concepts17'
+    machine_name: related_concepts17
+    type: csv
+  related_concepts18:
+    value: 'Related concepts18'
+    label: 'Related concepts18'
+    machine_name: related_concepts18
+    type: csv
+  related_concepts19:
+    value: 'Related concepts19'
+    label: 'Related concepts19'
+    machine_name: related_concepts19
+    type: csv
+  related_concepts20:
+    value: 'Related concepts20'
+    label: 'Related concepts20'
+    machine_name: related_concepts20
+    type: csv
+  related_concepts21:
+    value: 'Related concepts21'
+    label: 'Related concepts21'
+    machine_name: related_concepts21
+    type: csv
+  related_concepts22:
+    value: 'Related concepts22'
+    label: 'Related concepts22'
+    machine_name: related_concepts22
+    type: csv
+  related_concepts23:
+    value: 'Related concepts23'
+    label: 'Related concepts23'
+    machine_name: related_concepts23
+    type: csv
+  related_concepts24:
+    value: 'Related concepts24'
+    label: 'Related concepts24'
+    machine_name: related_concepts24
+    type: csv
+  related_concepts25:
+    value: 'Related concepts25'
+    label: 'Related concepts25'
+    machine_name: related_concepts25
+    type: csv
+  related_concepts26:
+    value: 'Related concepts26'
+    label: 'Related concepts26'
+    machine_name: related_concepts26
+    type: csv
+  related_concepts27:
+    value: 'Related concepts27'
+    label: 'Related concepts27'
+    machine_name: related_concepts27
+    type: csv
+  related_concepts28:
+    value: 'Related concepts28'
+    label: 'Related concepts28'
+    machine_name: related_concepts28
+    type: csv
+  related_concepts29:
+    value: 'Related concepts29'
+    label: 'Related concepts29'
+    machine_name: related_concepts29
+    type: csv
+  related_concepts30:
+    value: 'Related concepts30'
+    label: 'Related concepts30'
+    machine_name: related_concepts30
+    type: csv
+  related_concepts31:
+    value: 'Related concepts31'
+    label: 'Related concepts31'
+    machine_name: related_concepts31
+    type: csv
+  related_concepts32:
+    value: 'Related concepts32'
+    label: 'Related concepts32'
+    machine_name: related_concepts32
+    type: csv
+  related_concepts33:
+    value: 'Related concepts33'
+    label: 'Related concepts33'
+    machine_name: related_concepts33
+    type: csv
+  related_concepts34:
+    value: 'Related concepts34'
+    label: 'Related concepts34'
+    machine_name: related_concepts34
+    type: csv
+  related_concepts35:
+    value: 'Related concepts35'
+    label: 'Related concepts35'
+    machine_name: related_concepts35
+    type: csv
+  related_concepts36:
+    value: 'Related concepts36'
+    label: 'Related concepts36'
+    machine_name: related_concepts36
+    type: csv
+  related_concepts37:
+    value: 'Related concepts37'
+    label: 'Related concepts37'
+    machine_name: related_concepts37
+    type: csv
+  related_concepts38:
+    value: 'Related concepts38'
+    label: 'Related concepts38'
+    machine_name: related_concepts38
+    type: csv
+  related_concepts39:
+    value: 'Related concepts39'
+    label: 'Related concepts39'
+    machine_name: related_concepts39
+    type: csv
+  related_concepts40:
+    value: 'Related concepts40'
+    label: 'Related concepts40'
+    machine_name: related_concepts40
+    type: csv
+  related_concepts41:
+    value: 'Related concepts41'
+    label: 'Related concepts41'
+    machine_name: related_concepts41
+    type: csv
+  related_concepts42:
+    value: 'Related concepts42'
+    label: 'Related concepts42'
+    machine_name: related_concepts42
+    type: csv
+  related_concepts43:
+    value: 'Related concepts43'
+    label: 'Related concepts43'
+    machine_name: related_concepts43
+    type: csv
+  related_concepts44:
+    value: 'Related concepts44'
+    label: 'Related concepts44'
+    machine_name: related_concepts44
+    type: csv
+  related_concepts45:
+    value: 'Related concepts45'
+    label: 'Related concepts45'
+    machine_name: related_concepts45
+    type: csv
+  related_concepts46:
+    value: 'Related concepts46'
+    label: 'Related concepts46'
+    machine_name: related_concepts46
+    type: csv
+  related_concepts47:
+    value: 'Related concepts47'
+    label: 'Related concepts47'
+    machine_name: related_concepts47
+    type: csv
+  related_concepts48:
+    value: 'Related concepts48'
+    label: 'Related concepts48'
+    machine_name: related_concepts48
+    type: csv
+  related_concepts49:
+    value: 'Related concepts49'
+    label: 'Related concepts49'
+    machine_name: related_concepts49
+    type: csv
+  related_concepts50:
+    value: 'Related concepts50'
+    label: 'Related concepts50'
+    machine_name: related_concepts50
+    type: csv
+  related_concepts51:
+    value: 'Related concepts51'
+    label: 'Related concepts51'
+    machine_name: related_concepts51
+    type: csv
+  related_concepts52:
+    value: 'Related concepts52'
+    label: 'Related concepts52'
+    machine_name: related_concepts52
+    type: csv
+  related_concepts53:
+    value: 'Related concepts53'
+    label: 'Related concepts53'
+    machine_name: related_concepts53
+    type: csv
+  related_concepts54:
+    value: 'Related concepts54'
+    label: 'Related concepts54'
+    machine_name: related_concepts54
+    type: csv
+  related_concepts55:
+    value: 'Related concepts55'
+    label: 'Related concepts55'
+    machine_name: related_concepts55
+    type: csv
+  related_concepts56:
+    value: 'Related concepts56'
+    label: 'Related concepts56'
+    machine_name: related_concepts56
+    type: csv
+  related_concepts57:
+    value: 'Related concepts57'
+    label: 'Related concepts57'
+    machine_name: related_concepts57
+    type: csv
+  related_concepts58:
+    value: 'Related concepts58'
+    label: 'Related concepts58'
+    machine_name: related_concepts58
+    type: csv
+  related_concepts59:
+    value: 'Related concepts59'
+    label: 'Related concepts59'
+    machine_name: related_concepts59
+    type: csv
+  related_concepts60:
+    value: 'Related concepts60'
+    label: 'Related concepts60'
+    machine_name: related_concepts60
+    type: csv
+  related_concepts61:
+    value: 'Related concepts61'
+    label: 'Related concepts61'
+    machine_name: related_concepts61
+    type: csv
+  related_concepts62:
+    value: 'Related concepts62'
+    label: 'Related concepts62'
+    machine_name: related_concepts62
+    type: csv
+  related_concepts63:
+    value: 'Related concepts63'
+    label: 'Related concepts63'
+    machine_name: related_concepts63
+    type: csv
+  related_concepts64:
+    value: 'Related concepts64'
+    label: 'Related concepts64'
+    machine_name: related_concepts64
+    type: csv
+  related_concepts65:
+    value: 'Related concepts65'
+    label: 'Related concepts65'
+    machine_name: related_concepts65
+    type: csv
+  related_concepts66:
+    value: 'Related concepts66'
+    label: 'Related concepts66'
+    machine_name: related_concepts66
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts1
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts2
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts3
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts4
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts5
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts6
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts7
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts8
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts9
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts10
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts11
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts12
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts13
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts14
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts15
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts16
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts17
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts18
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts19
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts20
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts21
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts22
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts23
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts24
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts25
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts26
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts27
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts28
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts29
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts30
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts31
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts32
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts33
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts34
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts35
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts36
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts37
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts38
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts39
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts40
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts41
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts42
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts43
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts44
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts45
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts46
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts47
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts48
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts49
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts50
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts51
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts52
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts53
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts54
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts55
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts56
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts57
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts58
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts59
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts60
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts61
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts62
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts63
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts64
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts65
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: related_concepts66
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0

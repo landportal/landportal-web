@@ -1,0 +1,18 @@
+uuid: 2376b655-5e57-49b2-b20c-eb956e6e6da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.issues_landing_page
+id: block_content.issues_landing_page.changed
+field_name: changed
+entity_type: block_content
+bundle: issues_landing_page
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

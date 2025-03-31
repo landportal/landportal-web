@@ -1,0 +1,18 @@
+uuid: 36b9b854-5b74-467b-9d76-1dae416dba1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.dataset
+target_entity_type_id: node
+target_bundle: dataset
+default_langcode: und
+language_alterable: true

@@ -1,0 +1,18 @@
+uuid: 609834ad-46b2-4e4a-b2a7-5d99dbfa6c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.campaigns
+target_entity_type_id: taxonomy_term
+target_bundle: campaigns
+default_langcode: site_default
+language_alterable: false

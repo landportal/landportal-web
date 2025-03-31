@@ -1,0 +1,29 @@
+uuid: c483017c-621e-4033-a166-7cce480a2a88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_language
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.languages
+id: node.landlibrary_resource.field_doc_language
+field_name: field_doc_language
+entity_type: node
+bundle: landlibrary_resource
+label: 'Resource Language'
+description: ' Please enter the language of the resource. If the language you mean to put in is not included in this list, please send an email to landlibrary@landportal.info to make sure it gets included.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      languages: languages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

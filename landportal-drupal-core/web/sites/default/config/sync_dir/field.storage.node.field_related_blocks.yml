@@ -1,0 +1,19 @@
+uuid: d73339b6-b9bf-4427-b6b7-df2633f27711
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_related_blocks
+    - node
+id: node.field_related_blocks
+field_name: field_related_blocks
+entity_type: node
+type: LandportalRelatedBlocks
+settings: {  }
+module: landportal_related_blocks
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

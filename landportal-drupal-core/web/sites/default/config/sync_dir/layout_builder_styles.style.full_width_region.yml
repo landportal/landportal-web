@@ -1,0 +1,12 @@
+uuid: 106e48c9-69ec-420d-9315-0b55af9115ff
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_region
+label: 'Full Width Region'
+classes: full-width-region
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

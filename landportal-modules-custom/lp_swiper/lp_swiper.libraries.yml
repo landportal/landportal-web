@@ -1,0 +1,43 @@
+form:
+  version: VERSION
+  css:
+    theme:
+      css/lp_swiper.css: {}
+
+widget_info:
+  version: VERSION
+  js:
+    js/lp_swiper.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+controls_text:
+  version: VERSION
+  css:
+    theme:
+      css/controls_text.css: {}
+
+pager_bullets:
+  version: VERSION
+  css:
+    component:
+      css/lp-swiper-pager-bullets.css: {}
+
+jquery_hoverIntent:
+  remote: https://github.com/briancherne/jquery-hoverIntent
+  version: 1.10.2
+  license:
+      name: MIT
+      gpl-compatible: true
+  js:
+    libraries/jquery.hoverIntent/jquery.hoverIntent.js: {}
+  dependencies:
+    - core/jquery
+
+swiper_text:
+  version: VERSION
+  css:
+    theme:
+      css/lp_swiper_work.css: {}

@@ -1,0 +1,49 @@
+{{ attach_library('landportal/issue-projects-carousel') }}
+
+{% set block_base_class = 'projects-block' %}
+{% set block_label = block_region ~ ' ' ~ 'projects'|t %}
+
+<div {{ bem(block_base_class,'issue') }}>
+    {% if block_label %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 2,
+        heading: 'Related content'|t ,
+        heading_modifiers: [block_base_class]
+      } %}
+    {% endif %}
+ 
+  <div {{ bem('projects issue', [], block_base_class) }}>
+    <div {{ bem('header', [], block_base_class) }}>
+      <a class="link" href="{{ more_url }}">{{ more_label }}</a>
+    </div>
+  <div {{ bem('carousel', [], block_base_class) }} }}>
+    <div class="swiper-container issue-projects-swiper-container">
+      {% block carousel_content %}
+        <div class="swiper-wrapper">
+        {% for item in items %}
+          <div class="swiper-slide">
+            {% include "@molecules/project-card/project-blog-card.twig" with {
+              item_title: item.ss_title_field,
+              item_url: item.ss_url,
+              external_image_src: item.external_image_src,
+              image_src: item['tm_field_image$file$url'].0,
+              image_title: item.ss_title_field,
+              image_alt: item.ss_title_field,
+              item_duration_from: item['ds_field_date$value']|date("F")|t({}, {'context' : 'Long month name'})~ ' ' ~ item['ds_field_date$value']|date("Y"),
+              item_duration_to: item['ds_field_date$value2']|date("F")|t({}, {'context' : 'Long month name'})~ ' ' ~ item['ds_field_date$value2']|date("Y"),
+              item_value: item['tm_field_value_decimal'].0,
+              published_date: item['ds_field_pubdate']|date("d") ~ ' ' ~ item['ds_field_pubdate']|date("F")|t({}, {'context' : 'Long month name'}) ~ ' ' ~  item['ds_field_pubdate']|date("Y"),
+              item_value_currency: item.item_value_currency,
+              item_donors: item['tm_field_donors$title'].0,
+              item_summary: item['tm_body$value'].0|striptags|slice(0, 300),
+              card__block_class: block_base_class
+            } %}
+          </div>
+        {% endfor %}
+        </div>
+      {% endblock %}
+      <div class="swiper-pagination issue-swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+</div>

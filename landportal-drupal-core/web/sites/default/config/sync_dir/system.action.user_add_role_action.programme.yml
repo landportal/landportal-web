@@ -1,0 +1,14 @@
+uuid: b3855ed9-ea11-4253-94b0-7402c20c8d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.programme
+  module:
+    - user
+id: user_add_role_action.programme
+label: 'Add the Programme role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: programme

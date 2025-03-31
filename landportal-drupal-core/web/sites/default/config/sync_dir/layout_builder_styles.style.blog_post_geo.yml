@@ -1,0 +1,12 @@
+uuid: 6c97097f-2f0c-47e1-bdc3-e1c2dd33354e
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_geo
+label: 'Blog Post Geo'
+classes: blog-post-geo
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

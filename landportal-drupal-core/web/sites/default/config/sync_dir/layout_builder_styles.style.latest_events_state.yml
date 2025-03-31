@@ -1,0 +1,12 @@
+uuid: 88599ee5-2bcb-4701-8e27-8119fbb91a73
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_state
+label: 'Latest Events State'
+classes: Latest-events-state
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

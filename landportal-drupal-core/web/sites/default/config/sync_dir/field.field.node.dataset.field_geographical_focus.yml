@@ -1,0 +1,29 @@
+uuid: 302716e4-0198-4ff7-b06e-f25215cc52f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geographical_focus
+    - node.type.dataset
+    - taxonomy.vocabulary.regions
+id: node.dataset.field_geographical_focus
+field_name: field_geographical_focus
+entity_type: node
+bundle: dataset
+label: 'Geographical focus'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

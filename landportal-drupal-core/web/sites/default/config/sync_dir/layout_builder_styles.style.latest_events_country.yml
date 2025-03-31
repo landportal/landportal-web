@@ -1,0 +1,12 @@
+uuid: 13538302-424c-41dd-bab5-0f7ca9b9945e
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_country
+label: 'Latest Events Country'
+classes: latest-events-country
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

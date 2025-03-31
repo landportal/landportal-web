@@ -1,0 +1,19 @@
+uuid: fea2bda9-7876-4a7b-a5ca-7308989e1454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.organization
+id: node.organization.field_phone
+field_name: field_phone
+entity_type: node
+bundle: organization
+label: 'Phone number'
+description: 'Phone number, with international prefix.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

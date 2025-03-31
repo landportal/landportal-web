@@ -1,0 +1,12 @@
+uuid: 771174d8-3f20-4858-ba99-cf3f237fba63
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_country
+label: 'User Upper Section Country'
+classes: user-upper-section-country
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

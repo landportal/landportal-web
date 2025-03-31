@@ -1,0 +1,9 @@
+uuid: 6c32af7e-8748-4013-830e-1707b5bc6710
+langcode: pt-pt
+status: true
+dependencies: {  }
+id: pt-pt
+label: Português
+direction: ltr
+weight: -8
+locked: false

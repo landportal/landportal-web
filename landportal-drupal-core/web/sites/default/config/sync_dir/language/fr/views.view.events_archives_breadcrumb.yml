@@ -1,0 +1,29 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p><a href=\"/news-events\">News &amp; Events</a><span class=\"slash\"> </span> <a href=\"/events\">Events</a><span class=\"slash\"> </span> <span> {{ title }} </span></p>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/news-events\">News &amp; Events</a><span> {{ title }} </span></div>\r\n"
+            format: full_html
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/join-debate\">Join the Debate</a> <span> {{ title }} </span></div>\r\n"
+            format: full_html
+  block_4:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/fr/ourlandourstory\">Our Land Our Story</a> <span> {{ title }} </span></div>\r\n"
+            format: full_html

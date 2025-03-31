@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reiniciar
+      empty:
+        area:
+          content:
+            value: "<hr />\r\n<p>Your search yielded no results!</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Try to broaden your selection by combining multiple Geographical terms or Issues at the same time OR by removing all terms in some filters like \"Geographical focus\".</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><i>If nothing works, try the reset button!</i></p>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      use_more_text: 'Más organizaciones'
+      link_url: /es/organizations
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/es/organizations\">Latest organizations</a></h2>\r\n"
+            format: full_html

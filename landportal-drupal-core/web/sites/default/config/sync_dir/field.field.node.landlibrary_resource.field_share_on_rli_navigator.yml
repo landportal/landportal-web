@@ -1,0 +1,23 @@
+uuid: ad3b04c9-7e25-4b1b-bd4e-7d86cfe5006e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_on_rli_navigator
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.field_share_on_rli_navigator
+field_name: field_share_on_rli_navigator
+entity_type: node
+bundle: landlibrary_resource
+label: 'Share on RLBI navigator'
+description: 'Click on this field if you want to export this resource to the Responsible Land-Based Investments Navigator website.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'YES'
+  off_label: 'NO'
+field_type: boolean

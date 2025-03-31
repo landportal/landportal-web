@@ -1,0 +1,12 @@
+uuid: ad89486d-1328-42db-ab2d-03600e6d16bc
+langcode: en
+status: true
+dependencies: {  }
+id: sdgi_related_content
+label: 'SDGI Related Content'
+classes: SDGI-related-content
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

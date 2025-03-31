@@ -1,0 +1,13 @@
+display:
+  block_1:
+    display_title: 'active projects'
+  block_2:
+    display_options:
+      header:
+        result:
+          content: '<div style="background-color:#E8E7E1;"><strong>@total </strong><br /><span>projets au total</span><p>dans la plus grande base de données mondiale sur les projets fonciers</p></div>'
+  default:
+    display_options:
+      header:
+        result:
+          content: '<div style="background-color:#E8E7E1;"><strong>@total</strong><br/> <span> projets actifs </span><p>actuellement mis en œuvre à l''échelle mondiale</p></div>'

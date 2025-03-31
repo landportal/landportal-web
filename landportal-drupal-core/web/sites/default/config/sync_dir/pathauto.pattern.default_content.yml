@@ -1,0 +1,14 @@
+uuid: c2db2970-59c0-4914-abdf-569e980e83e4
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+id: default_content
+label: 'Default Content'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[current-date:custom:Y]/[current-date:custom:m]/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

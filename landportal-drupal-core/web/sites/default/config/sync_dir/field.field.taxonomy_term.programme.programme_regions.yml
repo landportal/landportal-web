@@ -1,0 +1,29 @@
+uuid: 1ae8c4cf-8292-43b9-b369-93ecc2b251c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_regions
+    - taxonomy.vocabulary.programme
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.programme.programme_regions
+field_name: programme_regions
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme regions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

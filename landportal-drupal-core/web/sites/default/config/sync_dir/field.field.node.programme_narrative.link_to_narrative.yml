@@ -1,0 +1,29 @@
+uuid: baffc334-8bcc-4180-ba99-65b3cdda445c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.link_to_narrative
+    - node.type.programme_narrative
+    - taxonomy.vocabulary.programme
+id: node.programme_narrative.link_to_narrative
+field_name: link_to_narrative
+entity_type: node
+bundle: programme_narrative
+label: 'Link to narrative'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme: programme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

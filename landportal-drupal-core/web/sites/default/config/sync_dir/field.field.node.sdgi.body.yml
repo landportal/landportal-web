@@ -1,0 +1,23 @@
+uuid: 215389f4-3953-4383-bd4d-31a28b2edc12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sdgi
+  module:
+    - text
+id: node.sdgi.body
+field_name: body
+entity_type: node
+bundle: sdgi
+label: 'About this SDGs Indicator'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

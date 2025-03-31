@@ -1,0 +1,12 @@
+uuid: ac384fd8-2966-4750-b0a0-9d0554d41a7f
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_partners_donors
+label: 'Dataset Partners & Donors'
+classes: dataset-partners-donors
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

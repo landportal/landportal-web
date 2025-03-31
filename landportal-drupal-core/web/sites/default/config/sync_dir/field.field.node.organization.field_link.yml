@@ -1,0 +1,23 @@
+uuid: c88a8029-2059-4e9f-bc81-176e4f39e078
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.organization
+  module:
+    - link
+id: node.organization.field_link
+field_name: field_link
+entity_type: node
+bundle: organization
+label: Website
+description: 'The link is limited to a maximum of 128 characters.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

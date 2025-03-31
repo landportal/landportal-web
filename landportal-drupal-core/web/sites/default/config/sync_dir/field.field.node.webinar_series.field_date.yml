@@ -1,0 +1,21 @@
+uuid: 11d98c89-aec1-4445-b160-acdb85fa232b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.webinar_series
+  module:
+    - datetime_range
+id: node.webinar_series.field_date
+field_name: field_date
+entity_type: node
+bundle: webinar_series
+label: Dates
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

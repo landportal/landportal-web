@@ -1,0 +1,18 @@
+uuid: 2cf496ac-8620-4827-b78e-7dbbc44b6baa
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.land_portal_terms_and_conditions
+field_name: land_portal_terms_and_conditions
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

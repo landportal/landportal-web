@@ -1,0 +1,20 @@
+uuid: 558412bc-b36e-4c08-aaf0-76dc2881da01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.postal_code
+  module:
+    - user
+id: user.user.postal_code
+field_name: postal_code
+entity_type: user
+bundle: user
+label: 'Postal code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: dde61167-9b98-412c-bed2-dd8588f4776e
+langcode: en
+status: true
+dependencies: {  }
+id: landlibrary_title_section
+label: 'LandLibrary Title Section'
+classes: landLibrary-title-section
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

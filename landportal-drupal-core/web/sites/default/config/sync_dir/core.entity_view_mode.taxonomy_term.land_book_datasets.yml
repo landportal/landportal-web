@@ -1,0 +1,10 @@
+uuid: 49c12416-27d3-4801-81fb-23403e824a06
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.land_book_datasets
+label: 'Land Book Datasets'
+targetEntityType: taxonomy_term
+cache: true

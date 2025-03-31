@@ -1,0 +1,14 @@
+uuid: c95b5977-7052-497c-b0eb-9469247852d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.view_page_draft
+  module:
+    - user
+id: user_add_role_action.view_page_draft
+label: 'Add the view page draft role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: view_page_draft

@@ -1,0 +1,21 @@
+uuid: 7246b85a-2bf6-4a90-b80e-d155e3e142fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_people
+    - node.type.news
+  module:
+    - text
+id: node.news.field_doc_people
+field_name: field_doc_people
+entity_type: node
+bundle: news
+label: Author(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

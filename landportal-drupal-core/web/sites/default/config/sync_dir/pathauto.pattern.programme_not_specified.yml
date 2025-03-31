@@ -1,0 +1,22 @@
+uuid: 3b5898b1-eecf-4ede-897b-1a63382136c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: programme_not_specified
+label: 'Programme Not Specified'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'community/programmes/[term:name]'
+selection_criteria:
+  fb04009c-51e0-4bde-b827-a94668c93f4d:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: fb04009c-51e0-4bde-b827-a94668c93f4d
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      programme: programme
+selection_logic: and
+weight: -5
+relationships: {  }

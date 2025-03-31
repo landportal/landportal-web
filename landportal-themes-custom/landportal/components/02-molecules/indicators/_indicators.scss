@@ -1,0 +1,87 @@
+
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: clr(background-dark);
+  color: clr(text-light);
+
+  &__category {
+    width: 100%;
+    padding: $space;
+  }
+
+  @include medium {
+    &__category {
+      flex: 50%;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 4px solid clr(countries);
+    margin-bottom: $space;
+    font-weight: 700;
+
+    .link {
+      text-decoration: none;
+      color: clr(text-light);
+    }
+  }
+
+  &__data {
+    display: flex;
+
+    .column {
+      flex: 50%;
+    }
+  }
+}
+
+.indicator {
+  font-weight: 700;
+
+  &__label {
+    text-decoration: none;
+    background-color: clr(countries);
+    color: clr(text-light);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__value {
+    margin-bottom: $space-one-half;
+  }
+}
+
+.section__sidebar__aside {
+  .indicators {
+    display: block;
+    background-color: transparent;
+    color: clr(text);
+
+    &__category {
+      padding: 0;
+    }
+
+    &__data {
+      display: block;
+    }
+
+    &__heading {
+      .link {
+        color: clr(text);
+      }
+    }
+  }
+
+  .indicator {
+    &__label {
+      background-color: transparent;
+      color: clr(countries);
+    }
+  }
+}

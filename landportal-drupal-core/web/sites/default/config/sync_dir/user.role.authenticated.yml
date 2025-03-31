@@ -1,0 +1,60 @@
+uuid: 0327dcca-ae3c-4ad9-baff-23ea851fbf54
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.mailchimp_campaign
+    - filter.format.webform_default
+    - node.type.blog_post
+    - node.type.campaign
+    - node.type.country_narrative
+    - node.type.debate
+    - node.type.event
+    - node.type.landlibrary_resource
+    - node.type.news
+  module:
+    - comment
+    - eu_cookie_compliance
+    - filter
+    - google_analytics
+    - media
+    - node
+    - system
+    - webform
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'create blog_post content'
+  - 'create campaign content'
+  - 'create country_narrative content'
+  - 'create event content'
+  - 'create landlibrary_resource content'
+  - 'create news content'
+  - 'display eu cookie compliance popup'
+  - 'edit any blog_post content'
+  - 'edit any campaign content'
+  - 'edit any country_narrative content'
+  - 'edit any debate content'
+  - 'edit any event content'
+  - 'edit any landlibrary_resource content'
+  - 'edit any news content'
+  - 'edit own comments'
+  - 'edit own event content'
+  - 'edit own webform submission'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format mailchimp_campaign'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view own unpublished content'

@@ -1,0 +1,547 @@
+uuid: 775a315b-7daa-49bb-9d44-b775117c9ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.field.taxonomy_term.indicators.feeds_item
+    - field.field.taxonomy_term.indicators.field_dataset
+    - field.field.taxonomy_term.indicators.field_description
+    - field.field.taxonomy_term.indicators.field_download_indicator
+    - field.field.taxonomy_term.indicators.field_geoportal_link
+    - field.field.taxonomy_term.indicators.field_hascodedvalue
+    - field.field.taxonomy_term.indicators.field_highlow
+    - field.field.taxonomy_term.indicators.field_id
+    - field.field.taxonomy_term.indicators.field_image
+    - field.field.taxonomy_term.indicators.field_indicators
+    - field.field.taxonomy_term.indicators.field_max
+    - field.field.taxonomy_term.indicators.field_min
+    - field.field.taxonomy_term.indicators.field_name
+    - field.field.taxonomy_term.indicators.field_observations
+    - field.field.taxonomy_term.indicators.field_related_themes
+    - field.field.taxonomy_term.indicators.field_related_topics
+    - field.field.taxonomy_term.indicators.field_unit
+    - field.field.taxonomy_term.indicators.field_view_parent
+    - taxonomy.vocabulary.indicators
+    - views.view.data_provider_license
+    - views.view.indicators_breadcrumb
+    - views.view.related_block
+    - views.view.view_parent
+  module:
+    - addtoany
+    - download_indicator
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - options
+    - text
+    - view_coda_extra
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Indicator breadcrumb'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - indicator_breadcrumb
+        components:
+          8dc0dbc0-e895-42e3-a5ff-6047e972bef4:
+            uuid: 8dc0dbc0-e895-42e3-a5ff-6047e972bef4
+            region: content
+            configuration:
+              id: 'views_block:indicators_breadcrumb-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Indicator top section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - indicator_top_section
+        components:
+          37d37571-da59-4640-918e-841243e362dd:
+            uuid: 37d37571-da59-4640-918e-841243e362dd
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_name'
+              label: 'Indicator name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - indicator_name
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Indicator Middle Section'
+          context_mapping: {  }
+          column_widths: 67-33
+          layout_builder_styles_style:
+            - indicator_middle_section
+        components:
+          7562a57f-ca7c-4e16-a610-93a6ea0fa817:
+            uuid: 7562a57f-ca7c-4e16-a610-93a6ea0fa817
+            region: first
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_description'
+              label: 'Indicator description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - indicator_description
+          c8484783-61e3-4af8-a7d0-a28ed53e552b:
+            uuid: c8484783-61e3-4af8-a7d0-a28ed53e552b
+            region: first
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_observations'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          b26afc57-87c2-49ce-bea8-f3ac75202b06:
+            uuid: b26afc57-87c2-49ce-bea8-f3ac75202b06
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_unit'
+              label: 'Measurement unit:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - indicator_measurement
+          ec665730-7567-459c-94cc-8753259b5c3d:
+            uuid: ec665730-7567-459c-94cc-8753259b5c3d
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_highlow'
+              label: 'Best value is:'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: boolean
+                label: hidden
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - indicator_best_value
+          3261c1a9-a300-45f3-8b0c-dfd7cee51ec4:
+            uuid: 3261c1a9-a300-45f3-8b0c-dfd7cee51ec4
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_related_themes'
+              label: Themes
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 7
+            additional:
+              layout_builder_styles_style:
+                - indicator_themes
+          ea7d85ef-06df-45c4-9d9c-86db6a5b3da7:
+            uuid: ea7d85ef-06df-45c4-9d9c-86db6a5b3da7
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_related_topics'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional:
+              layout_builder_styles_style:
+                - indicator_concepts
+          cb4aabc7-cc83-4f5a-984a-b9c2818c022d:
+            uuid: cb4aabc7-cc83-4f5a-984a-b9c2818c022d
+            region: second
+            configuration:
+              id: 'views_block:view_parent-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          f2f90fb7-1baf-4f8d-835a-fad589be3968:
+            uuid: f2f90fb7-1baf-4f8d-835a-fad589be3968
+            region: second
+            configuration:
+              id: 'views_block:related_block-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          eb40fd66-8201-46d5-b368-ead751ded2b7:
+            uuid: eb40fd66-8201-46d5-b368-ead751ded2b7
+            region: second
+            configuration:
+              id: 'views_block:data_provider_license-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - indicator_data_provider
+          62df8cd8-1c10-4de1-b418-c27ab5808187:
+            uuid: 62df8cd8-1c10-4de1-b418-c27ab5808187
+            region: second
+            configuration:
+              id: 'inline_block:card'
+              label: 'Related issues'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 47
+              block_serialized: null
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                - indicator_themes_title
+          771c558f-ae6a-40c3-9c88-1f2cdf36df85:
+            uuid: 771c558f-ae6a-40c3-9c88-1f2cdf36df85
+            region: second
+            configuration:
+              id: 'inline_block:card'
+              label: 'Related LandVoc tags'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 48
+              block_serialized: null
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                - indicator_concept_title
+          8cdbb217-e21d-450d-a3d9-71f8841ecea6:
+            uuid: 8cdbb217-e21d-450d-a3d9-71f8841ecea6
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_download_indicator'
+              label: 'Download indicator'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: DownloadIndicatorDefaultFormatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - indicator_download
+          3693c82b-d019-42bb-a240-244df5e5bc21:
+            uuid: 3693c82b-d019-42bb-a240-244df5e5bc21
+            region: first
+            configuration:
+              id: 'field_block:taxonomy_term:indicators:field_indicators'
+              label: 'Land Book Indicators'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: ViewCodaExtraDefaultFormatter
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - indicator_highchart
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          33b9584d-56db-4feb-b093-ec8c4d9b808d:
+            uuid: 33b9584d-56db-4feb-b093-ec8c4d9b808d
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.indicators.default
+targetEntityType: taxonomy_term
+bundle: indicators
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_dataset:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_download_indicator:
+    type: DownloadIndicatorDefaultFormatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_geoportal_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_hascodedvalue:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_highlow:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_indicators:
+    type: ViewCodaExtraDefaultFormatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_max:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_min:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_observations:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_unit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_view_parent:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

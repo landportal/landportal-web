@@ -1,0 +1,437 @@
+.library-landing-page{
+	.container{
+		.section__sidebar__main{
+			.featured-publication, .latest-publication{
+				padding-bottom: 20px;
+				header{
+					h2{
+						margin: 0;
+					}
+				}
+				.views-col{
+					@media (min-width: $p-small){
+						width: 100% !important;
+					}
+					@media (min-width: $p-tablet){
+						width: 33.333333333333% !important;
+					}	
+					.views-field-rendered-entity{
+						article{
+							border-top: 5px solid #906;
+							@media (min-width: $p-small){
+								margin-right: 0;
+							}
+							@media (min-width: $p-tablet){
+								margin-right: 15px;
+							}
+							h2{
+								display: none;
+							}
+							.library-tilte{
+								line-height: normal;
+								max-height: 5.6em;
+								overflow: hidden;
+								a{
+									font-size: 18px;
+									font-weight: bold;
+									text-decoration: none;
+									color: #06c;
+									&:hover{
+										text-decoration: underline;
+									}
+								}
+							}
+							.library-resource-type{
+								font-size: 13px;
+							}
+							.library-date-of-publication{
+								font-size: 13px;
+								div{
+									&::before{
+										content: "";
+										vertical-align: middle;
+										padding: 0 3px 3px;
+										background-image: url(../images/icons8-date-50.png);
+										height: 16px;
+										width: 16px;
+										display: inline-block;
+										background-size: cover;
+										margin-right: 5px;
+									}
+								}
+							}
+						} 
+					} 
+				}
+			}
+		}
+		.section__sidebar__aside{
+			header{
+				h2{
+					margin-bottom: 0;
+				}
+			}
+			.featured-providers{
+					article{
+						padding-top: 10px;
+						border-top: 5px solid #033;
+						h2{
+							display: none;
+						}
+					}
+					.layout__region--second{
+						word-wrap: anywhere;
+						.block{
+							span{
+								a{
+									font-size: 18px;
+									font-weight: bold;
+									text-decoration: none;
+									color: #06c;
+									margin-right: 10px;
+									float: left;
+									line-height: 20px;
+									&:hover{
+										text-decoration: underline;
+									}									
+								}
+							} 
+						}
+						.organization-acronym{
+							font-size: 12px;
+							div{
+								&::before{
+									content: '(';
+								}
+								&::after{
+									content: ')';
+								}
+							}
+						}
+						.organization_description{
+							display: inline-block;
+							.text-long{
+								overflow: hidden;
+								height: 50px;
+								h3, p{
+									font-size: 13px;
+									color: #666;
+									line-height: 15px;
+								}
+							}
+						}
+						.organization-type{
+							display: inline-block;
+							background-color: #EBEBE5;
+							color: #444;
+							text-transform: uppercase;
+							font-family: "Merriweather Sans",sans-serif;
+							font-size: 11px;
+							font-weight: bold;
+							padding-left: 9px;
+							padding-right: 9px;
+						}  
+					}
+					.layout__region--first{
+						.organization-logo{
+							img{
+								padding: 15px;
+							}
+						}
+					}   
+			} 
+		} 
+	}    	
+}
+.social-media-lock{
+	.container{
+		h2{
+			font-size: 13px;
+			font-family: "Merriweather Sans",sans-serif;
+			font-weight: 700;
+			line-height: normal;
+			color: #555;
+			font-style: italic;
+			text-align: end;
+		}
+	} 	
+}
+.library-soli{
+	.container{
+		.soli{
+			margin: 1em 0 2em 1em;
+			a{
+				color: #06C;
+				font-size: 13px;
+				font-style: italic;
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			span{
+				color: #777;
+				font-size: 13px;
+				font-style: italic;
+			}
+		}
+		.library-tilte{
+			font-size: 32px;
+			font-family: "Merriweather Sans",sans-serif;
+			font-weight: 700;
+			line-height: normal;
+			color: #555;
+			margin: 15px 0;
+		}
+		h3{
+			color: #333;
+			font-family: "Merriweather Sans",sans-serif;
+			font-size: 16px;
+		}
+		.views-field-field-noderef{
+			article{
+				h2{
+					display: none;
+				}
+				.layout__region--first{
+					position: relative;
+					 .block{
+						 &:nth-of-type(2){
+						 	div{
+								position: absolute;
+								top: 0;
+								transform: translate(11px,-10px) rotate(90deg);
+								background-color: rgba(0,0,0,0.3);
+						 		transform-origin: left;
+								color: white;
+								padding: 3px;
+								font-size: 10px;
+								text-transform: uppercase;
+								font-family: "Merriweather Sans",sans-serif;
+						 	}
+						 }
+					}
+				}
+				.layout--twocol-section{
+					.layout__region--second{
+						@media (min-width: $p-small){
+							padding-left: 0;
+						}
+						@media (min-width: $p-tablet){
+							padding-left: 15px;
+						}
+						.library-tilte{
+							font-size: 18px;
+							font-family: "Merriweather Sans",sans-serif;
+							font-weight: 700;
+							line-height: normal;
+							color: #555;
+							margin-top: 0;
+							a{
+								color: #06C;
+								text-decoration: none;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						.library-resource-type{
+							color: #444;
+							font-size: 13px;
+						}
+						.library-date-of-publication{
+							color: #444;
+							font-size: 13px;
+							div{
+								&::before{
+									content: "";
+									vertical-align: middle;
+									padding: 0 3px 3px;
+									background-image: url(../images/icons8-date-50.png);
+									height: 16px;
+									width: 16px;
+									display: inline-block;
+									background-size: cover;
+									margin-right: 5px;
+								}
+							}							
+						}
+						.geographical-focus{
+							> div{
+								&::before{
+									content: '';
+									background-image: url(../images/location.jpg);
+									height: 17px;
+									width: 17px;
+									display: inline-block;
+									background-size: cover;
+									vertical-align: middle;
+								}
+								div{
+									display: inline;
+									color: #444;
+									font-size: 13px;
+									&:not(:first-child)::before{
+										content: ", ";
+									}
+								}
+							}
+						}
+						.library-description{
+							.text-long{
+								font-size: 13px;
+								line-height: inherit;
+								color: #666;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.Country-Geo-Explore-Page{
+	header{
+		//display: flex;
+		//flex-direction: column;
+		text-align: inherit;
+		position: relative;
+		.library-issues-icon{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.counter-result{
+			.total-counter{
+				display: inline-block;
+				min-width: 10px;
+				padding: 3px 7px;
+				font-size: 13px;
+				font-weight: bold;
+				color: #fff;
+				line-height: 1;
+				vertical-align: middle;
+				white-space: nowrap;
+				text-align: center;
+				background-color: #777;
+				border-radius: 10px;
+			}
+		} 
+		.views-row{
+			border-top: none;
+			.views-field-name{
+				text-align: start;
+				h1{
+					margin: 0;
+					color: #555;
+					a{
+						color: #06C;
+						&:hover{
+							text-decoration: underline;
+							color: #004080;
+						}
+					}
+				}
+			}
+			.views-field-field-agrovoc-uri{
+				text-align: start;
+				.views-label-field-agrovoc-uri{
+					float: left;
+					color: #444;
+					font-family: "Merriweather Sans",sans-serif;
+					font-weight: bold;
+				}
+				.field-content{
+					display: inline;					
+				}
+			}
+		}
+
+	}
+	.views-row{
+		padding-top: 15px;
+		margin-bottom: 15px;
+		@media (min-width: $p-small){
+			border-top: none;
+		}
+		@media (min-width: $p-tablet){
+			border-top: 1px solid #ccc;
+		}
+		.landlibrary-resource{
+			.page-title{
+				display: none;
+			}
+			.layout--twocol-section{
+				flex-wrap: nowrap;
+				.layout__region--first{
+					@media (min-width: $p-small){
+						flex-basis: 25%;
+					}
+					.block{
+						&:nth-child(2){
+							display: none;
+						}
+					}
+				}
+				.layout__region--second{
+					@media (min-width: $p-small){
+						flex-basis: 75%;
+					}
+					.block{
+						padding-left: 15px;
+						padding-right: 15px;
+						font-family: "Merriweather Sans",sans-serif;
+					}
+					.library-tilte{
+						padding-top: 10px;
+						padding-bottom: 10px;
+						a{
+							font-size: 18px;
+							font-family: "Merriweather Sans",sans-serif;
+							font-weight: 700;
+							line-height: normal;
+						}
+					}
+					.library-date-of-publication{
+						div{
+							font-size: 13px;
+							color: #444;
+							&::before{
+								content: "";
+								vertical-align: middle;
+								padding: 0 3px 3px;
+								background-image: url(../images/icons8-date-50.png);
+								height: 16px;
+								width: 16px;
+								display: inline-block;
+								background-size: cover;
+								margin-right: 5px;
+							}
+						}
+	
+					}
+					.geographical-focus{
+						display: none;
+					}
+					.library-description{
+						max-height: 5.5em;
+						overflow: hidden;
+						padding-bottom: 15px;
+						p{
+							color: #666;
+							font-size: 13px;
+						}
+					}
+					.library-resource-type{
+						div{
+							font-size: 13px;
+							
+						}
+					}
+				}
+			}
+		
+		}
+	}
+	
+}

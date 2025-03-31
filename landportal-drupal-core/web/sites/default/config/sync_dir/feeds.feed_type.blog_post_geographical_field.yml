@@ -1,0 +1,329 @@
+uuid: 0e8fedb5-37d5-4501-b827-6830d5b276ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.blog_post.title
+    - field.field.node.blog_post.field_geographical_focus
+    - node.type.blog_post
+  module:
+    - node
+label: 'Blog Post Geographical Field'
+id: blog_post_geographical_field
+description: 'only Geo'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: blog_post
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  geographical_focus:
+    value: 'Geographical focus'
+    label: 'Geographical focus'
+    machine_name: geographical_focus
+    type: csv
+  geographical_focus1:
+    value: 'Geographical focus1'
+    label: 'Geographical focus1'
+    machine_name: geographical_focus1
+    type: csv
+  geographical_focus2:
+    value: 'Geographical focus2'
+    label: 'Geographical focus2'
+    machine_name: geographical_focus2
+    type: csv
+  geographical_focus3:
+    value: 'Geographical focus3'
+    label: 'Geographical focus3'
+    machine_name: geographical_focus3
+    type: csv
+  geographical_focus4:
+    value: 'Geographical focus4'
+    label: 'Geographical focus4'
+    machine_name: geographical_focus4
+    type: csv
+  geographical_focus5:
+    value: 'Geographical focus5'
+    label: 'Geographical focus5'
+    machine_name: geographical_focus5
+    type: csv
+  geographical_focus6:
+    value: 'Geographical focus6'
+    label: 'Geographical focus6'
+    machine_name: geographical_focus6
+    type: csv
+  geographical_focus7:
+    value: 'Geographical focus7'
+    label: 'Geographical focus7'
+    machine_name: geographical_focus7
+    type: csv
+  geographical_focus8:
+    value: 'Geographical focus8'
+    label: 'Geographical focus8'
+    machine_name: geographical_focus8
+    type: csv
+  geographical_focus9:
+    value: 'Geographical focus9'
+    label: 'Geographical focus9'
+    machine_name: geographical_focus9
+    type: csv
+  geographical_focus10:
+    value: 'Geographical focus10'
+    label: 'Geographical focus10'
+    machine_name: geographical_focus10
+    type: csv
+  geographical_focus11:
+    value: 'Geographical focus11'
+    label: 'Geographical focus11'
+    machine_name: geographical_focus11
+    type: csv
+  geographical_focus12:
+    value: 'Geographical focus12'
+    label: 'Geographical focus12'
+    machine_name: geographical_focus12
+    type: csv
+  geographical_focus13:
+    value: 'Geographical focus13'
+    label: 'Geographical focus13'
+    machine_name: geographical_focus13
+    type: csv
+  geographical_focus14:
+    value: 'Geographical focus14'
+    label: 'Geographical focus14'
+    machine_name: geographical_focus14
+    type: csv
+  geographical_focus15:
+    value: 'Geographical focus15'
+    label: 'Geographical focus15'
+    machine_name: geographical_focus15
+    type: csv
+  geographical_focus16:
+    value: 'Geographical focus16'
+    label: 'Geographical focus16'
+    machine_name: geographical_focus16
+    type: csv
+  geographical_focus17:
+    value: 'Geographical focus17'
+    label: 'Geographical focus17'
+    machine_name: geographical_focus17
+    type: csv
+  geographical_focus18:
+    value: 'Geographical focus18'
+    label: 'Geographical focus18'
+    machine_name: geographical_focus18
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus7
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus8
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus9
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus10
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus11
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus12
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus13
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus14
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus15
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus16
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus17
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus18
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

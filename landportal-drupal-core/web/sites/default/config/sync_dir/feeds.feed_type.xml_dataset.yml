@@ -1,0 +1,118 @@
+uuid: dd6120d7-8f6a-4793-8509-4470c5e7ecde
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.datasets.name
+    - field.field.taxonomy_term.datasets.field_indicators
+    - taxonomy.vocabulary.datasets
+  module:
+    - feeds_ex
+    - taxonomy
+    - view_coda_extra
+label: 'XML dataset'
+id: xml_dataset
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: /taxonomy_term_datas/taxonomy_term_data
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: datasets
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    label: tid
+    machine_name: tid
+    value: tid
+    raw: true
+    inner: true
+    type: xml
+  name:
+    label: name
+    machine_name: name
+    value: name
+    raw: true
+    inner: true
+    type: xml
+  indicator_title:
+    label: indicator_title
+    machine_name: indicator_title
+    value: indicator_title
+    raw: true
+    inner: true
+    type: xml
+  description:
+    label: description
+    machine_name: description
+    value: description
+    raw: true
+    inner: true
+    type: xml
+  indicators:
+    label: indicators
+    machine_name: indicators
+    value: indicators
+    raw: true
+    inner: true
+    type: xml
+  view_coda:
+    label: view-coda
+    machine_name: view_coda
+    value: view-coda
+    raw: true
+    inner: true
+    type: xml
+  type:
+    label: type
+    machine_name: type
+    value: type
+    raw: true
+    inner: true
+    type: xml
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_indicators
+    map:
+      indicator_title: indicator_title
+      indicator_description: description
+      indicator: indicators
+      textarea: view_coda
+      visualization: type
+    settings:
+      language: null

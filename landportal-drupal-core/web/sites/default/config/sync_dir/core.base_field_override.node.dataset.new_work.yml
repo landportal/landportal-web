@@ -1,0 +1,23 @@
+uuid: 96045bfe-e4d4-4d24-b3bf-81603a1c7664
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+    - custom_pub.custom_publishing_option.new_work
+id: node.dataset.new_work
+field_name: new_work
+entity_type: node
+bundle: dataset
+label: 'New Work'
+description: 'custom new work publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

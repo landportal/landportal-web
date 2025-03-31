@@ -1,0 +1,14 @@
+uuid: 1c74618f-0fbc-43a8-bc56-a4c637345a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.organization
+  module:
+    - node
+id: node.organization
+targetEntityType: node
+bundle: organization
+types:
+  - ''
+fieldMappings: {  }

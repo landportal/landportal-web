@@ -1,0 +1,23 @@
+uuid: 3afa60f2-4430-4224-b4b2-5786a5eae7b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.webinar_series
+  module:
+    - text
+id: node.webinar_series.body
+field_name: body
+entity_type: node
+bundle: webinar_series
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,12 @@
+uuid: 397187e0-793c-4b53-8316-f357f7598b63
+langcode: en
+status: true
+dependencies: {  }
+id: event_city
+label: 'Event City'
+classes: event-city
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

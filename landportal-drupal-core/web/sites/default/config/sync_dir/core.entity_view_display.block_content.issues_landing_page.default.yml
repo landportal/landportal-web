@@ -1,0 +1,26 @@
+uuid: 3eff369d-1f6d-45f0-863a-7688dae7fdd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.issues_landing_page
+    - field.field.block_content.issues_landing_page.body
+  module:
+    - text
+id: block_content.issues_landing_page.default
+targetEntityType: block_content
+bundle: issues_landing_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

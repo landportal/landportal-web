@@ -1,0 +1,87 @@
+uuid: f66d8738-e040-4e68-b8c4-442488782270
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.field.comment.default_comments.comment_body
+    - field.field.comment.default_comments.feeds_item
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          c57f0c62-a7b2-4b1b-9ee7-9a817d17a061:
+            uuid: c57f0c62-a7b2-4b1b-9ee7-9a817d17a061
+            region: content
+            configuration:
+              id: 'field_block:comment:default_comments:comment_body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          075de959-ee99-4777-9548-1a0ae2b7fba2:
+            uuid: 075de959-ee99-4777-9548-1a0ae2b7fba2
+            region: content
+            configuration:
+              id: 'extra_field_block:comment:default_comments:links'
+              label: Links
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: comment.default_comments.default
+targetEntityType: comment
+bundle: default_comments
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

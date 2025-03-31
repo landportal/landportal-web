@@ -1,0 +1,12 @@
+uuid: 592a52ae-8838-4254-afd1-867479869d83
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_download
+label: 'Indicator Download'
+classes: indicator-download
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

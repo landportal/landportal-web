@@ -1,0 +1,17 @@
+uuid: 03525137-3540-4eb4-9873-c47322943e40
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing page'
+type: landing_page
+description: 'Arbitrary content pages.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

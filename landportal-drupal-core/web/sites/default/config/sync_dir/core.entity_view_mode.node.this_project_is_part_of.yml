@@ -1,0 +1,10 @@
+uuid: f31095c4-32de-4e24-ad87-0a96eb5887da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.this_project_is_part_of
+label: 'This project is part of'
+targetEntityType: node
+cache: true

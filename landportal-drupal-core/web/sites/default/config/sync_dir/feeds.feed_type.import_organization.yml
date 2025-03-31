@@ -1,0 +1,290 @@
+uuid: fafb5131-fadf-47da-96bd-ed421eba2a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.created
+    - core.base_field_override.node.organization.status
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.additionals
+    - field.field.node.organization.body
+    - field.field.node.organization.city
+    - field.field.node.organization.country
+    - field.field.node.organization.field_acronym
+    - field.field.node.organization.field_contact
+    - field.field.node.organization.field_email
+    - field.field.node.organization.field_link
+    - field.field.node.organization.field_phone
+    - field.field.node.organization.field_postal_address
+    - field.field.node.organization.location_name
+    - field.field.node.organization.postal_code
+    - field.field.node.organization.state_province
+    - field.field.node.organization.street
+    - node.type.organization
+  module:
+    - node
+label: 'Import Organization'
+id: import_organization
+description: 'import organization here!'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  body_text:
+    value: body-text
+    label: body-text
+    machine_name: body_text
+    type: csv
+  body_summary:
+    value: body-summary
+    label: body-summary
+    machine_name: body_summary
+    type: csv
+  website_uri:
+    value: website_uri
+    label: website_uri
+    machine_name: website_uri
+    type: csv
+  website_link_text:
+    value: website_link_text
+    label: website_link_text
+    machine_name: website_link_text
+    type: csv
+  acronym:
+    value: Acronym
+    label: Acronym
+    machine_name: acronym
+    type: csv
+  email:
+    value: Email
+    label: Email
+    machine_name: email
+    type: csv
+  phone_number:
+    value: 'Phone number'
+    label: 'Phone number'
+    machine_name: phone_number
+    type: csv
+  postal_address:
+    value: 'Postal address'
+    label: 'Postal address'
+    machine_name: postal_address
+    type: csv
+  location_name:
+    value: 'Location Name'
+    label: 'Location Name'
+    machine_name: location_name
+    type: csv
+  street:
+    value: Street
+    label: Street
+    machine_name: street
+    type: csv
+  additional:
+    value: Additional
+    label: Additional
+    machine_name: additional
+    type: csv
+  city:
+    value: City
+    label: City
+    machine_name: city
+    type: csv
+  postal_code:
+    value: 'Postal Code'
+    label: 'Postal Code'
+    machine_name: postal_code
+    type: csv
+  country:
+    value: Country
+    label: Country
+    machine_name: country
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  focal_point:
+    value: 'Focal point'
+    label: 'Focal point'
+    machine_name: focal_point
+    type: csv
+  post_date:
+    value: post_date
+    label: post_date
+    machine_name: post_date
+    type: csv
+  published_status:
+    value: published_status
+    label: published_status
+    machine_name: published_status
+    type: csv
+  province:
+    value: Province
+    label: Province
+    machine_name: province
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: body
+    map:
+      value: body_text
+      summary: body_summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_link
+    map:
+      uri: website_uri
+      title: website_link_text
+    settings:
+      language: null
+  -
+    target: field_acronym
+    map:
+      value: acronym
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_email
+    map:
+      value: email
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: field_phone
+    map:
+      value: phone_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_postal_address
+    map:
+      value: postal_address
+    settings:
+      language: null
+  -
+    target: location_name
+    map:
+      value: location_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: street
+    map:
+      value: street
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: additionals
+    map:
+      value: additional
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: city
+    map:
+      value: city
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: postal_code
+    map:
+      value: postal_code
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: country
+    map:
+      value: country
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_contact
+    map:
+      value: focal_point
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: status
+    map:
+      value: published_status
+    settings:
+      language: null
+  -
+    target: state_province
+    map:
+      value: province
+    settings:
+      language: null
+    unique: {  }

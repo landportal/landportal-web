@@ -1,0 +1,18 @@
+uuid: bedb3407-6f01-4538-8b66-5b3d7fe28aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.issues_landing_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.issues_landing_page
+target_entity_type_id: block_content
+target_bundle: issues_landing_page
+default_langcode: site_default
+language_alterable: true

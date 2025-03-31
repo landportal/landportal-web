@@ -1,0 +1,189 @@
+uuid: 581e62d0-f9d9-484b-a618-dc6246c71c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - core.entity_view_mode.node.landlibrary_corporate_author_s_
+    - field.field.node.organization.additionals
+    - field.field.node.organization.body
+    - field.field.node.organization.city
+    - field.field.node.organization.country
+    - field.field.node.organization.feeds_item
+    - field.field.node.organization.field_acronym
+    - field.field.node.organization.field_affiliated_organization
+    - field.field.node.organization.field_contact
+    - field.field.node.organization.field_email
+    - field.field.node.organization.field_file
+    - field.field.node.organization.field_geographical_focus
+    - field.field.node.organization.field_image
+    - field.field.node.organization.field_language
+    - field.field.node.organization.field_link
+    - field.field.node.organization.field_organization_relationship
+    - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_phone
+    - field.field.node.organization.field_postal_address
+    - field.field.node.organization.field_related_themes
+    - field.field.node.organization.field_related_topics
+    - field.field.node.organization.field_user
+    - field.field.node.organization.location_name
+    - field.field.node.organization.postal_code
+    - field.field.node.organization.seo_keywords
+    - field.field.node.organization.state_province
+    - field.field.node.organization.street
+    - node.type.organization
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b35ca3fe-8c4f-40ce-ab02-3057ff84aa4c:
+            uuid: b35ca3fe-8c4f-40ce-ab02-3057ff84aa4c
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_image'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          586442c3-eef6-4601-82db-80e45d4c2010:
+            uuid: 586442c3-eef6-4601-82db-80e45d4c2010
+            region: content
+            configuration:
+              id: 'field_block:node:organization:title'
+              label: 'Organization Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          972c1523-71e1-4d47-b86d-11bb58e3b856:
+            uuid: 972c1523-71e1-4d47-b86d-11bb58e3b856
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_acronym'
+              label: Acronym
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'mid section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.organization.landlibrary_corporate_author_s_
+targetEntityType: node
+bundle: organization
+mode: landlibrary_corporate_author_s_
+content:
+  field_acronym:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  additionals: true
+  addtoany: true
+  body: true
+  city: true
+  country: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_affiliated_organization: true
+  field_contact: true
+  field_email: true
+  field_file: true
+  field_geographical_focus: true
+  field_language: true
+  field_link: true
+  field_organization_relationship: true
+  field_organization_type: true
+  field_phone: true
+  field_postal_address: true
+  field_related_themes: true
+  field_related_topics: true
+  field_user: true
+  langcode: true
+  links: true
+  location_name: true
+  postal_code: true
+  search_api_excerpt: true
+  seo_keywords: true
+  state_province: true
+  street: true

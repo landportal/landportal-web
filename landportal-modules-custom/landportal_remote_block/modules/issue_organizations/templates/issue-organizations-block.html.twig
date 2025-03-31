@@ -1,0 +1,27 @@
+{#
+/**
+* @file
+* Landportal Issue organizations block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: Organizations' title.
+*   - url: Organizations' url.
+*   - date: Organizations' publish date.
+*   - image_url: Organizations' image url.
+*   - image_title: Organizations' image title.
+*   - image_alt: Organizations' image alt.
+* - more_news_url: More Organizations page url.
+*/
+#}
+<div>
+  {% for item in items %}
+    <div>
+      <a href="{{ item.ss_url }}">
+        <img src="{{ item['tm_field_image$file$url'].0 }}" title="{{ item['tm_field_image$file$field_file_image_title_text'].0 }}" alt="{{ item.image_alt }}">
+      </a>
+      <p>{{ item.ss_title_field }}</p>
+    </div>
+  {% endfor %}
+  <p><a href="{{ more_url }}">{{ more_label }}</a></p>
+</div>

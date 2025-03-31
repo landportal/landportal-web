@@ -1,0 +1,12 @@
+uuid: 0cb5560b-033f-4f83-824a-bd0208490740
+langcode: en
+status: true
+dependencies: {  }
+id: user_profile
+label: User-Profile
+classes: user-profile
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

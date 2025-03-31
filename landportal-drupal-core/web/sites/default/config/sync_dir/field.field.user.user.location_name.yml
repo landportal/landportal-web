@@ -1,0 +1,20 @@
+uuid: 94863e4a-20da-4575-8085-47ecf3ffaec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.location_name
+  module:
+    - user
+id: user.user.location_name
+field_name: location_name
+entity_type: user
+bundle: user
+label: 'Location name'
+description: 'e.g. a place of business, venue, meeting point'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

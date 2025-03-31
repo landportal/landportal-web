@@ -1,0 +1,20 @@
+uuid: 0dca7231-acba-44d1-b095-aebcaff3566c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.concepts
+  module:
+    - text
+id: taxonomy_term.concepts.description
+field_name: description
+entity_type: taxonomy_term
+bundle: concepts
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

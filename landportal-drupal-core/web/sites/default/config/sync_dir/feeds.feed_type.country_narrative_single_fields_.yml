@@ -1,0 +1,198 @@
+uuid: 46d1cc4f-1913-45c6-aa78-53fa1f8e2d3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.country_narrative.created
+    - core.base_field_override.node.country_narrative.status
+    - core.base_field_override.node.country_narrative.uid
+    - field.field.node.country_narrative.geographical_focus
+    - field.field.node.country_narrative.narrative
+    - node.type.country_narrative
+  module:
+    - node
+label: 'Country Narrative Single fields Import'
+id: country_narrative_single_fields_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: country_narrative
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  summary:
+    value: summary
+    label: summary
+    machine_name: summary
+    type: csv
+  picture:
+    value: picture
+    label: picture
+    machine_name: picture
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  language:
+    value: language
+    label: language
+    machine_name: language
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+  author_uid:
+    value: author_uid
+    label: author_uid
+    machine_name: author_uid
+    type: csv
+  post_date:
+    value: post_date
+    label: post_date
+    machine_name: post_date
+    type: csv
+  published:
+    value: published
+    label: published
+    machine_name: published
+    type: csv
+  country:
+    value: country
+    label: country
+    machine_name: country
+    type: csv
+  geographical_focus:
+    value: country
+    label: country
+    machine_name: geographical_focus
+    type: csv
+  '':
+    value: summary
+    label: summary
+    machine_name: ''
+    type: csv
+  narrative_text:
+    value: narrative-text
+    label: narrative-text
+    machine_name: narrative_text
+    type: csv
+  narrative_summary:
+    value: narrative-summary
+    label: narrative-summary
+    machine_name: narrative_summary
+    type: csv
+  country_picture:
+    value: picture
+    label: picture
+    machine_name: country_picture
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: status
+    map:
+      value: published
+    settings:
+      language: null
+  -
+    target: geographical_focus
+    map:
+      target_id: geographical_focus
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: narrative
+    map:
+      value: narrative_text
+      summary: narrative_summary
+    settings:
+      language: ''
+      format: full_html

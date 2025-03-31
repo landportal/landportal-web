@@ -1,0 +1,24 @@
+uuid: afd5aec9-11e5-490c-9f49-afa6d95ee156
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_related_concepts
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrrelatedconcepts
+theme: landportal
+region: sidebar
+weight: -17
+provider: null
+plugin: 'facet_block:solr_related_concepts'
+settings:
+  id: 'facet_block:solr_related_concepts'
+  label: 'Filter by related concept:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrrelatedconcepts
+visibility: {  }

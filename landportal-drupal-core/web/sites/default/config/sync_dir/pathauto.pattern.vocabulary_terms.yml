@@ -1,0 +1,37 @@
+uuid: 76e9c69d-a0a8-49b1-88d6-2d590000aee3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - language
+    - taxonomy
+id: vocabulary_terms
+label: 'Vocabulary terms'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'voc/regions/[term:name]'
+selection_criteria:
+  003f4f6c-0bc0-4dce-bb65-5ffb1652fbd7:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 003f4f6c-0bc0-4dce-bb65-5ffb1652fbd7
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      regions: regions
+  49ce9fc6-73d2-400d-8f40-a616d96e0f65:
+    id: language
+    negate: false
+    uuid: 49ce9fc6-73d2-400d-8f40-a616d96e0f65
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      en: en
+      fr: fr
+      pt-pt: pt-pt
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

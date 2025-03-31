@@ -1,0 +1,21 @@
+uuid: a9b224f2-6638-4fde-8529-fa0cb6ce9708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_milestone
+    - node.type.sdgi
+  module:
+    - field_milestone
+id: node.sdgi.field_milestone
+field_name: field_milestone
+entity_type: node
+bundle: sdgi
+label: 'key dates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: Milestone

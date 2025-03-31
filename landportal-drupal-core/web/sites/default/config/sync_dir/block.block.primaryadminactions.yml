@@ -1,0 +1,18 @@
+uuid: e4fdf164-f572-4314-a87d-90a945fd42c1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - landportal
+id: primaryadminactions
+theme: landportal
+region: content
+weight: -19
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

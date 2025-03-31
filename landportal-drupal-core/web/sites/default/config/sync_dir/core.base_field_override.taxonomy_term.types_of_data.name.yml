@@ -1,0 +1,18 @@
+uuid: 100911c5-1e80-4017-a830-f70029e423c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.types_of_data
+id: taxonomy_term.types_of_data.name
+field_name: name
+entity_type: taxonomy_term
+bundle: types_of_data
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: c61a9f5f-4b21-497c-9ce5-1d02aa41896b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: issue_narrative_not_specified
+label: 'Issue Narrative Not Specified'
+type: 'canonical_entities:node'
+pattern: 'issues/[node:title]'
+selection_criteria:
+  866ff5ae-536d-4e34-b652-c07519579b09:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 866ff5ae-536d-4e34-b652-c07519579b09
+    context_mapping:
+      node: node
+    bundles:
+      issues: issues
+selection_logic: and
+weight: -5
+relationships: {  }

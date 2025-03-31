@@ -1,0 +1,45 @@
+uuid: b39fc22a-41b9-44ff-b547-9797ad67b527
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_banner
+    - taxonomy.vocabulary.programme
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: taxonomy_term.programme.programme_banner
+field_name: programme_banner
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: project-programs/program-banner
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

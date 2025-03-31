@@ -1,0 +1,29 @@
+uuid: 84c6983c-0fdd-4d62-b684-f9aa41ea4bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.programme
+    - node.type.project
+    - taxonomy.vocabulary.programme
+id: node.project.programme
+field_name: programme
+entity_type: node
+bundle: project
+label: Programme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme: programme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 31d7c1f2-469e-4bb6-ba01-e4425bab3936
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_milestone
+    - node
+id: node.field_milestone
+field_name: field_milestone
+entity_type: node
+type: Milestone
+settings: {  }
+module: field_milestone
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

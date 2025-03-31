@@ -1,0 +1,12 @@
+uuid: b7ed291d-820b-4b80-822b-7ce6b2600404
+langcode: en
+status: true
+dependencies: {  }
+id: library_originally_published_at
+label: 'Library Originally published at'
+classes: library-originally
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

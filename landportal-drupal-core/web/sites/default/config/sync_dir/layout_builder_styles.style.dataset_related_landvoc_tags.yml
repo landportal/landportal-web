@@ -1,0 +1,12 @@
+uuid: 96899a9d-da3b-4dac-9824-a47b5d58d4cc
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_related_landvoc_tags
+label: 'Dataset Related LandVoc tags'
+classes: dataset-related-landVoc-tags
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,10 @@
+name: Cache Purge
+type: module
+description: 'Purges cache tables when they reach a size limit.'
+core_version_requirement: ^9 || ^10
+package: Custom
+
+# Information added by Drupal.org packaging script on 2024-07-28
+version: '1.0.1'
+project: 'cache_purge'
+datestamp: 1722194683

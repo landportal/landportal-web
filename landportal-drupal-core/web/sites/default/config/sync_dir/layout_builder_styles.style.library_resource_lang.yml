@@ -1,0 +1,12 @@
+uuid: 8207cc0a-c050-42e0-a4a8-2aa9f402f404
+langcode: en
+status: true
+dependencies: {  }
+id: library_resource_lang
+label: 'Library Resource Lang'
+classes: library-resource-lang
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

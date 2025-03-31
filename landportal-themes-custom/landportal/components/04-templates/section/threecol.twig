@@ -1,0 +1,30 @@
+<section {{ attributes ? attributes.addClass(classes) : 'class="section--threecol"' }}>
+  <div class="container">
+    <div class="grid">
+      <div {{ region_attributes ? region_attributes.first.addClass('grid__item') : 'class="grid__item"' }}>
+        {% block content_first %}
+          {% include "@templates/placeholder/place-holder.twig" with {
+            "place_holder": "First Block",
+          } %}
+        {% endblock %}
+      </div>
+
+      <div {{ region_attributes ? region_attributes.second.addClass('grid__item') : 'class="grid__item"' }}>
+        {% block content_second %}
+          {% include "@templates/placeholder/place-holder.twig" with {
+            "place_holder": "Second Block",
+          } %}
+        {% endblock %}
+      </div>
+
+      <div {{ region_attributes ? region_attributes.third.addClass('grid__item') : 'class="grid__item"' }}>
+        {% block content_third %}
+          {% include "@templates/placeholder/place-holder.twig" with {
+            "place_holder": "Third Block",
+          } %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</section>
+

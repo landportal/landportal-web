@@ -1,0 +1,18 @@
+uuid: b7b81f20-8005-4256-8611-f5a655f1df1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: News
+type: news
+description: 'A temporal piece of information posted on the website used to inform people of a new publication, an interesting website to look at, something that will happen soon, etc...'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

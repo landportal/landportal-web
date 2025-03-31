@@ -1,0 +1,12 @@
+uuid: 3375c0e8-daaf-4196-9b1a-8cca17de7bf7
+langcode: en
+status: true
+dependencies: {  }
+id: related_project_currency
+label: 'Related Project Currency'
+classes: related-project-currency
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

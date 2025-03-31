@@ -1,0 +1,18 @@
+uuid: b07ee6e4-9755-4819-808d-e1bf5c3c8155
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+id: taxonomy_term.campaigns.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: campaigns
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

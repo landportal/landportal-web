@@ -1,0 +1,19 @@
+uuid: 5f604e69-52ff-4249-bbcc-a9a38df6d18b
+langcode: en
+status: true
+dependencies:
+  module:
+    - download_dataset
+    - node
+id: node.field_download_dataset
+field_name: field_download_dataset
+entity_type: node
+type: download_dataset_type
+settings: {  }
+module: download_dataset
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

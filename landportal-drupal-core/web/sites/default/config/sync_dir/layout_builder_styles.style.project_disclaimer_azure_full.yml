@@ -1,0 +1,12 @@
+uuid: 898c47f9-b572-4242-8527-61830bf6a925
+langcode: en
+status: true
+dependencies: {  }
+id: project_disclaimer_azure_full
+label: 'Project Disclaimer Azure Full'
+classes: project-disclaimer-azure-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

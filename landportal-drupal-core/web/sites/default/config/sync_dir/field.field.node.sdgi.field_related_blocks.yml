@@ -1,0 +1,21 @@
+uuid: 45c07a86-5c45-4d52-a810-b7999b3f5478
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_blocks
+    - node.type.sdgi
+  module:
+    - landportal_related_blocks
+id: node.sdgi.field_related_blocks
+field_name: field_related_blocks
+entity_type: node
+bundle: sdgi
+label: 'Related Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: LandportalRelatedBlocks

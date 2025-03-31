@@ -1,0 +1,12 @@
+uuid: 35e96f1d-dbe8-4e8a-8716-ef81c74c4d8f
+langcode: en
+status: true
+dependencies: {  }
+id: background_light_red_full
+label: 'Background Light-red Full'
+classes: background-light-red-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

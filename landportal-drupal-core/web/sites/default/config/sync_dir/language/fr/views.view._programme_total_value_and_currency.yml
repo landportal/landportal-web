@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<p>valeur totale du programme</p>\r\n"
+            format: filtered_html

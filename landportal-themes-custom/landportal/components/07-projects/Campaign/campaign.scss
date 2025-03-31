@@ -1,0 +1,350 @@
+.new_page_node_campaign {
+	border-bottom: inherit;
+}
+
+.campaign {
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (min-width: $p-small) {
+			max-width: none;
+		}
+
+		@media (min-width: $p-tablet) {
+			max-width: 100%;
+		}
+		@media (min-width: $p-large) {
+			max-width: 70%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.library-tilte {
+		color: black !important;
+		padding-right: 40%;
+		line-height: 35px;
+	}
+
+	.date {
+		text-transform: uppercase;
+		color: #929292;
+		font-size: 12px;
+	}
+
+	.indicator-themes {
+		.h2 {
+			font-size: 16px;
+			line-height: 1.42857143;
+			color: #333;
+			padding-top: 15px;
+			margin-bottom: 0;
+
+			&::after {
+				content: ": ";
+				font-weight: bold;
+			}
+		}
+	}
+
+	.geographical-focus {
+		.h2 {
+			font-size: 16px;
+			line-height: 1.42857143;
+			color: #333;
+			padding-top: 15px;
+			margin-bottom: 0;
+
+			&::after {
+				content: ": ";
+				font-weight: bold;
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.indicator-concepts {
+		.h2 {
+			font-size: 16px;
+			line-height: 1.42857143;
+			color: #333;
+			padding-top: 15px;
+			margin-bottom: 0;
+
+			&::after {
+				content: ": ";
+				font-weight: bold;
+			}
+		}
+	}
+
+	.news-content-with-sidebar {
+		.container {
+			@media (min-width: $p-small) {
+				max-width: none;
+				display: flex;
+				flex-direction: column;
+			}
+			@media (min-width: $p-tablet) {
+				max-width: 100%;
+				display: block;
+			}
+			@media (min-width: $p-large) {
+				max-width: 74%;
+			}
+
+			.section__sidebar__main {
+  				float: left;
+  				margin-right: inherit;
+  				@media (min-width: $p-small){
+  					width: 100%;
+  				}
+  				@media (min-width: $p-large){
+  					width: 70%;
+  				}
+				.blog-post-body {
+					@media (min-width: $p-small) {
+						padding-left: 0 !important;
+						padding-right: 0 !important;
+					}
+
+					@media (min-width: $p-tablet) {
+						padding-left: 15px !important;
+						padding-right: 15px !important;
+					}
+
+					.text-long {
+						@media (min-width: $p-small) {
+							font-size: 14px;
+						}
+						@media (min-width: $p-tablet) {
+							font-size: 14px;
+						}
+					}
+					img{
+						width: inherit;
+						display: inline-block;
+						padding: 0 15px;
+					}
+				}
+			}
+			.section__sidebar__aside{
+  				float: right;
+  				@media (min-width: $p-small){
+  					width: 100%;
+  				}
+  				@media (min-width: $p-large){
+  					width: 30%;
+  				}
+			}
+		}
+	}
+
+	.campaign-author-and-date {
+		.block {
+			display: inline;
+
+			div {
+				display: inline;
+				font-size: 13px !important;
+				text-transform: uppercase;
+
+				p {
+					display: inline;
+					color: #000;
+
+					&::before {
+						content: "by " !important;
+						display: inline !important;
+						text-transform: lowercase;
+						color: #929292;
+					}
+
+					&::after {
+						content: " |" !important;
+						display: inline !important;
+						color: #929292;
+						font-size: larger;
+						// color: blue;
+					}
+				}
+			}
+		}
+	}
+	.event-landingpage-breadcrumb{
+		a{
+			font-size: 16px;
+			color: #56585b;
+			font-weight: bold;
+			font-style: normal;
+		}
+	}
+}
+
+.Related-stories {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	padding-top: 2em;
+
+	header {
+		margin-top: 70px;
+		position: relative;
+
+		@media (min-width: $p-small) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
+		@media (min-width: $p-tablet) {
+			margin-right: 40px;
+			margin-left: 40px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			border-top: solid 1px black;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+		}
+
+		h2 {
+			font-family: "Merriweather Sans", sans-serif;
+			text-align: center;
+			background: #fff;
+			position: relative;
+			z-index: 5;
+
+			@media (min-width: $p-small) {
+				padding: 0;
+				font-size: 25px;
+				margin: 0 30%;
+				line-height: 1.3;
+			}
+
+			@media (min-width: $p-tablet) {
+				padding: 0 20px;
+				margin: 0 36%;
+				font-size: 32px;
+			}
+		}
+	}
+
+	.views-view-grid {
+		width: auto;
+		margin-left: -15px;
+		margin-right: -15px;
+
+		@media (min-width: $p-small) {
+			padding-top: 0;
+		}
+
+		@media (min-width: $p-tablet) {
+			padding-top: 30px;
+		}
+
+		.views-row {
+			opacity: 1;
+			transform: scale(1) translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			perspective: 1000px;
+			transform-style: preserve-3d;
+			transition: all 0.5s ease-out 0ms;
+			visibility: visible;
+			position: relative;
+
+			@media (min-width: $p-small) {
+				display: block;
+				padding: 0.2rem !important;
+			}
+
+			@media (min-width: $p-tablet) {
+				display: flex;
+				gap: 15px;
+				width: 100% !important;
+				padding: 0 !important;
+			}
+
+			.views-col {
+				line-height: 1.42857143;
+				min-height: 1px;
+				padding-left: 10px;
+				padding-right: 10px;
+				border-color: #fff;
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+				transition: all 0.5s ease-out 0ms;
+
+				@media (min-width: $p-small) {
+					width: 100% !important;
+					transform: scale(1) translate3d(0, 0, 0);
+					margin: 0;
+					margin-bottom: 50px !important;
+				}
+
+				@media (min-width: $p-tablet) {
+					margin: 10px !important;
+					margin-bottom: 50px !important;
+					width: 100% !important;
+				}
+				@media (min-width: $p-large) {
+					width: 33.33333% !important;
+				}
+
+				.views-field-field-image {
+					padding-top: 12px;
+
+					.field-content {
+						height: 328px;
+
+						img {
+							height: 328px;
+							object-fit: none;
+							object-position: 45% 40%;
+						}
+					}
+				}
+
+				.views-field-title {
+					padding: 1.25rem 0.8rem;
+					padding-bottom: 10px;
+					font-size: 20px;
+					line-height: 1.2;
+
+					a {
+						font-family: "Merriweather Sans", sans-serif;
+						text-decoration: none;
+						color: rgb(33, 37, 41);
+						font-weight: bold;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				.views-field-body {
+					font-size: 14px;
+					padding: 0.8rem;
+					padding-bottom: 1.25rem;
+					display: inline-block;
+					padding-top: 0;
+				}
+			}
+		}
+	}
+}

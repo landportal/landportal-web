@@ -1,0 +1,356 @@
+uuid: 05b0bdb7-d973-4fe0-a14b-28ce151c4b34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_noderef
+    - node.type.news
+  module:
+    - node
+label: 'News Related Content Field'
+id: news_related_content_field
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news
+  langcode: en
+  insert_new: 0
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  related_content:
+    value: related_content
+    label: related_content
+    machine_name: related_content
+    type: csv
+  related_content1:
+    value: related_content1
+    label: related_content1
+    machine_name: related_content1
+    type: csv
+  related_content2:
+    value: related_content2
+    label: related_content2
+    machine_name: related_content2
+    type: csv
+  related_content3:
+    value: related_content3
+    label: related_content3
+    machine_name: related_content3
+    type: csv
+  related_content4:
+    value: related_content4
+    label: related_content4
+    machine_name: related_content4
+    type: csv
+  related_content5:
+    value: related_content5
+    label: related_content5
+    machine_name: related_content5
+    type: csv
+  related_content6:
+    value: related_content6
+    label: related_content6
+    machine_name: related_content6
+    type: csv
+  related_content7:
+    value: related_content7
+    label: related_content7
+    machine_name: related_content7
+    type: csv
+  related_content8:
+    value: related_content8
+    label: related_content8
+    machine_name: related_content8
+    type: csv
+  related_content9:
+    value: related_content9
+    label: related_content9
+    machine_name: related_content9
+    type: csv
+  related_content10:
+    value: related_content10
+    label: related_content10
+    machine_name: related_content10
+    type: csv
+  related_content11:
+    value: related_content11
+    label: related_content11
+    machine_name: related_content11
+    type: csv
+  related_content12:
+    value: related_content12
+    label: related_content12
+    machine_name: related_content12
+    type: csv
+  related_content13:
+    value: related_content13
+    label: related_content13
+    machine_name: related_content13
+    type: csv
+  related_content14:
+    value: related_content14
+    label: related_content14
+    machine_name: related_content14
+    type: csv
+  related_content15:
+    value: related_content15
+    label: related_content15
+    machine_name: related_content15
+    type: csv
+  related_content16:
+    value: related_content16
+    label: related_content16
+    machine_name: related_content16
+    type: csv
+  related_content17:
+    value: related_content17
+    label: related_content17
+    machine_name: related_content17
+    type: csv
+  related_content18:
+    value: related_content18
+    label: related_content18
+    machine_name: related_content18
+    type: csv
+  related_content19:
+    value: related_content19
+    label: related_content19
+    machine_name: related_content19
+    type: csv
+  related_content20:
+    value: related_content20
+    label: related_content20
+    machine_name: related_content20
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_noderef
+    map:
+      target_id: related_content
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content9
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content10
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content11
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content12
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content13
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content14
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content15
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content16
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content17
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content18
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content19
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related_content20
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

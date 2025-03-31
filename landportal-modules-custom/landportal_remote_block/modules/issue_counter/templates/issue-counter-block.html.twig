@@ -1,0 +1,26 @@
+{#
+/**
+* @file
+* Landportal Issue counter block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: New's title.
+*   - url: New's url.
+*   - date: New's publish date.
+*   - image_url: New's image url.
+*   - image_title: New's image title.
+*   - image_alt: New's image alt.
+* - news_counter: Count news in the issue.
+* - projects_counter: Count projects in the issue.
+* - blogs_counter: Count blogs in the issue.
+* - library_counter: Count libraries in the issue.
+* - indicators_counter: Count indicators in the issue.
+* - layers_counter: Count layers in the issue.
+* - issue_name: Load the issue name.
+*/
+#}
+<div class="news-block__grid">
+
+  <p>{{ news_counter }} - {{ projects_counter }} - {{ blogs_counter }} - {{ library_counter }} - {{ indicators_counter }} - {{ layers_counter }} - {{ issue_name }}</p>
+</div>

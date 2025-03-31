@@ -1,0 +1,21 @@
+uuid: acf7e92a-5f09-46dd-a96d-4a35cfe8fcdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_donor
+    - node.type.project
+  module:
+    - lp_related_content
+id: node.project.field_related_donor
+field_name: field_related_donor
+entity_type: node
+bundle: project
+label: Donor(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: lp_related_content_people

@@ -1,0 +1,22 @@
+uuid: 7aff6ac1-2ce9-458c-9418-3c88aa01e105
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_land_our_story
+id: block_content.our_land_our_story.status
+field_name: status
+entity_type: block_content
+bundle: our_land_our_story
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

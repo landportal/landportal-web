@@ -1,0 +1,30 @@
+uuid: 150427f4-988c-4402-968b-5f0327e8f9d7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:card:d92841df-ceb6-44b9-a1b4-03f9563586f5'
+  module:
+    - block_content
+    - system
+  theme:
+    - landportal
+id: xxxresultsforxxxx
+theme: landportal
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:d92841df-ceb6-44b9-a1b4-03f9563586f5'
+settings:
+  id: 'block_content:d92841df-ceb6-44b9-a1b4-03f9563586f5'
+  label: 'XXX results for XXXX'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search-projects

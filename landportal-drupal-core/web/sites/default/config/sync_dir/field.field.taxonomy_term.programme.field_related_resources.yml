@@ -1,0 +1,21 @@
+uuid: 65a20091-fac4-4b3e-8ffa-79cbc9b4b0f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_resources
+    - taxonomy.vocabulary.programme
+  module:
+    - lp_related_content
+id: taxonomy_term.programme.field_related_resources
+field_name: field_related_resources
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Resources'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: lp_related_content_people

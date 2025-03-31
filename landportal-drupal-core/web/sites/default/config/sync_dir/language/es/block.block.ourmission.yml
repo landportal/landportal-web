@@ -1,0 +1,5 @@
+settings:
+  label: 'Nuestra misión'
+  text:
+    value: "<p>La Fundación Land Portal cree que el acceso a la información es crucial para lograr una buena gobernanza de la tierra y para asegurar los derechos a la tierra de poblaciones vulnerables. Ayudamos a nuestros asociados a crear y difundir datos e información sobre gobernanza de tierra a través de tecnologías de información abierta y vinculada.</p>\r\n\r\n<p><a class=\"link link--button link--button__subscribe\" href=\"/es/participe\">Suscribirse </a> <a class=\"link link--button link--button__support\" href=\"/es/donar\">Apóyenos</a></p>\r\n\r\n<p><a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons Reconocimiento</a>, (CC BY) 2014-2022&nbsp;Land Portal Foundation / RSIN 854330045</p>\r\n"
+    format: full_html

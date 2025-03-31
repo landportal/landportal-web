@@ -1,0 +1,19 @@
+uuid: 74a851eb-ddda-49f2-9ce7-edba4b421f51
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_content_selection
+    - node
+id: node.field_affiliated_organization
+field_name: field_affiliated_organization
+entity_type: node
+type: ContentSelection
+settings: {  }
+module: landportal_content_selection
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: 54254c69-5ecd-4a28-8347-88d56e136cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.event
+  module:
+    - file
+id: node.event.field_file
+field_name: field_file
+entity_type: node
+bundle: event
+label: 'Related materials'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: event-CT/files
+  file_extensions: 'txt zip pdf'
+  max_filesize: ''
+  description_field: false
+field_type: file

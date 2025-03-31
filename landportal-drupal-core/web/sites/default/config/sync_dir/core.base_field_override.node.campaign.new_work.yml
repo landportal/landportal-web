@@ -1,0 +1,23 @@
+uuid: 18e451a0-7445-40f1-8694-43ee682c21c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+    - custom_pub.custom_publishing_option.new_work
+id: node.campaign.new_work
+field_name: new_work
+entity_type: node
+bundle: campaign
+label: 'New Work'
+description: 'custom new work publication option.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

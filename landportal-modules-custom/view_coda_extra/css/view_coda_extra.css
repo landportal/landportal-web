@@ -1,0 +1,65 @@
+.indicator-name{
+	float: left;
+}
+.indicator-year{
+	float: right;
+}
+#indicator-btn{
+	display: none;
+}
+@media only screen and (max-width: 768px){
+	.indicator-name{
+		float: inherit;
+	}
+	.indicator-year{
+		float: inherit;
+	}
+}
+
+/*this css is apply on select 2 library*/
+
+.select2-container--default .select2-results>.select2-results__options{
+	margin-left: auto;
+	margin-right: auto;
+}
+.select2-container--default .select2-selection--single, .select2-dropdown{
+	border-radius: 1.3em;
+}
+.form-item__dropdown::after{
+	display: none;
+}
+
+
+#html-table table {
+  background-color: inherit;
+  font-size: .9em;
+  -webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+
+#html-table table thead {
+  background-color: #339966;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+#html-table .table > tbody > tr > td {
+  vertical-align: middle;
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.indicator span.bi.bi-info-circle-fill {
+  color: green;
+}

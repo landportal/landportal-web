@@ -1,0 +1,19 @@
+uuid: 6042bcb2-6431-4c33-bc58-63df4198cbbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.event
+id: node.event.field_contact
+field_name: field_contact
+entity_type: node
+bundle: event
+label: 'Contact details'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

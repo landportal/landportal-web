@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for indicators.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function landportal_indicators_theme($existing, $type, $theme, $path) {
+  return [
+    'country_indicators_block' => [
+      'variables' => [
+        'socio_economic_title' => '',
+        'socio_economic_more_label' => '',
+        'socio_economic_more_url' => '',
+        'land_title' => '',
+        'land_more_label' => '',
+        'land_more_url' => '',
+        'land_area' => [],
+        'total_population' => [],
+        'gini_index' => [],
+        'gdp_capita' => [],
+        'urban_population' => [],
+        'agricultural_land' => [],
+        'perceived_tenure_security' => [],
+        'primary_forests' => [],
+        'women_owning_land' => [],
+        'area_in_deals' => [],
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,12 @@
+uuid: 59b926de-a7fe-4f6f-ab02-a671970c0842
+langcode: en
+status: true
+dependencies: {  }
+id: event_contact
+label: 'Event Contact'
+classes: event-contact
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

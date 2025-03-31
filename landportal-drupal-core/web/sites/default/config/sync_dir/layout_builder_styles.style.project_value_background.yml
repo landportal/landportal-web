@@ -1,0 +1,12 @@
+uuid: b12f0433-eeba-4d60-9cd7-249f72f374d4
+langcode: en
+status: true
+dependencies: {  }
+id: project_value_background
+label: 'Project Value Background'
+classes: project-value-background
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

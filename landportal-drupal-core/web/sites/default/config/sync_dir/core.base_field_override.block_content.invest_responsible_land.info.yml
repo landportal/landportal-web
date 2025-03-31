@@ -1,0 +1,18 @@
+uuid: 1af60ddb-e6f3-46f4-aadf-7891c7b2c51c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+id: block_content.invest_responsible_land.info
+field_name: info
+entity_type: block_content
+bundle: invest_responsible_land
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

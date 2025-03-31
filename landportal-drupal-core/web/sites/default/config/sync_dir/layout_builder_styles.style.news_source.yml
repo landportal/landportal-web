@@ -1,0 +1,12 @@
+uuid: 88c9a154-64c4-467a-82f3-c484ee612221
+langcode: en
+status: true
+dependencies: {  }
+id: news_source
+label: 'News Source'
+classes: news-source
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

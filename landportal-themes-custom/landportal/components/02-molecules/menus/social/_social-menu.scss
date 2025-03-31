@@ -1,0 +1,29 @@
+.social-menu {
+  @include list-reset;
+
+  &__item {
+    margin-bottom: $space-one-fourth;
+    display: inline;
+    padding: 0 5px;
+  }
+
+  &__link {
+    align-items: center;
+    text-decoration: none;
+    color: clr(text);
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    padding: .2em .4em;
+    margin-right: $space-one-half;
+    fill: currentColor;
+    border: solid .08em clr(text-light);
+    border-radius: 47%;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+}

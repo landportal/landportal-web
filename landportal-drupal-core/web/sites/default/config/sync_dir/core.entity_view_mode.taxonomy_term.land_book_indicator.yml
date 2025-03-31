@@ -1,0 +1,10 @@
+uuid: 26091d64-8b9a-4c23-b75e-83fead8ae4c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.land_book_indicator
+label: 'Land Book Indicator'
+targetEntityType: taxonomy_term
+cache: true

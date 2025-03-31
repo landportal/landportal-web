@@ -1,0 +1,23 @@
+uuid: 8bc53ba5-8588-4d2d-8fe9-5711c7bb870c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_relation
+    - node.type.landlibrary_resource
+  module:
+    - link
+id: node.landlibrary_resource.field_doc_relation
+field_name: field_doc_relation
+entity_type: node
+bundle: landlibrary_resource
+label: Relation
+description: 'A related resource.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

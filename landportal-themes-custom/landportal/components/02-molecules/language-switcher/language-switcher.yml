@@ -1,0 +1,10 @@
+switcher_label: 'Language'
+switcher_items:
+  - title: 'English'
+    url: '#'
+  - title: 'Français'
+    url: '#'
+  - title: 'Português'
+    url: '#'
+  - title: 'Español'
+    url: '#'

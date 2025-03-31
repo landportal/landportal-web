@@ -1,0 +1,12 @@
+uuid: f0916f60-ff61-41c6-a1e8-40f0588a2cc0
+langcode: en
+status: true
+dependencies: {  }
+id: news_event_title
+label: 'News & Event Title'
+classes: 'news-&-event-title'
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

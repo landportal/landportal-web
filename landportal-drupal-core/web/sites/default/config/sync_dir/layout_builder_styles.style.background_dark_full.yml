@@ -1,0 +1,12 @@
+uuid: 69b8f13f-bd82-4dc6-9722-bd0a05ec41be
+langcode: en
+status: true
+dependencies: {  }
+id: background_dark_full
+label: 'Background Dark Full'
+classes: "layout-background--full\r\nlayout-background--dark"
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

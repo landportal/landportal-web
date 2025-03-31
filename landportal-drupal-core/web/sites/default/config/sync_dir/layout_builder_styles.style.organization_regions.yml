@@ -1,0 +1,12 @@
+uuid: d9634fd2-aa97-4f80-90e6-f3f1b4003ffa
+langcode: en
+status: true
+dependencies: {  }
+id: organization_regions
+label: 'Organization Regions'
+classes: organization-regions
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

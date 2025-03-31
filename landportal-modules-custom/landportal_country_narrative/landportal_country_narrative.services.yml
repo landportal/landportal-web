@@ -1,0 +1,11 @@
+services:
+  landportal_country_narrative.breadcrumb:
+    class: Drupal\landportal_country_narrative\Breadcrumb\CountryNarrativeBreadcrumbBuilder
+    tags:
+      # Priority should be over easy_breadcrumb module
+      - { name: breadcrumb_builder, priority: 1200 }
+  issue_country_narrative.breadcrumb:
+    class: Drupal\landportal_country_narrative\Breadcrumb\IssueNarrativeBreadcrumbBuilder
+    tags:
+      # Priority should be over easy_breadcrumb module
+      - { name: breadcrumb_builder, priority: 1200 }

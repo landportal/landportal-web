@@ -1,0 +1,166 @@
+uuid: 579a0a77-f936-4bdc-b84e-7b3a2e4e5070
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.impact_story.status
+    - field.field.node.impact_story.body
+    - field.field.node.impact_story.field_doc_people
+    - field.field.node.impact_story.field_image
+    - field.field.node.impact_story.field_pubdate
+    - node.type.impact_story
+  module:
+    - node
+label: 'Export Impact Stories'
+id: export_impact_stories
+description: 'only single fields'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: impact_story
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  summary:
+    value: summary
+    label: summary
+    machine_name: summary
+    type: csv
+  picture:
+    value: Picture
+    label: Picture
+    machine_name: picture
+    type: csv
+  author_s_:
+    value: Author(s)
+    label: Author(s)
+    machine_name: author_s_
+    type: csv
+  publication_date:
+    value: 'Publication date'
+    label: 'Publication date'
+    machine_name: publication_date
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  published_status:
+    value: 'Published status'
+    label: 'Published status'
+    machine_name: published_status
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_image
+    map:
+      target_id: picture
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_doc_people
+    map:
+      value: author_s_
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_pubdate
+    map:
+      value: publication_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: status
+    map:
+      value: published_status
+    settings:
+      language: null
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null

@@ -1,0 +1,23 @@
+# exclude node_modules
+landportal/node_modules/*
+# Ignore common compressed file formats
+*.zip
+*.tar
+*.gz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.tgz
+*.tbz2
+*.txz
+*.lz
+*.lzma
+*.zst
+*.sz
+*.ace
+*.cab
+*.iso
+*.jar
+*.war
+

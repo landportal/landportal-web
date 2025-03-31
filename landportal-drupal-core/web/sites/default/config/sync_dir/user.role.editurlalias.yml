@@ -1,0 +1,14 @@
+uuid: 18eb2cdd-2c9b-489e-bd2c-753d27d0e532
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+    - node
+id: editurlalias
+label: editURLalias
+weight: 10
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'
+  - 'view own unpublished content'

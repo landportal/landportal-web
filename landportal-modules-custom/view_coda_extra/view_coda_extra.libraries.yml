@@ -1,0 +1,56 @@
+indicators:
+  version: 1.x
+  css:
+    layout:
+      css/view_coda_extra.css: {}
+      css/visualizations.css: {}
+      css/lp-flag-icon.css: {}
+      # css/lp-bootstrap.css: {}
+  js:
+    js/view_coda_extra.js: {}
+
+select-2-css:
+  version: 1.x
+  css:
+    layout:
+      css/select2.min.css: {}
+
+bootstrap-tooltip:
+  version: 1.x
+  css:
+    layout:
+      css/bootstrap.min.css: {}
+      css/bootstrap.min.css.map: {}
+      css/view_coda_extra.css: {}
+      https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css: {}
+  js:
+    js/bootstrap.bundle.min.js: {}
+    js/custom-tooltip.js: {}
+
+jquery-old-version:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js: {}
+
+select-2-js:
+  js:
+    js/select2.min.js: {}
+  dependencies:
+    - view_coda_extra/jquery-old-version
+
+lp-related-content-edit:
+  js:
+    js/view_coda_extra.js: {}
+  dependencies:
+    - core/drupal
+    - view_coda_extra/jquery-old-version
+    - core/drupalSettings
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis
+    - landportal_view_coda/lbvis.map
+    - landportal_view_coda/lbvis.table    
+    - landportal_view_coda/lbvis.dl    
+    - landportal_view_coda/lbvis.ranking    
+    - view_coda_extra/select-2-css
+    - view_coda_extra/select-2-js
+    - view_coda_extra/bootstrap-tooltip
+    - indicators

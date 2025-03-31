@@ -1,0 +1,12 @@
+uuid: 713226df-cb48-429b-a857-6a51df265100
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_location
+label: 'User Upper Section Location'
+classes: user-upper-section-location
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

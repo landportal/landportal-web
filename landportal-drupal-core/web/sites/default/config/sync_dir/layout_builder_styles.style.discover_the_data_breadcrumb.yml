@@ -1,0 +1,12 @@
+uuid: 39ad8a12-70f5-4f00-886b-147fa3991226
+langcode: en
+status: true
+dependencies: {  }
+id: discover_the_data_breadcrumb
+label: 'Discover the data Breadcrumb'
+classes: Discover-the-data-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

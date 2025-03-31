@@ -1,0 +1,72 @@
+uuid: afa88305-d568-46dd-8b47-cf5d44ab1043
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PaNDmsPeuMTRvRupXhRkEA069MVvQ5y_A6dvpKJi4iY
+id: indicators
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - landportal_migration
+migration_group: landportal_migration
+label: 'Migrate - Indicators'
+source:
+  plugin: d7_taxonomy_term
+  bundle: indicators
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: default_value
+      default_value: indicators
+  name:
+    -
+      plugin: get
+      source: name
+  id:
+    -
+      plugin: get
+      source: field_id
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - indicators
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: indicators
+migration_dependencies: null

@@ -1,0 +1,79 @@
+uuid: c17ef0ef-7fa8-4565-895d-4c09aba608d3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H7jwVj2s9ZnuI7_TT4uaxyAx2LSmuAM7vDhlV87964k
+id: url_alias
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - landportal_migration
+migration_group: landportal_migration
+label: 'URL aliases'
+source:
+  plugin: d7_url_alias
+  constants:
+    slash: /
+process:
+  id:
+    -
+      plugin: get
+      source: pid
+  _path:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - source
+  alias:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - alias
+  node_translation:
+    -
+      plugin: explode
+      source: source
+      delimiter: /
+    -
+      plugin: extract
+      default: INVALID_NID
+      index:
+        - 1
+    -
+      plugin: migration_lookup
+      migration:
+        - regions
+        - narratives
+        - narratives_translations
+        - regions_translations
+        - users
+    -
+      plugin: node_complete_node_translation_lookup
+  langcode:
+    -
+      plugin: null_coalesce
+      source:
+        - '@node_translation/1'
+        - language
+  path:
+    -
+      plugin: path_set_translated
+      source:
+        - '@_path'
+        - '@node_translation'
+destination:
+  plugin: 'entity:path_alias'
+migration_dependencies:
+  required: {  }
+  optional:
+    - regions
+    - narratives
+    - narratives_translations
+    - regions_translations
+    - users

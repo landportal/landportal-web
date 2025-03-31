@@ -1,0 +1,118 @@
+uuid: 95984ecb-6f76-4650-af07-ecebbe9a67d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.dataset.title
+    - field.field.node.dataset.field_indicators
+    - node.type.dataset
+  module:
+    - feeds_ex
+    - node
+    - view_coda_extra
+label: 'Dataset portfolio (visualizations) field'
+id: dataset_portfolio_visualizations
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: /nodes/node
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    label: nid
+    machine_name: nid
+    value: nid
+    raw: true
+    inner: true
+    type: xml
+  title:
+    label: title
+    machine_name: title
+    value: title
+    raw: true
+    inner: true
+    type: xml
+  indicator_title:
+    label: indicator_title
+    machine_name: indicator_title
+    value: indicator_title
+    raw: true
+    inner: true
+    type: xml
+  description:
+    label: description
+    machine_name: description
+    value: description
+    raw: true
+    inner: true
+    type: xml
+  indicators:
+    label: indicators
+    machine_name: indicators
+    value: indicators
+    raw: true
+    inner: true
+    type: xml
+  view_coda:
+    label: view-coda
+    machine_name: view_coda
+    value: view-coda
+    raw: true
+    inner: true
+    type: xml
+  type:
+    label: type
+    machine_name: type
+    value: type
+    raw: true
+    inner: true
+    type: xml
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_indicators
+    map:
+      indicator_title: indicator_title
+      indicator_description: description
+      indicator: indicators
+      textarea: view_coda
+      visualization: type
+    settings:
+      language: null

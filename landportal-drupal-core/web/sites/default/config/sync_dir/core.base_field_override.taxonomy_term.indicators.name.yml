@@ -1,0 +1,18 @@
+uuid: 472b8344-8814-4770-94c7-78a5133bbb97
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.name
+field_name: name
+entity_type: taxonomy_term
+bundle: indicators
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

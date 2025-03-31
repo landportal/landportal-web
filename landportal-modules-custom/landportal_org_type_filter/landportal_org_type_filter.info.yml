@@ -1,0 +1,5 @@
+name: Landportal Organization Type Filter
+description: 'Module that filter Organization Type which are refered in organization and theme type'
+type: module
+core_version_requirement: ^9 || ^10
+package: Custom

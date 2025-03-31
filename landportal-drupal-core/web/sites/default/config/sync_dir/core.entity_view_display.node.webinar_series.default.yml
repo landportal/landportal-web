@@ -1,0 +1,510 @@
+uuid: b595c098-e558-46a4-a762-317ec1d100cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.webinar_series.title
+    - field.field.node.webinar_series.body
+    - field.field.node.webinar_series.feeds_item
+    - field.field.node.webinar_series.field_contact
+    - field.field.node.webinar_series.field_date
+    - field.field.node.webinar_series.field_file
+    - field.field.node.webinar_series.field_image
+    - field.field.node.webinar_series.field_language_of_the_event
+    - field.field.node.webinar_series.field_link
+    - field.field.node.webinar_series.field_noderef
+    - field.field.node.webinar_series.field_orgref
+    - field.field.node.webinar_series.field_related_events
+    - field.field.node.webinar_series.field_related_themes
+    - field.field.node.webinar_series.field_related_topics
+    - field.field.node.webinar_series.field_type_of_event
+    - field.field.node.webinar_series.promoted_to_news_events_landing_
+    - node.type.webinar_series
+    - views.view.blog_post_related_content
+    - views.view.webinar_organizers
+    - views.view.webinars_of_the_series
+  module:
+    - addtoany
+    - datetime_range
+    - file
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - options
+    - text
+    - user
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'webinar title'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          c070536e-883b-443e-ba5c-a2a279b16659:
+            uuid: c070536e-883b-443e-ba5c-a2a279b16659
+            region: content
+            configuration:
+              id: 'field_block:node:webinar_series:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - title
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Image
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          2856f5b2-783f-46d1-ac68-427ea1cb255b:
+            uuid: 2856f5b2-783f-46d1-ac68-427ea1cb255b
+            region: content
+            configuration:
+              id: 'field_block:node:webinar_series:field_image'
+              label: Banner
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Related themes and concepts'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_full_content
+        components:
+          d3fb15a4-f159-42dc-b113-625fa514311e:
+            uuid: d3fb15a4-f159-42dc-b113-625fa514311e
+            region: content
+            configuration:
+              id: 'field_block:node:webinar_series:field_related_themes'
+              label: Themes
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - blog_post_themes
+          c22c0f3b-85c0-4e42-8bb4-4690f3f37db1:
+            uuid: c22c0f3b-85c0-4e42-8bb4-4690f3f37db1
+            region: content
+            configuration:
+              id: 'field_block:node:webinar_series:field_related_topics'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - blog_post_concept
+        third_party_settings: {  }
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: Section
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          55f9320a-409e-4faa-b861-b3a67fecba71:
+            uuid: 55f9320a-409e-4faa-b861-b3a67fecba71
+            region: main
+            configuration:
+              id: 'field_block:node:webinar_series:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          3c1a8431-3139-461f-80cc-8caef45a4aae:
+            uuid: 3c1a8431-3139-461f-80cc-8caef45a4aae
+            region: aside
+            configuration:
+              id: 'field_block:node:webinar_series:field_date'
+              label: Dates
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: above
+                settings:
+                  timezone_override: ''
+                  date_format: 'F Y'
+                  separator: to
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - date_field
+          49e23d51-01e2-4caf-835a-57de24fb15c5:
+            uuid: 49e23d51-01e2-4caf-835a-57de24fb15c5
+            region: aside
+            configuration:
+              id: 'field_block:node:webinar_series:field_contact'
+              label: 'Contact details'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - contact_field
+          50d5c9cf-823d-443a-93fe-8f975b82dceb:
+            uuid: 50d5c9cf-823d-443a-93fe-8f975b82dceb
+            region: aside
+            configuration:
+              id: 'field_block:node:webinar_series:field_language_of_the_event'
+              label: 'Language of the event'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - language_field
+          25dd6456-3017-43d5-a7fe-d88302d6a253:
+            uuid: 25dd6456-3017-43d5-a7fe-d88302d6a253
+            region: aside
+            configuration:
+              id: 'views_block:webinar_organizers-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+          2e247be4-a5de-46ce-8a69-5ff697dc71cb:
+            uuid: 2e247be4-a5de-46ce-8a69-5ff697dc71cb
+            region: aside
+            configuration:
+              id: 'field_block:node:webinar_series:field_link'
+              label: Website
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - organization_website
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Webinar of the series'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          d7f39745-ef4c-4614-b5e1-b7529a1a3598:
+            uuid: d7f39745-ef4c-4614-b5e1-b7529a1a3598
+            region: content
+            configuration:
+              id: 'views_block:webinars_of_the_series-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Related Content'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          29d0bd00-91b1-4c16-be8b-10273f26a2cd:
+            uuid: 29d0bd00-91b1-4c16-be8b-10273f26a2cd
+            region: content
+            configuration:
+              id: 'views_block:blog_post_related_content-block_5'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media Block'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          37fe10a4-11e5-45b5-bcf6-f4cf13f43691:
+            uuid: 37fe10a4-11e5-45b5-bcf6-f4cf13f43691
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.webinar_series.default
+targetEntityType: node
+bundle: webinar_series
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_contact:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_language_of_the_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_related_events:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_type_of_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  promoted_to_news_events_landing_:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

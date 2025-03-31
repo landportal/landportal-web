@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 01cc90a1-c8dc-43f0-ad47-651e778781e8
+name: 'Land Portal'
+mail: info@landportal.info
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/10064
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

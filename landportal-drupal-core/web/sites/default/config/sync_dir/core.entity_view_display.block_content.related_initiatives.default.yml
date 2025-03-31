@@ -1,0 +1,137 @@
+uuid: eb2f26f9-10da-4088-8d66-026eeac36322
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_initiatives
+    - field.field.block_content.related_initiatives.body
+    - field.field.block_content.related_initiatives.related_initiatives_image
+    - field.field.block_content.related_initiatives.related_initiatives_link
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          42f84778-9ce4-40dd-b854-9adcf6e05bc1:
+            uuid: 42f84778-9ce4-40dd-b854-9adcf6e05bc1
+            region: content
+            configuration:
+              id: 'field_block:block_content:related_initiatives:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7a89c0f0-fb26-432b-b1db-a85b03094a59:
+            uuid: 7a89c0f0-fb26-432b-b1db-a85b03094a59
+            region: content
+            configuration:
+              id: 'field_block:block_content:related_initiatives:related_initiatives_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          214a85b1-f144-473f-a46f-aa2af99ef430:
+            uuid: 214a85b1-f144-473f-a46f-aa2af99ef430
+            region: content
+            configuration:
+              id: 'field_block:block_content:related_initiatives:related_initiatives_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          019111f0-b50d-42c1-a2ef-352c84386f90:
+            uuid: 019111f0-b50d-42c1-a2ef-352c84386f90
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:related_initiatives:related_initiatives_image'
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.related_initiatives.default
+targetEntityType: block_content
+bundle: related_initiatives
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  related_initiatives_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  related_initiatives_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

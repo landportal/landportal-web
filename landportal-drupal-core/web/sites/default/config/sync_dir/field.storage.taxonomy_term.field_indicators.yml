@@ -1,0 +1,19 @@
+uuid: 5cda7e3c-f124-4638-b317-494f0d651e7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - view_coda_extra
+id: taxonomy_term.field_indicators
+field_name: field_indicators
+entity_type: taxonomy_term
+type: ViewCodaExtra
+settings: {  }
+module: view_coda_extra
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+uuid: 58ceed71-517b-4df3-ba48-e9d6f8b9df4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+id: taxonomy_term.debate_status.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: debate_status
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

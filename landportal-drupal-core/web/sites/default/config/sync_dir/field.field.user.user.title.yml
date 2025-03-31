@@ -1,0 +1,21 @@
+uuid: 89fbbe85-8939-4873-baa0-8fa053f2937f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.title
+  module:
+    - options
+    - user
+id: user.user.title
+field_name: title
+entity_type: user
+bundle: user
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

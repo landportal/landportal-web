@@ -1,0 +1,12 @@
+uuid: f0d8fd82-998a-4d2c-b7ff-2cc7eaa2ea80
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_sidebar
+label: 'Landing page sidebar'
+classes: landing-page-sidebar
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

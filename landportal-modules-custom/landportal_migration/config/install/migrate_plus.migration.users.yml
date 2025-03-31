@@ -1,0 +1,28 @@
+id: users
+label: 'Migrate - Authors'
+migration_group: landportal_migration
+migration_tags:
+  - landportal_migration
+source:
+  plugin: d7_user
+process:
+  uid: uid
+  name: name
+  pass: pass
+  mail: mail
+  created: created
+  access: access
+  login: login
+  status:
+    - plugin: default_value
+      default_value: 0
+  timezone: timezone
+  langcode:
+    plugin: user_langcode
+    source: entity_language
+    fallback_to_site_default: false
+  init: init
+  roles: roles
+destination:
+  plugin: entity:user
+  md5_passwords: true

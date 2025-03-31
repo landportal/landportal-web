@@ -1,0 +1,202 @@
+uuid: 41ef43f8-aec1-43f1-b755-50be80a7dabb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign.field_related_topics
+    - node.type.campaign
+  module:
+    - node
+label: 'Campaign CT(Concepts)'
+id: campaign_ct_concepts_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: campaign
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  concepts:
+    value: concepts
+    label: concepts
+    machine_name: concepts
+    type: csv
+  concepts1:
+    value: concepts1
+    label: concepts1
+    machine_name: concepts1
+    type: csv
+  concepts2:
+    value: concepts2
+    label: concepts2
+    machine_name: concepts2
+    type: csv
+  concepts3:
+    value: concepts3
+    label: concepts3
+    machine_name: concepts3
+    type: csv
+  concepts4:
+    value: concepts4
+    label: concepts4
+    machine_name: concepts4
+    type: csv
+  concepts5:
+    value: concepts5
+    label: concepts5
+    machine_name: concepts5
+    type: csv
+  concepts6:
+    value: concepts6
+    label: concepts6
+    machine_name: concepts6
+    type: csv
+  concepts7:
+    value: concepts7
+    label: concepts7
+    machine_name: concepts7
+    type: csv
+  concepts8:
+    value: concepts8
+    label: concepts8
+    machine_name: concepts8
+    type: csv
+  concepts9:
+    value: concepts9
+    label: concepts9
+    machine_name: concepts9
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts7
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts8
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: concepts9
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

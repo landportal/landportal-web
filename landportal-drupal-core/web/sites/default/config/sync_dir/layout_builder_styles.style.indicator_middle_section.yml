@@ -1,0 +1,12 @@
+uuid: 3dce66fe-a8d1-4c2d-81c8-7c179d29ded2
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_middle_section
+label: 'Indicator Middle Section'
+classes: indicator-middle-section
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

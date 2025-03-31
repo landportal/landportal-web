@@ -1,0 +1,23 @@
+uuid: 90aaa484-b60a-4f4b-8a2e-f47ee7a15f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.official_website
+    - node.type.project
+  module:
+    - link
+id: node.project.official_website
+field_name: official_website
+entity_type: node
+bundle: project
+label: 'External Links'
+description: 'Please add the project website and other relevant websites and social media.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

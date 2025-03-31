@@ -1,0 +1,12 @@
+uuid: 0131299b-87f2-49ce-81db-185c287bb3cd
+langcode: en
+status: true
+dependencies: {  }
+id: investment_responsible_key_lesson
+label: 'Investment Responsible Key Lesson'
+classes: investment-responsible-key-lesson
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

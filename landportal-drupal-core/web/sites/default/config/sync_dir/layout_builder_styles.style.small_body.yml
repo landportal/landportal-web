@@ -1,0 +1,12 @@
+uuid: 31411308-7ac8-413e-b6ad-d05c503daa8f
+langcode: en
+status: true
+dependencies: {  }
+id: small_body
+label: 'Small Body'
+classes: small-body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

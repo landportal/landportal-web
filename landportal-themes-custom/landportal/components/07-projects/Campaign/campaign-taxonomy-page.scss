@@ -1,0 +1,82 @@
+.Related-stories-taxonomy {
+    .views-view-grid {
+        .views-row {
+            .views-col {
+                width: 100% !important;
+
+                .views-field-field-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .views-field-title {
+                    font-size: 20px;
+                    font-family: "Merriweather Sans", sans-serif;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: #06C;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .views-field-nothing {
+                    .summary-author-date-block {
+                        float: right;
+
+                        @media (min-width: $p-small) {
+                            width: 75%;
+                        }
+
+                        @media (min-width: $p-tablet) {
+                            width: 50%;
+                        }
+
+                        .block-summary {
+                            p {
+                                font-size: 14px;
+                                line-height: inherit;
+                                color: #666;
+                                max-height: 6em;
+                                overflow: hidden;
+                                margin-top: 0;
+                            }
+                        }
+
+                        .block-author {
+                            text-align: right;
+                            padding-left: 15px;
+                            padding-right: 15px;
+
+                            p {
+                                font-size: 14px;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+
+                        .block-date {
+                            text-align: right;
+                            padding-left: 15px;
+                            padding-right: 15px;
+
+                            p {
+                                font-size: 14px;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

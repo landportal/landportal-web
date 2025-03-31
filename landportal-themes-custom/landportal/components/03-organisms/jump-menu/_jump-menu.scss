@@ -1,0 +1,45 @@
+.country-jump-menu {
+  padding: $space 0;
+  background-color: clr(background-light);
+
+  @include medium {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__menu {
+      flex: 1;
+      margin-right: $space;
+    }
+  }
+
+  .form-item__select {
+    background-color: clr(text-light);
+    border-radius: 2%;
+  }
+}
+
+// @TODO Move this to better lcoation
+.country-map-key {
+  ul {
+    @include list-reset;
+
+    font-size: 0.8125rem; // 13px
+
+    li {
+      padding-left: $space-one-third;
+      margin: $space 0;
+      border-left: 6px solid;
+
+      &.featured {
+        border-color: clr(map-featured);
+      }
+      &.other {
+        border-color: clr(map-other);
+      }
+      &.none {
+        border-color: clr(map-none);
+      }
+    }
+
+  }
+}

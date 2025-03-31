@@ -1,0 +1,14 @@
+uuid: c864f101-00f9-4f41-bc05-c46630bd5bb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+  module:
+    - taxonomy
+id: taxonomy_term.campaigns
+targetEntityType: taxonomy_term
+bundle: campaigns
+types:
+  - ''
+fieldMappings: {  }

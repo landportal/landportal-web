@@ -1,0 +1,336 @@
+uuid: 15f2ceb2-da21-491b-b800-9b0d02eaf04e
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.promoted_to_front_page_news_events_blog_post
+    - field.field.node.event.body
+    - field.field.node.event.city
+    - field.field.node.event.country
+    - field.field.node.event.feeds_item
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_file
+    - field.field.node.event.field_geographical_focus
+    - field.field.node.event.field_image
+    - field.field.node.event.field_language_of_the_event
+    - field.field.node.event.field_link
+    - field.field.node.event.field_noderef
+    - field.field.node.event.field_orgref
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_related_themes
+    - field.field.node.event.field_related_topics
+    - field.field.node.event.field_type_of_event
+    - field.field.node.event.location_name
+    - field.field.node.event.postal_code
+    - field.field.node.event.promoted_to_news_events_landing_
+    - field.field.node.event.state_province
+    - field.field.node.event.street
+    - node.type.event
+  module:
+    - datetime_range
+    - file
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Top section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          9d9c809b-66e3-4817-821d-9621d6543800:
+            uuid: 9d9c809b-66e3-4817-821d-9621d6543800
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          e537dc90-cd57-4b6e-853e-9991af253c2a:
+            uuid: e537dc90-cd57-4b6e-853e-9991af253c2a
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          8ac09a9a-85d9-4b17-ba04-afb75ef6fec5:
+            uuid: 8ac09a9a-85d9-4b17-ba04-afb75ef6fec5
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_date'
+              label: 'When is this event taking place?'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'd F Y'
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+          117ce5a1-ed05-4b26-86ec-f09e44a36c6e:
+            uuid: 117ce5a1-ed05-4b26-86ec-f09e44a36c6e
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_orgref'
+              label: Organizers
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.event.promoted_to_front_page_news_events_blog_post
+targetEntityType: node
+bundle: event
+mode: promoted_to_front_page_news_events_blog_post
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_contact:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_language_of_the_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_related_events:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_type_of_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  location_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  postal_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  state_province:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  street:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  promoted_to_news_events_landing_: true
+  search_api_excerpt: true

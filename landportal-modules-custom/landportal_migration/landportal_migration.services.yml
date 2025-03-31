@@ -1,0 +1,6 @@
+services:
+  landportal_migration.subscriber:
+    class: Drupal\landportal_migration\EventSubscriber\NarrativesEventSubscriber
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: 'event_subscriber' }

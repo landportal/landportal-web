@@ -1,0 +1,12 @@
+uuid: 9a7992e4-d0f7-4562-86b1-759907e8cfd1
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_issues
+label: 'Dataset Issues'
+classes: dataset-issues
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

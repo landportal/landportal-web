@@ -1,0 +1,388 @@
+[about="/vggt"]{
+	.text-long{
+		clear: both;
+		iframe{
+			float: left;
+	  		margin: 0 .8em 1em 0;
+	  		@media (min-width: $p-small){
+	  			width: 30%;
+	  		}
+	  		@media (min-width: $p-tablet){
+	  			width: 32%;
+	  		}
+		}
+	}
+}
+.Org-Grid-system.Grid-system{
+	@media (min-width: $p-small){
+		margin: inherit;
+	}
+	@media (min-width: $p-large){
+		margin: 0 12px;
+	}
+	article.organization{
+		border-top: 5px solid #033;
+	}
+	.views-row{
+		.block.libaray-image{
+			width: 25%;
+		}
+		.block.title, .block.dataset-description{
+			width: 75%;
+		}
+		.organizer-acronym{
+			display: none;
+		}
+	}
+}
+.Grid-system-bg-border{
+	margin: 0 0 !important;
+  	display: grid;
+  	@media (min-width: $p-small){
+  		grid-template-columns: 1fr;
+  		gap: 0;
+  	}
+  	@media (min-width: $p-tablet){
+  		grid-template-columns: 2fr 2fr;
+  		gap: 20px;
+  	}
+	.views-row.even, .views-row.odd{
+		//padding: 0px 50px;
+		box-shadow: 0 0 3px #666;
+		border-radius: 10px;
+		width: 100%;
+		.views-field.views-field-field-image{
+			padding-top: 10px;
+			@media (min-width: $p-small){
+				width: 100%;
+			}
+			@media (min-width: $p-tablet){
+				width: 25%;
+			}
+			img{
+				width: 7vw;
+				height: 4.25vw;
+				object-fit: cover;
+				@media (min-width: $p-small){
+					width: 100%;
+					height: 100%;
+				}
+				@media (min-width: $p-tablet){
+					width: 7vw;
+					height: 4.25vw;
+				}
+			}
+		}
+		.views-field.views-field-title, .views-field.views-field-body{
+			width: 75%;
+			padding-top: 15px;
+			@media (min-width: $p-small){
+				width: 100%;
+				padding-left: 0;
+			}
+			@media (min-width: $p-tablet){
+				width: 75%;
+			}
+		}
+		.views-field-body{
+			.field-content{
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+.Grid-system{
+	margin: 0 -15px;
+	@media (min-width: $p-small){
+		clear: both;
+	}
+	@media (min-width: $p-large){
+		clear: inherit;
+	}
+	header{
+		padding: 0 15px;
+		h2{
+			margin: 0;
+		}
+	}
+	.views-row{
+		float: left;
+		padding: 0 15px;
+		margin: 10px 0;
+		@media (min-width: $p-small){
+			width: 100%;
+		}
+		@media (min-width: $p-tablet){
+			width: 50%;
+		}
+		.page-title, .user-countries{
+			display: none;
+		}
+		.libaray-image, .views-field-field-dataset-banner, .views-field-field-image{
+			float: left;
+			padding-right: 15px;
+			@media (min-width: $p-small){
+				width: 25%;
+			}
+			@media (min-width: $p-tablet){
+				width: 50%;
+			}
+			img{
+				width: 100%;
+			}
+		}
+		.title, .views-field-title, .date, .authors, .dataset-description, .provider-in-data, .location, .event-city, .event-country, .views-field-name, .views-field-field-dataset-description, .library-tilte, .library-resource-type, .library-description, .views-field-body{
+			float: right;
+			padding: 0 15px;
+			clear: right;
+			@media (min-width: $p-small){
+				width: 75%;
+			}
+			@media (min-width: $p-tablet){
+				width: 50%;
+			}
+		}
+		.library-resource-type{
+			font-size: 13px;
+		}
+		.title, .library-tilte, .views-field-title{
+			overflow: hidden;
+			max-height: 6.5rem;
+			line-height: normal;
+			font-weight: bold;
+			font-size: 18px;
+			span, div{
+				font-size: 18px;
+			}
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		.library-tilte{
+			padding-top: 10px;
+		}
+		.date{
+			font-size: 13px;
+			div{
+				&::before{
+					content: "";
+					padding: 0 3px 3px;
+					background-image: url(../images/icons8-date-50.png);
+					height: 16px;
+					width: 16px;
+					display: inline-block;
+					background-size: cover;
+					margin-right: 5px;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+		.authors{
+			font-size: 13px;
+			>div{
+				display: inline;
+				&::before{
+					content: "";
+					background-image: url(../images/user-icon.png);
+					height: 21px;
+					width: 21px;
+					padding: 0 3px 3px;
+					display: inline-block;
+					background-size: cover;
+					vertical-align: middle;
+				}
+				div{
+					display: inline;
+				}
+			}
+		}
+		.provider-in-data{
+			font-size: 13px;
+		}
+		.dataset-description, .views-field-field-dataset-description, .library-description{
+			font-size: 13px;
+			overflow: hidden;
+			max-height: 6.5rem;
+			color: #666;
+			h1, h2, h3, h4, h5, h6, strong{
+				font-weight: normal;
+				color: #666;
+				font-size: 13px;
+				margin: 0;
+			}
+		}
+	}
+	article.event{
+		border-top: 5px solid #336;
+	}
+	article.blog-post{
+		border-top: 5px solid #396;
+	}
+	article.landlibrary-resource{
+		border-top: 5px solid #906;
+	}
+	article.news{
+		border-top: 5px solid #339;
+	}
+}
+.Standalone-grid-system{
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	gap: 30px;
+	row-gap: 0;
+	@media (min-width: $p-small){
+		display: block;
+	}
+	@media (min-width: $p-large){
+		display: grid;
+	}
+	header{
+		h2{
+			margin: 0;
+		}
+	}
+	.views-row{
+		grid-column: span 2; 
+		@media (min-width: $p-small){
+			float: left;
+			width: 100%;
+		}
+		.page-title, .user-countries{
+			display: none;
+		}
+		.libaray-image{
+			width: 25%;
+			float: left;
+			img{
+				width: 100%;
+			}
+		}
+		.library-tilte, .title, .library-resource-type, .date, .library-description, .location, .event-street, .event-city, .event-country, .dataset-description, .provider-in-data{
+			width: 75%;
+			float: right;
+			padding: 0 15px;
+			clear: right;
+		}
+		.library-tilte, .title{
+			padding-top: 10px;
+			overflow: hidden;
+			max-height: 6.5rem;
+			line-height: normal;
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: inherit;
+			&:hover{
+				text-decoration: underline;
+			}
+			span{
+				font-size: 18px;
+			}
+		}
+		.date{
+			div{
+				&::before{
+					content: "";
+					padding: 0 3px 3px;
+					background-image: url(../images/icons8-date-50.png);
+					height: 16px;
+					width: 16px;
+					display: inline-block;
+					background-size: cover;
+					margin-right: 5px;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+		.library-description, .dataset-description{
+			overflow: hidden;
+			max-height: 6.5rem;
+			color: #666;
+		}
+		.location, .event-street, .event-city, .event-country{
+			font-size: 13px;
+		}
+		.location{
+			display: inline-block;
+			font-size: 13px;
+			div {
+				&::before {
+					content: '';
+					background-image: url(../images/location.jpg);
+					height: 17px;
+					width: 17px;
+					display: inline-block;
+					background-size: cover;
+					vertical-align: middle;
+				}
+				&::after {
+					content: ' , ';
+				}
+			}
+		}
+		.provider-in-data{
+			font-size: 13px;
+			&::before{
+				content: 'Organizers:';
+				font-weight: bold;
+			}
+			>div{
+				display: inline;
+				div{
+					display: inline;
+					&:not(:first-child) {
+						&::before{
+							content: ',';
+						}
+					}
+				}
+			}
+		}
+		.library-resource-type, .date, .library-description, .dataset-description{
+			font-size: 13px;
+		}
+		+ .views-row{
+			grid-column: inherit;
+		}
+	}
+	article.landlibrary-resource{
+		border-top: 5px solid #906;
+	}
+	article.event{
+		border-top: 5px solid #336;
+		.block.libaray-image, .block.title, .block.date, .block.location, .block.event-street, .block.event-city, .block.event-country, .block.dataset-description, .block.provider-in-data{
+			width: 50%;
+		}
+		.block.libaray-image{
+			img{
+				width: 100%;
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
+h4.primary-underline{
+	border-bottom: inherit;
+	margin: 0;
+		padding: 0;
+	div{
+		//font-size: 22px;
+	}
+}
+p:first-child{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	padding-left: 3em;
+}
+.vggt-dataset-grid-system{
+	.views-row.even, .views-row.odd{
+		border-top: 5px solid #093;
+		width: 48%;
+		margin: 10px 10px;
+		img{
+			margin: 0 -15px;
+		}
+	}
+}

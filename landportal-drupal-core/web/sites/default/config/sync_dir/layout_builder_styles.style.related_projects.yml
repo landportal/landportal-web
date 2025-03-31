@@ -1,0 +1,12 @@
+uuid: a5cd911f-4fad-44cd-9f75-7ce29096be7b
+langcode: en
+status: true
+dependencies: {  }
+id: related_projects
+label: 'Related Projects'
+classes: related-projects
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

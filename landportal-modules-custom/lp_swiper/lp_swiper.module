@@ -1,0 +1,187 @@
+<?php
+
+/**
+ * @file
+ * Provides Swiper style options for Views.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lp_swiper_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the gss module.
+    case 'help.page.lp_swiper':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Lp Swiper can be used to create a swiper of any content (not just images) that can appear in a View. Powered by jQuery, it is heavily customizable: you may choose swiper settings for each View you create.') . '</p>';
+      $output .= '<h3>' . t('More Information') . '</h3>';
+      $output .= '<p>' . t('For more information about this module visit the <a href="@link">Lp Swiper</a> module page.', ['@link' => 'https://www.drupal.org/project/lp_swiper']) . '</p>';
+      return $output;
+  }
+}
+
+
+/////////////////////Fida Muhammad Start/////////////////////
+
+
+
+/**
+ * @param $variables
+ */
+
+function lp_swiper_preprocess_page(&$variables)
+{
+  $current_path = \Drupal::service('path.current')->getPath();
+  if(isset($current_path)){
+    $current_path_arr = array();
+    $current_path_arr = explode("/admin/structure/views/view", $current_path);
+    if(isset($current_path_arr[1])){
+      $variables['#attached']['library'][] = 'lp_swiper/swiper_text';
+    }
+  }
+}
+
+
+
+//////////////////////Fida Muhammad End////////////////////
+
+/**
+ * Implements hook_theme().
+ */
+function lp_swiper_theme() {
+  return [
+    'lp_swiper_main_section' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'slides' => NULL,
+        'plugin' => NULL,
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_pager_widget' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'rows' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_pager_fields' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'attributes' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_pager_field_field' => [
+      'variables' => [
+        'view' => NULL,
+        'css_identifier' => NULL,
+        'label' => NULL,
+        'output' => NULL,
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_pager_field_item' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'item' => NULL,
+        'count' => NULL,
+        'location' => NULL,
+        'length' => NULL,
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_pager_bullets' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'attributes' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_controls_widget' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'rows' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_controls_text' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'rows' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_controls_text_previous' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_controls_text_pause' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_controls_text_next' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_slide_counter_widget' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'rows' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+    'lp_swiper_slide_counter' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => [],
+        'location' => NULL,
+        'rows' => [],
+      ],
+      'file' => 'lp_swiper.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Lp Swiper: Swiper.
+ *
+ * As it is a preprocess function, store it with other functions in theme.inc.
+ */
+function template_preprocess_views_view_swiper(&$vars) {
+  \Drupal::moduleHandler()->loadInclude('lp_swiper', 'inc', 'lp_swiper.theme');
+  _lp_swiper_preprocess_views_view_swiper($vars);
+}

@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'Plus d''événements'
+      link_url: /fr/events
+      header:
+        area:
+          content:
+            value: "<h2 class=\"recent-events\"><a href=\"/events\">Recent events </a></h2>\r\n"
+            format: full_html

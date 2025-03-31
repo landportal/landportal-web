@@ -1,0 +1,87 @@
+_core:
+  default_config_hash: zmkyvoZ03LGqfVeB0mtslC-pkWMOrGIU9lJl9_jqUkc
+langcode: en
+uuid: 6e02d7d0-9bb0-4eaf-b145-4183e9f75e01
+popup_enabled: true
+popup_clicking_confirmation: false
+popup_scrolling_confirmation: false
+eu_countries: {  }
+eu_only: false
+eu_only_js: false
+popup_position: true
+fixed_top_position: true
+popup_info:
+  value: "<div class=\"slideshow-container\">\r\n    <div class=\"mySlides\">\r\n        <h3>The Land Portal uses cookies to enhance your experience</h3>\r\n        <p>By clicking any link on this page you are giving your consent for us to set cookies.</p>\r\n    </div>\r\n    <div class=\"mySlides\">\r\n        <h3>The Land Portal is committed to respecting your privacy and your personal data</h3>\r\n        <p>We do not store, sell or share any of your personal information with third parties,</p>\r\n        <p>unless you have explicitly agreed to or we are required to by law.</p>\r\n    </div>\r\n    <div class=\"mySlides\">\r\n        <h3>The Land Portal wants to be completely transparent</h3>\r\n        <p>We want to be completely transparent on what personal data we store and how that is used.</p>\r\n        <p>Check our <a href=\"https://landportal.org/about/privacy-policy\">Privacy Policy</a> for more information.</p>\r\n    </div>\r\n\r\n    <!-- Navigation arrows -->\r\n    <a class=\"prev\" onclick=\"plusSlides(-1)\"><i class=\"fas fa-chevron-left\"></i></a>\r\n    <a class=\"next\" onclick=\"plusSlides(1)\"><i class=\"fas fa-chevron-right\"></i></a>\r\n\r\n    <!-- Navigation dots -->\r\n    <div class=\"dot-container\">\r\n        <span class=\"dot\" onclick=\"currentSlide(1)\"></span>\r\n        <span class=\"dot\" onclick=\"currentSlide(2)\"></span>\r\n        <span class=\"dot\" onclick=\"currentSlide(3)\"></span>\r\n    </div>\r\n</div>"
+  format: full_html
+mobile_popup_info:
+  value: ''
+  format: filtered_html
+popup_info_template: new
+popup_agree_button_message: Accept
+popup_more_info_button_message: 'More info'
+mobile_breakpoint: 768
+popup_agreed_enabled: true
+popup_hide_agreed: true
+disagree_button_label: Decline
+popup_agreed:
+  value: "<p>You are now accepting cookies from Land Portal | Securing Land Rights Through Open Data.</p>\r\n\r\n<p>To update your preferences later, or to learn more about what this means, visit our&nbsp;<a class=\"privacy-policy-tag\" href=\"https://landportal.org/about/privacy-policy\">Cookie Policy</a>&nbsp;page.</p>\r\n"
+  format: full_html
+popup_find_more_button_message: 'More info'
+popup_hide_button_message: Hide
+popup_link: '<front>'
+popup_link_new_window: true
+popup_height: null
+popup_width: 100%
+popup_delay: 1000
+show_more_info: false
+popup_bg_hex: ''
+popup_text_hex: ffffff
+domain: ''
+domains_option: 1
+domains_list: ''
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+exclude_admin_theme: false
+cookie_session: 0
+set_cookie_session_zero_on_disagree: 0
+cookie_lifetime: 100
+use_mobile_message: false
+use_bare_css: false
+use_olivero_css: true
+disagree_do_not_show_popup: false
+reload_page: false
+reload_options: 0
+reload_routes_list: ''
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+method: opt_in
+disabled_javascripts: ''
+automatic_cookies_removal: true
+allowed_cookies: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: "<h2>We use cookies on this site to enhance your user experience</h2>\r\n\r\n<p>You have given your consent for us to set cookies.</p>\r\n"
+  format: full_html
+withdraw_tab_button_label: 'Privacy settings'
+withdraw_action_button_label: 'Withdraw consent'
+withdraw_enabled: false
+withdraw_button_on_info_popup: false
+save_preferences_button_label: 'Save preferences'
+accept_all_categories_button_label: 'Accept all cookies'
+enable_save_preferences_button: true
+domain_all_sites: false
+settings_tab_enabled: false
+containing_element: body
+cookie_policy_version: 1.0.0
+cookie_value_disagreed: '0'
+cookie_value_agreed_show_thank_you: '1'
+cookie_value_agreed: '2'
+accessibility_focus: false
+close_button_action: close_banner
+reject_button_label: ''
+reject_button_enabled: false
+close_button_enabled: false
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html

@@ -1,0 +1,12 @@
+uuid: 00f5a3f2-8c16-44e9-b9fd-21d5ca58ab3e
+langcode: en
+status: true
+dependencies: {  }
+id: concept
+label: concept
+classes: user-concepts
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,24 @@
+uuid: 864edbcc-38ca-40f6-ae1d-aaa357461245
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_license_of_the_resource
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrlicenseoftheresource
+theme: landportal
+region: sidebar
+weight: -15
+provider: null
+plugin: 'facet_block:solr_license_of_the_resource'
+settings:
+  id: 'facet_block:solr_license_of_the_resource'
+  label: 'Filter by license of the resource:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrlicenseoftheresource
+visibility: {  }

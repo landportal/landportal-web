@@ -1,0 +1,12 @@
+uuid: af7e3afb-26da-414a-9f36-6e6afea86ab6
+langcode: en
+status: true
+dependencies: {  }
+id: language_of_news_reported
+label: 'Language of news reported'
+classes: language-of-news-reported
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

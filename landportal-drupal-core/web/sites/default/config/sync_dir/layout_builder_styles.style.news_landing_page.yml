@@ -1,0 +1,12 @@
+uuid: a9daaa02-5767-4de4-ac50-03b3a434541b
+langcode: en
+status: true
+dependencies: {  }
+id: news_landing_page
+label: 'News Landing Page'
+classes: news-landing-page
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

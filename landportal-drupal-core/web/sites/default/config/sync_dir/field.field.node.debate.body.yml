@@ -1,0 +1,23 @@
+uuid: a31fd771-939b-412c-bea8-c1eb081b19d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.debate
+  module:
+    - text
+id: node.debate.body
+field_name: body
+entity_type: node
+bundle: debate
+label: Introduction
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

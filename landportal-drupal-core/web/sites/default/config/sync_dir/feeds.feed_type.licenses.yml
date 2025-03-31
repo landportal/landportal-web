@@ -1,0 +1,86 @@
+uuid: 76a67df1-7f43-4774-95f9-835e4443d97b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.licences.field_acronym
+    - taxonomy.vocabulary.licences
+  module:
+    - taxonomy
+label: Licenses
+id: licenses
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: licences
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  acronym:
+    value: Acronym
+    label: Acronym
+    machine_name: acronym
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_acronym
+    map:
+      value: acronym
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text

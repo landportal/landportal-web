@@ -1,0 +1,29 @@
+uuid: f49f7933-1d57-4b70-8b3e-c7c82852bbfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_type_of_data
+    - taxonomy.vocabulary.datasets
+    - taxonomy.vocabulary.types_of_data
+id: taxonomy_term.datasets.field_type_of_data
+field_name: field_type_of_data
+entity_type: taxonomy_term
+bundle: datasets
+label: 'Type of Data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      types_of_data: types_of_data
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

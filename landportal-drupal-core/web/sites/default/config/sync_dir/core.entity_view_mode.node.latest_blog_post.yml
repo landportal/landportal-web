@@ -1,0 +1,10 @@
+uuid: acda8163-80ae-4201-8a9b-7dbbaae6fdab
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.latest_blog_post
+label: 'Latest Blog Post'
+targetEntityType: node
+cache: true

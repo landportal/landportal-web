@@ -1,0 +1,8 @@
+uuid: 903e245e-16b2-4e93-b020-6d16892655fc
+langcode: en
+status: true
+dependencies: {  }
+id: default_comments
+label: 'Default Comments'
+target_entity_type_id: node
+description: ''

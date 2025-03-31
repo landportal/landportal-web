@@ -1,0 +1,29 @@
+
+.slide {
+  color: clr(text-light);
+}
+
+.swiper-container {
+  // CSS Grid/Flexbox bug size workaround
+  // @see https://github.com/kenwheeler/slick/issues/982
+  // @see https://github.com/elementor/elementor/issues/11269
+  overflow: hidden;
+  min-width: 100%;
+  width: 0;
+
+  .swiper-pagination {
+    border-top: 4px solid clr(community);
+  }
+
+  .swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: 1px solid clr(text);
+
+    &-active {
+      background: clr(community);
+      border-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 3c007e96-235a-4da7-8cdf-369af87a6615
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_pagination
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.field_doc_pagination
+field_name: field_doc_pagination
+entity_type: node
+bundle: landlibrary_resource
+label: Pages
+description: 'Number of pages of the resource or the page range in case of a journal article or book.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

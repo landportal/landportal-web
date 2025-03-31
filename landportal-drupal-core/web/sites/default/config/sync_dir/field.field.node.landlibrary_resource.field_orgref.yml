@@ -1,0 +1,29 @@
+uuid: 663385b9-6c37-41f1-968f-77f188c43cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orgref
+    - node.type.landlibrary_resource
+    - node.type.organization
+id: node.landlibrary_resource.field_orgref
+field_name: field_orgref
+entity_type: node
+bundle: landlibrary_resource
+label: 'Corporate Author(s)'
+description: 'In case an organization or institution is cited as Author of this material, please enter the organization name here. This field is linked to an organizational profile on the Land Portal. Therefore the organization or institution must already exist on the Land Portal. If not, please create the profile on the Land Portal first.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

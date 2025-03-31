@@ -1,0 +1,10 @@
+uuid: 9f6226ed-351c-4788-870f-eac5602ff216
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_ct_importing
+label: blog_post_ct_importing
+description: ''
+source_type: ''
+module: null
+shared_configuration: null

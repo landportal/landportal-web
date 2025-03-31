@@ -1,0 +1,29 @@
+uuid: c4cc9117-f32c-4a92-b449-3753ff64dad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_currency
+    - node.type.project
+    - taxonomy.vocabulary.currency
+id: node.project.field_currency
+field_name: field_currency
+entity_type: node
+bundle: project
+label: 'Currency of project value'
+description: 'If you are not giving the " Project Value ", Please select " -None- " option for Currency select list .'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      currency: currency
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

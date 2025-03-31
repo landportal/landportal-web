@@ -1,0 +1,12 @@
+uuid: 697863d9-027e-4837-8421-77c8f0a84913
+langcode: en
+status: true
+dependencies: {  }
+id: blog_latest_section_outer
+label: 'Blog Latest Section outer'
+classes: blog-latest-section-outer
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

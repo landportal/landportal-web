@@ -1,0 +1,189 @@
+uuid: 4eb94354-48a3-4a45-af58-651080d63e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sdgi.field_indicator
+    - field.field.node.sdgi.field_sdg
+    - node.type.sdgi
+  module:
+    - node
+label: 'SDGi (sdg+indicators) field'
+id: sdgi_sdg_indicators_field
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: sdgi
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  sgd:
+    value: sgd
+    label: sgd
+    machine_name: sgd
+    type: csv
+  indicators:
+    value: indicators
+    label: indicators
+    machine_name: indicators
+    type: csv
+  indicators1:
+    value: indicators1
+    label: indicators1
+    machine_name: indicators1
+    type: csv
+  indicators2:
+    value: indicators2
+    label: indicators2
+    machine_name: indicators2
+    type: csv
+  indicators3:
+    value: indicators3
+    label: indicators3
+    machine_name: indicators3
+    type: csv
+  indicators4:
+    value: indicators4
+    label: indicators4
+    machine_name: indicators4
+    type: csv
+  indicators5:
+    value: indicators5
+    label: indicators5
+    machine_name: indicators5
+    type: csv
+  indicators6:
+    value: indicators6
+    label: indicators6
+    machine_name: indicators6
+    type: csv
+  indicators7:
+    value: indicators7
+    label: indicators7
+    machine_name: indicators7
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_sdg
+    map:
+      target_id: sgd
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_indicator
+    map:
+      target_id: indicators7
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

@@ -1,0 +1,185 @@
+.campaign-ourlandourstory {
+
+	// margin-left: -15%;
+	// margin-right: -15%;
+	@media (min-width: $p-small) {
+		margin-left: -4% !important;
+		margin-right: -4% !important;
+	}
+
+	@media (min-width: $p-tablet) {
+		margin-left: -15% !important;
+		margin-right: -15% !important;
+	}
+
+	.text-long {
+		position: relative;
+
+		p {
+			img {
+				width: 100%;
+			}
+		}
+
+		div {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+
+			img {
+				position: absolute;
+				z-index: 10;
+
+				@media (min-width: $p-small) {
+					top: 20px;
+					left: 15px;
+					transform: scale(0.95);
+				}
+
+				@media (min-width: $p-tablet) {
+					top: 30px;
+					left: unset;
+				}
+			}
+		}
+	}
+
+	.ourlandourstory-breadcrumb {
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 13px;
+		font-style: italic;
+		padding: 15px;
+
+		@media (min-width: $p-small) {
+			width: 100%;
+		}
+
+		@media (min-width: $p-tablet) {
+			width: 80%;
+		}
+
+		a {
+			text-decoration: none;
+			color: #06C;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		span {
+			color: #666;
+
+			&::before {
+				content: "/ ";
+				padding: 0 5px;
+				color: #ccc;
+			}
+		}
+	}
+
+	.skin-default {
+		margin-top: -99px;
+
+		.views-field-body {
+			.jambotron {
+				div {
+					margin-left: auto;
+					margin-right: auto;
+					padding-top: 5%;
+					padding-bottom: 5%;
+
+					@media (min-width: $p-small) {
+						width: 90%;
+					}
+
+					@media (min-width: $p-tablet) {
+						width: 80%;
+					}
+
+					h1 {
+						font-family: "Merriweather Sans", sans-serif;
+						font-size: 40px;
+						font-weight: 700;
+						color: #fff;
+						padding-left: 2%;
+						padding-right: 2%;
+						line-height: 1.1;
+					}
+
+					.hero-subtitle-1 {
+						font-family: "Merriweather Sans", sans-serif;
+						font-size: 22px;
+						font-weight: 800 !important;
+						padding: 10px 15px 0 !important;
+						color: #000;
+						text-align: center;
+					}
+
+					.hero-subtitle-2 {
+						font-family: "Merriweather Sans", sans-serif;
+						font-size: 16px !important;
+						font-weight: 400 !important;
+						margin: 0 auto 80px !important;
+						padding: 0 15px 10px !important;
+						color: #000;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.swiper-paginationb-bullets {
+			padding-top: 0;
+		}
+
+		.swiper-paginationb-bullet {
+			background: #fff;
+			width: 30px;
+			height: 3px;
+			border-radius: inherit;
+			border: inherit;
+		}
+
+		.swiper-paginationb-horizontal {
+			bottom: 80px;
+		}
+	}
+
+	.Related-stories {
+		.views-view-grid {
+			padding-top: 0;
+
+			.views-row {
+				@media (min-width: $p-small) {
+					width: 100% !important;
+					padding: 0 !important;
+				}
+
+				@media (min-width: $p-tablet) {
+					width: 85%;
+					padding: 0.2rem !important;
+				}
+
+				.views-col {
+					@media (min-width: $p-small) {
+						margin: 0 !important;
+						margin-bottom: 50px !important;
+					}
+
+					@media (min-width: $p-tablet) {
+						margin: 10px !important;
+						margin-bottom: 50px !important;
+					}
+
+				}
+			}
+		}
+	}
+}
+.campaign-ourlandourstory.impact{
+	.skin-default{
+		margin-top: 0;
+	}
+}

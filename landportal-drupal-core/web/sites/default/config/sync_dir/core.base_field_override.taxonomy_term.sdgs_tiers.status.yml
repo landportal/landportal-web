@@ -1,0 +1,22 @@
+uuid: 16810f4d-7a1d-479f-8713-5856673ad50d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs_tiers
+id: taxonomy_term.sdgs_tiers.status
+field_name: status
+entity_type: taxonomy_term
+bundle: sdgs_tiers
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

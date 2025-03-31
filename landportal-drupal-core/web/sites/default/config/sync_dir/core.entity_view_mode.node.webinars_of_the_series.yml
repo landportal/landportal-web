@@ -1,0 +1,10 @@
+uuid: b1d300c7-1b46-4f17-9ba7-a149a30da076
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.webinars_of_the_series
+label: 'Webinars of the series'
+targetEntityType: node
+cache: true

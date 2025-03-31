@@ -1,0 +1,242 @@
+uuid: 5b4259a1-019a-4c71-9715-15c036fd7aed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.regions.feeds_item
+    - field.field.taxonomy_term.regions.field_area_code_un_m_49_
+    - field.field.taxonomy_term.regions.field_iso2
+    - field.field.taxonomy_term.regions.field_iso3
+    - taxonomy.vocabulary.regions
+    - views.view.more_on_this_country
+  module:
+    - landportal_country_narrative
+    - landportal_indicators
+    - layout_builder
+    - layout_builder_restrictions
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Hero
+          context_mapping: {  }
+          layout_builder_styles_style: ''
+        components:
+          12f05ecd-e157-4de5-be52-d7cd2019ebf9:
+            uuid: 12f05ecd-e157-4de5-be52-d7cd2019ebf9
+            region: content
+            configuration:
+              id: country_hero
+              label: 'Country hero'
+              label_display: '0'
+              provider: landportal_country_narrative
+              context_mapping: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Indicators
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - background_dark_full
+        components:
+          a48573ab-9bd5-4970-810c-7a5eb60a3581:
+            uuid: a48573ab-9bd5-4970-810c-7a5eb60a3581
+            region: content
+            configuration:
+              id: country_indicators
+              label: 'Country indicators block'
+              label_display: '0'
+              provider: landportal_indicators
+              context_mapping: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Latest news'
+          context_mapping: {  }
+          bg_type: bg_contained
+          full_width_bg: false
+          layout_builder_styles_style: background_light_full
+        components:
+          c22ea92c-7587-4a12-b376-f2dbe8e8db57:
+            uuid: c22ea92c-7587-4a12-b376-f2dbe8e8db57
+            region: content
+            configuration:
+              id: 'views_block:more_on_this_country-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Projects
+          context_mapping: {  }
+          bg_type: bg_contained
+          full_width_bg: false
+          layout_builder_styles_style: background_dark_full
+        components:
+          5f6d015f-a468-4917-982c-cab7b4c96f99:
+            uuid: 5f6d015f-a468-4917-982c-cab7b4c96f99
+            region: content
+            configuration:
+              id: 'views_block:more_on_this_country-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Blockquote
+          context_mapping: {  }
+          bg_type: bg_contained
+          full_width_bg: false
+          layout_builder_styles_style: background_primary_full
+        components:
+          07942919-53d3-48d3-9450-9cbc3bc3bd9a:
+            uuid: 07942919-53d3-48d3-9450-9cbc3bc3bd9a
+            region: content
+            configuration:
+              id: country_narrative_blockquote
+              label: Blockquote
+              label_display: '0'
+              provider: landportal_country_narrative
+              context_mapping: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_threecol
+        layout_settings:
+          label: 'Blog, Events, Library'
+          context_mapping: {  }
+          bg_type: bg_contained
+          full_width_bg: false
+          layout_builder_styles_style: background_light_full
+        components:
+          2cc06b8a-f024-4ece-9f2a-3de75a954415:
+            uuid: 2cc06b8a-f024-4ece-9f2a-3de75a954415
+            region: first
+            configuration:
+              id: 'views_block:more_on_this_country-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          629de5ce-100d-4b49-852a-d391fc6c6937:
+            uuid: 629de5ce-100d-4b49-852a-d391fc6c6937
+            region: second
+            configuration:
+              id: 'views_block:more_on_this_country-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+          b0aa4f32-850f-4661-8ad1-235308d8f327:
+            uuid: b0aa4f32-850f-4661-8ad1-235308d8f327
+            region: third
+            configuration:
+              id: 'views_block:more_on_this_country-block_5'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Organisations
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - organization_slider
+        components:
+          db58d96f-96ef-470c-a8b1-0e98664c6468:
+            uuid: db58d96f-96ef-470c-a8b1-0e98664c6468
+            region: content
+            configuration:
+              id: 'views_block:more_on_this_country-block_6'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - section_onecol
+        - section_threecol
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.regions.default
+targetEntityType: taxonomy_term
+bundle: regions
+mode: default
+content: {  }
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_area_code_un_m_49_: true
+  field_iso2: true
+  field_iso3: true
+  langcode: true
+  search_api_excerpt: true

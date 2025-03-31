@@ -1,0 +1,19 @@
+uuid: bcafe76d-2aab-43a6-84ae-fec4d4e33a03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.location_name
+    - node.type.organization
+id: node.organization.location_name
+field_name: location_name
+entity_type: node
+bundle: organization
+label: 'Location name'
+description: 'e.g. a place of business, venue, meeting point'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

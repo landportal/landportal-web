@@ -1,0 +1,305 @@
+uuid: ddc0ec41-a91f-40c6-9e95-542993dea75b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.event.status
+    - field.field.node.event.body
+    - field.field.node.event.city
+    - field.field.node.event.country
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_image
+    - field.field.node.event.field_type_of_event
+    - field.field.node.event.location_name
+    - field.field.node.event.postal_code
+    - field.field.node.event.promoted_to_news_events_landing_
+    - field.field.node.event.state_province
+    - field.field.node.event.street
+    - node.type.event
+  module:
+    - node
+label: 'Events Single Fields Import'
+id: events_single_fields_import
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: event
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  city:
+    value: city
+    label: city
+    machine_name: city
+    type: csv
+  country:
+    value: country
+    label: country
+    machine_name: country
+    type: csv
+  state_province:
+    value: State/Province
+    label: State/Province
+    machine_name: state_province
+    type: csv
+  street:
+    value: Street
+    label: Street
+    machine_name: street
+    type: csv
+  location_name:
+    value: 'location name'
+    label: 'location name'
+    machine_name: location_name
+    type: csv
+  postal_code:
+    value: 'Postal code'
+    label: 'Postal code'
+    machine_name: postal_code
+    type: csv
+  post_date:
+    value: 'Post date'
+    label: 'Post date'
+    machine_name: post_date
+    type: csv
+  language:
+    value: Language
+    label: Language
+    machine_name: language
+    type: csv
+  published_status:
+    value: 'Published status'
+    label: 'Published status'
+    machine_name: published_status
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  start_date:
+    value: start_date
+    label: start_date
+    machine_name: start_date
+    type: csv
+  end_date:
+    value: end_date
+    label: end_date
+    machine_name: end_date
+    type: csv
+  summary:
+    value: summary
+    label: summary
+    machine_name: summary
+    type: csv
+  contact_details:
+    value: 'Contact details'
+    label: 'Contact details'
+    machine_name: contact_details
+    type: csv
+  promoted_to_news_events_landing_page:
+    value: 'Promoted to News & Events landing page'
+    label: 'Promoted to News & Events landing page'
+    machine_name: promoted_to_news_events_landing_page
+    type: csv
+  type_of_event:
+    value: 'Type of event'
+    label: 'Type of event'
+    machine_name: type_of_event
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: city
+    map:
+      value: city
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: country
+    map:
+      value: country
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: state_province
+    map:
+      value: state_province
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: street
+    map:
+      value: street
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: location_name
+    map:
+      value: location_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: postal_code
+    map:
+      value: postal_code
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: published_status
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: image_title
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: field_date
+    map:
+      value: start_date
+      end_value: end_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_contact
+    map:
+      value: contact_details
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: promoted_to_news_events_landing_
+    map:
+      value: promoted_to_news_events_landing_page
+    settings:
+      language: null
+  -
+    target: field_type_of_event
+    map:
+      target_id: type_of_event
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false

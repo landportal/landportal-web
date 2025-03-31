@@ -1,0 +1,29 @@
+uuid: f3283af5-21dd-4206-9c28-334b947cb55f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_provider
+    - node.type.landlibrary_resource
+    - node.type.organization
+id: node.landlibrary_resource.field_doc_provider
+field_name: field_doc_provider
+entity_type: node
+bundle: landlibrary_resource
+label: 'Data Provider'
+description: 'The organization or aggregator that makes the resource available. Leave this field empty unless you have a specific agreement with the Land Portal Foundation to add many resources to the Library.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

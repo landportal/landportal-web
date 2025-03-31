@@ -1,0 +1,7 @@
+landportal_related_blocks.viewblocks_autocomplete:
+  path: '/autocomplete/viewblocks'
+  defaults:
+    _controller: '\Drupal\landportal_related_blocks\Controller\LandportalRelatedBlocksController::blockAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'

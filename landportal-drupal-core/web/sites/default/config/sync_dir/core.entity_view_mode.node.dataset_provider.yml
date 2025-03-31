@@ -1,0 +1,10 @@
+uuid: 9b81e83c-3c08-44f7-992f-f3cb8ab0493f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.dataset_provider
+label: 'Dataset Provider'
+targetEntityType: node
+cache: true

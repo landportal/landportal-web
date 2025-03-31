@@ -1,0 +1,58 @@
+# The 'type' should be "label" for short meta tags and "text" for ones which
+# could get longer, especially ones which use a textarea field instead of a
+# textfield.
+
+metatag.metatag_tag.schema_creativework_about:
+  type: text
+  label: 'about'
+metatag.metatag_tag.schema_creativework_author:
+  type: text
+  label: 'author'
+metatag.metatag_tag.schema_creativework_date_modified:
+  type: text
+  label: 'dateModified'
+metatag.metatag_tag.schema_creativework_date_published:
+  type: text
+  label: 'datePublished'
+metatag.metatag_tag.schema_creativework_description:
+  type: text
+  label: 'description'
+metatag.metatag_tag.schema_creativework_has_part:
+  type: text
+  label: 'hasPart'
+metatag.metatag_tag.schema_creativework_headline:
+  type: text
+  label: 'headline'
+metatag.metatag_tag.schema_creativework_id:
+  type: text
+  label: '@id'
+metatag.metatag_tag.schema_creativework_image:
+  type: text
+  label: 'image'
+metatag.metatag_tag.schema_creativework_is_accessible_for_free:
+  type: text
+  label: 'isAccessibleForFree'
+metatag.metatag_tag.schema_creativework_main_entity_of_page:
+  type: text
+  label: 'mainEntityOfPage'
+metatag.metatag_tag.schema_creativework_name:
+  type: text
+  label: 'name'
+metatag.metatag_tag.schema_creativework_publisher:
+  type: text
+  label: 'publisher'
+metatag.metatag_tag.schema_creativework_type:
+  type: string
+  label: '@type'
+metatag.metatag_tag.schema_creativework_aggregate_rating:
+  type: text
+  label: 'aggregateRating'
+metatag.metatag_tag.schema_creativework_review:
+  type: text
+  label: 'review'
+metatag.metatag_tag.schema_creativework_speakable:
+  type: text
+  label: 'speakable'
+metatag.metatag_tag.schema_creativework_learningresourcetype:
+  type: text
+  label: 'learningresourcetype'

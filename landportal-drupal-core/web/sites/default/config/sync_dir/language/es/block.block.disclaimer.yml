@@ -1,0 +1,5 @@
+settings:
+  label: 'Descargo de responsabilidad'
+  text:
+    value: "<p>Los datos mostrados en el Land Portal son proporcionados por terceros indicados como fuente de datos o como proveedor de datos. El equipo del Land Portal trabaja constantemente para garantizar el mayor nivel posible de calidad y precisión de los datos, aunque éstos son, por su naturaleza, aproximados y contendrán algunas inexactitudes. Los datos pueden contener errores introducidos por el proveedor o proveedores de datos y/o por el equipo de Land Portal. Además, esta página permite comparar datos de diferentes fuentes, pero no todos los indicadores son necesariamente comparables desde el punto de vista estadístico. La Fundación Land Portal (A) renuncia expresamente a la exactitud, adecuación o integridad de los datos y (B) no será responsable de los errores, omisiones u otros defectos, retrasos o interrupciones de dichos datos, ni de las acciones realizadas en base a ellos. Ni la Fundación Land Portal ni ninguno de sus proveedores de datos serán responsables de ningún daño relacionado con el uso que usted haga de los datos aquí proporcionados.</p>\r\n"
+    format: filtered_html

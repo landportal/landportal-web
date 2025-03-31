@@ -1,0 +1,23 @@
+uuid: 444c8d38-1ed2-42db-a1b0-fe85a01dafe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.layer
+  module:
+    - text
+id: taxonomy_term.layer.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: layer
+label: 'Layer Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

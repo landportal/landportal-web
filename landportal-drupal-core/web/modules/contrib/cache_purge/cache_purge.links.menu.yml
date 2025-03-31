@@ -1,0 +1,5 @@
+cache_purge.settings:
+  title: 'Cache Purge Settings'
+  parent: system.admin_config_system
+  description: 'Configure cache purge size limit.'
+  route_name: cache_purge.settings

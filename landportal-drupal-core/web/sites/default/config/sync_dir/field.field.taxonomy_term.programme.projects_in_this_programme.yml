@@ -1,0 +1,29 @@
+uuid: 6a97ab79-8c49-41ef-8c75-198c9a33afc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.projects_in_this_programme
+    - node.type.project
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.projects_in_this_programme
+field_name: projects_in_this_programme
+entity_type: taxonomy_term
+bundle: programme
+label: 'Projects in this programme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

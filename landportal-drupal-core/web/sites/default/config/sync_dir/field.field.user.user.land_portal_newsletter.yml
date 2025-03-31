@@ -1,0 +1,38 @@
+uuid: dcc5d232-262a-4ba2-8aab-913f9827f899
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.land_portal_newsletter
+  module:
+    - mailchimp_lists
+    - user
+id: user.user.land_portal_newsletter
+field_name: land_portal_newsletter
+entity_type: user
+bundle: user
+label: 'Land Portal Newsletter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    subscribe: true
+    interest_groups: null
+    allow_unsubscribe: true
+default_value_callback: ''
+settings:
+  subscribe_checkbox_label: Subscribe
+  show_interest_groups: false
+  hide_subscribe_checkbox: false
+  interest_groups_hidden: false
+  interest_groups_label: 'Interest Groups'
+  merge_fields:
+    EMAIL: mail
+    ADDRESS: ''
+    BIRTHDAY: ''
+    FNAME: ''
+    LNAME: ''
+    PHONE: ''
+  unsubscribe_on_delete: false
+field_type: mailchimp_lists_subscription

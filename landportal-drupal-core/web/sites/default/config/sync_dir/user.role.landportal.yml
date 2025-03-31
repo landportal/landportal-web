@@ -1,0 +1,175 @@
+uuid: 72a3ea5f-775e-4548-a490-64822a5983ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+    - node.type.country_narrative
+    - node.type.dataset
+    - node.type.debate
+    - node.type.event
+    - node.type.issues
+    - node.type.landing_page
+    - node.type.landlibrary_resource
+    - node.type.news
+    - node.type.organization
+    - node.type.programme_narrative
+    - node.type.project
+    - node.type.sdgi
+    - node.type.slider
+    - node.type.sliders
+    - node.type.webinar_series
+    - taxonomy.vocabulary.concepts
+    - taxonomy.vocabulary.currency
+    - taxonomy.vocabulary.datasets
+    - taxonomy.vocabulary.debate_status
+    - taxonomy.vocabulary.indicators
+    - taxonomy.vocabulary.languages
+    - taxonomy.vocabulary.licences
+    - taxonomy.vocabulary.observations
+    - taxonomy.vocabulary.organization_relation
+    - taxonomy.vocabulary.organization_types
+    - taxonomy.vocabulary.programme
+    - taxonomy.vocabulary.regions
+    - taxonomy.vocabulary.sdgs
+    - taxonomy.vocabulary.theme
+  module:
+    - block_content
+    - captcha
+    - comment
+    - content_translation
+    - contextual
+    - custom_pub
+    - eu_cookie_compliance
+    - file
+    - filter
+    - google_analytics
+    - mailchimp
+    - mailchimp_campaign
+    - mailchimp_events
+    - mailchimp_signup
+    - media
+    - menu_link_content
+    - metatag
+    - node
+    - path
+    - rest
+    - system
+    - taxonomy
+    - webform
+id: landportal
+label: Landportal
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access any webform configuration'
+  - 'access comments'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access mailchimp signup pages'
+  - 'access own webform configuration'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'add JS snippets for google analytics'
+  - 'administer account settings'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer content translation'
+  - 'administer custom publishing options'
+  - 'administer filters'
+  - 'administer google analytics'
+  - 'administer mailchimp'
+  - 'administer mailchimp campaigns'
+  - 'administer mailchimp event entities'
+  - 'administer mailchimp signup entities'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer rest resources'
+  - 'administer users'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'bypass node access'
+  - 'can set node publish state to new_work'
+  - 'can set node publish state to promote_to_announcements'
+  - 'can set node publish state to promote_to_insights'
+  - 'can set node publish state to promoted_to_thematic_page'
+  - 'create content translations'
+  - 'create dataset content'
+  - 'create debate content'
+  - 'create issues content'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create organization content'
+  - 'create project content'
+  - 'create url aliases'
+  - 'create webform'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete any news content'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete content translations'
+  - 'delete media'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'delete terms in organization_relation'
+  - 'display eu cookie compliance popup'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit terms in currency'
+  - 'edit terms in datasets'
+  - 'edit terms in indicators'
+  - 'edit terms in languages'
+  - 'edit terms in licences'
+  - 'edit terms in observations'
+  - 'edit terms in organization_relation'
+  - 'edit terms in organization_types'
+  - 'edit terms in sdgs'
+  - 'edit webform assets'
+  - 'edit webform source'
+  - 'edit webform twig'
+  - 'edit webform variants'
+  - 'link to any page'
+  - 'skip CAPTCHA'
+  - 'skip comment approval'
+  - 'translate any entity'
+  - 'translate block_content'
+  - 'translate blog_post node'
+  - 'translate concepts taxonomy_term'
+  - 'translate country_narrative node'
+  - 'translate dataset node'
+  - 'translate debate node'
+  - 'translate debate_status taxonomy_term'
+  - 'translate editable entities'
+  - 'translate event node'
+  - 'translate issues node'
+  - 'translate landing_page node'
+  - 'translate landlibrary_resource node'
+  - 'translate menu_link_content'
+  - 'translate news node'
+  - 'translate organization node'
+  - 'translate programme taxonomy_term'
+  - 'translate programme_narrative node'
+  - 'translate project node'
+  - 'translate regions taxonomy_term'
+  - 'translate sdgi node'
+  - 'translate slider node'
+  - 'translate sliders node'
+  - 'translate theme taxonomy_term'
+  - 'translate webinar_series node'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'view any webform submission'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view the administration theme'

@@ -1,0 +1,137 @@
+uuid: e545bea1-8c53-4b35-8e47-1848da569e47
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.licences.description
+    - core.base_field_override.taxonomy_term.licences.name
+    - field.field.taxonomy_term.licences.feeds_item
+    - field.field.taxonomy_term.licences.field_acronym
+    - field.field.taxonomy_term.licences.synonyms_synonyms
+    - taxonomy.vocabulary.licences
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3fc1afe4-a3eb-4009-b959-eedf1b9c0860:
+            uuid: 3fc1afe4-a3eb-4009-b959-eedf1b9c0860
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:licences:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          f6d3a145-48c3-4fab-9f8b-0ea76a24ac1c:
+            uuid: f6d3a145-48c3-4fab-9f8b-0ea76a24ac1c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:licences:field_acronym'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          68f74565-dd57-4594-90a7-4903bbb97718:
+            uuid: 68f74565-dd57-4594-90a7-4903bbb97718
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:licences:synonyms_synonyms'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          519e5ce4-7523-4344-96f4-51bd7674442d:
+            uuid: 519e5ce4-7523-4344-96f4-51bd7674442d
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:licences:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.licences.default
+targetEntityType: taxonomy_term
+bundle: licences
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_acronym:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  synonyms_synonyms:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

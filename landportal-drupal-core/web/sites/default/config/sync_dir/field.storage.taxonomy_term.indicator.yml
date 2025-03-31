@@ -1,0 +1,19 @@
+uuid: fc5ca12b-008c-4e8e-8c89-93059bf757a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - lp_issue_indicator
+    - taxonomy
+id: taxonomy_term.indicator
+field_name: indicator
+entity_type: taxonomy_term
+type: Indicator
+settings: {  }
+module: lp_issue_indicator
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

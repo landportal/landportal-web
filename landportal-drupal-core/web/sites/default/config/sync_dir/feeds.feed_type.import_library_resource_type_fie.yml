@@ -1,0 +1,146 @@
+uuid: 15ae3fa4-50ef-470a-b298-1d277fe8a737
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_type
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library (Resource type) field'
+id: import_library_resource_type_fie
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resource_title:
+    value: Resource_title
+    label: Resource_title
+    machine_name: resource_title
+    type: csv
+  field_doc_type:
+    value: field_doc_type
+    label: field_doc_type
+    machine_name: field_doc_type
+    type: csv
+  field_doc_type1:
+    value: field_doc_type1
+    label: field_doc_type1
+    machine_name: field_doc_type1
+    type: csv
+  field_doc_type2:
+    value: field_doc_type2
+    label: field_doc_type2
+    machine_name: field_doc_type2
+    type: csv
+  field_doc_type3:
+    value: field_doc_type3
+    label: field_doc_type3
+    machine_name: field_doc_type3
+    type: csv
+  field_doc_type4:
+    value: field_doc_type4
+    label: field_doc_type4
+    machine_name: field_doc_type4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_type
+    map:
+      target_id: field_doc_type
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_type
+    map:
+      target_id: field_doc_type1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_type
+    map:
+      target_id: field_doc_type2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_type
+    map:
+      target_id: field_doc_type3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_type
+    map:
+      target_id: field_doc_type4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

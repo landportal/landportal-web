@@ -1,0 +1,12 @@
+uuid: f5cdb422-30f3-4fdf-a482-bd8d6f07ce83
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_location_name
+label: 'User Upper Section Location Name'
+classes: user-upper-section-location-name
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

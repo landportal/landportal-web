@@ -1,0 +1,18 @@
+uuid: fb08c196-5e50-435e-ac98-073dd28b6bd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Webinar Series'
+type: webinar_series
+description: 'A series of webinars that will occur online along a given time. This element will not show on the events'' calendars or listings.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

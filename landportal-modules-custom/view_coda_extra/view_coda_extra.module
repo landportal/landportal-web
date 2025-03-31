@@ -1,0 +1,139 @@
+<?php
+
+use Drupal\Core\Form\FormState;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
+function view_coda_extra_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+{
+
+   $org_form_id = \Drupal::request()->get('form_id');
+   if (($org_form_id == 'taxonomy_term_indicators_form') || ($org_form_id == 'node_dataset_edit_form')) {
+      $full_indicator = $entity->get('field_indicators')->getValue();
+      //\Drupal::logger('view_coda_extra_entity_presave')->notice(serialize($full_indicator));
+      $full_updated_indicator = $full_indicator;
+      foreach ($full_indicator as $key => $value) {
+         if ($value['indicator'] != "") {
+            // code...
+            $coda_indicators = "";
+            $coda_years = "";
+            $coda_hide_chart_title = "";
+            $coda_map_legend = "";
+            $coda_map_nav = "";
+            $year_field = "";
+            if ($value['year_field'] != "") {
+               $year_field = ',"year": "' . $value['year_field'] . '"';
+            }
+
+            if ($value['show_indicators'] == true) {
+               $coda_indicators = ',"loadIndicators":true';
+            }
+            if ($value['show_years'] == true) {
+               $coda_years = ',"loadYears":true';
+            }
+            if ($value['hide_chart_title'] == true) {
+               $coda_hide_chart_title = ',"hideTitle":true';
+            }
+            if ($value['show_legend'] == true) {
+               $coda_map_legend = '"legend":true,';
+            }
+            if ($value['show_nav'] == true) {
+               $coda_map_nav = '"nav":true,';
+            }
+            $full_updated_indicator[$key]['textarea'] = '{"map":{' . $coda_map_legend . $coda_map_nav . '"click":"click"}' . $coda_indicators . $coda_years . $year_field . $coda_hide_chart_title . '}';
+         }
+      }
+      $entity->get('field_indicators')->setValue($full_updated_indicator);
+   }
+}
+
+function view_coda_extra_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+   if (($form_id == 'taxonomy_term_indicators_form') || ($form_id == 'taxonomy_term_datasets_form') || ($form_id == 'node_dataset_edit_form') || ($form_id == 'node_sdgi_edit_form')) {
+      // $form['#validate'][] = 'view_coda_extra_form_validate';
+      $indicators_widget = $form['field_indicators']['widget'];
+      foreach ($indicators_widget as $key => $value) {
+         if (is_numeric($key)) {
+            $indicators_checkbox_arr = array();
+            $years_checkbox_arr = array();
+            $hide_chart_title_checkbox_arr = array();
+            $legend_checkbox_arr = array();
+            $nav_checkbox_arr = array();
+            $selected_year = "";
+            if ($form['field_indicators']['widget'][$key]['textarea']['#default_value'] != "") {
+               $coda_str = $form['field_indicators']['widget'][$key]['textarea']['#default_value'];
+               $coda_arr = json_decode($coda_str);
+               \Drupal::logger('view_coda_extra_form_alter')->notice(serialize($coda_arr));
+               if ($coda_arr->loadIndicators == true) {
+                  $indicators_checkbox_arr = array('checked' => 'checked');
+               }
+               if ($coda_arr->loadYears == true) {
+                  $years_checkbox_arr = array('checked' => 'checked');
+               }
+               if (($coda_arr->hideTitle == true) || ($coda_arr->hideTitle == 1)) {
+                  $hide_chart_title_checkbox_arr = array('checked' => 'checked');
+               }
+               if (isset($coda_arr->year)) {
+                  if (is_numeric($coda_arr->year)) {
+                     $selected_year = $coda_arr->year;
+                  }
+               }
+               if (($coda_arr->map->legend == true) || ($coda_arr->map->legend == "legend") || ($coda_arr->map->legend == 1)) {
+                  $legend_checkbox_arr = array('checked' => 'checked');
+               }
+               if (($coda_arr->map->nav == true) || ($coda_arr->map->nav == "nav") || ($coda_arr->map->nav == 1)) {
+                  $nav_checkbox_arr = array('checked' => 'checked');
+               }
+               $form['field_indicators']['widget'][$key]['textarea']['#disabled'] = true;
+               $form['field_indicators']['widget'][$key]['show_indicators'] = array(
+                  '#prefix' => '<h6>MAP Options</h6>',
+                  '#type' => 'checkbox',
+                  '#title' => t('Load available indicators'),
+                  '#weight' => 1001,
+                  '#attributes' => $indicators_checkbox_arr,
+               );
+               $form['field_indicators']['widget'][$key]['show_years'] = array(
+                  '#type' => 'checkbox',
+                  '#title' => t('Load available years'),
+                  '#weight' => 1001,
+                  '#attributes' => $years_checkbox_arr,
+               );
+               $form['field_indicators']['widget'][$key]['hide_chart_title'] = array(
+                  '#type' => 'checkbox',
+                  '#title' => t('Hide chart title'),
+                  '#weight' => 1001,
+                  '#attributes' => $hide_chart_title_checkbox_arr,
+               );
+               $form['field_indicators']['widget'][$key]['show_legend'] = array(
+                  '#prefix' => '<h6>MAP Params</h6>',
+                  '#type' => 'checkbox',
+                  '#title' => t('Show legend'),
+                  '#weight' => 1001,
+                  '#attributes' => $legend_checkbox_arr,
+               );
+               $form['field_indicators']['widget'][$key]['show_nav'] = array(
+                  '#type' => 'checkbox',
+                  '#title' => t('Allow zoom (in/out)'),
+                  '#weight' => 1001,
+                  '#attributes' => $nav_checkbox_arr,
+               );
+               $form['field_indicators']['widget'][$key]['year_field'] = array(
+                  '#type' => 'number',
+                  '#title' => t('Year'),
+                  '#weight' => 1001,
+                  '#default_value' => $selected_year,
+               );
+            }
+         }
+      }
+   }
+}
+
+
+
+function view_coda_extra_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+   //\Drupal::logger('view_coda_extra_form_validate')->notice(serialize($form['field_indicators']['widget'][0]['textarea']['#value']));
+   // $form['field_indicators']['widget'][0]['textarea']
+}

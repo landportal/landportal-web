@@ -1,0 +1,12 @@
+uuid: 46a06a94-4cf0-43dd-a5b2-5aac66438387
+langcode: en
+status: true
+dependencies: {  }
+id: campaign_author_and_date
+label: 'campaign author and date'
+classes: campaign-author-and-date
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

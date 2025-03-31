@@ -1,0 +1,29 @@
+uuid: 433e5a7a-a636-4ee0-8cb1-ae6331ea6c26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_doc_licencing
+    - taxonomy.vocabulary.datasets
+    - taxonomy.vocabulary.licences
+id: taxonomy_term.datasets.field_doc_licencing
+field_name: field_doc_licencing
+entity_type: taxonomy_term
+bundle: datasets
+label: License
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licences: licences
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 5770e606-4d8a-4d7e-b40c-f7e7ecd5c106
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.promoted_to_news_events_landing_
+    - node.type.webinar_series
+  module:
+    - options
+id: node.webinar_series.promoted_to_news_events_landing_
+field_name: promoted_to_news_events_landing_
+entity_type: node
+bundle: webinar_series
+label: 'Promoted to News & Events landing page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'No'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

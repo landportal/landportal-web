@@ -1,0 +1,37 @@
+uuid: 33c6c911-c2b2-4440-9d8c-cfa8b4652a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.indicator
+    - taxonomy.vocabulary.theme
+  module:
+    - lp_issue_indicator
+id: taxonomy_term.theme.indicator
+field_name: indicator
+entity_type: taxonomy_term
+bundle: theme
+label: Indicator
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    label: ''
+    hover: ''
+    link: ''
+  -
+    label: ''
+    hover: ''
+    link: ''
+  -
+    label: ''
+    hover: ''
+    link: ''
+  -
+    label: ''
+    hover: ''
+    link: ''
+default_value_callback: ''
+settings: {  }
+field_type: Indicator

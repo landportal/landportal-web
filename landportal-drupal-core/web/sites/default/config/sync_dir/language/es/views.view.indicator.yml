@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"indicators__heading\">{{ 'Indicadores relevantes'|t }}: {{ name }} <a class=\"link\" href=\"https://landportal.org/book/indicators\">{{ 'Browse all'|t }}</a></div>\r\n"
+            format: full_html

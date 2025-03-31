@@ -1,0 +1,22 @@
+uuid: c4438bd9-1c39-4847-a8a1-c0594b766d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.currency
+id: taxonomy_term.currency.status
+field_name: status
+entity_type: taxonomy_term
+bundle: currency
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

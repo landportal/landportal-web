@@ -1,0 +1,21 @@
+uuid: da090393-982c-490a-ab9a-51c05b0339f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_milestone
+    - node.type.landing_page
+  module:
+    - field_milestone
+id: node.landing_page.field_milestone
+field_name: field_milestone
+entity_type: node
+bundle: landing_page
+label: 'key dates'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: Milestone

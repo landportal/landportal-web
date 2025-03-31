@@ -1,0 +1,14 @@
+uuid: e900a11c-8299-4495-aff7-38e3796b42d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs_tiers
+  module:
+    - taxonomy
+id: taxonomy_term.sdgs_tiers
+targetEntityType: taxonomy_term
+bundle: sdgs_tiers
+types:
+  - ''
+fieldMappings: {  }

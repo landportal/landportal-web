@@ -1,0 +1,12 @@
+uuid: bb3c9672-642d-40e1-92fe-1c19781ef7e0
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_city
+label: 'Latest Events City'
+classes: latest-events-city
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

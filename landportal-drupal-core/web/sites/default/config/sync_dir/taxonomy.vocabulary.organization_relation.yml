@@ -1,0 +1,8 @@
+uuid: 72c7d1ef-b82b-4cb3-910b-0609b458494b
+langcode: und
+status: true
+dependencies: {  }
+name: 'LandPortal relation to organization'
+vid: organization_relation
+description: ''
+weight: 0

@@ -1,0 +1,16 @@
+landportal_rdf.my_page:
+  path: "/node/{node}/rdf"
+  defaults:
+    _controller: '\Drupal\landportal_rdf\Controller\LandportalRdfController::myPage'
+    _title: "My first page in Drupal 9"
+  requirements:
+    _permission: "access content"
+
+landportal_rdf.my_pagetest:
+  path: "/taxonomy_term/{taxonomy_term}/rdf"
+  defaults:
+    _controller: '\Drupal\landportal_rdf\Controller\TaxonomyLandportalRdfController::myPagetest'
+    _title: "Taxonomy_term Controller"
+  requirements:
+    _permission: "access content"
+

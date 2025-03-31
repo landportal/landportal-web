@@ -1,0 +1,21 @@
+uuid: 9b5ffdf6-2d13-4639-8b9c-007b5b72d715
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.street
+field_name: street
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

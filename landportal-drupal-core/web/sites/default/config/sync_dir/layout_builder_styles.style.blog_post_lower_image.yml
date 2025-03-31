@@ -1,0 +1,12 @@
+uuid: 9f87785e-1bb8-475f-84df-be0a8addd6b9
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_lower_image
+label: 'Blog Post Lower Image'
+classes: blog-post-lower-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

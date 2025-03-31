@@ -1,0 +1,20 @@
+uuid: b57aa9fe-1445-4985-a305-20930637ed23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.project_regions
+field_name: project_regions
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

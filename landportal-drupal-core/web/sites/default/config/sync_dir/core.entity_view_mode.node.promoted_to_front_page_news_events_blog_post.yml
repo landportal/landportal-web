@@ -1,0 +1,10 @@
+uuid: c64aac95-8f28-4b0f-a174-02a5552b3ae8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.promoted_to_front_page_news_events_blog_post
+label: 'Promoted To Front Page News,Events,Blog Post'
+targetEntityType: node
+cache: true

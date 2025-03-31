@@ -1,0 +1,19 @@
+uuid: b9ba6d9c-71e1-4c37-a567-f04e322e59a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_iso3
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.regions.field_iso3
+field_name: field_iso3
+entity_type: taxonomy_term
+bundle: regions
+label: ISO3
+description: '3 characters code for the area (country). See the latest list of codes in the <a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en">Country Codes Collection from ISO</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

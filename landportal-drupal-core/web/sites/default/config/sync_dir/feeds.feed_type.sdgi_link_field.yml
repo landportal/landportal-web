@@ -1,0 +1,215 @@
+uuid: aa5a792c-6ee9-4a2c-abc9-3fdc646353b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sdgi.field_link
+    - node.type.sdgi
+  module:
+    - node
+label: 'SDGi(link) field'
+id: sdgi_link_field
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: sdgi
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  link_url:
+    value: link_url
+    label: link_url
+    machine_name: link_url
+    type: csv
+  link_title:
+    value: link_title
+    label: link_title
+    machine_name: link_title
+    type: csv
+  link_url1:
+    value: link_url1
+    label: link_url1
+    machine_name: link_url1
+    type: csv
+  link_title1:
+    value: link_title1
+    label: link_title1
+    machine_name: link_title1
+    type: csv
+  link_url2:
+    value: link_url2
+    label: link_url2
+    machine_name: link_url2
+    type: csv
+  link_url3:
+    value: link_url3
+    label: link_url3
+    machine_name: link_url3
+    type: csv
+  link_title2:
+    value: link_title2
+    label: link_title2
+    machine_name: link_title2
+    type: csv
+  link_title3:
+    value: link_title3
+    label: link_title3
+    machine_name: link_title3
+    type: csv
+  link_url4:
+    value: link_url4
+    label: link_url4
+    machine_name: link_url4
+    type: csv
+  link_url5:
+    value: link_url5
+    label: link_url5
+    machine_name: link_url5
+    type: csv
+  link_url6:
+    value: link_url6
+    label: link_url6
+    machine_name: link_url6
+    type: csv
+  link_url7:
+    value: link_url7
+    label: link_url7
+    machine_name: link_url7
+    type: csv
+  link_url8:
+    value: link_url8
+    label: link_url8
+    machine_name: link_url8
+    type: csv
+  link_title4:
+    value: link_title4
+    label: link_title4
+    machine_name: link_title4
+    type: csv
+  link_title5:
+    value: link_title5
+    label: link_title5
+    machine_name: link_title5
+    type: csv
+  link_title6:
+    value: link_title6
+    label: link_title6
+    machine_name: link_title6
+    type: csv
+  link_title7:
+    value: link_title7
+    label: link_title7
+    machine_name: link_title7
+    type: csv
+  link_title8:
+    value: link_title8
+    label: link_title8
+    machine_name: link_title8
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_link
+    map:
+      uri: link_url
+      title: link_title
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url1
+      title: link_title1
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url2
+      title: link_title2
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url3
+      title: link_title3
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url4
+      title: link_title4
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url5
+      title: link_title5
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url6
+      title: link_title6
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url7
+      title: link_title7
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: link_url8
+      title: link_title8
+    settings:
+      language: null

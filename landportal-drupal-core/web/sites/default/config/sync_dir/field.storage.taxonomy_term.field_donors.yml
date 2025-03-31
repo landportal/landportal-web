@@ -1,0 +1,20 @@
+uuid: 24887649-b51a-4315-9222-16bdca747e09
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: taxonomy_term.field_donors
+field_name: field_donors
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

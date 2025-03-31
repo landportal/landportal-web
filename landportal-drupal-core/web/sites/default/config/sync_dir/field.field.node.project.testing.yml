@@ -1,0 +1,19 @@
+uuid: ea94f88d-5bab-4afc-8b4d-83fc99015ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.testing
+    - node.type.project
+id: node.project.testing
+field_name: testing
+entity_type: node
+bundle: project
+label: Testing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

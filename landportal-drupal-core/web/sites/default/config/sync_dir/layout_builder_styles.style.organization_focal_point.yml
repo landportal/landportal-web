@@ -1,0 +1,12 @@
+uuid: 5fd6f7c8-3551-4e3d-a1e9-a1a02d243351
+langcode: en
+status: true
+dependencies: {  }
+id: organization_focal_point
+label: 'Organization focal point'
+classes: organization-focal-point
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

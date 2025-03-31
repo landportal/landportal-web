@@ -1,0 +1,8 @@
+uuid: 8f151fb5-c5b2-4e5a-9c0c-d63d6cea0608
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landbook observations'
+vid: observations
+description: ''
+weight: 0

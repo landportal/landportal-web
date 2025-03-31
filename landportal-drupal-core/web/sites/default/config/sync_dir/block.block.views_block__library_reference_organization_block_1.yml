@@ -1,0 +1,29 @@
+uuid: 5af563f2-e7bc-4f72-a622-abf545521d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.library_reference_organization
+  module:
+    - system
+    - views
+  theme:
+    - landportal
+id: views_block__library_reference_organization_block_1
+theme: landportal
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:library_reference_organization-block_1'
+settings:
+  id: 'views_block:library_reference_organization-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/3511101214

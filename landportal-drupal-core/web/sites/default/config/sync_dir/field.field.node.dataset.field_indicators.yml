@@ -1,0 +1,21 @@
+uuid: 21c0811d-3f51-4d9b-8416-7a6ad96f3bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indicators
+    - node.type.dataset
+  module:
+    - view_coda_extra
+id: node.dataset.field_indicators
+field_name: field_indicators
+entity_type: node
+bundle: dataset
+label: 'Land Book Visualizations'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ViewCodaExtra

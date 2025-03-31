@@ -1,0 +1,23 @@
+{% set block_base_class = 'library-block' %}
+
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('header', [], block_base_class) }}>
+    {{ 'Library'|t }}
+    <a class="link" href="{{ more_url }}">{{ more_label }}</a>
+  </div>
+  {% block block_content %}
+    <div {{ bem('grid', [], block_base_class) }}>
+    {% for item in items %}
+      {% include "@molecules/library-card/library-card.twig" with {
+        item_title: item.item_title,
+        item_url: item.item_url,
+        image_src: item.image_src,
+        image_title: item.image_title,
+        image_alt: item.image_alt,
+        published_date: item.published_date,
+        card__block_class: block_base_class
+      } %}
+    {% endfor %}
+  </div>
+  {% endblock %}
+</div>

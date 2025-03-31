@@ -1,0 +1,23 @@
+uuid: 481c1f0c-0455-4234-989a-be6b8c34ab02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_highlow
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.field_highlow
+field_name: field_highlow
+entity_type: taxonomy_term
+bundle: indicators
+label: 'Best value is'
+description: 'High means it is better to have a high value, low means the best value is the lowest one (like in rankings)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: High
+  off_label: Low
+field_type: boolean

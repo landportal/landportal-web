@@ -1,0 +1,275 @@
+uuid: a799ffe3-919e-49e4-8620-c4196efd915d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sliders.additionals
+    - field.field.node.sliders.body
+    - field.field.node.sliders.city
+    - field.field.node.sliders.country
+    - field.field.node.sliders.feeds_item
+    - field.field.node.sliders.field_type
+    - field.field.node.sliders.latitude
+    - field.field.node.sliders.location_name
+    - field.field.node.sliders.longitude
+    - node.type.sliders
+  module:
+    - addtoany
+    - layout_builder
+    - text
+    - user
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          50799000-0328-4660-a803-61158620af58:
+            uuid: 50799000-0328-4660-a803-61158620af58
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          8c8bbc74-60b9-424d-82d0-c3d1fa4b0cf6:
+            uuid: 8c8bbc74-60b9-424d-82d0-c3d1fa4b0cf6
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:location_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          039e8d0c-e3a6-40b7-98de-d49a8dd0e759:
+            uuid: 039e8d0c-e3a6-40b7-98de-d49a8dd0e759
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:city'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          88bbeb3b-61a7-4bb3-b6d0-7938309f690d:
+            uuid: 88bbeb3b-61a7-4bb3-b6d0-7938309f690d
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:additionals'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          e82d4a6a-28af-4f9a-8730-7692d162b81b:
+            uuid: e82d4a6a-28af-4f9a-8730-7692d162b81b
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:country'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          f312dc16-b675-4066-ae7f-c0753ddc58ed:
+            uuid: f312dc16-b675-4066-ae7f-c0753ddc58ed
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:latitude'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          3f8deda3-bc34-4bd2-beeb-b79998dffd2a:
+            uuid: 3f8deda3-bc34-4bd2-beeb-b79998dffd2a
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:longitude'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          644fc6a3-bf6f-4b9d-beaa-8e8305860a46:
+            uuid: 644fc6a3-bf6f-4b9d-beaa-8e8305860a46
+            region: content
+            configuration:
+              id: 'field_block:node:sliders:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media Block'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          96e17cc6-e6ec-458e-b79d-cedca4481092:
+            uuid: 96e17cc6-e6ec-458e-b79d-cedca4481092
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+id: node.sliders.default
+targetEntityType: node
+bundle: sliders
+mode: default
+content:
+  additionals:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  latitude:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  location_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  longitude:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

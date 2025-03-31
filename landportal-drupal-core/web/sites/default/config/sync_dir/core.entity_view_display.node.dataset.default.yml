@@ -1,0 +1,573 @@
+uuid: 975179d8-a638-4610-9fd6-1300084ff38f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.base_field_override.node.dataset.title
+    - field.field.node.dataset.body
+    - field.field.node.dataset.feeds_item
+    - field.field.node.dataset.field_catalog
+    - field.field.node.dataset.field_donors
+    - field.field.node.dataset.field_download_dataset
+    - field.field.node.dataset.field_geographical_focus
+    - field.field.node.dataset.field_image
+    - field.field.node.dataset.field_indicators
+    - field.field.node.dataset.field_link
+    - field.field.node.dataset.field_noderef
+    - field.field.node.dataset.field_orgref
+    - field.field.node.dataset.field_paragraphs
+    - field.field.node.dataset.field_related_themes
+    - field.field.node.dataset.field_related_topics
+    - node.type.dataset
+    - views.view.blog_post_related_content
+    - views.view.dataset_porfolio_partners
+    - views.view.dataset_portfolio_breadcrumb
+    - views.view.dataset_portfolio_jump_menu_view_ct
+  module:
+    - addtoany
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - lp_related_content
+    - text
+    - user
+    - view_coda_extra
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_breadcrumb
+        components:
+          7efda73a-a26d-4808-a657-c5ed6921eb1d:
+            uuid: 7efda73a-a26d-4808-a657-c5ed6921eb1d
+            region: content
+            configuration:
+              id: 'views_block:dataset_portfolio_breadcrumb-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          5e231728-17cf-468c-8c79-970766a9f8ec:
+            uuid: 5e231728-17cf-468c-8c79-970766a9f8ec
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - title
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          66805f6a-e656-480e-8be1-04677ac3b231:
+            uuid: 66805f6a-e656-480e-8be1-04677ac3b231
+            region: content
+            configuration:
+              id: 'field_block:node:dataset:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: full_width
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - image_full_block
+        third_party_settings: {  }
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - dataset_portfolio
+        components:
+          246d24df-d00d-4e04-9318-8588b0f148c9:
+            uuid: 246d24df-d00d-4e04-9318-8588b0f148c9
+            region: main
+            configuration:
+              id: 'field_block:node:dataset:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - latest_events_body
+          a49000b6-7311-4399-9049-c1eb4b153583:
+            uuid: a49000b6-7311-4399-9049-c1eb4b153583
+            region: aside
+            configuration:
+              id: 'field_block:node:dataset:field_related_themes'
+              label: Themes
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 14
+            additional:
+              layout_builder_styles_style:
+                - dataset_issues
+          cd44153f-5432-498f-8fbb-9a46bf6b6be4:
+            uuid: cd44153f-5432-498f-8fbb-9a46bf6b6be4
+            region: aside
+            configuration:
+              id: 'field_block:node:dataset:field_link'
+              label: 'Official site'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                - dataset_official_site
+          97e7635e-1f37-46f6-bba8-f6d87b92071d:
+            uuid: 97e7635e-1f37-46f6-bba8-f6d87b92071d
+            region: aside
+            configuration:
+              id: 'field_block:node:dataset:field_related_topics'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 15
+            additional:
+              layout_builder_styles_style:
+                - dataset_concepts
+          9dfc13a7-24bf-4a9f-a084-a72247053983:
+            uuid: 9dfc13a7-24bf-4a9f-a084-a72247053983
+            region: aside
+            configuration:
+              id: 'views_block:dataset_porfolio_partners-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          0ea0d21b-6857-4d01-9744-0ae3afc2ff03:
+            uuid: 0ea0d21b-6857-4d01-9744-0ae3afc2ff03
+            region: aside
+            configuration:
+              id: 'views_block:dataset_porfolio_partners-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 7
+            additional:
+              layout_builder_styles_style:
+                - ''
+          39fa3ce6-b702-4bf5-bf3c-ef824f6779b0:
+            uuid: 39fa3ce6-b702-4bf5-bf3c-ef824f6779b0
+            region: aside
+            configuration:
+              id: 'views_block:dataset_porfolio_partners-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                - organizer_image
+          d11d38f6-b0e4-4653-8f17-3ed8b584457a:
+            uuid: d11d38f6-b0e4-4653-8f17-3ed8b584457a
+            region: aside
+            configuration:
+              id: 'inline_block:card'
+              label: 'Related categories'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 74
+              block_serialized: null
+            weight: 13
+            additional:
+              layout_builder_styles_style:
+                - dataset_related_issues_block
+          12e1d9b8-23ae-474b-99d4-6e86fbf90c93:
+            uuid: 12e1d9b8-23ae-474b-99d4-6e86fbf90c93
+            region: aside
+            configuration:
+              id: 'field_block:node:dataset:field_download_dataset'
+              label: Download
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: DownloadDatasetDefaultFormatter
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 10
+            additional:
+              layout_builder_styles_style:
+                - ''
+          a20e34ef-c9b2-4ffd-9cee-0bff6d73ebf6:
+            uuid: a20e34ef-c9b2-4ffd-9cee-0bff6d73ebf6
+            region: aside
+            configuration:
+              id: 'views_block:dataset_porfolio_partners-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - ''
+          8c33589c-852f-4825-a435-95e6439284f5:
+            uuid: 8c33589c-852f-4825-a435-95e6439284f5
+            region: aside
+            configuration:
+              id: 'views_block:dataset_portfolio_jump_menu_view_ct-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - ''
+          7edce58b-6a64-4eed-a3e2-d7083760cdd5:
+            uuid: 7edce58b-6a64-4eed-a3e2-d7083760cdd5
+            region: aside
+            configuration:
+              id: prindex17_block
+              label: Prindex17
+              label_display: '0'
+              provider: lp_related_content
+              context_mapping: {  }
+            weight: 11
+            additional:
+              layout_builder_styles_style:
+                - dataset_indicator_block
+          0b583153-1687-49d7-9fd2-76a97f05c633:
+            uuid: 0b583153-1687-49d7-9fd2-76a97f05c633
+            region: aside
+            configuration:
+              id: prindex19_block
+              label: Prindex19
+              label_display: '0'
+              provider: lp_related_content
+              context_mapping: {  }
+            weight: 12
+            additional:
+              layout_builder_styles_style:
+                - dataset_indicator_block
+          353eb6e4-7e7c-4fc8-a766-1f8535e18a5c:
+            uuid: 353eb6e4-7e7c-4fc8-a766-1f8535e18a5c
+            region: main
+            configuration:
+              id: 'field_block:node:dataset:field_indicators'
+              label: 'Land Book Visualizations'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: ViewCodaExtraDefaultFormatter
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - ''
+          c48ab1e2-8d0b-4486-9829-97c390a50c26:
+            uuid: c48ab1e2-8d0b-4486-9829-97c390a50c26
+            region: main
+            configuration:
+              id: 'field_block:node:dataset:field_paragraphs'
+              label: 'Additional paragraphs'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: additional_information_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - dataset_accordian
+          d2e06ca1-77f3-42bf-8619-eb81e4daa9e1:
+            uuid: d2e06ca1-77f3-42bf-8619-eb81e4daa9e1
+            region: main
+            configuration:
+              id: 'views_block:blog_post_related_content-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          2a2840e7-4f0f-4cae-97f5-68c72fd9c2f8:
+            uuid: 2a2840e7-4f0f-4cae-97f5-68c72fd9c2f8
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.dataset.default
+targetEntityType: node
+bundle: dataset
+mode: default
+content:
+  additional_informations:
+    type: additional_information_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_catalog:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_donors:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_indicators:
+    type: ViewCodaExtraDefaultFormatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_download_dataset: true
+  field_paragraphs: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: f43833dc-757b-4c1b-983c-83208f7ef03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.landlibrary_resource_type
+id: taxonomy_term.landlibrary_resource_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: landlibrary_resource_type
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 841a6212-d566-4425-94d5-cbd002530dbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.country_narrative
+id: media.country_narrative.status
+field_name: status
+entity_type: media
+bundle: country_narrative
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,7 @@
+uuid: f820fac7-893c-4a7f-ac22-743819a3ff4c
+langcode: en
+status: false
+dependencies: {  }
+formId: node_debate_form
+captchaType: default
+label: node_debate_form

@@ -1,0 +1,19 @@
+uuid: d22e164d-011a-482e-be46-58ecda134e68
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - view_coda_extra
+id: node.field_indicators
+field_name: field_indicators
+entity_type: node
+type: ViewCodaExtra
+settings: {  }
+module: view_coda_extra
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,7 @@
+name: Landportal - Issue blog posts remote block
+description: Landportal - Issue blog posts remote block
+package: Landportal- Remote block
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
+dependencies:
+  - landportal_remote_block:landportal_remote_block

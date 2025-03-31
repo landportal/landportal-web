@@ -1,0 +1,119 @@
+uuid: d2886f2a-c4c9-4699-af18-8062d06eb5cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_organization_type
+    - node.type.organization
+  module:
+    - node
+label: 'Import organization type for Organization CT'
+id: import_organization_type_for_org
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  organization_type:
+    value: 'Organization type'
+    label: 'Organization type'
+    machine_name: organization_type
+    type: csv
+  organization_type1:
+    value: 'Organization type1'
+    label: 'Organization type1'
+    machine_name: organization_type1
+    type: csv
+  organization_type2:
+    value: 'Organization type2'
+    label: 'Organization type2'
+    machine_name: organization_type2
+    type: csv
+  organization_type3:
+    value: 'Organization type3'
+    label: 'Organization type3'
+    machine_name: organization_type3
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_organization_type
+    map:
+      target_id: organization_type
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_type
+    map:
+      target_id: organization_type1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_type
+    map:
+      target_id: organization_type2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_type
+    map:
+      target_id: organization_type3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

@@ -1,0 +1,24 @@
+uuid: df384cf3-af3c-434c-885c-04d0dff62ae2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - landportal
+id: breadcrumbs
+theme: landportal
+region: content
+weight: -24
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n/node/*"

@@ -1,0 +1,4 @@
+services:
+  landportal_remote_block.connection:
+    class: Drupal\landportal_remote_block\ConnectionService
+    arguments: ['@settings', '@language_manager']

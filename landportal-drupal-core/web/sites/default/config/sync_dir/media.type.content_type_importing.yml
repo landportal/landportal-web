@@ -1,0 +1,14 @@
+uuid: a4a6f44e-18e2-4ea8-a084-1859eb13d210
+langcode: en
+status: true
+dependencies: {  }
+id: content_type_importing
+label: 'Content Type Importing'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  filesize: field_media_file

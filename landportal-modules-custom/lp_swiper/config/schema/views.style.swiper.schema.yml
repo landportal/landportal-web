@@ -1,0 +1,20 @@
+views.style.swiper:
+  type: views_style
+  label: 'Swiper'
+  mapping:
+    swiper_skin:
+      type:  string
+      label: 'Skin to apply to the swiper'
+    swiper_type:
+      type: string
+      label: 'Main frame plugin to use to render the swiper'
+    widgets:
+      type: mapping
+      label: 'Control widgets for the swiper'
+      mapping:
+        top:
+          type: lp_swiper_control_group
+          label: 'Widget configuration for above the swiper'
+        bottom:
+          type: lp_swiper_control_group
+          label: 'Widget configuration for below the swiper'

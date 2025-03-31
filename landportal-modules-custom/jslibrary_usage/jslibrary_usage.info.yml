@@ -1,0 +1,6 @@
+name: JsLibrary Usage
+type: module
+description: 'This is custom module for adding JS'
+package: custom
+version: 1.0
+core_version_requirement: ^8 || ^9 || ^10

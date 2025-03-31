@@ -1,0 +1,12 @@
+uuid: 15dc42ec-ce83-4928-81c3-e0a291e6e59a
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_date
+label: 'Blog Post Date'
+classes: blog-post-date
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

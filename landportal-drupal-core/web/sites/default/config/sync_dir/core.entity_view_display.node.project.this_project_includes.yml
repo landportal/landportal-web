@@ -1,0 +1,360 @@
+uuid: 08f77b5e-ce96-4d67-8353-5e0440735dcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.this_project_includes
+    - field.field.node.project.body
+    - field.field.node.project.code
+    - field.field.node.project.contact_field
+    - field.field.node.project.data_curation
+    - field.field.node.project.feeds_item
+    - field.field.node.project.field_currency
+    - field.field.node.project.field_doc_provider
+    - field.field.node.project.field_donors
+    - field.field.node.project.field_implementers
+    - field.field.node.project.field_noderef
+    - field.field.node.project.field_project_duration
+    - field.field.node.project.field_related_donor
+    - field.field.node.project.field_related_impact
+    - field.field.node.project.field_related_organization
+    - field.field.node.project.field_related_provider
+    - field.field.node.project.field_related_resources
+    - field.field.node.project.field_resources_library
+    - field.field.node.project.field_value_decimal
+    - field.field.node.project.official_website
+    - field.field.node.project.programme
+    - field.field.node.project.project_concepts
+    - field.field.node.project.project_image
+    - field.field.node.project.project_logo
+    - field.field.node.project.project_regions
+    - field.field.node.project.project_themes
+    - field.field.node.project.related_projects
+    - field.field.node.project.source
+    - field.field.node.project.testing
+    - node.type.project
+  module:
+    - datetime_range
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - lp_related_content
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          eaa8c139-de5a-41c5-81fd-82f32549b63c:
+            uuid: eaa8c139-de5a-41c5-81fd-82f32549b63c
+            region: content
+            configuration:
+              id: 'extra_field_block:node:project:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          3bd4e9d0-e165-476f-9cea-f8a14e0cdec4:
+            uuid: 3bd4e9d0-e165-476f-9cea-f8a14e0cdec4
+            region: content
+            configuration:
+              id: 'field_block:node:project:project_image'
+              label: 'Page banner'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: country_overview_block
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+          031422e3-d5e3-443b-828d-7deefd435f23:
+            uuid: 031422e3-d5e3-443b-828d-7deefd435f23
+            region: content
+            configuration:
+              id: 'field_block:node:project:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          2a3fa6c6-c7a1-4a72-ab36-09095415a41f:
+            uuid: 2a3fa6c6-c7a1-4a72-ab36-09095415a41f
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_project_duration'
+              label: 'Project duration'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'M Y'
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style: project_duration_background
+          cc83fe40-6def-4dc4-93b1-92ee2563c175:
+            uuid: cc83fe40-6def-4dc4-93b1-92ee2563c175
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_value_decimal'
+              label: 'Project Value'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style: project_value_background
+          7c5e6a2e-9d78-411e-8ea3-5a89b8dd15e1:
+            uuid: 7c5e6a2e-9d78-411e-8ea3-5a89b8dd15e1
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_currency'
+              label: 'Currency of project value'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style: project_currency_background_
+          11201a72-743e-45c9-a242-ad22c52db319:
+            uuid: 11201a72-743e-45c9-a242-ad22c52db319
+            region: content
+            configuration:
+              id: 'field_block:node:project:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+id: node.project.this_project_includes
+targetEntityType: node
+bundle: project
+mode: this_project_includes
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  contact_field:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_currency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_project_duration:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_related_donor:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_related_impact:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_related_organization:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_related_provider:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_resources:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_value_decimal:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  official_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  project_concepts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  project_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  project_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  project_regions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  project_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  related_projects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
+hidden:
+  addtoany: true
+  code: true
+  data_curation: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_doc_provider: true
+  field_donors: true
+  field_implementers: true
+  field_noderef: true
+  field_resources_library: true
+  langcode: true
+  programme: true
+  search_api_excerpt: true
+  source: true
+  testing: true

@@ -1,0 +1,12 @@
+uuid: 22ea3a09-6132-4dc5-b6dc-1a5b73ade9fc
+langcode: en
+status: true
+dependencies: {  }
+id: background_light_full
+label: 'Background Light Full'
+classes: "layout-background--full\r\nlayout-background--light"
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

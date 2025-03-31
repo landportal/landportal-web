@@ -1,0 +1,10 @@
+uuid: 23330994-6250-48da-a62c-f12dd30c5c00
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user_profile_comment
+label: 'User Profile Comment'
+targetEntityType: user
+cache: true

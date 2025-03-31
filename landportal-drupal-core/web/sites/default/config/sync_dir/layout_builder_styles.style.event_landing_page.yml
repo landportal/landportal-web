@@ -1,0 +1,12 @@
+uuid: 6376f77a-9013-4341-90f1-815e748f7958
+langcode: en
+status: true
+dependencies: {  }
+id: event_landing_page
+label: 'Event landing page'
+classes: event-landing-page
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

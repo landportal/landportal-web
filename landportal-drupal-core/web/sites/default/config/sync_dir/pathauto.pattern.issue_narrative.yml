@@ -1,0 +1,33 @@
+uuid: 3de4a174-3c6d-4562-8deb-0ccff0f81155
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: issue_narrative
+label: 'Issue Narrative English'
+type: 'canonical_entities:node'
+pattern: 'issues/[node:title]'
+selection_criteria:
+  9b7c773f-7b61-4b6c-b087-2d15e4435d86:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9b7c773f-7b61-4b6c-b087-2d15e4435d86
+    context_mapping:
+      node: node
+    bundles:
+      issues: issues
+  bc24966a-bfbc-4144-b151-115ec6e0afd2:
+    id: language
+    negate: false
+    uuid: bc24966a-bfbc-4144-b151-115ec6e0afd2
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

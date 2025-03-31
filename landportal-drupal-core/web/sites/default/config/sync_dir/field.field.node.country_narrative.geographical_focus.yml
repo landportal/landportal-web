@@ -1,0 +1,29 @@
+uuid: 63220b34-1490-49c4-8b63-05a8653747b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.geographical_focus
+    - node.type.country_narrative
+    - taxonomy.vocabulary.regions
+id: node.country_narrative.geographical_focus
+field_name: geographical_focus
+entity_type: node
+bundle: country_narrative
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

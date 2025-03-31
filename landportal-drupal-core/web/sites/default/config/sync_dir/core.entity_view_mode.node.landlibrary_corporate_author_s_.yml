@@ -1,0 +1,10 @@
+uuid: c415bdfe-8647-46db-bdb4-c1008d6cef26
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landlibrary_corporate_author_s_
+label: 'Landlibrary Corporate Author(s)'
+targetEntityType: node
+cache: true

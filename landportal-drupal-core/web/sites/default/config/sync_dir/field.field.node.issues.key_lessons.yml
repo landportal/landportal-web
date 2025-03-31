@@ -1,0 +1,21 @@
+uuid: 9b218088-c61f-4c03-8c6b-728a5131618d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.key_lessons
+    - node.type.issues
+  module:
+    - options
+id: node.issues.key_lessons
+field_name: key_lessons
+entity_type: node
+bundle: issues
+label: 'key lessons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

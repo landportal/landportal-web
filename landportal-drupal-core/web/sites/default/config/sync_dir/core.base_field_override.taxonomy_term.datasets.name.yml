@@ -1,0 +1,18 @@
+uuid: 2be607bf-0bb5-4978-90b0-b214c70a1063
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.datasets
+id: taxonomy_term.datasets.name
+field_name: name
+entity_type: taxonomy_term
+bundle: datasets
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

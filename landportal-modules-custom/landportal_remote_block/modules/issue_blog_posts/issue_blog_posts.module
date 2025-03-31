@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for issue blog post.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function issue_blog_posts_theme($existing, $type, $theme, $path) {
+  return [
+    'issue_blog_posts_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

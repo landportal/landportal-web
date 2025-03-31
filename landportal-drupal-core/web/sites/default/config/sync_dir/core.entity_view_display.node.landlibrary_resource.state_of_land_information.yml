@@ -1,0 +1,481 @@
+uuid: 7a68ccc4-13dc-4ab7-a4cb-e6fe45426e9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.state_of_land_information
+    - field.field.node.landlibrary_resource.feeds_item
+    - field.field.node.landlibrary_resource.field_doc_alt_title
+    - field.field.node.landlibrary_resource.field_doc_copyrights_statement
+    - field.field.node.landlibrary_resource.field_doc_creation_date
+    - field.field.node.landlibrary_resource.field_doc_description
+    - field.field.node.landlibrary_resource.field_doc_identifier
+    - field.field.node.landlibrary_resource.field_doc_is_part_of
+    - field.field.node.landlibrary_resource.field_doc_is_shown_at
+    - field.field.node.landlibrary_resource.field_doc_is_shown_by
+    - field.field.node.landlibrary_resource.field_doc_is_shown_by_file
+    - field.field.node.landlibrary_resource.field_doc_language
+    - field.field.node.landlibrary_resource.field_doc_licencing
+    - field.field.node.landlibrary_resource.field_doc_pagination
+    - field.field.node.landlibrary_resource.field_doc_people
+    - field.field.node.landlibrary_resource.field_doc_provider
+    - field.field.node.landlibrary_resource.field_doc_publisher
+    - field.field.node.landlibrary_resource.field_doc_publisher_place
+    - field.field.node.landlibrary_resource.field_doc_relation
+    - field.field.node.landlibrary_resource.field_doc_type
+    - field.field.node.landlibrary_resource.field_duration
+    - field.field.node.landlibrary_resource.field_geographical_focus
+    - field.field.node.landlibrary_resource.field_image
+    - field.field.node.landlibrary_resource.field_noderef
+    - field.field.node.landlibrary_resource.field_orgref
+    - field.field.node.landlibrary_resource.field_related_themes
+    - field.field.node.landlibrary_resource.field_related_topics
+    - field.field.node.landlibrary_resource.field_share_on_rli_navigator
+    - field.field.node.landlibrary_resource.promoted_to_library
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - datetime
+    - file
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'State of Land Information'
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style:
+            - ''
+        components:
+          129411a9-6d19-45d0-814e-b843dfb95ed4:
+            uuid: 129411a9-6d19-45d0-814e-b843dfb95ed4
+            region: first
+            configuration:
+              id: 'field_block:node:landlibrary_resource:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          f783bcf0-15e5-4978-91c3-79ce791389b8:
+            uuid: f783bcf0-15e5-4978-91c3-79ce791389b8
+            region: second
+            configuration:
+              id: 'field_block:node:landlibrary_resource:field_doc_description'
+              label: 'Abstract or Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - library_description
+          36457904-d698-42bc-9e33-1eec060b84c9:
+            uuid: 36457904-d698-42bc-9e33-1eec060b84c9
+            region: second
+            configuration:
+              id: 'field_block:node:landlibrary_resource:title_field'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - landlibrary_tilte
+          ffee5f57-b230-4293-9ec9-9221c487e765:
+            uuid: ffee5f57-b230-4293-9ec9-9221c487e765
+            region: second
+            configuration:
+              id: 'field_block:node:landlibrary_resource:field_doc_type'
+              label: 'Resource type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - library_resource_type
+          1305ff23-31a5-419e-a99c-e8989bf91d05:
+            uuid: 1305ff23-31a5-419e-a99c-e8989bf91d05
+            region: second
+            configuration:
+              id: 'field_block:node:landlibrary_resource:field_doc_creation_date'
+              label: 'Date of publication'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_custom
+                label: hidden
+                settings:
+                  timezone_override: Europe/Amsterdam
+                  date_format: 'F, Y'
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - library_date_of_publication
+          3552788f-9098-4719-a644-33ed4161ddaa:
+            uuid: 3552788f-9098-4719-a644-33ed4161ddaa
+            region: second
+            configuration:
+              id: 'field_block:node:landlibrary_resource:field_geographical_focus'
+              label: 'Geographical focus'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - geographical_focus
+          48fe26b2-acb6-4a05-a254-611a535e90df:
+            uuid: 48fe26b2-acb6-4a05-a254-611a535e90df
+            region: first
+            configuration:
+              id: 'field_block:node:landlibrary_resource:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.landlibrary_resource.state_of_land_information
+targetEntityType: node
+bundle: landlibrary_resource
+mode: state_of_land_information
+content:
+  field_doc_alt_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_doc_copyrights_statement:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 129
+    region: content
+  field_doc_creation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 127
+    region: content
+  field_doc_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_doc_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_doc_is_part_of:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_doc_is_shown_at:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_doc_is_shown_by:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_doc_is_shown_by_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_doc_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_doc_licencing:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_doc_pagination:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_doc_people:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_doc_provider:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_doc_publisher:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_doc_publisher_place:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_doc_relation:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_doc_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_duration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_share_on_rli_navigator:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  promoted_to_library:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 132
+    region: content
+  title_field:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: 47f1d23a-e71f-466a-a8b2-8dbfe33d45c7
+langcode: en
+status: true
+dependencies: {  }
+id: event_ct_importing
+label: 'Event CT Importing'
+description: ''
+source_type: ''
+module: null
+shared_configuration: null

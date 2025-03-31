@@ -1,0 +1,24 @@
+uuid: c1dfcd91-7695-4df6-b33b-44e9f2842543
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.geographical_focus_blog_post
+  module:
+    - facets
+  theme:
+    - landportal
+id: geographicalfocusblogpost
+theme: landportal
+region: content
+weight: 6
+provider: null
+plugin: 'facet_block:geographical_focus_blog_post'
+settings:
+  id: 'facet_block:geographical_focus_blog_post'
+  label: 'Geographical focus'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: geographicalfocusblogpost
+visibility: {  }

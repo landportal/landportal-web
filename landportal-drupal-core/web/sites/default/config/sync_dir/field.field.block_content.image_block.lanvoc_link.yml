@@ -1,0 +1,23 @@
+uuid: e090719a-fcdf-4636-b0e9-861f879d9dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_block
+    - field.storage.block_content.lanvoc_link
+  module:
+    - link
+id: block_content.image_block.lanvoc_link
+field_name: lanvoc_link
+entity_type: block_content
+bundle: image_block
+label: 'LanVoc Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

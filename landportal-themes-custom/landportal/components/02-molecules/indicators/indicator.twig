@@ -1,0 +1,12 @@
+{% set block__base_class = 'indicator' %}
+<div {{ bem(block__base_class) }}>
+  <a {{ bem('label', [], block__base_class) }} href="{{ indicator_url }}">
+    {% if indicator_desc %}
+      <span class="tooltip" data-text="{{ indicator_desc }}">{{ indicator_title }}</span>
+    {% else %}
+      <span>{{ indicator_label }}</span>
+    {% endif %}
+
+  </a>
+  <div {{ bem('value', [], block__base_class) }}>{{ indicator_value }}  {{ indicator_unit }}</div>
+</div>

@@ -1,0 +1,19 @@
+{% set block_base_class = 'organisations-block' %}
+
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('header', [], block_base_class) }}>
+    {{ 'Organissations'|t }}
+    <a class="link" href="{{ more_url }}">{{ more_label }}</a>
+  </div>
+  {% block block_content %}
+    <div {{ bem('grid', [], block_base_class) }}>
+      {% for item in items %}
+        {% include "@molecules/organisations-card/organisations-card.twig" with {
+          image_blockname: block_base_class,
+          image_src: item.image_src,
+          image_alt: item.image_alt,
+        } %}
+      {% endfor %}
+    </div>
+  {% endblock %}
+</div>

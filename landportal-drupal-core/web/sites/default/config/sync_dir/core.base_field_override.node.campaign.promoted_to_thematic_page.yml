@@ -1,0 +1,23 @@
+uuid: da7707fd-6a9c-4681-bc00-f047ace102bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+    - custom_pub.custom_publishing_option.promoted_to_thematic_page
+id: node.campaign.promoted_to_thematic_page
+field_name: promoted_to_thematic_page
+entity_type: node
+bundle: campaign
+label: Promoted
+description: 'custom promoted option.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

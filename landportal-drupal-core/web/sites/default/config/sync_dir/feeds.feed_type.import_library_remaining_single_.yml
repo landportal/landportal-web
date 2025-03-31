@@ -1,0 +1,170 @@
+uuid: 2a3bc8d1-6c2d-4b93-b0ba-0dc618bd26b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_copyrights_statement
+    - field.field.node.landlibrary_resource.field_doc_creation_date
+    - field.field.node.landlibrary_resource.field_doc_identifier
+    - field.field.node.landlibrary_resource.field_doc_is_shown_at
+    - field.field.node.landlibrary_resource.field_doc_is_shown_by
+    - field.field.node.landlibrary_resource.field_doc_pagination
+    - field.field.node.landlibrary_resource.field_doc_people
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library (remaining single field)'
+id: import_library_remaining_single_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resource_title:
+    value: Resource_title
+    label: Resource_title
+    machine_name: resource_title
+    type: csv
+  isbn_resource_id:
+    value: 'ISBN / Resource ID'
+    label: 'ISBN / Resource ID'
+    machine_name: isbn_resource_id
+    type: csv
+  pages:
+    value: Pages
+    label: Pages
+    machine_name: pages
+    type: csv
+  copyright_details:
+    value: 'Copyright details'
+    label: 'Copyright details'
+    machine_name: copyright_details
+    type: csv
+  author_s_editor_s_contributor_s_:
+    value: 'Author(s), editor(s), contributor(s)'
+    label: 'Author(s), editor(s), contributor(s)'
+    machine_name: author_s_editor_s_contributor_s_
+    type: csv
+  date_of_publication:
+    value: 'Date of publication'
+    label: 'Date of publication'
+    machine_name: date_of_publication
+    type: csv
+  originally_published_at:
+    value: 'Originally published at'
+    label: 'Originally published at'
+    machine_name: originally_published_at
+    type: csv
+  resource_url:
+    value: 'Resource URL'
+    label: 'Resource URL'
+    machine_name: resource_url
+    type: csv
+  author_s_editor_s_contributor:
+    value: 'Author(s), editor(s), contributor(s)'
+    label: 'Author(s), editor(s), contributor(s)'
+    machine_name: author_s_editor_s_contributor
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_identifier
+    map:
+      value: isbn_resource_id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_pagination
+    map:
+      value: pages
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_copyrights_statement
+    map:
+      value: copyright_details
+    settings:
+      language: null
+  -
+    target: field_doc_creation_date
+    map:
+      value: date_of_publication
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_doc_is_shown_at
+    map:
+      uri: originally_published_at
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_doc_is_shown_by
+    map:
+      uri: resource_url
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_doc_people
+    map:
+      value: author_s_editor_s_contributor
+    settings:
+      language: ''
+      format: full_html

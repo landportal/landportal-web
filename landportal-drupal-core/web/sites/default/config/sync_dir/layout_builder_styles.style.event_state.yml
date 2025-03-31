@@ -1,0 +1,12 @@
+uuid: a9fc93bd-3260-431a-b436-cb56536fd4a9
+langcode: en
+status: true
+dependencies: {  }
+id: event_state
+label: 'Event State'
+classes: event-state
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,33 @@
+uuid: 8a877652-a96b-4041-b173-aaad315a7ce7
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: issue_narrative_espanol
+label: 'Issue Narrative Español'
+type: 'canonical_entities:node'
+pattern: 'temáticas/[node:title]'
+selection_criteria:
+  2b58756f-7ed2-401a-907f-10b2b93743a0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2b58756f-7ed2-401a-907f-10b2b93743a0
+    context_mapping:
+      node: node
+    bundles:
+      issues: issues
+  6e99da58-73de-4724-9e95-d404e283ccbb:
+    id: language
+    negate: false
+    uuid: 6e99da58-73de-4724-9e95-d404e283ccbb
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

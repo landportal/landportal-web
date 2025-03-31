@@ -1,0 +1,33 @@
+uuid: a56a63a7-ef53-42ee-bc6c-2699bc41779e
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: issues_overview_portugues
+label: 'Issues Overview Português'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'temas/[term:name]'
+selection_criteria:
+  a09ca097-0df7-440e-9c29-0c4c5da75b5e:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: a09ca097-0df7-440e-9c29-0c4c5da75b5e
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      theme: theme
+  814b5190-a4a2-4a88-ba22-926aa6c8ddfa:
+    id: language
+    negate: false
+    uuid: 814b5190-a4a2-4a88-ba22-926aa6c8ddfa
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      pt-pt: pt-pt
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

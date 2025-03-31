@@ -1,0 +1,44 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Histórias do Land Portal</h2>\r\n\r\n<p>Consulte as histórias mais recentes, redigidas e publicadas pela equipe do Land Portal.</p>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Histórias da Rede</h2>\r\n\r\n<p>Conheça as histórias mais recentes, redigidas pelos parceiros e colegas da nossa rede.</p>\r\n"
+            format: full_html
+      use_more_text: 'Veja mais...'
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Vencedores do Concurso de Histórias de Dados</h2>\r\n\r\n<p>Nosso Concurso Anual de Histórias de Dados apela para histórias dinâmicas vinculadas à terra que chamem a atenção e apresentem dados de forma inovadora e cativante. Conheça aqui a lista dos vencedores e vencedoras mais recentes.</p>\r\n"
+            format: full_html
+  block_1:
+    display_options:
+      use_more_text: 'Veja mais...'
+  page_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/pt/book/data\">Data</a><span><a href=\"/pt/data/stories\">Data stories</a></span><span>Histórias de Dados do Land Portal</span></div>\r\n"
+            format: full_html
+        result:
+          content: "<p>Histórias de Dados do Land Portal</p>\r\nMostrando @start - @end  de <span class=\"badge\">@total</span>"
+  page_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/pt/book/data\">Data</a><span><a href=\"/pt/data/stories\">Data stories</a></span><span>Histórias da Rede</span></div>\r\n"
+            format: full_html
+        result:
+          content: "Histórias da Rede </br>\r\nMostrando @start - @end  de <span class=\"badge\">@total</span>"

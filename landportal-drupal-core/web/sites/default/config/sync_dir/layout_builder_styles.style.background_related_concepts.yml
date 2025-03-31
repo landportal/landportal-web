@@ -1,0 +1,12 @@
+uuid: 4de4a95d-5a3e-4de8-94a1-678840b893e8
+langcode: en
+status: true
+dependencies: {  }
+id: background_related_concepts
+label: 'Background Related Concepts'
+classes: background-related-concepts
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

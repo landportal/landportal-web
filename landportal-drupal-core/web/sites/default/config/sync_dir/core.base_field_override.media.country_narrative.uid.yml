@@ -1,0 +1,20 @@
+uuid: 47f55368-6670-4efc-8b12-4c250755ddf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.country_narrative
+id: media.country_narrative.uid
+field_name: uid
+entity_type: media
+bundle: country_narrative
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

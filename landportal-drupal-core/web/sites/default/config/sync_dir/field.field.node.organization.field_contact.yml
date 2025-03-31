@@ -1,0 +1,19 @@
+uuid: 1c067788-138c-4553-93c5-f78a704503b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.organization
+id: node.organization.field_contact
+field_name: field_contact
+entity_type: node
+bundle: organization
+label: 'Focal point'
+description: 'Please enter a name of assigned focal point for land issues, if applicable.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

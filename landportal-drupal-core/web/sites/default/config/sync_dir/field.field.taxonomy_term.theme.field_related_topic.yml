@@ -1,0 +1,29 @@
+uuid: 786d6ff6-eb36-485d-84c0-e78e12ee866f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_topic
+    - taxonomy.vocabulary.concepts
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme.field_related_topic
+field_name: field_related_topic
+entity_type: taxonomy_term
+bundle: theme
+label: 'Related concepts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

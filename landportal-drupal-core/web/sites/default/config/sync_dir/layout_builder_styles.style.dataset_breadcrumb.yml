@@ -1,0 +1,12 @@
+uuid: 74371680-8920-4a83-ad94-ad1115516355
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_breadcrumb
+label: 'Dataset Breadcrumb'
+classes: dataset-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

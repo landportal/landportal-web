@@ -1,0 +1,12 @@
+uuid: 069c6992-2000-4853-aee8-b5bfd3a4f3b2
+langcode: en
+status: true
+dependencies: {  }
+id: event_date
+label: 'Event Date'
+classes: event-date
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

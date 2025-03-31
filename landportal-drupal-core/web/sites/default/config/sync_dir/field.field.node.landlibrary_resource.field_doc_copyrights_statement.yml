@@ -1,0 +1,19 @@
+uuid: 7454c4ba-0206-4dc7-931a-125c7e3f279f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_copyrights_statement
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.field_doc_copyrights_statement
+field_name: field_doc_copyrights_statement
+entity_type: node
+bundle: landlibrary_resource
+label: 'Copyright details'
+description: 'Details about the copyright of the resource, like the organization / person that owns the copyrights or a specific copyright statement.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

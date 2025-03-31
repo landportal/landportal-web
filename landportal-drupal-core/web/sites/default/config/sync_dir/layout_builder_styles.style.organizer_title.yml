@@ -1,0 +1,12 @@
+uuid: cb935796-d9eb-45b7-9088-99c327a770af
+langcode: en
+status: true
+dependencies: {  }
+id: organizer_title
+label: 'Organizer Title'
+classes: organizer-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

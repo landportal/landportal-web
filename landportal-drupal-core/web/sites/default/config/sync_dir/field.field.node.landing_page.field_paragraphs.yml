@@ -1,0 +1,21 @@
+uuid: bb27c604-9fad-4268-8603-ff6857648de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.landing_page
+  module:
+    - landportal_country_narrative
+id: node.landing_page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: landing_page
+label: Paragraphs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: additional_information

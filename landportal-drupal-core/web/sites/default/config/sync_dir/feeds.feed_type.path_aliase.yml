@@ -1,0 +1,73 @@
+uuid: e879a02c-fb97-486d-bb13-0f01cc5a1562
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+  module:
+    - node
+label: 'Path Aliase'
+id: path_aliase
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: project
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  path_alias:
+    value: path|alias
+    label: path|alias
+    machine_name: path_alias
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: path
+    map:
+      alias: path_alias
+      pathauto: ''
+    settings:
+      language: null

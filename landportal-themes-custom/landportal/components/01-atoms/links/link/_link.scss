@@ -1,0 +1,34 @@
+@mixin link {
+  color: clr(link);
+  text-decoration: none;
+  &:hover {
+    color: clr(link-hover);
+    text-decoration: underline;
+  }
+}
+
+.link {
+  @include link;
+
+  &--button {
+    padding: 5px 15px;
+    @include button-base;
+    @include button-color-primary;
+
+    &__support {
+      @include buttonColors(support);
+    }
+
+    &__subscribe {
+      @include buttonColors(subscribe);
+    }
+  }
+
+  &--dark {
+    color: clr(text-light);
+    &:hover {
+      color: clr(text-light);
+      text-decoration: underline;
+    }
+  }
+}

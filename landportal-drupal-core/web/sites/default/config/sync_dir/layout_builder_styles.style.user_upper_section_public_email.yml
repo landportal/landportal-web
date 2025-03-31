@@ -1,0 +1,12 @@
+uuid: 836a33ed-9d1c-4901-ad3e-83821baee7d2
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_public_email
+label: 'User Upper Section Public Email'
+classes: user-upper-section-public-email
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

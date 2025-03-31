@@ -1,0 +1,24 @@
+uuid: b31ce406-a6d9-4378-9db4-226bede9606e
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_common
+  theme:
+    - landportal
+id: ourmission
+theme: landportal
+region: footer
+weight: -22
+provider: null
+plugin: landportal_text_block
+settings:
+  id: landportal_text_block
+  label: 'Our mission'
+  label_display: visible
+  provider: landportal_common
+  text:
+    value: "<p>The Land Portal Foundation believes access to information is crucial to achieve good land governance and to secure land rights for vulnerable people. We help partners to create and disseminate land governance data and information through linked and open data technologies.</p>\r\n\r\n<p><a class=\"link link--button link--button__subscribe\" href=\"/get-involved\">Subscribe</a> <a class=\"link link--button link--button__support\" href=\"/donate\">Support us</a></p>\r\n\r\n<p class=\"small\"><a class=\"ourmission__copyright\" href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">Creative Commons Attribution</a>, 2014-2021 Land Portal Foundation / RSIN 854330045</p>\r\n"
+    format: full_html
+  wrapper_class: ''
+visibility: {  }

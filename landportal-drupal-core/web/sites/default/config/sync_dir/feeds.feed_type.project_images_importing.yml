@@ -1,0 +1,93 @@
+uuid: 2334fd47-d4e3-4e66-a924-44af77ee5f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.project_image
+    - node.type.project
+  module:
+    - node
+label: 'Project Images Importing'
+id: project_images_importing
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: project
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: 'image title'
+    label: 'image title'
+    machine_name: image_title
+    type: csv
+  this_project_is_part_of:
+    value: this_project_is_part_of
+    label: this_project_is_part_of
+    machine_name: this_project_is_part_of
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: project_image
+    map:
+      target_id: fid
+      alt: alt
+      title: image_title
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false

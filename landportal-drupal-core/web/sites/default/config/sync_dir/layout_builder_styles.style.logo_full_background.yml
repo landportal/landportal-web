@@ -1,0 +1,12 @@
+uuid: 934db397-bc12-4eb1-8b18-9318e42e115f
+langcode: en
+status: true
+dependencies: {  }
+id: logo_full_background
+label: 'Logo Full Background'
+classes: logo-full-background
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

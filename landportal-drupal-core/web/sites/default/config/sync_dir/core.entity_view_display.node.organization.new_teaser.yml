@@ -1,0 +1,419 @@
+uuid: e915a695-2eb5-4575-87ac-1203cb99c2dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - core.entity_view_mode.node.new_teaser
+    - field.field.node.organization.additionals
+    - field.field.node.organization.body
+    - field.field.node.organization.city
+    - field.field.node.organization.country
+    - field.field.node.organization.feeds_item
+    - field.field.node.organization.field_acronym
+    - field.field.node.organization.field_affiliated_organization
+    - field.field.node.organization.field_contact
+    - field.field.node.organization.field_email
+    - field.field.node.organization.field_file
+    - field.field.node.organization.field_geographical_focus
+    - field.field.node.organization.field_image
+    - field.field.node.organization.field_language
+    - field.field.node.organization.field_link
+    - field.field.node.organization.field_organization_relationship
+    - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_phone
+    - field.field.node.organization.field_postal_address
+    - field.field.node.organization.field_related_themes
+    - field.field.node.organization.field_related_topics
+    - field.field.node.organization.field_user
+    - field.field.node.organization.location_name
+    - field.field.node.organization.postal_code
+    - field.field.node.organization.seo_keywords
+    - field.field.node.organization.state_province
+    - field.field.node.organization.street
+    - node.type.organization
+  module:
+    - file
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'User content type'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - user_content_title_teaser
+        components:
+          db632eb5-91fd-4d7e-bbed-3945436485e3:
+            uuid: db632eb5-91fd-4d7e-bbed-3945436485e3
+            region: content
+            configuration:
+              id: 'field_block:node:organization:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'User organization teaser'
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style:
+            - user_full_content_teaser
+        components:
+          bf52c489-314a-41e9-b316-ff86da3b3925:
+            uuid: bf52c489-314a-41e9-b316-ff86da3b3925
+            region: first
+            configuration:
+              id: 'field_block:node:organization:field_image'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          e099033e-4b9a-4aaf-ab9a-2becd85f5602:
+            uuid: e099033e-4b9a-4aaf-ab9a-2becd85f5602
+            region: second
+            configuration:
+              id: 'field_block:node:organization:title'
+              label: 'Organization Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_title_style
+          b87c8921-7a11-4402-9bca-001a83b20c08:
+            uuid: b87c8921-7a11-4402-9bca-001a83b20c08
+            region: second
+            configuration:
+              id: 'field_block:node:organization:field_acronym'
+              label: Acronym
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_acronym_style
+          c9f7d97c-2690-4d7f-9541-138b874d0a29:
+            uuid: c9f7d97c-2690-4d7f-9541-138b874d0a29
+            region: second
+            configuration:
+              id: 'field_block:node:organization:field_organization_type'
+              label: 'Organization type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_organization_type_style
+          2e009b5f-5817-40cc-a395-7ba478793631:
+            uuid: 2e009b5f-5817-40cc-a395-7ba478793631
+            region: second
+            configuration:
+              id: 'field_block:node:organization:body'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_description_style
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.organization.new_teaser
+targetEntityType: node
+bundle: organization
+mode: new_teaser
+content:
+  additionals:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_acronym:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_contact:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_organization_relationship:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_organization_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_postal_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  location_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  postal_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  seo_keywords:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  state_province:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  street:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 118
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_affiliated_organization: true
+  langcode: true
+  search_api_excerpt: true

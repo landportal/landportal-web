@@ -1,0 +1,23 @@
+uuid: f5960fa0-421f-46e4-81ef-89b5d0a892e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contests_winner
+    - node.type.blog_post
+id: node.blog_post.field_contests_winner
+field_name: field_contests_winner
+entity_type: node
+bundle: blog_post
+label: 'Contests'' winner'
+description: 'Check here if this is a contest''s winner'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'YES'
+  off_label: 'NO'
+field_type: boolean

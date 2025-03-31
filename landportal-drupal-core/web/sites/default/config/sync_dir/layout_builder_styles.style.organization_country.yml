@@ -1,0 +1,12 @@
+uuid: f0be1a6b-41ef-455c-930b-70185ce035b3
+langcode: en
+status: true
+dependencies: {  }
+id: organization_country
+label: 'Organization Country'
+classes: Organization-country
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

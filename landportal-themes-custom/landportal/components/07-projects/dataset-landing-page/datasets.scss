@@ -1,0 +1,497 @@
+$p-small: 320px;
+$p-medium: 480px;
+$p-tablet: 768px;
+$p-large: 992px;
+$p-xlarge: 1200px;
+
+.new_page_term_datasets{
+	border-bottom: 5px solid #093;
+}
+.dataset-breadcrumb{ 
+	margin-top: 10px;
+	margin-left: 15px;
+	header{  
+		a{
+			font-style: italic; 
+ 			text-decoration: none;
+			color: #06c;
+			font-size: 13px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		span{
+			color: #777;
+			font-size: 13px;
+		}
+		.slash{
+			margin-left: inherit;
+			&::before{
+				content: "/ ";
+				padding: 0 5px;
+				color: #ccc;
+				text-decoration: none;
+				font-style: italic
+			}
+		}
+	}
+	h1{
+		font-size: 32px;
+		font-family: "Merriweather Sans",sans-serif;
+		font-weight: 700;
+		line-height: normal;
+		color: #555;
+		margin: 15px 0;
+	}
+}
+.dataset-full-style{
+	.container{
+		@media (min-width: $p-tablet){
+			display: flex;
+			padding: 0 0;
+		}
+		.section__sidebar__main{
+			.dataset-title{
+				div{
+					font-size: 32px;
+					font-family: "Merriweather Sans",sans-serif;
+					font-weight: 700;
+					line-height: normal;
+					color: #555;
+					margin: 15px 0;
+				}
+			}
+			.dataset-description{
+				font-size: 16px;
+				padding-bottom: 15px;
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+
+				a{
+					text-decoration: none;
+					color: #06c;
+					&:hover{
+						text-decoration: underline;
+						color: #004080;
+					}
+				}
+				.bg-green.col-sm-12{
+					background-color: #396;
+					padding: 10px 0 0 15px;
+					background-image: url(../images/bg-hand-world.png);
+					background-repeat: no-repeat;
+					background-position: bottom right;
+					background-position-x: right;
+					background-position-x: 98%;
+					h3, a, p{
+						color: white;
+						span{
+							u{
+								&::before{
+									background-image: url(../images/chart-bar-o.png);
+									content: '';
+									background-position: center;
+									background-size: cover;
+									width: 5%;
+									height: 30px;
+									display: inline-block;
+									margin-left: 2px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.dataset-accordian{
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				> div{
+					> div{
+						.primary-underline{
+							border-bottom: 1px solid lightgray;
+							font-size: 16px;
+							font-weight: bold;
+							cursor: pointer;
+							line-height: normal;
+							.form-item{
+								margin-bottom: 0;
+								max-width: inherit;
+								&:hover{
+									color: #063;
+								}
+								&::after{
+									content: '';
+									font-weight: normal;
+									clip-path: polygon(50% 0, 51% 0, 100% 35%, 94% 41%, 65% 19%, 50% 9%, 31% 24%, 7% 40%, 1% 38%);
+									background: #000000b5;
+									width: 9px;
+									height: 16px;
+									rotate: 180deg;
+									float: right;
+								}
+							}
+						}
+						.open{
+							.js-form-item{
+								&::after{
+									content: '';
+									font-weight: normal;
+									clip-path: polygon(50% 0, 51% 0, 100% 35%, 94% 41%, 65% 19%, 50% 9%, 31% 24%, 7% 40%, 1% 38%);
+									background: #000000b5;
+									width: 9px;
+									height: 16px;
+									rotate: 0deg;
+									top: 11px;
+  									position: relative;
+								}
+							}
+						}
+						.image-content-right, ul{
+							display: none;
+						}
+						&:not(:first-child){
+							margin-top: 1.5em;
+						}
+					}
+				} 
+			} 
+			.dataset-indicator-block{
+				width: 95%;
+				margin-left: auto;
+				margin-right: auto;
+				.js-form-item{
+					max-width: inherit;
+					h2{
+						font-size: 22px;
+						margin-top: 10px;
+						font-family: "Merriweather Sans",sans-serif;
+						font-weight: 700;
+						color: #333;
+					}
+					#html-table-description{
+						#html-table{
+							.table{
+								border: inherit;
+								thead{
+									th{
+										vertical-align: bottom; 
+									}
+								}
+								a{
+									color: #06C;
+									text-decoration: none;
+									&:hover{
+										text-decoration: underline;
+										color: #004080;
+									}
+								}
+								tbody{
+									td{
+										font-size: .9em;
+									}
+								}
+							}	
+						}
+					}	
+				}
+			}
+		}
+		.section__sidebar__aside{
+			flex: 0 0 33.33%;
+			background-color: #EBEBE5;
+			height: fit-content !important;
+			padding-left: 15px;
+			padding-right: 15px;
+			.dataset-select-list{
+				.views-row{
+					display: none;
+				}
+				#dataset-jump-menu{
+					cursor: pointer;
+					border: 1px solid #ccc;  
+					width: 100%;
+					font-size: 14px;
+					height: 34px;
+					background-color: #fff;
+					border-radius: 1.3em;
+					margin-top: 15px;
+					padding-left: 10px;
+					color: #555;
+				}
+			}
+			.dataset-license{
+				padding-top: 20px;
+				h3{
+					color: #333;
+					margin-bottom: 0;
+				}
+				.views-field-field-acronym{
+					a{
+						text-decoration: none;
+						font-size: 13px;
+						color: #06c;
+						&:hover{
+							text-decoration: underline;
+							color: #004080;
+						}
+					}
+				}
+			}
+			.dataset-official-site{
+				padding-top: 15px;  
+				.views-field-field-link{
+					a{
+						text-decoration: none;
+						overflow-wrap: break-word;
+						color: #06c;
+						&:hover{
+							text-decoration: underline;
+							color: #004080;
+						}
+					}
+				}
+				header{
+					h2{
+						font-size: 16px;
+						margin-bottom: 0;
+						font-weight: bold;
+					}
+				}
+			}
+			.dataset-copyright{ 
+				padding-top: 15px;
+				@media (min-width: $p-tablet){
+					overflow-wrap: break-word;
+				}
+
+				a{
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline; 
+					}
+				}
+				.text-long{
+					div:first-child{
+						font-weight: bold;
+						&::after{
+							content: ':';
+						}
+					}
+				}
+			}
+			.dataset-issues-block{
+				h2{
+					font-size: 16px;
+				}
+			}
+			.dataset-issues{
+				div{
+					div{
+						display: inline-block;
+						a{
+							font-size: 13px;
+							display: inline-block;
+							white-space: normal;
+							background-color: #e6f5f5;
+							border-left: 5px solid #099;
+							color: #333;
+							font-family: "Merriweather Sans",sans-serif;
+							padding: 3px 5px;
+							margin: 3px 5px;
+							border-radius: 0.6em;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			.dataset-related-landVoc-tags{
+				h2{
+					font-size: 16px;
+				}
+			}
+			.dataset-concepts{
+				margin-bottom: 16px;
+				div{
+					div{
+						display: inline-block;
+						a{
+							font-size: 13px;
+							display: inline-block;
+							white-space: normal;
+							background-color: #ebebf0;
+							border-left: 5px solid #336;
+							color: #333;
+							font-family: "Merriweather Sans",sans-serif;
+							padding: 3px 5px;
+							margin: 3px 5px;
+							border-radius: 0.6em;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			#block-landbook-view-coda-lbvc-download-cat{
+				&::before{
+					color: #333 !important; 
+				}
+			}
+			.dataset-image{
+				margin-top: 15px;
+
+				img{
+					width: 100%;
+				}
+			}
+			.dataset-provider-aside{
+				.page-title{
+					display: none;
+				}
+				.layout--twocol-section{
+					margin-top: 15px;
+					border-top: 5px solid #033;
+
+					.layout__region--first{
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+					.layout__region--second{
+						padding-top: 8px;
+						padding-left: 22px;
+
+						span{
+							a{
+								font-size: 13px;
+								text-decoration: none;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						.organization-acronym-in-dataset{
+							font-style: italic;
+							font-weight: normal;
+							font-size: 13px;
+						}
+						.organization-type-in-dataset{
+							text-transform: uppercase;
+							font-family: "Merriweather Sans",sans-serif;
+
+							div{
+								color: #444;
+								//display: inline;
+								padding: .2em .6em .3em;
+								font-size: 75%;
+								font-weight: bold;
+								line-height: 1.4;
+							}
+						}
+					}
+				}
+			}
+			.dataset-partners-donors{
+				padding-top: 5%;
+				header{
+					h3{
+						font-size: 16px;
+						font-weight: bold;
+						margin: 0;
+					}
+				} 
+				.views-row{ 
+					.field-content{
+						h2{
+							display: none;
+						}
+						article{
+							> div{
+								position: relative;
+								width: 160px;
+
+								.layout{
+									&:nth-of-type(1){
+										border-top: 4px solid black;
+										max-width: 160px;
+										height: 160px;
+										display: flex;
+										justify-content: center;
+										align-items: center;
+										.layout__region{									
+											img{
+												width: 90%;
+												margin-left: auto;
+												margin-right: auto;
+												padding: 5%;
+
+											}
+										}
+									}
+								  	&:nth-child(2) {
+								  		display: none;
+								  		position: absolute;
+										bottom: 0;
+										background-color: rgba(51,51,51,0.7);
+										height: 100%;
+										width: 100%;
+										.layout__region{
+											position: absolute;
+											bottom: 0;
+											text-align: center;
+									  		.block{
+									  			font-size: 12px;
+									  			text-align: center;
+									  			color: white;
+									  			font-weight: bold;
+									  			display: inline;
+									  			div{
+									  				display: inline;
+									  				font-style: italic;
+									  				&::before{
+									  					content: '(';
+									  				}
+									  				&::after{
+									  					content: ')';
+									  				}									  				
+									  			} 
+									  			span{
+									  				display: inline;
+									  			}
+									  			a{
+									  				color: white;
+									  				font-size: 16px;
+									  				line-height: 1em;
+									  			}
+									  		}
+										}
+								  	}
+								}
+							}
+						}  
+					} 
+				} 
+			}
+		}
+	}	
+}
+.dataset-banner-image{
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.other-style{
+	margin-top: -10%;
+	.section__sidebar__main{
+		background: #fff;
+  		margin: 0;
+	}
+	.section__sidebar__aside{
+		margin-top: -10%;
+	}
+}
+.data-landing-page-view{
+	header{
+		padding-top: 5%;
+	}
+}

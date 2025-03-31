@@ -1,0 +1,14 @@
+uuid: f13102c7-9d28-4741-ab67-9f86bce60b70
+langcode: en
+status: true
+dependencies: {  }
+name: issue_narrative_image
+label: 'Issue narrative image'
+effects:
+  b8949570-daa6-476c-adb4-148a627ff73f:
+    uuid: b8949570-daa6-476c-adb4-148a627ff73f
+    id: image_resize
+    weight: 1
+    data:
+      width: 1200
+      height: 450

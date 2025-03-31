@@ -1,0 +1,15 @@
+uuid: f35f8cdd-f113-4a39-8b71-5652c636c028
+langcode: en
+status: true
+dependencies: {  }
+name: large_480x480_
+label: 'New Large (480x480)'
+effects:
+  e551d1a3-a8df-4bd5-9024-e80ba7aa79c2:
+    uuid: e551d1a3-a8df-4bd5-9024-e80ba7aa79c2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

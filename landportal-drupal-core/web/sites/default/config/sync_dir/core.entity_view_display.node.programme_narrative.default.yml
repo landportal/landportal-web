@@ -1,0 +1,408 @@
+uuid: 0151d092-a387-46bf-bed6-595fc6067cdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.programme_narrative.additional
+    - field.field.node.programme_narrative.body
+    - field.field.node.programme_narrative.feeds_item
+    - field.field.node.programme_narrative.link_to_narrative
+    - field.field.node.programme_narrative.main_image
+    - field.field.node.programme_narrative.parent_programme
+    - field.field.node.programme_narrative.quote
+    - field.field.node.programme_narrative.sub_menu
+    - field.field.node.programme_narrative.sub_menu_children
+    - field.field.node.programme_narrative.sub_menu_parent
+    - node.type.programme_narrative
+    - views.view.back_to_programme_overview_page
+    - views.view.landvoc_image
+    - views.view.programme_child
+    - views.view.programme_child_siblings
+    - views.view.programme_landvoc
+    - views.view.programme_narrative_breadcrumb
+    - views.view.programme_narrative_logo
+    - views.view.programme_siblings_parent
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - options
+    - social_media
+    - text
+    - user
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme Narrative Breadcrumb'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_breadcrumb
+        components:
+          2d997b79-12aa-4bb1-aff4-5287723ebba1:
+            uuid: 2d997b79-12aa-4bb1-aff4-5287723ebba1
+            region: content
+            configuration:
+              id: 'views_block:programme_narrative_breadcrumb-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: 'Programme Narrative Top'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_logo
+        components:
+          3c964a24-d5fb-4431-a857-9df55f2d4dae:
+            uuid: 3c964a24-d5fb-4431-a857-9df55f2d4dae
+            region: main
+            configuration:
+              id: 'field_block:node:programme_narrative:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          75240594-974a-4120-ace6-b9554dd20a9f:
+            uuid: 75240594-974a-4120-ace6-b9554dd20a9f
+            region: aside
+            configuration:
+              id: social_sharing_block
+              label: 'Social Sharing block'
+              label_display: '0'
+              provider: social_media
+              context_mapping: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style: ''
+          64595e94-f50a-4044-a2b0-3af5f116eed5:
+            uuid: 64595e94-f50a-4044-a2b0-3af5f116eed5
+            region: main
+            configuration:
+              id: 'views_block:programme_child-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 3
+            additional:
+              layout_builder_styles_style: ''
+          5c73292c-59cf-42d3-bf96-6b99cdd95f43:
+            uuid: 5c73292c-59cf-42d3-bf96-6b99cdd95f43
+            region: main
+            configuration:
+              id: 'views_block:programme_siblings_parent-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          bcbd37a3-f6b5-46c9-bd6f-c00cae4d17a0:
+            uuid: bcbd37a3-f6b5-46c9-bd6f-c00cae4d17a0
+            region: main
+            configuration:
+              id: 'views_block:programme_child_siblings-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional:
+              layout_builder_styles_style: ''
+          54544a8b-96c6-4d47-8ead-b9f881d279a1:
+            uuid: 54544a8b-96c6-4d47-8ead-b9f881d279a1
+            region: aside
+            configuration:
+              id: 'views_block:back_to_programme_overview_page-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          b63e53b8-2424-405e-93c2-82ae096d46ec:
+            uuid: b63e53b8-2424-405e-93c2-82ae096d46ec
+            region: main
+            configuration:
+              id: 'views_block:programme_narrative_logo-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Programme Main Image'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_main_image
+        components:
+          7a7de172-11b6-4109-894a-ed8f9646a55b:
+            uuid: 7a7de172-11b6-4109-894a-ed8f9646a55b
+            region: content
+            configuration:
+              id: 'field_block:node:programme_narrative:main_image'
+              label: 'Main image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Quote section'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_quote_
+        components:
+          12cbd354-fb4e-485b-9cdf-cf9bc4e7449f:
+            uuid: 12cbd354-fb4e-485b-9cdf-cf9bc4e7449f
+            region: content
+            configuration:
+              id: 'field_block:node:programme_narrative:quote'
+              label: Quote
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme Body'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_main_body
+        components:
+          29cf9e34-c721-4817-a266-8a84dca6975d:
+            uuid: 29cf9e34-c721-4817-a266-8a84dca6975d
+            region: content
+            configuration:
+              id: 'field_block:node:programme_narrative:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: LandVoc
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style: programme_landvoc_bar
+        components:
+          917bf6c6-4027-4c9f-9927-ebdc87276252:
+            uuid: 917bf6c6-4027-4c9f-9927-ebdc87276252
+            region: second
+            configuration:
+              id: 'views_block:programme_landvoc-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          42b29660-3adc-484a-b6c1-1eb73eb52d5e:
+            uuid: 42b29660-3adc-484a-b6c1-1eb73eb52d5e
+            region: first
+            configuration:
+              id: 'views_block:landvoc_image-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme additional paragraph'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_narrative_additional_para
+        components:
+          7adf3669-6535-4e76-8d55-418305b7ad43:
+            uuid: 7adf3669-6535-4e76-8d55-418305b7ad43
+            region: content
+            configuration:
+              id: 'field_block:node:programme_narrative:additional'
+              label: Additional
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: additional_information_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.programme_narrative.default
+targetEntityType: node
+bundle: programme_narrative
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  link_to_narrative:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  main_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  parent_programme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  quote:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  sub_menu:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  sub_menu_children:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  sub_menu_parent:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+hidden:
+  additional: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

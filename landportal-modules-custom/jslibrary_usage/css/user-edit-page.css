@@ -1,0 +1,43 @@
+.js-form-item.form-item .password-parent, .js-form-item.form-item .password-confirm {
+    max-width: 40%;
+    float: left;
+    margin: 0 5px ;
+}
+.js-form-item.form-item{
+    max-width: 100%;
+}
+
+.js-form-item.form-item #edit-current-pass, #edit-mail{
+    width: 100%;
+}
+
+.layout__region.layout__region--first #edit-profile-wrapper{
+    width: 30%;
+    float: left;
+}
+.layout__region.layout__region--first #edit-title-wrapper, .layout__region.layout__region--first #edit-hide-profile-wrapper, .layout__region.layout__region--first #edit-first-name-wrapper, .layout__region.layout__region--first #edit-description-wrapper, .layout__region.layout__region--first #edit-last-name-wrapper, .layout__region.layout__region--first #edit-country-wrapper, .layout__region.layout__region--first #edit-location-name-wrapper, .layout__region.layout__region--first #edit-street-wrapper, .layout__region.layout__region--first #edit-city-wrapper, .layout__region.layout__region--first #edit-postal-code-wrapper, .layout__region.layout__region--first #edit-country-code-wrapper{
+    float: right;
+    width: 60%;
+    margin: 0 5px;
+    clear: right;
+}
+.layout__region.layout__region--first #edit-geographical-focus-wrapper{
+    clear: right;
+}
+.layout__region.layout__region--first .js-form-item.form-item{
+    max-width: inherit;
+}
+.layout__region.layout__region--first .form-item__textfield{
+    max-width: inherit !important;
+}
+.toolbar-icon-9 .password-parent{
+    float: inherit !important;
+}
+.js-form-item-path-0-alias{
+    clear: right;
+    float: right;
+    width: 60%;
+}
+.toolbar-icon-9 .layout__region--second{
+    flex: inherit !important;
+}

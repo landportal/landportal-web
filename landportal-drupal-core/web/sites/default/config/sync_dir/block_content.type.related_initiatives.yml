@@ -1,0 +1,8 @@
+uuid: db4c0a9d-e8d8-498c-ae60-92fbc599e959
+langcode: en
+status: true
+dependencies: {  }
+id: related_initiatives
+label: 'Related Initiatives'
+revision: 0
+description: ''

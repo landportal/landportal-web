@@ -1,0 +1,23 @@
+uuid: a0596ccd-d77c-438d-b52f-402f88a02f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+    - custom_pub.custom_publishing_option.promote_to_insights
+id: node.campaign.promote_to_insights
+field_name: promote_to_insights
+entity_type: node
+bundle: campaign
+label: 'Promoted to Insights'
+description: 'custom publication option.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

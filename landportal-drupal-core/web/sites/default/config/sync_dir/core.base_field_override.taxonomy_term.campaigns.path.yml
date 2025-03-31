@@ -1,0 +1,20 @@
+uuid: c2f919cb-6076-462f-abef-4fd952ac92d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+  module:
+    - path
+id: taxonomy_term.campaigns.path
+field_name: path
+entity_type: taxonomy_term
+bundle: campaigns
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

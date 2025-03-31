@@ -1,0 +1,59 @@
+label: Archivos
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      title: Archivos
+      fields:
+        filename:
+          label: Nombre
+          separator: ', '
+        filesize:
+          label: Tamaño
+        status:
+          label: Estado
+          settings:
+            format_custom_false: Temporal
+        changed:
+          label: 'Fecha de modificación'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        filename:
+          expose:
+            label: 'Nombre de archivo'
+        status:
+          expose:
+            label: Estado
+  page_1:
+    display_options:
+      menu:
+        title: Archivos
+  page_2:
+    display_options:
+      fields:
+        entity_label:
+          label: Entidad
+        type:
+          label: 'Tipo de entidad'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      arguments:
+        fid:
+          exception:
+            title: Todo(s)

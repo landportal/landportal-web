@@ -1,0 +1,12 @@
+uuid: 3641777b-7820-4a73-a5b3-1ea2db174856
+langcode: en
+status: true
+dependencies: {  }
+id: project_currency_background_
+label: 'Project Currency Background '
+classes: 'project-currency-background '
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

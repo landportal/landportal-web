@@ -1,0 +1,45 @@
+uuid: 999972ad-6e04-44a9-9617-2e07328edd94
+langcode: en
+status: false
+dependencies:
+  config:
+    - comment.type.default_comments
+    - core.entity_view_mode.comment.full
+    - field.field.comment.default_comments.comment_body
+    - field.field.comment.default_comments.feeds_item
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: comment.default_comments.full
+targetEntityType: comment
+bundle: default_comments
+mode: full
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

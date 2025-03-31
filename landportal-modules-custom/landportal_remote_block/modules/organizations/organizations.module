@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for organizations.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function organizations_theme($existing, $type, $theme, $path) {
+  return [
+    'organizations_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

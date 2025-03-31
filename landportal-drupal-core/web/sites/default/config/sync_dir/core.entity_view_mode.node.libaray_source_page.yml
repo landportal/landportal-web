@@ -1,0 +1,10 @@
+uuid: 34e84dae-6575-4ad5-be16-edea8761abac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.libaray_source_page
+label: 'Libaray Source Page'
+targetEntityType: node
+cache: true

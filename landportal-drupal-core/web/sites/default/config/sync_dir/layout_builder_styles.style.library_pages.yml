@@ -1,0 +1,12 @@
+uuid: 81cf8433-d2a7-4fc2-9e64-896e386a6b0e
+langcode: en
+status: true
+dependencies: {  }
+id: library_pages
+label: 'Library Pages'
+classes: library-pages
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

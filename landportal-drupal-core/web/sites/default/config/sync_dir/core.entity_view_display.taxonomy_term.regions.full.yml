@@ -1,0 +1,42 @@
+uuid: ee95f779-0866-4aba-a927-762b2fc86166
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.regions.feeds_item
+    - field.field.taxonomy_term.regions.field_area_code_un_m_49_
+    - field.field.taxonomy_term.regions.field_iso2
+    - field.field.taxonomy_term.regions.field_iso3
+    - taxonomy.vocabulary.regions
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - section_onecol
+        - section_threecol
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+id: taxonomy_term.regions.full
+targetEntityType: taxonomy_term
+bundle: regions
+mode: full
+content: {  }
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_area_code_un_m_49_: true
+  field_iso2: true
+  field_iso3: true
+  langcode: true
+  search_api_excerpt: true

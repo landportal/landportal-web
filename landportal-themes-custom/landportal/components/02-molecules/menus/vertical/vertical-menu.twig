@@ -1,0 +1,12 @@
+{% if menu_label %}
+  {% include "@atoms/text/headings/_heading.twig" with {
+    "heading_level": 4,
+    "heading": menu_label,
+    "heading_base_class": 'heading',
+    "heading_blockname": 'vertical-menu',
+  } %}
+{% endif %}
+{% include "@molecules/menus/_menu.twig" with {
+  menu_class: 'vertical-menu',
+  items: menu_items,
+} %}

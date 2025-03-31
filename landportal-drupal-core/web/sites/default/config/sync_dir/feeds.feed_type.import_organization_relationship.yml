@@ -1,0 +1,119 @@
+uuid: e33f32f1-7e2b-48a5-9a8d-81ed6d9f5c27
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_organization_relationship
+    - node.type.organization
+  module:
+    - node
+label: 'Import Organization relationship for Organization'
+id: import_organization_relationship
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  organization_relationship:
+    value: 'Organization relationship'
+    label: 'Organization relationship'
+    machine_name: organization_relationship
+    type: csv
+  organization_relationship1:
+    value: 'Organization relationship1'
+    label: 'Organization relationship1'
+    machine_name: organization_relationship1
+    type: csv
+  organization_relationship2:
+    value: 'Organization relationship2'
+    label: 'Organization relationship2'
+    machine_name: organization_relationship2
+    type: csv
+  organization_relationship3:
+    value: 'Organization relationship3'
+    label: 'Organization relationship3'
+    machine_name: organization_relationship3
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_organization_relationship
+    map:
+      target_id: organization_relationship
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_relationship
+    map:
+      target_id: organization_relationship1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_relationship
+    map:
+      target_id: organization_relationship2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_organization_relationship
+    map:
+      target_id: organization_relationship3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

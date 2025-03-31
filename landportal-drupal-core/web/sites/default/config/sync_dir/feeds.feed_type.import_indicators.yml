@@ -1,0 +1,198 @@
+uuid: 0aee6a2b-c4db-48a1-8eb4-d503d0770412
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.indicators.name
+    - core.base_field_override.taxonomy_term.indicators.path
+    - field.field.taxonomy_term.indicators.field_dataset
+    - field.field.taxonomy_term.indicators.field_description
+    - field.field.taxonomy_term.indicators.field_hascodedvalue
+    - field.field.taxonomy_term.indicators.field_highlow
+    - field.field.taxonomy_term.indicators.field_id
+    - field.field.taxonomy_term.indicators.field_max
+    - field.field.taxonomy_term.indicators.field_min
+    - field.field.taxonomy_term.indicators.field_name
+    - field.field.taxonomy_term.indicators.field_unit
+    - taxonomy.vocabulary.indicators
+  module:
+    - taxonomy
+label: 'Import Indicators'
+id: import_indicators
+description: 'Import Indicators only'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: indicators
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  dataset:
+    value: Dataset
+    label: Dataset
+    machine_name: dataset
+    type: csv
+  min:
+    value: min
+    label: min
+    machine_name: min
+    type: csv
+  max:
+    value: max
+    label: max
+    machine_name: max
+    type: csv
+  measurement_unit:
+    value: 'Measurement unit'
+    label: 'Measurement unit'
+    machine_name: measurement_unit
+    type: csv
+  has_coded_value:
+    value: 'has Coded Value'
+    label: 'has Coded Value'
+    machine_name: has_coded_value
+    type: csv
+  best_value_is:
+    value: 'Best value is'
+    label: 'Best value is'
+    machine_name: best_value_is
+    type: csv
+  id:
+    value: ID
+    label: ID
+    machine_name: id
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  indicator_description:
+    value: 'Indicator Description'
+    label: 'Indicator Description'
+    machine_name: indicator_description
+    type: csv
+  indicator_name:
+    value: 'Indicator name'
+    label: 'Indicator name'
+    machine_name: indicator_name
+    type: csv
+  title:
+    value: name
+    label: name
+    machine_name: title
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_dataset
+    map:
+      target_id: dataset
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_min
+    map:
+      value: min
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_max
+    map:
+      value: max
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_unit
+    map:
+      value: measurement_unit
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hascodedvalue
+    map:
+      value: has_coded_value
+    settings:
+      language: null
+  -
+    target: field_highlow
+    map:
+      value: best_value_is
+    settings:
+      language: null
+  -
+    target: field_id
+    map:
+      value: id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: field_name
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_description
+    map:
+      value: indicator_description
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: name
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }

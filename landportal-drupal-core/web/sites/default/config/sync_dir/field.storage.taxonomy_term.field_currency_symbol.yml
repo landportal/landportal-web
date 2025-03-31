@@ -1,0 +1,21 @@
+uuid: 1c478be2-3547-45d1-93cd-2b7c5d6adb3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_currency_symbol
+field_name: field_currency_symbol
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

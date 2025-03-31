@@ -1,0 +1,20 @@
+uuid: 496dac2d-1afa-4657-9cad-6ef8f9f2c58c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.datasets
+  module:
+    - path
+id: taxonomy_term.datasets.path
+field_name: path
+entity_type: taxonomy_term
+bundle: datasets
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

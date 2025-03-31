@@ -1,0 +1,12 @@
+uuid: cd9b8f94-8c29-47b5-a8f5-ea1aca5509ce
+langcode: en
+status: true
+dependencies: {  }
+id: event_street
+label: 'Event Street'
+classes: event-street
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

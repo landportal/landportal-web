@@ -1,0 +1,12 @@
+uuid: 1e171fdd-6813-4bd2-91bc-376c290b30a7
+langcode: en
+status: true
+dependencies: {  }
+id: news_image_blur
+label: 'News Image Blur'
+classes: news-image-blur
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

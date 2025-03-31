@@ -1,0 +1,8 @@
+display:
+  block_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Últimos set de datos estadísticos y espaciales actualizados</h2>\r\n"
+            format: filtered_html

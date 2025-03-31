@@ -1,0 +1,12 @@
+uuid: ab149f46-8eb5-4d34-8ebb-4fee4383aab8
+langcode: en
+status: true
+dependencies: {  }
+id: user_teaser_organization_type_style
+label: 'User Teaser Organization Type Style'
+classes: user-teaser-org-type-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

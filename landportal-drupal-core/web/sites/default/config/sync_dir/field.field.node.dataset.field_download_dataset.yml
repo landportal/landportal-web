@@ -1,0 +1,23 @@
+uuid: ed07295b-b6a7-412f-b765-a12c9c7bfbea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_download_dataset
+    - node.type.dataset
+  module:
+    - download_dataset
+id: node.dataset.field_download_dataset
+field_name: field_download_dataset
+entity_type: node
+bundle: dataset
+label: 'Download dataset'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    download_dataset: 'no'
+default_value_callback: ''
+settings: {  }
+field_type: download_dataset_type

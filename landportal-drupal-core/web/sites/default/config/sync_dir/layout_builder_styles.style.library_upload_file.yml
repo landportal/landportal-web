@@ -1,0 +1,12 @@
+uuid: ad8bfce3-1547-4d20-a85a-e1677b50ce5c
+langcode: en
+status: true
+dependencies: {  }
+id: library_upload_file
+label: 'Library Upload file'
+classes: library-upload-file
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

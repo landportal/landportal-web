@@ -1,0 +1,186 @@
+uuid: f86c9373-e2b9-4de4-9f33-11b56d914974
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_publisher
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library Resource Publisher(s)'
+id: import_library_resource_with_aut
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  resource_title:
+    value: 'Resource title'
+    label: 'Resource title'
+    machine_name: resource_title
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  promoted_to_library:
+    value: 'Promoted to Library'
+    label: 'Promoted to Library'
+    machine_name: promoted_to_library
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  language:
+    value: Language
+    label: Language
+    machine_name: language
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  published:
+    value: Published
+    label: Published
+    machine_name: published
+    type: csv
+  duration:
+    value: Duration
+    label: Duration
+    machine_name: duration
+    type: csv
+  field_doc_publisher:
+    value: field_doc_publisher
+    label: field_doc_publisher
+    machine_name: field_doc_publisher
+    type: csv
+  field_doc_publisher1:
+    value: field_doc_publisher1
+    label: field_doc_publisher1
+    machine_name: field_doc_publisher1
+    type: csv
+  field_doc_publisher2:
+    value: field_doc_publisher2
+    label: field_doc_publisher2
+    machine_name: field_doc_publisher2
+    type: csv
+  field_doc_publisher3:
+    value: field_doc_publisher3
+    label: field_doc_publisher3
+    machine_name: field_doc_publisher3
+    type: csv
+  field_doc_publisher4:
+    value: field_doc_publisher4
+    label: field_doc_publisher4
+    machine_name: field_doc_publisher4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_publisher
+    map:
+      target_id: field_doc_publisher
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_publisher
+    map:
+      target_id: field_doc_publisher1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_publisher
+    map:
+      target_id: field_doc_publisher2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_publisher
+    map:
+      target_id: field_doc_publisher3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_publisher
+    map:
+      target_id: field_doc_publisher4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

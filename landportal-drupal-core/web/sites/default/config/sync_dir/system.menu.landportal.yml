@@ -1,0 +1,8 @@
+uuid: c47bc7cf-a2da-42a6-9243-fb16b2a0874a
+langcode: en
+status: true
+dependencies: {  }
+id: landportal
+label: 'Landportal menu'
+description: 'Landportal links'
+locked: false

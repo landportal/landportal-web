@@ -1,0 +1,213 @@
+uuid: f52d8302-7bb8-49a0-8f73-9bf8c788bc95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_campaign
+    - field.field.node.campaign.field_doc_people
+    - field.field.node.campaign.field_geographical_focus
+    - field.field.node.campaign.field_image
+    - field.field.node.campaign.field_pubdate
+    - field.field.node.campaign.field_related_themes
+    - node.type.campaign
+  module:
+    - node
+label: 'Campaign CT(Single Fields)'
+id: campaign_ct_single_fields_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: campaign
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: Body
+    label: Body
+    machine_name: body
+    type: csv
+  date:
+    value: date
+    label: date
+    machine_name: date
+    type: csv
+  author_editor_contributor:
+    value: Author_editor_contributor
+    label: Author_editor_contributor
+    machine_name: author_editor_contributor
+    type: csv
+  campaign:
+    value: Campaign
+    label: Campaign
+    machine_name: campaign
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  geographical:
+    value: geographical
+    label: geographical
+    machine_name: geographical
+    type: csv
+  themes:
+    value: themes
+    label: themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: themes1
+    label: themes1
+    machine_name: themes1
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_pubdate
+    map:
+      value: date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_doc_people
+    map:
+      value: author_editor_contributor
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_campaign
+    map:
+      target_id: campaign
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: image_title
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false

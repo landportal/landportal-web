@@ -1,0 +1,12 @@
+uuid: 3808433f-fd6b-4c29-b6c6-bf62d1973788
+langcode: en
+status: true
+dependencies: {  }
+id: related_concepts
+label: 'Related concepts'
+classes: related-concepts
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,6 @@
+name: Landportal - Related Content Edit
+type: module
+description: 'Landportal Related Content Edit Drupal 9 Module.'
+package: Landportal
+version: 1.0
+core_version_requirement: ^8 || ^9 || ^10

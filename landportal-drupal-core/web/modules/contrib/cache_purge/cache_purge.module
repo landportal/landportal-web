@@ -1,0 +1,56 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function cache_purge_cron() {
+  $config = \Drupal::config('cache_purge.settings');
+  $size_limit = $config->get('size_limit') ?: 100; // Default to 100 MB if not set
+
+  $cache_tables = cache_purge_get_cache_tables();
+  
+  foreach ($cache_tables as $table) {
+  $size = cache_purge_get_table_size($table);
+    if ($size > $size_limit) {
+        cache_purge_clear_table($table, $size);
+    }
+  }
+}
+
+/**
+ * Get a list of cache tables.
+ */
+function cache_purge_get_cache_tables() {
+  $tables = &drupal_static(__FUNCTION__);
+  if (!isset($tables)) {
+    $database = \Drupal::database();
+    $tables = $database->query("SHOW TABLES LIKE 'cache%'")->fetchCol();
+  }
+  return $tables;
+}
+
+/**
+ * Get the size of a table in megabytes.
+ */
+function cache_purge_get_table_size($table) {
+  $database = \Drupal::database();
+  $size = $database->query("SELECT SUM(data_length + index_length) / 1024 / 1024 AS size FROM information_schema.TABLES WHERE table_schema = DATABASE() AND table_name = :table", [':table' => $table])->fetchField();
+  return $size;
+}
+
+/**
+ * Clear a cache table.
+ */
+
+function cache_purge_clear_table($table, $size) {
+  $database = \Drupal::database();
+  $database->truncate($table)->execute();
+
+  $logger = \Drupal::logger('cache_purge');
+  $logger->notice('Cache table @table (size: @size MB) has been truncated due to exceeding size limit.', [
+    '@table' => $table,
+    '@size' => number_format($size, 2),
+  ]);
+}

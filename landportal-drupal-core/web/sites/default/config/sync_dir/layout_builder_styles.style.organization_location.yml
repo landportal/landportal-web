@@ -1,0 +1,12 @@
+uuid: 0a4e9cea-fce8-4ba6-910a-759c4acc465c
+langcode: en
+status: true
+dependencies: {  }
+id: organization_location
+label: 'Organization Location'
+classes: Organization-location
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

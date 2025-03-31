@@ -1,0 +1,51 @@
+uuid: e64d4d04-64c4-443f-ba33-72153c4d6355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.concepts.feeds_item
+    - field.field.taxonomy_term.concepts.field_agrovoc_uri
+    - field.field.taxonomy_term.concepts.synonyms_synonyms
+    - taxonomy.vocabulary.concepts
+  module:
+    - link
+    - text
+id: taxonomy_term.concepts.default
+targetEntityType: taxonomy_term
+bundle: concepts
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_agrovoc_uri:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  synonyms_synonyms:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

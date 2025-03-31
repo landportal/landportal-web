@@ -1,0 +1,25 @@
+before_script:
+  - apt-get update -qq
+  - apt-get install -qq git
+  # Setup SSH deploy keys
+  - echo "$SSH_PRIVATE_KEY"
+  - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+#  - git submodule sync --recursive
+#  - git submodule update --init --recursive
+    
+deploy_staging:
+  type: deploy
+  environment:
+    name: dev
+    url: 94.130.32.233
+  script:
+          - ssh -v gitlab@94.130.32.233 "cd /home/landportal/docker/cambra/cambra9/html  && git checkout dev && git pull origin dev && composer install && exit"
+  only:
+    - dev
+
+
+

@@ -1,0 +1,12 @@
+uuid: bd407c66-7c76-4345-b16d-45b604d2708f
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_country_code
+label: 'User Upper Section Country Code'
+classes: user-upper-section-country-code
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

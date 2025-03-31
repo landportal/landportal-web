@@ -1,0 +1,33 @@
+uuid: 2d799916-e40c-44fb-ab52-364c8f677230
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: issues_overview_french
+label: 'Issues Overview French'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'thèmes/[term:name]'
+selection_criteria:
+  6fda4afc-d8e8-443e-a2cf-75658de19e80:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 6fda4afc-d8e8-443e-a2cf-75658de19e80
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      theme: theme
+  00ab2184-3c29-443e-90b9-edeb161101a9:
+    id: language
+    negate: false
+    uuid: 00ab2184-3c29-443e-90b9-edeb161101a9
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

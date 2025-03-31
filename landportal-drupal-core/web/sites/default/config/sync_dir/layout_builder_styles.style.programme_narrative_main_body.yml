@@ -1,0 +1,12 @@
+uuid: cfbff5b2-b8b9-48cc-b579-8f130093b891
+langcode: en
+status: true
+dependencies: {  }
+id: programme_narrative_main_body
+label: 'Programme Narrative Main Body'
+classes: programme-narrative-main-body
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

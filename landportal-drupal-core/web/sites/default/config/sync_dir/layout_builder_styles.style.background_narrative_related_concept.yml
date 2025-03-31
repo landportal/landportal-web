@@ -1,0 +1,12 @@
+uuid: bdfbf51c-d0d2-4383-9586-9ba591c5f9e6
+langcode: en
+status: true
+dependencies: {  }
+id: background_narrative_related_concept
+label: 'Background Narrative Related Concept'
+classes: background-narrative-related-concept
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

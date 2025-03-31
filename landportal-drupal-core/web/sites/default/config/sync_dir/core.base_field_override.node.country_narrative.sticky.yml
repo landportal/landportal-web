@@ -1,0 +1,22 @@
+uuid: d32a4996-40ab-41a2-b5ad-d484b07a38fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.country_narrative
+id: node.country_narrative.sticky
+field_name: sticky
+entity_type: node
+bundle: country_narrative
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

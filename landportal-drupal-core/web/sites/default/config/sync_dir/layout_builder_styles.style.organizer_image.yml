@@ -1,0 +1,12 @@
+uuid: 23a958e3-3d84-4e2e-a4e3-5f8a471d85cc
+langcode: en
+status: true
+dependencies: {  }
+id: organizer_image
+label: Organizer-Image
+classes: organizer-image
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

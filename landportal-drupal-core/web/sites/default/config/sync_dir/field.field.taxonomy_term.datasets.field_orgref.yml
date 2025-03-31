@@ -1,0 +1,29 @@
+uuid: 2b49401d-ee0a-411d-af50-6268174b2cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_orgref
+    - node.type.organization
+    - taxonomy.vocabulary.datasets
+id: taxonomy_term.datasets.field_orgref
+field_name: field_orgref
+entity_type: taxonomy_term
+bundle: datasets
+label: 'Dataset provider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

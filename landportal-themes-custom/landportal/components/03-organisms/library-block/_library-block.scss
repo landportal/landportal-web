@@ -1,0 +1,23 @@
+.library-block {
+  padding: $space-double 0;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: clr(library);
+    border-bottom: 4px solid clr(library);
+    margin-bottom: $space;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: clr(library);
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

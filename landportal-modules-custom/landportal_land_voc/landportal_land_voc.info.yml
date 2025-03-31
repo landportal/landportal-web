@@ -1,0 +1,5 @@
+name: 'Landportal LandVoc'
+description: 'Provides a custom block for displaying Land Portal Land Vocabulary tree.'
+type: module
+core_version_requirement: ^9 || ^10
+package: Custom

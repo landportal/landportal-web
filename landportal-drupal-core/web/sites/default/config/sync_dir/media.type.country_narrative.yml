@@ -1,0 +1,14 @@
+uuid: 9545c528-ea4a-4056-8b92-bea34503d78e
+langcode: en
+status: true
+dependencies: {  }
+id: country_narrative
+label: 'Country narrative'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

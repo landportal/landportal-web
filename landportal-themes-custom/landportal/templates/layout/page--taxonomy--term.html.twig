@@ -1,0 +1,5 @@
+{% if page.sidebar|render %} {# this may or may not correctly filter sidebar #}
+  {% set sidebar = TRUE %}
+{% endif %}
+
+{% include "@landportal/layout/page.html.twig" with { main_base_class: 'main-wide' }  %}

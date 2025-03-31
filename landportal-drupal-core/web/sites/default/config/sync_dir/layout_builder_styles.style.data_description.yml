@@ -1,0 +1,12 @@
+uuid: f9c895b3-bb18-48a9-a63a-3b9dd7966a08
+langcode: en
+status: true
+dependencies: {  }
+id: data_description
+label: 'Data Description'
+classes: data-description
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

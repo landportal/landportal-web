@@ -1,0 +1,22 @@
+uuid: b6a795ba-5d20-4a66-b3c2-ff2e23c8d809
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - landportal
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: landportal_messages
+theme: landportal
+region: content
+weight: -23
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

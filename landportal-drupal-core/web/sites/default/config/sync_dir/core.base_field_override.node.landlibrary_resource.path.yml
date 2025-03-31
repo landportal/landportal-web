@@ -1,0 +1,20 @@
+uuid: cea2a789-36af-4e04-bf70-a942bdb65ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+  module:
+    - path
+id: node.landlibrary_resource.path
+field_name: path
+entity_type: node
+bundle: landlibrary_resource
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

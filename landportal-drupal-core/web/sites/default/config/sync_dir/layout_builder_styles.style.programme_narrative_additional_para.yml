@@ -1,0 +1,12 @@
+uuid: cd464a46-d7e6-49fa-8866-c4ed0847d309
+langcode: en
+status: true
+dependencies: {  }
+id: programme_narrative_additional_para
+label: 'Programme Narrative Additional Para'
+classes: programme-narrative-additional-para
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

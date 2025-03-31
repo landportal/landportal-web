@@ -1,0 +1,12 @@
+uuid: 553f89ae-d727-42ec-ac44-840629653e36
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_indicator_block
+label: 'Dataset indicator block'
+classes: dataset-indicator-block
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

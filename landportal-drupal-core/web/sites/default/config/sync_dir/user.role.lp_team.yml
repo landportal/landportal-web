@@ -1,0 +1,12 @@
+uuid: 70a29b9c-96cf-4bfd-882d-4468e60b5ed7
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+id: lp_team
+label: 'LP team'
+weight: 6
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'

@@ -1,0 +1,160 @@
+uuid: b4727fee-472d-4815-bf76-7aba237653cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.related_projects
+    - node.type.project
+  module:
+    - node
+label: 'Related Project'
+id: related_project
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: project
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  related_projects1:
+    value: 'Related projects1'
+    label: 'Related projects1'
+    machine_name: related_projects1
+    type: csv
+  related_projects2:
+    value: 'Related projects2'
+    label: 'Related projects2'
+    machine_name: related_projects2
+    type: csv
+  related_projects3:
+    value: 'Related projects3'
+    label: 'Related projects3'
+    machine_name: related_projects3
+    type: csv
+  related_projects4:
+    value: 'Related projects4'
+    label: 'Related projects4'
+    machine_name: related_projects4
+    type: csv
+  related_projects5:
+    value: 'Related projects5'
+    label: 'Related projects5'
+    machine_name: related_projects5
+    type: csv
+  related_projects6:
+    value: 'Related projects6'
+    label: 'Related projects6'
+    machine_name: related_projects6
+    type: csv
+  related_projects:
+    value: 'Related projects'
+    label: 'Related projects'
+    machine_name: related_projects
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: related_projects
+    map:
+      target_id: related_projects1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: related_projects
+    map:
+      target_id: related_projects
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

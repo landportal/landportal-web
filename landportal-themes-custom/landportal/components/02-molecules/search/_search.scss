@@ -1,0 +1,53 @@
+.landportal-search-block-form {
+  margin-top: $space-triple;
+  @include medium {
+    margin-top:0;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+
+    .form-item {
+      margin-bottom: 0;
+    }
+
+    .form-search {
+      width: 350px;
+      border-top-left-radius: 1.3em;
+      border-bottom-left-radius: 1.3em;
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        width: auto;
+      }
+    }
+   
+    .form-actions {
+      background: clr(primary);
+      border: 1px solid clr(primary);
+      border-bottom-right-radius: 1.3em;
+      border-top-right-radius: 1.3em;
+
+      &:hover {
+        background: clr(primary-darker);
+        border-color: clr(primary-darker);
+      }
+    }
+
+    .image-button {
+      border: 1px solid clr(primary);
+      width: 40px;
+      height: 35px;
+      display: block;
+      padding: .5em;
+      border-bottom-right-radius: 1.3em;
+      border-top-right-radius: 1.3em;
+      
+      &:hover {
+        border-color: clr(primary-darker);
+      }
+    }
+  }
+  .contextual {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,122 @@
+<?php
+use Drupal\Core\Form\FormState;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
+function landportal_content_selection_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+
+   $org_form_id = \Drupal::request()->get('form_id');
+   if($org_form_id == 'node_organization_edit_form'){
+      //$bundle = $entity->bundle();
+      // $aff_org = $entity->get('field_affiliated_organization')->value;
+      // \Drupal::logger('Bundle')->notice(serialize($aff_org));
+      /*
+      \Drupal::logger('entity')->notice(serialize($entity->get('field_affiliated_organization')->getValue()));
+      $arr_field_affiliated_organization = $entity->get('field_affiliated_organization')->getValue();
+      foreach ($arr_field_affiliated_organization as $key => $one_field_affiliated_organization) {
+
+         if(($one_field_affiliated_organization['label'] == "") && ($one_field_affiliated_organization['link'] == "")){
+            //\Drupal::logger('label empty')->notice('label is empty');
+            unset($arr_field_affiliated_organization[$key]);
+         }
+      }
+      $entity->set('field_affiliated_organization', $arr_field_affiliated_organization);
+      */
+   }
+   
+}
+
+
+function landportal_content_selection_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+   if($form_id == 'node_organization_edit_form'){
+
+      $form['#validate'][] = 'landportal_content_selection_form_validate';
+
+      $arr_label = $form['field_affiliated_organization']['widget'];
+      foreach ($arr_label as $key => $one_label) {
+         // code...
+         if(is_array($one_label)){
+            if (isset($one_label['label']['#default_value'])) {        
+               $org_val = $one_label['label']['#default_value'];
+               $org_val_exp = explode(" ", $org_val);
+               $org_id = end($org_val_exp);
+               $org_ids = trim($org_id,"()");
+               $node = Node::load($org_ids);
+
+               if (isset($node)) {
+                  $org_title = $node->getTitle();
+                  $form['field_affiliated_organization']['widget'][$key]['label']['#default_value']= $org_title.' '.$org_id;
+               }
+            }
+         }            
+      }
+
+      $arr_link = $form['field_affiliated_organization']['widget'];
+      foreach ($arr_link as $key => $one_link) {
+         // code...
+         if(is_array($one_link)){
+            if (isset($one_link['link']['#default_value'])) {           
+               $org_affi = $one_link['link']['#default_value'];
+               $org_affiliation = explode(" ", $org_affi);
+               $org_affiliation_tid = end($org_affiliation);
+               $org_affiliation_tids = trim($org_affiliation_tid,"()");
+               $term = Term::load($org_affiliation_tids);
+
+               if(isset($term)){
+                  $org_name = $term->getName();
+                  $form['field_affiliated_organization']['widget'][$key]['link']['#default_value'] = $org_name.' '. $org_affiliation_tid;
+               } 
+            }
+         }           
+      }
+
+   }   // End if node_organization_edit_form
+}
+
+function landportal_content_selection_form_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+
+
+   $arr_label = $form['field_affiliated_organization']['widget'];
+   //\Drupal::logger('arr_label')->notice("key". serialize($arr_label));
+   //\Drupal::logger('arr_label2')->notice(serialize($form['field_affiliated_organization']['widget'][0]['label']['#default_value']));
+   foreach ($arr_label as $key => $one_label) {
+      if(isset($one_label['label']['#value'])){
+         // code...
+         $org_val = $one_label['label']['#value'];
+         $org_val_exp = explode(" ", $org_val);
+         $org_id = end($org_val_exp);
+         $org_ids = trim($org_id,"()");
+         $node = Node::load($org_ids);
+         if ((isset($node)) || ($org_val == '') ) {
+
+         }
+         else{
+         $form_state->setErrorByName('label', t('There are no organization matching! Please check your Field'));
+         }         
+      } // End if isset
+
+   }
+
+    
+   $arr_link = $form['field_affiliated_organization']['widget'];
+   foreach ($arr_link as $key => $one_link) {
+      if(isset($one_link['link']['#value'])){
+         // code...
+         $org_affi = $one_link['link']['#value'];
+         $org_affiliation = explode(" ", $org_affi);
+         $org_affiliation_id = end($org_affiliation);
+         $org_affiliation_ids = trim($org_affiliation_id,"()");
+         $term = Term::load($org_affiliation_ids);
+
+         if ((isset($term)) || ($org_affi == '') ) {
+
+         }
+         else{
+         $form_state->setErrorByName($term, t('There are no Affiliation matching! Please check your Field'));
+         }         
+      }
+
+   }
+   
+}

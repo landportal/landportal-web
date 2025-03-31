@@ -1,0 +1,22 @@
+uuid: f0e38e30-b6c4-4b62-941b-6bbf2c7ce2a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_relation
+id: taxonomy_term.organization_relation.status
+field_name: status
+entity_type: taxonomy_term
+bundle: organization_relation
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

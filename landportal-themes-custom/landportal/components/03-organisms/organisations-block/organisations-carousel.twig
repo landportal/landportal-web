@@ -1,0 +1,32 @@
+{{ attach_library('landportal/organisations-carousel') }}
+
+{% set block_base_class = 'organisations-block' %}
+
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('header', [], block_base_class) }}>
+    {{ 'Organisations'|t }}
+    <a class="link" href="{{ more_url }}">{{ more_label }}</a>
+  </div>
+  {% block block_content %}
+    <div {{ bem('carousel', [], block_base_class) }} }}>
+      <div class="swiper-container organisations-swiper-container">
+        {% block carousel_content %}
+          <div class="swiper-wrapper">
+            {% for item in items %}
+              <div class="swiper-slide">
+                {% include "@molecules/organisations-card/organisations-card.twig" with {
+                  image_blockname: block_base_class,
+                  image_src: item.image_src,
+                  image_alt: item.image_alt,
+                  item_title: item.item_title,
+                  item_url: item.item_url,
+                } %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endblock %}
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  {% endblock %}
+</div>

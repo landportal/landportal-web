@@ -1,0 +1,8 @@
+uuid: 339579c6-edad-46c3-a66c-62ec568481b5
+langcode: en
+status: true
+dependencies: {  }
+name: SDGs
+vid: sdgs
+description: 'UN SDGs terms'
+weight: 0

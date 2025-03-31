@@ -1,0 +1,12 @@
+uuid: 7fd1f2a8-51cc-4a09-a7ff-98f8f4b31442
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_breadcrumb
+label: 'Blog Post Breadcrumb'
+classes: blog-post-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

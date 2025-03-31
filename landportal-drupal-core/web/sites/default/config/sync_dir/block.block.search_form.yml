@@ -1,0 +1,20 @@
+uuid: 5bea0009-ee3d-4c2d-89da-f83126d6f9a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_remote_block
+  theme:
+    - landportal
+id: search_form
+theme: landportal
+region: header
+weight: -4
+provider: null
+plugin: landportal_search_form_block
+settings:
+  id: landportal_search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: landportal_remote_block
+visibility: {  }

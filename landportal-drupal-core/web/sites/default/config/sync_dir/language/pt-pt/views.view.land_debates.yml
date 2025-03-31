@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Debate</h2>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Aberto e próximo</h2>\r\n"
+            format: full_html
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Fechado recentemente</h2>\r\n"
+            format: full_html
+      use_more_text: 'Mais debates'
+      link_url: /pt/debates/all
+  block_5:
+    display_options:
+      use_more_text: 'Mais debates'
+      link_url: /pt/debates
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/debates\">Debates</a></h2>\r\n"
+            format: full_html

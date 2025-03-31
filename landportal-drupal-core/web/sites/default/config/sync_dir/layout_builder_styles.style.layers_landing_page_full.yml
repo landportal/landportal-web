@@ -1,0 +1,12 @@
+uuid: 16bc0960-f81c-478d-bde5-59cb89f919d7
+langcode: en
+status: true
+dependencies: {  }
+id: layers_landing_page_full
+label: 'Layers Landing Page Full'
+classes: layers-landing-page-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

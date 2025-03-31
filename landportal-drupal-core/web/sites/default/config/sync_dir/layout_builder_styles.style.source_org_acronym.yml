@@ -1,0 +1,12 @@
+uuid: eab3da9b-a0bc-48f5-bf57-01190c3707f1
+langcode: en
+status: true
+dependencies: {  }
+id: source_org_acronym
+label: 'Source Org Acronym'
+classes: source-org-acronym
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

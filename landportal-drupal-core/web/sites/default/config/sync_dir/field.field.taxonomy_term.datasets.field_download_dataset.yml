@@ -1,0 +1,23 @@
+uuid: 11cd2ff7-90e8-437a-b9a4-72733f443618
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_download_dataset
+    - taxonomy.vocabulary.datasets
+  module:
+    - download_dataset
+id: taxonomy_term.datasets.field_download_dataset
+field_name: field_download_dataset
+entity_type: taxonomy_term
+bundle: datasets
+label: 'Download dataset'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    download_dataset: 'yes'
+default_value_callback: ''
+settings: {  }
+field_type: download_dataset_type

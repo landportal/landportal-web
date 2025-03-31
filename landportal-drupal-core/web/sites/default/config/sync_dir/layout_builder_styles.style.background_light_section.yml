@@ -1,0 +1,12 @@
+uuid: 73d44297-bb3f-4dfc-a9dd-5bfd938066b3
+langcode: en
+status: true
+dependencies: {  }
+id: background_light_section
+label: 'Background Light'
+classes: "section-background-light--full\r\nsection-background-light--light"
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

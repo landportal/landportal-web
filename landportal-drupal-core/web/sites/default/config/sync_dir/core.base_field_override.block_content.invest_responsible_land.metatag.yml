@@ -1,0 +1,18 @@
+uuid: 0fc7c4f9-60a2-48bd-b097-19babaa8a679
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+id: block_content.invest_responsible_land.metatag
+field_name: metatag
+entity_type: block_content
+bundle: invest_responsible_land
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

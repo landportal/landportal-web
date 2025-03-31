@@ -1,0 +1,19 @@
+uuid: f4472e47-7ad9-4c89-ab7e-7d13486a55f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lp_related_content
+    - taxonomy
+id: taxonomy_term.field_related_organization
+field_name: field_related_organization
+entity_type: taxonomy_term
+type: lp_related_content_people
+settings: {  }
+module: lp_related_content
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+uuid: c8fbeee0-2157-4055-b103-ade46abe98b3
+langcode: en
+status: true
+dependencies: {  }
+id: organization_street
+label: 'Organization street'
+classes: Organization-street
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

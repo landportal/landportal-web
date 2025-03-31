@@ -1,0 +1,115 @@
+#block-mainpagecontent{
+        .views-element-container{
+            .organization-type-tax-breadcrumb{
+                margin-top: 15px;
+                header{
+                    font-size: 13px;
+                    font-style: italic;
+                    a:first-child{
+                        margin-right: 7px;
+                        color: #06C;
+                        text-decoration: none;
+                       
+                    }
+                    a:nth-child(2){
+                        margin-left: 7px;
+                        margin-right: 7px;
+                        color: #06C;
+                        text-decoration: none;
+                        
+                    }
+                    span{
+                        color: #777;
+                        padding-left: 7px;
+                    }  
+                }
+                .views-row{
+                    h1{
+                        font-size: 32px;
+                        color: #555;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                } 
+            }
+        }
+        .block{
+            .text-long{
+                p{
+                    // margin-bottom: 0;
+                    // padding-bottom: 10px;
+                    // color: #333333;
+                    // line-height: 1.42857143;
+                }
+                &:last-child{
+                    //padding-bottom: 7px;
+                    // a{
+                        &::after{
+                            content: '';
+                            // background-image: url(../images/extlinks.jpg);
+                            // width: 10px;
+                            // height: 10px;
+                            // display: inline-block;
+                            // margin-left: 2px;
+                        }
+                    // }
+                }
+            }
+            
+        }
+} 
+.organization-type-tax{
+    .views-row{
+        border-top: 5px solid #033;
+        &::after{
+            display: table;
+            clear: both;
+        content: '';
+        }
+        .views-field-field-image{
+            width: 25%;
+            float: left;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 0;
+            .field-content{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .views-field-nothing,.views-field-name-1,.views-field-body{
+            width: 75%;
+            float: right;
+            padding-left: 15px;
+            padding-right: 15px;
+            @media (min-width: 360px){
+               width: 100%;
+            }
+            @media (min-width: 768px){
+                width: 75%;
+             }
+        }
+        .views-field-nothing{
+            padding-top: 15px;
+            font-weight: bold;
+            .field-content{
+                font-size: 16px;
+                span{
+                    font-size: 13px;
+                    font-style: italic;
+                    font-weight: normal;
+                    color: #555;
+                }
+            }
+            
+        }
+        .views-field-body{
+            font-size: 13px;
+            color: #666;
+            padding-bottom: 15px;
+        }
+    } 
+    
+}

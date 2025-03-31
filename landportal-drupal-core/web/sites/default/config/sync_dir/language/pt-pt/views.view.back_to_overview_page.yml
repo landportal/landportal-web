@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      title: 'Voltar ao início'
+      fields:
+        thematic_narrative:
+          alter:
+            text: '<a href="/taxonomy/term/{{ thematic_narrative__target_id }}" class="back-to-overview-issue">{{ ''Voltar ao início''|t }}</a>'

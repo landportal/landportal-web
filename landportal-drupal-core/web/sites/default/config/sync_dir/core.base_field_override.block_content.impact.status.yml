@@ -1,0 +1,22 @@
+uuid: 48e0d4bc-54b2-4a63-951b-acb8a9914be0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.impact
+id: block_content.impact.status
+field_name: status
+entity_type: block_content
+bundle: impact
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

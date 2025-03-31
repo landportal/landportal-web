@@ -1,0 +1,14 @@
+uuid: ac56d4b7-a90e-4d1d-8c85-4deb2a289e4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+  module:
+    - node
+id: node.dataset
+targetEntityType: node
+bundle: dataset
+types:
+  - ''
+fieldMappings: {  }

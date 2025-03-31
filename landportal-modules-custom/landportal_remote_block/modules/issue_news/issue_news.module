@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for issue news.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function issue_news_theme($existing, $type, $theme, $path) {
+  return [
+    'issue_news_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

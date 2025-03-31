@@ -1,0 +1,31 @@
+uuid: a1840230-bdc8-435c-b85c-afba5c21b05f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.debate_status.default
+targetEntityType: taxonomy_term
+bundle: debate_status
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

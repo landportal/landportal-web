@@ -1,0 +1,20 @@
+uuid: ea993d77-09df-41af-b64d-f0f9cd65d68e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.menu_link
+field_name: menu_link
+entity_type: node
+bundle: landlibrary_resource
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

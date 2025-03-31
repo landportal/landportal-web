@@ -1,0 +1,22 @@
+uuid: e2f8aa7a-36db-4d68-9c96-d90d31fa1dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.concepts
+id: taxonomy_term.concepts.status
+field_name: status
+entity_type: taxonomy_term
+bundle: concepts
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 7805ecac-f4f6-4ec1-9d2b-88aadce7f5fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+id: block_content.invest_responsible_land.changed
+field_name: changed
+entity_type: block_content
+bundle: invest_responsible_land
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

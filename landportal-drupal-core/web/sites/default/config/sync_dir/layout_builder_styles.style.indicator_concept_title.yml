@@ -1,0 +1,12 @@
+uuid: 04d799bc-34df-4a22-8589-1461060cb52d
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_concept_title
+label: 'Indicator concept Title'
+classes: indicator-concept-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

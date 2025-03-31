@@ -1,0 +1,12 @@
+uuid: 3d5a0ed2-8742-4617-af70-df3d59b0b74a
+langcode: en
+status: true
+dependencies: {  }
+id: background_slider
+label: 'Background Slider'
+classes: background-slider
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

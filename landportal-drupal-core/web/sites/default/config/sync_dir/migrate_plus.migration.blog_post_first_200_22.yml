@@ -1,0 +1,111 @@
+uuid: 3bb1da16-a3f7-45cf-b82d-86d0ce2910a5
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_first_200_22
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - blog_post_ct_importing
+migration_group: blog_post_ct_importing
+label: 'Migration first 200 blog posts 22'
+source:
+  plugin: csv
+  path: 'public://csv-files-importing/blog-post-200-9.csv'
+  header_row_count: 1
+  ids:
+    - nid
+  delimiter: ','
+  enclosure: '"'
+process:
+  nid: nid
+  title: title
+  body/value:
+    plugin: callback
+    callable: html_entity_decode
+    source: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  field_data_story_type: 'data story type'
+  field_contests_winner: 'contests winner'
+  field_is_this_a_what_to_read_pos: 'is this a what to read post'
+  field_pubdate:
+    plugin: format_date
+    from_format: U
+    to_format: 'Y-m-d\TH:i:s'
+    source: 'publication date'
+  field_image:
+    plugin: image_import
+    source: fid
+    destination: 'public://blog-post-ct/images'
+    alt: alt
+    title: image_title
+  field_geographical_focus:
+    -
+      plugin: explode
+      delimiter: ','
+      source: 'geographical focus'
+      skip_on_empty: true
+    -
+      plugin: entity_generate
+      value_key: tid
+      bundle_key: vid
+      bundle: regions
+      entity_type: taxonomy_term
+  field_related_topics:
+    -
+      plugin: explode
+      delimiter: ','
+      source: 'related concepts'
+      skip_on_empty: true
+    -
+      plugin: entity_generate
+      value_key: tid
+      bundle_key: vid
+      bundle: concepts
+      entity_type: taxonomy_term
+  field_related_themes:
+    -
+      plugin: explode
+      delimiter: ','
+      source: themes
+      skip_on_empty: true
+    -
+      plugin: entity_generate
+      value_key: tid
+      bundle_key: vid
+      bundle: theme
+      entity_type: taxonomy_term
+  field_authors:
+    -
+      plugin: explode
+      delimiter: ','
+      source: Authors
+      skip_on_empty: true
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: null
+      entity_type: user
+  created:
+    plugin: format_date
+    from_format: U
+    to_format: U
+    source: 'Post date'
+  langcode: 'Language '
+  status: 'Published status'
+  path: Path
+  uid:
+    plugin: entity_generate
+    source: 'Author uid'
+    value_key: uid
+    bundle_key: null
+    entity_type: user
+  type:
+    plugin: default_value
+    default_value: blog_post
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

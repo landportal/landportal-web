@@ -1,0 +1,12 @@
+uuid: 0321f417-4552-4051-a0b8-06b249b41d69
+langcode: en
+status: true
+dependencies: {  }
+id: programme_map
+label: 'Programme map'
+classes: programme-map-background
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

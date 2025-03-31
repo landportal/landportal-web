@@ -1,0 +1,29 @@
+uuid: 96fbbff0-4da1-45dd-b5af-ba0907b82ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publishers_and_data_providers_local_server
+  module:
+    - system
+    - views
+  theme:
+    - landportal
+id: views_block__publishers_and_data_providers_local_server_block_1
+theme: landportal
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:publishers_and_data_providers_local_server-block_1'
+settings:
+  id: 'views_block:publishers_and_data_providers_local_server-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/3511101215

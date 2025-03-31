@@ -1,0 +1,205 @@
+.new_page_term_currency{
+    border-bottom: inherit; 
+}
+
+[about*='/voc/currency/']{
+    .title-of-name{
+        //font-weight: bold;
+    }
+    .Organization-postal-address, .library-license, .library-resource-information{
+        >div {
+            >div{
+                display: inline;
+                &:first-child{
+                    font-weight: bold;
+                    &::after{
+                        content: ':';
+                    }
+                }
+            }
+        }
+        a{
+            color: #06C;
+            &:hover{
+                text-decoration: underline;
+                color: #004080;
+            }
+            &::after{
+                content: '';
+                background-image: url(../images/extlinks.jpg);
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-left: 2px;
+            }
+        }
+    }
+}
+
+
+.currency-tax-class{
+    .views-row {
+        .views-field-project-image{
+            width: 100%;
+            padding-right: 15px;
+            @media (min-width: $p-large) {
+                width: 33%;
+                float: left;
+                clear: left;
+            }
+        }
+        .views-field-title{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                clear: right;
+            }
+            a{
+                color: #06C;
+                font-size: 18px;
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+        .views-field-field-value-decimal {
+            display: block;
+            padding-top: 5px;
+            padding-left: 15px;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: left;
+            }
+            div {
+                font-size: 13px;
+                &::before {
+                    content: 'Project value: ';
+                    font-weight: bold;
+                    color: #444;
+                    font-size: 13px;
+                    font-family: "Merriweather Sans", sans-serif;
+                }
+            }
+        }
+        .views-field-field-project-duration{
+            display: block;
+            padding-right: 15px;
+            padding-left: 15px;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                
+            }
+            span{
+                font-weight: bold;
+                color: #444;
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                line-height: 1.42857143;
+                display: inline;
+            }
+            div{
+                color: #444;
+                font-size: 13px;
+                display: inline;
+                font-weight: normal;
+                font-family: "Merriweather Sans",sans-serif;
+                &::before{
+                    content: "";
+                    vertical-align: middle;
+                    padding: 0 3px 3px;
+                    background-image: url(../images/icons8-date-50.png);
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+            
+        }
+        .views-field-field-currency{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                clear: right;
+            }
+            div{
+                font-size: 14px;
+                color: #444;
+            }
+            
+        }
+        .views-field-field-implementers{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                clear: right;
+            }
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                color: #06C;
+                &::before{
+                    content: 'Implementing organizations:';
+                    font-weight: bold;
+                    color: #444;
+                    font-size: 13px;
+                    font-family: "Merriweather Sans", sans-serif;
+                }
+            }
+        }
+        .views-field-field-donors{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                clear: right;
+            }
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                color: #06C;
+                &::before{
+                    content: 'Donors:';
+                    font-weight: bold;
+                    color: #444;
+                    font-size: 13px;
+                    font-family: "Merriweather Sans", sans-serif;
+                }
+            }
+        }
+        .views-field-body{
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1.42857143;
+            @media (min-width: $p-large) {
+                width: 67%;
+                float: right;
+                clear: right;
+            }
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans",sans-serif;
+                color: #666;
+                font-weight: lighter;
+            }
+        }
+    }
+}

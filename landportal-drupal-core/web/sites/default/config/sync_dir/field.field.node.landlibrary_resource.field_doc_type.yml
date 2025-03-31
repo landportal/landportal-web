@@ -1,0 +1,29 @@
+uuid: af249d39-ba0b-4ac2-9789-558129bbddb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_type
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.landlibrary_resource_type
+id: node.landlibrary_resource.field_doc_type
+field_name: field_doc_type
+entity_type: node
+bundle: landlibrary_resource
+label: 'Resource type'
+description: 'The Land Portal identifies certain types of resources from a set list. Please <a href="/library/resource-type/">click here</a> to find the full list and a brief description of what is meant.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      landlibrary_resource_type: landlibrary_resource_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 3e692db8-9bc8-429e-b769-a382380d3b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.programme_narrative
+  module:
+    - text
+id: node.programme_narrative.body
+field_name: body
+entity_type: node
+bundle: programme_narrative
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

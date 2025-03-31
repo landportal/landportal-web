@@ -1,0 +1,14 @@
+uuid: 9d47c7fc-3720-4d90-82c3-c1dffe2d2952
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programme
+  module:
+    - taxonomy
+id: taxonomy_term.programme
+targetEntityType: taxonomy_term
+bundle: programme
+types:
+  - ''
+fieldMappings: {  }

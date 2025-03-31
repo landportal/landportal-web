@@ -1,0 +1,20 @@
+uuid: f04ef25c-9729-4f11-b387-ba198d781532
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.observations
+  module:
+    - text
+id: taxonomy_term.observations.description
+field_name: description
+entity_type: taxonomy_term
+bundle: observations
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

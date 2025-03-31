@@ -1,0 +1,10 @@
+uuid: 2ba68f41-f3ef-43c1-ade2-492935343b6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.views_header
+label: 'Views header'
+targetEntityType: node
+cache: true

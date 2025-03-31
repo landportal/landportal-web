@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'Más blogs'
+      link_url: /es/blogs
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/es/blogs\">Blogs</a></h2>\r\n"
+            format: full_html

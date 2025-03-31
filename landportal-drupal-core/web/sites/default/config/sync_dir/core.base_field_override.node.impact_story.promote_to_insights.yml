@@ -1,0 +1,23 @@
+uuid: fdec1f6d-8d0e-415a-b793-8157ac49b94c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+    - custom_pub.custom_publishing_option.promote_to_insights
+id: node.impact_story.promote_to_insights
+field_name: promote_to_insights
+entity_type: node
+bundle: impact_story
+label: 'Promoted to Insights'
+description: 'custom publication option.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

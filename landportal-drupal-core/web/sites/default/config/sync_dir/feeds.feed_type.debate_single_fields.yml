@@ -1,0 +1,189 @@
+uuid: f4c7e535-7202-47e7-9557-69fadb4d3be5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.body
+    - field.field.node.debate.field_date
+    - field.field.node.debate.field_image
+    - field.field.node.debate.field_status
+    - node.type.debate
+  module:
+    - node
+label: 'Debate Single Fields'
+id: debate_single_fields
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: debate
+  langcode: ru
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  introduction:
+    value: introduction
+    label: introduction
+    machine_name: introduction
+    type: csv
+  summary:
+    value: summary
+    label: summary
+    machine_name: summary
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  start_date:
+    value: start_date
+    label: start_date
+    machine_name: start_date
+    type: csv
+  end_date:
+    value: end_date
+    label: end_date
+    machine_name: end_date
+    type: csv
+  status:
+    value: Status
+    label: Status
+    machine_name: status
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+  language:
+    value: language
+    label: language
+    machine_name: language
+    type: csv
+  published_status:
+    value: 'Published status'
+    label: 'Published status'
+    machine_name: published_status
+    type: csv
+  author:
+    value: author
+    label: author
+    machine_name: author
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: introduction
+      summary: summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: image_title
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_date
+    map:
+      value: start_date
+      end_value: end_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_status
+    map:
+      target_id: status
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: published_status
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: author
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0

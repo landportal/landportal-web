@@ -1,0 +1,12 @@
+uuid: f9c294ad-b311-4046-bb1e-0fa1be1bc7d0
+langcode: en
+status: true
+dependencies: {  }
+id: date_field
+label: 'Date Field'
+classes: date-field
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

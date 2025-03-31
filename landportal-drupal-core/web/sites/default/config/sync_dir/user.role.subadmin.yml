@@ -1,0 +1,12 @@
+uuid: ed435b31-4ea4-46a5-afe6-df5b9504d6b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+id: subadmin
+label: Subadmin
+weight: 10
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'

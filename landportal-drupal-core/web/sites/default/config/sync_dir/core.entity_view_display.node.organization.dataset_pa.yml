@@ -1,0 +1,185 @@
+uuid: dbbc3bbe-f114-4eea-b09f-55a31c786262
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - core.entity_view_mode.node.dataset_pa
+    - field.field.node.organization.additionals
+    - field.field.node.organization.body
+    - field.field.node.organization.city
+    - field.field.node.organization.country
+    - field.field.node.organization.feeds_item
+    - field.field.node.organization.field_acronym
+    - field.field.node.organization.field_affiliated_organization
+    - field.field.node.organization.field_contact
+    - field.field.node.organization.field_email
+    - field.field.node.organization.field_file
+    - field.field.node.organization.field_geographical_focus
+    - field.field.node.organization.field_image
+    - field.field.node.organization.field_language
+    - field.field.node.organization.field_link
+    - field.field.node.organization.field_organization_relationship
+    - field.field.node.organization.field_organization_type
+    - field.field.node.organization.field_phone
+    - field.field.node.organization.field_postal_address
+    - field.field.node.organization.field_related_themes
+    - field.field.node.organization.field_related_topics
+    - field.field.node.organization.field_user
+    - field.field.node.organization.location_name
+    - field.field.node.organization.postal_code
+    - field.field.node.organization.seo_keywords
+    - field.field.node.organization.state_province
+    - field.field.node.organization.street
+    - image.style.medium
+    - node.type.organization
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5088d157-34a0-491e-97af-fe5777b21956:
+            uuid: 5088d157-34a0-491e-97af-fe5777b21956
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_image'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: width280
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Organization Name & Acronym'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          03e9d604-2b5d-4b45-9582-1a55ed988132:
+            uuid: 03e9d604-2b5d-4b45-9582-1a55ed988132
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_acronym'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          14ac9ae1-cb49-4255-844d-61684f4931c8:
+            uuid: 14ac9ae1-cb49-4255-844d-61684f4931c8
+            region: content
+            configuration:
+              id: 'field_block:node:organization:title'
+              label: 'Organization Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.organization.dataset_pa
+targetEntityType: node
+bundle: organization
+mode: dataset_pa
+content:
+  field_acronym:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  additionals: true
+  addtoany: true
+  body: true
+  city: true
+  country: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_affiliated_organization: true
+  field_contact: true
+  field_email: true
+  field_file: true
+  field_geographical_focus: true
+  field_language: true
+  field_link: true
+  field_organization_relationship: true
+  field_organization_type: true
+  field_phone: true
+  field_postal_address: true
+  field_related_themes: true
+  field_related_topics: true
+  field_user: true
+  langcode: true
+  links: true
+  location_name: true
+  postal_code: true
+  search_api_excerpt: true
+  seo_keywords: true
+  state_province: true
+  street: true

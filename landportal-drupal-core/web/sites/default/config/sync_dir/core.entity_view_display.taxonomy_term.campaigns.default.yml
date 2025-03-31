@@ -1,0 +1,100 @@
+uuid: 7b56c7a9-30e5-4702-95cf-574868eaaac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.campaigns.name
+    - taxonomy.vocabulary.campaigns
+    - views.view.campaign_related_stories
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - container
+        components:
+          bce65bea-9823-45e8-9275-6b3880a05d06:
+            uuid: bce65bea-9823-45e8-9275-6b3880a05d06
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:campaigns:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          c9669766-e9c8-41ca-8158-9719109b5e38:
+            uuid: c9669766-e9c8-41ca-8158-9719109b5e38
+            region: content
+            configuration:
+              id: 'views_block:campaign_related_stories-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.campaigns.default
+targetEntityType: taxonomy_term
+bundle: campaigns
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

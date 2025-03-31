@@ -1,0 +1,12 @@
+uuid: b8ea3321-0aeb-4c9c-af85-62258f0a8252
+langcode: en
+status: true
+dependencies: {  }
+id: issue_narrative_partners
+label: 'Issue Narrative Partners'
+classes: issue-narrative-partners
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

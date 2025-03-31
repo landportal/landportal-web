@@ -1,0 +1,12 @@
+uuid: f4a3a4d3-8bd9-411f-b241-72650d78ebe5
+langcode: en
+status: true
+dependencies: {  }
+id: sdgi_landing_page_image
+label: 'SDGI Landing Page Image'
+classes: landing-page-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

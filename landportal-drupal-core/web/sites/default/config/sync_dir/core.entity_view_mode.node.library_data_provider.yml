@@ -1,0 +1,10 @@
+uuid: d47aaf17-b79e-4eda-aa41-50ddcfa49de0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.library_data_provider
+label: 'Library Data Provider'
+targetEntityType: node
+cache: true

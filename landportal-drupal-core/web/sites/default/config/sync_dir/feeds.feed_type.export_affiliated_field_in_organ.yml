@@ -1,0 +1,81 @@
+uuid: d89923f9-1625-442c-8e9a-11e4fefb358a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_affiliated_organization
+    - node.type.organization
+  module:
+    - landportal_content_selection
+    - node
+label: 'Export Affiliated Field In Organization'
+id: export_affiliated_field_in_organ
+description: 'Export Affiliated Field In Organization'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  affiliated_organization:
+    value: affiliated_organization
+    label: affiliated_organization
+    machine_name: affiliated_organization
+    type: csv
+  affiliation:
+    value: affiliation
+    label: affiliation
+    machine_name: affiliation
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_affiliated_organization
+    map:
+      label: affiliated_organization
+      link: affiliation
+    settings:
+      language: null

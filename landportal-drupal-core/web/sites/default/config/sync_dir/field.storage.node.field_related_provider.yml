@@ -1,0 +1,19 @@
+uuid: 8ab0a645-c682-468e-bc4b-3fc5aa4f249e
+langcode: en
+status: true
+dependencies:
+  module:
+    - lp_related_content
+    - node
+id: node.field_related_provider
+field_name: field_related_provider
+entity_type: node
+type: lp_related_content_people
+settings: {  }
+module: lp_related_content
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

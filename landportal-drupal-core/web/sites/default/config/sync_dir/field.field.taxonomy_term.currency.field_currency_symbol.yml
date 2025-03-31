@@ -1,0 +1,19 @@
+uuid: a5f70487-f7ce-4c39-af88-afe51e5364d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_currency_symbol
+    - taxonomy.vocabulary.currency
+id: taxonomy_term.currency.field_currency_symbol
+field_name: field_currency_symbol
+entity_type: taxonomy_term
+bundle: currency
+label: 'Currency Symbol'
+description: 'Currency symbols are used to denote that a number is a monetary value, such as the dollar sign "$", the Pound sign "£", and the Euro sign "€".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

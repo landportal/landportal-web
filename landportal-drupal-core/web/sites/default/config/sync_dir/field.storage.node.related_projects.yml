@@ -1,0 +1,19 @@
+uuid: c1f97998-3644-4209-8c2c-42469f487dc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.related_projects
+field_name: related_projects
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

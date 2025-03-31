@@ -1,0 +1,12 @@
+uuid: 0fa482fa-8372-4129-bc43-beb8482d3f06
+langcode: en
+status: true
+dependencies: {  }
+id: organization_concepts
+label: 'Organization Concepts'
+classes: organization-concepts
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

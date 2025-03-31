@@ -1,0 +1,12 @@
+uuid: a8856263-5955-498e-99e6-f97fad26ce2e
+langcode: en
+status: true
+dependencies: {  }
+id: library_description
+label: 'Library Description'
+classes: library-description
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

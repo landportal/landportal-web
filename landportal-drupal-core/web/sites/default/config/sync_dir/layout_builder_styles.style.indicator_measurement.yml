@@ -1,0 +1,12 @@
+uuid: a5d007ec-d356-46b8-bd1a-60c0eef5763d
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_measurement
+label: 'Indicator Measurement'
+classes: indicator-measurement
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

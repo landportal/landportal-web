@@ -1,0 +1,12 @@
+uuid: 15af2879-5961-4934-a74c-17e3214a1218
+langcode: en
+status: true
+dependencies: {  }
+id: project_body_background_full
+label: 'Project Body Background Full'
+classes: project-body-background-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

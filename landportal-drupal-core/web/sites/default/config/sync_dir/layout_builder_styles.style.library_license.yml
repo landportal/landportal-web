@@ -1,0 +1,12 @@
+uuid: 5ef54001-5af6-438c-8ec6-e6e88667819f
+langcode: en
+status: true
+dependencies: {  }
+id: library_license
+label: 'Library License'
+classes: library-license
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

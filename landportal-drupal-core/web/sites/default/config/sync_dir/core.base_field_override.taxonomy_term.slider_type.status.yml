@@ -1,0 +1,22 @@
+uuid: 13d14d2c-b465-4331-82b1-1094d8ea12ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_type
+id: taxonomy_term.slider_type.status
+field_name: status
+entity_type: taxonomy_term
+bundle: slider_type
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

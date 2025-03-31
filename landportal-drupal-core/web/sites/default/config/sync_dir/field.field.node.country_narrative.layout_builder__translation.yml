@@ -1,0 +1,21 @@
+uuid: a0c24019-fec5-46d7-be79-5c87c2afa6dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__translation
+    - node.type.country_narrative
+  module:
+    - layout_builder_st
+id: node.country_narrative.layout_builder__translation
+field_name: layout_builder__translation
+entity_type: node
+bundle: country_narrative
+label: 'Layout Labels'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_translation

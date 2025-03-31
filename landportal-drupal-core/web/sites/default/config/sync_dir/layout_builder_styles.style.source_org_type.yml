@@ -1,0 +1,12 @@
+uuid: 36fc31f9-6a68-4938-a123-f0aed17d71fb
+langcode: en
+status: true
+dependencies: {  }
+id: source_org_type
+label: 'Source Org Type'
+classes: source-org-type
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

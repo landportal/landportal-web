@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for events.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function events_theme($existing, $type, $theme, $path) {
+  return [
+    'events_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

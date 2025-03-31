@@ -1,0 +1,6 @@
+name: landportal website search
+type: module
+description: 'Landportal website search.'
+package: Landportal
+version: 1.0
+core_version_requirement: ^8 || ^9 || ^10

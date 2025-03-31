@@ -1,0 +1,14 @@
+uuid: 36420757-25dc-401e-bd08-d54ce81c28b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+  module:
+    - node
+id: node.landlibrary_resource
+targetEntityType: node
+bundle: landlibrary_resource
+types:
+  - ''
+fieldMappings: {  }

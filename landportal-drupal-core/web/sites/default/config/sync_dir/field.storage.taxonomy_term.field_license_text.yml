@@ -1,0 +1,19 @@
+uuid: 0337cd42-2d48-41f7-87fe-a9258fd2946d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_license_text
+field_name: field_license_text
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

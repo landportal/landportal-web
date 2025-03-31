@@ -1,0 +1,18 @@
+uuid: 819ad099-02c4-4796-a17e-c2e0cc9c3b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+id: node.dataset.created
+field_name: created
+entity_type: node
+bundle: dataset
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

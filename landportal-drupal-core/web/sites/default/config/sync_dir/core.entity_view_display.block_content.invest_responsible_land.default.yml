@@ -1,0 +1,26 @@
+uuid: d29528bd-e75d-4dfa-adcb-474ed3c38790
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+    - field.field.block_content.invest_responsible_land.body
+  module:
+    - text
+id: block_content.invest_responsible_land.default
+targetEntityType: block_content
+bundle: invest_responsible_land
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

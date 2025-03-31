@@ -1,0 +1,12 @@
+uuid: 97628559-4426-4cec-aea8-0fb9c0485caa
+langcode: en
+status: true
+dependencies: {  }
+id: related_project_value
+label: 'Related Project Value'
+classes: related-project-value
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

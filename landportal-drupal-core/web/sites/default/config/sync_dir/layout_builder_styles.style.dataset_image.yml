@@ -1,0 +1,12 @@
+uuid: a6cd06d4-96e0-4dcb-9f15-5a93b6992603
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_image
+label: 'Dataset Image'
+classes: dataset-image
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

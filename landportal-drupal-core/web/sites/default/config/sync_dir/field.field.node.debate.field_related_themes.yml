@@ -1,0 +1,29 @@
+uuid: 46b1b9d1-c88a-4b24-bbdb-1d1b60aaa1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_themes
+    - node.type.debate
+    - taxonomy.vocabulary.theme
+id: node.debate.field_related_themes
+field_name: field_related_themes
+entity_type: node
+bundle: debate
+label: Themes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

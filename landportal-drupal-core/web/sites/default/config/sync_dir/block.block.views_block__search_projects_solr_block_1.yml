@@ -1,0 +1,29 @@
+uuid: 3a7f6e0e-8841-4439-a5dc-71bc141e2a66
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_projects_solr
+  module:
+    - system
+    - views
+  theme:
+    - landportal
+id: views_block__search_projects_solr_block_1
+theme: landportal
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:search_projects_solr-block_1'
+settings:
+  id: 'views_block:search_projects_solr-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search-projects

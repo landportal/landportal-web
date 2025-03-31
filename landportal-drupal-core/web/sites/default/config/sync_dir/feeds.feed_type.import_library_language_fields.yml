@@ -1,0 +1,160 @@
+uuid: ac4d2637-f7c6-4349-92d4-34a3767cd692
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_language
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library Language fields'
+id: import_library_language_fields
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resouce_title:
+    value: Resouce_title
+    label: Resouce_title
+    machine_name: resouce_title
+    type: csv
+  field_doc_language:
+    value: field_doc_language
+    label: field_doc_language
+    machine_name: field_doc_language
+    type: csv
+  field_doc_language1:
+    value: field_doc_language1
+    label: field_doc_language1
+    machine_name: field_doc_language1
+    type: csv
+  field_doc_language2:
+    value: field_doc_language2
+    label: field_doc_language2
+    machine_name: field_doc_language2
+    type: csv
+  field_doc_language3:
+    value: field_doc_language3
+    label: field_doc_language3
+    machine_name: field_doc_language3
+    type: csv
+  field_doc_language4:
+    value: field_doc_language4
+    label: field_doc_language4
+    machine_name: field_doc_language4
+    type: csv
+  field_doc_language5:
+    value: field_doc_language5
+    label: field_doc_language5
+    machine_name: field_doc_language5
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resouce_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_language
+    map:
+      target_id: field_doc_language5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

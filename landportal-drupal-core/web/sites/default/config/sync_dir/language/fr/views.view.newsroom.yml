@@ -1,0 +1,23 @@
+display:
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>New Work</h2>\r\n\r\n<p><span style=\"font-size:16px;\">New work from the Land Portal.</span><br />\r\n&nbsp;</p>\r\n"
+            format: full_html
+  block_7:
+    display_options:
+      header:
+        result:
+          content: 'Affichez @start - @end de <span class=total-counter>@total</span>'
+  block_8:
+    display_options:
+      header:
+        result:
+          content: 'Affichez @start - @end de <span class="total-counter">@total</span>'
+  block_5:
+    display_options:
+      header:
+        result:
+          content: 'Affichez @start - @end de <span class="total-counter">@total</span>'

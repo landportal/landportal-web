@@ -1,0 +1,20 @@
+uuid: 62910d57-ff95-4f9f-86a2-a5f1f369a1f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: taxonomy_term.programme_organization
+field_name: programme_organization
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

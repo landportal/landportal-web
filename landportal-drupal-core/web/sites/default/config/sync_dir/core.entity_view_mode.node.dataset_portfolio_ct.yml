@@ -1,0 +1,10 @@
+uuid: e326be12-fbd5-4f00-be70-237000504aa0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.dataset_portfolio_ct
+label: 'Dataset Portfolio CT'
+targetEntityType: node
+cache: true

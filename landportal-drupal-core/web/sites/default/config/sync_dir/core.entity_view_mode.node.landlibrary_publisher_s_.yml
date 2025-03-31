@@ -1,0 +1,10 @@
+uuid: 46054a0e-3541-41fb-93a9-6c5d374b7827
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landlibrary_publisher_s_
+label: 'Landlibrary Publisher(s)'
+targetEntityType: node
+cache: true

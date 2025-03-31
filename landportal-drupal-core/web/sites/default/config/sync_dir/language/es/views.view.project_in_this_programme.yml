@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>Proyectos en este programa</p>\r\n"
+            format: filtered_html

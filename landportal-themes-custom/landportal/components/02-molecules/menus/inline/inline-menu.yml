@@ -1,0 +1,5 @@
+inline_menu_items:
+  - title: 'My account'
+    url: '#'
+  - title: 'Logout'
+    url: '#'

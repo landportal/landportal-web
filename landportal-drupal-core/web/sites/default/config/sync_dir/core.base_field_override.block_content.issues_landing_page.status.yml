@@ -1,0 +1,22 @@
+uuid: c3ed0ef1-d6c3-4239-9f48-badb3ea69234
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.issues_landing_page
+id: block_content.issues_landing_page.status
+field_name: status
+entity_type: block_content
+bundle: issues_landing_page
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

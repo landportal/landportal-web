@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      filters:
+        combine:
+          expose:
+            label: Nom
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser

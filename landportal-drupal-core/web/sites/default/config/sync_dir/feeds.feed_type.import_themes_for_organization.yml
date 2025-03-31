@@ -1,0 +1,245 @@
+uuid: 24b68a5c-f141-4245-990e-41e4ac016b29
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_related_themes
+    - node.type.organization
+  module:
+    - node
+label: 'Import Themes For Organization'
+id: import_themes_for_organization
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  themes:
+    value: Themes
+    label: Themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: Themes1
+    label: Themes1
+    machine_name: themes1
+    type: csv
+  themes2:
+    value: Themes2
+    label: Themes2
+    machine_name: themes2
+    type: csv
+  themes3:
+    value: Themes3
+    label: Themes3
+    machine_name: themes3
+    type: csv
+  themes4:
+    value: Themes4
+    label: Themes4
+    machine_name: themes4
+    type: csv
+  themes5:
+    value: Themes5
+    label: Themes5
+    machine_name: themes5
+    type: csv
+  themes6:
+    value: Themes6
+    label: Themes6
+    machine_name: themes6
+    type: csv
+  themes7:
+    value: Themes7
+    label: Themes7
+    machine_name: themes7
+    type: csv
+  themes8:
+    value: Themes8
+    label: Themes8
+    machine_name: themes8
+    type: csv
+  themes9:
+    value: Themes9
+    label: Themes9
+    machine_name: themes9
+    type: csv
+  themes10:
+    value: Themes10
+    label: Themes10
+    machine_name: themes10
+    type: csv
+  themes11:
+    value: Themes11
+    label: Themes11
+    machine_name: themes11
+    type: csv
+  themes12:
+    value: Themes12
+    label: Themes12
+    machine_name: themes12
+    type: csv
+  themes13:
+    value: Themes13
+    label: Themes13
+    machine_name: themes13
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_related_themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes2
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes3
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes4
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes5
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes6
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes7
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes8
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes9
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes10
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes11
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes12
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes13
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0

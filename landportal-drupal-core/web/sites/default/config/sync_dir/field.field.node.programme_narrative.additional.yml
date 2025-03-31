@@ -1,0 +1,21 @@
+uuid: ea170a30-0e45-4ce2-8ff7-a2ac0ed12535
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.additional
+    - node.type.programme_narrative
+  module:
+    - landportal_country_narrative
+id: node.programme_narrative.additional
+field_name: additional
+entity_type: node
+bundle: programme_narrative
+label: Additional
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: additional_information

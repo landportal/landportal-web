@@ -1,0 +1,12 @@
+uuid: 41fba812-272b-453e-be60-20e93eae6f50
+langcode: en
+status: true
+dependencies: {  }
+id: library_share_on_rlbi
+label: 'Library Share on RLBI'
+classes: library-share-on-RLBI
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,29 @@
+uuid: fe21ed2b-a96c-4d43-8d55-192b0944050d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_provider
+    - node.type.organization
+    - node.type.project
+id: node.project.field_doc_provider
+field_name: field_doc_provider
+entity_type: node
+bundle: project
+label: 'Data Provider'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

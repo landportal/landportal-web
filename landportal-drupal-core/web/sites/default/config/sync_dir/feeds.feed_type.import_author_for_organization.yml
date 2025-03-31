@@ -1,0 +1,439 @@
+uuid: 133a6d84-4857-4a39-a243-2cc69a3852a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_user
+    - node.type.organization
+  module:
+    - node
+label: 'Import Author for organization'
+id: import_author_for_organization
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  post_date:
+    value: 'Post date'
+    label: 'Post date'
+    machine_name: post_date
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  members:
+    value: Members
+    label: Members
+    machine_name: members
+    type: csv
+  members1:
+    value: Members1
+    label: Members1
+    machine_name: members1
+    type: csv
+  members2:
+    value: Members2
+    label: Members2
+    machine_name: members2
+    type: csv
+  members3:
+    value: Members3
+    label: Members3
+    machine_name: members3
+    type: csv
+  members4:
+    value: Members4
+    label: Members4
+    machine_name: members4
+    type: csv
+  members5:
+    value: Members5
+    label: Members5
+    machine_name: members5
+    type: csv
+  members6:
+    value: Members6
+    label: Members6
+    machine_name: members6
+    type: csv
+  members7:
+    value: Members7
+    label: Members7
+    machine_name: members7
+    type: csv
+  members8:
+    value: Members8
+    label: Members8
+    machine_name: members8
+    type: csv
+  members9:
+    value: Members9
+    label: Members9
+    machine_name: members9
+    type: csv
+  members10:
+    value: Members10
+    label: Members10
+    machine_name: members10
+    type: csv
+  members11:
+    value: Members11
+    label: Members11
+    machine_name: members11
+    type: csv
+  members12:
+    value: Members12
+    label: Members12
+    machine_name: members12
+    type: csv
+  members13:
+    value: Members13
+    label: Members13
+    machine_name: members13
+    type: csv
+  members14:
+    value: Members14
+    label: Members14
+    machine_name: members14
+    type: csv
+  members15:
+    value: Members15
+    label: Members15
+    machine_name: members15
+    type: csv
+  members16:
+    value: Members16
+    label: Members16
+    machine_name: members16
+    type: csv
+  members17:
+    value: Members17
+    label: Members17
+    machine_name: members17
+    type: csv
+  members18:
+    value: Members18
+    label: Members18
+    machine_name: members18
+    type: csv
+  members19:
+    value: Members19
+    label: Members19
+    machine_name: members19
+    type: csv
+  members20:
+    value: Members20
+    label: Members20
+    machine_name: members20
+    type: csv
+  members21:
+    value: Members21
+    label: Members21
+    machine_name: members21
+    type: csv
+  members22:
+    value: Members22
+    label: Members22
+    machine_name: members22
+    type: csv
+  members23:
+    value: Members23
+    label: Members23
+    machine_name: members23
+    type: csv
+  members24:
+    value: Members24
+    label: Members24
+    machine_name: members24
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members1
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members2
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members3
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members4
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members5
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members6
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members7
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members8
+    settings:
+      language: ''
+      reference_by: timezone
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members9
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members10
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members11
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members12
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members13
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members14
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members15
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members16
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members17
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members18
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members19
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members20
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members21
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members22
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members23
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_user
+    map:
+      target_id: members24
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0

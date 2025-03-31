@@ -1,0 +1,12 @@
+uuid: 4ab55638-6083-4ca2-a7c0-d85848c65352
+langcode: en
+status: true
+dependencies: {  }
+id: event_lower_image
+label: 'Event lower image'
+classes: event-lower-image
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

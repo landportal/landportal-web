@@ -1,0 +1,304 @@
+uuid: 71817a5c-9db9-4312-b6fb-fa343488cf89
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.city
+    - field.field.node.event.country
+    - field.field.node.event.feeds_item
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_file
+    - field.field.node.event.field_geographical_focus
+    - field.field.node.event.field_image
+    - field.field.node.event.field_language_of_the_event
+    - field.field.node.event.field_link
+    - field.field.node.event.field_noderef
+    - field.field.node.event.field_orgref
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_related_themes
+    - field.field.node.event.field_related_topics
+    - field.field.node.event.field_type_of_event
+    - field.field.node.event.location_name
+    - field.field.node.event.postal_code
+    - field.field.node.event.promoted_to_news_events_landing_
+    - field.field.node.event.state_province
+    - field.field.node.event.street
+    - node.type.event
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e16469a3-5b6a-4d66-911d-644e8a5cb193:
+            uuid: e16469a3-5b6a-4d66-911d-644e8a5cb193
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: large_480x480_
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          3c2188c9-41a2-44e1-bc2a-292f4805706b:
+            uuid: 3c2188c9-41a2-44e1-bc2a-292f4805706b
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_date'
+              label: 'When is this event taking place?'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'd F Y'
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - date
+          84fc07cb-723e-4ac4-ac98-c319149e1581:
+            uuid: 84fc07cb-723e-4ac4-ac98-c319149e1581
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - title
+          c04ff323-0ed3-4810-99fe-2a1032a50939:
+            uuid: c04ff323-0ed3-4810-99fe-2a1032a50939
+            region: content
+            configuration:
+              id: 'field_block:node:event:country'
+              label: Country
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                - event_country
+          9311630c-6509-45c1-8942-582f114f6ee0:
+            uuid: 9311630c-6509-45c1-8942-582f114f6ee0
+            region: content
+            configuration:
+              id: 'field_block:node:event:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+            weight: 10
+            additional:
+              layout_builder_styles_style:
+                - dataset_description
+          5182cb60-3284-4790-8c5b-83bc24689736:
+            uuid: 5182cb60-3284-4790-8c5b-83bc24689736
+            region: content
+            configuration:
+              id: 'field_block:node:event:city'
+              label: City
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 7
+            additional:
+              layout_builder_styles_style:
+                - event_city
+          5b81c21a-cab8-4e6f-953e-a79c55c005b3:
+            uuid: 5b81c21a-cab8-4e6f-953e-a79c55c005b3
+            region: content
+            configuration:
+              id: 'field_block:node:event:street'
+              label: Street
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                - event_street
+          1a33c395-6ec1-4614-bd30-b8e8ed43d893:
+            uuid: 1a33c395-6ec1-4614-bd30-b8e8ed43d893
+            region: content
+            configuration:
+              id: 'field_block:node:event:location_name'
+              label: 'Location name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - location
+          f6e6f369-5b0c-4fb9-9c8b-2e625f82e7e5:
+            uuid: f6e6f369-5b0c-4fb9-9c8b-2e625f82e7e5
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_orgref'
+              label: Organizers
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 11
+            additional:
+              layout_builder_styles_style:
+                - provider_in_data
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  city: true
+  country: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_contact: true
+  field_date: true
+  field_file: true
+  field_geographical_focus: true
+  field_language_of_the_event: true
+  field_link: true
+  field_noderef: true
+  field_orgref: true
+  field_related_events: true
+  field_related_themes: true
+  field_related_topics: true
+  field_type_of_event: true
+  langcode: true
+  location_name: true
+  postal_code: true
+  promoted_to_news_events_landing_: true
+  search_api_excerpt: true
+  state_province: true
+  street: true

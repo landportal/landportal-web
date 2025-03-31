@@ -1,0 +1,12 @@
+uuid: b49e5a0c-fdaa-4a57-90e1-c6d70e51d2e0
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_themes
+label: 'Blog Post Themes'
+classes: blog-post-themes
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

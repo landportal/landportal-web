@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            next: 'seguinte ›'
+            previous: '‹ anterior'
+            first: '« primeira'
+            last: 'última »'
+      exposed_form:
+        options:
+          submit_button: Aplique
+      header:
+        result:
+          content: 'Exibindo @start - @end de <span class="badge">@total</span>'

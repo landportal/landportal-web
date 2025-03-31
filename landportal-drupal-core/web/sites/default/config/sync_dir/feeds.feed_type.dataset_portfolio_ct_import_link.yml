@@ -1,0 +1,79 @@
+uuid: cc1debe6-a8ba-4457-b5d6-d857b734cba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_link
+    - node.type.dataset
+  module:
+    - node
+label: 'Dataset Portfolio CT import Link '
+id: dataset_portfolio_ct_import_link
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: Nid
+    label: Nid
+    machine_name: nid
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  linkurl:
+    value: LinkURL
+    label: LinkURL
+    machine_name: linkurl
+    type: csv
+  linktitle:
+    value: LinkTitle
+    label: LinkTitle
+    machine_name: linktitle
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_link
+    map:
+      uri: linkurl
+      title: linktitle
+    settings:
+      language: null

@@ -1,0 +1,272 @@
+uuid: ee3157b4-f386-4ee0-af8f-629fa81a8c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.project.status
+    - field.field.node.project.body
+    - field.field.node.project.code
+    - field.field.node.project.contact_field
+    - field.field.node.project.data_curation
+    - field.field.node.project.field_currency
+    - field.field.node.project.field_project_duration
+    - field.field.node.project.field_value_decimal
+    - field.field.node.project.official_website
+    - field.field.node.project.project_image
+    - field.field.node.project.source
+    - node.type.project
+  module:
+    - node
+label: 'Project Nodes Import'
+id: project_nodes_import
+description: 'This feed type only for user '
+help: 'This feed type only for user to import Project CT and in this feed type you must need to add Nid.'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: project
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body_text:
+    value: body-text
+    label: body-text
+    machine_name: body_text
+    type: csv
+  body_summary:
+    value: body-summary
+    label: body-summary
+    machine_name: body_summary
+    type: csv
+  project_value:
+    value: project-value
+    label: project-value
+    machine_name: project_value
+    type: csv
+  start_date:
+    value: start-date
+    label: start-date
+    machine_name: start_date
+    type: csv
+  end_date:
+    value: end-date
+    label: end-date
+    machine_name: end_date
+    type: csv
+  currency_of_project:
+    value: currency-of-project
+    label: currency-of-project
+    machine_name: currency_of_project
+    type: csv
+  contact:
+    value: contact
+    label: contact
+    machine_name: contact
+    type: csv
+  uri:
+    value: uri
+    label: uri
+    machine_name: uri
+    type: csv
+  dddf:
+    value: dddf
+    label: dddf
+    machine_name: dddf
+    type: csv
+  link_text:
+    value: 'link text'
+    label: 'link text'
+    machine_name: link_text
+    type: csv
+  publish_status:
+    value: publish-status
+    label: publish-status
+    machine_name: publish_status
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  created_date:
+    value: created-date
+    label: created-date
+    machine_name: created_date
+    type: csv
+  authored_by:
+    value: authored-by
+    label: authored-by
+    machine_name: authored_by
+    type: csv
+  code:
+    value: Code
+    label: Code
+    machine_name: code
+    type: csv
+  data_curation:
+    value: 'Data curation'
+    label: 'Data curation'
+    machine_name: data_curation
+    type: csv
+  source:
+    value: Source
+    label: Source
+    machine_name: source
+    type: csv
+  testing:
+    value: Testing
+    label: Testing
+    machine_name: testing
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body_text
+      summary: body_summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_value_decimal
+    map:
+      value: project_value
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_project_duration
+    map:
+      value: start_date
+      end_value: end_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_currency
+    map:
+      target_id: currency_of_project
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: contact_field
+    map:
+      value: contact
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: official_website
+    map:
+      uri: uri
+      title: link_text
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: publish_status
+    settings:
+      language: null
+  -
+    target: project_image
+    map:
+      target_id: fid
+      alt: alt
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: created
+    map:
+      value: created_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: uid
+    map:
+      target_id: authored_by
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: code
+    map:
+      value: code
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: data_curation
+    map:
+      value: data_curation
+    settings:
+      language: null
+  -
+    target: source
+    map:
+      value: source
+    settings:
+      language: null
+  -
+    target: testing
+    map:
+      value: testing
+    settings:
+      language: null
+    unique: {  }

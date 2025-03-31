@@ -1,0 +1,5 @@
+swid:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/project-landing-page/searchproject.js: {}
+  dependencies:
+    - core/jquery

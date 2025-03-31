@@ -1,0 +1,39 @@
+section_onecol:
+  label: 'Landportal one column'
+  path: templates/layout
+  template: section-onecol
+  class: '\Drupal\landportal_layouts\Plugin\Layout\LandportalLayouts'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: 'Content'
+section_threecol:
+  label: 'Landportal three column'
+  path: templates/layout
+  template: section-threecol
+  class: '\Drupal\landportal_layouts\Plugin\Layout\LandportalLayouts'
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: 'First'
+    second:
+      label: 'Second'
+    third:
+      label: 'Third'
+section_sidebar:
+  label: 'Landportal content + sidebar'
+  path: templates/layout
+  template: section-sidebar
+  class: '\Drupal\landportal_layouts\Plugin\Layout\LandportalLayouts'
+  default_region: main
+  icon_map:
+    - [main, main, aside]
+  regions:
+    main:
+      label: 'Main'
+    aside:
+      label: 'Aside'

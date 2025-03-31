@@ -1,0 +1,204 @@
+uuid: e3a91f4b-e2a0-499f-b8d2-9230c0bc2fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.debate.body
+    - field.field.node.debate.comments
+    - field.field.node.debate.feeds_item
+    - field.field.node.debate.field_date
+    - field.field.node.debate.field_debate_facilitators
+    - field.field.node.debate.field_file
+    - field.field.node.debate.field_geographical_focus
+    - field.field.node.debate.field_image
+    - field.field.node.debate.field_noderef
+    - field.field.node.debate.field_orgref
+    - field.field.node.debate.field_related_themes
+    - field.field.node.debate.field_related_topics
+    - field.field.node.debate.field_status
+    - node.type.debate
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          64addca8-d918-48f7-a0bd-f5fa7e96e050:
+            uuid: 64addca8-d918-48f7-a0bd-f5fa7e96e050
+            region: content
+            configuration:
+              id: 'field_block:node:debate:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - title
+          7f1fd06b-6ef4-49d2-b762-8d91c86e3ff8:
+            uuid: 7f1fd06b-6ef4-49d2-b762-8d91c86e3ff8
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_date'
+              label: Date
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'd F Y'
+                  separator: to
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - latest_events_date
+          032b3004-910b-4184-8f4f-38122d46483a:
+            uuid: 032b3004-910b-4184-8f4f-38122d46483a
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_debate_facilitators'
+              label: Facilitators
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                - library_data_provider
+          fa4c4bdd-1673-42fa-8397-fdf3c5bbb1e2:
+            uuid: fa4c4bdd-1673-42fa-8397-fdf3c5bbb1e2
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_orgref'
+              label: Partners
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 9
+            additional:
+              layout_builder_styles_style:
+                - latest_events_organizers
+          3e2957ce-dd9f-4abc-adab-9e08f1c7f943:
+            uuid: 3e2957ce-dd9f-4abc-adab-9e08f1c7f943
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_status'
+              label: Status
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - debate_status_closed
+          ce9ac218-7211-4bd8-ac23-986767b1f7d2:
+            uuid: ce9ac218-7211-4bd8-ac23-986767b1f7d2
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: medium_large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+        third_party_settings: {  }
+id: node.debate.teaser
+targetEntityType: node
+bundle: debate
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  comments: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_date: true
+  field_debate_facilitators: true
+  field_file: true
+  field_geographical_focus: true
+  field_image: true
+  field_noderef: true
+  field_orgref: true
+  field_related_themes: true
+  field_related_topics: true
+  field_status: true
+  langcode: true
+  search_api_excerpt: true

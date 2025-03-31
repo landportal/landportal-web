@@ -1,0 +1,12 @@
+uuid: dda661a6-13e7-437b-9784-b48eeb3bdf9c
+langcode: en
+status: true
+dependencies: {  }
+id: first_name
+label: first-name
+classes: first-name
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

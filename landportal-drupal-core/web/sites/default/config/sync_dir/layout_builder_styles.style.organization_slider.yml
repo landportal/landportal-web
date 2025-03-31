@@ -1,0 +1,12 @@
+uuid: 0d7f266e-fa55-4482-bcb4-58741b9da64c
+langcode: en
+status: true
+dependencies: {  }
+id: organization_slider
+label: 'Organization Slider'
+classes: organization-slider
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

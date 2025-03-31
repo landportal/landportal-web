@@ -1,0 +1,12 @@
+uuid: 9f43a96e-ede7-42db-a2fd-9e3a2674204b
+langcode: en
+status: true
+dependencies: {  }
+id: background_dark_block
+label: 'Background Dark'
+classes: layout-background--dark
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

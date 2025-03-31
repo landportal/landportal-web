@@ -1,0 +1,12 @@
+uuid: 8a7c52ae-5789-4926-9f0a-27315488e193
+langcode: en
+status: true
+dependencies: {  }
+id: project_landing_page
+label: 'Project Landing Page'
+classes: sec-style--
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

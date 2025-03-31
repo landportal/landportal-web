@@ -1,0 +1,25 @@
+uuid: df1bf99b-14fd-4064-8a63-0f26f599df0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.landportal
+  module:
+    - system
+  theme:
+    - landportal
+id: landportalmenu
+theme: landportal
+region: header
+weight: -3
+provider: null
+plugin: 'system_menu_block:landportal'
+settings:
+  id: 'system_menu_block:landportal'
+  label: 'Landportal menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

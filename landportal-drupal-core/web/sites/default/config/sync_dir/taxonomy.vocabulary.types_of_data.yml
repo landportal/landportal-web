@@ -1,0 +1,8 @@
+uuid: 55b593be-72f5-4e15-b101-756e54049fff
+langcode: en
+status: true
+dependencies: {  }
+name: 'Types of Data'
+vid: types_of_data
+description: ''
+weight: 0

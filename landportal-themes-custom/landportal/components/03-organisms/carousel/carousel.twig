@@ -1,0 +1,34 @@
+{{ attach_library('landportal/carousel') }}
+
+{% set carousel_base_class = carousel_base_class|default('carousel') %}
+
+{% if carousel_label %}
+  {% include "@atoms/text/headings/_heading.twig" with {
+    "heading_level": 2,
+    "heading": carousel_label,
+  } %}
+{% endif %}
+<div {{ bem(carousel_base_class, carousel_modifiers, carousel_blockname) }}>
+  <div class="swiper-container">
+    {% block carousel_content %}
+      <div class="swiper-wrapper">
+      {% for item in items %}
+        <div class="swiper-slide">
+          {% include "@molecules/project-card/project-card.twig" with {
+            item_title: item.item_title
+          } %}
+        </div>
+      {% endfor %}
+      </div>
+    {% endblock %}
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</div>

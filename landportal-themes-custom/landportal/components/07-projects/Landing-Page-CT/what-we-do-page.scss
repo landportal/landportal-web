@@ -1,0 +1,377 @@
+.landing-page {
+    .webinar-slider {
+        .user-upper-section-country {
+            .bg-grey {
+                background-color: #EBEBE5;
+                color: #333;
+                padding: 15px;
+                margin: 0; 
+
+                .row {
+                    margin-left: -15px;
+                    margin-right: -15px;
+
+                    .col-md-4 {
+                        min-height: 1px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        line-height: normal;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        @media (min-width: $md) {
+                            padding-bottom: 15px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+
+                        @media (min-width: 991px) {
+                            width: 33.33333333%;
+                            float: left;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #06C;
+
+                            &:hover {
+                                color: #004080;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .rtecenter {
+                            text-align: center;
+
+                            img {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        clear: both;
+                        content: "";
+                        display: table;
+                    }
+                }
+
+                .row-content-description {
+                    .col-md-4 {
+                        width: 100%;
+
+                        @media (min-width: 991px) {
+                            width: 33.33333333%;
+                            float: left;
+                        }
+                    }
+                }
+            }
+
+            .section__sidebar__aside {
+                .user-upper-section-city {
+                    padding: 15px;
+                    background-color: #EBEBE5;
+                }
+
+                .we-do-block-css-class {
+                    header {
+                        padding-top: 1px !important;
+
+                        h2 {
+                            padding-top: 0;
+                            margin-top: 0;
+                        }
+                    }
+
+                    #widget_pager_top_testimonials_sliders-block_5 {
+                        text-align: center !important;
+                    }
+
+                    .lp-swiper-controls-top {
+                        .swiper-paginationb-bullets {
+                            padding-top: 0 !important;
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .user-themes{
+        display: inline;
+        div{
+            display: inline;
+            > div{
+                font-size: 13px;
+                display: inline-block;
+                white-space: normal;
+                background-color: #e6f5f5;
+                border-left: 5px solid #099;
+                color: #333;
+                font-family: "Merriweather Sans",sans-serif;
+                padding: 3px 5px;
+                margin: 3px 5px;
+                border-radius: 0.6em;
+                a{
+                    color: #555;
+                }
+            }
+        } 
+    }
+    .user-concepts{
+        display: inline;
+        div{
+            display: inline;
+            > div{
+                font-size: 13px;
+                display: inline-block;
+                white-space: normal;
+                background-color: #ebebf0;
+                border-left: 5px solid #336;
+                color: #333;
+                font-family: "Merriweather Sans",sans-serif;
+                padding: 3px 5px;
+                margin: 3px 5px;
+                border-radius: 0.6em;
+                a{
+                    color: #555;
+                }
+            }
+        }
+    }
+    .blog-post-full-content{
+        .col-xs-4{
+            width: 33.33333333%;
+            float: left;
+            text-align: center;
+        }
+        .col-xs-2{
+            width: 16.66666667%;
+            float: left;
+            text-align: center;
+        }
+        .col-xs-6{
+            width: 50%;
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    } 
+}
+
+article[about="/whatwedo"] {
+    .webinar-slider {
+        .section__sidebar__main {
+            @media (min-width: 768px) {
+                width: 66% !important;
+                float: left;
+                clear: left;
+
+            }
+        }
+
+        .section__sidebar__aside {
+            @media (min-width: 768px) {
+                width: 33% !important;
+                float: right;
+                clear: right;
+            }
+
+            .user-upper-section-city {
+                background-color: #EBEBE5;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 15px;
+
+                .text-long {
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .we-do-block-css-class {
+                header {
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Get involved landing page css 
+article[about="/get-involved"],
+article[about="/fr/get-involved"],
+article[about="/pt/get-involved"],
+article[about="/es/get-involved"] {
+
+    .section__sidebar__aside {
+        @media (min-width: 768px) {
+            width: 33% !important;
+            float: right;
+            clear: right;
+        }
+    }
+
+    .section__sidebar__main {
+        @media (min-width: 768px) {
+            width: 66% !important;
+            float: left;
+            clear: left;
+
+        }
+
+        .text-long {
+            ul {
+                list-style-type: none;
+                padding-left: 40px;
+
+                li {
+                    position: relative;
+                    padding-left: 0 !important;
+
+                    &::before {
+                        border-bottom: 3px solid #033;
+                        content: " ";
+                        width: 30px;
+                        display: block;
+                        position: absolute;
+                        left: -40px;
+                        top: .7em;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: #06C;
+
+                &:hover {
+                    color: #004080;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .get-involved {
+        header {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .skin-default {
+            position: relative;
+            bottom: 42px;
+        }
+    }
+
+    .testimonials {
+        .swiper-paginationb-bullets {
+            bottom: -5px !important;
+        }
+    }
+}
+
+// Donate landing page css
+article[about="/donate"],
+article[about="/fr/donnez"],
+article[about="/pt/doe"],
+article[about="/es/donar"] {
+    .section__sidebar__aside {
+        @media (min-width: 768px) {
+            width: 33% !important;
+            float: right;
+            clear: right;
+        }
+    }
+
+    .section__sidebar__main {
+        @media (min-width: 768px) {
+            width: 66% !important;
+            float: left;
+            clear: left;
+
+        }
+
+        .text-long {
+            form {
+                input[name="submit"] {
+                    width: auto;
+                    max-width: 100%;
+                }
+            }
+
+            .row {
+                .col-sm-6 {
+                    @media (min-width: $mdtab) {
+                        width: 50%;
+                        float: left;
+                        //clear: left;
+                        padding-right: 15px;
+                    }
+                }
+
+                .col-sm-6:last-child {
+                    @media (min-width: $mdtab) {
+                        width: 50%;
+                        float: right;
+                        //clear: right;
+                    }
+                }
+
+                &::after {
+                    clear: both;
+                    content: "";
+                    display: table;
+                }
+            }
+
+            hr {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border-top: 1px solid #eee;
+            }
+        }
+    }
+}
+// '/voc/language'
+.all-language-list{
+    .views-row{
+        border-top: 1px solid #EBEBE5;
+        .views-field-field-language-code-iso-639-3{
+            padding-bottom: 15px;
+        }
+    }
+}
+// '/voc/currency'
+.all-currencies-list{
+   .views-row{
+        border-top: 1px solid #EBEBE5;
+        .views-field-field-eu-currency-nal-uri{
+            padding-bottom: 15px;
+            .field-content{
+                a{
+                    color: #06C;
+                    &:hover{
+                        color: #004080;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+   } 
+}  

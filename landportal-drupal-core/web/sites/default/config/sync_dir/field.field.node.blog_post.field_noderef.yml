@@ -1,0 +1,54 @@
+uuid: 3e5f902b-9619-4b53-8b5e-8837541fb1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_noderef
+    - node.type.blog_post
+    - node.type.campaign
+    - node.type.country_narrative
+    - node.type.dataset
+    - node.type.debate
+    - node.type.event
+    - node.type.issues
+    - node.type.landing_page
+    - node.type.landlibrary_resource
+    - node.type.news
+    - node.type.organization
+    - node.type.project
+    - node.type.sdgi
+    - node.type.webinar_series
+id: node.blog_post.field_noderef
+field_name: field_noderef
+entity_type: node
+bundle: blog_post
+label: 'Related content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+      campaign: campaign
+      country_narrative: country_narrative
+      dataset: dataset
+      debate: debate
+      event: event
+      issues: issues
+      landlibrary_resource: landlibrary_resource
+      landing_page: landing_page
+      news: news
+      organization: organization
+      project: project
+      sdgi: sdgi
+      webinar_series: webinar_series
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: blog_post
+field_type: entity_reference

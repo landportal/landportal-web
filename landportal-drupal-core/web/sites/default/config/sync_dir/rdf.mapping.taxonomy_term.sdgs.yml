@@ -1,0 +1,14 @@
+uuid: 28be7aca-a348-4052-b2ed-8cb76d31d202
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs
+  module:
+    - taxonomy
+id: taxonomy_term.sdgs
+targetEntityType: taxonomy_term
+bundle: sdgs
+types:
+  - ''
+fieldMappings: {  }

@@ -1,0 +1,12 @@
+uuid: 960f65ed-7546-4c52-8725-ada5b228096d
+langcode: en
+status: true
+dependencies: {  }
+id: background_dark_section
+label: 'Background Dark'
+classes: layout-background--dark
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

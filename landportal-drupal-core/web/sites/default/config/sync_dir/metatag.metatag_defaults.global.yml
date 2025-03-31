@@ -1,0 +1,22 @@
+uuid: 3af38f0e-aced-41ad-ab0a-d9d5e59736d4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | [site:name]'
+  content_language: '[current-page:metatag:content_language]'
+  canonical_url: '[current-page:url:unaliased]'
+  shortlink: '[current-page:url:unaliased]'
+  description: '[current-page]'
+  generator: 'Drupal 9 (https://www.drupal.org)'
+  og_title: '[current-page:title] | [site:name]'
+  og_image: '[metatag:image_src]'
+  og_site_name: 'Land Portal'
+  og_type: website
+  schema_article_is_accessible_for_free: 'True'
+  schema_event_is_accessible_for_free: 'True'
+  schema_event_type: Event

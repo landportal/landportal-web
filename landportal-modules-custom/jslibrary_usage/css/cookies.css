@@ -1,0 +1,446 @@
+/* Slideshow container */
+.slideshow-container {
+    /* max-width: 800px; */
+    width: 100%;
+    /* margin: auto; */
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 6px;
+    /* margin-top: 50px; Adjust as needed */
+    position: relative;
+    /* Position relative for absolute positioning of arrows */
+
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Slide text styling */
+.mySlides h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.mySlides p {
+    color: #f2f2f2;
+    margin-bottom: 10px;
+    font-weight: normal;
+    display: inherit;
+    word-spacing: 1px;
+    font-size: 14px;
+}
+.fade:not(.show){
+    opacity: 1 !important;
+}
+.mySlides a {
+    color: #f0723a;
+    text-decoration: none;
+}
+
+.mySlides a:hover {
+    text-decoration: underline;
+}
+
+/* Previous and next buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: -20px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    z-index: 1;
+    /* Ensure arrows appear above slides */
+}
+
+/* Position the arrows */
+.prev {
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.prev i{
+    clip-path: polygon(40% 0, 15% 50%, 39% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background: white;
+    width: 24px;
+    display: block;
+    height: 18px;
+}
+.next {
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+.next i{
+    clip-path: polygon(40% 0, 15% 50%, 39% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background: white;
+    width: 24px;
+    display: block;
+    height: 18px;
+    rotate: 180deg;
+}
+
+/* On hover, add a lighter background color */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation dots */
+.dot-container {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a white background color to the active dot */
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.eu-cookie-compliance-message,
+.eu--ccookieompliance-content,
+.eu-cookie-compliance-content {
+    width: 100%;
+    max-width: inherit;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.eu-cookie-compliance-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: inherit;
+}
+
+.eu-cookie-compliance-buttons .button {
+    border-radius: 0px;
+    margin: 2px;
+    background-color: #f0723a;
+    background-image: none;
+    text-shadow: none;
+    border: none;
+    box-shadow: inherit;
+    padding: 8px 40px;
+    font-size: 1.1em;
+    font-weight: normal;
+    /* margin-top: 14px; */
+}
+
+.eu-cookie-compliance-buttons .button:hover {
+    background-color: #f0723a;
+}
+
+#sliding-popup {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.eu-cookie-compliance-message p{
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    font-weight: normal;
+    line-height: 0.5em;
+}
+.privacy-policy-tag{
+    color: #f0723a;
+    text-decoration: none;
+}
+
+.privacy-policy-tag:hover{
+    text-decoration: underline;
+}
+
+
+/* Media query for minimum width of 320px */
+@media (min-width: 320px) {
+
+    /* Additional styles for screens wider than 320px */
+    .slideshow-container {
+       width: 70%;
+        /* Adjusted padding for wider screens */
+    }
+
+    .prev,
+    .next {
+        margin-top: 7px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .prev{
+        left: -22px;
+    }
+    .next{
+        right: -22px;
+    }
+}
+
+/*  css code for sign in block popup  */
+
+.header__menu .header__inner{
+    position: relative;
+}
+
+#block-userlogin{
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 16px;
+    background: #EBEBE5;
+    width: 300px;
+    padding: 0 15px 120px 15px;
+    z-index: 1;
+}
+#block-userlogin h2{
+    display: none;
+}
+#block-userlogin .user-login-form{
+    position: relative;
+}
+#block-userlogin .js-form-wrapper{
+    position: absolute;
+    top: auto;
+    bottom: -106px;
+    right: 0;
+    background-color: var(--c-primary);
+    border-radius: 1.3em;
+}
+#block-userlogin .js-form-wrapper:before{
+    content: '';
+    background-image: url(/sites/default/files/country-narrative/login-iconn.png);
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#block-userlogin .js-form-wrapper:after{
+    content: '' !important;
+    background-image: url(/themes/custom/landportal/images/Collapse-Down-Icon.png);
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#block-userlogin .js-form-wrapper .js-form-submit{
+    border: inherit;
+    padding-left: 0 !important;
+}
+#block-userlogin .js-form-wrapper:hover,
+#block-userlogin .js-form-wrapper:hover .js-form-submit {
+    background-color: #b76a12;
+}
+#block-userlogin ul{
+    position: absolute;
+    top: 136px;
+    font-size: 14px;
+    padding: 8px 0 0 3em;
+    margin-top: revert-layer;
+}
+#block-userlogin ul a{
+    text-decoration: none;
+    color: #06c;
+}
+#block-userlogin ul a:hover{
+    text-decoration: underline;
+    color: #004080;
+}
+#user-login-form .js-form-item .form-item__label, #user-login-form .js-form-item{
+    color: #666;
+    margin-bottom: 0;
+    font-size: 18px;
+    padding-bottom: 0;
+}
+#user-login-form .js-form-item .form-item__label:after{
+    content: '*';
+    padding-left: 3px;
+}
+#user-login-form .js-form-item .form-item__textfield{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 1.3em;
+    height: 34px;
+    margin: revert-layer;
+    font-size: 14px;
+}
+#user-login-form .js-form-item .form-item__textfield:focus{
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+#block-useraccountmenu .inline-menu--account{
+    position: relative;
+}
+#block-useraccountmenu .inline-menu--account .inline-menu__item a:after{
+    content: '';
+    color: var(--c-text-muted);
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+#block-useraccountmenu .inline-menu--account .inline-menu__item{
+    color: #777;
+}
+.eu-cookie-compliance-popup-open .agreed #popup-text{
+    padding-top: 1.5em;
+}
+.eu-cookie-compliance-popup-open .agreed #popup-text p{
+    line-height: 0.7em;
+    font-size: 1em;
+}
+.eu-cookie-compliance-popup-open .agreed #popup-buttons{
+    padding-top: 15px;
+}
+@media (max-width: 767px){
+    #block-userlogin{
+        display: none !important;
+    }
+}
+
+/* styling for changing list in view */
+.text-long:not(:has(div)) ul:not(.list-inline){
+    list-style-type: none;
+}
+.text-long:not(:has(div)) ul:not(.list-inline) li::before{
+    border-bottom: 3px solid #003333;
+    content: " ";
+    width: 30px;
+    display: block;
+    position: absolute;
+    top: 0.7em; 
+    left: 0; 
+}
+.text-long:not(:has(div)) ul:not(.list-inline) li{
+    position: relative; 
+    padding-left: 40px; 
+}
+
+
+/* Editor styles */
+p.ckeditor-custom-partners-arrow{
+    position: relative;
+    padding: 0 1em !important;
+    margin-top: -30px !important;
+    margin-right: 35px !important;
+    margin-left: 0 !important;
+    z-index: 10;
+    line-height: 60px;
+    float: left;
+    color: #FFFFFF;
+    background-color: #333366;
+}
+p.ckeditor-custom-partners-arrow:after{
+    content: ' ';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #333366;
+}
+body:has(.ckeditor-custom-partners-corner) {
+    .text-long{
+        position: relative;
+    }
+}
+p.ckeditor-custom-partners-corner{
+    height: 75px;
+    width: 75px;
+}
+p.ckeditor-custom-partners-corner:after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-right: 75px solid #006633;
+    border-top: 75px solid transparent;
+}
+p.ckeditor-custom-block-wrapped:hover{
+    box-shadow: 3px 5px 10px #666666;
+}
+p.ckeditor-custom-bg-blue{
+    padding: 15px;
+    background-color: #333399;
+    color: #FFFFFF;
+    margin-bottom: inherit !important;
+}
+p.ckeditor-custom-bg-green{
+    background-color: #339966;
+    color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: inherit !important;
+}
+p.ckeditor-custom-bg-red{
+    background-color: #CC3333;
+    color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: inherit !important;
+}
+p.ckeditor-custom-bg-grey{
+    background-color: #EBEBE5;
+    color: #333333;
+    padding: 15px;
+    margin-bottom: inherit !important;
+}
+p.ckeditor-custom-top-blue{
+    border-top: 3px solid #333399;
+}
+p.ckeditor-custom-top-green {
+    border-top: 3px solid #339966;
+}
+p.ckeditor-custom-top-red {
+    border-top: 3px solid #CC3333;
+}
+
+.my-debate-comment-class {
+  display: none;
+}
+
+body:has(a[href="/user/login"]), body:has(a[href="/fr/user/login"]), body:has(a[href="/pt/user/login"]), body:has(a[href="/es/user/login"]){
+    .my-debate-comment-class{
+        display: block;
+    }
+}

@@ -1,0 +1,197 @@
+uuid: b6fe7697-828c-4895-b35b-6fb931af0dd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_description
+    - field.storage.node.field_doc_provider
+    - field.storage.node.field_doc_creation_date
+    - field.storage.node.field_geographical_focus
+    - field.storage.node.field_image
+    - field.storage.node.field_doc_licencing
+    - field.storage.node.field_doc_publisher
+    - field.storage.node.field_related_topics
+    - field.storage.node.field_doc_language
+    - field.storage.node.field_doc_type
+    - field.storage.node.field_related_themes
+    - field.storage.node.title_field
+    - search_api.server.local_solr
+  module:
+    - search_api_solr
+    - search_api
+    - node
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        fr: '0'
+        pt-pt: '0'
+        es: '0'
+      use_universal_collation: false
+id: library_search_solr
+name: 'Library Search Solr'
+description: ''
+read_only: false
+field_settings:
+  field_doc_creation_date:
+    label: 'Date of publication'
+    datasource_id: 'entity:node'
+    property_path: field_doc_creation_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_doc_creation_date
+  field_doc_description:
+    label: 'Abstract or Description'
+    datasource_id: 'entity:node'
+    property_path: field_doc_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_doc_description
+  field_doc_language:
+    label: 'Resource Language'
+    datasource_id: 'entity:node'
+    property_path: field_doc_language
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_language
+  field_doc_licencing:
+    label: 'License of the resource'
+    datasource_id: 'entity:node'
+    property_path: field_doc_licencing
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_licencing
+  field_doc_provider:
+    label: 'Data Provider'
+    datasource_id: 'entity:node'
+    property_path: field_doc_provider
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_provider
+  field_doc_publisher:
+    label: Publisher(s)
+    datasource_id: 'entity:node'
+    property_path: field_doc_publisher
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_publisher
+  field_doc_type:
+    label: 'Resource type'
+    datasource_id: 'entity:node'
+    property_path: field_doc_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_type
+  field_geographical_focus:
+    label: 'Geographical focus'
+    datasource_id: 'entity:node'
+    property_path: field_geographical_focus
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_geographical_focus
+  field_image:
+    label: Image
+    datasource_id: 'entity:node'
+    property_path: field_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_image
+  field_related_themes:
+    label: Themes
+    datasource_id: 'entity:node'
+    property_path: field_related_themes
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_themes
+  field_related_topics:
+    label: 'Related concepts'
+    datasource_id: 'entity:node'
+    property_path: field_related_topics
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_topics
+  title_field:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title_field
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.title_field
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - landlibrary_resource
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: local_solr

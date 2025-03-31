@@ -1,0 +1,74 @@
+uuid: 6da9a202-4858-4dcb-b2e7-d007424aa226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_doc_people
+    - node.type.news
+  module:
+    - node
+label: 'News Author Importing'
+id: news_author_importing
+description: 'Only for author field importing'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  author_s_:
+    value: Author(s)
+    label: Author(s)
+    machine_name: author_s_
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_doc_people
+    map:
+      value: author_s_
+    settings:
+      language: ''
+      format: full_html

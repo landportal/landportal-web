@@ -1,0 +1,12 @@
+uuid: cb65ae65-5b1f-49b5-9451-0564bafe088d
+langcode: en
+status: true
+dependencies: {  }
+id: user_last_name
+label: 'User Last Name'
+classes: user-last-name
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

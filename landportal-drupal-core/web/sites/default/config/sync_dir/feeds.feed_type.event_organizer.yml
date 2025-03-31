@@ -1,0 +1,188 @@
+uuid: 5b7d6fc3-e57e-474c-afd7-504c117da5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_orgref
+    - node.type.event
+  module:
+    - node
+label: 'Event Organizer'
+id: event_organizer
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: event
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  organizer1:
+    value: organizer1
+    label: organizer1
+    machine_name: organizer1
+    type: csv
+  organizer2:
+    value: organizer2
+    label: organizer2
+    machine_name: organizer2
+    type: csv
+  organizer3:
+    value: organizer3
+    label: organizer3
+    machine_name: organizer3
+    type: csv
+  organizer4:
+    value: organizer4
+    label: organizer4
+    machine_name: organizer4
+    type: csv
+  organizer5:
+    value: organizer5
+    label: organizer5
+    machine_name: organizer5
+    type: csv
+  organizer6:
+    value: organizer6
+    label: organizer6
+    machine_name: organizer6
+    type: csv
+  organizer7:
+    value: organizer7
+    label: organizer7
+    machine_name: organizer7
+    type: csv
+  organizer8:
+    value: organizer8
+    label: organizer8
+    machine_name: organizer8
+    type: csv
+  organizer9:
+    value: organizer9
+    label: organizer9
+    machine_name: organizer9
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_orgref
+    map:
+      target_id: organizer1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: organizer9
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

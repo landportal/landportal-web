@@ -1,0 +1,12 @@
+uuid: 9a90bb0a-38f8-4954-9b75-0b750225ce66
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_data_provider
+label: 'Indicator Data Provider'
+classes: indicator-data-provider
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

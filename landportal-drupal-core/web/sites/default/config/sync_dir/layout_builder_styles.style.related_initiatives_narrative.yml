@@ -1,0 +1,12 @@
+uuid: 544a3d7c-c26d-457a-be80-2e354cc9f82a
+langcode: en
+status: true
+dependencies: {  }
+id: related_initiatives_narrative
+label: 'Related Initiatives Narrative'
+classes: related-initiatives-narrative
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

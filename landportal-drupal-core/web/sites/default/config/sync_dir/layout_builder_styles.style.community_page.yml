@@ -1,0 +1,12 @@
+uuid: 6ab1aa99-3329-4e00-ac2a-79d024fc3c42
+langcode: en
+status: true
+dependencies: {  }
+id: community_page
+label: 'Community Page'
+classes: community-page
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,41 @@
+menu_items:
+  - title: 'Countries'
+    url: '#'
+    color: 'countries'
+  - title: 'Issues'
+    url: '#'
+    color: 'issues'
+    below:
+      - title: 'Land monitoring'
+        url: '#'
+      - title: 'Forest tenure'
+        url: '#'
+  - title: 'Join the Debate'
+    url: '#'
+    below:
+      - title: 'Online discussions'
+        url: '#'
+      - title: 'Webinars'
+        url: '#'
+  - title: 'Data'
+    url: '#'
+    below:
+      - title: 'Datasets'
+        url: '#'
+  - title: 'Library'
+    url: '#'
+    below:
+      - title: 'Search'
+        url: '#'
+  - title: 'News & Events'
+    url: '#'
+    below:
+      - title: 'News'
+        url: '#'
+  - title: 'Community'
+    url: '#'
+    below:
+      - title: 'News'
+        url: '#'
+  - title: 'Geoportal'
+    url: '#'

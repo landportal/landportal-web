@@ -1,0 +1,45 @@
+id: narratives
+label: 'Migrate - Country Narratives'
+migration_group: landportal_migration
+migration_tags:
+  - landportal_migration
+source:
+  plugin: d7_node
+  node_type: landbook_country
+process:
+  type:
+    - plugin: default_value
+      default_value: country_narrative
+  langcode:
+    - plugin: default_value
+      source: language
+      default_value: und
+  uid:
+    - plugin: migration_lookup
+      migration: users
+      source: node_uid
+  nid: nid
+  title: title_field
+  body: body
+  sticky: sticky
+  status: status
+  geographical_focus:
+    plugin: migration_lookup
+    migration: regions
+    source: field_geographical_focus
+  narrative: body
+  picture: field_image
+  promote: promote
+  changed: changed
+  created: created
+destination:
+  plugin: entity:node
+  default_bundle: country_narrative
+migration_dependencies:
+  required:
+    - regions
+    - users
+dependencies:
+  enforced:
+    module:
+      - landportal_migration

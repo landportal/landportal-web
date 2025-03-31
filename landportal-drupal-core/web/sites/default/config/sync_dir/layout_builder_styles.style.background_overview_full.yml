@@ -1,0 +1,12 @@
+uuid: e9c1757f-959d-4a69-a6ce-ff7449ebbb53
+langcode: en
+status: true
+dependencies: {  }
+id: background_overview_full
+label: 'Background Overview Full'
+classes: background-overview-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

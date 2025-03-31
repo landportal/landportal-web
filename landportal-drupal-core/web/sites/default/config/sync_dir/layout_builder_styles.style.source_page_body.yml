@@ -1,0 +1,12 @@
+uuid: 187cb1b2-6e7e-46eb-9135-68d420f79289
+langcode: en
+status: true
+dependencies: {  }
+id: source_page_body
+label: 'Source Page Body'
+classes: source-page-body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

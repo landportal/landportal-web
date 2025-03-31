@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<h3>Aucun résultat disponible</h3>\r\n"
+            format: filtered_html
+  block_1:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<h3 id=\"search-project-heading-filter\">Filter</h3>\r\n"
+            format: filtered_html
+      empty:
+        area:
+          content:
+            value: "<h3>No results available</h3>\r\n"
+            format: filtered_html

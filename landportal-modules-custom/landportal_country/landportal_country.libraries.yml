@@ -1,0 +1,40 @@
+jump_menu:
+  version: 1
+  js:
+    js/jumpmenu.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+landing_page_map:
+  version: 1
+  js:
+    js/landing_page_map.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.map
+
+project_landing_page_map:
+  version: 1
+  js:
+    js/project_landing_page_map.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.map
+
+programme_landing_page_map:
+  version: 1
+  js:
+    js/programme_landing_page_map.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.map     

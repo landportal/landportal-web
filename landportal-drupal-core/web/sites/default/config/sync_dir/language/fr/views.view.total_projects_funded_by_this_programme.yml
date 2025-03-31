@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<p><span>total des projets financés par ce programme</span></p>\r\n"
+            format: full_html

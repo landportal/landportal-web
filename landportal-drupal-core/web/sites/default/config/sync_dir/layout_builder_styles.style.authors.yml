@@ -1,0 +1,12 @@
+uuid: 5dbdbd20-2bea-4b36-96df-8af57b2f4d51
+langcode: en
+status: true
+dependencies: {  }
+id: authors
+label: Authors
+classes: authors
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

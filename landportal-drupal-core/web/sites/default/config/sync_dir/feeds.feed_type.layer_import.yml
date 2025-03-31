@@ -1,0 +1,142 @@
+uuid: 218a6589-96d5-4a85-814b-7b475e69f87f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.layer.field_dataset
+    - field.field.taxonomy_term.layer.field_description
+    - field.field.taxonomy_term.layer.field_id
+    - field.field.taxonomy_term.layer.field_name
+    - taxonomy.vocabulary.layer
+  module:
+    - taxonomy
+label: 'Layer Import'
+id: layer_import
+description: 'Importing layer vocabulary terms without muli-valued fields.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: layer
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  layer_name:
+    value: 'layer name'
+    label: 'layer name'
+    machine_name: layer_name
+    type: csv
+  layer_description:
+    value: 'Layer description'
+    label: 'Layer description'
+    machine_name: layer_description
+    type: csv
+  id:
+    value: ID
+    label: ID
+    machine_name: id
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  dataset:
+    value: Dataset
+    label: Dataset
+    machine_name: dataset
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_name
+    map:
+      value: layer_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_description
+    map:
+      value: layer_description
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_id
+    map:
+      value: id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: content_translation_uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_dataset
+    map:
+      target_id: dataset
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false

@@ -1,0 +1,27 @@
+.webinar-slider {
+    .dynamic-class-style.virtual-conferences {
+        header {
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .layout__region--second {
+            .block {
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .testimonials.virtual-conferences {
+        .swiper-paginationb-bullets.swiper-paginationb-horizontal {
+            bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2px 10px;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+    }
+}

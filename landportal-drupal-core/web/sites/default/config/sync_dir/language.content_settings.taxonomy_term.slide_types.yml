@@ -1,0 +1,18 @@
+uuid: 31f927fe-42ba-4fcf-8671-5343d014266a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slide_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.slide_types
+target_entity_type_id: taxonomy_term
+target_bundle: slide_types
+default_langcode: site_default
+language_alterable: false

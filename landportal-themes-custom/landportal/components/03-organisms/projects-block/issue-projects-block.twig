@@ -1,0 +1,46 @@
+{% set block_base_class = 'issue-projects-block' %}
+
+{% set block_label = 'Projects in this country'|t %}
+
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('intro', [], block_base_class) }}>
+    {% if block_label %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 2,
+        heading: block_region,
+        heading_modifiers: [block_base_class]
+      } %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: 2,
+        heading: 'projects'|t ,
+        heading_modifiers: [block_base_class]
+      } %}
+    {% endif %}
+  </div>
+  <div {{ bem('projects', [], block_base_class) }}>
+    <div {{ bem('header', [], block_base_class) }}>
+      <a class="link" href="{{ more_url }}">{{ more_label }}</a>
+    </div>
+    {% block block_content %}
+      <div {{ bem('grid', [], block_base_class) }}>
+      {% for item in items %}
+        {% include "@molecules/project-card/project-card.twig" with {
+          item_title: item.item_title,
+          item_url: item.item_url,
+          image_src: item.image_src,
+          image_title: item.image_title,
+          image_alt: item.image_alt,
+          published_date: item.published_date,
+          item_summary: item.item_summary,
+          item_duration_from: item.item_duration_from,
+          item_duration_to: item.item_duration_to,
+          item_value_currency: item.item_value_currency,
+          item_value: item.item_value,
+          item_donors: item.item_donors,
+          card__block_class: block_base_class
+        } %}
+      {% endfor %}
+    </div>
+    {% endblock %}
+  </div>
+</div>

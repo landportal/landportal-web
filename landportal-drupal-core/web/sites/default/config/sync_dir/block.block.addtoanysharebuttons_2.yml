@@ -1,0 +1,30 @@
+uuid: 88679aee-7287-4dec-bcc5-5a888e9c8fa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+    - system
+  theme:
+    - landportal
+id: addtoanysharebuttons_2
+theme: landportal
+region: content
+weight: 3
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Share this page'
+  label_display: visible
+  provider: addtoany
+  context_mapping: {  }
+  link_url: ''
+  link_title: ''
+  buttons_size: ''
+  addtoany_html: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/data/browse/network-data-stories\r\n/data/browse/Land-Portal-data-stories\r\n/issues/*/news\r\n/issues/*/organization\r\n/user/login\r\n/user/register"

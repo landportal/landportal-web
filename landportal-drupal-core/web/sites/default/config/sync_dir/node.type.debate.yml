@@ -1,0 +1,18 @@
+uuid: 11bbd3ac-f586-4dd3-8d0c-42f34e55408d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Debate
+type: debate
+description: "A Land Debate. This content type is used to create a Debate on the Landportal website.\r\nBy default comments are enabled in Debates, the comments may be open or close regardless of the Debate status."
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

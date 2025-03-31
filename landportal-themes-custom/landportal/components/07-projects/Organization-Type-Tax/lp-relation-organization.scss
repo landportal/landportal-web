@@ -1,0 +1,177 @@
+.relation-organization-tax-list-item, .sdgs-taxonomy-grid-system{
+    .views-row{
+        border-top: 5px solid #033;
+        .views-field-field-image{
+            width: 25%;
+            float: left;
+            clear: left;
+            padding: 15px 15px 15px 0;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .views-field-title{
+            line-height: 1.42857143;
+            a{
+                color: #06C;
+                font-size: 18px;
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: 700;
+                line-height: normal;
+            }
+            @media (min-width: $p-small){
+                //display: inline;
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (min-width: $p-tablet){
+                float: right;
+                margin: 10px 0;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        .views-field-nothing{
+            float: right;
+            font-weight: bold;
+            font-size: 18px;
+            @media (min-width: $p-small){
+                width: 100%;
+                padding: inherit;
+            }
+            @media (min-width: $p-tablet){
+                width: 75%;
+                padding: 5px 15px 5px 15px;
+            }
+            .field-content{
+                span{
+                    font-weight: normal;
+                    font-style: italic;
+                    color: #555;
+                    font-size: 13px;
+                }
+            }
+        }
+        .views-field-field-organization-type{
+            width: 75%;
+            float: right;
+            clear: right;
+            padding-left: 15px;
+            padding-right: 15px;
+            div{
+                font-size: 13px;
+                color: #666;
+                font-family: "Merriweather Sans",sans-serif;
+                margin: 0 0 10px;
+                line-height: 1.42857143;
+            }
+            @media (min-width: $p-small){
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (min-width: $p-tablet){
+                width: 75%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        .views-field-body{
+            float: right;
+            clear: right;
+            padding-bottom: 15px;
+            max-height: 5.5em;
+            overflow: hidden;
+            line-height: 1.42857143;
+            min-height: 1;
+            font-size: 13px;
+            color: #444;
+            > div{
+                font-size: 13px;
+                color: #666;
+                font-family: "Merriweather Sans",sans-serif;
+                margin: 0 0 10px;
+                line-height: 1.42857143;
+            }
+            p {
+                font-size: 13px;
+                color: #666;
+                font-family: "Merriweather Sans", sans-serif;
+                margin: 0 0 10px;
+                line-height: 1.42857143;
+                a{
+                    &::after{
+                        content: '';
+                        background-image: url(../images/extlinks.jpg);
+                        display: inline-block;
+                        margin-left: 2px;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }                
+            }  
+            @media (min-width: $p-small){
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (min-width: $p-tablet){
+                width: 75%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        .field-type-text-with-summary {
+            width: 75%;
+            float: right;
+            clear: right;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            max-height: 5.5em;
+            overflow: hidden;
+            line-height: 1.42857143;
+            min-height: 1;
+            font-size: 13px;
+        
+            div {
+                line-height: 1.42857143;
+                color: #444;
+                margin: 0 0 10px;
+                p {
+                    line-height: 1.42857143;
+                    color: #666;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+.sdgs-taxonomy-grid-system{
+    .views-row{
+        border-top: inherit;
+        .views-field-langcode{
+            display: none;
+        }
+        .views-field-field-image, .views-field-title, .views-field-body{
+            width: 50%;
+            strong, h1, h2, h3, h4{
+                font-weight: normal;
+            }
+            .top-red{
+                &:first-child{
+                    border-top: 3px solid #333; 
+                }
+            }
+        }
+    }
+}
+
+.organization-type-taxonomy{
+    margin-left: -15px;
+    header{
+        padding-left: 15px;
+    }
+}

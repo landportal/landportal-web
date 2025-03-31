@@ -1,0 +1,559 @@
+uuid: 0b079f9a-ac0c-4399-9aba-68df25f10cc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.description
+    - field.field.user.user.first_name
+    - field.field.user.user.last_name
+    - field.field.user.user.themes
+  module:
+    - user
+label: 'User Import themes'
+id: user_import_theme
+description: 'Themes of users will be imported with this Feed Type.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values: {  }
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  user_uid:
+    value: 'User uid'
+    label: 'User uid'
+    machine_name: user_uid
+    type: csv
+  user_name:
+    value: 'User Name'
+    label: 'User Name'
+    machine_name: user_name
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  first_name:
+    value: 'First name'
+    label: 'First name'
+    machine_name: first_name
+    type: csv
+  last_name:
+    value: 'Last name'
+    label: 'Last name'
+    machine_name: last_name
+    type: csv
+  description:
+    value: Description
+    label: Description
+    machine_name: description
+    type: csv
+  roles:
+    value: Roles
+    label: Roles
+    machine_name: roles
+    type: csv
+  email:
+    value: Email
+    label: Email
+    machine_name: email
+    type: csv
+  active_status:
+    value: 'Active status'
+    label: 'Active status'
+    machine_name: active_status
+    type: csv
+  themes:
+    value: Themes
+    label: Themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: Themes1
+    label: Themes1
+    machine_name: themes1
+    type: csv
+  themes2:
+    value: Themes2
+    label: Themes2
+    machine_name: themes2
+    type: csv
+  themes3:
+    value: Themes3
+    label: Themes3
+    machine_name: themes3
+    type: csv
+  themes4:
+    value: Themes4
+    label: Themes4
+    machine_name: themes4
+    type: csv
+  themes5:
+    value: Themes5
+    label: Themes5
+    machine_name: themes5
+    type: csv
+  themes6:
+    value: Themes6
+    label: Themes6
+    machine_name: themes6
+    type: csv
+  themes7:
+    value: Themes7
+    label: Themes7
+    machine_name: themes7
+    type: csv
+  themes8:
+    value: Themes8
+    label: Themes8
+    machine_name: themes8
+    type: csv
+  themes9:
+    value: Themes9
+    label: Themes9
+    machine_name: themes9
+    type: csv
+  themes10:
+    value: Themes10
+    label: Themes10
+    machine_name: themes10
+    type: csv
+  themes11:
+    value: Themes11
+    label: Themes11
+    machine_name: themes11
+    type: csv
+  themes12:
+    value: Themes12
+    label: Themes12
+    machine_name: themes12
+    type: csv
+  themes13:
+    value: Themes13
+    label: Themes13
+    machine_name: themes13
+    type: csv
+  themes14:
+    value: Themes14
+    label: Themes14
+    machine_name: themes14
+    type: csv
+  themes15:
+    value: Themes15
+    label: Themes15
+    machine_name: themes15
+    type: csv
+  themes16:
+    value: Themes16
+    label: Themes16
+    machine_name: themes16
+    type: csv
+  themes17:
+    value: Themes17
+    label: Themes17
+    machine_name: themes17
+    type: csv
+  themes18:
+    value: Themes18
+    label: Themes18
+    machine_name: themes18
+    type: csv
+  themes19:
+    value: Themes19
+    label: Themes19
+    machine_name: themes19
+    type: csv
+  themes20:
+    value: Themes20
+    label: Themes20
+    machine_name: themes20
+    type: csv
+  themes21:
+    value: Themes21
+    label: Themes21
+    machine_name: themes21
+    type: csv
+  themes22:
+    value: Themes22
+    label: Themes22
+    machine_name: themes22
+    type: csv
+  themes23:
+    value: Themes23
+    label: Themes23
+    machine_name: themes23
+    type: csv
+  themes24:
+    value: Themes24
+    label: Themes24
+    machine_name: themes24
+    type: csv
+  themes25:
+    value: Themes25
+    label: Themes25
+    machine_name: themes25
+    type: csv
+  themes26:
+    value: Themes26
+    label: Themes26
+    machine_name: themes26
+    type: csv
+  themes27:
+    value: Themes27
+    label: Themes27
+    machine_name: themes27
+    type: csv
+  themes28:
+    value: Themes28
+    label: Themes28
+    machine_name: themes28
+    type: csv
+  themes29:
+    value: Themes29
+    label: Themes29
+    machine_name: themes29
+    type: csv
+  themes30:
+    value: Themes30
+    label: Themes30
+    machine_name: themes30
+    type: csv
+  related_concepts:
+    value: 'Related concepts'
+    label: 'Related concepts'
+    machine_name: related_concepts
+    type: csv
+  related_concepts1:
+    value: 'Related concepts1'
+    label: 'Related concepts1'
+    machine_name: related_concepts1
+    type: csv
+mappings:
+  -
+    target: uid
+    map:
+      value: user_uid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: user_name
+    settings: {  }
+    unique: {  }
+  -
+    target: first_name
+    map:
+      value: first_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: last_name
+    map:
+      value: last_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: roles
+    map:
+      target_id: roles
+    settings:
+      reference_by: label
+      allowed_roles:
+        administrator: administrator
+        contributor: contributor
+        developer: developer
+        programme: programme
+        landportal: 0
+        lp_team: 0
+        subadmin: 0
+      autocreate: 0
+      revoke_roles: 0
+  -
+    target: mail
+    map:
+      value: email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: status
+    map:
+      value: active_status
+    settings: {  }
+  -
+    target: themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes2
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes3
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes4
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes5
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes6
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes7
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes8
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes9
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes10
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes11
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes12
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes13
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes14
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes15
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes16
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes17
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes18
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes19
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes20
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes21
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes22
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes23
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes24
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes25
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes26
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes27
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes28
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes29
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0
+  -
+    target: themes
+    map:
+      target_id: themes30
+    settings:
+      language: ''
+      reference_by: tid
+      autocreate: 0

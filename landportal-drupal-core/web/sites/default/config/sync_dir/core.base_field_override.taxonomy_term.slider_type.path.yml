@@ -1,0 +1,20 @@
+uuid: 879e4329-0513-40aa-8fff-78a378c16023
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_type
+  module:
+    - path
+id: taxonomy_term.slider_type.path
+field_name: path
+entity_type: taxonomy_term
+bundle: slider_type
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

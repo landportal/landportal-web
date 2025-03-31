@@ -1,0 +1,19 @@
+uuid: aa506a00-a491-4f6e-85e4-641c75ea2495
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.city
+    - node.type.sliders
+id: node.sliders.city
+field_name: city
+entity_type: node
+bundle: sliders
+label: City
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

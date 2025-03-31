@@ -1,0 +1,21 @@
+uuid: b2277de8-00f2-49d6-917a-d63f4186f35d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_people
+    - node.type.campaign
+  module:
+    - text
+id: node.campaign.field_doc_people
+field_name: field_doc_people
+entity_type: node
+bundle: campaign
+label: 'Author(s), editor(s), contributor(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

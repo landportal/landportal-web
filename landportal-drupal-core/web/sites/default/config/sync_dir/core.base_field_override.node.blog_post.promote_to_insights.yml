@@ -1,0 +1,23 @@
+uuid: e087b156-92d7-4eab-852e-3dd4b45d3145
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+    - custom_pub.custom_publishing_option.promote_to_insights
+id: node.blog_post.promote_to_insights
+field_name: promote_to_insights
+entity_type: node
+bundle: blog_post
+label: 'Promoted to Insights'
+description: 'custom publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

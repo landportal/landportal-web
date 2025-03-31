@@ -1,0 +1,238 @@
+.latest-data-stories{
+	header{
+		h2, p{
+  			margin: 0;
+  			color: #333 !important;
+		}
+	}
+	.more-link{
+		text-align: end;
+		a{
+			color: #06C !important;
+			text-decoration: none;
+			font-size: 13px;
+			font-style: italic;
+			background: inherit !important;
+			&:hover{
+				color: #004080;
+				text-decoration: underline;
+			}
+		}
+	}
+	.views-row{
+		.views-col{
+			.views-field-rendered-entity{
+				article{
+					border-top: 5px solid #396 !important;
+					.block{
+						&:last-child{
+							display: none;
+						}
+					}
+				} 
+			} 
+		} 
+	} 	
+}
+// Stroy From Network Section css
+.story-from-network{
+	header{
+		h2, p{
+  			margin: 0;
+		}
+		.badge{
+			display: inline-block;
+			min-width: 10px;
+			padding: 3px 7px;
+			font-size: 13px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 1;
+			vertical-align: middle;
+			white-space: nowrap;
+			text-align: center;
+			background-color: #777;
+			border-radius: 10px;
+		}		
+	}
+	.more-link{
+		text-align: end;
+		a{
+			color: #06C;
+			text-decoration: none;
+			font-size: 13px;
+			font-style: italic;
+			&:hover{
+				color: #004080;
+				text-decoration: underline;
+			}
+		}
+	}
+	.views-row{
+		border-top: 1px solid #00000017;
+		.views-col{
+			@media (min-width: $p-small){
+				width: 100% !important; 
+			}
+			@media (min-width: $p-tablet){ 
+				width: 50% !important;
+			}
+			.views-field-rendered-entity{
+				article{
+					border-top: 5px solid #396 !important;
+					margin-top: 10px;
+					@media (min-width: $p-small){
+						margin-right: 0; 
+					}
+					@media (min-width: $p-tablet){ 
+						margin-right: 30px;
+					}
+					.page-title{
+						display: none;
+					}
+					.layout{
+						.title{
+							span{
+								font-size: inherit;
+							}
+						}
+						.date{
+							font-size: 13px;
+							div{
+								&::before{
+									content: "";
+									padding: 0 3px 3px;
+									background-image: url(../images/icons8-date-50.png);
+									height: 16px;
+									width: 16px;
+									display: inline-block;
+									background-size: cover;
+									margin-right: 5px;
+									vertical-align: text-bottom;
+								}
+							}
+						}
+						.block{
+							&:first-child{
+								float: left;
+								padding-right: 15px;
+								clear: right;
+								@media (min-width: $p-small){
+									width: 25%; 
+								}
+								@media (min-width: $p-tablet){ 
+									width: 50%;
+								}
+							}
+							&:not(:nth-child(1)){
+								float: right;
+								padding-left: 15px;
+								clear: right;
+								@media (min-width: $p-small){
+									width: 75%; 
+								}
+								@media (min-width: $p-tablet){ 
+									width: 50%;
+								}
+							}
+							&:nth-child(2){
+								font-size: 18px;
+								padding-top: 10px;
+								line-height: normal;
+								span{
+									a{
+										font-weight: bold;
+										text-decoration: none;
+										color: #06C;
+										&:hover{
+											text-decoration: underline;
+										}
+									}
+								}
+							}
+							&:nth-child(4){
+								font-size: 13px;
+								div{
+									> div:first-child{		
+										&::before{
+											content: "";
+											background-image: url(../images/user-icon.png);
+											height: 21px;
+											width: 21px;
+											padding: 0 3px 3px;
+											display: inline-block;
+											background-size: cover;
+											vertical-align: middle;
+										}
+									}
+									> div{
+										display: inline;
+									}
+									> div:not(:nth-child(1)){
+										&::before{
+											content: ', ';
+										}
+									}
+								}
+							}
+							&:nth-child(5){
+								max-height: 5.5em;
+								overflow: hidden;
+								padding-bottom: 15px;
+								clear: right;
+								.text-long{
+									p{
+										font-size: 13px;
+										line-height: inherit;
+										color: #666;
+									}
+								}
+							}
+						}
+					} 
+				} 
+			} 
+		} 
+	} 	
+} 
+// '/data/browse/Land-Portal-data-stories'
+.browse-lp{
+	header{
+		div{
+			padding-bottom: 15px;
+		}
+	}
+	.views-row{
+		border: none;
+		.views-col{
+			.views-field-rendered-entity{
+				article{
+					margin-top: 0;
+					.layout{
+						.block{
+							&:last-child{
+								max-height: 5.5em;
+								overflow: hidden;
+								padding-bottom: 15px;
+							}
+						}
+					} 
+				}
+			} 
+		} 
+	} 
+}
+// Share this page Block
+#block-addtoanysharebuttons-2{
+	text-align: end;
+	padding-top: 15px;
+  	padding-bottom: 30px;
+	h2{
+		font-size: 13px;
+		font-family: "Merriweather Sans",sans-serif;
+		font-weight: 700;
+		line-height: normal;
+		color: #555;
+		font-style: italic;
+	}
+}  

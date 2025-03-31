@@ -1,0 +1,12 @@
+uuid: c746d39c-d49b-4b2d-a9e3-ac7d7a0f4b1b
+langcode: en
+status: true
+dependencies: {  }
+id: organizer_style
+label: 'Organizer Style'
+classes: organizer-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

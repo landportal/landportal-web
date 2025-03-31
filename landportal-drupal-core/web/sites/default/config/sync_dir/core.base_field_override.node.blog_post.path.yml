@@ -1,0 +1,20 @@
+uuid: b8966848-cfe5-46d2-abaa-96c8fbe6ca84
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+  module:
+    - path
+id: node.blog_post.path
+field_name: path
+entity_type: node
+bundle: blog_post
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

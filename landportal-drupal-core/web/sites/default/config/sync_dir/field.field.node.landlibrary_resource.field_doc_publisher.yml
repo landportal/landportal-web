@@ -1,0 +1,29 @@
+uuid: 7a668e3f-7505-4258-bbff-19189472a465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_publisher
+    - node.type.landlibrary_resource
+    - node.type.organization
+id: node.landlibrary_resource.field_doc_publisher
+field_name: field_doc_publisher
+entity_type: node
+bundle: landlibrary_resource
+label: Publisher(s)
+description: 'The organization(s) that published the resource. This publisher is linked to an organizational profile on the Land Portal. If this publisher is not featured in the list, you will have to create a new organizational profile. In case you have just created a new publisher and it does not show up yet in this list, this is because the cache needs to be cleared. Please check back in a few minutes, apologies for the inconvenience.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

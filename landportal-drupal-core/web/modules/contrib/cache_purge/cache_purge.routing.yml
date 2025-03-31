@@ -1,0 +1,7 @@
+cache_purge.settings:
+  path: '/admin/config/system/cache-purge'
+  defaults:
+    _form: '\Drupal\cache_purge\Form\CachePurgeSettingsForm'
+    _title: 'Cache Purge Settings'
+  requirements:
+    _permission: 'administer site configuration'

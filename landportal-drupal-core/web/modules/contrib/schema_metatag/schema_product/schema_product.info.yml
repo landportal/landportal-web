@@ -1,0 +1,7 @@
+name: Schema.org Product
+type: module
+description: 'Adds Schema.org/Product to the JSON LD array. Creates Product.'
+core_version_requirement: ^9 || ^10 || ^11
+package: SEO
+dependencies:
+  - schema_metatag:schema_metatag

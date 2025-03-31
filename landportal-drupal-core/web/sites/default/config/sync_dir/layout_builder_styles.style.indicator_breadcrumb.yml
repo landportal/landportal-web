@@ -1,0 +1,12 @@
+uuid: 7aebb1ee-9dcf-4cef-bc39-35591308ce82
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_breadcrumb
+label: 'Indicator Breadcrumb'
+classes: indicator-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

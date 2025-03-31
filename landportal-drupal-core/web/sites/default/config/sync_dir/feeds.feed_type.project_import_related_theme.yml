@@ -1,0 +1,216 @@
+uuid: 6e2a5177-e291-4dc6-a616-139c18c93b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.project_themes
+    - node.type.project
+  module:
+    - node
+label: 'Project import Themes'
+id: project_import_related_theme
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: project
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  related_issues:
+    value: 'related issues'
+    label: 'related issues'
+    machine_name: related_issues
+    type: csv
+  related_issues1:
+    value: 'related issues1'
+    label: 'related issues1'
+    machine_name: related_issues1
+    type: csv
+  related_issues2:
+    value: 'related issues2'
+    label: 'related issues2'
+    machine_name: related_issues2
+    type: csv
+  related_issues3:
+    value: 'related issues3'
+    label: 'related issues3'
+    machine_name: related_issues3
+    type: csv
+  related_issues4:
+    value: 'related issues4'
+    label: 'related issues4'
+    machine_name: related_issues4
+    type: csv
+  related_issues5:
+    value: 'related issues5'
+    label: 'related issues5'
+    machine_name: related_issues5
+    type: csv
+  related_issues6:
+    value: 'related issues6'
+    label: 'related issues6'
+    machine_name: related_issues6
+    type: csv
+  related_issues7:
+    value: 'related issues7'
+    label: 'related issues7'
+    machine_name: related_issues7
+    type: csv
+  related_issues8:
+    value: 'related issues8'
+    label: 'related issues8'
+    machine_name: related_issues8
+    type: csv
+  related_issues9:
+    value: 'related issues9'
+    label: 'related issues9'
+    machine_name: related_issues9
+    type: csv
+  related_issues10:
+    value: 'related issues10'
+    label: 'related issues10'
+    machine_name: related_issues10
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: project_themes
+    map:
+      target_id: related_issues
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues7
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues8
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues9
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: project_themes
+    map:
+      target_id: related_issues10
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

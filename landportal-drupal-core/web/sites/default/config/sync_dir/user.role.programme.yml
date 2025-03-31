@@ -1,0 +1,35 @@
+uuid: 297e58f1-576f-4305-bb84-19a79d926791
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.programme_narrative
+    - node.type.project
+  module:
+    - content_translation
+    - eu_cookie_compliance
+    - media
+    - node
+    - simple_sitemap
+    - system
+id: programme
+label: Programme
+weight: 10
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'administer content types'
+  - 'administer sitemap settings'
+  - 'cancel account'
+  - 'create programme_narrative content'
+  - 'create project content'
+  - 'display eu cookie compliance popup'
+  - 'edit own programme_narrative content'
+  - 'edit own project content'
+  - 'edit own terms in programme'
+  - 'revert project revisions'
+  - 'translate project node'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view project revisions'
+  - 'view the administration theme'

@@ -1,0 +1,162 @@
+.new_page_term_layer{
+	border-bottom: inherit;
+}
+[about^="/voc/layer/"]{
+	.dataset-related-landVoc-tags{
+		h2{
+			font-size: 18px !important;
+		}
+	}
+	.views-field-field-image{
+		padding-top: 15px;
+		img{
+			width: 100%;
+		}
+	}
+	.views-field-field-license-text{
+		padding-top: 15px;
+		.views-label-field-license-text{
+			font-weight: bold;
+		}
+		.field-content{
+			p{
+				margin: 0;
+				a{
+					color: #06c;
+					&::after{
+						content: '';
+						background-image: url(../images/extlinks.jpg);
+						width: 10px;
+						height: 10px;
+						display: inline-block;
+						margin-left: 2px;
+					}
+					&:hover{
+						color: #004080;
+					}
+				}
+			}
+		}
+		a[href^="mailto:"]{
+			&::after{
+				content: '';
+				background-image: url(../images/extlinks.jpg);
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				margin-left: 2px;
+				background-position: right;
+			}
+		}
+	}
+	.views-field-field-doc-licencing{
+		padding-top: 15px;
+		.views-label-field-doc-licencing{
+			font-weight: bold; 
+		}
+		h2{
+			display: none;
+		}
+		a{
+			font-size: 13px;
+			color: #06c;
+			&:hover{
+				color: #004080;
+			}
+		}
+		.layout--onecol{
+			.block{
+				&:first-child, .text-long{
+					display: none;
+				}
+				&:last-child{
+					>div{
+						margin-top: -6px;
+						div:first-child{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.views-field-field-orgref{
+		.views-label-field-orgref{
+			font-weight: bold;
+		}
+		a{
+			color: #06c;
+			&:hover{
+				color: #004080;
+			}
+		}
+	}
+	.section__sidebar__main{
+		margin-right: 0;
+		.block:first-child{
+			div{
+				font-size: 32px;
+				font-family: "Merriweather Sans",sans-serif;
+				font-weight: 700;
+				line-height: normal;
+				color: #555;
+				margin: 15px 0;
+			}
+		} 
+		.text-long{
+			a[href^="mailto:"]{
+				&::after{
+					content: '';
+					background-image: url(../images/extlinks.jpg);
+					width: 10px;
+					height: 10px;
+					display: inline-block;
+					margin-left: 2px;
+					background-position: right;
+				}
+			}
+			a{
+				color: #06c;
+				text-decoration: none;
+				&::after{
+					content: '';
+					background-image: url(../images/extlinks.jpg);
+					width: 10px;
+					height: 10px;
+					display: inline-block;
+					margin-left: 2px;
+				}
+				&:hover{
+					color: #004080;
+					text-decoration: underline;
+				}
+			}
+			.rtecenter{
+				text-align: -webkit-center;
+				text-align: -moz-center;
+				a{
+					color: #06c;
+					text-decoration: none;
+					&:hover{
+						color: #004080;
+						text-decoration: underline;
+					}
+					&::after{
+						background-image: none !important;
+					}
+				}
+			}
+			hr{
+				margin-bottom: 20px;
+				margin-top: 20px;
+				border-top: 1px solid #eee;
+			}
+		}
+	}
+	a[href^="http://geoportal"]{
+		text-align: -moz-center;
+		&::after{
+			background-image: none !important;
+		}
+	}
+}

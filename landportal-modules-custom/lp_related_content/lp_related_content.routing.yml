@@ -1,0 +1,6 @@
+lp_related_content.people.autocomplete:
+  path: '/admin/lprelatedcontent/people/autocomplete/{type}/{regional}'
+  defaults:
+    _controller: '\Drupal\lp_related_content\Controller\PeopleAutocompleteController::handleAutocomplete'
+  requirements:
+    _permission: 'administer content types'

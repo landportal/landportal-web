@@ -1,0 +1,5 @@
+services:
+  lp_swiper_cycle.commands:
+    class: \Drupal\lp_swiper_cycle\Commands\LpSwiperCycleCommands
+    tags:
+      - { name: drush.command }

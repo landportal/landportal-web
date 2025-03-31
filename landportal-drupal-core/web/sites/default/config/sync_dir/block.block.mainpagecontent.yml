@@ -1,0 +1,20 @@
+uuid: 649158fa-83e0-4c26-970e-586f30b8139c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - landportal
+id: mainpagecontent
+theme: landportal
+region: content
+weight: -9
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

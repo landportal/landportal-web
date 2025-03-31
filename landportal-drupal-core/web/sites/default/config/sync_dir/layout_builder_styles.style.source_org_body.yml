@@ -1,0 +1,12 @@
+uuid: ee59d65d-2cc6-45aa-bc7d-4532ce23b453
+langcode: en
+status: true
+dependencies: {  }
+id: source_org_body
+label: 'Source Org Body'
+classes: source-org-body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

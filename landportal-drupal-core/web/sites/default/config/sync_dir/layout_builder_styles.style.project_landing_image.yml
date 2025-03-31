@@ -1,0 +1,12 @@
+uuid: 90d81bd9-bae0-4270-8deb-8451dc7ae38d
+langcode: en
+status: true
+dependencies: {  }
+id: project_landing_image
+label: 'Project Landing Image'
+classes: project-landing-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

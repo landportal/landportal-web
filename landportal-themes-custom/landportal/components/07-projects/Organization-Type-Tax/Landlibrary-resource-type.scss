@@ -1,0 +1,99 @@
+.landlibrary-resource-type-class{
+    .views-row{
+        border-top: 5px solid #906;
+        .page-title{
+            display: none;
+        }
+        .libaray-image{
+            display: none !important;
+            width: 25%;
+            float: left;
+            clear: right;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+        .library-tilte{
+            width: 75%; 
+            min-height: 1px;
+            padding: 10px 15px;
+            float: right;
+            clear: right; 
+            max-height: 7.8em;
+            overflow: hidden;
+            color: red !important;
+            div{
+                font-size: 18px;
+                font-family: "Merriweather Sans", sans-serif;
+                font-weight: 700;
+                line-height: normal;
+                color: #06C;
+                a{
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .user-countries{
+            //display: none; 
+        }
+        .library-resource-type{
+            display: none !important;  
+            width: 75%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            float: right;
+            clear: right;
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans", sans-serif;
+                line-height: normal;
+                color: #444;
+            }
+        }
+        .date{
+            width: 75%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            float: right;
+            clear: right;
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans", sans-serif;
+                line-height: normal;
+                color: #444;
+                &::before{
+                    content: "";
+                    vertical-align: middle;
+                    padding: 0 3px 3px;
+                    background-image: url(../images/icons8-date-50.png);
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .library-description{
+            width: 75%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            float: right;
+            clear: right;
+            max-height: 5.5em;
+            overflow: hidden;
+            line-height: 1.42857143;
+            div{
+                font-size: 13px;
+                font-family: "Merriweather Sans", sans-serif;
+                color: #666;
+            }
+        }
+    }
+}

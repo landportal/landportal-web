@@ -1,0 +1,14 @@
+{% extends "@templates/section/sidebar.twig" %}
+{% if content %}
+  {% block content_main %}
+    {% if content.main %}
+      {{ content.main }}
+    {% endif %}
+  {% endblock %}
+
+  {% block content_aside %}
+    {% if content.aside %}
+      {{ content.aside }}
+    {% endif %}
+  {% endblock %}
+{% endif %}

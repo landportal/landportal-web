@@ -1,0 +1,23 @@
+uuid: 0c2aafc3-ca08-4e1e-982c-bfb37330e911
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+    - custom_pub.custom_publishing_option.promote_to_announcements
+id: node.impact_story.promote_to_announcements
+field_name: promote_to_announcements
+entity_type: node
+bundle: impact_story
+label: 'Promote to LP announcements'
+description: 'custom publication option.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

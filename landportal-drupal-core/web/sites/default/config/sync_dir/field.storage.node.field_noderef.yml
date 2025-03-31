@@ -1,0 +1,19 @@
+uuid: 39d614e8-ace2-4caf-aa80-87e70ad9fbef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_noderef
+field_name: field_noderef
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

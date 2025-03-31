@@ -1,0 +1,12 @@
+uuid: 9f210f14-5be7-49ce-a8b1-b67557431667
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_date
+label: 'Latest Events Date'
+classes: latest-events-date
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

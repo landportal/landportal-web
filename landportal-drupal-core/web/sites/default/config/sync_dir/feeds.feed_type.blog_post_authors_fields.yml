@@ -1,0 +1,147 @@
+uuid: e3468448-ee3a-4267-9cf1-e584e19c1587
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.blog_post.title
+    - field.field.node.blog_post.field_authors
+    - node.type.blog_post
+  module:
+    - node
+label: 'Blog Post Authors Fields'
+id: blog_post_authors_fields
+description: 'only Authors'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: blog_post
+  langcode: fr
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  authors:
+    value: Authors
+    label: Authors
+    machine_name: authors
+    type: csv
+  authors1:
+    value: Authors1
+    label: Authors1
+    machine_name: authors1
+    type: csv
+  authors2:
+    value: Authors2
+    label: Authors2
+    machine_name: authors2
+    type: csv
+  authors3:
+    value: Authors3
+    label: Authors3
+    machine_name: authors3
+    type: csv
+  authors4:
+    value: Authors4
+    label: Authors4
+    machine_name: authors4
+    type: csv
+  authors5:
+    value: Authors5
+    label: Authors5
+    machine_name: authors5
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_authors
+    map:
+      target_id: authors
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_authors
+    map:
+      target_id: authors1
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_authors
+    map:
+      target_id: authors2
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_authors
+    map:
+      target_id: authors3
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_authors
+    map:
+      target_id: authors4
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_authors
+    map:
+      target_id: authors5
+    settings:
+      language: ''
+      reference_by: name
+      feeds_item: guid
+      autocreate: 0

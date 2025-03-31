@@ -1,0 +1,12 @@
+uuid: aca8fabf-32ea-429f-b028-291ae14e56e6
+langcode: en
+status: true
+dependencies: {  }
+id: library_landing_page
+label: 'Library Landing Page'
+classes: library-landing-page
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,125 @@
+uuid: e6009957-cc61-4d4e-9f8c-97c965d85ade
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.organization_types.description
+    - field.field.taxonomy_term.organization_types.synonyms_synonyms
+    - taxonomy.vocabulary.organization_types
+    - views.view.organization_type_breadcrumb
+  module:
+    - layout_builder
+    - text
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          bf6069db-45bc-40ae-aec7-dd1c303a8093:
+            uuid: bf6069db-45bc-40ae-aec7-dd1c303a8093
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:organization_types:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          90026e8e-f212-49e5-a4a0-a1ff1de42809:
+            uuid: 90026e8e-f212-49e5-a4a0-a1ff1de42809
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:organization_types:synonyms_synonyms'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          5d89f0fe-9621-4657-99b6-2149e503657a:
+            uuid: 5d89f0fe-9621-4657-99b6-2149e503657a
+            region: content
+            configuration:
+              id: 'views_block:organization_type_breadcrumb-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+          f7365b4d-a2ad-43c6-aab9-962520726205:
+            uuid: f7365b4d-a2ad-43c6-aab9-962520726205
+            region: content
+            configuration:
+              id: 'views_block:organization_type_breadcrumb-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+id: taxonomy_term.organization_types.default
+targetEntityType: taxonomy_term
+bundle: organization_types
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  synonyms_synonyms:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

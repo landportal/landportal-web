@@ -1,0 +1,12 @@
+uuid: 29c9998f-dff1-48e2-85cb-bde60296a31b
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_concepts
+label: 'Indicator Concepts'
+classes: indicator-concepts
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

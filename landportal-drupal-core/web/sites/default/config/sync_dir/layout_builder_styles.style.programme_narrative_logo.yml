@@ -1,0 +1,12 @@
+uuid: 07ade43f-a18e-484c-bf13-6f5c9a1ffe13
+langcode: en
+status: true
+dependencies: {  }
+id: programme_narrative_logo
+label: 'Programme Narrative logo'
+classes: programme-narrative-logo
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

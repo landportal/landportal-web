@@ -1,0 +1,8 @@
+uuid: 8245f6a1-6ce4-4a10-8c69-8681a6c46034
+langcode: en
+status: true
+dependencies: {  }
+name: 'Debate status'
+vid: debate_status
+description: 'Status of a debate'
+weight: 0

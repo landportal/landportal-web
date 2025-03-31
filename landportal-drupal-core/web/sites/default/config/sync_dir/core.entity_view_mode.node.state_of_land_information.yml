@@ -1,0 +1,10 @@
+uuid: 7fb856b4-a531-44a2-965b-00cb40b342a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.state_of_land_information
+label: 'State of Land Information'
+targetEntityType: node
+cache: true

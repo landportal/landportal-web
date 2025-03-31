@@ -1,0 +1,290 @@
+@mixin custom-focus-style {
+  outline: none;
+  border-color: #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+@mixin custom-arrow-icon {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 1.3em;
+	appearance: auto;
+}
+
+.data-breadcrumb{
+	padding-top: 10px; 
+	header{
+		padding-left: 13px; 
+		a{
+			font-style: italic;
+			font-size: 13px; 
+			color: #06c;
+			text-decoration: none;
+			&:hover{        
+				text-decoration: underline;
+			}
+		}
+		.slash{
+			&::after{
+				content: "/ ";
+				padding: 0 5px;
+				color: #ccc;
+			}
+		}
+		span{
+			font-size: 13px;
+			color: #666;
+			font-style: italic;
+		}
+	}
+	h1{
+		font-size: 32px;
+		font-family: "Merriweather Sans",sans-serif;
+		font-weight: 700;
+		line-height: normal;
+		color: #555;             
+		margin: 15px 0;
+	}
+}
+.layers-landing-page-full{
+	.views-view-grid{
+		.views-col{
+			@media (min-width: $p-small){
+				width: 100% !important;
+				margin-top: 8px;
+			}
+			@media (min-width: $p-tablet){
+				width: 33.3% !important;
+			}
+			@media (min-width: $p-large){
+				width: 25% !important;
+				margin-top: 8px;
+			}
+			.views-field-rendered-entity{
+				margin-left: auto;
+				margin-right: auto;
+				border-top: 4px solid #396;
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-tablet){
+					width: 90%;				
+				}
+				h2{
+					font-size: 18px;
+					line-height: 1.1;
+					margin-top: 8px;
+					a{
+						text-decoration: none;
+						color: #06C;
+					}
+					a:hover{
+						text-decoration: underline;
+						color: #004080;
+					}
+				}
+				.block{
+					&:nth-of-type(1){
+						font-size: 13px;
+						a{
+							text-decoration: none;
+							color: #06C;
+							&:hover{
+								text-decoration: underline;
+								color: #004080;
+							}
+						}				
+					}
+				}
+				.text-long{
+					font-size: 13px;
+					color: #666;
+					line-height: inherit;
+				}
+				div{
+					&:nth-child(5){
+						font-size: 13px;
+						color: #444;
+					}
+				}
+				.views-field-tid{
+					color: #444;
+					font-size: 13px;
+					font-weight: bold;
+				}
+				.provider-in-data{
+					font-size: 13px;
+				}
+				.data-landing-page-provider{
+					font-size: 13px;
+					font-weight: bold;
+					p{
+						float: left;
+						margin-right: 4px;
+						color: #444;
+					}
+				}
+			}
+		}
+		.views-col:hover{
+			box-shadow: 3px 5px 10px #666;
+		}
+	}
+
+	.data-description{
+		.text-long{
+			a{
+				text-decoration: none;
+				display: none;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+			p{
+				&:not(:first-child){
+					display: none;
+				}
+			}
+		}	
+	}
+	#views-exposed-form-land-book-all-layers-block-1{
+		.js-form-item{
+			float: left;
+			padding: .5em 1em 0 0;
+			margin-bottom: 0; 
+			&:first-child, &:nth-child(4){
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 330px;
+				}
+			}
+			&:nth-child(2){
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 450px;
+				}
+			}
+			&:nth-child(3){
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 370px;
+				}
+			}
+			[data-drupal-selector="edit-field-name-value"], select{
+				@include custom-arrow-icon;
+				&:focus{
+					@include custom-focus-style;
+				}
+			}
+			//&:nth-child(2){
+				//width: 50%;       
+			//}
+		}
+		.form-item__label{
+			padding: 0;
+		}
+		.form-item__dropdown{
+			border: none;
+			&:hover{
+				border: none;
+			}
+			&::after{
+				border-top: inherit; 
+			}
+			#edit-issue-layer-names, #edit-layer-names-page{
+				@include custom-arrow-icon;    
+				&:focus{
+					@include custom-focus-style;
+				}
+			}
+		}
+		#edit-field-dataset-target-id{
+			@include custom-arrow-icon;
+			&:focus{
+				@include custom-focus-style;
+			}
+		}
+	}
+	header{
+		margin-top: 10px;
+		.badge{
+			display: inline-block;
+		    min-width: 10px;
+		    padding: 3px 7px;
+		    font-size: 13px;
+		    font-weight: bold;
+		    color: #fff;
+		    line-height: 1;
+		    vertical-align: middle;
+		    white-space: nowrap;
+		    text-align: center;
+		    background-color: #777;
+		    border-radius: 10px;
+		}
+	}
+	.js-form-wrapper{
+		@media (min-width: $p-small){
+			float: right;
+		} 
+		[type="submit"]{
+			border: inherit;
+			padding: 6px 12px;
+			@media (min-width: $p-small){
+				margin-top: 0;
+				float: right;
+				margin-right: 17px;
+			}
+			@media (min-width: $p-tablet){
+				margin-top: 50px; 
+			}
+			@media (min-width: $p-large){
+				margin-top: 0; 
+			}
+			@media (min-width: $p-xlarge){
+				margin-top: 37px; 
+			}
+		}
+		[data-drupal-selector="edit-reset"]{
+			margin-top: 50px;
+			background: white;
+			color: black;
+			padding: 6px 12px;
+			//border-color: #ccc !important;
+			border: 1px solid #ccc;
+			&:hover{
+				color: #333;
+				background-color: #e6e6e6;
+				border-color: #adadad;
+			}
+			@media (min-width: $p-small){
+				margin-top: 0;
+				float: right;
+				margin-right: 17px;
+			}
+			@media (min-width: $p-tablet){
+				margin-top: 50px; 
+			}
+			@media (min-width: $p-large){
+				margin-top: 0; 
+			}
+			@media (min-width: $p-xlarge){
+				margin-top: 37px; 
+			}
+		}
+	} 
+}

@@ -1,0 +1,19 @@
+uuid: d7890228-ff1b-402b-b94b-4c18485d986c
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_country_narrative
+    - node
+id: node.additional
+field_name: additional
+entity_type: node
+type: additional_information
+settings: {  }
+module: landportal_country_narrative
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

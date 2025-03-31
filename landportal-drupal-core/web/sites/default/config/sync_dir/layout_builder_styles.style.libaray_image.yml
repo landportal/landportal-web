@@ -1,0 +1,12 @@
+uuid: 93e678d8-6471-4edd-9fc2-7827499918b5
+langcode: en
+status: true
+dependencies: {  }
+id: libaray_image
+label: 'Libaray Image'
+classes: libaray-image
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

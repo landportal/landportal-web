@@ -1,0 +1,206 @@
+uuid: a25aa68f-cd97-46fa-9835-bc9c85aa05ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.sdgs.description
+    - core.base_field_override.taxonomy_term.sdgs.name
+    - field.field.taxonomy_term.sdgs.feeds_item
+    - field.field.taxonomy_term.sdgs.field_id
+    - field.field.taxonomy_term.sdgs.field_image
+    - field.field.taxonomy_term.sdgs.field_sdgs_type
+    - taxonomy.vocabulary.sdgs
+    - views.view.sdgs_sdgs_tiers_taxonomy
+  module:
+    - addtoany
+    - image
+    - layout_builder
+    - options
+    - text
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Breadcrumb section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_breadcrumb
+        components:
+          c8be3d4a-efc6-4a89-a26a-44f205ff2cab:
+            uuid: c8be3d4a-efc6-4a89-a26a-44f205ff2cab
+            region: content
+            configuration:
+              id: 'views_block:sdgs_sdgs_tiers_taxonomy-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Parent Breadcrumb'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          c4820b2f-f5ca-429c-8315-6dc6f6cfbd05:
+            uuid: c4820b2f-f5ca-429c-8315-6dc6f6cfbd05
+            region: content
+            configuration:
+              id: 'views_block:sdgs_sdgs_tiers_taxonomy-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          e7c41f7d-01d0-4a9a-9bb8-480013b383bf:
+            uuid: e7c41f7d-01d0-4a9a-9bb8-480013b383bf
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:sdgs:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          0e435aeb-2ed7-47a2-a51a-a8b725b5e5da:
+            uuid: 0e435aeb-2ed7-47a2-a51a-a8b725b5e5da
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:sdgs:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          990bc8f0-268b-44c7-8386-6607ae2b3dd6:
+            uuid: 990bc8f0-268b-44c7-8386-6607ae2b3dd6
+            region: content
+            configuration:
+              id: 'views_block:sdgs_sdgs_tiers_taxonomy-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          35cd9e70-ea27-45e9-b890-b242fed559b7:
+            uuid: 35cd9e70-ea27-45e9-b890-b242fed559b7
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+id: taxonomy_term.sdgs.default
+targetEntityType: taxonomy_term
+bundle: sdgs
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sdgs_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

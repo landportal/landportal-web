@@ -1,0 +1,8 @@
+uuid: 5173d7a7-e1a8-4f77-ba55-08f07b40b2dc
+langcode: en
+status: true
+dependencies: {  }
+id: new_work
+label: 'New Work'
+description: 'custom new work publication option.'
+publish_under_promote_options: true

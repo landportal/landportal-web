@@ -1,0 +1,23 @@
+.events-block {
+  padding: $space-double 0;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: clr(news);
+    border-bottom: 4px solid clr(news);
+    margin-bottom: $space;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: clr(news);
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

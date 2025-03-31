@@ -1,0 +1,8 @@
+uuid: d86a73d5-8641-4c5e-b697-eba27dd01121
+langcode: und
+status: true
+dependencies: {  }
+name: 'Landlibrary Resource Type'
+vid: landlibrary_resource_type
+description: ''
+weight: 0

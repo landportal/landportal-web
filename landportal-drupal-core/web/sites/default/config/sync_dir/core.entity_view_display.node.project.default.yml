@@ -1,0 +1,761 @@
+uuid: 922683bb-614b-448d-8019-5df1d5ee6041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.body
+    - field.field.node.project.code
+    - field.field.node.project.contact_field
+    - field.field.node.project.data_curation
+    - field.field.node.project.feeds_item
+    - field.field.node.project.field_currency
+    - field.field.node.project.field_doc_provider
+    - field.field.node.project.field_donors
+    - field.field.node.project.field_implementers
+    - field.field.node.project.field_noderef
+    - field.field.node.project.field_project_duration
+    - field.field.node.project.field_related_donor
+    - field.field.node.project.field_related_impact
+    - field.field.node.project.field_related_organization
+    - field.field.node.project.field_related_provider
+    - field.field.node.project.field_related_resources
+    - field.field.node.project.field_resources_library
+    - field.field.node.project.field_value_decimal
+    - field.field.node.project.official_website
+    - field.field.node.project.programme
+    - field.field.node.project.project_concepts
+    - field.field.node.project.project_image
+    - field.field.node.project.project_logo
+    - field.field.node.project.project_regions
+    - field.field.node.project.project_themes
+    - field.field.node.project.related_projects
+    - field.field.node.project.source
+    - field.field.node.project.testing
+    - node.type.project
+    - views.view.landvoc_image
+    - views.view.project_landing_title
+    - views.view.project_sliders
+    - views.view.projects_organization
+    - views.view.related_projects
+    - views.view.this_project_is_part_of
+  module:
+    - datetime_range
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - lp_project_status
+    - lp_related_content
+    - options
+    - social_media
+    - text
+    - user
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Breadcrumb'
+          context_mapping: {  }
+          layout_builder_styles_style: project_background_azure_full
+        components:
+          9173d9da-1144-4546-b07b-685fd728e67a:
+            uuid: 9173d9da-1144-4546-b07b-685fd728e67a
+            region: content
+            configuration:
+              id: 'views_block:project_landing_title-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: 'Project Landing Top'
+          context_mapping: {  }
+          layout_builder_styles_style: project_background_azure_full
+        components:
+          d8eac668-f5c7-461a-997c-35b875ef3b45:
+            uuid: d8eac668-f5c7-461a-997c-35b875ef3b45
+            region: main
+            configuration:
+              id: 'field_block:node:project:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          a5166020-9ae4-4246-8782-d331316c7b57:
+            uuid: a5166020-9ae4-4246-8782-d331316c7b57
+            region: aside
+            configuration:
+              id: 'field_block:node:project:contact_field'
+              label: Contact
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          abe754aa-883a-4bea-a9fb-ceda993af12a:
+            uuid: abe754aa-883a-4bea-a9fb-ceda993af12a
+            region: aside
+            configuration:
+              id: social_sharing_block
+              label: 'Social Sharing block'
+              label_display: '0'
+              provider: social_media
+              context_mapping: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Project Image'
+          context_mapping: {  }
+          layout_builder_styles_style: project_landing_image
+        components:
+          72c38ec2-70f8-48cc-a992-de1bda98b0c4:
+            uuid: 72c38ec2-70f8-48cc-a992-de1bda98b0c4
+            region: content
+            configuration:
+              id: lp_project_status
+              label: 'Lp Project Status'
+              label_display: '0'
+              provider: lp_project_status
+              context_mapping: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+          69b0137e-7ac1-44a4-b35c-8f38e78d5d6e:
+            uuid: 69b0137e-7ac1-44a4-b35c-8f38e78d5d6e
+            region: content
+            configuration:
+              id: 'field_block:node:project:project_image'
+              label: 'Page banner'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Logos'
+          context_mapping: {  }
+          layout_builder_styles_style: logo_full_background
+        components:
+          8973389b-4e20-4c77-a04d-4edae760e3c8:
+            uuid: 8973389b-4e20-4c77-a04d-4edae760e3c8
+            region: content
+            configuration:
+              id: 'field_block:node:project:project_logo'
+              label: 'Project Logo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          eaa40cf2-560d-471b-aa54-9a1a7eb44442:
+            uuid: eaa40cf2-560d-471b-aa54-9a1a7eb44442
+            region: content
+            configuration:
+              id: 'views_block:this_project_is_part_of-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Top'
+          context_mapping: {  }
+          layout_builder_styles_style: project_multiple_item
+        components:
+          8b80111e-d6a4-44ae-9830-207bcc31437c:
+            uuid: 8b80111e-d6a4-44ae-9830-207bcc31437c
+            region: content
+            configuration:
+              id: 'views_block:projects_organization-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          0e504330-0c22-4ad6-8aea-8bc7ea42eebb:
+            uuid: 0e504330-0c22-4ad6-8aea-8bc7ea42eebb
+            region: content
+            configuration:
+              id: 'views_block:projects_organization-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          dc46f57c-a671-429b-9739-eb8b6f8e693a:
+            uuid: dc46f57c-a671-429b-9739-eb8b6f8e693a
+            region: content
+            configuration:
+              id: 'views_block:projects_organization-block_3'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Second Row'
+          context_mapping: {  }
+          layout_builder_styles_style: project_body_background_full
+        components:
+          0df109c0-d98f-4de6-ae09-53c3378809cd:
+            uuid: 0df109c0-d98f-4de6-ae09-53c3378809cd
+            region: content
+            configuration:
+              id: 'field_block:node:project:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Official Website'
+          context_mapping: {  }
+          layout_builder_styles_style: background_light_section
+        components:
+          d7b609a9-563a-4cfd-a622-8d34dd3410fc:
+            uuid: d7b609a9-563a-4cfd-a622-8d34dd3410fc
+            region: content
+            configuration:
+              id: 'field_block:node:project:official_website'
+              label: 'External Links'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'project landvoc'
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style: project_landvoc_full
+        components:
+          fc5d0c08-82cd-45a4-95f8-f85b7a29fba1:
+            uuid: fc5d0c08-82cd-45a4-95f8-f85b7a29fba1
+            region: second
+            configuration:
+              id: 'field_block:node:project:project_regions'
+              label: 'Geographical Scope'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          9c554d79-b59d-42fb-9c27-1f1bc8fa8d02:
+            uuid: 9c554d79-b59d-42fb-9c27-1f1bc8fa8d02
+            region: second
+            configuration:
+              id: 'field_block:node:project:project_themes'
+              label: 'Project Themes'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+          a3816e71-cb7d-4380-b87a-43dfcb040cc8:
+            uuid: a3816e71-cb7d-4380-b87a-43dfcb040cc8
+            region: second
+            configuration:
+              id: 'field_block:node:project:project_concepts'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          02913b28-6d44-4b33-893c-ee9e1f99dc67:
+            uuid: 02913b28-6d44-4b33-893c-ee9e1f99dc67
+            region: first
+            configuration:
+              id: 'views_block:landvoc_image-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Resources'
+          context_mapping: {  }
+          layout_builder_styles_style: project_disclaimer_azure_full
+        components:
+          7d6e1f40-85a0-411f-994d-2e544f0d9590:
+            uuid: 7d6e1f40-85a0-411f-994d-2e544f0d9590
+            region: content
+            configuration:
+              id: 'views_block:project_sliders-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project Blog'
+          context_mapping: {  }
+          layout_builder_styles_style: related_impact_background
+        components:
+          f3b5a94f-8a18-47a6-b965-d56ef8bb71f8:
+            uuid: f3b5a94f-8a18-47a6-b965-d56ef8bb71f8
+            region: content
+            configuration:
+              id: 'views_block:project_sliders-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'This Project Inlcude'
+          context_mapping: {  }
+          layout_builder_styles_style: this_project_include
+        components:
+          66748250-3f20-4297-a20c-661a66eda1de:
+            uuid: 66748250-3f20-4297-a20c-661a66eda1de
+            region: content
+            configuration:
+              id: 'views_block:this_project_include-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Related projects'
+          context_mapping: {  }
+          layout_builder_styles_style: related_projects
+        components:
+          b9fb1bd4-4be0-4245-9b90-2fd064799dca:
+            uuid: b9fb1bd4-4be0-4245-9b90-2fd064799dca
+            region: content
+            configuration:
+              id: 'views_block:related_projects-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 128
+    region: content
+  contact_field:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  data_curation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 129
+    region: content
+  field_currency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_doc_provider:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_donors:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_implementers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_project_duration:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_related_donor:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_related_impact:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_related_organization:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_related_provider:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_resources:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_resources_library:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_value_decimal:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  official_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  programme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  project_concepts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  project_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  project_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  project_regions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  project_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  related_projects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  source:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 127
+    region: content
+  testing:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 121
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

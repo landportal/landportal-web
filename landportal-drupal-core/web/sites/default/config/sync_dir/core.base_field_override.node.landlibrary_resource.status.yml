@@ -1,0 +1,22 @@
+uuid: bf74e8a8-f615-4230-8d25-20a23b080881
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.status
+field_name: status
+entity_type: node
+bundle: landlibrary_resource
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

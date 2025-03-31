@@ -1,0 +1,47 @@
+.inline-menu {
+  @include list-reset;
+}
+
+.inline-menu__item {
+  &:hover {
+    background-color: clr(background-light);
+    transition: all 0.2s;
+  }
+
+  @include medium {
+    display: inline-block;
+    border-left: 2px solid clr(background-light);
+    margin-right: -5px; // Adjust for space between inline-block li elements.
+
+    &:last-of-type {
+      border-right: 2px solid clr(background-light);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.inline-menu__link {
+  color: clr(text-muted);
+  display: block;
+  font-size: 0.8125rem; // 13px
+  line-height: 1.5;
+  padding: 0.46875rem 0.9375rem; // 7.5px 15px
+  text-decoration: none;
+
+  @include medium {
+    border-bottom: none;
+    display: inline-block;
+    text-transform: none;
+    position: relative;
+    width: auto;
+
+    &.active,
+    &:active,
+    &:hover {
+      color: clr(background-dark);
+    }
+  }
+}

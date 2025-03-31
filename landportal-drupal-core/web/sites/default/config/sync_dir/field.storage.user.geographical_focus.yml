@@ -1,0 +1,20 @@
+uuid: 81bb952a-36a0-45ae-a4d6-bc290ee91754
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.geographical_focus
+field_name: geographical_focus
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

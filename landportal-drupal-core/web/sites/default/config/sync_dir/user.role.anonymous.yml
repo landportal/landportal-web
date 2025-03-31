@@ -1,0 +1,49 @@
+uuid: ea9b9c53-87da-4a40-91d3-a4f7cab27333
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+    - node.type.campaign
+    - node.type.country_narrative
+    - node.type.debate
+    - node.type.event
+    - node.type.landlibrary_resource
+    - node.type.news
+  module:
+    - comment
+    - entity_print
+    - eu_cookie_compliance
+    - feeds
+    - media
+    - node
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'create blog_post content'
+  - 'create campaign content'
+  - 'create country_narrative content'
+  - 'create event content'
+  - 'create landlibrary_resource content'
+  - 'create news content'
+  - 'display eu cookie compliance popup'
+  - 'edit any blog_post content'
+  - 'edit any campaign content'
+  - 'edit any country_narrative content'
+  - 'edit any debate content'
+  - 'edit any event content'
+  - 'edit any landlibrary_resource content'
+  - 'edit any news content'
+  - 'edit own event content'
+  - 'entity print access bundle country_narrative'
+  - 'update any media'
+  - 'view import_block_user feeds'
+  - 'view media'
+  - 'view own unpublished media'

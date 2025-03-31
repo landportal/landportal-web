@@ -1,0 +1,128 @@
+uuid: 375bc7e7-1fc4-43aa-b1a5-5a4cf6b4fe25
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.indicators.name
+    - field.field.taxonomy_term.indicators.field_id
+    - taxonomy.vocabulary.indicators
+  module:
+    - feeds_ex
+    - taxonomy
+label: 'Indicator XML'
+id: indicator_xml
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: /taxonomy_term_datas/taxonomy_term_data
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: indicators
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  '':
+    label: ''
+    machine_name: ''
+    value: ''
+    raw: false
+    inner: false
+    type: xml
+  tid:
+    label: tid
+    machine_name: tid
+    value: tid
+    raw: true
+    inner: true
+    type: xml
+  name:
+    label: name
+    machine_name: name
+    value: name
+    raw: true
+    inner: true
+    type: xml
+  indicator_id:
+    label: indicator_id
+    machine_name: indicator_id
+    value: indicator_id
+    raw: false
+    inner: false
+    type: xml
+  indicator_title:
+    label: indicator_title
+    machine_name: indicator_title
+    value: indicator_title
+    raw: true
+    inner: true
+    type: xml
+  indicator_description:
+    label: indicator_description
+    machine_name: indicator_description
+    value: indicator_description
+    raw: true
+    inner: true
+    type: xml
+  indicator:
+    label: indicator
+    machine_name: indicator
+    value: indicator
+    raw: true
+    inner: true
+    type: xml
+  field_indicators:
+    label: field_indicators
+    machine_name: field_indicators
+    value: field_indicators
+    raw: true
+    inner: true
+    type: xml
+  map:
+    label: map
+    machine_name: map
+    value: map
+    raw: true
+    inner: true
+    type: xml
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_id
+    map:
+      value: indicator_id
+    settings:
+      language: null
+    unique: {  }

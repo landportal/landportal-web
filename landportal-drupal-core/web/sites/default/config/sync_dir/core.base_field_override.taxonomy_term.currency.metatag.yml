@@ -1,0 +1,18 @@
+uuid: 6e516472-8ac3-4646-9b77-c277dd16ba27
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.currency
+id: taxonomy_term.currency.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: currency
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,89 @@
+uuid: a37d0ea5-771b-4d5d-a26c-a841dd4bec49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_link
+    - node.type.event
+  module:
+    - node
+label: 'Event Website'
+id: event_website
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: event
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  w_link:
+    value: W-link
+    label: W-link
+    machine_name: w_link
+    type: csv
+  w_title:
+    value: W-Title
+    label: W-Title
+    machine_name: w_title
+    type: csv
+  w_link1:
+    value: W-link1
+    label: W-link1
+    machine_name: w_link1
+    type: csv
+  w_title1:
+    value: W-Title1
+    label: W-Title1
+    machine_name: w_title1
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_link
+    map:
+      uri: w_link
+      title: w_title
+    settings:
+      language: null

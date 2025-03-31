@@ -1,0 +1,398 @@
+<?php
+
+use Drupal\views\Plugin\views\display\DisplayPluginBase;
+use Drupal\views\ViewExecutable;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function landportal_provider_filter_cron()
+{
+  //\Drupal::logger('landportal_provider_filter_cron')->notice('Cron is working fine!');
+
+
+  createIndicatorList();
+  createDataSetsCSV();
+
+  createIndicatorSetsCSV();
+  createDatasetCSV();
+  createLayerCSV();
+
+  createLayerPageCSV();
+  
+  createEventThemeCSV();
+  createEventGeographicalCSV();
+  // createEventDateCSV();
+
+} // hook_cron() end
+
+function createIndicatorList()
+{
+
+  // \Drupal::logger('l_p_f_Cache-Clear')->notice('Clear Cache is working fine! createIndicatorList()');
+
+  // Example:
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'indicators');
+  $query->condition('status', 1);
+
+
+  $tids = $query->execute();
+
+  // Create CSV data.
+  // $csv_data = "tid,name,datasetTerm_tid,datasetTerm_title\n";
+  $csv_data = "indicator_tid,datasetTerm_tid\n";
+  $total_count = count($tids);
+  //\Drupal::logger('l_p_f-count1')->notice($total_count);
+  foreach ($tids as $tid) {
+    $term = Term::load($tid);
+    // \Drupal::logger('l_p_f-term')->notice(serialize($term));
+
+    $datasetTerm_tid = $term->get('field_dataset')->target_id;
+    if (empty($datasetTerm_tid) || !is_numeric($datasetTerm_tid)) {
+      // \Drupal::logger('l_p_f-datasetTerm-empty')->notice(serialize($datasetTerm_tid));
+      continue;
+    }
+
+    $datasetTerm_term = Term::load($datasetTerm_tid);
+    //\Drupal::logger('l_p_f-count2')->notice(serialize($datasetTerm_term));
+
+    $csv_data .= $tid . ',' . $datasetTerm_tid . "\n";
+    //\Drupal::logger('l_p_f-count3')->notice(serialize($csv_data));
+  }
+
+  // Save the CSV data to a file.
+  //\Drupal::logger('l_p_f-count2')->notice(serialize($csv_data));
+  // $this->saveCsvToFile($csv_data, 'indicatorsListWithDataset.csv');
+  $csv_file_path = saveCsvToFile($csv_data, 'indicatorsListWithDataset.csv');
+  //\Drupal::logger('l_p_f-count3')->notice(serialize($csv_file_path));
+}
+
+
+/**
+ * Save CSV data to a file.
+ *
+ * @param string $csv_data
+ *   The CSV data.
+ */
+function saveCsvToFile($csv_data, $file_name = 'datasetProvider.csv')
+{
+
+  //\Drupal::logger('l_p_f-csv_dataset')->notice($csv_data);
+
+  $file_system = \Drupal::service('file_system');
+
+  // Define the directory path within the public directory.
+  $directory_path = 'public://csv/datasetProviderFilter';
+
+
+  // Ensure the directory exists or create it.
+  if (!$file_system->prepareDirectory($directory_path, FileSystemInterface::CREATE_DIRECTORY)) {
+    // \Drupal::logger('landportal_org_filter')->error('Failed to create or prepare directory: %directory_path', ['%directory_path' => $directory_path]);
+  }
+
+  // Define the file path within the directory.
+  $file_path = $directory_path . '/' . $file_name;
+
+  // Save the CSV data to the file.
+  file_put_contents($file_path, $csv_data);
+
+  return $file_path;
+}
+
+
+/**
+ * Helper function that Create DataSets CSV.
+ *
+ * @return array
+ */
+function createDataSetsCSV()
+{
+  // \Drupal::logger('l_p_f_Cache-Clear')->notice('Cache Clear is working fine! createDataSetsCSV');
+  // Create DataSets CSV.
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'datasets');
+  // $query->condition('status', 1);
+
+
+  $tids = $query->execute();
+
+  // Create CSV data.
+  // $csv_data = "Tid,Name,DataProviderNid,DataProviderTitle\n";
+  $csv_data = "datasets_tid,organization_nid\n";
+
+  foreach ($tids as $tid) {
+    $term = Term::load($tid);
+
+    $field_orgref = $term->get('field_orgref')->getValue();
+    foreach ($field_orgref as $item) {
+      $organization_nid = $item['target_id'];
+      if (empty($organization_nid) || !is_numeric($organization_nid)) {
+        continue;
+      }
+      $csv_data .= $tid . ',' . $organization_nid . "\n";
+      // $organization_nids[] = $organization_nid;
+    }
+  }
+
+  // Save the CSV data to a file.
+  // $this->saveCsvToFile($csv_data, 'datasetProviders.csv');
+  // Save the CSV data to a file.
+  $csv_file_path = saveCsvToFile($csv_data, 'datasetProviders.csv');
+
+}
+
+/**
+ * Helper function to get organization nids from CSV.
+ */
+function getOrganizationNidsFromCSV($csvFilePath){
+  $organizationNids = [];
+
+  // Check if the file exists.
+  if (!file_exists($csvFilePath)) {
+    // \Drupal::logger('l_p_f-csv_dataset')->error('CSV file not found: @file', ['@file' => $csvFilePath]);
+    return $organizationNids;
+  }
+
+  // \Drupal::logger('l_p_f-csv_dataset')->notice('CSV file not found: @file', ['@file' => $csvFilePath]);
+
+  // Read the CSV file.
+  $fileContent = file_get_contents($csvFilePath);
+
+  // Split the content into rows.
+  $rows = explode("\n", $fileContent);
+
+  // Skip the header row (if exists).
+  unset($rows[0]);
+  // \Drupal::logger('l_p_f-rows')->notice(serialize($rows));
+  return $rows;
+}
+
+
+
+/*Issue select list with indicators' terms count in '/book/indicators' page*/
+function createIndicatorSetsCSV()
+{
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'indicators');
+  $query->condition('status', 1);
+  $tids = $query->execute();
+
+  // Initialize an empty array to store the count of indicator terms for each theme term.
+  $theme_counts = [];
+
+  foreach ($tids as $tid) {
+    $term = Term::load($tid);
+
+    $field_related_themes = $term->get('field_related_themes')->getValue();
+    foreach ($field_related_themes as $item) {
+      $theme_tid = $item['target_id'];
+      if (empty($theme_tid) || !is_numeric($theme_tid)) {
+        continue;
+      }
+
+      // Increment the count for the theme term.
+      if (!isset($theme_counts[$theme_tid])) {
+        $theme_counts[$theme_tid] = 1;
+      } else {
+        $theme_counts[$theme_tid]++;
+      }
+    }
+  }
+
+  // Initialize CSV data string.
+  $csv_data = "theme_name,count\n";
+
+  // Construct CSV data with theme term names and their respective counts.
+  foreach ($theme_counts as $theme_tid => $count) {
+    $csv_data .=  $theme_tid . ',' . $count . "\n";
+  }
+
+  //\Drupal::logger('issueCsv-module')->notice($csv_data);
+
+  // Save the CSV data to a file.
+  $csv_file_path = saveCsvToFile($csv_data, 'theme_indicator_counts.csv');
+
+  //\Drupal::logger('issueCsv-module1')->notice($csv_file_path);
+
+}
+
+/*Issue select list with datasets' terms count in '/book/datasets' page*/
+function createDatasetCSV(){
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'datasets');
+  $query->condition('status', 1);
+  $tids = $query->execute();
+
+  // Initialize an empty array to store the count of dataset terms for each theme term.
+  $theme_counts = [];
+
+  foreach ($tids as $tid) {
+    $term = Term::load($tid);
+
+    $field_related_themes = $term->get('field_related_themes')->getValue();
+    foreach ($field_related_themes as $item) {
+      $theme_tid = $item['target_id'];
+      if (empty($theme_tid) || !is_numeric($theme_tid)) {
+        continue;
+      }
+
+      // Increment the count for the theme term.
+      if (!isset($theme_counts[$theme_tid])) {
+        $theme_counts[$theme_tid] = 1;
+      } else {
+        $theme_counts[$theme_tid]++;
+      }
+    }
+  }
+
+  // Initialize CSV data string.
+  $csv_data = "theme_name,count\n";
+
+  // Construct CSV data with theme term names and their respective counts.
+  foreach ($theme_counts as $theme_tid => $count) {
+    $csv_data .=  $theme_tid . ',' . $count . "\n";
+  }
+
+  //\Drupal::logger('issueCsv-dataset')->notice($csv_data);
+
+  // Save the CSV data to a file.
+  $csv_file_path = saveCsvToFile($csv_data, 'theme_datasets_counts.csv');
+
+  //\Drupal::logger('issueCsv-dataset1')->notice($csv_file_path);
+
+}
+
+/*Issue select list with layers' terms count in '/book/layers' page*/
+function createLayerCSV(){
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'layer');
+  $query->condition('status', 1);
+  $tids = $query->execute();
+
+  // Initialize an empty array to store the count of layers terms for each theme term.
+  $theme_counts = [];
+
+  foreach ($tids as $tid) {
+    $term = Term::load($tid);
+
+    $field_related_themes = $term->get('field_related_themes')->getValue();
+    foreach ($field_related_themes as $item) {
+      $theme_tid = $item['target_id'];
+      if (empty($theme_tid) || !is_numeric($theme_tid)) {
+        continue;
+      }
+
+      // Increment the count for the theme term.
+      if (!isset($theme_counts[$theme_tid])) {
+        $theme_counts[$theme_tid] = 1;
+      } else {
+        $theme_counts[$theme_tid]++;
+      }
+    }
+  }
+
+  // Initialize CSV data string.
+  $csv_data = "theme_name,count\n";
+
+  // Construct CSV data with theme term names and their respective counts.
+  foreach ($theme_counts as $theme_tid => $count) {
+    $csv_data .=  $theme_tid . ',' . $count . "\n";
+  }
+
+  //\Drupal::logger('issueCsv-layer')->notice($csv_data);
+
+  // Save the CSV data to a file.
+  $csv_file_path = saveCsvToFile($csv_data, 'theme_layer_counts.csv');
+
+  //\Drupal::logger('issueCsv-layer')->notice($csv_file_path);
+
+}
+
+/*Layer filter*/
+function createLayerPageCSV(){
+    $query = \Drupal::entityQuery('taxonomy_term');
+    $query->condition('vid', 'layer');
+
+    $tids = $query->execute();
+
+    $csv_data = "layer_tid,organization_nid\n";
+
+    foreach ($tids as $tid) {
+        $term = Term::load($tid);
+
+        // Get related dataset term IDs from field_dataset
+        $dataset_tids = $term->get('field_dataset')->getValue();
+        
+        foreach ($dataset_tids as $item) {
+            $dataset_tid = $item['target_id'];
+            $dataset_term = Term::load($dataset_tid);
+
+            // Get organization node ID from the related dataset term
+            $organization_nid = $dataset_term->get('field_orgref')->target_id;
+            if (empty($organization_nid) || !is_numeric($organization_nid)) {
+                continue;
+            }
+
+            $csv_data .= $tid . ',' . $organization_nid . "\n";
+        }
+    }
+
+    //\Drupal::logger('layerCsv')->notice($csv_data);
+    $csv_file_path = saveCsvToFile($csv_data, 'layerProviders.csv');
+    //\Drupal::logger('layerCsv 1')->notice($csv_file_path);
+}
+
+//this is issue filter and it is used in this pages " /events/archive "
+function createEventThemeCSV(){
+  $query = \Drupal::entityQuery('node');
+  $query->condition('type', 'event');
+  $query->condition('status', 1);
+  $nids = $query->execute();
+
+  $csv_data = "event_nid,theme_tid\n";
+  foreach ($nids as $nid) {
+      $node = Node::load($nid);
+      // Get related theme term IDs from field_related_themes
+      $theme_tids = $node->get('field_related_themes')->getValue();
+
+      foreach ($theme_tids as $item) {
+          $theme_tid = $item['target_id'];
+          if (empty($theme_tid) || !is_numeric($theme_tid)) {
+              continue;
+          }
+
+          $csv_data .= $nid . ',' . $theme_tid . "\n";
+      }
+  }
+  $csv_file_path = saveCsvToFile($csv_data, 'eventThemes.csv');
+}
+
+//this is Geographical focus filter and it is used in this pages " /events/archive "
+function createEventGeographicalCSV(){
+  $query = \Drupal::entityQuery('node');
+  $query->condition('type', 'event');
+  $query->condition('status', 1);
+  $nids = $query->execute();
+
+  $csv_data = "event_nid,geo_tid\n";
+  foreach ($nids as $nid) {
+      $node = Node::load($nid);
+      // Get related theme term IDs from field_related_themes
+      $theme_tids = $node->get('field_geographical_focus')->getValue();
+
+      foreach ($theme_tids as $item) {
+          $theme_tid = $item['target_id'];
+          if (empty($theme_tid) || !is_numeric($theme_tid)) {
+              continue;
+          }
+
+          $csv_data .= $nid . ',' . $theme_tid . "\n";
+      }
+  }
+  $csv_file_path = saveCsvToFile($csv_data, 'eventgeo.csv');
+}
+

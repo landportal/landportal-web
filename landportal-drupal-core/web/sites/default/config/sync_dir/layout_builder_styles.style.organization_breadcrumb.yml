@@ -1,0 +1,12 @@
+uuid: 38b48a72-ece8-494a-94d2-19441c8a864a
+langcode: en
+status: true
+dependencies: {  }
+id: organization_breadcrumb
+label: 'Organization BreadCrumb'
+classes: organization-breadCrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

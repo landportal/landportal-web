@@ -1,0 +1,12 @@
+uuid: aa099989-791e-4100-bb4c-3b16b272776e
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_portfolio
+label: 'Dataset portfolio'
+classes: dataset-portfolio
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

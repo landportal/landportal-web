@@ -1,0 +1,14 @@
+uuid: 94452e82-5d57-4d04-bec1-239a860fd3ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.editurlalias
+  module:
+    - user
+id: user_remove_role_action.editurlalias
+label: 'Remove the editURLalias role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editurlalias

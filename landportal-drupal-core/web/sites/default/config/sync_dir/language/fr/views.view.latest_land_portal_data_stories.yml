@@ -1,0 +1,44 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Les histoires du Land Portal</h2>\r\n\r\n<p>Parcourez les histoires les plus récentes, rédigées et publiées par l'équipe du Land Portal.</p>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Les histoires du réseau</h2>\r\n\r\n<p>Parcourez les histoires les plus récentes, rédigées par les partenaires et collègues de notre réseau.</p>\r\n"
+            format: full_html
+      use_more_text: 'Pour plus...'
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Gagnants du concours d'histoires de données</h2>\r\n\r\n<p>Notre concours annuel appelle à des histoires dynamiques liées au foncier qui captent l'attention et présentent les données de manière innovante. Parcourez la liste des gagnants ici.</p>\r\n"
+            format: full_html
+  block_1:
+    display_options:
+      use_more_text: 'Pour plus...'
+  page_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/fr/book/data\">Data</a><span><a href=\"/fr/data/stories\">Data stories</a></span><span>Les histoires de Donées du Land Portal </span></div>\r\n"
+            format: full_html
+        result:
+          content: "<p>Les histoires de Donées du Land Portal </p>\r\nConfigurer Montre objets  @start - @end de <span class=\"badge\">@total</span>"
+  page_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"event-landingpage-breadcrumb\"><a href=\"/fr/book/data\">Data</a><span><a href=\"/fr/data/stories\">Data stories</a></span><span>Les histoires du réseau</span></div>\r\n"
+            format: full_html
+        result:
+          content: "Les histoires du réseau </br>\r\nMontre objets @start - @end  de <span class=\"badge\">@total</span>"

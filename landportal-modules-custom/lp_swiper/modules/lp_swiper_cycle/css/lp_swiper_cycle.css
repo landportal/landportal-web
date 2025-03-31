@@ -1,0 +1,31 @@
+.lp_swiper_cycle_no_display,
+.lp_swiper_cycle_hidden,
+.lp_swiper_cycle_controls,
+.lp_swiper_cycle_image_count {
+  display: none;
+}
+
+/* Pager Settings */
+
+.lp_swiper_cycle_pager div a img {
+  width: 75px;
+  height: 75px;
+}
+
+.lp_swiper_pager_numbered div,
+.lp_swiper_pager_thumbnails div {
+  display: inline;
+  padding-left: 10px;
+}
+
+.lp_swiper_cycle_pager.thumbnails a.activeSlide img {
+  border: 3px solid #000;
+}
+
+.lp_swiper_cycle_pager.numbered a.activeSlide {
+  text-decoration: underline;
+}
+.lp-swiper-cycle-main-frame-row-item{
+  float: left;
+  padding-right: 13px;
+}

@@ -1,0 +1,23 @@
+uuid: 3a720022-c60c-4dc2-b0b2-3428af56a68f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_geoportal_link
+    - taxonomy.vocabulary.indicators
+  module:
+    - link
+id: taxonomy_term.indicators.field_geoportal_link
+field_name: field_geoportal_link
+entity_type: taxonomy_term
+bundle: indicators
+label: 'View this data on the Land Portal''s Geoportal!'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

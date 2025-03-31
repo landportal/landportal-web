@@ -1,0 +1,39 @@
+uuid: 12e3f452-70c8-45a1-9ace-91b51f69b8d1
+langcode: en
+status: true
+dependencies: {  }
+id: user_migration_from_d7_with_ids
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: user_migration_from_d7
+label: 'User accounts Migration'
+source:
+  plugin: d7_user
+process:
+  uid:
+    -
+      plugin: skip_on_value
+      equals: true
+      source: uid
+      method: row
+      value:
+        - 1
+  name:
+    -
+      plugin: get
+      source: name
+  pass:
+    -
+      plugin: get
+      source: pass
+  mail:
+    -
+      plugin: get
+      source: mail
+destination:
+  plugin: 'entity:user'
+migration_dependencies: null

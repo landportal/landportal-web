@@ -1,0 +1,23 @@
+uuid: 8cbbab24-ebec-48f6-9218-9747a1acac08
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.storage.comment.feeds_item
+  module:
+    - feeds
+id: comment.default_comments.feeds_item
+field_name: feeds_item
+entity_type: comment
+bundle: default_comments
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

@@ -1,0 +1,12 @@
+uuid: f8ac6bc0-270c-4deb-939e-1753e2461fac
+langcode: en
+status: true
+dependencies: {  }
+id: testimonials
+label: Testimonials
+classes: testimonials
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

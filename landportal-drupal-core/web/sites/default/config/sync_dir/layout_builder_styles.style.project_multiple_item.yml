@@ -1,0 +1,12 @@
+uuid: ba3cc3d7-ad3a-4d2a-8899-5f79770fb9b1
+langcode: en
+status: true
+dependencies: {  }
+id: project_multiple_item
+label: 'Project Multiple Item'
+classes: project-multiple-item
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

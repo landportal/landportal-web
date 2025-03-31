@@ -1,0 +1,12 @@
+uuid: c2c5d7d2-ecdf-41a2-a71f-969e15b09e54
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_license
+label: 'Dataset License'
+classes: dataset-license
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

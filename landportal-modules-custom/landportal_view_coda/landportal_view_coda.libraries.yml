@@ -1,0 +1,60 @@
+view-coda:
+  version: 1
+  js:
+    js-view-coda/js/lbvis.js: {}
+    js-view-coda/js/lbvis.data.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - landportal_view_coda/lbvis.vendors
+
+lbvis.vendors:
+  version: 1
+  js:
+    js-view-coda/js/vendor/linkify.min.js: { weight: -1 }
+    js-view-coda/js/vendor/linkify-jquery.min.js: {}
+    js-view-coda/js/vendor/highcharts.js: { weight: -1 }
+    js-view-coda/js/vendor/modules/stock.js: {}
+    js-view-coda/js/vendor/modules/map.js: {}
+    js-view-coda/js/vendor/modules/exporting.js: {}
+    js-view-coda/js/vendor/highcharts-more.js: {}
+
+lbvis.map:
+  version: 1
+  js:
+    js-view-coda/js/plugins/map.js: {}
+    js-view-coda/js/map_data.js: {}
+    js-view-coda/js/lbvis.js: {}   
+  dependencies:
+    - landportal_view_coda/lbvis.vendors
+    - landportal_view_coda/view-coda
+
+lbvis.table:
+  version: 1
+  js:
+    js-view-coda/js/lbvis.js: { weight: -1 }
+    js-view-coda/js/lbvis.data.js: {}
+    js-view-coda/js/plugins/table.js: {}
+  dependencies:
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.vendors    
+
+lbvis.dl:
+  version: 1
+  js:
+    js-view-coda/js/lbvis.js: { weight: -1 }
+    js-view-coda/js/lbvis.data.js: {}
+    js-view-coda/js/plugins/dl.js: {}
+  dependencies:
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.vendors    
+
+lbvis.ranking:
+  version: 1
+  js:
+    js-view-coda/js/lbvis.js: { weight: -1 }
+    js-view-coda/js/lbvis.data.js: {}
+    js-view-coda/js/plugins/ranking.js: {}
+  dependencies:
+    - landportal_view_coda/view-coda
+    - landportal_view_coda/lbvis.vendors    

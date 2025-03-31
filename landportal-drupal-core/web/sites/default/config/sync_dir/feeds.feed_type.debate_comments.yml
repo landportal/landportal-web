@@ -1,0 +1,148 @@
+uuid: ed36465c-b81b-4e0e-b86c-60103d4a4abf
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.field.comment.default_comments.comment_body
+  module:
+    - comment
+label: 'Debate Comments'
+id: debate_comments
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:comment'
+processor_configuration:
+  values:
+    comment_type: default_comments
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  cid:
+    value: cid
+    label: cid
+    machine_name: cid
+    type: csv
+  pid:
+    value: pid
+    label: pid
+    machine_name: pid
+    type: csv
+  subject:
+    value: subject
+    label: subject
+    machine_name: subject
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  debate:
+    value: debate
+    label: debate
+    machine_name: debate
+    type: csv
+  comment:
+    value: comment
+    label: comment
+    machine_name: comment
+    type: csv
+  date:
+    value: date
+    label: date
+    machine_name: date
+    type: csv
+mappings:
+  -
+    target: entity_id
+    map:
+      target_id: nid
+    settings:
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: cid
+    map:
+      value: cid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: pid
+    map:
+      target_id: pid
+    settings:
+      reference_by: cid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: subject
+    map:
+      value: subject
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: comment_body
+    map:
+      value: body
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: entity_type
+    map:
+      value: debate
+    settings: {  }
+    unique: {  }
+  -
+    target: field_name
+    map:
+      value: comment
+    settings: {  }
+    unique: {  }
+  -
+    target: created
+    map:
+      value: date
+    settings:
+      language: ''
+      timezone: UTC

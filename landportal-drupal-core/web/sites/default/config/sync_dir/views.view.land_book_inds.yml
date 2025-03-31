@@ -1,0 +1,632 @@
+uuid: 59e61262-1165-4834-a4cf-10f65ed43bd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.land_book_indicator
+    - taxonomy.vocabulary.concepts
+    - taxonomy.vocabulary.datasets
+    - taxonomy.vocabulary.indicators
+  module:
+    - landportal_provider_filter
+    - taxonomy
+    - user
+id: land_book_inds
+label: 'Land Book Inds'
+module: views
+description: ''
+tag: ''
+base_table: taxonomy_term_field_data
+base_field: tid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Land Book Inds'
+      fields:
+        rendered_entity:
+          id: rendered_entity
+          table: taxonomy_term_data
+          field: rendered_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          plugin_id: rendered_entity
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: land_book_indicator
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: First
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: Last
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 16
+          total_pages: null
+          id: 0
+          tags:
+            next: 'next ›'
+            previous: '‹ Previous'
+            first: '« first'
+            last: 'last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '16'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filter
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          value:
+            indicators: indicators
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: 'Indicator name'
+            description: ''
+            use_operator: false
+            operator: name_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+              landportal: '0'
+              lp_team: '0'
+              subadmin: '0'
+              group_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_dataset_target_id:
+          id: field_dataset_target_id
+          table: taxonomy_term__field_dataset
+          field: field_dataset_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_dataset_target_id_op
+            label: Dataset
+            description: ''
+            use_operator: false
+            operator: field_dataset_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_dataset_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+              landportal: '0'
+              lp_team: '0'
+              subadmin: '0'
+              group_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: datasets
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        datasets_names:
+          id: datasets_names
+          table: taxonomy_term_field_data
+          field: datasets_names
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          plugin_id: custom_views_field_dataset
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: datasets_names_op
+            label: Provider
+            description: ''
+            use_operator: false
+            operator: datasets_names_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: datasets_names
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+              landportal: '0'
+              lp_team: '0'
+              subadmin: '0'
+              group_admin: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        issue_names:
+          id: issue_names
+          table: taxonomy_term_field_data
+          field: issue_names
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          plugin_id: custom_views_field_related_themes
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: issue_names_op
+            label: Issue
+            description: ''
+            use_operator: false
+            operator: issue_names_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: issue_names
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              landportal: '0'
+              lp_team: '0'
+              rli_navigator_editor: '0'
+              view_page_draft: '0'
+              group_admin: '0'
+              editurlalias: '0'
+              programme: '0'
+              subadmin: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_related_topics_target_id:
+          id: field_related_topics_target_id
+          table: taxonomy_term__field_related_topics
+          field: field_related_topics_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_related_topics_target_id_op
+            label: Keyword
+            description: ''
+            use_operator: false
+            operator: field_related_topics_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_related_topics_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              contributor: '0'
+              developer: '0'
+              programme: '0'
+              landportal: '0'
+              lp_team: '0'
+              subadmin: '0'
+              group_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: concepts
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid
+        options:
+          grouping: {  }
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        field_dataset:
+          id: field_dataset
+          table: taxonomy_term__field_dataset
+          field: field_dataset
+          relationship: none
+          group_type: group
+          admin_label: 'field_dataset: Taxonomy term'
+          plugin_id: standard
+          required: false
+      use_ajax: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of <span class="badge">@total</span> statistical indicators'
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.taxonomy_term.campaigns.default'
+        - 'config:core.entity_view_display.taxonomy_term.concepts.default'
+        - 'config:core.entity_view_display.taxonomy_term.currency.default'
+        - 'config:core.entity_view_display.taxonomy_term.datasets.default'
+        - 'config:core.entity_view_display.taxonomy_term.datasets.land_book_datasets'
+        - 'config:core.entity_view_display.taxonomy_term.debate_status.default'
+        - 'config:core.entity_view_display.taxonomy_term.indicators.default'
+        - 'config:core.entity_view_display.taxonomy_term.indicators.land_book_indicator'
+        - 'config:core.entity_view_display.taxonomy_term.languages.default'
+        - 'config:core.entity_view_display.taxonomy_term.layer.default'
+        - 'config:core.entity_view_display.taxonomy_term.layer.land_book_layers'
+        - 'config:core.entity_view_display.taxonomy_term.licences.default'
+        - 'config:core.entity_view_display.taxonomy_term.organization_types.default'
+        - 'config:core.entity_view_display.taxonomy_term.programme.default'
+        - 'config:core.entity_view_display.taxonomy_term.regions.default'
+        - 'config:core.entity_view_display.taxonomy_term.regions.full'
+        - 'config:core.entity_view_display.taxonomy_term.sdgs.default'
+        - 'config:core.entity_view_display.taxonomy_term.sdgs_tiers.default'
+        - 'config:core.entity_view_display.taxonomy_term.theme.default'
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.taxonomy_term.campaigns.default'
+        - 'config:core.entity_view_display.taxonomy_term.concepts.default'
+        - 'config:core.entity_view_display.taxonomy_term.currency.default'
+        - 'config:core.entity_view_display.taxonomy_term.datasets.default'
+        - 'config:core.entity_view_display.taxonomy_term.datasets.land_book_datasets'
+        - 'config:core.entity_view_display.taxonomy_term.debate_status.default'
+        - 'config:core.entity_view_display.taxonomy_term.indicators.default'
+        - 'config:core.entity_view_display.taxonomy_term.indicators.land_book_indicator'
+        - 'config:core.entity_view_display.taxonomy_term.languages.default'
+        - 'config:core.entity_view_display.taxonomy_term.layer.default'
+        - 'config:core.entity_view_display.taxonomy_term.layer.land_book_layers'
+        - 'config:core.entity_view_display.taxonomy_term.licences.default'
+        - 'config:core.entity_view_display.taxonomy_term.organization_types.default'
+        - 'config:core.entity_view_display.taxonomy_term.programme.default'
+        - 'config:core.entity_view_display.taxonomy_term.regions.default'
+        - 'config:core.entity_view_display.taxonomy_term.regions.full'
+        - 'config:core.entity_view_display.taxonomy_term.sdgs.default'
+        - 'config:core.entity_view_display.taxonomy_term.sdgs_tiers.default'
+        - 'config:core.entity_view_display.taxonomy_term.theme.default'

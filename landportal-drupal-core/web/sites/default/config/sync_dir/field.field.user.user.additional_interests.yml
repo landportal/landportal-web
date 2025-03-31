@@ -1,0 +1,21 @@
+uuid: 165316f5-c4b3-4055-8d60-6f6965318fd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.additional_interests
+  module:
+    - options
+    - user
+id: user.user.additional_interests
+field_name: additional_interests
+entity_type: user
+bundle: user
+label: 'Additional Interests'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      title: 'Por tipo de organización'
+  block_2:
+    display_options:
+      title: 'Por tema'
+  block_3:
+    display_options:
+      title: 'Por foco geográfico'

@@ -1,0 +1,23 @@
+uuid: 299eb63a-de68-4a53-a6b2-7e7091e028c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.sliders
+  module:
+    - feeds
+id: node.sliders.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: sliders
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

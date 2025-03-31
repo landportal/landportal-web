@@ -1,0 +1,12 @@
+uuid: 10e67b96-99b3-4505-b506-9603530049a8
+langcode: en
+status: true
+dependencies: {  }
+id: user_contribution_full
+label: 'User Contribution Full'
+classes: user-contribution-full-style
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

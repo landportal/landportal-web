@@ -1,0 +1,154 @@
+uuid: d44e20a1-bffe-4b4a-a944-b54cdae7d92c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_licencing
+    - field.field.node.landlibrary_resource.field_share_on_rli_navigator
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Landlibrary Date and Share on RLBI Export'
+id: landlibrary_date_and_share_on_rl
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resource_title:
+    value: 'Resource title'
+    label: 'Resource title'
+    machine_name: resource_title
+    type: csv
+  published_status:
+    value: 'Published status'
+    label: 'Published status'
+    machine_name: published_status
+    type: csv
+  language:
+    value: Language
+    label: Language
+    machine_name: language
+    type: csv
+  share_on_rlbi_navigator:
+    value: 'Share on RLBI navigator'
+    label: 'Share on RLBI navigator'
+    machine_name: share_on_rlbi_navigator
+    type: csv
+  license_of_the_resource:
+    value: 'License of the resource'
+    label: 'License of the resource'
+    machine_name: license_of_the_resource
+    type: csv
+  license_of_the_resource1:
+    value: 'License of the resource1'
+    label: 'License of the resource1'
+    machine_name: license_of_the_resource1
+    type: csv
+  license_of_the_resource2:
+    value: 'License of the resource2'
+    label: 'License of the resource2'
+    machine_name: license_of_the_resource2
+    type: csv
+  license_of_the_resource3:
+    value: 'License of the resource3'
+    label: 'License of the resource3'
+    machine_name: license_of_the_resource3
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_share_on_rli_navigator
+    map:
+      value: share_on_rlbi_navigator
+    settings:
+      language: null
+  -
+    target: field_doc_licencing
+    map:
+      target_id: license_of_the_resource
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_licencing
+    map:
+      target_id: license_of_the_resource1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_licencing
+    map:
+      target_id: license_of_the_resource2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_licencing
+    map:
+      target_id: license_of_the_resource3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

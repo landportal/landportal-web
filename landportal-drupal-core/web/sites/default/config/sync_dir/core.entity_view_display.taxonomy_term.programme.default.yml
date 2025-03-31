@@ -1,0 +1,492 @@
+uuid: 0bad0620-2801-4971-aa5b-556f704a95b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programme.currency_of_programme_value
+    - field.field.taxonomy_term.programme.field_noderef
+    - field.field.taxonomy_term.programme.field_related_impact
+    - field.field.taxonomy_term.programme.field_related_organization
+    - field.field.taxonomy_term.programme.field_related_resources
+    - field.field.taxonomy_term.programme.programme_banner
+    - field.field.taxonomy_term.programme.programme_concepts
+    - field.field.taxonomy_term.programme.programme_duration
+    - field.field.taxonomy_term.programme.programme_logo
+    - field.field.taxonomy_term.programme.programme_organization
+    - field.field.taxonomy_term.programme.programme_regions
+    - field.field.taxonomy_term.programme.programme_resources
+    - field.field.taxonomy_term.programme.programme_themes
+    - field.field.taxonomy_term.programme.programme_value
+    - field.field.taxonomy_term.programme.projects_in_this_programme
+    - taxonomy.vocabulary.programme
+    - views.view._programme_total_value_and_currency
+    - views.view.active_projects_funded_by_this_programme
+    - views.view.landvoc_image
+    - views.view.programme_link_to_narrative
+    - views.view.programme_s_breadcrumb
+    - views.view.programme_sliders
+    - views.view.project_in_this_programme
+    - views.view.related_resources_available
+    - views.view.total_countries_involved
+    - views.view.total_projects_funded_by_this_programme
+  module:
+    - landportal_country
+    - layout_builder
+    - layout_discovery
+    - lp_related_content
+    - social_media
+    - text
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Bredcrumb
+          context_mapping: {  }
+          layout_builder_styles_style: programme_breadcrumb
+        components:
+          f52ceacb-adef-4ea8-b18e-fbb5e8c222e6:
+            uuid: f52ceacb-adef-4ea8-b18e-fbb5e8c222e6
+            region: content
+            configuration:
+              id: 'views_block:programme_s_breadcrumb-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Top
+          context_mapping: {  }
+          layout_builder_styles_style: programme_map
+        components:
+          655b0bf8-4d15-41ae-96c6-cb8b320feee5:
+            uuid: 655b0bf8-4d15-41ae-96c6-cb8b320feee5
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:programme:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b3dcc2fd-0366-416f-8cff-b94857e7ce48:
+            uuid: b3dcc2fd-0366-416f-8cff-b94857e7ce48
+            region: content
+            configuration:
+              id: 'views_block:programme_link_to_narrative-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+          099fad45-3d4c-419e-8c42-ebb59c2d97b9:
+            uuid: 099fad45-3d4c-419e-8c42-ebb59c2d97b9
+            region: content
+            configuration:
+              id: programme_landing_map
+              label: 'programme landing page map'
+              label_display: '0'
+              provider: landportal_country
+              context_mapping: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Multiple Items'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_counter
+        components:
+          bdd1b606-890e-4228-893d-df7d4103d591:
+            uuid: bdd1b606-890e-4228-893d-df7d4103d591
+            region: content
+            configuration:
+              id: 'views_block:_programme_total_value_and_currency-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          b1714e63-7834-4075-a2f0-521869d074c4:
+            uuid: b1714e63-7834-4075-a2f0-521869d074c4
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:programme:programme_duration'
+              label: 'Programme duration'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: m/y
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style: ''
+          2fbfdfbc-e50f-491e-858c-91c65869a584:
+            uuid: 2fbfdfbc-e50f-491e-858c-91c65869a584
+            region: content
+            configuration:
+              id: 'views_block:total_countries_involved-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional:
+              layout_builder_styles_style: ''
+          18fc13e2-bd76-4846-956e-6bd0718cb938:
+            uuid: 18fc13e2-bd76-4846-956e-6bd0718cb938
+            region: content
+            configuration:
+              id: 'views_block:total_projects_funded_by_this_programme-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional:
+              layout_builder_styles_style: ''
+          7e10b6c7-e176-46ad-80b1-d79b3b9b2790:
+            uuid: 7e10b6c7-e176-46ad-80b1-d79b3b9b2790
+            region: content
+            configuration:
+              id: 'views_block:active_projects_funded_by_this_programme-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 6
+            additional:
+              layout_builder_styles_style: ''
+          fe7b78b8-2257-4349-8d38-753643cb1b25:
+            uuid: fe7b78b8-2257-4349-8d38-753643cb1b25
+            region: content
+            configuration:
+              id: 'views_block:related_resources_available-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 7
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Project In this Programme'
+          context_mapping: {  }
+          layout_builder_styles_style: project_in_this_programme
+        components:
+          d4fda938-6a65-4a89-a570-d6c4d05232c0:
+            uuid: d4fda938-6a65-4a89-a570-d6c4d05232c0
+            region: content
+            configuration:
+              id: 'views_block:project_in_this_programme-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme Related'
+          context_mapping: {  }
+          layout_builder_styles_style: related_impact_background
+        components:
+          e6b77711-008d-4244-8354-58681a306784:
+            uuid: e6b77711-008d-4244-8354-58681a306784
+            region: content
+            configuration:
+              id: 'views_block:programme_sliders-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: LandVoc
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style: project_landvoc_full
+        components:
+          4577f748-fa6e-4b52-9114-6f318c8287d4:
+            uuid: 4577f748-fa6e-4b52-9114-6f318c8287d4
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:programme:programme_regions'
+              label: 'Programme regions'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+          78e8caee-cf60-472e-8ceb-38d3d28f5e03:
+            uuid: 78e8caee-cf60-472e-8ceb-38d3d28f5e03
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:programme:programme_themes'
+              label: 'Programme themes'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style: ''
+          abeb1ef7-8450-46a4-a352-b26ba09ec40d:
+            uuid: abeb1ef7-8450-46a4-a352-b26ba09ec40d
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:programme:programme_concepts'
+              label: 'Programme concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style: ''
+          19fd6e2b-ab22-4d9a-8b7e-0f884860343d:
+            uuid: 19fd6e2b-ab22-4d9a-8b7e-0f884860343d
+            region: first
+            configuration:
+              id: 'views_block:landvoc_image-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme Resources'
+          context_mapping: {  }
+          layout_builder_styles_style: project_disclaimer_azure_full
+        components:
+          67e59218-56b6-4004-8af6-477ea6c1bc4c:
+            uuid: 67e59218-56b6-4004-8af6-477ea6c1bc4c
+            region: content
+            configuration:
+              id: 'views_block:programme_sliders-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Programme organization'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - organization_slider
+        components:
+          3bffbd31-a0a4-4d9e-a2e9-0fb77fce4717:
+            uuid: 3bffbd31-a0a4-4d9e-a2e9-0fb77fce4717
+            region: content
+            configuration:
+              id: 'views_block:programme_sliders-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'social block'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_social_block
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'social media'
+          context_mapping: {  }
+          layout_builder_styles_style: programme_social_block
+        components:
+          fd5c3919-6f00-4ef3-b04a-415bc3f7c030:
+            uuid: fd5c3919-6f00-4ef3-b04a-415bc3f7c030
+            region: content
+            configuration:
+              id: social_sharing_block
+              label: 'Social Sharing block'
+              label_display: visible
+              provider: social_media
+              context_mapping: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style: ''
+        third_party_settings: {  }
+id: taxonomy_term.programme.default
+targetEntityType: taxonomy_term
+bundle: programme
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_related_impact:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_related_organization:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_related_resources:
+    type: lp_related_content_people_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  programme_organization:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  programme_resources:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  currency_of_programme_value: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  programme_banner: true
+  programme_concepts: true
+  programme_duration: true
+  programme_logo: true
+  programme_regions: true
+  programme_themes: true
+  programme_value: true
+  projects_in_this_programme: true
+  search_api_excerpt: true

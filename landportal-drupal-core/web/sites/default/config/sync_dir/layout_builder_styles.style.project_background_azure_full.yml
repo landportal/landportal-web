@@ -1,0 +1,12 @@
+uuid: 5c7de25a-aac7-4a37-8ae3-56949dc29f06
+langcode: en
+status: true
+dependencies: {  }
+id: project_background_azure_full
+label: 'Project Background Azure Full'
+classes: project-background-azure-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

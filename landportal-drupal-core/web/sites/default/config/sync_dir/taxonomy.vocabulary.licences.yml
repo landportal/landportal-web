@@ -1,0 +1,8 @@
+uuid: ed123760-4d15-4e37-8b29-20c15200ec0b
+langcode: en
+status: true
+dependencies: {  }
+name: Licenses
+vid: licences
+description: ''
+weight: 0

@@ -1,0 +1,7 @@
+name: Landportal - Organizations remote block
+description: Landportal - Organizations remote block
+package: Landportal- Remote block
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
+dependencies:
+  - landportal_remote_block:landportal_remote_block

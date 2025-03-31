@@ -1,0 +1,412 @@
+uuid: d998041d-46f7-4c74-b4a3-14f8a88104de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.latest_event
+    - field.field.node.event.body
+    - field.field.node.event.city
+    - field.field.node.event.country
+    - field.field.node.event.feeds_item
+    - field.field.node.event.field_contact
+    - field.field.node.event.field_date
+    - field.field.node.event.field_file
+    - field.field.node.event.field_geographical_focus
+    - field.field.node.event.field_image
+    - field.field.node.event.field_language_of_the_event
+    - field.field.node.event.field_link
+    - field.field.node.event.field_noderef
+    - field.field.node.event.field_orgref
+    - field.field.node.event.field_related_events
+    - field.field.node.event.field_related_themes
+    - field.field.node.event.field_related_topics
+    - field.field.node.event.field_type_of_event
+    - field.field.node.event.location_name
+    - field.field.node.event.postal_code
+    - field.field.node.event.promoted_to_news_events_landing_
+    - field.field.node.event.state_province
+    - field.field.node.event.street
+    - node.type.event
+  module:
+    - datetime_range
+    - file
+    - image
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Latest Events Section'
+          context_mapping: {  }
+          column_widths: 50-50
+          layout_builder_styles_style:
+            - event_latest_section_outer
+        components:
+          79b4bfdf-5efb-4a57-9fb7-ab1cc413250a:
+            uuid: 79b4bfdf-5efb-4a57-9fb7-ab1cc413250a
+            region: first
+            configuration:
+              id: 'field_block:node:event:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: large_480x480_
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          097c9e5a-a917-4813-948f-253dc3d4e26a:
+            uuid: 097c9e5a-a917-4813-948f-253dc3d4e26a
+            region: second
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          bd81cb0a-aa53-491e-9c4c-c3d1681723cb:
+            uuid: bd81cb0a-aa53-491e-9c4c-c3d1681723cb
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_date'
+              label: 'When is this event taking place?'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'j F Y'
+                  separator: to
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - latest_events_date
+          61f08d32-11d8-43d4-a368-aa6102a25d2d:
+            uuid: 61f08d32-11d8-43d4-a368-aa6102a25d2d
+            region: second
+            configuration:
+              id: 'field_block:node:event:city'
+              label: City
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - latest_events_city
+          6bb4c7b0-23b2-4a56-8911-62da32994336:
+            uuid: 6bb4c7b0-23b2-4a56-8911-62da32994336
+            region: second
+            configuration:
+              id: 'field_block:node:event:state_province'
+              label: State/Province
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - latest_events_state
+          f404a3d1-a493-47c5-9f52-590ba35112a3:
+            uuid: f404a3d1-a493-47c5-9f52-590ba35112a3
+            region: second
+            configuration:
+              id: 'field_block:node:event:country'
+              label: Country
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - latest_events_country
+          afdcea32-40ab-495b-a7f2-c1b64d3d7905:
+            uuid: afdcea32-40ab-495b-a7f2-c1b64d3d7905
+            region: second
+            configuration:
+              id: 'field_block:node:event:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - latest_events_body
+          2b028fe4-9b40-4ab6-88b1-51da32a590f9:
+            uuid: 2b028fe4-9b40-4ab6-88b1-51da32a590f9
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_orgref'
+              label: Organizers
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style:
+                - latest_events_organizers
+        third_party_settings: {  }
+id: node.event.latest_event
+targetEntityType: node
+bundle: event
+mode: latest_event
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_contact:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_language_of_the_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_related_events:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_type_of_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  location_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  postal_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  state_province:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  street:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  promoted_to_news_events_landing_: true
+  search_api_excerpt: true

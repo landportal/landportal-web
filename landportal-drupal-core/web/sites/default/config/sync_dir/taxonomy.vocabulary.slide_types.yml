@@ -1,0 +1,8 @@
+uuid: 33c1862d-af6f-4928-a98d-2be5b33b68a5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Slide Types'
+vid: slide_types
+description: ''
+weight: 0

@@ -1,0 +1,194 @@
+
+.landportal-menu {
+  @include list-reset;
+
+  background: clr(background-navigation);
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    padding: .5rem;
+
+    &--active {
+      background-color: clr(text-light);
+      margin-bottom: -5px;
+    }
+
+    &:hover {
+      background: clr(text-light);
+    }
+  }
+
+  &__item--with-sub {
+    position: relative;
+    &::after {
+      @include caret;
+    }
+
+    &:hover {
+      .landportal-menu--sub {
+        display: block;
+      }
+    }
+  }
+
+  &__item--home {
+    a {
+      color: clr(link);
+      &:hover {
+        color: clr(link-hover);
+      }
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__item--issues {
+    &::after {
+      color: clr(issues);
+    }
+  }
+
+  &__item--debate {
+    &::after {
+      color: clr(debate);
+    }
+  }
+
+  &__item--data {
+    &::after {
+      color: clr(data);
+    }
+  }
+
+  &__item--library {
+    &::after {
+      color: clr(library);
+    }
+  }
+
+  &__item--news {
+    &::after {
+      color: clr(news);
+    }
+  }
+
+  &__item--community {
+    &::after {
+      color: clr(community);
+    }
+  }
+
+  &__item--geoportal {
+    &::after {
+      color: clr(geoportal);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &--countries {
+      color: clr(countries);
+    }
+
+    &--issues {
+      color: clr(issues);
+    }
+
+    &--debate {
+      color: clr(debate);
+    }
+
+    &--data {
+      color: clr(data);
+    }
+
+    &--library {
+      color: clr(library);
+    }
+
+    &--news {
+      color: clr(news);
+    }
+
+    &--community {
+      color: clr(community);
+    }
+
+    &--geoportal {
+      color: clr(geoportal);
+    }
+  }
+
+  .expand-sub {
+    display: none;
+  }
+}
+
+/*
+ * Sub Navigation
+ */
+
+/* UL (Nested) */
+.landportal-menu--sub {
+  @include list-reset;
+
+  display: none;
+  border-bottom: none;
+  background-color: clr(text-light);
+  height: auto;
+  left: 0;
+  overflow: visible;
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  z-index: 10;
+  font-size: 0.9rem;
+  font-weight: normal;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+  a {
+    padding: $space-one-half $space-double;
+    display: block;
+    color: clr(text);
+  }
+
+  &:hover {
+    a {
+      &.active,
+      &:active,
+      &:hover {
+        background-color: clr(background-navigation);
+      }
+    }
+  }
+
+  .landportal-menu__item {
+    padding: 0;
+  }
+
+  .landportal-menu--sub {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .landportal-menu__item--with-sub::after {
+    content: none;
+  }
+}
+
+.landportal-menu__link--sub-2 {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '-';
+    margin-right: .5rem;
+  }
+}

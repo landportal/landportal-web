@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for issue counter.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function issue_counter_theme($existing, $type, $theme, $path) {
+  return [
+    'issue_counter_block' => [
+      'variables' => [
+        'items' => [],
+        'news_counter' => '',
+        'projects_counter' => '',
+        'blogs_counter' => '',
+        'library_counter' => '',
+        'indicators_counter' => '',
+        'layers_counter' => '',                
+        'issue_name' => '',
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,21 @@
+uuid: c6f70728-55df-40b2-9e2c-6375335076d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_indicators
+    - taxonomy.vocabulary.indicators
+  module:
+    - view_coda_extra
+id: taxonomy_term.indicators.field_indicators
+field_name: field_indicators
+entity_type: taxonomy_term
+bundle: indicators
+label: 'Land Book Indicators'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ViewCodaExtra

@@ -1,0 +1,29 @@
+.quote-block {
+  padding: $space-quadruple 0 $space-quadruple $space-quadruple;
+  // Avoid iPhone bug by not using background shorthand.
+  background-position: left $space-quadruple;
+  background-size: auto auto;
+  background-image: url(../images/quotes-sm.png);
+  background-color : clr(primary);
+  background-repeat: no-repeat;
+  color: clr(text-light);
+
+  @include medium {
+    font-size: 1.375rem; // 22px
+    background-image: url(../images/quotes.png);
+
+    .blockquote {
+      margin-left: 9rem;
+    }
+  }
+
+  @include large {
+    font-size: 1.75rem; // 28px
+
+    .blockquote {
+      margin-left: 15rem;
+    }
+  }
+
+}
+

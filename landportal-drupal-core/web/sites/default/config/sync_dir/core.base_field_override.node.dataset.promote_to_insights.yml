@@ -1,0 +1,23 @@
+uuid: bfa0ea46-8600-47e4-ae50-d85c43f70873
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+    - custom_pub.custom_publishing_option.promote_to_insights
+id: node.dataset.promote_to_insights
+field_name: promote_to_insights
+entity_type: node
+bundle: dataset
+label: 'Promoted to Insights'
+description: 'custom publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

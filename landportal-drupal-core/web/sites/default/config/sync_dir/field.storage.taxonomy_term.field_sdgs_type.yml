@@ -1,0 +1,30 @@
+uuid: 8b54b2e6-fa8a-4bb6-8a2a-f0427862b257
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_sdgs_type
+field_name: field_sdgs_type
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Goal
+      label: Goal
+    -
+      value: Target
+      label: Target
+    -
+      value: Indicator
+      label: Indicator
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,4 @@
+.lp_swiper_controls_text span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

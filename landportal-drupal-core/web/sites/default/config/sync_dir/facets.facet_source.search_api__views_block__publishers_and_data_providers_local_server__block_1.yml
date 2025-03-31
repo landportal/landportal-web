@@ -1,0 +1,9 @@
+uuid: 95c138f8-41c1-4792-883a-a3c5126cafc5
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__publishers_and_data_providers_local_server__block_1
+name: 'search_api:views_block__publishers_and_data_providers_local_server__block_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

@@ -1,0 +1,21 @@
+uuid: 9da8f7a5-38c1-49af-9731-0abee5378a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.slider_sort_order
+    - node.type.slider
+  module:
+    - options
+id: node.slider.slider_sort_order
+field_name: slider_sort_order
+entity_type: node
+bundle: slider
+label: 'Slider Sort Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

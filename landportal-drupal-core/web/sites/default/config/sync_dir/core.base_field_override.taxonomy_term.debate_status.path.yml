@@ -1,0 +1,20 @@
+uuid: 0fd75594-80c4-4d91-a5ac-b4c6ca8d055f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+  module:
+    - path
+id: taxonomy_term.debate_status.path
+field_name: path
+entity_type: taxonomy_term
+bundle: debate_status
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

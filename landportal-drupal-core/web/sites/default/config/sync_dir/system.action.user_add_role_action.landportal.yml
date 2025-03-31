@@ -1,0 +1,14 @@
+uuid: 5724152d-287c-4985-8ef2-0ee839296459
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.landportal
+  module:
+    - user
+id: user_add_role_action.landportal
+label: 'Add the Landportal role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: landportal

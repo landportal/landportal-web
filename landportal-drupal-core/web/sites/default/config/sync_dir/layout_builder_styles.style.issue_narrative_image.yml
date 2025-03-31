@@ -1,0 +1,12 @@
+uuid: a2911cff-097f-48bc-8656-2cc9da023e7c
+langcode: en
+status: true
+dependencies: {  }
+id: issue_narrative_image
+label: 'Issue narrative image'
+classes: Issue-narrative-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

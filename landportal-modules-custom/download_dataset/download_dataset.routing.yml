@@ -1,0 +1,7 @@
+download_dataset.download:
+  path: '/download/test/dataset'
+  defaults:
+    _controller: '\Drupal\download_dataset\Controller\DownloadDatasetController::download'
+    _title: 'Download dataset'
+  requirements: 
+    _permission: 'access content'

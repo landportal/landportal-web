@@ -1,0 +1,21 @@
+uuid: 680faf11-08f0-46c1-b991-37ffe2859b15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.blockquote
+    - node.type.country_narrative
+  module:
+    - text
+id: node.country_narrative.blockquote
+field_name: blockquote
+entity_type: node
+bundle: country_narrative
+label: Blockquote
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

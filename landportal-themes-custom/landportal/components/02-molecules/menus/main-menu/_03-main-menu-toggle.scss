@@ -1,0 +1,52 @@
+/* Toggle */
+.toggle-expand-wrapper {
+  margin-bottom: -5em;
+  z-index: 10;
+}
+
+.toggle-expand {
+  @include link;
+
+  @include medium {
+    display: none;
+  }
+
+  display: inline-block;
+  padding: $space;
+  text-decoration: none;
+  width: 100%;
+  text-align: right;
+
+  /* See main-menu.js */
+}
+
+/* SVG icon */
+.toggle-expand__icon {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 auto;
+}
+
+.toggle-expand__open {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 1.3em;
+  padding: 9px 10px;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.icon-bar {
+  background-color: #888;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  display: block;
+}
+
+.icon-bar + .icon-bar {
+  margin-top: 4px;
+}

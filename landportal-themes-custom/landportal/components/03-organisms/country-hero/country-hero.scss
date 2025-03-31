@@ -1,0 +1,97 @@
+.country-hero {
+  position: relative;
+
+  &__image {
+    display: none;
+
+    @include medium {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      max-width: 100vw;
+      width: 100vw;
+      z-index: -1;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+      }
+    }
+  }
+
+  &__breadcrumbs {
+    padding: 0 $space;
+    @include medium {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    background-color: clr(background-light);
+    padding: $space;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1em 0 .2em 0;
+      @include medium {
+        margin-top: .3em;
+        font-size: 3rem;
+      }
+      @include large {
+        font-size: 4rem;
+      }
+    }
+
+    // fine-tune dimensions to accomodate all maps.
+    @include medium {
+      width: 55%;
+      min-height: 400px;
+    }
+
+    @include breakpoint(1100px) {
+      width: 59%;
+      min-height: 500px;
+    }
+
+    @include breakpoint(1300px) {
+      width: 50%;
+      min-height: 600px;
+    }
+  }
+
+  &__label {
+    margin-top: $space-double;
+  }
+
+  &__summary {
+    a {
+      @include link;
+    }
+  }
+
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+
+    a {
+      @include button-base;
+      @include button-color-primary;
+
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  }
+
+}

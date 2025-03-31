@@ -1,0 +1,12 @@
+uuid: 7d503b5d-fc09-4070-bac5-5ed664f8730e
+langcode: en
+status: true
+dependencies: {  }
+id: organization_type_in_dataset
+label: 'Organization Type In Dataset'
+classes: organization-type-in-dataset
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

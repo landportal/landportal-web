@@ -1,0 +1,19 @@
+uuid: efe06cc9-7a9f-4b49-8b3e-6df14bfa75a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lp_related_content
+    - node
+id: node.field_related_impact
+field_name: field_related_impact
+entity_type: node
+type: lp_related_content_people
+settings: {  }
+module: lp_related_content
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

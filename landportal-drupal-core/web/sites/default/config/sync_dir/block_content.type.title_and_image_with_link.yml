@@ -1,0 +1,8 @@
+uuid: 38b89852-3622-454c-866c-1ab3c271c369
+langcode: en
+status: true
+dependencies: {  }
+id: title_and_image_with_link
+label: 'Title and Image with Link'
+revision: 0
+description: 'In this block we have add title, description and image fields with link and also we have set its layout builder...'

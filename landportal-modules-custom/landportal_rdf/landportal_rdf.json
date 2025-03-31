@@ -1,0 +1,22 @@
+{
+  "datasets": "24",
+  "indicators": "25",
+  "theme": "26",
+  "regions": "7",
+  "concepts": "5",
+  "licences": "20",
+  "debate_status": "4",
+  "organization_relation": "22",
+  "organization_types": "15",
+  "campaigns": "33",
+  "currency": "32",
+  "events_types": "36",
+  "observations": "30",
+  "landlibrary_resource_type": "19",
+  "layer": "34",
+  "sdgs_tiers": "29",
+  "types_of_data": "37",
+  "languages": "6",
+  "sdgs": "28",
+  "slide_types": "35"
+}

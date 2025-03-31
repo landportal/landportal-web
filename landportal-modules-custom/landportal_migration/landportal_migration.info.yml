@@ -1,0 +1,11 @@
+name: 'Landportal - Migration'
+description: 'Landportal - Migration'
+package: Landportal
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
+
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_drupal
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

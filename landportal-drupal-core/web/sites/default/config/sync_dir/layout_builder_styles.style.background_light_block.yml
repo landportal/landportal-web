@@ -1,0 +1,12 @@
+uuid: 2d5846d1-6206-46a9-bf85-925cfd509d40
+langcode: en
+status: true
+dependencies: {  }
+id: background_light_block
+label: 'Background Light'
+classes: layout-background--light
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: null
+weight: 0

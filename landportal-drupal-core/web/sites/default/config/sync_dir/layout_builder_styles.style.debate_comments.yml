@@ -1,0 +1,12 @@
+uuid: cf69a09f-aa64-4953-b9e9-49833982d104
+langcode: en
+status: true
+dependencies: {  }
+id: debate_comments
+label: 'Debate Comments'
+classes: debate-comments
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

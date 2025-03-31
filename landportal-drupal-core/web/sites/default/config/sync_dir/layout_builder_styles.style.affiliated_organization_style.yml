@@ -1,0 +1,12 @@
+uuid: 8a4d6010-a13f-449c-9f75-9410fc73f612
+langcode: en
+status: true
+dependencies: {  }
+id: affiliated_organization_style
+label: 'Affiliated organization style'
+classes: affiliated-organization-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

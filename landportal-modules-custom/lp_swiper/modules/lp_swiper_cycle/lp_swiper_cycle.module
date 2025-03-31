@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Lp Swiper: cycle is typically used for field views.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_help().
+ */
+function lp_swiper_cycle_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.lp_swiper_cycle':
+      if (\Drupal::moduleHandler()->moduleExists('advanced_help')) {
+        $output = '<p>' . Link::fromTextAndUrl(t('Click here to view the documentation for Lp Swiper Cycle.'), Url::fromRoute('advanced_help.module_index', ['module' => 'lp_swiper_cycle'])->toString()) . '</p>';
+      }
+      else {
+        $output = '<p>' . t('Lp Swiper Cycle help can be found by installing and enabling the @advanced_help', ['@advanced_help' => Link::fromTextAndUrl(t('Advanced Help module'), Url::fromUri('http://drupal.org/project/advanced_help'))->toString()]) . '</p>';
+      }
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function lp_swiper_cycle_theme($existing, $type, $theme, $path) {
+  return [
+    'lp_swiper_cycle' => [
+      'variables' => [
+        'view' => NULL,
+        'settings' => [],
+        'rows' => [],
+        'title' => '',
+      ],
+      'template' => 'lp-swiper-cycle',
+      'file' => 'lp_swiper_cycle.theme.inc',
+    ],
+    'lp_swiper_cycle_main_frame' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'view' => NULL,
+        'settings' => NULL,
+        'rows' => NULL,
+      ],
+      'template' => 'lp-swiper-cycle-main-frame',
+      'file' => 'lp_swiper_cycle.theme.inc',
+    ],
+    'lp_swiper_cycle_main_frame_row' => [
+      'variables' => [
+        'vss_id' => NULL,
+        'items' => NULL,
+        'count' => NULL,
+        'view' => NULL,
+      ],
+      'template' => 'lp-swiper-cycle-main-frame-row',
+      'file' => 'lp_swiper_cycle.theme.inc',
+    ],
+    'lp_swiper_cycle_main_frame_row_item' => [
+      'variables' => [
+        'item' => NULL,
+        'item_count' => NULL,
+        'count' => NULL,
+        'view' => NULL,
+        'length' => NULL,
+      ],
+      'template' => 'lp-swiper-cycle-main-frame-row-item',
+      'file' => 'lp_swiper_cycle.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_lp_swiper_pager_fields().
+ *
+ * As it is a preprocess function, store it with other functions in theme.inc.
+ */
+function lp_swiper_cycle_preprocess_lp_swiper_pager_fields(&$vars) {
+  \Drupal::moduleHandler()->loadInclude('lp_swiper_cycle', 'inc', 'lp_swiper_cycle.theme');
+  _lp_swiper_cycle_preprocess_lp_swiper_pager_fields($vars);
+}
+
+/**
+ * Implements hook_preprocess_lp_swiper_slide_counter().
+ *
+ * As it is a preprocess function, store it with other functions in theme.inc.
+ */
+function lp_swiper_cycle_preprocess_lp_swiper_slide_counter(&$vars) {
+  \Drupal::moduleHandler()->loadInclude('lp_swiper_cycle', 'inc', 'lp_swiper_cycle.theme');
+  _lp_swiper_cycle_preprocess_lp_swiper_slide_counter($vars);
+}

@@ -1,0 +1,12 @@
+uuid: c369cc5b-9a4c-41d2-8c2c-330b9166a733
+langcode: en
+status: true
+dependencies: {  }
+id: news_on_land_title
+label: 'News on Land Title'
+classes: news-on-land-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

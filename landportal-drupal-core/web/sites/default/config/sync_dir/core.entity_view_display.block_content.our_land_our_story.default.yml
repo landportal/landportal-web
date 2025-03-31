@@ -1,0 +1,27 @@
+uuid: debf7d33-d451-4b84-a20b-09b30e5f4293
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_land_our_story
+    - field.field.block_content.our_land_our_story.body
+  module:
+    - text
+id: block_content.our_land_our_story.default
+targetEntityType: block_content
+bundle: our_land_our_story
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

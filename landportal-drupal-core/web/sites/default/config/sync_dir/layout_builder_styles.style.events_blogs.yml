@@ -1,0 +1,12 @@
+uuid: 6475e0ee-d990-4212-9685-aa15f46c3531
+langcode: en
+status: true
+dependencies: {  }
+id: events_blogs
+label: 'Events & Blogs'
+classes: 'events-&-blogs'
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

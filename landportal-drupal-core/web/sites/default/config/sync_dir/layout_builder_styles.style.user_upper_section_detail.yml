@@ -1,0 +1,12 @@
+uuid: d7f4b52b-8747-4414-b140-5f240478074a
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_detail
+label: 'User Upper Section Detail'
+classes: user-upper-section-detail
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

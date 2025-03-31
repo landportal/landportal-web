@@ -1,0 +1,20 @@
+uuid: f23abf58-6aec-43d2-8904-55f658124896
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slide_types
+  module:
+    - text
+id: taxonomy_term.slide_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: slide_types
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

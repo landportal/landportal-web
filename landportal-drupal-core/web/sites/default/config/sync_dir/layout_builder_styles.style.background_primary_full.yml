@@ -1,0 +1,12 @@
+uuid: 4cc059a9-d297-4c9e-b16f-f66d178ed75e
+langcode: en
+status: true
+dependencies: {  }
+id: background_primary_full
+label: 'Background Primary Full'
+classes: "layout-background--full\r\nlayout-background--primary"
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

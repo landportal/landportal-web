@@ -1,0 +1,37 @@
+uuid: 863581cc-d280-4b0c-a610-fc836e99a56c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+  module:
+    - node
+label: 'Dataset Portfolio CT import Additional-paragraphs'
+id: dataset_portfolio_ct_import_addi
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources: {  }
+mappings: {  }

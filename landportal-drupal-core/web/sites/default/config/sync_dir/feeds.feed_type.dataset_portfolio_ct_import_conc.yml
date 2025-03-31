@@ -1,0 +1,160 @@
+uuid: c7329361-aa1d-4327-8320-46e03b4bb18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_related_topics
+    - node.type.dataset
+  module:
+    - node
+label: 'Dataset Portfolio CT import Concept'
+id: dataset_portfolio_ct_import_conc
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: Nid
+    label: Nid
+    machine_name: nid
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  releatedcp:
+    value: releatedCp
+    label: releatedCp
+    machine_name: releatedcp
+    type: csv
+  releatedcp1:
+    value: releatedCp1
+    label: releatedCp1
+    machine_name: releatedcp1
+    type: csv
+  releatedcp2:
+    value: releatedCp2
+    label: releatedCp2
+    machine_name: releatedcp2
+    type: csv
+  releatedcp3:
+    value: releatedCp3
+    label: releatedCp3
+    machine_name: releatedcp3
+    type: csv
+  releatedcp4:
+    value: releatedCp4
+    label: releatedCp4
+    machine_name: releatedcp4
+    type: csv
+  releatedcp5:
+    value: releatedCp5
+    label: releatedCp5
+    machine_name: releatedcp5
+    type: csv
+  releatedcp6:
+    value: releatedCp6
+    label: releatedCp6
+    machine_name: releatedcp6
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_topics
+    map:
+      target_id: releatedcp6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

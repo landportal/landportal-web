@@ -1,0 +1,28 @@
+uuid: 59409d8e-4e89-457f-bc41-001319c167c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.parent_programme
+    - node.type.programme_narrative
+id: node.programme_narrative.parent_programme
+field_name: parent_programme
+entity_type: node
+bundle: programme_narrative
+label: 'Parent Programme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      programme_narrative: programme_narrative
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

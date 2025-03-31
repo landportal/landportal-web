@@ -1,0 +1,12 @@
+uuid: 5dab2126-2e37-4045-84d5-8ff805236aa2
+langcode: en
+status: true
+dependencies: {  }
+id: organization_logo
+label: 'Organization logo'
+classes: organization-logo
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

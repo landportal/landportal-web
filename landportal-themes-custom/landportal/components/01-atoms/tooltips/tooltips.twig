@@ -1,0 +1,21 @@
+{#
+/**
+ * Available variables:
+ * - tooltips_base_class - the base classname
+ * - tooltips_modifiers - array of modifiers to add to the base classname
+ *   by default, tooltipss are expected to be 16x9, include the modifier "full" to support a 4x3 tooltips
+ * - tooltips_blockname - blockname prepended to the base classname
+ * - tooltips_content - the content of the tooltips (typically an iframe)
+ *   the "|raw" filter is applied so that the iframe is rendered instead
+ *   of simply passing the iframe as plain text.
+ *
+ * Available blocks:
+ * - tooltips_content - used to replace the content of the tooltips with something other than the typical iframe
+ *   for example: to insert an html5 tooltips component
+ */
+#}
+{% set tooltips_base_class = tooltips_base_class|default('tooltips') %}
+
+<div {{ bem(tooltips_base_class, [], tooltips_blockname) }}>
+  <span data-text="Thanks for hovering! I'm a tooltip" class="tooltip">Hover over me!</span>
+</div>

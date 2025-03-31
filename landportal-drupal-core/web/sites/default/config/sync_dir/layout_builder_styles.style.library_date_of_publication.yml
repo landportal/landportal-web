@@ -1,0 +1,12 @@
+uuid: a6f360b4-45ff-4229-ad87-154b88162840
+langcode: en
+status: true
+dependencies: {  }
+id: library_date_of_publication
+label: 'Library Date of Publication'
+classes: library-date-of-publication
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

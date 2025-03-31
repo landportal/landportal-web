@@ -1,0 +1,14 @@
+uuid: 76340e98-a70b-4c20-844c-b62d1ae09629
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - node
+id: node.news
+targetEntityType: node
+bundle: news
+types:
+  - ''
+fieldMappings: {  }

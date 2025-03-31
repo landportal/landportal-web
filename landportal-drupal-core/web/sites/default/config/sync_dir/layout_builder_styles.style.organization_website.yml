@@ -1,0 +1,12 @@
+uuid: e8d0072c-e42e-4abb-81fd-827e1da3b03a
+langcode: en
+status: true
+dependencies: {  }
+id: organization_website
+label: 'Organization Website'
+classes: organization-website
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

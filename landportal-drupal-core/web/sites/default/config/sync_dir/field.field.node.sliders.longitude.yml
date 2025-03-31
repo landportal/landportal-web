@@ -1,0 +1,19 @@
+uuid: 1d4d1580-b6f3-4280-9824-2c7a5b9c9fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.longitude
+    - node.type.sliders
+id: node.sliders.longitude
+field_name: longitude
+entity_type: node
+bundle: sliders
+label: Longitude
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

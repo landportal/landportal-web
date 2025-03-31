@@ -1,0 +1,12 @@
+uuid: 9590262b-687c-4ea8-9764-2271ab609f20
+langcode: en
+status: true
+dependencies: {  }
+id: event_date_section
+label: 'Event Date Section'
+classes: event-date-section
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

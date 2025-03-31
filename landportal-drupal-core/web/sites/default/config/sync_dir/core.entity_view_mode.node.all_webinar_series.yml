@@ -1,0 +1,10 @@
+uuid: 596f8859-7ff2-4217-bfcf-22cff398e519
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.all_webinar_series
+label: 'All webinar series'
+targetEntityType: node
+cache: true

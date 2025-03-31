@@ -1,0 +1,188 @@
+uuid: b23593cd-2087-4f8f-8b66-81c4c96792d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sdgi.body
+    - field.field.node.sdgi.feeds_item
+    - field.field.node.sdgi.field_contact
+    - field.field.node.sdgi.field_geographical_focus
+    - field.field.node.sdgi.field_image
+    - field.field.node.sdgi.field_indicator
+    - field.field.node.sdgi.field_indicators
+    - field.field.node.sdgi.field_link
+    - field.field.node.sdgi.field_milestone
+    - field.field.node.sdgi.field_noderef
+    - field.field.node.sdgi.field_orgref
+    - field.field.node.sdgi.field_paragraphs
+    - field.field.node.sdgi.field_partners
+    - field.field.node.sdgi.field_related_blocks
+    - field.field.node.sdgi.field_related_themes
+    - field.field.node.sdgi.field_related_topics
+    - field.field.node.sdgi.field_sdg
+    - field.field.node.sdgi.field_sdgs_tier
+    - node.type.sdgi
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          3540f5d6-19b2-4fa6-8644-fa93f27d1f35:
+            uuid: 3540f5d6-19b2-4fa6-8644-fa93f27d1f35
+            region: content
+            configuration:
+              id: 'field_block:node:sdgi:langcode'
+              label: Language
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: language
+                label: inline
+                settings:
+                  link_to_entity: false
+                  native_language: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - organization_working_languages
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f2ddb69a-73a9-43fe-9a77-7459d06fe212:
+            uuid: f2ddb69a-73a9-43fe-9a77-7459d06fe212
+            region: content
+            configuration:
+              id: 'field_block:node:sdgi:field_image'
+              label: Picture
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          af34e07b-846b-4993-b3d9-fb22128ef35a:
+            uuid: af34e07b-846b-4993-b3d9-fb22128ef35a
+            region: content
+            configuration:
+              id: 'field_block:node:sdgi:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - title
+          850e58f4-271c-499f-9313-31c573cf6d1b:
+            uuid: 850e58f4-271c-499f-9313-31c573cf6d1b
+            region: content
+            configuration:
+              id: 'field_block:node:sdgi:body'
+              label: 'About this SDGs Indicator'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - dataset_description
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.sdgi.teaser
+targetEntityType: node
+bundle: sdgi
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_contact: true
+  field_geographical_focus: true
+  field_image: true
+  field_indicator: true
+  field_indicators: true
+  field_link: true
+  field_milestone: true
+  field_noderef: true
+  field_orgref: true
+  field_paragraphs: true
+  field_partners: true
+  field_related_blocks: true
+  field_related_themes: true
+  field_related_topics: true
+  field_sdg: true
+  field_sdgs_tier: true
+  langcode: true
+  search_api_excerpt: true

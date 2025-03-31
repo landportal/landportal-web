@@ -1,0 +1,151 @@
+uuid: 805f477a-b315-4b13-aeda-ec4bfc42267e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.field_related_themes
+    - node.type.debate
+  module:
+    - node
+label: 'Debate Themes'
+id: debate_themes
+description: 'only Themes'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: debate
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  themes:
+    value: Themes
+    label: Themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: Themes1
+    label: Themes1
+    machine_name: themes1
+    type: csv
+  themes2:
+    value: Themes2
+    label: Themes2
+    machine_name: themes2
+    type: csv
+  themes3:
+    value: Themes3
+    label: Themes3
+    machine_name: themes3
+    type: csv
+  themes4:
+    value: Themes4
+    label: Themes4
+    machine_name: themes4
+    type: csv
+  themes5:
+    value: Themes5
+    label: Themes5
+    machine_name: themes5
+    type: csv
+  author:
+    value: author
+    label: author
+    machine_name: author
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_related_themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

@@ -1,0 +1,19 @@
+uuid: 597edff4-ce27-402d-b4ef-9b38e0b3fd94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.sdgi
+id: node.sdgi.field_contact
+field_name: field_contact
+entity_type: node
+bundle: sdgi
+label: 'Key contacts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

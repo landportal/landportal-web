@@ -1,0 +1,33 @@
+uuid: be416271-5716-417e-b702-2b000246cfba
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_land_voc
+    - language
+    - system
+  theme:
+    - landportal
+id: landvoctreept
+theme: landportal
+region: content
+weight: 1
+provider: null
+plugin: landportal_landvoc_tree_pt
+settings:
+  id: landportal_landvoc_tree_pt
+  label: 'LandVoc tree (pt)'
+  label_display: visible
+  provider: landportal_land_voc
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      pt-pt: pt-pt
+  request_path:
+    id: request_path
+    negate: false
+    pages: /landvoc

@@ -1,0 +1,12 @@
+uuid: e915ebc5-3eac-46d2-8c42-221e7a8c758d
+langcode: en
+status: true
+dependencies: {  }
+id: user_full_content_teaser
+label: 'User Full Content Teaser'
+classes: user-full-content-teaser
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

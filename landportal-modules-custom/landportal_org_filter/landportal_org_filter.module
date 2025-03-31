@@ -1,0 +1,378 @@
+<?php
+use Drupal\Core\File\FileSystemInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function landportal_org_filter_cron() {
+  // Run the query to get data.
+  $comb_both_ids_unique = getNidsBasedOnYourLogic();
+
+    \Drupal::logger('Count-comb_both_ids_unique-11')->notice(serialize($comb_both_ids_unique));
+
+    // Filter nodes by status 1
+    $comb_both_ids_unique_filter = [];
+    foreach ($comb_both_ids_unique as $nid) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+      if ($node && $node->status->value == 1) {
+        $comb_both_ids_unique_filter[] = $nid;
+      }
+    }
+    \Drupal::logger('Count-comb_both_ids_unique-12')->notice(serialize($comb_both_ids_unique_filter));
+
+
+  if (!empty($comb_both_ids_unique_filter)) {
+    // Prepare the CSV data.
+    $csv_data = implode(',', $comb_both_ids_unique_filter);
+
+    // Get the file system service.
+    $file_system = \Drupal::service('file_system');
+
+    // Define the directory path within the public directory.
+    $directory_path = 'public://csv/libraryRefOrganizations';
+
+    // Ensure the directory exists or create it.
+    if (!$file_system->prepareDirectory($directory_path, FileSystemInterface::CREATE_DIRECTORY)) {
+      // \Drupal::logger('landportal_org_filter')->error('Failed to create or prepare directory: %directory_path', ['%directory_path' => $directory_path]);
+    }
+
+    // Define the file path within the directory.
+    $file_path = $directory_path . '/libraryRefOrganizations.csv';
+
+    // Save the CSV data to the file.
+    file_put_contents($file_path, $csv_data);
+
+    // Log a message indicating the CSV file creation.
+    // \Drupal::logger('csv orgRefid')->notice('CSV file saved at %file_path.', ['%file_path' => $file_path]);
+  }
+
+  // Get NIDs from the CSV file.
+  $nids = readNidsFromCsvFile();
+
+  // Prepare data for the new CSV file.
+  $csv_data = [];
+  foreach ($nids as $nid) {
+    // Load the entity (e.g., a node) by its NID.
+    $entity = \Drupal\node\Entity\Node::load($nid);
+
+    // Check if the entity exists and has the necessary field.
+    if ($entity instanceof \Drupal\node\NodeInterface && $entity->hasField('field_organization_type')) {
+      $org_type_terms = $entity->get('field_organization_type')->referencedEntities();
+      $org_type_ids = [];
+
+      // Get the term IDs for each referenced term.
+      foreach ($org_type_terms as $term) {
+        $org_type_ids[] = $term->id();
+      }
+
+      $org_type = implode(',', $org_type_ids);
+    } else {
+      $org_type = '';
+    }
+
+    $csv_data[] = [
+      'nid' => $nid,
+      'org_type' => $org_type,
+    ];
+  }
+
+  // Get the file system service.
+  $file_system = \Drupal::service('file_system');
+
+  // Define the directory path within the public directory.
+  $directory_path = 'public://csv/organizationRefTypes';
+
+  // Ensure the directory exists or create it.
+  if (!$file_system->prepareDirectory($directory_path, FileSystemInterface::CREATE_DIRECTORY)) {
+    // \Drupal::logger('directory_path')->error('Failed to create or prepare directory: %directory_path', ['%directory_path' => $directory_path]);
+  }
+
+  // Define the file path within the directory.
+  $file_path = $directory_path . '/organizationRefTypes.csv';
+
+  $file = fopen($file_path, 'w');
+  fputcsv($file, ['nid', 'org_type']); // Add header row.
+
+  foreach ($csv_data as $row) {
+    fputcsv($file, $row);
+  }
+
+  fclose($file);
+
+
+            //  ----Convert CSV in to Org-types -> nids----
+
+  // Path to your original CSV file
+  $csv_file_path = 'public://csv/organizationRefTypes/organizationRefTypes.csv';
+
+  // Initialize an array to store the converted data
+  $converted_data = [];
+
+  // Check if the file exists
+  if (file_exists($csv_file_path)) {
+    // Open the original CSV file for reading
+    $file = fopen($csv_file_path, 'r');
+
+    // Skip the header row
+    $header = fgetcsv($file);
+
+    // Initialize an associative array to organize the data by "org_type"
+    $data_by_org_type = [];
+
+    while (($row = fgetcsv($file)) !== FALSE) {
+      $nid = $row[0];
+      $org_type = $row[1];
+      
+      if (!empty($nid) && !empty($org_type)) {
+        // If the "org_type" is not empty, split it by comma
+        $org_types = explode(',', $org_type);
+        
+        foreach ($org_types as $single_org_type) {
+          // Trim each org_type value and add it to the corresponding "nid" in the associative array
+          $single_org_type = trim($single_org_type);
+          if (!isset($data_by_org_type[$single_org_type])) {
+            $data_by_org_type[$single_org_type] = [];
+          }
+          $data_by_org_type[$single_org_type][] = $nid;
+        }
+      }
+    }
+
+    // Close the original CSV file
+    fclose($file);
+
+    // Convert the associative array into the desired format
+    foreach ($data_by_org_type as $org_type => $nids) {
+      $converted_data[] = [
+        'org_type' => $org_type,
+        'nid' => implode(',', $nids),
+      ];
+    }
+  }
+  
+  // Get the file system service.
+  $file_system = \Drupal::service('file_system');
+
+  // Define the directory path within the public directory.
+  $directory_path = 'public://csv/organizationRefTypes';
+
+  // Ensure the directory exists or create it.
+  if (!$file_system->prepareDirectory($directory_path, FileSystemInterface::CREATE_DIRECTORY)) {
+    // \Drupal::logger('directory_path')->error('Failed to create or prepare directory: %directory_path', ['%directory_path' => $directory_path]);
+  }
+
+  // Define the file path within the directory.
+  $file_path = $directory_path . '/converted_organizationRefTypes.csv';
+
+  // Modify the header to "org_type,nid"
+  $header = ['org_type', 'nid'];
+
+  // Open the new CSV file for writing
+  $new_file = fopen($file_path, 'w');
+
+  // Write the header row to the new CSV file
+  fputcsv($new_file, $header);
+
+  // Write the converted data to the new CSV file
+  foreach ($converted_data as $row) {
+    fputcsv($new_file, $row);
+  }
+
+  // Close the new CSV file
+  fclose($new_file);
+
+} // hook_cron() end
+
+
+
+/**
+ * Helper function to retrieve NIDs based on your custom logic.
+ *
+ * @return array
+ */
+function getNidsBasedOnYourLogic() {
+  // ... Your existing query and processing logic ...
+
+// Get the database query service.
+$query = \Drupal::database()->select('node_field_data', 'nfd');
+$query->fields('nfd', ['langcode', 'nid', 'title']); // Include the 'title' field.
+// Left join with node__field_doc_provider table.
+$query->leftJoin('node__field_doc_provider', 'ndp', 'nfd.nid = ndp.entity_id AND ndp.deleted = :deleted AND (ndp.langcode = nfd.langcode OR ndp.bundle = :bundle)', [
+  ':deleted' => 0,
+  ':bundle' => 'project',
+]);
+// Left join with node__field_doc_publisher table.
+$query->leftJoin('node__field_doc_publisher', 'ndpub', 'nfd.nid = ndpub.entity_id AND ndpub.deleted = :deleted', [
+  ':deleted' => 0,
+]);
+// Add conditions to the query.
+$query->condition('nfd.status', 1);
+$query->condition('nfd.type', 'landlibrary_resource');
+$query->condition( $query->orConditionGroup()
+    ->isNotNull('ndp.field_doc_provider_target_id')
+    ->isNotNull('ndpub.field_doc_publisher_target_id')
+);
+
+// Select the "field_doc_provider" and "field_doc_publisher" fields.
+$query->addField('ndp', 'field_doc_provider_target_id', 'field_doc_provider');
+$query->addField('ndpub', 'field_doc_publisher_target_id', 'field_doc_publisher');
+// $query->range(0, 3);
+$results = $query->execute()->fetchAll();
+
+// \Drupal::logger('Custom-Filter-result')->error(serialize($results));
+$index = 0;
+$comb_both_ids = [];
+// Process the results as needed.
+foreach ($results as $result) {
+
+  $index = $index + 1;
+  $fieldDocProvider = $result->field_doc_provider;
+  $comb_both_ids[] = $fieldDocProvider;
+
+  $fieldDocPublisher = $result->field_doc_publisher;
+  $comb_both_ids[] = $fieldDocPublisher;
+
+  $comb_both_ids_unique = array_unique($comb_both_ids);
+  }    
+
+  // \Drupal::logger('Count-Foreach-times')->notice("index =  " . $index);
+  // Return the unique IDs.
+  return $comb_both_ids_unique;
+}
+
+
+
+/**
+ * Helper function to read NIDs from a CSV file.
+ *
+ * @return array
+ */
+function readNidsFromCsvFile() {
+  $csv_file_path = 'public://csv/libraryRefOrganizations/libraryRefOrganizations.csv'; // Update with your CSV file path.
+  $nids = [];
+
+  if (file_exists($csv_file_path)) {
+    $csv_data = file_get_contents($csv_file_path);
+    $nids = explode(',', $csv_data);
+    $nids = array_filter($nids); // Remove empty values.
+  // \Drupal::logger('Count-nids')->notice(serialize($nids));
+
+  }
+
+  return $nids;
+}
+
+
+/**
+ * Helper function to read NIDs from a CSV file based on the org_type parameter.
+ *
+ * @param string $org_type
+ *   The org_type value to filter by.
+ *
+ * @return array
+ *   An array of NIDs that match the org_type parameter.
+ */
+function readTypeFromCsvFile($org_type) {
+  $csv_file_path = 'public://csv/organizationRefTypes/converted_organizationRefTypes.csv'; // Update with your CSV file path.
+  $nids = [];
+
+  if (file_exists($csv_file_path)) {
+    // Read the CSV file line by line
+    $file = fopen($csv_file_path, 'r');
+    
+    // Skip the header row
+    fgetcsv($file);
+    
+    while (($row = fgetcsv($file)) !== FALSE) {
+      $row_org_type = $row[0];
+      $row_nids = $row[1];
+      
+      if ($row_org_type == $org_type) {
+        // Split the comma-separated NIDs
+        $nids_array = explode(',', $row_nids);
+        
+        // Remove empty values
+        $nids_array = array_filter($nids_array);
+        
+        // Merge the NIDs into the result array
+        $nids = array_merge($nids, $nids_array);
+      }
+    }
+    
+    // Close the CSV file
+    fclose($file);
+    
+    // Remove duplicates from the result array
+    $nids = array_unique($nids);
+
+  }
+
+  return $nids;
+}
+
+
+/**
+ * Helper function to retrieve NIDs based on your custom logic.
+ *
+ * @return array
+ */
+function getNidsBasedOnYourLogicTerms($values_drop) {
+  // Get the database query service.
+  $query = \Drupal::database()->select('node_field_data', 'nfd');
+  $query->fields('nfd', ['langcode', 'nid']);
+  $query->leftJoin('node__field_organization_type', 'nfo', 'nfd.nid = nfo.entity_id AND nfo.deleted = :deleted', [':deleted' => 0]);
+  $query->condition('nfo.field_organization_type_target_id', $values_drop); // Replace '21' with your desired target_id.
+  $query->condition('nfd.status', 1);
+
+  $results = $query->execute()->fetchAll();
+
+  // Extract NIDs from the results.
+  $nids = [];
+  foreach ($results as $result) {
+    $nids[] = $result->nid;
+  }
+
+  return $nids;
+}
+
+
+/**
+ * Helper function that generates the options.
+ *
+ * @return array
+ */
+  function optionsForGenerateOptions() {
+  $options = array();
+  $nids = readNidsFromCsvFile();
+// \Drupal::logger('field_organization_nids')->error(serialize($nids)); 
+
+  // Define the query to fetch taxonomy terms (TIDs).
+  $query = \Drupal::database()->select('taxonomy_term_field_data', 'ttfd');
+  $query->fields('ttfd', ['tid', 'name']); // Include the 'tid' and 'name' fields.
+  $query->condition('ttfd.status', 1);
+  $query->condition('ttfd.vid', 'organization_types'); // Replace 'organization_types' with the correct vocabulary machine name.
+
+  // Execute the query and fetch the results.
+  //$results = $query->accessCheck(TRUE)->execute()->fetchAll();
+  $results = $query->execute()->fetchAll();
+// \Drupal::logger('field_organization_type')->error(serialize($results)); 
+  foreach ($results as $result) {
+    // Use the term ID as the key and the term name as the label.
+    $tid = $result->tid;
+    $count_of_org_types = count(readTypeFromCsvFile($tid));
+    $term_name = $result->name;
+
+    if($count_of_org_types > 0){
+    $options[$tid] = $term_name . " - (" . $count_of_org_types . ")";
+    }
+  }
+
+  return $options;
+}
+
+
+
+
+
+?>

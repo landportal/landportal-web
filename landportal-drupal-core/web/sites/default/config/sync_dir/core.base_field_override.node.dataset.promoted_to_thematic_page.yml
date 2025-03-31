@@ -1,0 +1,23 @@
+uuid: 315bca2a-e7d7-4032-9a14-d7940268ae81
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+    - custom_pub.custom_publishing_option.promoted_to_thematic_page
+id: node.dataset.promoted_to_thematic_page
+field_name: promoted_to_thematic_page
+entity_type: node
+bundle: dataset
+label: Promoted
+description: 'custom promoted option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

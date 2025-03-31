@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for issue news.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function project_impact_theme($existing, $type, $theme, $path) {
+  return [
+    'project_impact_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

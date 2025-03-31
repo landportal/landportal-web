@@ -1,0 +1,18 @@
+uuid: b401e146-30ec-43e7-9849-6c00c42dc28c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.concepts
+id: taxonomy_term.concepts.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: concepts
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

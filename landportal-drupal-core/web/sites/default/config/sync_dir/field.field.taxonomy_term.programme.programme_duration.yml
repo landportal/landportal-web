@@ -1,0 +1,26 @@
+uuid: d5057ed7-a139-4829-81db-c4b50e40c897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_duration
+    - taxonomy.vocabulary.programme
+  module:
+    - datetime_range
+id: taxonomy_term.programme.programme_duration
+field_name: programme_duration
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme duration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

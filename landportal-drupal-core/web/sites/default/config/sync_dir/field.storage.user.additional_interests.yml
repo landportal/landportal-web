@@ -1,0 +1,30 @@
+uuid: b8bf54cd-88d2-4aa3-843a-94eae53dbcbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.additional_interests
+field_name: additional_interests
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Country Insights'
+      label: 'Country Insights'
+    -
+      value: 'LandVoc / Open Data'
+      label: 'LandVoc / Open Data'
+    -
+      value: 'Sustainable Development'
+      label: 'Sustainable Development'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

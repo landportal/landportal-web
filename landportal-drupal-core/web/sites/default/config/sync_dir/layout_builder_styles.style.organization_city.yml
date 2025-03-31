@@ -1,0 +1,12 @@
+uuid: fb38bc56-a613-4ac0-89ce-2522f0febd92
+langcode: en
+status: true
+dependencies: {  }
+id: organization_city
+label: 'Organization City'
+classes: Organization-city
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

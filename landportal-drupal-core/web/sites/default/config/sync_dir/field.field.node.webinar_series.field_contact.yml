@@ -1,0 +1,19 @@
+uuid: b83f62a5-69f7-45c5-8856-b8245f3197e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.webinar_series
+id: node.webinar_series.field_contact
+field_name: field_contact
+entity_type: node
+bundle: webinar_series
+label: 'Contact details'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 4075f579-e901-4f0b-a58f-79c29096e607
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_topics
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.concepts
+id: node.landlibrary_resource.field_related_topics
+field_name: field_related_topics
+entity_type: node
+bundle: landlibrary_resource
+label: 'Related concepts'
+description: 'Enter a concept term from Land Portal''s <a href="/voc/landvoc">LandVoc</a> thesaurus to classify the topical subject of the resource. We recommend adding 5-10 concepts as the most effective way to tag your concept.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

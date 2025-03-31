@@ -1,0 +1,22 @@
+uuid: 5abe2008-d2f4-439a-b623-627b77791350
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.country_narrative
+id: node.country_narrative.status
+field_name: status
+entity_type: node
+bundle: country_narrative
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

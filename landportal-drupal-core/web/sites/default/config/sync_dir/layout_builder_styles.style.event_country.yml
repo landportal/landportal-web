@@ -1,0 +1,12 @@
+uuid: 22c5f814-51e5-401a-95ae-27b95433d531
+langcode: en
+status: true
+dependencies: {  }
+id: event_country
+label: 'Event Country'
+classes: event-country
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

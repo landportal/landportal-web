@@ -1,0 +1,5 @@
+name: 'Landportal - Virtuoso'
+description: 'Landportal - Virtuoso integration services.'
+package: Landportal
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10

@@ -1,0 +1,23 @@
+uuid: bbda0e9f-878a-4de8-86ad-892b0c829ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.promoted_to_news_events_landing_
+    - node.type.blog_post
+  module:
+    - options
+id: node.blog_post.promoted_to_news_events_landing_
+field_name: promoted_to_news_events_landing_
+entity_type: node
+bundle: blog_post
+label: 'Promoted to News & Events landing page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'No'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

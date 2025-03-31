@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      header:
+        result:
+          content: 'Affichez @start - @end de <span class="badge">@total</span>'
+      pager:
+        options:
+          tags:
+            next: 'suivant ›'
+            previous: '‹ précédent'
+            last: 'dernier »'
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
+  block_1:
+    display_options:
+      filters:
+        org_types:
+          expose:
+            label: 'Type d''organisation'

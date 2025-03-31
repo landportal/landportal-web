@@ -1,0 +1,18 @@
+uuid: e1c966fe-4782-4732-b568-10cf87dc115c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_land_our_story
+id: block_content.our_land_our_story.changed
+field_name: changed
+entity_type: block_content
+bundle: our_land_our_story
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

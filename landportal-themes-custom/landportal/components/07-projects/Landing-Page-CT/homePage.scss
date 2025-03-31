@@ -1,0 +1,652 @@
+@mixin homefile-icon {
+  content: '';
+  background-image: url(../images/homefile.png);
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+@mixin screen-icon{
+  content: '';
+  background-image: url(../images/Screenshot%202024-04-06%20at%2016-19-04%20Linking%20open%20data%20for%20land%20rights%20Land%20Portal.png);
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+
+@mixin user-icon{
+  content: "";
+  background-image: url(../images/user-icon.png);
+  height: 21px;
+  width: 21px;
+  padding: 0 3px 3px;
+  display: inline-block;
+  background-size: cover;
+  vertical-align: text-bottom;
+}
+
+@mixin icon8-date{
+  content: "";
+  padding: 0 3px 3px;
+  background-image: url(../images/icons8-date-50.png);
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-size: cover;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+
+.top-view-home{
+	.views-col{
+		max-width: inherit;
+		.provider-in-data{
+			color: #555;
+			&::before{
+				//content: 'Organizers:';
+				font-weight: bold;
+			}
+		}
+		.authors{
+			color: #555;
+			>div{
+				&::before{
+					@include user-icon;
+				}
+				p{
+					margin: inherit;
+  					display: inline;
+				}
+			}
+		}
+	}
+}
+.home-bg-grey, [about="/fr/home"] .bg-grey, [about="/pt/home"] .bg-grey, [about="/es/home"] .bg-grey{
+	margin-left: -15%;
+	margin-right: -15%;
+  margin-bottom: -10px;
+	background-color: #EBEBE5;
+	padding-left: 15%;
+	padding-right: 15%;
+	.top-green{
+		border-top: 3px solid #093;
+	}
+	.top-red{
+		border-top: 3px solid #C33;
+	}
+	.top-blue{
+		border-top: 3px solid #033;
+	}
+	.row{
+		.col-xs-6, .col-md-6{
+			padding: 30px 15px;
+			.bg-white{
+				text-align: center;
+				padding: 15px 15px;
+				h3{
+					a{
+						color: #06c !important;
+						&:hover{
+							color: #004080;
+						}
+						span{
+							color: black;
+						}
+					}
+					a[href="/book/data"]{
+						text-align: -moz-center;
+						text-align: -webkit-center;
+						&::before{
+							@include screen-icon;
+						}
+					}
+					a[href="/es/book/data"]{
+						text-align: -moz-center;
+						text-align: -webkit-center;
+						&::before{
+							@include screen-icon;
+						}
+					}
+					a[href="/pt/book/data"]{
+						text-align: -moz-center;
+						text-align: -webkit-center;
+						&::before{
+							@include screen-icon;
+						}
+					}
+					a[href="/fr/book/data"]{
+						text-align: -moz-center;
+						text-align: -webkit-center;
+						&::before{
+							@include screen-icon;
+						}
+					}
+					a[href="/library"]{
+						&::before{
+							@include homefile-icon;
+						}
+					}
+					a[href="/fr/library"]{
+						&::before{
+							@include homefile-icon;
+						}
+					}
+					a[href="/es/library"]{
+						&::before{
+							@include homefile-icon;
+						}
+					}
+					a[href="/pt/library"]{
+						&::before{
+							@include homefile-icon;
+						}
+					}
+					a[href="/get-involved"], a[href="/es/get-involved"]{
+						&::before{
+							content: '';
+							background-image: url(../images/fa-user.png);
+							height: 25px;
+							width: 25px;
+							display: inline-block;
+							vertical-align: bottom;
+							margin-left: 10px;
+						}
+					}
+				}
+				.fa-sitemap{
+					&::before{
+						content: '';
+						background-image: url(../images/fa-sitemap_0.png);
+						height: 25px;
+						width: 25px;
+						display: inline-block;
+						vertical-align: bottom;
+						margin-left: 10px;
+					}					
+				}
+				p{
+					padding: 0 15px;
+				}
+			}
+		}
+		.col-xs-4{
+			.bg-white{
+				p{
+					padding: 15px 15px 0 15px;
+					img{
+						padding: 15px;
+					}
+				}
+				.rtecenter{
+					text-align: center;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	.block-wrapped{
+		&:hover{
+			box-shadow: 3px 5px 10px #666;
+		}
+	}
+	.home-bg-grey, [about="/fr/home"] .bg-grey, [about="/pt/home"] .bg-grey, [about="/es/home"] .bg-grey{
+		.row{
+			padding: 0 15px 15px 15px;
+		}
+	}
+	.col-xs-6{
+		width: 50%;
+    @media (min-width: $p-small){
+      width: 100%;
+    }
+    @media (min-width: $p-tablet){
+      width: 50%;
+    }
+	}
+}
+.homepage-country{
+	padding-right: 15px;
+	header{
+		h2{
+			a{
+				color: #E58517;
+			}
+		}
+	}
+	.views-row{
+		border-top: 5px solid #E58517;
+	}
+}
+.homepage-issues{
+  @media (min-width: $p-small){
+    padding-left: inherit;
+  }
+  @media (min-width: $p-tablet){
+    padding-left: 15px;
+  }
+	header{
+		h2{
+			a{
+				color: #C33;
+			}
+		}
+	}
+	.views-row{
+		border-top: 5px solid #C33;
+	}
+}
+
+.homepage-country, .homepage-issues{
+	float: left;
+	width: 50%;
+	@media (min-width: $p-small){
+		width: 100%;
+	}
+	@media (min-width: $p-tablet){
+		width: 50%;
+	}
+	.views-row{
+		padding-bottom: 15px;
+		&::after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.views-field-geographical-focus, .views-field-title{
+			font-weight: bold;
+			font-size: 18px;
+			padding-top: 5px;
+
+		}
+		.views-field-picture, .views-field-issues-image, .views-field-field-image{
+			width: 50%;
+  			float: left;
+  			padding: 0 15px 0 0;
+  			@media (min-width: $p-small){
+  				width: 25%;
+  			}
+  			@media (min-width: $p-tablet){
+  				width: 50%;
+  			}
+		}
+		.views-field-geographical-focus, .views-field-narrative, .views-field-title, .views-field-issue-narrative-summary, .views-field-body{
+			width: 50%;
+  			float: right;
+  			padding-left: 15px;
+  			padding-right: 15px;
+  			line-height: 1.42857143;
+  			clear: right;
+  			@media (min-width: $p-small){
+  				width: 75%;
+  			}
+  			@media (min-width: $p-tablet){
+  				width: 50%;
+  			}
+  			a{
+  				color: #06c;
+  			}
+		}
+		.views-field-narrative, .views-field-issue-narrative-summary, .views-field-body{
+			color: #555;
+			font-size: 13px;
+			max-height: 5.5em;
+  			overflow: hidden;
+		}
+	}
+}
+
+
+
+
+.home-slider{
+	float: left;
+	padding: 1%;
+	@media (min-width: $p-small){
+		width: 100%;
+	}
+	@media (min-width: $p-tablet){
+		width: 25%;
+	}
+	header{
+		h2{
+			font-size: 22px;
+			font-weight: bold;
+		}
+		.Blog.post{
+			color: #396;
+		}
+		.Debate{
+			color: #099;
+		}
+		.Event{
+			color: #336;
+		}
+		.LandLibrary.Resource{
+			color: #906;
+		}
+	}
+	.carousel-inner{
+		article{
+			background: white;
+			.page-title{
+				display: none;
+			}
+			.title{
+        line-height: normal;
+				span{
+					font-size: 18px;
+					font-family: "Merriweather Sans",sans-serif;
+					font-weight: 700;
+					line-height: normal;
+					color: #555;
+					a{
+						color: #06c;
+					}	
+				}
+			}
+			.dataset-description, .library-description{
+				display: none;
+			}
+			.libaray-image{
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.date{
+				div{
+					color: #444;
+					font-size: 13px;
+					&::before{
+						@include icon8-date;
+					}
+				}
+			}
+			.provider-in-data{
+				div{
+					color: #444;
+					font-size: 13px;
+					> {
+						div{
+							display: inline;
+							&:not(:last-child){
+								&::after{
+									content: ', ';
+								}
+							}
+							&:first-child{
+								&::before{
+									content: 'Organizers: ';
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}				
+			}
+			.location{
+				display: inline-block;
+				div{
+					&::before{
+						content: '';
+						background-image: url(../images/location-icon.png);
+						height: 14px;
+						width: 14px;
+						display: inline-block;
+						background-size: cover;
+						vertical-align: middle;
+					}
+				}
+			}
+			.location, .event-city, .event-country, .event-street{
+				display: inline-block;
+				div{
+					color: #444;
+					font-size: 13px;
+				}
+			}
+			.library-resource-type{
+				div{
+					color: #444;
+					font-size: 13px;					
+				}
+			}
+			.library-tilte{
+				a{
+					color: #06c;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.carousel-indicators {
+		bottom: unset;
+		left: unset;
+		right: 15px;
+		top: -15px;
+		margin: 0;
+		width: initial;
+		li{
+			border-color: #666 !important;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 1px;
+			text-indent: -999px;
+			border: 1px solid #fff;
+			border-top-color: rgb(255, 255, 255);
+			border-right-color: rgb(255, 255, 255);
+			border-bottom-color: rgb(255, 255, 255);
+			border-left-color: rgb(255, 255, 255);
+			border-radius: 10px;
+			cursor: pointer;
+			background-color: #000 \9;
+			background-color: transparent;
+		}
+		.active{
+			background-color: #666;
+		}
+	}
+	article.blog-post{
+		border-top: 5px solid #396;
+	}
+	article.debate{
+		border-top: 5px solid #099;
+	}
+}
+.home-slider-event{
+	header{
+		h2{
+			font-size: 22px;
+			font-weight: bold;
+			a{
+				color: #336;
+			}
+		}
+	}
+	.carousel-inner{
+		article{
+			border-top: 5px solid #336;
+			background: white;
+		}
+	} 
+}
+.home-slider-data{
+	header{
+		h2{
+			font-size: 22px;
+			font-weight: bold;
+			a{
+				color: #093;
+			}
+		}
+	}
+	.carousel-inner{
+		.active{
+			background: #fff;
+		}
+		article{
+			border-top: 5px solid #093;
+			background: white;
+		}
+	} 	
+}
+.home-slider-library{
+	header{
+		h2{
+			font-size: 22px;
+			font-weight: bold;
+			a{
+				color: #906;
+			}
+		}
+	}
+	.carousel-inner{
+		article{
+			border-top: 5px solid #906;
+			background: white;
+		}
+	} 	
+} 
+.home-slider-join-debate{
+	header{
+		h2{
+			font-size: 22px;
+			font-weight: bold;
+			a{
+				color: #099;
+			}
+		}
+	}
+	.carousel-inner{
+		article{
+			border-top: 5px solid #099;
+			background: white;
+		}
+	} 	
+}
+.home-slider-blogs, .home-slider-discussion, .home-slider-event, .home-slider-library{
+	.more-link{
+		margin-top: 15px;
+		text-align: right;
+  		font-size: 13px;
+  		a{
+  			color: #fff;
+  			padding: 5px 15px;
+  			border-radius: 1.3em;
+  			font-style: italic;
+  			float: right;
+  			clear: right;
+  		}
+	}
+}
+.home-slider-blogs{
+	.slide{
+		color: inherit;
+	}
+	.authors{
+		font-size: 13px;
+		 >div{
+		 	display: inline;
+		 	&::before{
+	 			@include user-icon;
+	 		}
+		 	div{
+		 		display: inline;
+		 		&:not(:first-child){
+					&::before{
+						content: ', ';
+						margin-left: -2px;
+					}
+				}
+		 	}
+		 }
+	}
+	.more-link{
+		a{
+			background-color: #396;
+		}
+	}
+}
+.home-slider-discussion{
+	.slide{
+		color: black;
+	}
+	.debate-status-closed{
+		font-size: 60%;
+		font-weight: bold;
+		div{
+			background-color: #C33;
+			padding: .2em .5em;
+			margin: 2px;
+			text-transform: uppercase;
+			display: inline;
+			color: #fff;
+		}
+	}
+	.latest-events-date{
+		font-size: 13px;
+		div{
+			&::before{
+				@include icon8-date;
+			}
+		}
+	}
+	.library-data-provider{
+		font-size: 13px;
+		word-break: break-all;
+		>div{
+			display: inline;
+			&::before{
+				content: 'Facilitators:';
+				font-weight: bold;
+				color: #444;
+			}
+			div{
+				display: inline;
+				&:not(:first-child){
+					&::before{
+						content: ', ';
+						margin-left: -2px;
+					}
+				}
+			}
+		}
+	}
+
+	.latest-events-organizers{
+		font-size: 13px;
+		word-break: break-all;
+		>div{
+			display: inline;
+			&::before{
+				content: 'Partners:';
+				font-weight: bold;
+				color: #444;
+			}
+			div{
+				display: inline;
+				&:not(:first-child){
+					&::before{
+						content: ', ';
+						margin-left: -2px;
+					}
+				}
+			}
+		}
+	}
+	.more-link{
+		a{
+			background-color: #099;
+		}
+	}
+}
+a[href=" /library/contribute"]{
+	color: #06c;
+	&:hover{
+		color: #004080;
+	}
+}

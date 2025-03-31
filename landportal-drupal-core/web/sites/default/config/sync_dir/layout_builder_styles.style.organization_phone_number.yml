@@ -1,0 +1,12 @@
+uuid: 682df60f-3f1a-4108-ae36-f953d8f37df3
+langcode: en
+status: true
+dependencies: {  }
+id: organization_phone_number
+label: 'Organization Phone Number'
+classes: Organization-phone-number
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

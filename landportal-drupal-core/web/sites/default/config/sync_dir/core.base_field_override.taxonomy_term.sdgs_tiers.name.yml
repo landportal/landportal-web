@@ -1,0 +1,18 @@
+uuid: 29d53913-ddd7-452c-8777-81433515947f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs_tiers
+id: taxonomy_term.sdgs_tiers.name
+field_name: name
+entity_type: taxonomy_term
+bundle: sdgs_tiers
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

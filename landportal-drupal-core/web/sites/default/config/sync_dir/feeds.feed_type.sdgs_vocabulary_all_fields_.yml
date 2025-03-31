@@ -1,0 +1,127 @@
+uuid: 7ebee878-a8d5-4f1b-a652-f423cf1bae21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sdgs.field_id
+    - field.field.taxonomy_term.sdgs.field_image
+    - field.field.taxonomy_term.sdgs.field_sdgs_type
+    - taxonomy.vocabulary.sdgs
+  module:
+    - taxonomy
+label: 'SDGs vocabulary (All Fields)'
+id: sdgs_vocabulary_all_fields_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: sdgs
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  id:
+    value: id
+    label: id
+    machine_name: id
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+  icon:
+    value: icon
+    label: icon
+    machine_name: icon
+    type: csv
+  type:
+    value: type
+    label: type
+    machine_name: type
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_id
+    map:
+      value: id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_image
+    map:
+      target_id: icon
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_sdgs_type
+    map:
+      value: type
+    settings:
+      language: null
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null

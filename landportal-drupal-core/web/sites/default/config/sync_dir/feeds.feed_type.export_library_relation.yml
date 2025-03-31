@@ -1,0 +1,340 @@
+uuid: 700a3d6d-cacc-4806-b249-458a6e12e97a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_related_themes
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library themes'
+id: export_library_relation
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resource_title:
+    value: 'Resource title'
+    label: 'Resource title'
+    machine_name: resource_title
+    type: csv
+  website_uri1:
+    value: 'Website uri1'
+    label: 'Website uri1'
+    machine_name: website_uri1
+    type: csv
+  website_text1:
+    value: 'Website text1'
+    label: 'Website text1'
+    machine_name: website_text1
+    type: csv
+  website_uri2:
+    value: 'Website uri2'
+    label: 'Website uri2'
+    machine_name: website_uri2
+    type: csv
+  website_text2:
+    value: 'Website text2'
+    label: 'Website text2'
+    machine_name: website_text2
+    type: csv
+  website_uri3:
+    value: 'Website uri3'
+    label: 'Website uri3'
+    machine_name: website_uri3
+    type: csv
+  website_text3:
+    value: 'Website text3'
+    label: 'Website text3'
+    machine_name: website_text3
+    type: csv
+  website_uri4:
+    value: 'Website uri4'
+    label: 'Website uri4'
+    machine_name: website_uri4
+    type: csv
+  website_text4:
+    value: 'Website text4'
+    label: 'Website text4'
+    machine_name: website_text4
+    type: csv
+  website_uri5:
+    value: 'Website uri5'
+    label: 'Website uri5'
+    machine_name: website_uri5
+    type: csv
+  website_text5:
+    value: 'Website text5'
+    label: 'Website text5'
+    machine_name: website_text5
+    type: csv
+  website_uri6:
+    value: 'Website uri6'
+    label: 'Website uri6'
+    machine_name: website_uri6
+    type: csv
+  website_text6:
+    value: 'Website text6'
+    label: 'Website text6'
+    machine_name: website_text6
+    type: csv
+  website_uri7:
+    value: 'Website uri7'
+    label: 'Website uri7'
+    machine_name: website_uri7
+    type: csv
+  website_text7:
+    value: 'Website text7'
+    label: 'Website text7'
+    machine_name: website_text7
+    type: csv
+  website_uri8:
+    value: 'Website uri8'
+    label: 'Website uri8'
+    machine_name: website_uri8
+    type: csv
+  website_text8:
+    value: 'Website text8'
+    label: 'Website text8'
+    machine_name: website_text8
+    type: csv
+  website_uri9:
+    value: 'Website uri9'
+    label: 'Website uri9'
+    machine_name: website_uri9
+    type: csv
+  website_text9:
+    value: 'Website text9'
+    label: 'Website text9'
+    machine_name: website_text9
+    type: csv
+  website_uri10:
+    value: 'Website uri10'
+    label: 'Website uri10'
+    machine_name: website_uri10
+    type: csv
+  website_text10:
+    value: 'Website text10'
+    label: 'Website text10'
+    machine_name: website_text10
+    type: csv
+  website_uri11:
+    value: 'Website uri11'
+    label: 'Website uri11'
+    machine_name: website_uri11
+    type: csv
+  website_text11:
+    value: 'Website text11'
+    label: 'Website text11'
+    machine_name: website_text11
+    type: csv
+  themes:
+    value: themes
+    label: themes
+    machine_name: themes
+    type: csv
+  themes1:
+    value: themes1
+    label: themes1
+    machine_name: themes1
+    type: csv
+  themes2:
+    value: themes2
+    label: themes2
+    machine_name: themes2
+    type: csv
+  themes3:
+    value: themes3
+    label: themes3
+    machine_name: themes3
+    type: csv
+  themes4:
+    value: themes4
+    label: themes4
+    machine_name: themes4
+    type: csv
+  themes5:
+    value: themes5
+    label: themes5
+    machine_name: themes5
+    type: csv
+  themes6:
+    value: themes6
+    label: themes6
+    machine_name: themes6
+    type: csv
+  themes7:
+    value: themes7
+    label: themes7
+    machine_name: themes7
+    type: csv
+  themes8:
+    value: themes8
+    label: themes8
+    machine_name: themes8
+    type: csv
+  themes9:
+    value: themes9
+    label: themes9
+    machine_name: themes9
+    type: csv
+  themes10:
+    value: themes10
+    label: themes10
+    machine_name: themes10
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resource_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_related_themes
+    map:
+      target_id: themes
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes7
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes8
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes9
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_related_themes
+    map:
+      target_id: themes10
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

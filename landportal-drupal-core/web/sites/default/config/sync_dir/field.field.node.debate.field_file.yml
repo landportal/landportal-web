@@ -1,0 +1,27 @@
+uuid: e33877ed-2aa1-4ba1-a00f-88e84d746bcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.debate
+  module:
+    - file
+id: node.debate.field_file
+field_name: field_file
+entity_type: node
+bundle: debate
+label: 'Related materials'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: debate
+  file_extensions: 'png gif jpg jpeg zip rar pdf doc xls mp3 wav tif xlsx docx pps ppsx ppt pptx dat txt csv'
+  max_filesize: '16 MB'
+  description_field: false
+field_type: file

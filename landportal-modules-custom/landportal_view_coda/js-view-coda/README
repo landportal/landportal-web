@@ -1,0 +1,60 @@
+
+JavaScript View COuntry DAta
+
+About
+=====
+
+This JS library was developed for the Land Portal to allow the visualization of country-based dataset in various ways.
+The data comes directly from a LOD sparql endpoint (data.landportal.info or landportal.info/sparql).
+
+
+Releases
+========
+1.0     - Sept. 2016 - Initial release
+1.0.1   - Oct.  2016 - Removed dependency on iso3 (can init the lib without specific country selected). Centralized indicators helpers (info/year/details). Reworked core caching. Added more visualization (table details + download data).
+1.0.2   - Nov.  2016 - Add VGGT visualization.
+1.1     - Last version 1.0X as of Oct. 2017
+1.2 (master) - New View Coda format (breaks init prototype). Add more, better, nicer line/bar charts. Streamline pie chart. Make most data query simpler, better, faster.
+
+Installation
+============
+
+Requirements
+------------
+
+Highcharts (recent)
+
+npm install [-g] highcharts
+
+(should end up in /usr/local/lib/node_modules/highcharts/)
+
+JS libs:
+ - jquery
+   - jquery.localize (optional)
+ - highcharts
+   - highmaps
+   - highcharts-more (still true? / optional?)
+   - highstock (still true?)
+   - exporting (optional)
+ - bootstrap (optional, for stylin')
+
+
+Source
+======
+GIT repository:
+  https://github.com/landportal/js-view-coda/
+
+Issues list:
+  https://github.com/landportal/js-view-coda/issues
+
+
+Authors
+=======
+Jules Clement <jules@ker.bz> (main)
+Carlos Tejo <carlos.tejo@landportal.info> (contributions)
+
+Licence
+=======
+This project is licensed under the terms of the MIT license.
+
+Note: It uses Highcharts, which is a non-free software/library.

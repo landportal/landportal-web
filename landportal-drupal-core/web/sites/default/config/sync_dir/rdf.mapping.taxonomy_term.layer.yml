@@ -1,0 +1,14 @@
+uuid: 56157015-4e69-484d-b7e0-9d6c340841b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.layer
+  module:
+    - taxonomy
+id: taxonomy_term.layer
+targetEntityType: taxonomy_term
+bundle: layer
+types:
+  - ''
+fieldMappings: {  }

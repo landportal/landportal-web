@@ -1,0 +1,23 @@
+uuid: 81049236-e7f1-4c31-92b6-2a92fa945702
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.impact
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.impact.body
+field_name: body
+entity_type: block_content
+bundle: impact
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

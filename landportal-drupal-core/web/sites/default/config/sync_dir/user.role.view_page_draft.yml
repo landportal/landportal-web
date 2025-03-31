@@ -1,0 +1,14 @@
+uuid: 6704d253-2dee-48f9-a783-73f305b926a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+    - node
+id: view_page_draft
+label: 'view page draft'
+weight: 8
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'
+  - 'view own unpublished content'

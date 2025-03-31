@@ -1,0 +1,19 @@
+uuid: 7a3d312f-0782-41ae-b10b-25c0ccbf7104
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_language_code_iso_639_1
+    - taxonomy.vocabulary.languages
+id: taxonomy_term.languages.field_language_code_iso_639_1
+field_name: field_language_code_iso_639_1
+entity_type: taxonomy_term
+bundle: languages
+label: 'Language code (ISO 639-1)'
+description: '2 letters ISO 639-1 code for the language. <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">More information</a>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: 0564ec53-22e7-4a5c-b87b-069cf2c8b6c8
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_landing_page_breadcrumb
+label: 'Blog Landing Page SDGS Content'
+classes: blog-SDGS-content
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

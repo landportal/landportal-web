@@ -1,0 +1,12 @@
+uuid: 6cc827ed-3849-4f7c-bc01-8e9bcc931ea6
+langcode: en
+status: true
+dependencies: {  }
+id: library_author_editor
+label: 'Library Author Editor'
+classes: library-author-editor
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

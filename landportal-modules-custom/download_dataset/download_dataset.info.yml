@@ -1,0 +1,6 @@
+name: Download Dataset Module
+type: module
+description: 'Module for download Dataset block.'
+package: Custom
+version: 1.0
+core_version_requirement: ^9 || ^10

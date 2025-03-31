@@ -1,0 +1,230 @@
+uuid: f193302f-39d3-4a16-b7f5-813672b07faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_orgref
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library Corporate Author(s)'
+id: import_library_corporate_author_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resouce_title:
+    value: Resouce_title
+    label: Resouce_title
+    machine_name: resouce_title
+    type: csv
+  corporate:
+    value: corporate
+    label: corporate
+    machine_name: corporate
+    type: csv
+  corporate1:
+    value: corporate1
+    label: corporate1
+    machine_name: corporate1
+    type: csv
+  corporate2:
+    value: corporate2
+    label: corporate2
+    machine_name: corporate2
+    type: csv
+  corporate3:
+    value: corporate3
+    label: corporate3
+    machine_name: corporate3
+    type: csv
+  corporate4:
+    value: corporate4
+    label: corporate4
+    machine_name: corporate4
+    type: csv
+  corporate5:
+    value: corporate5
+    label: corporate5
+    machine_name: corporate5
+    type: csv
+  corporate6:
+    value: corporate6
+    label: corporate6
+    machine_name: corporate6
+    type: csv
+  corporate7:
+    value: corporate7
+    label: corporate7
+    machine_name: corporate7
+    type: csv
+  corporate8:
+    value: corporate8
+    label: corporate8
+    machine_name: corporate8
+    type: csv
+  corporate9:
+    value: corporate9
+    label: corporate9
+    machine_name: corporate9
+    type: csv
+  corporate10:
+    value: corporate10
+    label: corporate10
+    machine_name: corporate10
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resouce_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_orgref
+    map:
+      target_id: corporate
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate9
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: corporate10
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

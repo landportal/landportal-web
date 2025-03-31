@@ -1,0 +1,38 @@
+#block-usermenu{
+	.menu{
+		list-style: none;
+		font-size: 0.8125rem;
+		padding-left: 0;
+		margin: 7px;
+		position: relative;
+		a{
+			color: var(--c-text-muted);
+			text-decoration: none;
+		}
+		&:hover{
+			.menu--sub{
+				display: block;
+			}
+		}
+		.menu--sub{
+			display: none;
+			background-color: #fff;
+		    height: auto;
+		    //left: 2px;
+		    overflow: visible;
+		    position: absolute;
+		    width: 220px;
+		    z-index: 1;
+		    //font-size: 0.9rem;
+		    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+		    margin: 0;
+		    left: -6px;
+		    li{
+				padding: .33333rem 1rem;
+				&:hover{
+					background-color: #f5f5f5;
+				}
+		    }
+		}
+	}
+}

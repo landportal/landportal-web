@@ -1,0 +1,12 @@
+uuid: 07e99a8e-f123-44c2-ab19-8b99b78096f6
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_name
+label: 'Indicator Name'
+classes: indicator-name
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

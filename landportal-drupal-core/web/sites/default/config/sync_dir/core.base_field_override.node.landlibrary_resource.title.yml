@@ -1,0 +1,18 @@
+uuid: 0251ae1d-932a-4044-8cc3-4692ea58fe09
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.title
+field_name: title
+entity_type: node
+bundle: landlibrary_resource
+label: 'Resource title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,160 @@
+uuid: a8c7aeab-37c0-416c-a817-4dd4b62c8d69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_geographical_focus
+    - node.type.event
+  module:
+    - node
+label: 'Event Geographical'
+id: event_geographical
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: event
+  langcode: pt-pt
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  geographical_focus:
+    value: 'Geographical focus'
+    label: 'Geographical focus'
+    machine_name: geographical_focus
+    type: csv
+  geographical_focus1:
+    value: 'Geographical focus1'
+    label: 'Geographical focus1'
+    machine_name: geographical_focus1
+    type: csv
+  geographical_focus2:
+    value: 'Geographical focus2'
+    label: 'Geographical focus2'
+    machine_name: geographical_focus2
+    type: csv
+  geographical_focus3:
+    value: 'Geographical focus3'
+    label: 'Geographical focus3'
+    machine_name: geographical_focus3
+    type: csv
+  geographical_focus4:
+    value: 'Geographical focus4'
+    label: 'Geographical focus4'
+    machine_name: geographical_focus4
+    type: csv
+  geographical_focus5:
+    value: 'Geographical focus5'
+    label: 'Geographical focus5'
+    machine_name: geographical_focus5
+    type: csv
+  geographical_focus6:
+    value: 'Geographical focus6'
+    label: 'Geographical focus6'
+    machine_name: geographical_focus6
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geographical_focus6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

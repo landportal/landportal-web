@@ -1,0 +1,16 @@
+uuid: 245f24c6-8d2b-43df-b8bc-72da28b8c767
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_and_image_with_link
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.title_and_image_with_link
+target_entity_type_id: block_content
+target_bundle: title_and_image_with_link
+default_langcode: site_default
+language_alterable: true

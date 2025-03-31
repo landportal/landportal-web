@@ -1,0 +1,12 @@
+uuid: cf8c2c03-1347-493d-bd6f-7ebd5eea2c2b
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_city
+label: 'User Upper Section City'
+classes: user-upper-section-city
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

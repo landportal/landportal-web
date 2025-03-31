@@ -1,0 +1,3 @@
+administer cache purge:
+  title: 'Administer Cache Purge settings'
+  description: 'Allow users to modify Cache Purge settings.'

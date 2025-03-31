@@ -1,0 +1,5 @@
+indicator_label: 'Land area'
+indicator_url: '#'
+indicator_value: '200'
+indicator_unit: 'ha'
+indicator_description: 'this is the tooltip'

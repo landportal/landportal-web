@@ -1,0 +1,12 @@
+uuid: 5790df37-3407-4f09-8dc2-0dfe320d96f8
+langcode: en
+status: true
+dependencies: {  }
+id: background_primary_block
+label: 'Background Primary'
+classes: layout-background--primary
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

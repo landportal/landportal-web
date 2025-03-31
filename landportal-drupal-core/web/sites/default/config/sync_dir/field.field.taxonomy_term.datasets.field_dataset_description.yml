@@ -1,0 +1,23 @@
+uuid: c341d4d1-1541-46d3-b082-0f04c33d38d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_dataset_description
+    - taxonomy.vocabulary.datasets
+  module:
+    - text
+id: taxonomy_term.datasets.field_dataset_description
+field_name: field_dataset_description
+entity_type: taxonomy_term
+bundle: datasets
+label: 'Dataset description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

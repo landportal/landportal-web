@@ -1,0 +1,383 @@
+.event-landingpage-breadcrumb{
+	font-size: 13px;
+	font-style: italic;
+	padding-top: 1%;
+	a{
+		color: #06C;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	span{
+		color: #777;
+		&::before{
+			content: "/ ";
+			padding: 0 5px;
+			color: #ccc;
+		}
+	}	
+} 
+.event-landing-page {
+	.views-col.col-1{
+		margin-right: 15px;
+		border-top: 5px solid #336;
+		@media (min-width: $p-small){  
+			width: 100% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 47% !important;
+		}
+
+		.views-field-field-image{
+			float: left;
+		@media (min-width: $p-small){  
+			width: 25% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		}
+		.views-field-title{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	padding-top: 10px;
+		  	font-size: 18px;
+			padding-bottom: 10px;
+			line-height: 22px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		a{
+		  			text-decoration: none;
+					color: #06c;
+					font-weight: bold;
+					&:hover{
+						text-decoration: underline;
+					}
+		  		}
+		  	} 
+		}
+		.views-field-field-date{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		&::before{
+			  		content: "";
+					vertical-align: middle;
+					padding: 0 3px 3px;
+					background-image: url(../images/icons8-date-50.png);
+					height: 16px;
+					width: 16px;
+					display: inline-block;
+					background-size: cover;
+					margin-right: 5px;
+		  		}
+		  	}
+		}
+		.views-field-country{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		.full-location{
+			  		&::before{
+			  			content: '';
+						background-image: url(../images/location.jpg);
+						height: 17px;
+						width: 17px;
+						display: inline-block;
+						background-size: cover;
+						vertical-align: middle;
+			  		}
+		  		}
+		  	}	
+		}
+		.views-field-body{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	line-height: 17px;
+			font-size: 13px;
+			color: #666;
+			height: 100px;
+			overflow: hidden;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}	
+		}
+		.views-field-field-orgref{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	.views-label-field-orgref{
+		  		font-weight: bold;
+		  	}		
+		} 
+	}
+	.views-col.col-2{
+		margin-right: 15px;
+		border-top: 5px solid #336;
+		@media (min-width: $p-small){  
+			width: 100% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 47% !important;
+		}
+
+		.views-field-field-image{
+			float: left;
+		@media (min-width: $p-small){  
+			width: 25% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		}
+		.views-field-title{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	padding-top: 10px;
+		  	font-size: 18px;
+			padding-bottom: 10px;
+			line-height: 22px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		a{
+		  			text-decoration: none;
+					color: #06c;
+					font-weight: bold;
+					&:hover{
+						text-decoration: underline;
+					}
+		  		}
+		  	} 
+		}
+		.views-field-field-date{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		&::before{
+			  		content: "";
+					vertical-align: middle;
+					padding: 0 3px 3px;
+					background-image: url(../images/icons8-date-50.png);
+					height: 16px;
+					width: 16px;
+					display: inline-block;
+					background-size: cover;
+					margin-right: 5px;
+		  		}
+		  	}
+		}
+		.views-field-country{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	span{
+		  		.full-location{
+			  		&::before{
+			  			content: '';
+						background-image: url(../images/location.jpg);
+						height: 17px;
+						width: 17px;
+						display: inline-block;
+						background-size: cover;
+						vertical-align: middle;
+			  		}
+		  		}
+		  	}	
+		}
+		.views-field-body{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	line-height: 17px;
+			font-size: 13px;
+			color: #666;
+			height: 100px;
+			overflow: hidden;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}	
+		}
+		.views-field-field-orgref{
+			float: right;
+		  	clear: right;
+		  	padding-left: 25px;
+		  	font-size: 13px;
+		@media (min-width: $p-small){  
+			width: 75% !important;	
+		}
+		@media (min-width: $p-tablet){
+			width: 50% !important;
+		}
+		  	.views-label-field-orgref{
+		  		font-weight: bold;
+		  	}		
+		} 
+	}
+	.more-link{
+		padding-top: 20px;
+		a{
+			float: right;
+			text-decoration: none;
+			padding: 5px 15px;
+			border-radius: 1.3em;
+			background-color: #336;
+			color: white;
+			font-size: 13px;
+			font-style: italic;
+			&:hover{
+				text-decoration: underline;
+			}		
+		}
+	}
+	.future-events{
+  		margin-right: 15px;
+  		padding-bottom: 5%;
+  		padding-top: 3%;
+
+		@media (min-width: $p-small){  
+			width: auto;
+			float: inherit;	
+		}
+		@media (min-width: $p-tablet){
+			float: left;
+	  		width: 48%;
+		}
+
+  		.views-row{
+	  		border-top: 1px solid #EBEBE5;
+	  		padding-top: 15px;
+	  		padding-bottom: 15px;
+	  		.views-col.col-1{
+	  			width: 100% !important;
+	  		}
+  		}
+	}
+}
+.event-calendar{
+	margin-left: 15px;
+	padding-bottom: 5%;
+
+	@media (min-width: $p-small){  
+		width: auto;
+		float: inherit;	
+	}
+	@media (min-width: $p-tablet){
+		float: left;
+  		width: 48%;
+	}
+
+	header{
+		position: relative;
+		h3{
+			font-size: 1.7em;
+			@media (min-width: $p-small){  
+				text-align: center;
+			}
+			@media (min-width: $p-tablet){
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin: 0;
+			}
+		}
+		nav{
+			margin: 0;
+			width: auto;
+			ul{
+				padding: 0;
+				.pager__item--next{
+					float: right;
+					a{
+						display: inline-block;
+						padding: 5px 14px;
+						background-color: #fff;
+						border: 1px solid #ddd;
+						border-radius: 15px;
+						font-size: 13px;
+						text-decoration: none;
+						color: black;
+						font-weight: bold;
+						&:hover{
+							background-color: #eee;
+						}
+					}
+				}
+				.pager__item--previous{
+					a{
+						display: inline-block;
+						padding: 5px 14px;
+						background-color: #fff;
+						border: 1px solid #ddd;
+						border-radius: 15px;
+						font-size: 13px;
+						text-decoration: none;
+						color: black;
+						font-weight: bold;
+						&:hover{
+							background-color: #eee;  
+						}
+					}				
+				}
+			}
+		} 
+	}
+}

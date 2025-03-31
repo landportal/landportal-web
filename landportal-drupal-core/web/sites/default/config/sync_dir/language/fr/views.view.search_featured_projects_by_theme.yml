@@ -1,0 +1,4 @@
+display:
+  default:
+    display_options:
+      title: 'Rechercher des projets en vedette par thème'

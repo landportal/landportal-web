@@ -1,0 +1,12 @@
+uuid: a4993e62-c52e-421b-bde7-55f60f6cfd4d
+langcode: en
+status: true
+dependencies: {  }
+id: news_breadcrumb
+label: 'News Breadcrumb'
+classes: news-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

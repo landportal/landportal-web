@@ -1,0 +1,7 @@
+services:
+  landportal_virtuoso.connection:
+    class: Drupal\landportal_virtuoso\ConnectionService
+    arguments: ['@settings']
+  landportal_virtuoso.indicators:
+    class: Drupal\landportal_virtuoso\IndicatorsService
+    arguments: ['@landportal_virtuoso.connection', '@entity_type.manager', '@renderer']

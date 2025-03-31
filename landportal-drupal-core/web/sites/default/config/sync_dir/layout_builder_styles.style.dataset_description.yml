@@ -1,0 +1,12 @@
+uuid: d8c6d8cb-9dfa-4a8b-98b3-5f3b69043ac9
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_description
+label: 'Dataset Description'
+classes: dataset-description
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

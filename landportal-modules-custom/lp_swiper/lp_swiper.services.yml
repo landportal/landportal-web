@@ -1,0 +1,19 @@
+services:
+  plugin.manager.lp_swiper.swiper_skin:
+    class: Drupal\lp_swiper\LpSwiperSkinPluginManager
+    parent: default_plugin_manager
+
+  plugin.manager.lp_swiper.swiper_type:
+    class: Drupal\lp_swiper\LpSwiperTypePluginManager
+    parent: default_plugin_manager
+
+  plugin.manager.lp_swiper.widget_type:
+    class: Drupal\lp_swiper\LpSwiperWidgetTypePluginManager
+    parent: default_plugin_manager
+
+  plugin.manager.lp_swiper.widget:
+    class: Drupal\lp_swiper\LpSwiperWidgetPluginManager
+    parent: default_plugin_manager
+
+  lp_swiper.format_addons_name:
+      class: Drupal\lp_swiper\FormatAddonsName

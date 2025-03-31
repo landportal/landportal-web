@@ -1,0 +1,12 @@
+uuid: 51057189-46ee-4e1a-ae92-10ffc7473789
+langcode: en
+status: true
+dependencies: {  }
+id: library_data_provider
+label: 'Library Data Provider'
+classes: library-data-provider
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

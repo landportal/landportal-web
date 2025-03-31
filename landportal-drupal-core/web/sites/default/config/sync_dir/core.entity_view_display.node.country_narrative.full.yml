@@ -1,0 +1,237 @@
+uuid: 5657fe17-55f8-4e92-a2d6-8132199fa744
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.country_narrative.created
+    - core.entity_view_mode.node.full
+    - field.field.node.country_narrative.additional_information
+    - field.field.node.country_narrative.blockquote
+    - field.field.node.country_narrative.feeds_item
+    - field.field.node.country_narrative.geographical_focus
+    - field.field.node.country_narrative.layout_builder__layout
+    - field.field.node.country_narrative.layout_builder__translation
+    - field.field.node.country_narrative.narrative
+    - field.field.node.country_narrative.picture
+    - node.type.country_narrative
+  content:
+    - 'block_content:card:61c311fa-1403-40c3-840d-c0e4ceeb32ae'
+  module:
+    - block_content
+    - landportal_country_narrative
+    - landportal_indicators
+    - layout_builder
+    - layout_builder_restrictions
+    - social_media
+    - text
+    - user
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: 'Main + aside'
+          context_mapping: {  }
+          layout_builder_styles_style: ''
+        components:
+          1b5caf81-5d20-46e3-8f5d-64cb1c809955:
+            uuid: 1b5caf81-5d20-46e3-8f5d-64cb1c809955
+            region: aside
+            configuration:
+              id: social_sharing_block
+              label: 'Share this page'
+              label_display: visible
+              provider: social_media
+              context_mapping: {  }
+            weight: 8
+            additional:
+              layout_builder_styles_style: ''
+          218abe38-02e0-4ac4-bf85-a3d4fd4fa2bc:
+            uuid: 218abe38-02e0-4ac4-bf85-a3d4fd4fa2bc
+            region: main
+            configuration:
+              id: 'field_block:node:country_narrative:narrative'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          db8d4fbf-6dd0-4eaf-afdb-bd2898aefe2b:
+            uuid: db8d4fbf-6dd0-4eaf-afdb-bd2898aefe2b
+            region: main
+            configuration:
+              id: 'field_block:node:country_narrative:picture'
+              label: Picture
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style: image_full_block
+          c91a2b7d-2ae0-4c5b-bfca-8f8276844897:
+            uuid: c91a2b7d-2ae0-4c5b-bfca-8f8276844897
+            region: aside
+            configuration:
+              id: country_indicators
+              label: 'Country indicators block'
+              label_display: '0'
+              provider: landportal_indicators
+              context_mapping: {  }
+            weight: 7
+            additional:
+              layout_builder_styles_style: ''
+          4631111b-e2ad-4787-9e66-82d1c6c5d228:
+            uuid: 4631111b-e2ad-4787-9e66-82d1c6c5d228
+            region: main
+            configuration:
+              id: 'field_block:node:country_narrative:blockquote'
+              label: Blockquote
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style: blockquote_block
+          310ace3c-a0de-45ff-b01b-0805ef312830:
+            uuid: 310ace3c-a0de-45ff-b01b-0805ef312830
+            region: aside
+            configuration:
+              id: 'field_block:node:country_narrative:created'
+              label: 'Published on'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp
+                label: above
+                settings:
+                  date_format: custom
+                  custom_date_format: 'd F Y'
+                  timezone: ''
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style: background_light_block
+          b7005307-bdc7-45f1-9391-905749fa0929:
+            uuid: b7005307-bdc7-45f1-9391-905749fa0929
+            region: aside
+            configuration:
+              id: 'block_content:61c311fa-1403-40c3-840d-c0e4ceeb32ae'
+              label: transparent
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 6
+            additional:
+              layout_builder_styles_style: ''
+          55a1c947-9ecf-42d8-8d20-19cc89d83735:
+            uuid: 55a1c947-9ecf-42d8-8d20-19cc89d83735
+            region: main
+            configuration:
+              id: 'field_block:node:country_narrative:additional_information'
+              label: 'Additional information'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: additional_information_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - section_onecol
+        - section_threecol
+        - section_sidebar
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+id: node.country_narrative.full
+targetEntityType: node
+bundle: country_narrative
+mode: full
+content:
+  additional_information:
+    type: additional_information_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  blockquote:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  narrative:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  picture:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  additional_informations: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  extra_field_breadcrumbs: true
+  extra_field_hero_map_image: true
+  extra_field_read_more: true
+  feeds_item: true
+  geographical_focus: true
+  langcode: true
+  layout_builder__layout: true
+  layout_builder__translation: true
+  links: true
+  search_api_excerpt: true

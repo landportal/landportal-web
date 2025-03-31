@@ -1,0 +1,12 @@
+uuid: 4791dafa-41e7-4fc5-8e61-f1c147cf6f13
+langcode: en
+status: true
+dependencies: {  }
+id: organization_postal_code
+label: 'Organization Postal Code'
+classes: Organization-postal-code
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

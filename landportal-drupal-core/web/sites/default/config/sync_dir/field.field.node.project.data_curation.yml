@@ -1,0 +1,21 @@
+uuid: 1d4b6f72-6be6-481a-855b-9782015d0f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.data_curation
+    - node.type.project
+  module:
+    - options
+id: node.project.data_curation
+field_name: data_curation
+entity_type: node
+bundle: project
+label: 'Data curation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

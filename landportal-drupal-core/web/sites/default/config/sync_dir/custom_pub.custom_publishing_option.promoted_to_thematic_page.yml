@@ -1,0 +1,8 @@
+uuid: 74e6af26-2c40-4162-b799-9bbf224fd7d7
+langcode: en
+status: true
+dependencies: {  }
+id: promoted_to_thematic_page
+label: Promoted
+description: 'custom promoted option.'
+publish_under_promote_options: true

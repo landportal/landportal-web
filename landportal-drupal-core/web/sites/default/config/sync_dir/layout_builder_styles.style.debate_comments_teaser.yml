@@ -1,0 +1,12 @@
+uuid: c4c87bcc-5d56-4bb0-a00b-cb6d54573f9e
+langcode: en
+status: true
+dependencies: {  }
+id: debate_comments_teaser
+label: 'Debate Comments Teaser'
+classes: debate-comments-teaser
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

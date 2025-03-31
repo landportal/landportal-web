@@ -1,0 +1,12 @@
+uuid: bfd43655-577d-450e-a454-cdd28c2a0c28
+langcode: en
+status: true
+dependencies: {  }
+id: event_language
+label: 'Event Language'
+classes: event-language
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

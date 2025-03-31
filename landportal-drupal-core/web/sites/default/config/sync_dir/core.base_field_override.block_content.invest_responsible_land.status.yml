@@ -1,0 +1,22 @@
+uuid: 603f72ea-e287-4d03-88cb-3d4f2b11a9d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.invest_responsible_land
+id: block_content.invest_responsible_land.status
+field_name: status
+entity_type: block_content
+bundle: invest_responsible_land
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,12 @@
+uuid: fee0608a-d947-464c-a88d-81c710a6bf0d
+langcode: en
+status: true
+dependencies: {  }
+id: organization_working_languages
+label: 'Organization Working Languages'
+classes: Organization-working-languages
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

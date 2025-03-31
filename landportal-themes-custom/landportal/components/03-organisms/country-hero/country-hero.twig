@@ -1,0 +1,75 @@
+{% set block_base_class = 'country-hero' %}
+{% set image_alt = 'Map of'|t ~ ' ' ~ country %}
+
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('image', [], block_base_class) }}>
+    {% block block_image %}
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        output_image_tag: true,
+        image_src: image_src|default('https://landportal-d9.ddev.site/sites/default/files/country-maps/Default.png'),
+        image_alt: image_alt,
+        picture_blockname: block_base_class,
+        picture_modifiers: []
+      } %}
+    {% endblock %}
+  </div>
+
+  <div {{ bem('breadcrumbs', [], block_base_class) }}>
+    {% block breadcrumbs %}
+      {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
+    {% endblock %}
+  </div>
+
+  <div {{ bem('content', [], block_base_class) }}>
+    {% block block_content %}
+      {% block block_label %}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'label',
+          heading_blockname: block_base_class,
+          heading_level: 1,
+          heading: country,
+        } %}
+      {% endblock %}
+
+      {% block block_summary %}
+        {% if summary %}
+          <div {{ bem('summary', [], block_base_class) }}>
+            {% include "@atoms/text/text/01-paragraph.twig" with {
+              paragraph_base_class: 'summary',
+              paragraph_blockname: block_base_class,
+              paragraph_content: summary,
+            } %}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      <div {{ bem('buttons', [], block_base_class) }}>
+        {% block block_readmore %}
+          {% if more_url %}
+            {% include "@atoms/buttons/twig/button.twig" with {
+              button_base_class: 'button',
+              button_modifiers: ['primary'],
+              button_blockname: block_base_class,
+              button_content: more_text,
+              button_url: more_url,
+            } %}
+          {% endif %}
+        {% endblock %}
+
+        {% block block_download %}
+          {% if download_url %}
+            {% include "@atoms/buttons/twig/button.twig" with {
+              button_base_class: 'button',
+              button_modifiers: ['primary'],
+              button_blockname: block_base_class,
+              button_content: download_text,
+              button_url: download_url,
+            } %}
+          {% endif %}
+        {% endblock %}
+
+      </div>
+    {% endblock %}
+  </div>
+
+</div>

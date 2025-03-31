@@ -1,0 +1,12 @@
+uuid: a467947c-3599-486a-bdd5-29bb20ff241c
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_copyright
+label: 'Dataset Copyright'
+classes: dataset-copyright
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

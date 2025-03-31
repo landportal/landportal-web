@@ -1,0 +1,18 @@
+uuid: 4a96672b-4afc-46c6-bd22-c232c2a216fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_hascodedvalue
+field_name: field_hascodedvalue
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

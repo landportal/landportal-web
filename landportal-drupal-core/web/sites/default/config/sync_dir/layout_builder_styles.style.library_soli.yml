@@ -1,0 +1,12 @@
+uuid: ef35ba0f-9eeb-4baa-aead-cef2a4afe86c
+langcode: en
+status: true
+dependencies: {  }
+id: library_soli
+label: 'Library SOLI'
+classes: library-soli
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,9 @@
+name: 'Landportal - Indicators'
+description: 'Landportal - Indicators tools and services'
+package: Landportal
+type: module
+core_version_requirement: ^8.8.0 || ^9.0 || ^10
+
+dependencies:
+  - landportal_virtuoso:landportal_virtuoso
+  - landportal_common:landportal_common

@@ -1,0 +1,14 @@
+uuid: cc6e1da6-45ef-4248-bbd5-45b997391542
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.landportal
+  module:
+    - user
+id: user_remove_role_action.landportal
+label: 'Remove the Landportal role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: landportal

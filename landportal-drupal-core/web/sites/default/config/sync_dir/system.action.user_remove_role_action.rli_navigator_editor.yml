@@ -1,0 +1,14 @@
+uuid: bdfacff5-a322-48a0-aacd-7fa2ae3c8da6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rli_navigator_editor
+  module:
+    - user
+id: user_remove_role_action.rli_navigator_editor
+label: 'Remove the RLI Navigator editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rli_navigator_editor

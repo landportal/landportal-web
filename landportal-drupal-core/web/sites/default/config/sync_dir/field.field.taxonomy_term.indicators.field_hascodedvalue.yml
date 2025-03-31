@@ -1,0 +1,23 @@
+uuid: 2db6c8c1-acad-419e-9ecc-0a624d973da9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hascodedvalue
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.field_hascodedvalue
+field_name: field_hascodedvalue
+entity_type: taxonomy_term
+bundle: indicators
+label: 'has Coded Value'
+description: "The values for this indicator is taken from some controlled term list (could be characters, colors, strings, numbers...)\r\n<a href=\"https://www.w3.org/TR/vocab-data-cube/#schemes\">Read more</a>"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

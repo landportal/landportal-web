@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      use_more_text: 'Más eventos'
+      link_url: /es/events
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/es/events\">Eventos</a></h2>\r\n"
+            format: full_html

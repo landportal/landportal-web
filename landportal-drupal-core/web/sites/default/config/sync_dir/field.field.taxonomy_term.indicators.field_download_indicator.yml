@@ -1,0 +1,23 @@
+uuid: c809c5b4-6a42-4dd7-a61d-ae1832520f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_download_indicator
+    - taxonomy.vocabulary.indicators
+  module:
+    - download_indicator
+id: taxonomy_term.indicators.field_download_indicator
+field_name: field_download_indicator
+entity_type: taxonomy_term
+bundle: indicators
+label: 'Download indicator'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    download_indicator: 'yes'
+default_value_callback: ''
+settings: {  }
+field_type: download_indicator_type

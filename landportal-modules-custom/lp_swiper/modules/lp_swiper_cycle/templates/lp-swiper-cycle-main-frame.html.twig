@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an views swiper cycle main frame.
+ *
+ * Available variables:
+ * - classes: Classes to apply to the element.
+ * - rendered_rows: The slides.
+ * - vss_id: The swiper id.
+ *
+ * @see template_preprocess_lp_swiper_cycle_main_frame()
+ *
+ * @ingroup vss_templates
+ */
+#}
+<div id="lp_swiper_cycle_teaser_section_{{ vss_id }}" {{ attributes.addClass(classes) }}>
+  {% for rendered_row in rendered_rows %}
+   {{ rendered_row }}
+  {% endfor %}
+</div>

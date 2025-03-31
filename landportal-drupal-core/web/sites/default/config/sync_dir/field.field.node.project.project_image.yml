@@ -1,0 +1,45 @@
+uuid: 342cf099-1b15-4277-8eee-dea7a9b5ed64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.project_image
+    - node.type.project
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: node.project.project_image
+field_name: project_image
+entity_type: node
+bundle: project
+label: 'Page banner'
+description: 'This image will be used as the page banner and it will be used in the preview of the page (teaser) in other pages of the website.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: project-programs/project-banners
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 3cce4d45-77ef-476e-90da-5e29ae43adc3
+    alt: default-Image
+    title: ''
+    width: 1399
+    height: 526
+field_type: image

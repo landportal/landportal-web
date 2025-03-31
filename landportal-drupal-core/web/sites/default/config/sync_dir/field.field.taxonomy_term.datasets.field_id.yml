@@ -1,0 +1,19 @@
+uuid: ad174748-5218-4074-84da-bd46d9ef36a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_id
+    - taxonomy.vocabulary.datasets
+id: taxonomy_term.datasets.field_id
+field_name: field_id
+entity_type: taxonomy_term
+bundle: datasets
+label: ID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: 11543ab1-93d6-4222-8b3b-225d21379e26
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lp_team
+  module:
+    - user
+id: user_remove_role_action.lp_team
+label: 'Remove the LP team role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lp_team

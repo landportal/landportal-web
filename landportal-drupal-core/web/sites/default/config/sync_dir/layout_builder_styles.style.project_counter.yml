@@ -1,0 +1,12 @@
+uuid: 60c955c0-9c0c-48e8-aa31-cbd20ca8bb29
+langcode: en
+status: true
+dependencies: {  }
+id: project_counter
+label: 'Project Counter'
+classes: project-counter
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

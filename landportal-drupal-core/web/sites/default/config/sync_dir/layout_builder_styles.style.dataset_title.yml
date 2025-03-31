@@ -1,0 +1,12 @@
+uuid: 756f40dc-cdfd-4365-b3c9-9188651fc1ae
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_title
+label: 'Dataset Title'
+classes: dataset-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

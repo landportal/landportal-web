@@ -1,0 +1,26 @@
+uuid: 2a2b4d71-1930-4201-ac21-9d16b3374254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_duration
+    - node.type.project
+  module:
+    - datetime_range
+id: node.project.field_project_duration
+field_name: field_project_duration
+entity_type: node
+bundle: project
+label: 'Project duration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

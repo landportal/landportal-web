@@ -1,0 +1,9 @@
+{% extends "@templates/section/onecol.twig" %}
+
+{% if content %}
+  {% block content %}
+    {% if content.content %}
+      {{ content.content }}
+    {% endif %}
+  {% endblock %}
+{% endif %}

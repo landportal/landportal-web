@@ -1,0 +1,12 @@
+uuid: 54e3a9d2-3dce-43bf-8237-46f61bac08a6
+langcode: en
+status: true
+dependencies: {  }
+id: user_teaser_acronym_style
+label: 'User Teaser Acronym Style'
+classes: user-teaser-acronym-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

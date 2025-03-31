@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for project organization.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function project_organization_theme($existing, $type, $theme, $path) {
+  return [
+    'project_organization_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

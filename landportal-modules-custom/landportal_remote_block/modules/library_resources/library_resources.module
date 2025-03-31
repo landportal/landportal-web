@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for library resources.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function library_resources_theme($existing, $type, $theme, $path) {
+  return [
+    'library_resources_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

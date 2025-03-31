@@ -1,0 +1,14 @@
+uuid: 663b56d6-d3f3-4bd2-adec-f9f6ccd94849
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.subadmin
+  module:
+    - user
+id: user_add_role_action.subadmin
+label: 'Add the Subadmin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: subadmin

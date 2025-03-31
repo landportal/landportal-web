@@ -1,0 +1,6 @@
+page_layout_modifier: 'contained'
+carousel_label: 'Default'
+items:
+  - carousel_content: 'A slide'
+  - carousel_content: 'Another slide'
+  - carousel_content: 'A third slide'

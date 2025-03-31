@@ -1,0 +1,29 @@
+uuid: 3c76c4ab-fc4e-4aa9-9c10-9815416b2406
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_publisher_place
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.regions
+id: node.landlibrary_resource.field_doc_publisher_place
+field_name: field_doc_publisher_place
+entity_type: node
+bundle: landlibrary_resource
+label: 'Location Source'
+description: 'The location of the source.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

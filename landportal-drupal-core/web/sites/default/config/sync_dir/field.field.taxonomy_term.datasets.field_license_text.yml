@@ -1,0 +1,21 @@
+uuid: 8365e570-8c56-40bf-bd89-b78cf6ea3411
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_license_text
+    - taxonomy.vocabulary.datasets
+  module:
+    - text
+id: taxonomy_term.datasets.field_license_text
+field_name: field_license_text
+entity_type: taxonomy_term
+bundle: datasets
+label: 'Copyright details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

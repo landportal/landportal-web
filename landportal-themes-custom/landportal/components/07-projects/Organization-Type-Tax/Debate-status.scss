@@ -1,0 +1,223 @@
+.taxonomy-grid-system{
+    .views-row{
+        border-top: 5px solid #099;
+        &::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+       
+        .page-title{
+            display: none;
+        }
+        .views-field-field-image{
+            float: left;
+            padding-right: 15px;
+            padding-left: 0;
+            clear: right;
+            @media (min-width: 320px){
+                width: 25%;
+                a{
+                width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+             @media (min-width: 768px){
+                width: 50%;
+                a{
+                width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+        .views-field-title{
+            border-bottom: 0;
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 15px 0;
+            line-height: 1.1;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+             @media (min-width: 768px){
+                 width: 50%;
+              }
+            span{
+                font-size: 18px;
+            }
+            a{
+                font-family: "Merriweather Sans",sans-serif;
+                font-weight: 700;
+                color: #06C;
+            }
+        }
+        .views-field-field-status{
+            float: right;
+            clear: right;
+            width: 50%;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+             @media (min-width: 768px){
+                 width: 50%;
+              }
+            div{
+                background-color: #C33;
+                padding: .2em .5em;
+                margin: 2px;
+                text-transform: uppercase;
+                display: inline;
+                font-size: 75%;
+                font-weight: bold;
+                line-height: 1;
+                color: #fff;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: .25em;
+            }
+        }
+        .views-field-field-date{
+            width: 50%;
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 5px;
+            line-height: 1.42857143;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+             @media (min-width: 768px){
+                 width: 50%;
+              }
+            div{
+                font-size: 13px;
+                color: #444;
+                &::before{
+                    content: "";
+                    padding: 0 3px 3px;
+                    background-image: url(../images/icons8-date-50.png);
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    background-size: cover;
+                    margin-right: 5px;
+                    // font-family: 'Glyphicons Halflings';
+                    
+                }
+            }
+        }
+        .views-field-field-debate-facilitators {
+            width: 50%;
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 0;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+            @media (min-width: 768px){
+                width: 50%;
+            }
+              
+            /* Selecting the first div inside .library-data-provider */
+            div::before {
+              content: 'Facilitators: ';
+              font-weight: bold;
+            }
+          
+            /* Styling nested divs */
+            div{
+              font-family: "Merriweather Sans", sans-serif;
+              font-size: 13px;
+              line-height: 1.6;
+              display: inline;
+            }
+          }
+          
+        .views-field-field-orgref{
+            width: 50%;
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+             @media (min-width: 768px){
+                 width: 50%;
+              }
+            div::before {
+                content: 'Partners: ';
+                font-weight: bold;
+              }
+            div {
+            font-family: "Merriweather Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            }         
+        }
+
+        .views-field-nothing{
+            width: 50%;
+            float: right;
+            clear: right;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            @media (min-width: 320px){
+                width: 75%;
+             }
+             @media (min-width: 768px){
+                 width: 50%;
+              }
+            a{
+                font-family: "Merriweather Sans", sans-serif;
+                font-size: 13px;
+                line-height: 0;
+                color: #06C;
+                &:hover{
+                    color: #004080;
+                    text-decoration: underline;
+                }
+            }
+            .comment-counter{
+                line-height: 1;
+                display: inline;
+                a{
+                    &::before{
+                        content: "\1F4AC";
+                        font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Arial Unicode MS', sans-serif;
+                        color: #06C;
+                        font-size: larger;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .debate-add-comments{
+                display: inline;
+            }
+            
+            
+        }
+
+    }
+}  

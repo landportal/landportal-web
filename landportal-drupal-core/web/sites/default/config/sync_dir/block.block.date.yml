@@ -1,0 +1,24 @@
+uuid: 3c555aac-6548-4970-b763-e104501b4085
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.date
+  module:
+    - facets
+  theme:
+    - landportal
+id: date
+theme: landportal
+region: sidebar
+weight: -21
+provider: null
+plugin: 'facet_block:date'
+settings:
+  id: 'facet_block:date'
+  label: 'Filter by publication date:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: date
+visibility: {  }

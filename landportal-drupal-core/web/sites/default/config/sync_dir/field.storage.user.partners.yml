@@ -1,0 +1,20 @@
+uuid: ea0e30ca-35f8-4e73-a449-0037ba301573
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.partners
+field_name: partners
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

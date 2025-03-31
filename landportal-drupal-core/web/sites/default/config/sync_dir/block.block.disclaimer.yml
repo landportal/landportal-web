@@ -1,0 +1,32 @@
+uuid: 7b79c4a5-58a7-4ba9-9758-cc89b3ad71ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - landportal_common
+    - node
+  theme:
+    - landportal
+id: disclaimer
+theme: landportal
+region: content
+weight: -8
+provider: null
+plugin: landportal_text_block
+settings:
+  id: landportal_text_block
+  label: Disclaimer
+  label_display: visible
+  provider: landportal_common
+  text:
+    value: "<p>The data displayed on the Land Portal is provided by third parties indicated as the data source or as the data provider. The Land Portal team is constantly working to ensure the highest possible standard of data quality and accuracy, yet the data is by its nature approximate and will contain some inaccuracies. The data may contain errors introduced by the data provider(s) and/or by the Land Portal team. In addition, this page allows you to compare data from different sources, but not all indicators are necessarily statistically comparable. The Land Portal Foundation (A) expressly disclaims the accuracy, adequacy, or completeness of any data and (B) shall not be liable for any errors, omissions or other defects in, delays or interruptions in such data, or for any actions taken in reliance thereon. Neither the Land Portal Foundation nor any of its data providers will be liable for any damages relating to your use of the data provided herein.</p>\r\n"
+    format: filtered_html
+  wrapper_class: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      country_narrative: country_narrative

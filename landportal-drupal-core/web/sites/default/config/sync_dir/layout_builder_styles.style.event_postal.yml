@@ -1,0 +1,12 @@
+uuid: a5c649fa-d650-460c-87b0-981fa557b2a7
+langcode: en
+status: true
+dependencies: {  }
+id: event_postal
+label: 'Event Postal'
+classes: event-postal
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

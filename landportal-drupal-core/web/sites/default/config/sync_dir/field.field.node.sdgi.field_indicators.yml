@@ -1,0 +1,21 @@
+uuid: 8861bf64-f89e-4c18-a504-54027674e053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indicators
+    - node.type.sdgi
+  module:
+    - view_coda_extra
+id: node.sdgi.field_indicators
+field_name: field_indicators
+entity_type: node
+bundle: sdgi
+label: 'Land Book Indicators'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ViewCodaExtra

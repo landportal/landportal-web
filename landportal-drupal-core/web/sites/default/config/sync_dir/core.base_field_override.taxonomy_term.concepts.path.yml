@@ -1,0 +1,20 @@
+uuid: d3297d78-bed2-450a-9e35-8c13df8f5ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.concepts
+  module:
+    - path
+id: taxonomy_term.concepts.path
+field_name: path
+entity_type: taxonomy_term
+bundle: concepts
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

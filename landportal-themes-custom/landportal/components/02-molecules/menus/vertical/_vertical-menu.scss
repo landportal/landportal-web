@@ -1,0 +1,20 @@
+.vertical-menu {
+  @include list-reset;
+}
+
+.vertical-menu__heading {
+  @include heading-small;
+
+  color: clr(text-muted);
+}
+
+.vertical-menu__item {
+  line-height: 1.1;
+}
+
+.vertical-menu__link {
+  @include link;
+
+  font-size: 0.8125rem; // 13px
+}
+

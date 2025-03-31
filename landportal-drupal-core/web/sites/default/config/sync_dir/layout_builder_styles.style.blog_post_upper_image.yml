@@ -1,0 +1,12 @@
+uuid: cbb57883-2324-4942-987d-d7e067cd4185
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_upper_image
+label: 'Blog Post Upper Image'
+classes: blog-post-upper-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

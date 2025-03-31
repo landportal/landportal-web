@@ -1,0 +1,20 @@
+uuid: 5e5abfda-f88f-457a-a46b-87ad5ff0f078
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+  module:
+    - path
+id: node.impact_story.path
+field_name: path
+entity_type: node
+bundle: impact_story
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

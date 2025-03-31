@@ -1,0 +1,22 @@
+uuid: 8e85d46e-ff42-47f5-a4a0-716ced694ccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_lists
+    - user
+id: user.land_portal_newsletter
+field_name: land_portal_newsletter
+entity_type: user
+type: mailchimp_lists_subscription
+settings:
+  mc_list_id: 7564fe7eea
+  double_opt_in: false
+  send_welcome: false
+module: mailchimp_lists
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

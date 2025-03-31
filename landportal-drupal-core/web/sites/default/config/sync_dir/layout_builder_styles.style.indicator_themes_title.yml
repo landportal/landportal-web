@@ -1,0 +1,12 @@
+uuid: 91a008f6-f48c-4485-8b1a-50af826c5426
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_themes_title
+label: 'Indicator Themes Title'
+classes: indicator-themes-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

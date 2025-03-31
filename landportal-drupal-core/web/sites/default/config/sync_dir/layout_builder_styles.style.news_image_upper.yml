@@ -1,0 +1,12 @@
+uuid: b967680d-80f9-4d1b-ab4e-190b7994ed39
+langcode: en
+status: true
+dependencies: {  }
+id: news_image_upper
+label: 'News Image Upper'
+classes: news-image-upper
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

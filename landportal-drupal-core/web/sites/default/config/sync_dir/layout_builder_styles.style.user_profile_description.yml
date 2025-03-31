@@ -1,0 +1,12 @@
+uuid: c424af9f-e5b8-4833-965e-bbfd5ad8fa05
+langcode: en
+status: true
+dependencies: {  }
+id: user_profile_description
+label: 'User Profile Description'
+classes: user-profile-description
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

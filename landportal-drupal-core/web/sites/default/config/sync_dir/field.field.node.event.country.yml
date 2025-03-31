@@ -1,0 +1,19 @@
+uuid: dcc5d163-fba8-4c2e-8d18-f389290b866e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.country
+    - node.type.event
+id: node.event.country
+field_name: country
+entity_type: node
+bundle: event
+label: Country
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

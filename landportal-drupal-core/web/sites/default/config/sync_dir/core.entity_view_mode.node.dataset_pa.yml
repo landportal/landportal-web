@@ -1,0 +1,10 @@
+uuid: 438c6bf6-7e7f-4021-bc54-00ff16ec6dd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.dataset_pa
+label: 'Dataset Partners'
+targetEntityType: node
+cache: true

@@ -1,0 +1,1462 @@
+uuid: aaf81efb-8eb2-404d-87dc-5638fbb33a01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sdgi.field_noderef
+    - node.type.sdgi
+  module:
+    - node
+label: 'SDGi (Related content) Field'
+id: sdgi_related_content_field
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: sdgi
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  related:
+    value: related
+    label: related
+    machine_name: related
+    type: csv
+  related1:
+    value: related1
+    label: related1
+    machine_name: related1
+    type: csv
+  related2:
+    value: related2
+    label: related2
+    machine_name: related2
+    type: csv
+  related3:
+    value: related3
+    label: related3
+    machine_name: related3
+    type: csv
+  related4:
+    value: related4
+    label: related4
+    machine_name: related4
+    type: csv
+  related5:
+    value: related5
+    label: related5
+    machine_name: related5
+    type: csv
+  related6:
+    value: related6
+    label: related6
+    machine_name: related6
+    type: csv
+  related7:
+    value: related7
+    label: related7
+    machine_name: related7
+    type: csv
+  related8:
+    value: related8
+    label: related8
+    machine_name: related8
+    type: csv
+  related9:
+    value: related9
+    label: related9
+    machine_name: related9
+    type: csv
+  related10:
+    value: related10
+    label: related10
+    machine_name: related10
+    type: csv
+  related11:
+    value: related11
+    label: related11
+    machine_name: related11
+    type: csv
+  related12:
+    value: related12
+    label: related12
+    machine_name: related12
+    type: csv
+  related13:
+    value: related13
+    label: related13
+    machine_name: related13
+    type: csv
+  related14:
+    value: related14
+    label: related14
+    machine_name: related14
+    type: csv
+  related15:
+    value: related15
+    label: related15
+    machine_name: related15
+    type: csv
+  related16:
+    value: related16
+    label: related16
+    machine_name: related16
+    type: csv
+  related17:
+    value: related17
+    label: related17
+    machine_name: related17
+    type: csv
+  related18:
+    value: related18
+    label: related18
+    machine_name: related18
+    type: csv
+  related19:
+    value: related19
+    label: related19
+    machine_name: related19
+    type: csv
+  related20:
+    value: related20
+    label: related20
+    machine_name: related20
+    type: csv
+  related21:
+    value: related21
+    label: related21
+    machine_name: related21
+    type: csv
+  related22:
+    value: related22
+    label: related22
+    machine_name: related22
+    type: csv
+  related23:
+    value: related23
+    label: related23
+    machine_name: related23
+    type: csv
+  related24:
+    value: related24
+    label: related24
+    machine_name: related24
+    type: csv
+  related25:
+    value: related25
+    label: related25
+    machine_name: related25
+    type: csv
+  related26:
+    value: related26
+    label: related26
+    machine_name: related26
+    type: csv
+  related27:
+    value: related27
+    label: related27
+    machine_name: related27
+    type: csv
+  related28:
+    value: related28
+    label: related28
+    machine_name: related28
+    type: csv
+  related29:
+    value: related29
+    label: related29
+    machine_name: related29
+    type: csv
+  related30:
+    value: related30
+    label: related30
+    machine_name: related30
+    type: csv
+  related31:
+    value: related31
+    label: related31
+    machine_name: related31
+    type: csv
+  related32:
+    value: related32
+    label: related32
+    machine_name: related32
+    type: csv
+  related33:
+    value: related33
+    label: related33
+    machine_name: related33
+    type: csv
+  related34:
+    value: related34
+    label: related34
+    machine_name: related34
+    type: csv
+  related35:
+    value: related35
+    label: related35
+    machine_name: related35
+    type: csv
+  related36:
+    value: related36
+    label: related36
+    machine_name: related36
+    type: csv
+  related37:
+    value: related37
+    label: related37
+    machine_name: related37
+    type: csv
+  related38:
+    value: related38
+    label: related38
+    machine_name: related38
+    type: csv
+  related39:
+    value: related39
+    label: related39
+    machine_name: related39
+    type: csv
+  related40:
+    value: related40
+    label: related40
+    machine_name: related40
+    type: csv
+  related41:
+    value: related41
+    label: related41
+    machine_name: related41
+    type: csv
+  related42:
+    value: related42
+    label: related42
+    machine_name: related42
+    type: csv
+  related43:
+    value: related43
+    label: related43
+    machine_name: related43
+    type: csv
+  related44:
+    value: related44
+    label: related44
+    machine_name: related44
+    type: csv
+  related45:
+    value: related45
+    label: related45
+    machine_name: related45
+    type: csv
+  related46:
+    value: related46
+    label: related46
+    machine_name: related46
+    type: csv
+  related47:
+    value: related47
+    label: related47
+    machine_name: related47
+    type: csv
+  related48:
+    value: related48
+    label: related48
+    machine_name: related48
+    type: csv
+  related49:
+    value: related49
+    label: related49
+    machine_name: related49
+    type: csv
+  related50:
+    value: related50
+    label: related50
+    machine_name: related50
+    type: csv
+  related51:
+    value: related51
+    label: related51
+    machine_name: related51
+    type: csv
+  related52:
+    value: related52
+    label: related52
+    machine_name: related52
+    type: csv
+  related53:
+    value: related53
+    label: related53
+    machine_name: related53
+    type: csv
+  related54:
+    value: related54
+    label: related54
+    machine_name: related54
+    type: csv
+  related55:
+    value: related55
+    label: related55
+    machine_name: related55
+    type: csv
+  related56:
+    value: related56
+    label: related56
+    machine_name: related56
+    type: csv
+  related57:
+    value: related57
+    label: related57
+    machine_name: related57
+    type: csv
+  related58:
+    value: related58
+    label: related58
+    machine_name: related58
+    type: csv
+  related59:
+    value: related59
+    label: related59
+    machine_name: related59
+    type: csv
+  related60:
+    value: related60
+    label: related60
+    machine_name: related60
+    type: csv
+  related61:
+    value: related61
+    label: related61
+    machine_name: related61
+    type: csv
+  related62:
+    value: related62
+    label: related62
+    machine_name: related62
+    type: csv
+  related63:
+    value: related63
+    label: related63
+    machine_name: related63
+    type: csv
+  related64:
+    value: related64
+    label: related64
+    machine_name: related64
+    type: csv
+  related65:
+    value: related65
+    label: related65
+    machine_name: related65
+    type: csv
+  related66:
+    value: related66
+    label: related66
+    machine_name: related66
+    type: csv
+  related67:
+    value: related67
+    label: related67
+    machine_name: related67
+    type: csv
+  related68:
+    value: related68
+    label: related68
+    machine_name: related68
+    type: csv
+  related69:
+    value: related69
+    label: related69
+    machine_name: related69
+    type: csv
+  related70:
+    value: related70
+    label: related70
+    machine_name: related70
+    type: csv
+  related71:
+    value: related71
+    label: related71
+    machine_name: related71
+    type: csv
+  related72:
+    value: related72
+    label: related72
+    machine_name: related72
+    type: csv
+  related73:
+    value: related73
+    label: related73
+    machine_name: related73
+    type: csv
+  related74:
+    value: related74
+    label: related74
+    machine_name: related74
+    type: csv
+  related75:
+    value: related75
+    label: related75
+    machine_name: related75
+    type: csv
+  related76:
+    value: related76
+    label: related76
+    machine_name: related76
+    type: csv
+  related77:
+    value: related77
+    label: related77
+    machine_name: related77
+    type: csv
+  related78:
+    value: related78
+    label: related78
+    machine_name: related78
+    type: csv
+  related79:
+    value: related79
+    label: related79
+    machine_name: related79
+    type: csv
+  related80:
+    value: related80
+    label: related80
+    machine_name: related80
+    type: csv
+  related81:
+    value: related81
+    label: related81
+    machine_name: related81
+    type: csv
+  related82:
+    value: related82
+    label: related82
+    machine_name: related82
+    type: csv
+  related83:
+    value: related83
+    label: related83
+    machine_name: related83
+    type: csv
+  related84:
+    value: related84
+    label: related84
+    machine_name: related84
+    type: csv
+  related85:
+    value: related85
+    label: related85
+    machine_name: related85
+    type: csv
+  related86:
+    value: related86
+    label: related86
+    machine_name: related86
+    type: csv
+  related87:
+    value: related87
+    label: related87
+    machine_name: related87
+    type: csv
+  related88:
+    value: related88
+    label: related88
+    machine_name: related88
+    type: csv
+  related89:
+    value: related89
+    label: related89
+    machine_name: related89
+    type: csv
+  related90:
+    value: related90
+    label: related90
+    machine_name: related90
+    type: csv
+  related91:
+    value: related91
+    label: related91
+    machine_name: related91
+    type: csv
+  related92:
+    value: related92
+    label: related92
+    machine_name: related92
+    type: csv
+  related93:
+    value: related93
+    label: related93
+    machine_name: related93
+    type: csv
+  related94:
+    value: related94
+    label: related94
+    machine_name: related94
+    type: csv
+  related95:
+    value: related95
+    label: related95
+    machine_name: related95
+    type: csv
+  related96:
+    value: related96
+    label: related96
+    machine_name: related96
+    type: csv
+  related97:
+    value: related97
+    label: related97
+    machine_name: related97
+    type: csv
+  related98:
+    value: related98
+    label: related98
+    machine_name: related98
+    type: csv
+  related99:
+    value: related99
+    label: related99
+    machine_name: related99
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_noderef
+    map:
+      target_id: related
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related9
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related10
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related11
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related12
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related13
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related14
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related15
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related16
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related17
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related18
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related19
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related20
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related21
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related22
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related23
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related24
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related25
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related26
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related27
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related28
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related29
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related30
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related31
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related32
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related33
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related34
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related35
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related36
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related37
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related38
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related39
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related40
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related41
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related42
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related43
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related44
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related45
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related46
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related47
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related48
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related49
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related50
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related51
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related52
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related53
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related54
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related55
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related56
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related57
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related58
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related59
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related60
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related61
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related62
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related63
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related64
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related65
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related66
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related67
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related68
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related69
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related70
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related71
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related72
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related73
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related74
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related75
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related76
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related77
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related78
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related79
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related80
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related81
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related82
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related83
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related84
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related85
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related86
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related87
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related88
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related89
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related90
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related91
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related92
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related93
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related94
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related95
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related96
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related97
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related98
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_noderef
+    map:
+      target_id: related99
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

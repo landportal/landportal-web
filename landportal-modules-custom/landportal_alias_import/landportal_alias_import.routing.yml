@@ -1,0 +1,15 @@
+landportal_alias_import.import_csv_form: #route name must be unique
+  path: '/import-aliases' #path for page 
+  defaults:  #default values for the route, mean which form or controller will be use
+    _form: '\Drupal\landportal_alias_import\Form\ImportCsvForm'
+    _title: 'Import Node Aliases'
+  requirements: #Specifies the access control for this route
+    _permission: 'administer site configuration'
+
+landportal_alias_import.import_taxonomy_form:
+  path: '/import-tax-aliases'
+  defaults:
+    _form: '\Drupal\landportal_alias_import\Form\TaxonomyCsvForm'
+    _title: 'Import Taxonomy Aliases'
+  requirements:
+    _permission: 'administer site configuration'

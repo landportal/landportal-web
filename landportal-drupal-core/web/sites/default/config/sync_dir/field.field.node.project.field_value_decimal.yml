@@ -1,0 +1,19 @@
+uuid: 1544bd84-4cbb-4496-89f3-8066302fc1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_value_decimal
+    - node.type.project
+id: node.project.field_value_decimal
+field_name: field_value_decimal
+entity_type: node
+bundle: project
+label: 'Project Value'
+description: 'Please don''t add comma " , " between numbers.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

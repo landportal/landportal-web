@@ -1,0 +1,12 @@
+uuid: f5591a5c-82be-4952-bdf7-b375da342681
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_concepts
+label: 'Dataset Concepts'
+classes: dataset-concepts
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

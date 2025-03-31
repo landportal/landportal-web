@@ -1,0 +1,23 @@
+uuid: 882c8604-3cf1-46ee-8b17-f6c4f340c891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_is_part_of
+    - node.type.landlibrary_resource
+  module:
+    - link
+id: node.landlibrary_resource.field_doc_is_part_of
+field_name: field_doc_is_part_of
+entity_type: node
+bundle: landlibrary_resource
+label: 'Is part of'
+description: 'A related resource in which the described resource is physically or logically included.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

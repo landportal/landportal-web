@@ -1,0 +1,22 @@
+uuid: e2b4d758-c0a9-4db3-860d-4d3d6cf426f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.sticky
+field_name: sticky
+entity_type: node
+bundle: landlibrary_resource
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

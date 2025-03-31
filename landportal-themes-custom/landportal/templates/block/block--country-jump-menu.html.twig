@@ -1,0 +1,18 @@
+{% set block__base_class = 'country-jump-menu' %}
+<div {{ bem(block__base_class) }}>
+  {% block content %}
+    <div {{ bem('menu', [], block__base_class) }}>
+      {{ content.Africa }}
+    </div>
+    <div {{ bem('menu', [], block__base_class) }}>
+      {{ content.Americas }}
+    </div>
+    <div {{ bem('menu', [], block__base_class) }}>
+      {{ content.Asia }}
+    </div>
+    <div {{ bem('menu', [], block__base_class) }}>
+      {{ content.Europe }}
+    </div>
+    {{ content | without('Africa', 'Americas', 'Asia', 'Europe') }}
+  {% endblock %}
+</div>

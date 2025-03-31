@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"ourlandourstory-breadcrumb\"><a href=\"/es/debate/community\">Community</a><span>Our Land Our Story</span></div>\r\n"
+            format: full_html

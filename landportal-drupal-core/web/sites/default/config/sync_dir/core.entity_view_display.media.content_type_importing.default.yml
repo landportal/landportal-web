@@ -1,0 +1,33 @@
+uuid: d072a249-fd8c-4fa7-b530-4aab9370c4bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.content_type_importing.field_media_file
+    - media.type.content_type_importing
+  module:
+    - file
+id: media.content_type_importing.default
+targetEntityType: media
+bundle: content_type_importing
+mode: default
+content:
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

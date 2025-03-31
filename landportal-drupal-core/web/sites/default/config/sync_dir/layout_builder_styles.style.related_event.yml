@@ -1,0 +1,12 @@
+uuid: 05c8dd4b-802a-4fcc-b0e3-e67cef2bc20a
+langcode: en
+status: true
+dependencies: {  }
+id: related_event
+label: 'Related Event'
+classes: related-event
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,407 @@
+$p-small: 320px;
+$p-medium: 480px;
+$p-tablet: 768px;
+$p-large: 992px;
+$p-xlarge: 1200px;
+
+@mixin custom-focus-style {
+  outline: none;
+  border-color: #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#block-landportal-page-title{
+	//display: none;
+}
+.land-datasets-full{
+	.views-row{
+		&:nth-of-type(1){
+			.col-md-6{
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+
+				.top-green{
+					border-top: 3px solid #396;
+					padding: 15px;
+					background-color: #EBEBE5;
+					color: #333;
+
+					h3{
+						text-align: center;
+
+						a{
+							color: #06C;
+							text-decoration: none;
+							display: block;
+						}
+						a:hover{
+							color: #004080;
+							text-decoration: underline;
+						}
+					}
+					p{
+						text-align: center;
+						color: #333;
+
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+				.top-green:hover{
+					box-shadow: 3px 5px 10px #666;
+				}
+			}
+		}
+		&:nth-of-type(3){
+			.col-md-6{
+				&:nth-child(1){
+					width: 50%;
+					float: left;
+					min-height: 1px;
+					padding-left: 15px;
+					padding-right: 15px;
+
+					.top-green{
+						border-top: 3px solid #396;
+						background-color: #EBEBE5;
+
+						h3{
+							text-align: center;
+							a{
+								text-decoration: none;
+								color: #06C;
+							}
+							a:hover{
+								color: #004080;
+								text-decoration: underline;
+							}
+						}
+						p{
+							text-align: center;
+						}
+					}
+					.top-green:hover{
+						box-shadow: 3px 5px 10px #666;
+					}
+				}
+				&:nth-child(2){
+					width: 50%;
+					float: left;
+					min-height: 1px;
+					padding-left: 15px;
+					padding-right: 15px;
+
+					.top-green{
+						border-top: 3px solid #396;
+						background-color: #EBEBE5;
+
+						h3{
+							text-align: center;
+							a{
+								text-decoration: none;
+								color: #06C;
+							}
+							a:hover{
+								color: #004080;
+								text-decoration: underline;
+							}
+						}
+						p{
+							text-align: center;
+						}
+					}
+					.top-green:hover{
+						box-shadow: 3px 5px 10px #666;
+					}
+				}
+			}
+		}
+	}
+	header{
+		h2{
+			color: #093;
+			font-size: 22px;
+			margin-top: 18%;
+			font-family: "Merriweather Sans",sans-serif;
+			font-weight: 700;
+			padding-left: 12px;
+			margin-bottom: 6px;
+		}
+	}
+	.views-view-grid{
+		.views-col{
+			@media (min-width: $p-small){
+				width: 100% !important;
+			}
+			@media (min-width: $p-tablet){
+				width: 33.33333333% !important;
+			}
+			@media (min-width: $p-large){
+				width: 25% !important;
+			}
+			h2{
+				display: none;
+			}
+			img{
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+				border-top: 5px solid #093;
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-tablet){
+					width: 90%;
+				}
+			}
+			.text-long{
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 13px;
+				color: #666;
+				line-height: inherit;
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-tablet){
+					width: 90%;
+				}
+			}
+			div{
+				&:nth-child(5){
+					width: 90%;
+					margin-left: auto;
+					margin-right: auto;
+					font-size: 13px;
+					color: #444;
+				}
+			}
+			.views-field-tid{
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+				color: #444;
+				font-size: 13px;
+				font-weight: bold;
+				@media (min-width: $p-small){
+					margin-bottom: 10px;
+					width: 100%;
+				}
+				@media (min-width: $p-tablet){
+					width: 90%;
+				}
+			}
+		}
+		.views-col:hover{
+			box-shadow: 3px 5px 10px #666;
+		}
+	}
+	.data-landing-page-provider{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 13px;
+		font-weight: bold;
+
+		p{
+			margin: 0;
+			float: left;
+			margin-right: 4px;
+			color: #444;
+		}
+	}
+	.provider-in-data{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 13px;
+		@media (min-width: $p-small){
+			width: 100%;
+		}
+		@media (min-width: $p-tablet){
+			width: 90%;
+		}
+	}
+	.more-link{   
+		float: right;
+		border-radius: 1.3em;
+		background-color: #093;
+		color: white;
+		padding: 5px 15px;
+		margin-top: 15px; 
+		text-align: right;
+		font-style: italic;
+		a{
+			color: white;
+			text-decoration: none;
+			font-size: 13px;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+	.data-description{
+		a{
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+	#views-exposed-form-land-book-datasets-block-2{
+		.js-form-item{
+			float: left;
+			padding: .5em 1em 0 0;
+			&:first-child{ 
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 330px;
+				}
+			}
+			&:nth-child(2), &:nth-child(3) {
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 230px;
+				}
+			}
+			&:nth-child(4){
+				@media (min-width: $p-small){
+					width: 100%;
+				}
+				@media (min-width: $p-large){
+					width: 150px;
+				}
+			}
+			[data-drupal-selector="edit-name"], select{
+				display: block;
+				width: 100%;
+				height: 34px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 1.3em;
+				&:focus{
+					@include custom-focus-style;
+				}
+			}
+			.form-item__label{
+				padding: 0;
+			}
+			&:nth-of-type(2){
+				.form-item__dropdown::after{         
+					border-top: 6px solid #888;
+					right: 7px;
+					border-left: 4px solid transparent;
+  					border-right: 4px solid transparent;
+				}
+			}
+		}
+		.form-item__dropdown{
+			border: none;
+			&:hover{
+				border: none;
+			}
+			&::after{
+				border-top: 6px solid #888;
+				right: 7px;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+			}
+			#edit-field-related-themes-target-id{
+				display: block;
+				width: 100%;
+				height: 34px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none; 
+				border: 1px solid #ccc;
+				border-radius: 1.3em;
+				cursor: pointer;
+				&:focus{
+					@include custom-focus-style;
+				}
+			}
+		}	
+		#edit-field-type-of-data-target-id{
+			display: block;
+			width: 100%;
+			height: 34px;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+			border: 1px solid #ccc;
+			border-radius: 1.3em;
+			cursor: pointer;
+			&:focus{
+				@include custom-focus-style;
+			}
+		}
+	}    
+	.badge{
+		display: inline-block;
+	    min-width: 10px;
+	    padding: 3px 7px;
+	    font-size: 13px;
+	    font-weight: bold;
+	    color: #fff;
+	    line-height: 1;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    text-align: center;
+	    background-color: #777;
+	    border-radius: 10px;
+	}
+	[id^="edit-actions"]{
+		[id^="edit-submit-land-book-datasets"]{  
+			border: inherit;
+			padding: 6px 12px;
+			@media (min-width: $p-small){
+				float: right;
+				margin: 0 0 5px 0;
+			}
+			@media (min-width: $p-tablet){
+				float: right;
+				margin-right: 26px;
+				margin-bottom: 0;
+				margin-top: 30px;
+			}
+		}
+		[id^="edit-reset"]{  
+			margin-top: 30px;
+			background: white;
+			color: #555;
+			padding: 6px 12px;
+			margin-bottom: 5px;
+			border: 1px solid #ccc;
+			@media (min-width: $p-small){
+				float: right;
+				margin: 0 23px 5px 0;
+			}
+			@media (min-width: $p-tablet){
+				margin-top: 30px;
+			}
+			&:hover{
+				background: #e6e6e6;
+				border-color: #adadad;
+			}
+		}
+	}
+}

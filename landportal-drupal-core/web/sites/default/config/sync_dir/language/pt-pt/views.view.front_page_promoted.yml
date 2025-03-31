@@ -1,0 +1,43 @@
+display:
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/book/countries\">Países</a></h2>\r\n"
+            format: full_html
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/book/thematic\">Temas</a></h2>\r\n"
+            format: full_html
+  block_4:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/join-debate\">Participe do Debates</a></h2>\r\n"
+            format: full_html
+  block_5:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/debate/events\">Eventos</a></h2>\r\n"
+            format: full_html
+  block_6:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/book/data\">Dados</a></h2>\r\n"
+            format: full_html
+  block_7:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2><a href=\"/pt/library\">Biblioteca</a></h2>\r\n"
+            format: filtered_html

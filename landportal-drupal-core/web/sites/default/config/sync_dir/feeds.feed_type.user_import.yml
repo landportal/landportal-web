@@ -1,0 +1,350 @@
+uuid: 7b1be830-27e7-405d-b50f-afe537e38a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.user.user.path
+    - field.field.user.user.city
+    - field.field.user.user.country
+    - field.field.user.user.country_code
+    - field.field.user.user.description
+    - field.field.user.user.first_name
+    - field.field.user.user.land_portal_terms_and_conditions
+    - field.field.user.user.last_name
+    - field.field.user.user.location_name
+    - field.field.user.user.partners
+    - field.field.user.user.postal_code
+    - field.field.user.user.profile
+    - field.field.user.user.public_email
+    - field.field.user.user.street
+    - field.field.user.user.website
+  module:
+    - user
+label: 'User Import'
+id: user_import
+description: 'All fields'' of user is imported without mulit-valued field.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values: {  }
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  user_uid:
+    value: 'User uid'
+    label: 'User uid'
+    machine_name: user_uid
+    type: csv
+  user_name:
+    value: 'User Name'
+    label: 'User Name'
+    machine_name: user_name
+    type: csv
+  first_name:
+    value: 'First name'
+    label: 'First name'
+    machine_name: first_name
+    type: csv
+  last_name:
+    value: 'Last name'
+    label: 'Last name'
+    machine_name: last_name
+    type: csv
+  description:
+    value: Description
+    label: Description
+    machine_name: description
+    type: csv
+  roles:
+    value: Roles
+    label: Roles
+    machine_name: roles
+    type: csv
+  email:
+    value: Email
+    label: Email
+    machine_name: email
+    type: csv
+  active_status:
+    value: 'Active status'
+    label: 'Active status'
+    machine_name: active_status
+    type: csv
+  '':
+    value: 'Related concepts196'
+    label: 'Related concepts196'
+    machine_name: ''
+    type: csv
+  partners:
+    value: partners
+    label: partners
+    machine_name: partners
+    type: csv
+  i_agree_to_the_terms_and_conditions:
+    value: 'I agree to the Terms and Conditions'
+    label: 'I agree to the Terms and Conditions'
+    machine_name: i_agree_to_the_terms_and_conditions
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  profile:
+    value: profile
+    label: profile
+    machine_name: profile
+    type: csv
+  path_alise:
+    value: path-alise
+    label: path-alise
+    machine_name: path_alise
+    type: csv
+  public_email:
+    value: public-email
+    label: public-email
+    machine_name: public_email
+    type: csv
+  country:
+    value: Country
+    label: Country
+    machine_name: country
+    type: csv
+  country_code:
+    value: 'Country code'
+    label: 'Country code'
+    machine_name: country_code
+    type: csv
+  city:
+    value: City
+    label: City
+    machine_name: city
+    type: csv
+  street:
+    value: Street
+    label: Street
+    machine_name: street
+    type: csv
+  postal_code:
+    value: 'Postal Code'
+    label: 'Postal Code'
+    machine_name: postal_code
+    type: csv
+  location_name:
+    value: 'Location Name'
+    label: 'Location Name'
+    machine_name: location_name
+    type: csv
+  website:
+    value: Website
+    label: Website
+    machine_name: website
+    type: csv
+  website_name:
+    value: Website-name
+    label: Website-name
+    machine_name: website_name
+    type: csv
+  countrys:
+    value: Country
+    label: Country
+    machine_name: countrys
+    type: csv
+  citys:
+    value: City
+    label: City
+    machine_name: citys
+    type: csv
+  postal_codee:
+    value: 'Postal Code'
+    label: 'Postal Code'
+    machine_name: postal_codee
+    type: csv
+  streets:
+    value: Street
+    label: Street
+    machine_name: streets
+    type: csv
+  location_names:
+    value: 'Location Name'
+    label: 'Location Name'
+    machine_name: location_names
+    type: csv
+  country_codee:
+    value: 'Country code'
+    label: 'Country code'
+    machine_name: country_codee
+    type: csv
+mappings:
+  -
+    target: uid
+    map:
+      value: user_uid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: user_name
+    settings: {  }
+    unique: {  }
+  -
+    target: first_name
+    map:
+      value: first_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: last_name
+    map:
+      value: last_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: roles
+    map:
+      target_id: roles
+    settings:
+      reference_by: id
+      allowed_roles:
+        administrator: administrator
+        contributor: contributor
+        developer: developer
+        programme: programme
+        project_author: project_author
+      autocreate: false
+      revoke_roles: false
+  -
+    target: mail
+    map:
+      value: email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: status
+    map:
+      value: active_status
+    settings: {  }
+  -
+    target: partners
+    map:
+      target_id: partners
+    settings:
+      language: ''
+      reference_by: title
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: land_portal_terms_and_conditions
+    map:
+      value: i_agree_to_the_terms_and_conditions
+    settings:
+      language: null
+  -
+    target: profile
+    map:
+      target_id: fid
+      alt: alt
+      title: profile
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: path
+    map:
+      alias: path_alise
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: public_email
+    map:
+      value: public_email
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: website
+    map:
+      uri: website
+      title: website_name
+    settings:
+      language: null
+  -
+    target: country
+    map:
+      value: countrys
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: city
+    map:
+      value: citys
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: postal_code
+    map:
+      value: postal_codee
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: street
+    map:
+      value: streets
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: location_name
+    map:
+      value: location_names
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: country_code
+    map:
+      value: country_codee
+    settings:
+      language: null
+    unique: {  }

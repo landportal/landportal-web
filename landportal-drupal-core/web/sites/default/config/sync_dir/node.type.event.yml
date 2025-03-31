@@ -1,0 +1,18 @@
+uuid: b79188c1-ec61-407a-ab5d-fd50a1ca510f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Event
+type: event
+description: 'A concrete event (meeting, conference, show...) that will happen at a given time in a given place.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

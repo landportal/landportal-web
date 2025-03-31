@@ -1,0 +1,19 @@
+uuid: 72fbcc95-57b7-4200-b6ad-ad4a5f3fc9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.street
+    - node.type.event
+id: node.event.street
+field_name: street
+entity_type: node
+bundle: event
+label: Street
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

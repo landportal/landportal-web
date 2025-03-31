@@ -1,0 +1,89 @@
+uuid: 28923095-712d-4792-ae86-eb662adf4caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.views_header
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.contact_us
+    - field.field.node.landing_page.feeds_item
+    - field.field.node.landing_page.field_geographical_focus
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_milestone
+    - field.field.node.landing_page.field_noderef
+    - field.field.node.landing_page.field_paragraphs
+    - field.field.node.landing_page.field_related_themes
+    - field.field.node.landing_page.field_related_topics
+    - field.field.node.landing_page.layout_builder__layout
+    - field.field.node.landing_page.layout_builder__translation
+    - node.type.landing_page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          804a76b3-acf4-4851-8a19-fd9e0a2582f7:
+            uuid: 804a76b3-acf4-4851-8a19-fd9e0a2582f7
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.landing_page.views_header
+targetEntityType: node
+bundle: landing_page
+mode: views_header
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  contact_us: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_geographical_focus: true
+  field_image: true
+  field_milestone: true
+  field_noderef: true
+  field_paragraphs: true
+  field_related_themes: true
+  field_related_topics: true
+  langcode: true
+  layout_builder__layout: true
+  layout_builder__translation: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: 493d0b81-7c54-4a55-938e-6e52128454d2
+langcode: en
+status: true
+dependencies: {  }
+id: event_organizer
+label: 'Event Organizer'
+classes: event-organizer
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

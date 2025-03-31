@@ -1,0 +1,132 @@
+uuid: 8c537f4c-89ab-466d-b8d9-aade569a729e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.field_debate_facilitators
+    - node.type.debate
+  module:
+    - node
+label: 'Debate (Facilitators)'
+id: debate_facilitators_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: debate
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  facilitators:
+    value: Facilitators
+    label: Facilitators
+    machine_name: facilitators
+    type: csv
+  facilitators1:
+    value: Facilitators1
+    label: Facilitators1
+    machine_name: facilitators1
+    type: csv
+  facilitators2:
+    value: Facilitators2
+    label: Facilitators2
+    machine_name: facilitators2
+    type: csv
+  facilitators3:
+    value: Facilitators3
+    label: Facilitators3
+    machine_name: facilitators3
+    type: csv
+  facilitators4:
+    value: Facilitators4
+    label: Facilitators4
+    machine_name: facilitators4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_debate_facilitators
+    map:
+      target_id: facilitators
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_debate_facilitators
+    map:
+      target_id: facilitators1
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_debate_facilitators
+    map:
+      target_id: facilitators2
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_debate_facilitators
+    map:
+      target_id: facilitators3
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_debate_facilitators
+    map:
+      target_id: facilitators4
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0

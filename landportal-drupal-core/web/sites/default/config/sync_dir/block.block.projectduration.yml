@@ -1,0 +1,24 @@
+uuid: 7f576089-1300-4565-8a0e-152153284e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.project_duration
+  module:
+    - facets
+  theme:
+    - landportal
+id: projectduration
+theme: landportal
+region: content
+weight: -11
+provider: null
+plugin: 'facet_block:project_duration'
+settings:
+  id: 'facet_block:project_duration'
+  label: 'By year range'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: projectduration
+visibility: {  }

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views swiper pager item.
+ *
+ * Available variables:
+ * - classes: Classes to apply to the element.
+ * - count: The page number.
+ * - location: Location of pager.
+ * - item: Rendered field(s) making up item.
+ * - vss_id: The swiper's id.
+ *
+ * @see template_preprocess_lp_swiper_pager_field_item()
+ *
+ * @ingroup vss_templates
+ */
+#}
+<div id="lp_swiper_pager_field_item_{{ location }}_{{ vss_id }}_{{ count }}" {{ attributes.addClass(classes) }}>
+  {{ item }}
+</div>

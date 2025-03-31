@@ -1,0 +1,14 @@
+id: landportal_migration
+label: 'Landportal - Migration'
+
+# Configuration settings to be shared among all migrations belonging to this
+# group.
+shared_configuration:
+  source:
+    key: legacy
+
+# Define a forced module dependency.
+dependencies:
+  enforced:
+    module:
+      - landportal_migration

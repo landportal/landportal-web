@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p><a href=\"/fr/library\">Bibliothèque</a></p>\r\n"
+            format: full_html

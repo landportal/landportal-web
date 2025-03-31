@@ -1,0 +1,12 @@
+uuid: 0125b965-3ca7-4a3c-abad-54159b23ba70
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_postal_code
+label: 'User Upper Section Postal Code'
+classes: user-upper-section-postal-code
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

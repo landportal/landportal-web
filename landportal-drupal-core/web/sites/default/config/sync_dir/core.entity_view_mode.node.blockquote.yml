@@ -1,0 +1,10 @@
+uuid: df000b11-1fbc-467a-b2e6-eda1aed558c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blockquote
+label: Blockquote
+targetEntityType: node
+cache: true

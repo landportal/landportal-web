@@ -1,0 +1,8 @@
+uuid: 5e6098aa-edb6-47d1-8d5d-cfa9c0067bd6
+langcode: en
+status: true
+dependencies: {  }
+id: invest_responsible_land
+label: 'Invest responsible Land'
+revision: 0
+description: ''

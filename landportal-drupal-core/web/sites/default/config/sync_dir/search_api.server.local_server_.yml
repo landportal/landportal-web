@@ -1,0 +1,14 @@
+uuid: 1d691479-0491-4744-b8d1-8fb8d8e21434
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: local_server_
+name: 'Local Server '
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: words

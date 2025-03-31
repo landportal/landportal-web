@@ -1,0 +1,26 @@
+/* custom_styles.css */
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 12px;
+}
+
+path.link {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 3px;
+}
+
+.ext-link {
+  font-weight: bold;
+}
+g.node a:hover {
+  text-decoration: underline !important;
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+uuid: 266ec391-7000-4462-8d43-14663b06717a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.land_portal_terms_and_conditions
+  module:
+    - user
+id: user.user.land_portal_terms_and_conditions
+field_name: land_portal_terms_and_conditions
+entity_type: user
+bundle: user
+label: 'I agree to the Terms and Conditions'
+description: '<a href="/about/terms-and-conditions-use">Land Portal Terms and Conditions</a>'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

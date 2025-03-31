@@ -1,0 +1,23 @@
+uuid: adff71c8-8ee4-42fd-9161-11e24063d2d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.sdgi
+  module:
+    - link
+id: node.sdgi.field_link
+field_name: field_link
+entity_type: node
+bundle: sdgi
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

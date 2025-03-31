@@ -1,0 +1,12 @@
+uuid: 8e905c2d-5340-4209-b214-5b8b7e317711
+langcode: en
+status: true
+dependencies: {  }
+id: related_categories
+label: 'Related categories'
+classes: related-categories
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

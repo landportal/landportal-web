@@ -1,0 +1,77 @@
+global:
+  version: 0.1
+  css:
+    theme:
+      dist/style.css: {}
+      https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap: { type: external, minified: true }
+
+main-menu:
+  version: 0.1
+  js:
+    dist/js/02-molecules/menus/main-menu/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+# IE 11 support for SVG use - disable if not needed.
+# See also components/01-atoms/images/icons/_icon.twig to remove attach_library.
+sprite:
+  version: 0.1
+  js:
+    components/01-atoms/images/icons/svgxuse.min.js:
+      { attributes: { defer: true } }
+
+swiperjs:
+  remote: https://github.com/nolimits4web/swiper/
+  version: 6.4.1
+  license:
+    name: MIT
+    url: https://github.com/nolimits4web/swiper/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://unpkg.com/swiper/swiper-bundle.min.css: { type: external, minified: true }
+  js:
+    https://unpkg.com/swiper/swiper-bundle.js : { type: external, minified: true }
+
+projects-carousel:
+  version: 0.1
+  js:
+    dist/js/03-organisms/carousel/projects-carousel.js: {}
+  dependencies:
+    - landportal/swiperjs
+
+issue-projects-carousel:
+  version: 0.1
+  js:
+    dist/js/03-organisms/carousel/issue-projects-carousel.js: {}
+  dependencies:
+    - landportal/swiperjs
+
+organisations-carousel:
+  version: 0.1
+  js:
+    dist/js/03-organisms/carousel/organisations-carousel.js: {}
+  dependencies:
+    - landportal/swiperjs
+
+project-organisations-carousel:
+  version: 0.1
+  js:
+    dist/js/03-organisms/carousel/project-organisations-carousel.js: {}
+  dependencies:
+    - landportal/swiperjs
+
+issues-narrative:
+  version: 0.1
+  js:
+    dist/js/06-issues/issues-landing-page/issues-narrative.js: {}
+  dependencies:
+    - core/drupal
+
+issues-overview:
+  version: 0.1
+  js:
+    dist/js/06-issues/issues-landing-page/issues-overview.js: {}
+  dependencies:
+    - core/drupal
+

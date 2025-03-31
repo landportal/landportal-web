@@ -1,0 +1,12 @@
+uuid: 8c5910c7-4c35-4ac2-80d2-e05d3a802ffd
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_best_value
+label: 'Indicator Best Value'
+classes: indicator-best-value
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

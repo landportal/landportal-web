@@ -1,0 +1,19 @@
+uuid: 7af5f6fb-dae0-40ff-8159-382ee0aac399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.state_province
+    - node.type.organization
+id: node.organization.state_province
+field_name: state_province
+entity_type: node
+bundle: organization
+label: State/Province
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

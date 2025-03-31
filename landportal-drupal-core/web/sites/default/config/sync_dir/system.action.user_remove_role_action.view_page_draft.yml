@@ -1,0 +1,14 @@
+uuid: f1a60cec-081d-400b-929d-32f4713b8221
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.view_page_draft
+  module:
+    - user
+id: user_remove_role_action.view_page_draft
+label: 'Remove the view page draft role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: view_page_draft

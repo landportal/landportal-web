@@ -1,0 +1,18 @@
+uuid: 3dba2e9d-8149-432f-b710-c0b4caece49f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campaigns
+id: taxonomy_term.campaigns.name
+field_name: name
+entity_type: taxonomy_term
+bundle: campaigns
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

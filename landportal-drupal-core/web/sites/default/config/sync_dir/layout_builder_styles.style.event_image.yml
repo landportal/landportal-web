@@ -1,0 +1,12 @@
+uuid: fc007ae7-930a-4eee-b837-f24faf0ea862
+langcode: en
+status: true
+dependencies: {  }
+id: event_image
+label: 'Event Image'
+classes: event-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

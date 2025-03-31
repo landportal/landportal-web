@@ -1,0 +1,18 @@
+uuid: acc7a34f-6b40-4ddd-ab94-667aa828acc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.indicators
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.indicators
+target_entity_type_id: taxonomy_term
+target_bundle: indicators
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 2bea82a6-419b-4bf9-8508-992b7502a72a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.latitude
+    - node.type.impact_story
+id: node.impact_story.latitude
+field_name: latitude
+entity_type: node
+bundle: impact_story
+label: Latitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

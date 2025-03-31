@@ -1,0 +1,36 @@
+uuid: 80f2479c-4c72-46e2-a7c4-8d1155fecc3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.source
+field_name: source
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Austrian Development Agency'
+      label: 'Austrian Development Agency'
+    -
+      value: 'Land Portal Foundation'
+      label: 'Land Portal Foundation'
+    -
+      value: 'Land governance Programme Map & Database'
+      label: 'Land governance Programme Map & Database'
+    -
+      value: 'International Aid Transparency Initiative'
+      label: 'International Aid Transparency Initiative'
+    -
+      value: 'Omidyar Network'
+      label: 'Omidyar Network'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

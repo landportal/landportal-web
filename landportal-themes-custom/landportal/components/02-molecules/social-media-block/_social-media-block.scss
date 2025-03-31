@@ -1,0 +1,40 @@
+.social-media-block {
+  padding: $space-double 0;
+
+  &__header {
+    border-bottom: 4px solid clr(primary);
+    margin-bottom: $space;
+    font-weight: 700;
+  }
+
+  &__content {
+    .social-media-sharing ul {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        padding: .5em;
+        border-radius: 50%;
+        margin-right: 2em;
+        a {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      li.facebook-share {
+        border: 3px solid clr(text);
+        a {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+

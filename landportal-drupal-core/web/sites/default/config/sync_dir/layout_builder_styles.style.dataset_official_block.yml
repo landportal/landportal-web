@@ -1,0 +1,12 @@
+uuid: d5d9034a-7a98-47ff-8007-78e127ac9920
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_official_block
+label: 'Dataset official block'
+classes: dataset-official-block
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

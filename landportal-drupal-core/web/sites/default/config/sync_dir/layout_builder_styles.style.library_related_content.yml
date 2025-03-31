@@ -1,0 +1,12 @@
+uuid: 628aba5e-b1d7-4ea1-a630-6746d12ce9bb
+langcode: en
+status: true
+dependencies: {  }
+id: library_related_content
+label: 'Library Related Content'
+classes: library-related-ontent
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

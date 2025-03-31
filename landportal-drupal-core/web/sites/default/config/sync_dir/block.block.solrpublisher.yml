@@ -1,0 +1,24 @@
+uuid: 255146b0-5013-44b1-b8e9-88adf828e876
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_publisher
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrpublisher
+theme: landportal
+region: sidebar
+weight: -19
+provider: null
+plugin: 'facet_block:solr_publisher'
+settings:
+  id: 'facet_block:solr_publisher'
+  label: 'Filter by publisher(s):'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrpublisher
+visibility: {  }

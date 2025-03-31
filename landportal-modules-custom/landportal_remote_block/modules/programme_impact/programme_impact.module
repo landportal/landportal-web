@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for programme.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function programme_impact_theme($existing, $type, $theme, $path) {
+  return [
+    'programme_impact_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

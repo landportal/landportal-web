@@ -1,0 +1,155 @@
+uuid: 388581dd-2b0a-4929-a606-51613d9b8940
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.dataset.status
+    - field.field.node.dataset.body
+    - field.field.node.dataset.field_catalog
+    - node.type.dataset
+  module:
+    - node
+label: 'Dataset Portfolio CT Single import'
+id: dataset_portfolio_ct_single_impo
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: Nid
+    label: Nid
+    machine_name: nid
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  body:
+    value: Body
+    label: Body
+    machine_name: body
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  published_status:
+    value: 'Published status'
+    label: 'Published status'
+    machine_name: published_status
+    type: csv
+  author_uid:
+    value: 'Author uid'
+    label: 'Author uid'
+    machine_name: author_uid
+    type: csv
+  php:
+    value: PHP
+    label: PHP
+    machine_name: php
+    type: csv
+  dataset:
+    value: Dataset
+    label: Dataset
+    machine_name: dataset
+    type: csv
+  created:
+    value: Created
+    label: Created
+    machine_name: created
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: status
+    map:
+      value: published_status
+    settings:
+      language: null
+  -
+    target: uid
+    map:
+      target_id: author_uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: path
+    map:
+      alias: php
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: field_catalog
+    map:
+      target_id: dataset
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC

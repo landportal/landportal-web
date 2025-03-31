@@ -1,0 +1,18 @@
+uuid: bf5cb4c6-16ed-46a7-ab17-44a23844501b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.concepts
+id: taxonomy_term.concepts.name
+field_name: name
+entity_type: taxonomy_term
+bundle: concepts
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

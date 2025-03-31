@@ -1,0 +1,21 @@
+uuid: 186662e3-dad1-4f2e-b362-21e815d74915
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.sub_menu_parent
+    - node.type.programme_narrative
+  module:
+    - options
+id: node.programme_narrative.sub_menu_parent
+field_name: sub_menu_parent
+entity_type: node
+bundle: programme_narrative
+label: 'Sub menu parent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

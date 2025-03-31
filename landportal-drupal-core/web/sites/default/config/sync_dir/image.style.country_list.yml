@@ -1,0 +1,15 @@
+uuid: db7e7c61-8e9d-4423-963b-521ed7bd0aee
+langcode: en
+status: true
+dependencies: {  }
+name: country_list
+label: 'Country list'
+effects:
+  ee63d4a2-201d-49ec-b2b0-2a519ce11e25:
+    uuid: ee63d4a2-201d-49ec-b2b0-2a519ce11e25
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

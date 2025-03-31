@@ -1,0 +1,14 @@
+display:
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>Le Land Portal organise des discussions dynamiques et bien préparées qui ont un impact durable et permettent d'aller au fond des choses. Cette approche contribue à créer des communautés de pratique, à garantir une diversité de parties prenantes. Afin d'assurer la durabilité des webinaires, ils seront enregistrés et pourront être consultés pendant plusieurs années. Au plaisir de vous voir participer à nos prochains webinaires.</p>\r\n"
+            format: full_html
+      pager:
+        options:
+          tags:
+            next: 'suivant ›'
+            previous: '‹ précédent'
+            last: 'dernier »'

@@ -1,0 +1,20 @@
+uuid: 57a2df93-fd9a-4270-9406-e53a06e775b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.content_type_importing
+  module:
+    - path
+id: media.content_type_importing.path
+field_name: path
+entity_type: media
+bundle: content_type_importing
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

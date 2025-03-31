@@ -1,0 +1,14 @@
+uuid: 6a7e1dba-51f9-42b1-bf39-76591641e1bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.programme_narrative
+  module:
+    - node
+id: node.programme_narrative
+targetEntityType: node
+bundle: programme_narrative
+types:
+  - ''
+fieldMappings: {  }

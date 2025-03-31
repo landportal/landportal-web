@@ -1,0 +1,94 @@
+uuid: 12a6c281-cbb2-4d49-b89d-d88500d1a6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.this_project_is_part_of
+    - field.field.node.project.body
+    - field.field.node.project.code
+    - field.field.node.project.contact_field
+    - field.field.node.project.data_curation
+    - field.field.node.project.feeds_item
+    - field.field.node.project.field_currency
+    - field.field.node.project.field_doc_provider
+    - field.field.node.project.field_donors
+    - field.field.node.project.field_implementers
+    - field.field.node.project.field_noderef
+    - field.field.node.project.field_project_duration
+    - field.field.node.project.field_related_donor
+    - field.field.node.project.field_related_impact
+    - field.field.node.project.field_related_organization
+    - field.field.node.project.field_related_provider
+    - field.field.node.project.field_related_resources
+    - field.field.node.project.field_resources_library
+    - field.field.node.project.field_value_decimal
+    - field.field.node.project.official_website
+    - field.field.node.project.programme
+    - field.field.node.project.project_concepts
+    - field.field.node.project.project_image
+    - field.field.node.project.project_logo
+    - field.field.node.project.project_regions
+    - field.field.node.project.project_themes
+    - field.field.node.project.related_projects
+    - field.field.node.project.source
+    - field.field.node.project.testing
+    - node.type.project
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.project.this_project_is_part_of
+targetEntityType: node
+bundle: project
+mode: this_project_is_part_of
+content:
+  project_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  code: true
+  contact_field: true
+  data_curation: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_currency: true
+  field_doc_provider: true
+  field_donors: true
+  field_implementers: true
+  field_noderef: true
+  field_project_duration: true
+  field_related_donor: true
+  field_related_impact: true
+  field_related_organization: true
+  field_related_provider: true
+  field_related_resources: true
+  field_resources_library: true
+  field_value_decimal: true
+  langcode: true
+  links: true
+  official_website: true
+  programme: true
+  project_concepts: true
+  project_image: true
+  project_regions: true
+  project_themes: true
+  related_projects: true
+  search_api_excerpt: true
+  source: true
+  testing: true

@@ -1,0 +1,12 @@
+uuid: 8c8ad1da-5d9d-4d49-bd8c-dbaf3fbfdc4a
+langcode: en
+status: true
+dependencies: {  }
+id: organization_full_content
+label: 'Organization Full Content'
+classes: organization-full-content
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

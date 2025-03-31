@@ -1,0 +1,29 @@
+uuid: 41741e9f-73ea-4cf7-aae1-47afb87089b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_organization
+    - node.type.organization
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.programme_organization
+field_name: programme_organization
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Organization'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

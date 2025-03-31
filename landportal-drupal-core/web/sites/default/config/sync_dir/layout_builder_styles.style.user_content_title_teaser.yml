@@ -1,0 +1,12 @@
+uuid: 571bf583-f483-4b34-ba5c-510d0016dd80
+langcode: en
+status: true
+dependencies: {  }
+id: user_content_title_teaser
+label: 'User Content Title Teaser'
+classes: user-content-title-teaser
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

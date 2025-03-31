@@ -1,0 +1,18 @@
+uuid: b105a912-8407-4973-844e-5e6e376ecc74
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.programme_narrative
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.programme_narrative
+target_entity_type_id: node
+target_bundle: programme_narrative
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,273 @@
+uuid: 47a37c4b-95e9-4f76-8d97-e74fba0a46aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.contact_us
+    - field.field.node.landing_page.feeds_item
+    - field.field.node.landing_page.field_geographical_focus
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_milestone
+    - field.field.node.landing_page.field_noderef
+    - field.field.node.landing_page.field_paragraphs
+    - field.field.node.landing_page.field_related_themes
+    - field.field.node.landing_page.field_related_topics
+    - field.field.node.landing_page.layout_builder__layout
+    - field.field.node.landing_page.layout_builder__translation
+    - node.type.landing_page
+  module:
+    - field_milestone
+    - image
+    - landportal_country_narrative
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          d6eb14c8-c816-4bff-be8e-78bd1a0b91d7:
+            uuid: d6eb14c8-c816-4bff-be8e-78bd1a0b91d7
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_noderef'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          cda913d7-bd58-4df0-b23f-90b90d892d95:
+            uuid: cda913d7-bd58-4df0-b23f-90b90d892d95
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          33ca4d00-3f71-4754-b7a7-1dfecbfe9eb3:
+            uuid: 33ca4d00-3f71-4754-b7a7-1dfecbfe9eb3
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_milestone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: MilestoneFormatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          75f669f2-0d7c-4f10-837f-ac38d8e0b596:
+            uuid: 75f669f2-0d7c-4f10-837f-ac38d8e0b596
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_milestone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: MilestoneFormatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          de293dbc-a681-44b2-81f7-ba1305451a18:
+            uuid: de293dbc-a681-44b2-81f7-ba1305451a18
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_paragraphs'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: additional_information_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          ca32fdba-c004-4918-8685-d0baf846a6f1:
+            uuid: ca32fdba-c004-4918-8685-d0baf846a6f1
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_geographical_focus'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          cf6888a8-ab6f-4f18-979e-7f181b2c3d46:
+            uuid: cf6888a8-ab6f-4f18-979e-7f181b2c3d46
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_related_themes'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          99077834-17d4-4cb6-8bda-9308d20e86ee:
+            uuid: 99077834-17d4-4cb6-8bda-9308d20e86ee
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_related_topics'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          cdaa6721-d1c6-4077-911a-a8ed2ad50b20:
+            uuid: cdaa6721-d1c6-4077-911a-a8ed2ad50b20
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:contact_us'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: webform_entity_reference_entity_view
+                label: above
+                settings:
+                  source_entity: true
+                  lazy: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  contact_us:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_milestone:
+    type: MilestoneFormatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraphs:
+    type: additional_information_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  layout_builder__layout: true
+  layout_builder__translation: true
+  links: true
+  search_api_excerpt: true

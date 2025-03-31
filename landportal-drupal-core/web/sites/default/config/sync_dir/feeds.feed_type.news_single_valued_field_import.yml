@@ -1,0 +1,211 @@
+uuid: 174e4952-3c4c-4e17-8a8f-9d790422dd6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_doc_people
+    - field.field.node.news.field_image
+    - field.field.node.news.field_pubdate
+    - node.type.news
+  module:
+    - node
+label: 'News single-valued field import'
+id: news_single_valued_field_import
+description: 'In this feed we will import a single-valued fields in New Content Type.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news
+  langcode: pt-pt
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  is_this_news_a_podcast_:
+    value: 'Is this news a podcast?'
+    label: 'Is this news a podcast?'
+    machine_name: is_this_news_a_podcast_
+    type: csv
+  publication_date:
+    value: 'Publication date'
+    label: 'Publication date'
+    machine_name: publication_date
+    type: csv
+  author_s_:
+    value: Author(s)
+    label: Author(s)
+    machine_name: author_s_
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  language:
+    value: Language
+    label: Language
+    machine_name: language
+    type: csv
+  summary:
+    value: summary
+    label: summary
+    machine_name: summary
+    type: csv
+  bodys:
+    value: body
+    label: body
+    machine_name: bodys
+    type: csv
+  summarys:
+    value: summary
+    label: summary
+    machine_name: summarys
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  is_this_news_podcast:
+    value: Is_this_news_podcast
+    label: Is_this_news_podcast
+    machine_name: is_this_news_podcast
+    type: csv
+  path:
+    value: Path
+    label: Path
+    machine_name: path
+    type: csv
+  author:
+    value: Author(s)
+    label: Author(s)
+    machine_name: author
+    type: csv
+  created_date:
+    value: created-date
+    label: created-date
+    machine_name: created_date
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_pubdate
+    map:
+      value: publication_date
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: ''
+      value: author_s_
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: langcode
+    map:
+      value: language
+      target_id: fid
+      alt: alt
+      title: ''
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: bodys
+      summary: summarys
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: field_doc_people
+    map:
+      value: author
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: created
+    map:
+      value: created_date
+    settings:
+      language: null
+      timezone: UTC

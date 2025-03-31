@@ -1,0 +1,12 @@
+uuid: ab98a8b6-eaed-4ca4-8f35-9458518a6699
+langcode: en
+status: true
+dependencies: {  }
+id: library_resource_information
+label: 'Library Resource information'
+classes: library-resource-information
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

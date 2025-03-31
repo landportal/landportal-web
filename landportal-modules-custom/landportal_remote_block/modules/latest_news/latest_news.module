@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for latest news.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function latest_news_theme($existing, $type, $theme, $path) {
+  return [
+    'latest_news_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,12 @@
+uuid: 57ac11f0-9075-4153-807a-db647642a1eb
+langcode: en
+status: true
+dependencies: {  }
+id: organization_acronym
+label: 'Organization Acronym'
+classes: organization-acronym
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

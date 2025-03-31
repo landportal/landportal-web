@@ -1,0 +1,20 @@
+uuid: c5b0ad61-c553-4507-a09c-41157fe74438
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+  module:
+    - path
+id: node.dataset.path
+field_name: path
+entity_type: node
+bundle: dataset
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

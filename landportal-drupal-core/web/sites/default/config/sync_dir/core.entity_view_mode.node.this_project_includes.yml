@@ -1,0 +1,10 @@
+uuid: afac4bb9-60ce-4dd6-969a-4712511a7b19
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.this_project_includes
+label: 'This Project Includes'
+targetEntityType: node
+cache: true

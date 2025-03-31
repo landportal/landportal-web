@@ -1,0 +1,23 @@
+uuid: da1064a1-a3c9-489f-b33f-38ec8b7914df
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+    - custom_pub.custom_publishing_option.promote_to_announcements
+id: node.dataset.promote_to_announcements
+field_name: promote_to_announcements
+entity_type: node
+bundle: dataset
+label: 'Promote to LP announcements'
+description: 'custom publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

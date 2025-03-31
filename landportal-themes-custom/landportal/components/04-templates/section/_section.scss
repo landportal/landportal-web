@@ -1,0 +1,98 @@
+.section__sidebar {
+
+  @include large {
+    &__main {
+      flex: 0 1 68%;
+      max-width: 68%;
+      margin-right: 2em;
+    }
+    &__aside {
+      flex: 0 0 28%;
+    }
+  }
+
+}
+
+.layout-background--dark {
+  &.layout-background--full {
+    background: clr(background-dark);
+    color: clr(text-light);
+  }
+
+  .container {
+    background: clr(background-dark);
+    color: clr(text-light);
+  }
+
+  &.block {
+    background: clr(background-dark);
+    color: clr(text-light);
+  }
+}
+
+.layout-background--light {
+  .container {
+    background: clr(background-light);
+  }
+
+  &.layout-background--full {
+    background: clr(background-light);
+  }
+}
+
+.layout-background--primary {
+  .container {
+    background: clr(primary);
+  }
+
+  &.layout-background--full {
+    background: clr(primary);
+  }
+}
+
+.layout--blockquote {
+  padding: $space-quadruple $space-quadruple $space-quadruple 0;
+  color: clr(text-light);
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    background: clr(primary);
+    width: 200%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .text-long {
+    display: flex;
+    align-items: center;
+    &::before {
+      margin-right: $space;
+      content: url(../images/quotes-sm.png);
+      @include medium {
+        content: url(../images/quotes.png);
+      }
+    }
+
+    min-height: 160px;
+  }
+
+  @include medium {
+    font-size: 1.125rem; // 18px
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.layout--image-full {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

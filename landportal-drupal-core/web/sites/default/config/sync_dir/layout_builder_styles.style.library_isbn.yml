@@ -1,0 +1,12 @@
+uuid: 47e264d5-e244-4344-99a7-13a7c6d5abce
+langcode: en
+status: true
+dependencies: {  }
+id: library_isbn
+label: 'Library ISBN'
+classes: Library-ISBN
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,12 @@
+uuid: 33aaa80d-3463-4df6-9f22-ee22a7f36813
+langcode: en
+status: true
+dependencies: {  }
+id: upper_section_user_affiliation
+label: 'Upper Section User Affiliation'
+classes: upper-section-user-affiliation
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

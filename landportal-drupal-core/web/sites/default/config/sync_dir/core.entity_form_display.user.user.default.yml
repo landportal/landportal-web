@@ -1,0 +1,251 @@
+uuid: 3b1337d2-aa10-4512-b3f3-598a12b37ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.additional_interests
+    - field.field.user.user.city
+    - field.field.user.user.country
+    - field.field.user.user.country_code
+    - field.field.user.user.description
+    - field.field.user.user.feeds_item
+    - field.field.user.user.first_name
+    - field.field.user.user.geographical_focus
+    - field.field.user.user.hide_profile
+    - field.field.user.user.land_portal_newsletter
+    - field.field.user.user.land_portal_terms_and_conditions
+    - field.field.user.user.languages
+    - field.field.user.user.last_name
+    - field.field.user.user.location_name
+    - field.field.user.user.partners
+    - field.field.user.user.postal_code
+    - field.field.user.user.profile
+    - field.field.user.user.public_email
+    - field.field.user.user.related_concepts
+    - field.field.user.user.street
+    - field.field.user.user.themes
+    - field.field.user.user.title
+    - field.field.user.user.website
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - link
+    - mailchimp_lists
+    - path
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_twocol_bricks
+    settings:
+      label: 'register page'
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: top
+    settings: {  }
+    third_party_settings: {  }
+  city:
+    type: string_textfield
+    weight: 10
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  comment_notify_settings:
+    weight: 14
+    region: second_above
+    settings: {  }
+    third_party_settings: {  }
+  country:
+    type: string_textfield
+    weight: 7
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  country_code:
+    type: string_textfield
+    weight: 12
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 6
+    region: second_above
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  first_name:
+    type: string_textfield
+    weight: 3
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  geographical_focus:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: middle
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  google_analytics:
+    weight: 13
+    region: second_above
+    settings: {  }
+    third_party_settings: {  }
+  hide_profile:
+    type: boolean_checkbox
+    weight: 5
+    region: second_above
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  land_portal_newsletter:
+    type: mailchimp_lists_select
+    weight: 25
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+  land_portal_terms_and_conditions:
+    type: boolean_checkbox
+    weight: 24
+    region: first_below
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  language:
+    weight: 2
+    region: first_above
+    settings: {  }
+    third_party_settings: {  }
+  last_name:
+    type: string_textfield
+    weight: 4
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  location_name:
+    type: string_textfield
+    weight: 8
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  partners:
+    type: entity_reference_autocomplete
+    weight: 22
+    region: first_below
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 16
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+  postal_code:
+    type: string_textfield
+    weight: 11
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  profile:
+    type: image_image
+    weight: 1
+    region: first_above
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  public_email:
+    type: email_default
+    weight: 21
+    region: first_below
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  related_concepts:
+    type: entity_reference_autocomplete
+    weight: 18
+    region: middle
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  street:
+    type: string_textfield
+    weight: 9
+    region: second_above
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  themes:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: middle
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  timezone:
+    weight: 15
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: options_select
+    weight: 20
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+  website:
+    type: link_default
+    weight: 23
+    region: first_below
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  additional_interests: true
+  feeds_item: true
+  langcode: true
+  languages: true

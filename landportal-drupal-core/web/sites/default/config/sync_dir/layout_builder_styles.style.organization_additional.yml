@@ -1,0 +1,12 @@
+uuid: d3c2d09a-dc77-4642-bc08-b8df3ffcd6bc
+langcode: en
+status: true
+dependencies: {  }
+id: organization_additional
+label: 'Organization Additional'
+classes: Organization-additional
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

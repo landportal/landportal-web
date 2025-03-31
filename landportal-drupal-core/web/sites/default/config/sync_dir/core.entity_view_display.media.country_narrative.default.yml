@@ -1,0 +1,37 @@
+uuid: 4f89844a-c3ec-4e0b-abd4-891a50d67435
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.country_narrative.field_media_image
+    - image.style.country_list
+    - media.type.country_narrative
+  module:
+    - image
+id: media.country_narrative.default
+targetEntityType: media
+bundle: country_narrative
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: country_list
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

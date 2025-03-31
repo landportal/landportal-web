@@ -1,0 +1,12 @@
+uuid: 6fe26e85-0cf9-4fd1-bc2a-34b07a29f0b7
+langcode: en
+status: true
+dependencies: {  }
+id: source_page_title
+label: 'Source Page Title'
+classes: source-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

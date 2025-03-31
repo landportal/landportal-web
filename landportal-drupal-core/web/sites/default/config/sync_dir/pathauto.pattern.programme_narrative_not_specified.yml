@@ -1,0 +1,22 @@
+uuid: b06c34ae-ebcf-4001-bdbc-d7caf251c5da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: programme_narrative_not_specified
+label: 'Programme Narrative Not Specified'
+type: 'canonical_entities:node'
+pattern: 'community/programmes/[node:link_to_narrative]/[node:title]'
+selection_criteria:
+  6150f6c4-9b44-46a9-8ee9-470a1d691c60:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6150f6c4-9b44-46a9-8ee9-470a1d691c60
+    context_mapping:
+      node: node
+    bundles:
+      programme_narrative: programme_narrative
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,50 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Leia o que as pessoas estão falando sobre nós</h2>\r\n"
+            format: full_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Read what people are saying about our events</h2>\r\n"
+            format: full_html
+  block_3:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<h2>Read what people are saying about us</h2>\r\n"
+            format: full_html
+  block_4:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<h2>Leia o que as pessoas estão falando sobre nós</h2>\r\n"
+            format: full_html
+  block_5:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Leia o que as pessoas estão falando sobre nós</h2>\r\n"
+            format: full_html
+  block_6:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Leia o que as pessoas estão falando sobre nós</h2>\r\n"
+            format: full_html
+  block_7:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<h2>Read what people are saying about us</h2>\r\n"
+            format: full_html

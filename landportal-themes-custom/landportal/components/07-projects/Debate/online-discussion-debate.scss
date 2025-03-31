@@ -1,0 +1,224 @@
+.webinar-slider {
+    .join-debate-view-custom.online-discussion {
+        header {
+            h2 {
+                margin-bottom: 0;
+                color: #099;
+                font-size: 22px;
+            }
+        }
+
+        .views-row {
+            border-top: none;
+
+            .views-col {
+                border-top: 5px solid #099;
+
+
+                @media (min-width: $p-small) {
+                    width: 100% !important;
+                }
+
+                @media (min-width: $p-tablet) {
+                    width: 50% !important;
+                }
+
+                .debate-wrapper {
+                    .debate-title {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    .debate-status {
+                        background-color: #EBEBE2;
+                        color: #333;
+                        text-transform: uppercase;
+                        padding: .2em .5em;
+                        font-size: 60% !important;
+                    }
+
+                    .comment-wrapper {
+                        display: flex;
+                        gap: 5px;
+
+                        .comment-counter {
+                            a {
+                                font-size: 13px;
+                                text-decoration: none;
+                                font-style: italic;
+                                color: #06C;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                                &::before {
+                                    content: "\1F4AC";
+                                    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Arial Unicode MS', sans-serif;
+                                    color: #06C;
+                                    font-size: larger;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .recently-closed-debates {
+        .page-title {
+            display: none;
+        }
+        header {
+            h2 {
+                margin-bottom: 0;
+                color: #099;
+                font-size: 22px;
+            }
+        }
+        .views-view-grid{
+            margin: 0 -15px;
+            .views-row {
+                @media (min-width: $p-small) {
+                    display: block !important;
+                }
+                //@media (min-width: $p-tablet) {
+                //} 
+
+                .layout__region--content {
+                    .block {
+                        img {
+                            width: 100%;
+                            border-top: 5px solid #099;
+                            margin-bottom: 5px;
+                        }
+
+                        a {
+                            color: #06c;
+                            text-decoration: none;
+                            font-size: 18px;
+                            font-family: "Merriweather Sans", sans-serif;
+                            font-weight: 700;
+                            line-height: normal;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .title {
+                        line-height: normal !important;
+                        margin-bottom: 0;
+                        max-height: 5.8em;
+                        overflow: hidden;
+                        span {
+                            font-size: 18px !important;
+                        }
+                    }
+                    .debate-status-closed {
+                        div {
+                            font-weight: bold;
+                            display: inline-block;
+                            background-color: #C33;
+                            border-radius: .25em;
+                            padding: .2em .3em 0 .4em;
+                            color: #fff;
+                            text-transform: uppercase;
+                            font-size: 10px;
+                            margin: 2px;
+                        }
+                    }
+
+                    .latest-events-date {
+                        font-size: 13px;
+
+                        div {
+                            display: inline;
+                        }
+
+                        &::before {
+                            content: "";
+                            padding: 0 3px 3px;
+                            background-image: url(../images/icons8-date-50.png);
+                            height: 16px;
+                            width: 16px;
+                            display: inline-block;
+                            background-size: cover;
+                            margin-right: 5px;
+                            vertical-align: text-bottom;
+                        }
+                    }
+
+                    .library-data-provider {
+                        font-size: 13px;
+                        word-break: break-all;
+                        div {
+                            display: inline;
+                            div {
+                                &:first-child {
+                                    &::before {
+                                        content: 'Facilitators: ';
+                                        font-weight: bold;
+                                    }
+                                }
+                                &:not(:last-child)::after{
+                                    content: ', ';
+                                }
+                            }
+                        }
+                    }
+
+                    .latest-events-organizers {
+                        font-size: 13px;
+                        padding-bottom: 5px;
+
+                        div {
+                            display: inline;
+
+                            div {
+                                &:first-child {
+                                    &::before {
+                                        content: 'Partners: ';
+                                        font-weight: bold;
+                                    }
+                                }
+
+                                &:not(:last-child)::after{
+                                    content: ', ';
+                                }  
+                            }
+                        }
+                    }
+                }
+
+                .views-col {
+                    @media (min-width: $p-small) {
+                        width: 100% !important;
+                    }
+
+                    @media (min-width: $p-tablet) {
+                        width: 25% !important;
+                        padding: 0 15px;
+                    }
+                }
+
+            }
+    }    
+
+        .more-link {
+            a {
+                padding: 5px 15px;
+                -moz-border-radius: 1.3em;
+                -webkit-border-radius: 1.3em;
+                border-radius: 1.3em;
+                background-color: #099;
+                color: white;
+            }
+        }
+    }
+}

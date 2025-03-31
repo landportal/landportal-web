@@ -1,0 +1,18 @@
+uuid: e128029c-fe2c-4666-ba57-c34509572c3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.country_narrative
+id: media.country_narrative.created
+field_name: created
+entity_type: media
+bundle: country_narrative
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

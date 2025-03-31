@@ -1,0 +1,23 @@
+uuid: 3d700e56-60e2-436f-91cd-615ff004acac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+    - custom_pub.custom_publishing_option.new_work
+id: node.blog_post.new_work
+field_name: new_work
+entity_type: node
+bundle: blog_post
+label: 'New Work'
+description: 'custom new work publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

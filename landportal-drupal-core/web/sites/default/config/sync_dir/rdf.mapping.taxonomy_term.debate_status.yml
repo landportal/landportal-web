@@ -1,0 +1,14 @@
+uuid: cc3d7ee0-eaf1-4503-80e7-6ded412ae954
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+  module:
+    - taxonomy
+id: taxonomy_term.debate_status
+targetEntityType: taxonomy_term
+bundle: debate_status
+types:
+  - ''
+fieldMappings: {  }

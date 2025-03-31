@@ -1,0 +1,16 @@
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  @include grid;
+
+  &--card {
+    @include space-stack-page;
+  }
+
+  &--padded {
+    padding: $space-double;
+  }
+}

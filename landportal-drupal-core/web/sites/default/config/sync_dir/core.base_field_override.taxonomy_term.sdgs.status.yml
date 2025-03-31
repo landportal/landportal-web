@@ -1,0 +1,22 @@
+uuid: 1c841d05-f408-4afb-ab2d-35f31ee9e3f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdgs
+id: taxonomy_term.sdgs.status
+field_name: status
+entity_type: taxonomy_term
+bundle: sdgs
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

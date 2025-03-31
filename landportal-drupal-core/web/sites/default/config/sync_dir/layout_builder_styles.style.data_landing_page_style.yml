@@ -1,0 +1,12 @@
+uuid: 6e040277-38e8-45a3-9456-4b63c9ea0fa0
+langcode: en
+status: true
+dependencies: {  }
+id: data_landing_page_style
+label: 'Data Landing Page Style'
+classes: data-landing-page-style
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,18 @@
+uuid: b527de75-bd7b-4913-8b69-c4205509d925
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.slider_type
+id: taxonomy_term.slider_type.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: slider_type
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

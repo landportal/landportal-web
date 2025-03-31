@@ -1,0 +1,20 @@
+uuid: 3daa266c-9e5b-49d0-a89e-979a666c9fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.country_narrative
+id: media.country_narrative.name
+field_name: name
+entity_type: media
+bundle: country_narrative
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: c91a4bc6-f7b4-4ccf-b101-e68b99005061
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orgref
+    - node.type.debate
+    - node.type.organization
+id: node.debate.field_orgref
+field_name: field_orgref
+entity_type: node
+bundle: debate
+label: Partners
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

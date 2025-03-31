@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains implementation for issue organizations.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function issue_organizations_theme($existing, $type, $theme, $path) {
+  return [
+    'issue_organizations_block' => [
+      'variables' => [
+        'items' => [],
+        'more_url' => '',
+        'more_label' => '',
+        'region_name' => '',
+      ],
+    ],
+  ];
+}

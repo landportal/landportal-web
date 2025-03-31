@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"tw-data-text tw-text-large tw-ta\" data-placeholder=\"Translation\" dir=\"ltr\" id=\"tw-target-text\" style=\"text-align: left;\"><span class=\"Y2IQFc\" lang=\"fr\">Outils et ressources en surbrillance</span></h2>\r\n"
+            format: full_html

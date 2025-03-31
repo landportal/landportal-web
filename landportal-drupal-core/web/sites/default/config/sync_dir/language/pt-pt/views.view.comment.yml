@@ -1,0 +1,81 @@
+display:
+  default:
+    display_title: 'Por defeito'
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Ação
+        subject:
+          label: Assunto
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          label: Atualizado
+          separator: ', '
+        operations:
+          label: Operações
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'seguinte ›'
+            previous: '‹ anterior'
+            first: '« primeira'
+            last: 'última »'
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        subject:
+          expose:
+            label: Assunto
+        combine:
+          expose:
+            label: 'Nome do autor'
+        langcode:
+          expose:
+            label: Idioma
+  page_unapproved:
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: Ação
+        subject:
+          label: Assunto
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          label: Atualizado
+          separator: ', '
+        operations:
+          label: Operações
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Assunto
+        langcode:
+          expose:
+            label: Idioma

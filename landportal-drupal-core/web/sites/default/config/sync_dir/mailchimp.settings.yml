@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: B-qrrA7oRcyy2W-a4OjHSgOhpMNFBK4dP9yb2KHC6v4
+api_key: f4e5bb6b5ce2829efbf6ad28708cf114-us18
+domain: landportal9.landportal.org
+use_oauth: true
+api_timeout: 10
+cron: false
+batch_limit: 1000
+api_classname: Mailchimp\Mailchimp
+test_mode: false
+enable_connected: false
+connected_id: null
+connected_paths: null
+webhook_hash: b2411401027f665c9a012f331873a079
+optin_check_email_msg: 'Please check your email to confirm your subscription.'

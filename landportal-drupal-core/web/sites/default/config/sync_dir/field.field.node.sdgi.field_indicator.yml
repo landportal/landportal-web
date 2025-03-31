@@ -1,0 +1,29 @@
+uuid: 463e277b-1368-426f-8496-de76ea5398cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indicator
+    - node.type.sdgi
+    - taxonomy.vocabulary.indicators
+id: node.sdgi.field_indicator
+field_name: field_indicator
+entity_type: node
+bundle: sdgi
+label: Indicators
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      indicators: indicators
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,118 @@
+uuid: 21e70d6f-f362-487a-8eb0-a3efa1c08ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.sdgs_tiers.description
+    - core.base_field_override.taxonomy_term.sdgs_tiers.name
+    - field.field.taxonomy_term.sdgs_tiers.field_date
+    - taxonomy.vocabulary.sdgs_tiers
+    - views.view.sdgs_sdgs_tiers_taxonomy
+  module:
+    - datetime_range
+    - layout_builder
+    - layout_builder_restrictions
+    - text
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          203af74b-5842-4470-b4d8-10be984105ac:
+            uuid: 203af74b-5842-4470-b4d8-10be984105ac
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:sdgs_tiers:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          b9e29896-a8ae-4d89-b2f1-9912c1342ee7:
+            uuid: b9e29896-a8ae-4d89-b2f1-9912c1342ee7
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:sdgs_tiers:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          837fe8f0-cf8c-4e3d-aeb6-c0b37e1cec61:
+            uuid: 837fe8f0-cf8c-4e3d-aeb6-c0b37e1cec61
+            region: content
+            configuration:
+              id: 'views_block:sdgs_sdgs_tiers_taxonomy-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.sdgs_tiers.default
+targetEntityType: taxonomy_term
+bundle: sdgs_tiers
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

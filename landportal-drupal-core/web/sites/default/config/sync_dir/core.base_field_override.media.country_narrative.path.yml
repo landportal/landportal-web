@@ -1,0 +1,20 @@
+uuid: 2d9feda3-1ab1-42cc-937f-a9d9d9b71b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.country_narrative
+  module:
+    - path
+id: media.country_narrative.path
+field_name: path
+entity_type: media
+bundle: country_narrative
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

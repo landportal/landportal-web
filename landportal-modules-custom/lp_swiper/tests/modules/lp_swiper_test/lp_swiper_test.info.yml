@@ -1,0 +1,15 @@
+name: 'Lp Swiper Test Config'
+type: module
+description: 'Provides default views for tests.'
+package: Testing
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:views
+  - lp_swiper:lp_swiper
+  - lp_swiper:lp_swiper_cycle
+
+# Information added by Drupal.org packaging script on 2020-09-28
+version: '8.x-4.8'
+project: 'lp_swiper'
+datestamp: 1601309227

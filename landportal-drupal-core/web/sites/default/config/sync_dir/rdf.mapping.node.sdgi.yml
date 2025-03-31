@@ -1,0 +1,14 @@
+uuid: 100d8774-ec59-4ee1-9544-79198ca7ab5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sdgi
+  module:
+    - node
+id: node.sdgi
+targetEntityType: node
+bundle: sdgi
+types:
+  - ''
+fieldMappings: {  }

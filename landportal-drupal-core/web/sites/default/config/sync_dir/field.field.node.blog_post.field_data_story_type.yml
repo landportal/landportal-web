@@ -1,0 +1,21 @@
+uuid: 424b4a00-7895-441a-b499-23f213999b4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_story_type
+    - node.type.blog_post
+  module:
+    - options
+id: node.blog_post.field_data_story_type
+field_name: field_data_story_type
+entity_type: node
+bundle: blog_post
+label: 'Data Story Type'
+description: 'If this is a data story, select a type.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

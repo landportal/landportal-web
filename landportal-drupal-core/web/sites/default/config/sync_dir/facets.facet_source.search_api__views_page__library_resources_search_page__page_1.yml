@@ -1,0 +1,9 @@
+uuid: ff750e50-6d1c-4eb1-90a9-c1465bf4daf8
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__library_resources_search_page__page_1
+name: 'search_api:views_page__library_resources_search_page__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

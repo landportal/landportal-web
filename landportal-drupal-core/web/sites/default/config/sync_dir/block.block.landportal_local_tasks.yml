@@ -1,0 +1,22 @@
+uuid: 17bc923f-470c-4566-934c-7f84b1ee8e74
+langcode: en
+status: true
+dependencies:
+  theme:
+    - landportal
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: landportal_local_tasks
+theme: landportal
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

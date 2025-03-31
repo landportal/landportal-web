@@ -1,0 +1,24 @@
+uuid: 52bab386-69de-48a2-8ade-fd979a35c560
+langcode: en
+status: false
+dependencies:
+  config:
+    - facets.facet.themes_blog_post
+  module:
+    - facets
+  theme:
+    - landportal
+id: themesblogpost
+theme: landportal
+region: content
+weight: 5
+provider: null
+plugin: 'facet_block:themes_blog_post'
+settings:
+  id: 'facet_block:themes_blog_post'
+  label: Issues
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: themesblogpost
+visibility: {  }

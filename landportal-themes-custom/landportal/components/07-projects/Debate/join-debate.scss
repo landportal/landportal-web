@@ -1,0 +1,422 @@
+.webinar-slider {
+	.join-debate-view-custom {
+		header{
+			h2{
+				margin-bottom: 0;
+			}
+		}
+		.views-row {
+			border-top: 5px solid #099;
+
+			.views-field-field-image {
+				float: left;
+
+				@media (min-width: $p-small) {
+					width: 25%;
+				}
+
+				@media (min-width: $p-tablet) {
+					width: 50%;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.debate-wrapper {
+				float: right;
+				clear: right;
+				padding-left: 4%;
+
+				@media (min-width: $p-small) {
+					width: 75%;
+				}
+
+				@media (min-width: $p-tablet) {
+					width: 50%;
+				}
+
+				.debate-title {
+					margin-top: 10px;
+					line-height: normal;
+					a {
+						color: #06c;
+						text-decoration: none;
+						font-size: 18px;
+						font-family: "Merriweather Sans", sans-serif;
+						font-weight: 700;
+						line-height: normal;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				.debate-status {
+					background-color: #C33;
+					color: #fff;
+					display: inline;
+					padding: .2em .6em .3em;
+					font-size: 75%;
+					font-weight: bold;
+					line-height: 1;
+					text-align: center;
+					white-space: nowrap;
+					vertical-align: baseline;
+					border-radius: .25em;
+					text-transform: uppercase;
+				}
+
+				.debate-date {
+					font-size: 13px;
+
+					&::before {
+						content: "";
+						padding: 0 3px 3px;
+						background-image: url(../images/icons8-date-50.png);
+						height: 16px;
+						width: 16px;
+						display: inline-block;
+						background-size: cover;
+						margin-right: 5px;
+						vertical-align: text-bottom;
+					}
+				}
+
+				.debate-facilitators {
+					font-size: 13px;
+
+					&::before {
+						content: "Facilitators: ";
+						font-weight: bold;
+					}
+				}
+
+				.debate-orgref {
+					font-size: 13px;
+
+					&::before {
+						content: "Partners: ";
+						font-weight: bold;
+					}
+				}
+
+				.debate-add-comments {
+					a {
+						font-size: 13px;
+						text-decoration: none;
+						font-style: italic;
+						color: #06C;
+
+						&:hover {
+							text-decoration: underline;
+							color: #004080;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.more-link {
+		font-size: 13px;
+		margin-top: 15px;
+		text-align: right;
+		font-style: italic;
+		clear: both;
+
+		a {
+			color: #06C;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+	.join-the-debate.testimonials {
+		padding: 0 !important;
+		background: inherit !important;
+
+		header {
+			padding: 0 !important;
+		}
+	}
+}
+
+.join-the-debate-landing-page {
+	.news-on-land-title {
+		font-size: 32px;
+		font-family: "Merriweather Sans", sans-serif;
+		font-weight: 700;
+		color: #333;
+	}
+
+	.debate-status-closed {
+		div {
+			font-weight: bold;
+			display: inline-block;
+			background-color: #C33;
+			border-radius: .25em;
+			padding: .2em .6em .3em;
+			color: #fff;
+			text-transform: uppercase;
+
+			&::before {
+				content: inherit !important;
+			}
+		}
+	}
+
+	.latest-events-date {
+		padding-top: 10px;
+		padding-bottom: 5px;
+
+		div {
+			&::before {
+				content: "";
+				padding: 0 3px 3px;
+				background-image: url(../images/icons8-date-50.png);
+				height: 16px;
+				width: 16px;
+				display: inline-block;
+				background-size: cover;
+				margin-right: 5px;
+				vertical-align: text-bottom;
+			}
+		}
+	}
+
+	.library-data-provider {
+		font-size: 13px;
+		padding-bottom: 5px;
+
+		div {
+			display: inline-block;
+
+			div {
+				&:first-child {
+					&::before {
+						content: 'Facilitators: ';
+						font-weight: bold;
+					}
+				}
+
+				&::before {
+					content: ', ';
+				}
+			}
+		}
+	}
+
+	.latest-events-organizers {
+		font-size: 13px;
+		padding-bottom: 5px;
+
+		div {
+			display: inline-block;
+
+			div {
+				&:first-child {
+					&::before {
+						content: 'Partners: ';
+						font-weight: bold;
+					}
+				}
+
+				&::before {
+					content: ', ';
+				}
+			}
+		}
+	}
+
+	.provider-in-data {
+		div {
+			div {
+				&:first-of-type {
+					&::before {
+						content: "Organizers: " !important;
+						font-weight: bold !important;
+						background-image: none !important;
+						padding: 0 !important;
+						display: inline !important;
+						width: auto !important;
+						height: auto !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.debate-archive {
+    header {
+        margin-bottom: 15px;
+        font-size: 15px;
+        margin-top: 15px;
+        .badge{
+			display: inline-block;
+			min-width: 10px;
+			padding: 3px 7px;
+			font-size: 13px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 1;
+			vertical-align: middle;
+			white-space: nowrap;
+			text-align: center;
+			background-color: #777;
+			border-radius: 10px;
+        }
+		.text-long{
+			a{
+				color: #06C;
+				text-decoration: none;
+				&:hover{
+					color: #004080;
+					text-decoration: underline;
+				}
+			}
+		}
+    }
+
+    .views-row {
+        @media (min-width: $p-small) {
+            display: inherit;
+        }
+
+        @media (min-width: $p-tablet) {
+            display: flex;
+            gap: 25px;
+        }
+        .views-col {
+            border-top: 5px solid #099;
+            margin-bottom: 15px;
+    		@media (min-width: $p-small) {
+				width: 100% !important;
+			}
+			@media (min-width: $p-tablet) {
+				width: 50% !important;
+			}
+            .views-field-field-image{
+            	float: left;
+            	clear: left;
+	    		@media (min-width: $p-small) {
+	            	width: 25% !important;
+				}
+				@media (min-width: $p-tablet) {
+					width: 50% !important;
+				}
+            	img{
+            		width: 100%;
+            		height: 100%;
+            	}
+            }
+            .debate-wrapper {
+				clear: right;
+				float: right;
+				padding-left: 4%;
+				padding-top: 2%;
+	    		@media (min-width: $p-small) {
+	            	width: 75% !important;
+				}
+				@media (min-width: $p-tablet) {
+					width: 50% !important;
+				}
+                .debate-title {
+                	a{
+						color: #06c;
+						text-decoration: none;
+						font-size: 18px;
+						font-family: "Merriweather Sans", sans-serif;
+						font-weight: 700;
+						line-height: normal;
+                	}
+                }
+				.debate-date {
+					font-size: 13px;
+
+					&::before {
+						content: "";
+						padding: 0 3px 3px;
+						background-image: url(../images/icons8-date-50.png);
+						height: 16px;
+						width: 16px;
+						display: inline-block;
+						background-size: cover;
+						margin-right: 5px;
+						vertical-align: text-bottom;
+					}
+				}
+				.debate-facilitators {
+					font-size: 13px;
+
+					&::before {
+						content: "Facilitators: ";
+						font-weight: bold;
+					}
+				}
+				.debate-orgref {
+					font-size: 13px;
+
+					&::before {
+						content: "Partners: ";
+						font-weight: bold;
+					}
+				}
+				.comment-wrapper{
+					display: flex;
+					gap: 5px;
+					.comment-counter{
+						a{
+							font-size: 13px;
+							text-decoration: none;
+							font-style: italic;
+							color: #06C;
+							&::before{
+								content: "\1F4AC";
+								font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Arial Unicode MS', sans-serif;
+								color: #06C;
+								font-size: larger;
+								margin-right: 5px;
+							}
+						}
+					}
+					.debate-add-comments {
+						a {
+							font-size: 13px;
+							text-decoration: none;
+							font-style: italic;
+							color: #06C;
+
+							&:hover {
+								text-decoration: underline;
+								color: #004080;
+							}
+						}
+					}
+				}
+                .debate-status {
+                    display: inline;
+                    padding: .2em .6em .3em;
+                    font-size: 75%;
+                    font-weight: bold;
+                    line-height: 1;
+                    color: #fff;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: baseline;
+                    border-radius: .25em;
+                    margin: 2px;
+                    text-transform: uppercase;
+                    background-color: #C33;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+uuid: b32f5901-ebb8-4d5c-8c6e-6a7aa9fa28bf
+langcode: en
+status: true
+dependencies: {  }
+id: themes
+label: themes
+classes: user-themes
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

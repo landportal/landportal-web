@@ -1,0 +1,22 @@
+uuid: 1a9ee9e4-f586-438f-8a60-28c314fbe8a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dataset
+id: node.dataset.sticky
+field_name: sticky
+entity_type: node
+bundle: dataset
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

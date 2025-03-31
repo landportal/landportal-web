@@ -1,0 +1,62 @@
+uuid: 2cc487b2-e96f-44f4-9f45-a7bfe71191be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.blockquote
+    - field.field.node.country_narrative.additional_information
+    - field.field.node.country_narrative.blockquote
+    - field.field.node.country_narrative.feeds_item
+    - field.field.node.country_narrative.geographical_focus
+    - field.field.node.country_narrative.layout_builder__layout
+    - field.field.node.country_narrative.layout_builder__translation
+    - field.field.node.country_narrative.narrative
+    - field.field.node.country_narrative.picture
+    - node.type.country_narrative
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - section_onecol
+        - section_threecol
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+id: node.country_narrative.blockquote
+targetEntityType: node
+bundle: country_narrative
+mode: blockquote
+content:
+  blockquote:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  additional_information: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  extra_field_breadcrumbs: true
+  extra_field_hero_map_image: true
+  extra_field_read_more: true
+  feeds_item: true
+  geographical_focus: true
+  langcode: true
+  layout_builder__layout: true
+  layout_builder__translation: true
+  links: true
+  narrative: true
+  picture: true
+  search_api_excerpt: true

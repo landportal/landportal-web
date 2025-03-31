@@ -1,0 +1,55 @@
+# Basic data types for views swipers.
+
+lp_swiper_widget:
+  type: mapping
+  label: 'widget'
+  mapping:
+    enable:
+      type: boolean
+      label: 'Show widget'
+    weight:
+      type: string
+      label: 'Sort order'
+    hide_on_single_slide:
+      type: string
+      label: 'Hide if only one slide'
+
+lp_swiper_control_group:
+  type: mapping
+  label: 'Group of widget settings for swiper region'
+  mapping:
+    lp_swiper_controls:
+      type: lp_swiper_widget
+      label: 'Swiper controls'
+      mapping:
+        enable:
+          type: boolean
+          label: 'Show widget'
+        weight:
+          type: string
+          label: 'Sort order'
+        hide_on_single_slide:
+          type: string
+          label: 'Hide if only one slide'
+        type:
+          type: string
+          label: 'The control type'
+    lp_swiper_slide_counter:
+      type: lp_swiper_widget
+      label: 'Slide Counter'
+    lp_swiper_pager:
+      type: lp_swiper_widget
+      label: 'Swiper pager'
+      mapping:
+        enable:
+          type: boolean
+          label: 'Show widget'
+        weight:
+          type: string
+          label: 'Sort order'
+        hide_on_single_slide:
+          type: string
+          label: 'Hide if only one slide'
+        type:
+          type: string
+          label: 'The control type'

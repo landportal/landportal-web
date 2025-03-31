@@ -1,0 +1,19 @@
+uuid: 1f731b58-4471-4359-bb96-5b619c4923f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - download_dataset
+    - taxonomy
+id: taxonomy_term.field_download_dataset
+field_name: field_download_dataset
+entity_type: taxonomy_term
+type: download_dataset_type
+settings: {  }
+module: download_dataset
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

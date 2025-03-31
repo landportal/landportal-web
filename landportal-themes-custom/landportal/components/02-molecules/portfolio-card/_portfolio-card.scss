@@ -1,0 +1,101 @@
+.portfolio-card {
+  display: flex;
+  border-top: 4px solid clr(primary);
+  margin-bottom: $space;
+
+  &__image {
+    flex: 1 1 25%;
+
+    .heading__link {
+      color: clr(news);
+      text-decoration: none;
+    }
+  }
+
+  &__description {
+    flex: 1 1 75%;
+    padding: 0 $space;
+
+    h1 {
+      @include heading-medium;
+      a {
+        @include link;
+      }
+    }
+  }
+
+  &__summary {
+    font-size: 0.875rem;
+  }
+
+  &__grid {
+    @include space-stack-page;
+
+    header {
+      flex: 100%;
+      margin-bottom: 1px;
+
+      .views-results-total {
+        color: clr(text-light);
+        background-color: clr(text-muted);
+        border-radius: 10px;
+        font-size: .8125rem;
+        padding: 2px 7px;
+      }
+    }
+
+    .more-link {
+      margin-left: auto;
+      font-style: italic;
+
+      a {
+        @include button-base;
+        @include button-color-primary;
+
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include medium {
+    &__image {
+      flex: 1 1 35%;
+    }
+    &__description {
+      flex: 1 1 65%;
+    }
+    &__summary {
+      max-height: 3em;
+      overflow: hidden;
+    }
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__grid-item {
+      flex: 0 0 48%;
+
+      &.even {
+        margin-right: 1.5em;
+      }
+    }
+  }
+
+  @include large {
+    &__summary {
+      max-height: 5em;
+    }
+  }
+
+  @include xl {
+    &__image {
+      flex: 1 1 50%;
+    }
+    &__description {
+      flex: 1 1 50%;
+    }
+    &__summary {
+      max-height: 8em;
+    }
+  }
+}

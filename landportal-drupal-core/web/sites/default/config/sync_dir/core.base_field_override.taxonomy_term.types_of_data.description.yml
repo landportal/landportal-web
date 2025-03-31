@@ -1,0 +1,20 @@
+uuid: e427ccba-b6b3-48cd-8f39-8f94452bf7f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.types_of_data
+  module:
+    - text
+id: taxonomy_term.types_of_data.description
+field_name: description
+entity_type: taxonomy_term
+bundle: types_of_data
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

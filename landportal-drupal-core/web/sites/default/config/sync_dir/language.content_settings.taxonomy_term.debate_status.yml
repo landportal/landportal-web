@@ -1,0 +1,18 @@
+uuid: 9282f8b8-aa3a-41f5-b24c-f63fb33bc3dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.debate_status
+target_entity_type_id: taxonomy_term
+target_bundle: debate_status
+default_langcode: site_default
+language_alterable: true

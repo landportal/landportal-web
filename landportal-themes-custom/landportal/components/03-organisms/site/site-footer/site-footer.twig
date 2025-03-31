@@ -1,0 +1,32 @@
+{% set footer__base_class = 'footer' %}
+{% set footer__logo_src = directory ? '/' ~ directory ~ '/images/logo.png' : 'logo.png' %}
+<footer {{ bem(footer__base_class) }}>
+  <div {{ bem('inner', [], footer__base_class) }}>
+    <div {{ bem('branding', [], footer__base_class) }}>
+      {% block footer__branding %}
+        {% include "@organisms/site/site-footer/_site-footer-branding.twig" %}
+      {% endblock %}
+      {% block footer__social %}
+        {% include "@molecules/menus/social/social-menu.twig" %}
+      {% endblock %}
+    </div>
+    <div {{ bem('menu', [], footer__base_class) }}>
+      {% block footer__menu %}
+        {% include "@molecules/menus/vertical/vertical-menu.twig" with {
+            menu_label: 'Title'
+        }%}
+      {% endblock %}
+    </div>
+    <div {{ bem('mission', [], footer__base_class) }}>
+      {% block footer__mission %}
+        {% include "@molecules/card/card.twig" with {
+          card__heading: mission__heading,
+          card__subheading: mission__subheading,
+          card__body: mission__body,
+          card__link__url: mission__subscribe__url,
+          card__link__text: mission__subscribe__text,
+        } %}
+      {% endblock %}
+    </div>
+  </div>
+</footer>

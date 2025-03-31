@@ -1,0 +1,36 @@
+uuid: 14a56457-b577-4901-932b-e1420f161849
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: related_concepts
+label: 'Related Concepts'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'voc/landvoc/concept/[term:name]'
+selection_criteria:
+  47e9511a-ed69-4c34-b377-fdaa4fb49bb7:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 47e9511a-ed69-4c34-b377-fdaa4fb49bb7
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      concepts: concepts
+  95515b2c-6c84-4177-afd3-10eee2365d33:
+    id: language
+    negate: false
+    uuid: 95515b2c-6c84-4177-afd3-10eee2365d33
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      en: en
+      fr: fr
+      pt-pt: pt-pt
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

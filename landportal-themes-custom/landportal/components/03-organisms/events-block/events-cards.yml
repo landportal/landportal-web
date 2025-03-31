@@ -1,0 +1,8 @@
+items:
+  - item_title: 'This is an event title'
+    item_url: '#'
+    image_src: 'https://placeimg.com/480/300/people'
+    image_title: 'Lorem ipsum dolor sit amet'
+    image_alt: 'Lorem ipsum dolor sit amet'
+    published_date: '25/12/2020'
+    item_summary: 'Ut ultricies scelerisque vehicula. Maecenas at lectus at metus suscipit lacinia. Aliquam mattis ultrices porttitor. Nunc auctor tincidunt euismod. Ut elementum nisl ac tortor fermentum tempor. Morbi a mattis lorem.'

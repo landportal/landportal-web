@@ -1,0 +1,12 @@
+uuid: 76215efe-664c-4c37-8e49-3883355e024b
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_related_content
+label: 'Blog Post Related Content'
+classes: blog-post-related-content
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

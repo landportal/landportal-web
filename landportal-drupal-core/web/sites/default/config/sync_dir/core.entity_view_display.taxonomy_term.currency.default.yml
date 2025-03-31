@@ -1,0 +1,195 @@
+uuid: 55f65a2b-b0fb-4a21-881a-70b2511ac105
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.currency.description
+    - core.base_field_override.taxonomy_term.currency.name
+    - field.field.taxonomy_term.currency.field_currency_symbol
+    - field.field.taxonomy_term.currency.field_eu_currency_nal_uri
+    - field.field.taxonomy_term.currency.field_iso_4217_code
+    - taxonomy.vocabulary.currency
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - text
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Top section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          e3f57389-4593-46bd-829d-ef33ccd1132f:
+            uuid: e3f57389-4593-46bd-829d-ef33ccd1132f
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:currency:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          91360b14-2dd6-4ed4-b9d8-f56e054fc17e:
+            uuid: 91360b14-2dd6-4ed4-b9d8-f56e054fc17e
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:currency:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          6f3fc1c6-57f2-4888-9ff9-5890817a23e2:
+            uuid: 6f3fc1c6-57f2-4888-9ff9-5890817a23e2
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:currency:field_iso_4217_code'
+              label: 'ISO 4217 code'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+          b43e3e4d-c5bf-4346-a289-76a8420af8b9:
+            uuid: b43e3e4d-c5bf-4346-a289-76a8420af8b9
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:currency:field_currency_symbol'
+              label: 'Currency Symbol'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - ''
+          aca04648-cce4-4b72-b9b6-93c7b00b03cb:
+            uuid: aca04648-cce4-4b72-b9b6-93c7b00b03cb
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:currency:field_eu_currency_nal_uri'
+              label: 'EU Currency NAL URI'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: inline
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.currency.default
+targetEntityType: taxonomy_term
+bundle: currency
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_currency_symbol:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_eu_currency_nal_uri:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_iso_4217_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

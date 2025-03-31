@@ -1,0 +1,21 @@
+uuid: addc4acc-6016-49ea-ad1e-24cf00013083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date
+    - taxonomy.vocabulary.sdgs_tiers
+  module:
+    - datetime_range
+id: taxonomy_term.sdgs_tiers.field_date
+field_name: field_date
+entity_type: taxonomy_term
+bundle: sdgs_tiers
+label: Deadline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

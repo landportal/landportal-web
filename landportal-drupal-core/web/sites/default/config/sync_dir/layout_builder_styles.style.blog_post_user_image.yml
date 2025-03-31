@@ -1,0 +1,12 @@
+uuid: fca8eb17-e8e1-4bf0-aab3-0471055f54ed
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_user_image
+label: 'Blog Post User Image'
+classes: blog-post-user-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

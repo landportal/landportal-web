@@ -1,0 +1,7 @@
+uuid: 9c532bfa-0f6f-4103-a37a-e280aa5dc917
+langcode: en
+status: true
+dependencies: {  }
+name: organisation_logo
+label: 'Organisation logo'
+effects: {  }

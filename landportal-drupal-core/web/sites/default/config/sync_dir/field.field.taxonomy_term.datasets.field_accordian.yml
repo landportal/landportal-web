@@ -1,0 +1,21 @@
+uuid: bd477726-e603-4189-be74-018477c8d086
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accordian
+    - taxonomy.vocabulary.datasets
+  module:
+    - landportal_country_narrative
+id: taxonomy_term.datasets.field_accordian
+field_name: field_accordian
+entity_type: taxonomy_term
+bundle: datasets
+label: Accordian
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: additional_information

@@ -1,0 +1,12 @@
+uuid: 12aaac0b-5e39-4778-bfb6-e6f3d39f4fa9
+langcode: en
+status: true
+dependencies: {  }
+id: newsroom_menu_page
+label: 'Newsroom menu page'
+classes: news-room-css-class
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

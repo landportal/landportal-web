@@ -1,0 +1,22 @@
+uuid: 86cf1c92-34a4-4a9e-90c0-b713f069edf6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  abstract: 'The Land Portal is a global gateway for land related information that is building a specialized community of land experts from civil society, government, intergovernmental agencies, and academia.'
+  content_language: '[current-page:metatag:content_language]'
+  generator: 'Drupal 9 (https://www.drupal.org)'
+  keywords: 'land, open, data'
+  title: '[site:name] | [current-page:pager]'
+  description: 'The Land Portal is a global gateway for land related information that is building a specialized community of land experts from civil society, government, intergovernmental agencies, and academia.'
+  canonical_url: 'https://landportal.org'
+  og_image: '[current-page:metatag:image_src]'
+  og_site_name: 'Land Portal'
+  og_title: '[current-page:title] | [site:name]'
+  og_description: 'The Land Portal is a global gateway for land related information that is building a specialized community of land experts from civil society, government, intergovernmental agencies, and academia.'
+  og_type: website

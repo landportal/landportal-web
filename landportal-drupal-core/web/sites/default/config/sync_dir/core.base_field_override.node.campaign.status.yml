@@ -1,0 +1,22 @@
+uuid: 7c7f174d-7325-4eb5-ab39-f4d774baf51f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+id: node.campaign.status
+field_name: status
+entity_type: node
+bundle: campaign
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

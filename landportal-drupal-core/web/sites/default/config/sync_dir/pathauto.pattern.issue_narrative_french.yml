@@ -1,0 +1,33 @@
+uuid: 176d1722-7e50-470b-b350-a84a0df25208
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: issue_narrative_french
+label: 'Issue Narrative French'
+type: 'canonical_entities:node'
+pattern: 'thèmes/[node:title]'
+selection_criteria:
+  ecd098bb-0577-4beb-9a97-7a7bd7be5e40:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ecd098bb-0577-4beb-9a97-7a7bd7be5e40
+    context_mapping:
+      node: node
+    bundles:
+      issues: issues
+  e7474618-a3ca-47d6-82da-6cc04b35594c:
+    id: language
+    negate: false
+    uuid: e7474618-a3ca-47d6-82da-6cc04b35594c
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

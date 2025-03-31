@@ -1,0 +1,23 @@
+landportal_land_voc_library:
+  css:
+    theme:
+      css/d_custom_styles.css: {}
+  js:
+    # js/jquery-1.9.1.min.js: {}
+    js/d3.v3.min.js: {}
+
+landportal_land_voc_library_en:
+  js:
+    js/d_custom_en.js: {}
+    
+landportal_land_voc_library_fr:
+  js:
+    js/d_custom_fr.js: {}
+    
+landportal_land_voc_library_pt:
+  js:
+    js/d_custom_pt.js: {}
+    
+landportal_land_voc_library_es:
+  js:
+    js/d_custom_es.js: {}

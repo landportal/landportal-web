@@ -1,0 +1,29 @@
+uuid: 0db92f92-933f-4e70-ae16-9a44b95dd0f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orgref
+    - node.type.organization
+    - node.type.webinar_series
+id: node.webinar_series.field_orgref
+field_name: field_orgref
+entity_type: node
+bundle: webinar_series
+label: Organizers
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

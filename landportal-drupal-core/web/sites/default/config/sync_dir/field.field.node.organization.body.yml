@@ -1,0 +1,23 @@
+uuid: 7134494f-ed73-4210-afa1-9702e008850a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.organization
+  module:
+    - text
+id: node.organization.body
+field_name: body
+entity_type: node
+bundle: organization
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

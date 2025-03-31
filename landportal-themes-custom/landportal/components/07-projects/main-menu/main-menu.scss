@@ -1,0 +1,119 @@
+.landportal-menu__item--debate, .landportal-menu__item--library, .landportal-menu__item--news, .landportal-menu__item--community, .landportal-menu__item--data{
+    .landportal-menu--sub-1{
+        //top: 100% !important;
+        top: 42px;
+        width: max-content !important;
+        z-index: 100;
+        .landportal-menu__item--active{
+            margin-bottom: inherit;
+        }
+    }
+}
+
+.landportal-menu__item--debate{
+    .landportal-menu__link--debate{
+        &:hover{
+            text-decoration: none; 
+            color: #099; 
+        }
+        .landportal-menu__item--sub-1{
+            .is-active{
+                background-color: #063;
+                &:hover{
+                    background-color: #063;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.landportal-menu__item--library{
+    .landportal-menu__link--library{
+        &:hover{
+            text-decoration: none;
+            color: #906;
+        }
+        .landportal-menu__item--sub-1{
+            .is-active{
+                background-color: #906;
+                color: white;
+                &:hover{
+                    background-color: #906;
+                }
+            }
+        }
+    }
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.landportal-menu__item--news{
+    .landportal-menu__link--news{
+        &:hover{
+            text-decoration: none;
+            color: #339;
+        }
+        .landportal-menu__item--sub-1{
+            .is-active{
+                background-color: #906;
+                &:hover{
+                    background-color: #906;
+                }
+            }
+        }
+    }
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+.landportal-menu__item--community{
+    .landportal-menu__link--community{
+        &:hover{
+            text-decoration: none;
+            color: #39C;
+        }
+    	[data-drupal-link-system-path="node/63184"].is-active{
+    		background-color: #39C;
+    		color: white;
+    		&:hover{
+    			background-color: #39C; 
+    		}
+    	}
+    }
+}
+
+.landportal-menu__item--countries{
+    a{
+        &:hover{
+            text-decoration: none;
+            color: #e58517;
+        }
+    }
+}
+.landportal-menu__item--issues{
+    .landportal-menu__link--issues{
+        &:hover{
+            text-decoration: none;
+            color: #c33;
+        }
+    } 
+}
+.landportal-menu__item--data{
+    .landportal-menu__link--data{
+        &:hover{
+            text-decoration: none;
+            color: #093;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+uuid: 0f730769-5ec8-4815-84dd-0181c871be00
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_eu_currency_nal_uri
+field_name: field_eu_currency_nal_uri
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

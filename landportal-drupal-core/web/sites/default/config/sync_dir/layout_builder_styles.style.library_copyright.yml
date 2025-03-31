@@ -1,0 +1,12 @@
+uuid: 028007cd-8b3f-46e7-aa12-f092f73546cc
+langcode: en
+status: true
+dependencies: {  }
+id: library_copyright
+label: 'Library CopyRight'
+classes: library-copyRight
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

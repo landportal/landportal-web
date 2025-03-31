@@ -1,0 +1,20 @@
+uuid: 50274b5a-2cdc-4682-9863-55aa9bc7dbaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.thematic_narrative
+field_name: thematic_narrative
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

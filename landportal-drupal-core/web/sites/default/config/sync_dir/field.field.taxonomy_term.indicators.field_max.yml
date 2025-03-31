@@ -1,0 +1,23 @@
+uuid: e201aa84-6f02-40a6-879c-f88dd1e909a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_max
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.field_max
+field_name: field_max
+entity_type: taxonomy_term
+bundle: indicators
+label: max
+description: 'Maximum possible value of the indicator'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

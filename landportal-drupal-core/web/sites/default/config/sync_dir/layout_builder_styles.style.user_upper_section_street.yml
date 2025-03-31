@@ -1,0 +1,12 @@
+uuid: 0b2724b5-e0d3-44c4-9015-edf7a20444d9
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_street
+label: 'User Upper Section Street'
+classes: user-upper-section-street
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

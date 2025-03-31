@@ -1,0 +1,12 @@
+uuid: 291aaa59-ba9c-4ebb-89b5-36a6a6ee97fb
+langcode: en
+status: true
+dependencies: {  }
+id: responsible_land_based
+label: 'Responsible Land Based'
+classes: responsible-land-based
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

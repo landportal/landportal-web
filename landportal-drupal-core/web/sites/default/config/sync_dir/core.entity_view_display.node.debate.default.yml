@@ -1,0 +1,596 @@
+uuid: 6e2cbc9f-08e1-420c-b489-40ec947145ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.body
+    - field.field.node.debate.comments
+    - field.field.node.debate.feeds_item
+    - field.field.node.debate.field_date
+    - field.field.node.debate.field_debate_facilitators
+    - field.field.node.debate.field_file
+    - field.field.node.debate.field_geographical_focus
+    - field.field.node.debate.field_image
+    - field.field.node.debate.field_noderef
+    - field.field.node.debate.field_orgref
+    - field.field.node.debate.field_related_themes
+    - field.field.node.debate.field_related_topics
+    - field.field.node.debate.field_status
+    - node.type.debate
+    - views.view.blog_post_related_content
+    - views.view.blog_post_user_pic
+    - views.view.comments_debate
+    - views.view.events_archives_breadcrumb
+    - views.view.webinar_organizers
+  module:
+    - addtoany
+    - datetime_range
+    - file
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+    - user
+    - views
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: Breadcrumb
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          b407bc18-965e-427d-91b0-aa81cd4e3aed:
+            uuid: b407bc18-965e-427d-91b0-aa81cd4e3aed
+            region: content
+            configuration:
+              id: 'views_block:events_archives_breadcrumb-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Title section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - library_soli
+        components:
+          9804755d-3811-4d81-b581-e4d5eadf3c77:
+            uuid: 9804755d-3811-4d81-b581-e4d5eadf3c77
+            region: content
+            configuration:
+              id: 'field_block:node:debate:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - landlibrary_tilte
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Upper image'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_upper_image
+        components:
+          2c70ccdd-e4a9-45d6-b089-0faeafec0234:
+            uuid: 2c70ccdd-e4a9-45d6-b089-0faeafec0234
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - event_upper_image
+          e387de49-c75a-4922-a05d-2677460fba31:
+            uuid: e387de49-c75a-4922-a05d-2677460fba31
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_date'
+              label: Date
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: daterange_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'j F Y'
+                  separator: to
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - event_date
+          54c62a77-3e94-4fbf-9cf2-fb27c9672839:
+            uuid: 54c62a77-3e94-4fbf-9cf2-fb27c9672839
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_status'
+              label: Status
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - event_street
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: User
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_user_image
+        components:
+          0ed65640-0d97-491e-a10f-26b4ce712916:
+            uuid: 0ed65640-0d97-491e-a10f-26b4ce712916
+            region: content
+            configuration:
+              id: 'views_block:blog_post_user_pic-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Lower image'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - blog_post_lower_image
+        components:
+          311180b6-9850-43d2-8f7d-a70ae7a30055:
+            uuid: 311180b6-9850-43d2-8f7d-a70ae7a30055
+            region: content
+            configuration:
+              id: 'field_block:node:debate:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - event_lower_image
+          dcecbb5f-0df4-4624-a4e8-ea969801e043:
+            uuid: dcecbb5f-0df4-4624-a4e8-ea969801e043
+            region: aside
+            configuration:
+              id: 'views_block:webinar_organizers-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_sidebar
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - news_content_with_sidebar
+        components:
+          6cfc9720-7be4-4eb6-b164-568614aea860:
+            uuid: 6cfc9720-7be4-4eb6-b164-568614aea860
+            region: main
+            configuration:
+              id: 'field_block:node:debate:body'
+              label: Introduction
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - blog_post_body
+          ea35ca60-5b85-4957-80bf-54fae23e5843:
+            uuid: ea35ca60-5b85-4957-80bf-54fae23e5843
+            region: aside
+            configuration:
+              id: 'field_block:node:debate:field_geographical_focus'
+              label: 'Geographical focus'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - organization_regions
+          6da28202-4a7e-451e-9ecd-959da427add7:
+            uuid: 6da28202-4a7e-451e-9ecd-959da427add7
+            region: aside
+            configuration:
+              id: 'field_block:node:debate:field_related_topics'
+              label: 'Related concepts'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - indicator_concepts
+          40c7b552-cb90-47f6-8419-884fe1269c37:
+            uuid: 40c7b552-cb90-47f6-8419-884fe1269c37
+            region: aside
+            configuration:
+              id: 'field_block:node:debate:field_related_themes'
+              label: Themes
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - indicator_themes
+          b04ad673-030d-489d-8b7c-342be34f93bb:
+            uuid: b04ad673-030d-489d-8b7c-342be34f93bb
+            region: aside
+            configuration:
+              id: 'field_block:node:debate:field_file'
+              label: 'Related materials'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: file_default
+                label: above
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - event_material
+          94fc4854-a9bc-4e4d-9333-40b1d1856d44:
+            uuid: 94fc4854-a9bc-4e4d-9333-40b1d1856d44
+            region: aside
+            configuration:
+              id: 'views_block:webinar_organizers-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Related content'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          866e6fa2-1bea-4d39-bdd6-de828a8978a2:
+            uuid: 866e6fa2-1bea-4d39-bdd6-de828a8978a2
+            region: content
+            configuration:
+              id: 'views_block:blog_post_related_content-block_6'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Comment Section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          dddd1680-4d88-4837-9ebb-f4999c32ad9d:
+            uuid: dddd1680-4d88-4837-9ebb-f4999c32ad9d
+            region: content
+            configuration:
+              id: 'views_block:comments_debate-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - debate_comments
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - debate_comments_teaser
+        components:
+          52ca95be-c9ec-4374-9a51-b6f5626383c7:
+            uuid: 52ca95be-c9ec-4374-9a51-b6f5626383c7
+            region: content
+            configuration:
+              id: 'field_block:node:debate:comments'
+              label: Comments
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: comment_default
+                label: hidden
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'Social Media section'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - social_media_block
+        components:
+          7f4ccc03-4a6d-46dc-9930-f4c3d7a0e530:
+            uuid: 7f4ccc03-4a6d-46dc-9930-f4c3d7a0e530
+            region: content
+            configuration:
+              id: addtoany_block
+              label: 'Share this page'
+              label_display: visible
+              provider: addtoany
+              context_mapping: {  }
+              link_url: ''
+              link_title: ''
+              buttons_size: ''
+              addtoany_html: ''
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.debate.default
+targetEntityType: node
+bundle: debate
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_debate_facilitators:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_geographical_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_noderef:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_related_themes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_related_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  comments: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

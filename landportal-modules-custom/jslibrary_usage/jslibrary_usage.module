@@ -1,0 +1,165 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Views;
+use Drupal\views\ViewExecutable;
+
+/**
+*Implements hook_form_alter().
+*/
+function jslibrary_usage_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id == 'taxonomy_term_indicators_form'){
+    //\Drupal::logger('landportal_js_library_usage')->notice("checking id ");
+    $form['#attached']['library'][] = 'jslibrary_usage/indicator';
+    //$variables['#attached']['library'][] = 'jslibrary_usage/indicator';
+  }
+  elseif ($form_id == 'node_landlibrary_resource_edit_form') {
+    $form['#attached']['library'][] = 'jslibrary_usage/library_resource';
+  }
+  elseif($form_id == 'user_register_form'  || $form_id == 'user_form'){
+   $form['#attached']['library'][] = 'jslibrary_usage/user-register-page';
+   $form['#attached']['library'][] = 'jslibrary_usage/user-register-page-css-library';
+  }
+}
+
+function jslibrary_usage_page_attachments_alter(&$page) {
+  $path = $current_path = \Drupal::service('path.current')->getPath();
+
+    if (strpos($current_path, '/node/add/') === 0 ||
+    preg_match('/\/node\/\d+\/edit/', $current_path) ||
+    strpos($current_path, '/taxonomy/term/add/') === 0 ||
+    preg_match('/\/taxonomy\/term\/\d+\/edit/', $current_path) ||
+    strpos($current_path, '/admin/structure/taxonomy/manage/') === 0 ||
+    preg_match('/\/user\/\d+\/edit/', $current_path)) {
+    $page['#attached']['library'][] = 'jslibrary_usage/node-add-edit';
+  }
+  
+  $page['#attached']['library'][] = 'jslibrary_usage/cookie-slider';
+  $path_parts = explode('/', $path);
+  if (isset($path_parts[2])) {
+    $get_userid = $path_parts[2];
+    $user_path = '/user/' . $get_userid;
+    //\Drupal::logger('see path')->notice(serialize($user_path));
+    if ($path == $user_path) {
+      $page['#attached']['library'][] = 'jslibrary_usage/custom';
+    }
+  }
+  if (isset($path_parts[1], $path_parts[2], $path_parts[3]) && $path_parts[1] == 'user' && is_numeric($path_parts[2]) && $path_parts[3] == 'edit') {
+    $page['#attached']['library'][] = 'jslibrary_usage/user-edit-page';
+  }
+  if ((isset($path_parts[1], $path_parts[2], $path_parts[3], $path_parts[4]) &&
+  $path_parts[1] == 'taxonomy' && $path_parts[2] == 'term' && is_numeric($path_parts[3]) && $path_parts[4] == 'edit') ||
+ preg_match('/\/admin\/structure\/taxonomy\/manage\/[^\/]+\/add$/', $path)) {
+$page['#attached']['library'][] = 'jslibrary_usage/taxonomy-edit-page';
+}
+}
+
+/**
+*Implements hook_views_pre_view().
+*/
+function jslibrary_usage_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if (($view->id() == "users_content" && $view->current_display == 'block_1')){
+
+    $path = $current_path = \Drupal::service('path.current')->getPath();
+    $get_userid = explode('/', $path)[2];
+
+    $login_user_id = \Drupal::currentUser()->id();
+
+    $arg = $view->args[0];
+
+    if($get_userid == $login_user_id){
+      $view->args[0] = 9999999999;
+      //\Drupal::logger('see own profile')->notice("you are seeing your own profile");
+    }
+  }
+}
+
+function jslibrary_usage_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  //check content type
+  if ($node->getType() == 'organization') { 
+    
+    // print('hello there');
+    //\Drupal::logger('only org type')->notice("organization");
+
+    $variables['#attached']['library'][] = 'jslibrary_usage/organization'; 
+  }
+  if ($node->getType() == 'landlibrary_resource') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/library_resource';
+  }
+  if ($node->getType() == 'blog_post') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/blog_post';
+  }
+    if ($node->getType() == 'event') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/event';
+  }
+   if ($node->getType() == 'webinar_series') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/webinar_series';
+  }
+   if ($node->getType() == 'debate') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/debate';
+  }
+   if ($node->getType() == 'dataset') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/dataset_portfolio';
+  }
+   if ($node->getType() == 'sdgi') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/sdgi';
+  }
+   if ($node->getType() == 'landing_page') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/landing-page';
+    $variables['#attached']['library'][] = 'jslibrary_usage/cookie-slider';
+  }
+   if ($node->getType() == 'custom_page') {
+    $variables['#attached']['library'][] = 'jslibrary_usage/custom-page';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function jslibrary_usage_preprocess_page(&$variables) {
+  // Check if the current page belongs to a taxonomy term.
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    // Get the current taxonomy term.
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+    if ($term) {
+      // Check the vocabulary of the taxonomy term.
+      $vocabulary = $term->bundle();
+      
+      // Check if the vocabulary is the one you want to target.
+      if ($vocabulary == 'indicators') {
+        $variables['#attached']['library'][] = 'jslibrary_usage/indicator';
+      }
+      elseif($vocabulary == 'datasets'){
+        $variables['#attached']['library'][] = 'jslibrary_usage/dataset';
+      }
+      elseif($vocabulary == 'layer'){
+        $variables['#attached']['library'][] = 'jslibrary_usage/Layers-landing-page';
+      }
+      elseif($vocabulary == 'concepts'){
+        $variables['#attached']['library'][] = 'jslibrary_usage/concept-taxonomy-js';
+      }
+    }
+  }
+}
+
+
+//******************** attach js to library/search page *************************************
+/**
+ * Implements hook_views_pre_render().
+ */
+function jslibrary_usage_views_pre_render(ViewExecutable $view) {
+  $view_id = $view->storage->id();
+  //print $view_id;
+  if($view_id == 'landlibrary_search_page_solr'){
+    $view->element['#attached']['library'][] = 'jslibrary_usage/library_search_page';
+  }
+  /*Add Bootstrap cdn when carosel view is shown*/
+ // $current_url = \Drupal::request()->getRequestUri();
+ // $remove_slash = explode("/",$current_url)[3];
+  //\Drupal::logger('check view Name')->notice(serialize($remove_slash));
+
+  $format = $view->getStyle()->getPluginId();
+    if ($view->getStyle()->getPluginId() == 'views_bootstrap_carousel') {
+      $view->element['#attached']['library'][] = 'jslibrary_usage/carousel_js_library';
+    }  
+}

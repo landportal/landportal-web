@@ -1,0 +1,27 @@
+uuid: 559ca260-e9a6-49f0-a5b1-94c10cdbfba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.organization
+  module:
+    - file
+id: node.organization.field_file
+field_name: field_file
+entity_type: node
+bundle: organization
+label: 'Attach a file'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

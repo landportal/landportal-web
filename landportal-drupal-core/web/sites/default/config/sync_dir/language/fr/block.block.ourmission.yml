@@ -1,0 +1,5 @@
+settings:
+  label: 'Notre mission'
+  text:
+    value: "<p>La Fondation croit que l'accès à l'information est indispensable pour parvenir à une bonne gouvernance foncière et pour garantir les droits fonciers des personnes vulnérables. Nous aidons nos partenaires à créer et à diffuser des données et des informations sur la gouvernance foncière à l'aide de technologies de données liées et ouvertes.</p>\r\n\r\n<p><a class=\"link link--button link--button__subscribe\" href=\"/fr/impliquez-vous\">Abonnez vous</a> <a class=\"link link--button link--button__support\" href=\"/fr/donnez\">Encouragez nous</a></p>\r\n\r\n<p><a href=\"https://creativecommons.org/licenses/by/4.0/\">Attribution Creative Commons</a>, 2014-2022 Land Portal Foundation / RSIN 854330045</p>\r\n"
+    format: full_html

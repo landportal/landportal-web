@@ -1,0 +1,8 @@
+uuid: 278f7907-aa6c-4178-84ef-de8c16b05a18
+langcode: en
+status: true
+dependencies: {  }
+name: Layer
+vid: layer
+description: 'layers for the Land Geo Portal'
+weight: 0

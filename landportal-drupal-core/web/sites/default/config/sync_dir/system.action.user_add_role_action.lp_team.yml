@@ -1,0 +1,14 @@
+uuid: 5f1c803b-85c4-4cbb-87c0-5923f97c8b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lp_team
+  module:
+    - user
+id: user_add_role_action.lp_team
+label: 'Add the LP team role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lp_team

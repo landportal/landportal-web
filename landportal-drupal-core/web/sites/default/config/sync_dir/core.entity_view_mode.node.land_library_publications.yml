@@ -1,0 +1,10 @@
+uuid: 0d225463-a10b-43ad-864f-b31ee957e8c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.land_library_publications
+label: 'Land Library Publications'
+targetEntityType: node
+cache: true

@@ -1,0 +1,8 @@
+uuid: 65f30947-861b-409e-b323-e04ac2027d63
+langcode: en
+status: true
+dependencies: {  }
+name: 'SDGs Tiers'
+vid: sdgs_tiers
+description: ''
+weight: 0

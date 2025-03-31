@@ -1,0 +1,54 @@
+{#
+/**
+* @file
+* Landportal Indicators block's theme implementation.
+*
+* Available variables:
+* - socio_economic_title: Socio economic table title.
+* - socio_economic_more_label: Socio economic more url label.
+* - socio_economic_more_url: Socio economic more url.
+* - land_area_label: Land area label.
+* - land_area_value: Land area of region.
+* - total_population_label: Total population label.
+* - total_population_value: Total population of region.
+*/
+#}
+<div>
+  <table>
+    <tr>
+      <th>{{ socio_economic_title }}</th>
+      <th><a href="{{ socio_economic_more_url }}">{{ socio_economic_more_label }}</a></th>
+    </tr>
+    <tr>
+      <td>{{ land_area_label }}</td>
+      <td>{{ land_area_value }} ha</td>
+      <td>{{ gini_index_label }}</td>
+      <td>{{ gini_index_value }}</td>
+      <td>{{ gdp_capita_label }}</td>
+      <td>{{ gdp_capita_value }} USD</td>
+      <td>{{ total_population_label }}</td>
+      <td>{{ total_population_value }}</td>
+      <td>{{ urban_population_label }}</td>
+      <td>{{ urban_population_value }} %</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>{{ land_title }}</th>
+      <th><a href="{{ land_more_url }}">{{ land_more_label }}</a></th>
+    </tr>
+    <tr>
+      <td>{{ agricultural_land_label }}</td>
+      <td>{{ agricultural_land_value }} %</td>
+      <td>{{ perceived_tenure_security_label }}</td>
+      <td>{{ perceived_tenure_security_value }} %</td>
+      <td>{{ primary_forests_label }}</td>
+      <td>{{ primary_forests_value }} ha</td>
+      <td>{{ women_owning_land_label }}</td>
+      <td>{{ women_owning_land_value }} %</td>
+      <td>{{ area_in_deals_label }}</td>
+      <td>{{ area_in_deals_value }} ha</td>
+    </tr>
+  </table>
+</div>

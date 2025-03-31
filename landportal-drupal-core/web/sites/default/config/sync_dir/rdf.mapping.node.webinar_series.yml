@@ -1,0 +1,14 @@
+uuid: ab0d36b1-c844-4a7a-a265-61d006f1811a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webinar_series
+  module:
+    - node
+id: node.webinar_series
+targetEntityType: node
+bundle: webinar_series
+types:
+  - ''
+fieldMappings: {  }

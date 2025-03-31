@@ -1,0 +1,48 @@
+uuid: 7979883c-f943-4e0d-af18-0b38572f7e97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_noderef
+    - node.type.blog_post
+    - node.type.country_narrative
+    - node.type.event
+    - node.type.issues
+    - node.type.landing_page
+    - node.type.landlibrary_resource
+    - node.type.news
+    - node.type.organization
+    - node.type.programme_narrative
+    - node.type.project
+    - node.type.slider
+id: node.landing_page.field_noderef
+field_name: field_noderef
+entity_type: node
+bundle: landing_page
+label: 'Related content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+      country_narrative: country_narrative
+      event: event
+      issues: issues
+      landlibrary_resource: landlibrary_resource
+      landing_page: landing_page
+      news: news
+      organization: organization
+      programme_narrative: programme_narrative
+      project: project
+      slider: slider
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: blog_post
+field_type: entity_reference

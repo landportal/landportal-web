@@ -1,0 +1,23 @@
+uuid: 5b7dabe5-4894-4f21-a52c-ba89f8452163
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.issues_landing_page
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.issues_landing_page.body
+field_name: body
+entity_type: block_content
+bundle: issues_landing_page
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

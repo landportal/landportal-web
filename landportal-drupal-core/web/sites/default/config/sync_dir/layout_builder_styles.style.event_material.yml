@@ -1,0 +1,12 @@
+uuid: f618b3eb-bbc3-4f75-9e55-d084cb427c46
+langcode: en
+status: true
+dependencies: {  }
+id: event_material
+label: 'Event Material'
+classes: event-material
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 013635fd-745c-45b6-8d69-4615b341995d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block_with_title_as_link
+    - field.storage.block_content.title_with_link
+  module:
+    - link
+id: block_content.basic_block_with_title_as_link.title_with_link
+field_name: title_with_link
+entity_type: block_content
+bundle: basic_block_with_title_as_link
+label: 'Title with link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,20 @@
+uuid: f8487aae-9088-455f-9a72-ae23bcd63bc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.landlibrary_resource_type
+  module:
+    - path
+id: taxonomy_term.landlibrary_resource_type.path
+field_name: path
+entity_type: taxonomy_term
+bundle: landlibrary_resource_type
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

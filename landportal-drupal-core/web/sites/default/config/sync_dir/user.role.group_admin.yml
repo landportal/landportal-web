@@ -1,0 +1,12 @@
+uuid: 409bd017-8c06-456f-87ee-01cb1d7d91d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+id: group_admin
+label: 'Group admin'
+weight: 9
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'

@@ -1,0 +1,12 @@
+uuid: 90ae9e1f-efa1-4e33-becc-580c6212d7c0
+langcode: en
+status: true
+dependencies: {  }
+id: project_duration_background
+label: 'Project Duration Background'
+classes: project-duration-background
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

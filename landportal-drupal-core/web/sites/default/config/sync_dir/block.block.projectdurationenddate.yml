@@ -1,0 +1,24 @@
+uuid: 0e784d7e-eae2-4d68-9305-d5d9e0c87769
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.project_duration_end
+  module:
+    - facets
+  theme:
+    - landportal
+id: projectdurationenddate
+theme: landportal
+region: content
+weight: -10
+provider: null
+plugin: 'facet_block:project_duration_end'
+settings:
+  id: 'facet_block:project_duration_end'
+  label: 'Project duration'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: projectdurationenddate
+visibility: {  }

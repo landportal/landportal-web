@@ -1,0 +1,12 @@
+uuid: ca90179c-9f0f-4fb3-ab15-f8b3cac9e6ef
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_title
+label: 'Blog Post Title'
+classes: blog-post-title
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

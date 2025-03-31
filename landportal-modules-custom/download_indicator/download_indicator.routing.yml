@@ -1,0 +1,7 @@
+download_indicator.download:
+  path: '/download/test/indicator'
+  defaults:
+    _controller: '\Drupal\download_indicator\Controller\DownloadIndicatorController::download'
+    _title: 'Download indicator'
+  requirements: 
+    _permission: 'access content'

@@ -1,0 +1,21 @@
+uuid: e12f9654-6804-44dc-841f-46f2c6aa462f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_impact
+    - taxonomy.vocabulary.programme
+  module:
+    - lp_related_content
+id: taxonomy_term.programme.field_related_impact
+field_name: field_related_impact
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Related Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: lp_related_content_people

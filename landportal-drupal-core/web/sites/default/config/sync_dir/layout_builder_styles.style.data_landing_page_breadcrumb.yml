@@ -1,0 +1,12 @@
+uuid: 77260ed8-cd40-45de-84be-2f4cdf8a5b4c
+langcode: en
+status: true
+dependencies: {  }
+id: data_landing_page_breadcrumb
+label: 'Data Landing Page Breadcrumb'
+classes: data-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

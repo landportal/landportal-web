@@ -1,0 +1,675 @@
+.new_page_node_dataset {
+	border-bottom: 5px solid #093;
+}
+
+.dataset-portfolio {
+	@media (min-width: $p-small) {
+		margin-top: 0 !important;
+	}
+
+	@media (min-width: $p-tablet) {
+		margin-top: -8% !important;
+	}
+
+	.container {
+		padding: 0 !important;
+
+		.section__sidebar__main {
+			margin-right: 0;
+			background: #fff;
+			padding: 15px;
+
+			@media (min-width: $p-small) {
+				order: 2;
+				width: 100% !important;
+			}
+
+			@media (min-width: $p-tablet) {
+				order: 1;
+				width: 66% !important;
+			}
+
+			.latest-events-body {
+				.text-long {
+
+					a[href*="https://"] {
+						&::after {
+							content: '';
+							background-image: url(../images/extlinks.jpg);
+							height: 10px;
+							width: 10px;
+							display: inline-block;
+							margin-left: 3px;
+							margin-bottom: 2px;
+						}
+					}
+
+					blockquote {
+						position: relative;
+
+						&::before {
+							content: "“";
+							color: #C33;
+							position: absolute;
+							left: -24px;
+							top: 0;
+							right: 0;
+						}
+
+						&::after {
+							content: "”";
+							color: #C33;
+							position: absolute;
+							right: 0;
+							bottom: -25px;
+						}
+					}
+
+					.bg-green.col-sm-12 {
+						background-color: #396;
+						color: #fff !important;
+						padding: 18px;
+						background-image: url(../images/bg-hand-world.png);
+						background-repeat: no-repeat;
+						background-position: bottom right;
+						background-position-x: right;
+						background-position-x: 98%;
+
+						a {
+							color: #fff !important;
+						}
+
+						h3 {
+							color: #fff !important;
+						}
+
+						p {
+							span {
+								&::before {
+									content: url(../images/chart-bar-o.png);
+									vertical-align: sub;
+									padding-right: 3px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.dataset-accordian {
+				margin-bottom: 1rem;
+
+				>div {
+					>div {
+						>*:not(h4) {
+							display: none;
+						}
+
+						.primary-underline {
+							border-bottom: 2px solid lightgray;
+							font-size: 16px;
+							font-weight: bold;
+							cursor: pointer;
+							line-height: normal;
+							position: relative;
+							margin-top: revert;
+
+							div {
+								max-width: inherit;
+								margin-bottom: 0;
+
+								&:hover {
+									color: #063;
+								}
+
+								&::after {
+									content: '';
+									position: absolute;
+									right: 0;
+									top: 0;
+									font-weight: normal;
+									clip-path: polygon(50% 0, 51% 0, 100% 35%, 94% 41%, 65% 19%, 50% 9%, 31% 24%, 7% 40%, 1% 38%);
+									background: #000000b5;
+									width: 9px;
+									height: 16px;
+									rotate: 180deg;
+								}
+							}
+						}
+
+						.open {
+							div {
+								&::after {
+									content: '';
+									position: absolute;
+									right: 0;
+									top: 10px;
+									font-weight: normal;
+									rotate: 360deg;
+								}
+							}
+						}
+
+						a {
+							text-decoration: none;
+							color: #06C;
+
+							&:hover {
+								color: #004080;
+								text-decoration: underline;
+							}
+						}
+
+						a[href]:not([href*="https://landportal.org"]) {
+							&::after {
+								content: '';
+								background-image: url(../images/extlinks.jpg);
+								height: 10px;
+								width: 10px;
+								display: inline-block;
+								margin-left: 3px;
+								margin-bottom: 2px;
+							}
+						}
+
+						blockquote {
+							position: relative;
+
+							&::before {
+								content: "“";
+								color: #C33;
+								position: absolute;
+								left: -24px;
+								top: 0;
+								right: 0;
+							}
+
+							&::after {
+								content: "”";
+								color: #C33;
+								position: absolute;
+								right: 0;
+								bottom: -25px;
+							}
+						}
+					}
+				}
+			}
+			.view-coda {
+				.form-item{
+					max-width: inherit;
+				}
+			}
+		}
+
+		.section__sidebar__aside {
+			background-color: #EBEBE5;
+			padding: 15px;
+			height: fit-content;
+			@media (min-width: $p-small) {
+				order: 1;
+				width: 100% !important;
+				margin-top: 0 !important;
+			}
+
+			@media (min-width: $p-tablet) {
+				order: 2;
+				width: 34% !important;
+				margin-top: -10% !important;
+			}
+
+			.dataset-porfolio-logo {
+				.views-field-field-image {
+					img {
+						width: 100%;
+					}
+				}
+
+				.views-field-field-acronym {
+					.views-label-field-acronym {
+						font-weight: bold;
+					}
+
+					.field-content {
+						line-height: 1;
+
+						a {
+							font-size: 13px;
+							text-decoration: none;
+							color: #06C;
+
+							&:hover {
+								color: #004080;
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+
+				.views-field-field-license-text {
+					span {
+						font-weight: bold;
+					}
+
+					div {
+						p {
+							margin-top: 0;
+
+							a {
+								text-decoration: none;
+								color: #06C;
+
+								&:hover {
+									color: #004080;
+									text-decoration: underline;
+								}
+
+								&::after {
+									content: '';
+									background-image: url(../images/extlinks.jpg);
+									height: 10px;
+									width: 10px;
+									display: inline-block;
+									margin-left: 3px;
+									margin-bottom: 2px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.dataset-official-site {
+				&::before {
+					content: 'Offical site: ';
+					display: block;
+					font-weight: bold;
+				}
+
+				div {
+					a {
+						text-decoration: none;
+						color: #06C;
+
+						&:hover {
+							color: #004080;
+							text-decoration: underline;
+						}
+
+						&::after {
+							content: '';
+							background-image: url(../images/extlinks.jpg);
+							height: 10px;
+							width: 10px;
+							display: inline-block;
+							margin-left: 3px;
+							margin-bottom: 2px;
+						}
+					}
+				}
+			}
+
+			.dataset-issues-block h2 {
+				margin-top: 15px;
+				padding-top: 15px;
+				border-top: 1px solid #666;
+				font-size: 14px;
+				font-weight: bold;
+				font-family: "Merriweather Sans", sans-serif;
+			}
+
+			.dataset-issues {
+				div {
+					div {
+						display: inline-block;
+						white-space: normal;
+						background-color: #e6f5f5;
+						border-left: 5px solid #099;
+						color: #333;
+						font-family: "Merriweather Sans", sans-serif;
+						padding: 3px 5px;
+						margin: 3px 5px;
+						border-radius: 0.6em;
+						font-size: 13px;
+
+						a {
+							color: #555;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+			.dataset-concepts {
+				div {
+					div {
+						display: inline-block;
+						white-space: normal;
+						background-color: #ebebf0;
+						border-left: 5px solid #336;
+						color: #333;
+						font-family: "Merriweather Sans", sans-serif;
+						padding: 3px 5px;
+						margin: 3px 5px;
+						border-radius: 0.6em;
+						font-size: 13px;
+
+						a {
+							color: #555;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+			.dataset-porfolio-donor,
+			.dataset-porfolio-partner {
+				.views-row {
+					margin-right: -3px;
+					display: inline-block;
+
+					.views-field-field-donors,
+					.views-field-field-orgref {
+						article {
+							.layout--onecol {
+								&:nth-of-type(1) {
+									img {
+										width: 90%;
+										margin-left: auto;
+										margin-right: auto;
+										padding: 5%;
+									}
+								}
+
+								&:nth-of-type(2) {
+									position: absolute;
+									bottom: 10px;
+									opacity: 0;
+									line-height: 1.2;
+									left: 0;
+									right: 0;
+
+									.block {
+										&:nth-child(1) {
+											display: inline;
+
+											span {
+												display: inline;
+
+												a {
+													display: inline;
+												}
+											}
+										}
+
+										&:nth-child(2) {
+											display: inline;
+
+											div {
+												display: inline;
+												font-weight: normal;
+												font-size: 13px;
+												font-style: italic;
+
+												&::before {
+													content: '(';
+												}
+
+												&::after {
+													content: ')';
+												}
+											}
+										}
+									}
+								}
+							}
+
+							&:hover {
+								.layout--onecol {
+									&:nth-of-type(2) {
+										opacity: 1;
+
+										a {
+											color: #fff;
+											text-decoration: none;
+
+											&:hover {
+												text-decoration: underline;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.dataset-indicator-block {
+				.text-long {
+					a {
+						text-decoration: none;
+						color: #06C;
+
+						&:hover {
+							color: #004080;
+							text-decoration: underline;
+						}
+					}
+
+					a[href]:not([href*="https://landportal.org"]) {
+						&::after {
+							content: '';
+							background-image: url(../images/extlinks.jpg);
+							height: 10px;
+							width: 10px;
+							display: inline-block;
+							margin-left: 3px;
+							margin-bottom: 2px;
+						}
+					}
+
+					.glyphicon-prindex {
+						// background-color: red;
+
+						&::before {
+							content: '\2193';
+							color: black;
+							border: 2px solid black;
+							border-radius: 50%;
+							padding: 0 3px;
+							margin-right: 3px;
+							font-size: 10px;
+							vertical-align: text-top;
+						}
+					}
+
+					.field-label {
+						font-weight: bold;
+
+						&:first-child {
+							&::before {
+								content: '\2193';
+								color: black;
+								border: 2px solid black;
+								border-radius: 50%;
+								padding: 0 3px;
+								margin-right: 3px;
+								font-size: 10px;
+								vertical-align: text-top;
+							}
+						}
+					}
+
+					.download-zip {
+						display: flex;
+						align-items: baseline;
+
+						.package-x-generic {
+							margin-right: 3px;
+						}
+					}
+				}
+			}
+
+			.dataset-portfolio-jump-menu-view-ct {
+				margin-top: 15px;
+				margin-bottom: 15px;
+
+				.views-row {
+					display: none;
+				}
+
+				#dataset-jump-menu-ct {
+					cursor: pointer;
+					border: 1px solid #ccc;
+					width: 100%;
+					// margin-left: 15px;
+					font-size: 14px;
+					height: 34px;
+					background-color: #fff;
+					border-radius: 1.3em;
+					padding-left: 8px;
+					margin-top: 15px;
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+
+.dataset-portfolio.no-banner {
+	margin-top: 0 !important;
+
+	.section__sidebar__aside {
+		margin-top: 0 !important;
+	}
+}
+
+#block-landbook-view-coda-lbvc-download-cat {
+
+	// background-color: red;
+	&::before {
+		content: 'Download ';
+		color: black;
+		font-size: 22px;
+		font-family: "Merriweather Sans", sans-serif;
+		font-weight: 700;
+	}
+
+	div {
+		margin-bottom: 0.5rem;
+
+		h3 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		p {
+			margin-bottom: 0.5rem;
+		}
+
+		a {
+			display: inline;
+			padding: .2em .6em .3em;
+			font-size: 75%;
+			font-weight: bold;
+			line-height: 1;
+			color: #fff;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: baseline;
+			border-radius: .25em;
+			background-color: #777;
+		}
+	}
+}
+
+.js-form-item.form-item {
+	//max-width: unset !important;
+
+	#vc1 {
+		width: 95%;
+		// background-color: red;
+
+		#indicator-ranking-wrapper {
+			font-family: "Merriweather Sans", sans-serif;
+			font-size: 16px;
+			padding: 15px;
+
+			li {
+				a:not([href]):not([class]) {
+					color: #007bff !important;
+				}
+
+				&:not(.hidden-print) {
+					display: flex;
+					justify-content: space-between;
+
+					h4 {
+						font-size: 95%;
+						font-weight: 700;
+					}
+
+					.col-xs-9,
+					.col-xs-8 {
+						width: 70%;
+					}
+
+					.col-xs-3,
+					.col-xs-4 {
+						width: 30%;
+					}
+				}
+			}
+
+			.hidden {
+				display: none !important;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 22px;
+		margin-top: 20px;
+		font-family: "Merriweather Sans", sans-serif;
+		font-weight: 700;
+		color: #333;
+	}
+
+	#html-table {
+		.table {
+			border: inherit;
+
+			thead {
+				th {
+					vertical-align: bottom;
+				}
+			}
+
+			a {
+				color: #06C;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+					color: #004080;
+				}
+			}
+
+			tbody {
+				td {
+					font-size: .9em;
+				}
+			}
+		}
+	}
+}
+article.dataset{
+	.open-up-guide{
+		article.landing-page{
+			width: 100%;
+		}
+	}
+}

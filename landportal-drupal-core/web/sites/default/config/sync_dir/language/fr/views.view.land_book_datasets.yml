@@ -1,0 +1,8 @@
+display:
+  block_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Derniers ensembles de données statistiques et spatiales mis à jour</h2>\r\n"
+            format: filtered_html

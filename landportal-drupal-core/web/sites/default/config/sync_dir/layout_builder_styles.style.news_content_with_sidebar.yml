@@ -1,0 +1,12 @@
+uuid: 692dc7c3-21ee-415e-8328-dd1a625620f2
+langcode: en
+status: true
+dependencies: {  }
+id: news_content_with_sidebar
+label: 'News Content with sidebar'
+classes: news-content-with-sidebar
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

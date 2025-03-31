@@ -1,0 +1,18 @@
+uuid: 15bf0356-5275-4ba7-a7e9-b68492cf8d44
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Organization
+type: organization
+description: 'An organization (Private companies, NGOs, universities, associations...) referenced in the Landportal.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

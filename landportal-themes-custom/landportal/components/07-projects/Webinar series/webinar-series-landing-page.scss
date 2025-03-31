@@ -1,0 +1,132 @@
+.webinars-landing-page-style{
+	.views-row{
+		padding-top: 15px;
+		.views-col{
+			padding-left: 15px;
+  			padding-right: 15px;
+  			border-top: 1px solid #EBEBE5;
+  			padding-top: 15px;
+  			padding-bottom: 15px;
+  			margin-bottom: 15px;
+
+  			@media (min-width: $p-small){
+  				width: 100% !important;
+  			}
+  			@media (min-width: $p-tablet){
+  				width: 50% !important;
+  			}
+
+  			&:hover{
+  				box-shadow: 3px 5px 10px #666;
+  			}
+
+  			article{
+  				.page-title{
+  					display: none;
+  				}
+  				.layout--twocol-section--50-50{
+  					.layout__region--first{
+  						padding-right: 15px;
+  						padding-left: 0;
+  						@media (min-width: $p-small){
+			  				flex: 0 1 25%;
+			  			}
+			  			@media (min-width: $p-tablet){
+			  				flex: 0 1 50%;
+			  			} 
+
+  						img{
+  							width: 100%;
+  							height: auto;
+  						}
+  					}
+  					.layout__region--second{
+  						padding-left: 15px;
+  						padding-right: 13px;
+  						font-size: 13px;
+  						@media (min-width: $p-small){
+			  				flex: 0 1 75%;
+			  			}
+			  			@media (min-width: $p-tablet){
+			  				flex: 0 1 50%;
+			  			}
+
+  						.block{
+  							&:nth-child(1){
+  								span{
+  									max-height: 7.8em;
+  									overflow: hidden;
+  									font-size: 18px;
+									font-family: "Merriweather Sans",sans-serif;
+									font-weight: 700;
+									line-height: normal;
+									color: #555;
+
+									a{
+										color: #06c;
+										text-decoration: none;
+										&:hover{
+											text-decoration: underline;
+										}
+									}
+  								}
+  							}
+  							&:nth-child(2){
+  								padding-top: 5px;
+  								div{
+  									&::before{
+  										content: "";
+										padding: 0 3px 3px;
+										background-image: url(../images/icons8-date-50.png);
+										height: 16px;
+										width: 16px;
+										display: inline-block;
+										background-size: cover;
+										margin-right: 5px;
+										vertical-align: text-bottom;
+  									}
+  								}
+  							}
+  							&:nth-child(3){
+  								.text-long{
+  									padding-bottom: 15px;
+  									max-height: 4.7em;
+  									overflow: hidden;
+  									line-height: inherit;
+  									color: #666;
+  								}
+  							}
+  							&:nth-child(4){
+  								>div {
+  									>div{
+  										&:first-of-type{
+  											font-weight: bold;
+  											display: inline;
+
+  											&::after{
+  												content: ':';
+  											}
+  										}
+  										&:last-child{  
+  											display: inline;
+
+  											div{
+  												display: inline;
+  												&:not(:first-of-type){
+  													&::before{
+  														content: ', ';
+  														margin-left: -3px;  
+  													}
+  												}
+  											}
+  										}
+  									}
+  								}
+  							}
+  						}
+  					}
+  				}
+  			}
+		}
+	}
+}

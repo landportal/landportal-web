@@ -1,0 +1,23 @@
+{% set card__base_class = 'organisations-card' %}
+<div {{ bem(card__base_class, [], card__block_class) }}>
+  {% if image_src %}
+  <div {{ bem('image_wrapper', [], card__base_class) }}>
+    <a {{ bem('link', [], card__block_class) }} href="{{ item_url }}">
+      {% include "@atoms/images/image/responsive-image.twig" with {
+          output_image_tag: true,
+          image_src: image_src,
+          image_alt: image_alt,
+          responsive_image_blockname: card__base_class,
+          responsive_image_modifiers: []
+        } %}
+    </a>
+    {% if item_title %}
+      <div {{ bem('image_overlay', [], card__base_class) }}>
+        <a {{ bem('link', [], card__block_class) }} href="{{ item_url }}">
+          <h4>{{ item_title }}</h4>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

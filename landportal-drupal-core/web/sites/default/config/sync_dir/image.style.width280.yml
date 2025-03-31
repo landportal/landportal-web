@@ -1,0 +1,15 @@
+uuid: a3e929fc-bc5d-4ba4-9bae-7d9a2ebccd96
+langcode: en
+status: true
+dependencies: {  }
+name: width280
+label: width280
+effects:
+  6aeff611-2524-4f00-ae16-bb7fee8386e7:
+    uuid: 6aeff611-2524-4f00-ae16-bb7fee8386e7
+    id: image_scale
+    weight: 1
+    data:
+      width: 280
+      height: null
+      upscale: true

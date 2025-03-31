@@ -1,0 +1,23 @@
+uuid: 0f92765b-d44b-42b4-a70e-04ce2af4c919
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+    - custom_pub.custom_publishing_option.promote_to_announcements
+id: node.blog_post.promote_to_announcements
+field_name: promote_to_announcements
+entity_type: node
+bundle: blog_post
+label: 'Promote to LP announcements'
+description: 'custom publication option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

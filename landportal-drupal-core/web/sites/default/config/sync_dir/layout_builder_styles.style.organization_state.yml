@@ -1,0 +1,12 @@
+uuid: f4aee92a-bd3e-491c-8aa4-5b76d49a2c1d
+langcode: en
+status: true
+dependencies: {  }
+id: organization_state
+label: 'Organization State'
+classes: Organization-state
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

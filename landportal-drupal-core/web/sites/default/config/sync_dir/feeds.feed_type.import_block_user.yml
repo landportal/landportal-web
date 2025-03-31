@@ -1,0 +1,79 @@
+uuid: 6cc7af9c-e4d6-49df-924d-03a847ad5b43
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+label: 'Import block user'
+id: import_block_user
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values: {  }
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  user_name:
+    value: 'User Name'
+    label: 'User Name'
+    machine_name: user_name
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  email:
+    value: Email
+    label: Email
+    machine_name: email
+    type: csv
+  active_status:
+    value: 'Active status'
+    label: 'Active status'
+    machine_name: active_status
+    type: csv
+mappings:
+  -
+    target: name
+    map:
+      value: user_name
+    settings: {  }
+    unique: {  }
+  -
+    target: uid
+    map:
+      value: uid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: mail
+    map:
+      value: email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: status
+    map:
+      value: active_status
+    settings: {  }

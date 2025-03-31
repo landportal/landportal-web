@@ -1,0 +1,59 @@
+label: Ficheiros
+display:
+  default:
+    display_title: 'Por defeito'
+    display_options:
+      title: Ficheiros
+      fields:
+        filename:
+          label: Nome
+          separator: ', '
+        filesize:
+          label: Tamanho
+        status:
+          label: Estado
+          settings:
+            format_custom_false: Temporário
+        changed:
+          label: 'Data alterada'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        filename:
+          expose:
+            label: 'Nome do ficheiro'
+        status:
+          expose:
+            label: Estado
+  page_1:
+    display_options:
+      menu:
+        title: Ficheiros
+  page_2:
+    display_options:
+      fields:
+        entity_label:
+          label: Entidade
+        type:
+          label: 'Tipo de entidade'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      arguments:
+        fid:
+          exception:
+            title: Todos

@@ -1,0 +1,8 @@
+uuid: b07641a5-39b8-497e-8500-d88bfa64f767
+langcode: en
+status: true
+dependencies: {  }
+id: issues_landing_page
+label: 'Issues Landing Page'
+revision: 0
+description: ''

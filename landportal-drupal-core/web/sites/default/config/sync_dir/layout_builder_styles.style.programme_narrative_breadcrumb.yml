@@ -1,0 +1,12 @@
+uuid: 5e39e37e-e4e8-4db3-af51-292da53ab7cc
+langcode: en
+status: true
+dependencies: {  }
+id: programme_narrative_breadcrumb
+label: 'Programme Narrative Breadcrumb'
+classes: programme-narrative-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

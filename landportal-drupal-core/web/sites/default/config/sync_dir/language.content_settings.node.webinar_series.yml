@@ -1,0 +1,18 @@
+uuid: 71941958-cb50-411a-8b97-159fb9d49b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webinar_series
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.webinar_series
+target_entity_type_id: node
+target_bundle: webinar_series
+default_langcode: site_default
+language_alterable: true

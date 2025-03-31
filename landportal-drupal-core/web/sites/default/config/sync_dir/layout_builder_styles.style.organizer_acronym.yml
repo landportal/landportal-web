@@ -1,0 +1,12 @@
+uuid: 95346c66-7654-42af-9918-e192bc25ea91
+langcode: en
+status: true
+dependencies: {  }
+id: organizer_acronym
+label: 'Organizer Acronym'
+classes: organizer-acronym
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,29 @@
+uuid: bcf83383-b571-436f-bacb-bc52967d9865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_topics
+    - node.type.sdgi
+    - taxonomy.vocabulary.concepts
+id: node.sdgi.field_related_topics
+field_name: field_related_topics
+entity_type: node
+bundle: sdgi
+label: 'Related concepts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

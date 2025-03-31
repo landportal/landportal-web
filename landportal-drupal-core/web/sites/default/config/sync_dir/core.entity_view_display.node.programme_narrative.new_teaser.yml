@@ -1,0 +1,218 @@
+uuid: e8c9bb39-9a98-41b5-9628-7f77e0b2f86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.new_teaser
+    - field.field.node.programme_narrative.additional
+    - field.field.node.programme_narrative.body
+    - field.field.node.programme_narrative.feeds_item
+    - field.field.node.programme_narrative.link_to_narrative
+    - field.field.node.programme_narrative.main_image
+    - field.field.node.programme_narrative.parent_programme
+    - field.field.node.programme_narrative.quote
+    - field.field.node.programme_narrative.sub_menu
+    - field.field.node.programme_narrative.sub_menu_children
+    - field.field.node.programme_narrative.sub_menu_parent
+    - node.type.programme_narrative
+  module:
+    - image
+    - layout_builder
+    - options
+    - text
+    - user
+  theme:
+    - landportal
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: section_onecol
+        layout_settings:
+          label: 'User content type'
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - user_content_title_teaser
+        components:
+          a7080434-971c-4edf-96d3-70f963413f44:
+            uuid: a7080434-971c-4edf-96d3-70f963413f44
+            region: content
+            configuration:
+              id: 'field_block:node:programme_narrative:type'
+              label: 'Content type'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - user_content_type_style
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'User programme narrative'
+          context_mapping: {  }
+          column_widths: 25-75
+          layout_builder_styles_style:
+            - user_full_content_teaser
+        components:
+          85b9fde8-61af-42f4-a3da-790b37a85278:
+            uuid: 85b9fde8-61af-42f4-a3da-790b37a85278
+            region: first
+            configuration:
+              id: 'field_block:node:programme_narrative:main_image'
+              label: 'Main image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          1fe6f039-d7c6-4e45-ba89-c5f6958c942d:
+            uuid: 1fe6f039-d7c6-4e45-ba89-c5f6958c942d
+            region: second
+            configuration:
+              id: 'field_block:node:programme_narrative:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_title_style
+          2d3c3e93-b429-4baa-94cf-a1a0c270ddfa:
+            uuid: 2d3c3e93-b429-4baa-94cf-a1a0c270ddfa
+            region: second
+            configuration:
+              id: 'field_block:node:programme_narrative:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - user_teaser_description_style
+        third_party_settings: {  }
+id: node.programme_narrative.new_teaser
+targetEntityType: node
+bundle: programme_narrative
+mode: new_teaser
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  link_to_narrative:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  main_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  parent_programme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  quote:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  sub_menu:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  sub_menu_children:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  sub_menu_parent:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+hidden:
+  additional: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  search_api_excerpt: true

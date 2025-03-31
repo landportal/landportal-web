@@ -1,0 +1,14 @@
+uuid: 3623dea0-ff0e-464f-aa1d-1bdd26c570c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_story
+  module:
+    - node
+id: node.impact_story
+targetEntityType: node
+bundle: impact_story
+types:
+  - ''
+fieldMappings: {  }

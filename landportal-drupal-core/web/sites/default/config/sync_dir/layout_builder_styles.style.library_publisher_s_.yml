@@ -1,0 +1,12 @@
+uuid: 5841e823-7a4d-43e1-870d-3db6650630ca
+langcode: en
+status: true
+dependencies: {  }
+id: library_publisher_s_
+label: 'Library Publisher(s)'
+classes: library-publisher(s)
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

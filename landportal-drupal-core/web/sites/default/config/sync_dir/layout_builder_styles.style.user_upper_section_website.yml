@@ -1,0 +1,12 @@
+uuid: 29e30f30-1d5b-4272-b707-626c59bc2920
+langcode: en
+status: true
+dependencies: {  }
+id: user_upper_section_website
+label: 'User Upper Section Website'
+classes: user-upper-section-website
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

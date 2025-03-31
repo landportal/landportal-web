@@ -1,0 +1,175 @@
+uuid: ecdcd6e5-f8f6-4c12-9772-2e83e0faff94
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.body
+    - field.field.node.project.code
+    - field.field.node.project.contact_field
+    - field.field.node.project.data_curation
+    - field.field.node.project.feeds_item
+    - field.field.node.project.field_currency
+    - field.field.node.project.field_doc_provider
+    - field.field.node.project.field_donors
+    - field.field.node.project.field_implementers
+    - field.field.node.project.field_noderef
+    - field.field.node.project.field_project_duration
+    - field.field.node.project.field_related_donor
+    - field.field.node.project.field_related_impact
+    - field.field.node.project.field_related_organization
+    - field.field.node.project.field_related_provider
+    - field.field.node.project.field_related_resources
+    - field.field.node.project.field_resources_library
+    - field.field.node.project.field_value_decimal
+    - field.field.node.project.official_website
+    - field.field.node.project.programme
+    - field.field.node.project.project_concepts
+    - field.field.node.project.project_image
+    - field.field.node.project.project_logo
+    - field.field.node.project.project_regions
+    - field.field.node.project.project_themes
+    - field.field.node.project.related_projects
+    - field.field.node.project.source
+    - field.field.node.project.testing
+    - node.type.project
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          28db9c2a-0f4d-49a2-bb01-6b8f7f6871c7:
+            uuid: 28db9c2a-0f4d-49a2-bb01-6b8f7f6871c7
+            region: content
+            configuration:
+              id: 'field_block:node:project:project_image'
+              label: 'Page banner'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: large_480x480_
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          360b81d6-040b-436f-ad3c-36bafd91805c:
+            uuid: 360b81d6-040b-436f-ad3c-36bafd91805c
+            region: content
+            configuration:
+              id: 'field_block:node:project:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - title
+          e672ddca-119a-4850-9c0a-c72b331153ca:
+            uuid: e672ddca-119a-4850-9c0a-c72b331153ca
+            region: content
+            configuration:
+              id: 'field_block:node:project:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - dataset_description
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  project_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  code: true
+  contact_field: true
+  data_curation: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_currency: true
+  field_doc_provider: true
+  field_donors: true
+  field_implementers: true
+  field_noderef: true
+  field_project_duration: true
+  field_related_donor: true
+  field_related_impact: true
+  field_related_organization: true
+  field_related_provider: true
+  field_related_resources: true
+  field_resources_library: true
+  field_value_decimal: true
+  langcode: true
+  links: true
+  official_website: true
+  programme: true
+  project_concepts: true
+  project_logo: true
+  project_regions: true
+  project_themes: true
+  related_projects: true
+  search_api_excerpt: true
+  source: true
+  testing: true

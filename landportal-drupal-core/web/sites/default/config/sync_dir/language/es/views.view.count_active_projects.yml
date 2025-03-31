@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      header:
+        result:
+          content: '<div style="background-color:#E8E7E1;"><strong>@total</strong><br/> <span> proyectos activos </span><p>actualmente en ejecución en todo el mundo</p></div>'
+  block_2:
+    display_options:
+      header:
+        result:
+          content: '<div style="background-color:#E8E7E1;"><strong>@total </strong><br/><span>proyectos en total</span><p>en la mayor base de datos mundial de proyectos relacionados con la tierra</p></div>'

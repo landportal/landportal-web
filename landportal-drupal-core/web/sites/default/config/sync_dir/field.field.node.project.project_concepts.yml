@@ -1,0 +1,29 @@
+uuid: 522367ac-0aa9-4276-a8c4-4d30f9ec9723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.project_concepts
+    - node.type.project
+    - taxonomy.vocabulary.concepts
+id: node.project.project_concepts
+field_name: project_concepts
+entity_type: node
+bundle: project
+label: 'Related concepts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

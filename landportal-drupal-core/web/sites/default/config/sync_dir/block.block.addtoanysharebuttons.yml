@@ -1,0 +1,30 @@
+uuid: be3c88f9-1361-45f3-82cd-b3a7ba16cc36
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+    - system
+  theme:
+    - landportal
+id: addtoanysharebuttons
+theme: landportal
+region: content
+weight: 2
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Share this page'
+  label_display: visible
+  provider: addtoany
+  context_mapping: {  }
+  link_url: ''
+  link_title: ''
+  buttons_size: ''
+  addtoany_html: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/library/search\r\n/join-the-debate/webinars\r\n/join-the-debate/virtual-conferences-workshops\r\n/join-debate\r\n/join-the-debate/in-person-events\r\n/ourlandourstory\r\n/book/sdgs\r\n/voc/campaigns/our-land-our-story\r\n/book/sdgs/about\r\n/organizations\r\n/donate\r\n/whatwedo"

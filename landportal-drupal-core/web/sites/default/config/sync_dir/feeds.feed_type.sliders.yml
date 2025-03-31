@@ -1,0 +1,155 @@
+uuid: 86e65f11-0da3-4523-8abb-678823b7d829
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sliders.body
+    - field.field.node.sliders.field_type
+    - node.type.sliders
+  module:
+    - node
+label: Sliders
+id: sliders
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: sliders
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+  language:
+    value: language
+    label: language
+    machine_name: language
+    type: csv
+  type:
+    value: type
+    label: type
+    machine_name: type
+    type: csv
+  type1:
+    value: type1
+    label: type1
+    machine_name: type1
+    type: csv
+  type2:
+    value: type2
+    label: type2
+    machine_name: type2
+    type: csv
+  type3:
+    value: type3
+    label: type3
+    machine_name: type3
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: field_type
+    map:
+      target_id: type
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_type
+    map:
+      target_id: type1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_type
+    map:
+      target_id: type2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_type
+    map:
+      target_id: type3
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false

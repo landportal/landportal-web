@@ -1,0 +1,12 @@
+uuid: f27f1877-f3c1-4ef2-9874-f6beda008399
+langcode: en
+status: true
+dependencies: {  }
+id: provider_in_data
+label: 'Provider In Data'
+classes: provider-in-data
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

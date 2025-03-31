@@ -1,0 +1,20 @@
+uuid: 15c683ee-aa23-4c74-94d6-1ed5b2f6d06e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.related_concepts
+field_name: related_concepts
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

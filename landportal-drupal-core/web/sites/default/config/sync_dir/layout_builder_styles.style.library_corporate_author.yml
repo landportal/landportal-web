@@ -1,0 +1,12 @@
+uuid: 42ceecf6-0058-4fd5-9573-3d81cd14fdf3
+langcode: en
+status: true
+dependencies: {  }
+id: library_corporate_author
+label: 'Library Corporate Author'
+classes: library-corporate-author
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

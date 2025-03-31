@@ -1,0 +1,23 @@
+uuid: b88e3240-ac83-468b-93a7-9dce95c04429
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sdgs_type
+    - taxonomy.vocabulary.sdgs
+  module:
+    - options
+id: taxonomy_term.sdgs.field_sdgs_type
+field_name: field_sdgs_type
+entity_type: taxonomy_term
+bundle: sdgs
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Indicator
+default_value_callback: ''
+settings: {  }
+field_type: list_string

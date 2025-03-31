@@ -1,0 +1,23 @@
+uuid: 4cde9a9a-0604-4ca5-835e-479e1b8b3461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.programme_narrative
+  module:
+    - feeds
+id: node.programme_narrative.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: programme_narrative
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

@@ -1,0 +1,167 @@
+uuid: 10996e00-b766-4e9d-b98c-795c0c50939f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.organization.title
+    - field.field.node.organization.field_language
+    - node.type.organization
+  module:
+    - node
+label: 'Import Organization Working Languages'
+id: import_organization_working_lang
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: organization
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  working_languages:
+    value: 'Working languages'
+    label: 'Working languages'
+    machine_name: working_languages
+    type: csv
+  working_languages1:
+    value: 'Working languages1'
+    label: 'Working languages1'
+    machine_name: working_languages1
+    type: csv
+  working_languages2:
+    value: 'Working languages2'
+    label: 'Working languages2'
+    machine_name: working_languages2
+    type: csv
+  working_languages3:
+    value: 'Working languages3'
+    label: 'Working languages3'
+    machine_name: working_languages3
+    type: csv
+  working_languages4:
+    value: 'Working languages4'
+    label: 'Working languages4'
+    machine_name: working_languages4
+    type: csv
+  working_languages5:
+    value: 'Working languages5'
+    label: 'Working languages5'
+    machine_name: working_languages5
+    type: csv
+  working_languages6:
+    value: 'Working languages6'
+    label: 'Working languages6'
+    machine_name: working_languages6
+    type: csv
+  working_languages7:
+    value: 'Working languages7'
+    label: 'Working languages7'
+    machine_name: working_languages7
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: field_language
+    map:
+      target_id: working_languages
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages1
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages2
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages3
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages4
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages5
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages6
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: working_languages7
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0

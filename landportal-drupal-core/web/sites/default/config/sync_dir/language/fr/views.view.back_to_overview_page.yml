@@ -1,0 +1,9 @@
+display:
+  default:
+    display_options:
+      title: 'Retour à la page vue d''ensemble'
+      fields:
+        thematic_narrative:
+          alter:
+            text: '<a href="/taxonomy/term/{{ thematic_narrative__target_id }}" class="back-to-overview-issue">{{ ''Retour à la page vue d\''ensemble''|t }}</a>'
+label: 'Retour à la page vue d''ensemble'

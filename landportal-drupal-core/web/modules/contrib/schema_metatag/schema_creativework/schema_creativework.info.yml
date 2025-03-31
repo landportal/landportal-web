@@ -1,0 +1,7 @@
+name: Schema.org CreativeWork
+type: module
+description: 'Adds Schema.org/CreativeWork to the JSON LD array. Creates CreativeWork, BlogPosting, SocialMediaPosting, Report, ScholarlyCreativeWork, TechCreativeWork or APIReference.'
+core_version_requirement: ^9 || ^10 || ^11
+package: SEO
+dependencies:
+  - schema_metatag:schema_metatag

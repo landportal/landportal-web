@@ -1,0 +1,24 @@
+uuid: abc4f955-ce20-4d1d-a0ad-adb1a8fbdd4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.geographical_scope
+  module:
+    - facets
+  theme:
+    - landportal
+id: geographicalscope
+theme: landportal
+region: content
+weight: -16
+provider: null
+plugin: 'facet_block:geographical_scope'
+settings:
+  id: 'facet_block:geographical_scope'
+  label: 'By Geographical Scope'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: geographicalscope
+visibility: {  }

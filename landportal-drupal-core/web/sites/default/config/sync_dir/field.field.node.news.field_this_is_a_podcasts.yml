@@ -1,0 +1,21 @@
+uuid: d08bc841-4939-4bd6-9287-b86d2966b7a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_this_is_a_podcasts
+    - node.type.news
+id: node.news.field_this_is_a_podcasts
+field_name: field_this_is_a_podcasts
+entity_type: node
+bundle: news
+label: 'Is this news a podcast?'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

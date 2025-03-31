@@ -1,0 +1,18 @@
+uuid: 10a1ebcc-f8f4-429f-801c-647026c632e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programme
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.programme
+target_entity_type_id: taxonomy_term
+target_bundle: programme
+default_langcode: und
+language_alterable: true

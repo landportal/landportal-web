@@ -1,0 +1,20 @@
+lp-related-content-style:
+  version: 1.x
+  css:
+    layout:
+      css/lp-related-content.css: {}
+lp-related-content:
+  js:
+    js/lp-related-content.js: {}
+  dependencies:
+    - core/jquery
+lp-related-content-edit:
+  js:
+    js/lp-related-content-edit.js: {}
+  dependencies:
+    - core/jquery
+sweat-alert-lib:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery

@@ -1,0 +1,51 @@
+.project-card {
+  background-color: clr(background-dark);
+  color: clr(text-light);
+
+  &__heading {
+    margin-bottom: $space_one-half;
+
+    .heading__link {
+      @include link;
+
+      color: clr(community);
+      &:hover {
+        color: clr(community);
+      }
+    }
+  }
+
+  img.image {
+    width: 100%;
+  }
+
+  &__key_data {
+    color: clr(text-muted);
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.projects-block {
+  background-color: clr(background-dark);
+  color: clr(text-light);
+
+  &__project-card {
+    flex: 1 1 100%;
+    margin-bottom: $space-double;
+
+    @include large {
+      margin: 0 $space-double 0 0;
+      flex-basis: 30%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img.image {
+      width: 100%;
+    }
+  }
+}

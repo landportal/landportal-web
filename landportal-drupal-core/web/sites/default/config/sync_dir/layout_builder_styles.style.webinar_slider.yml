@@ -1,0 +1,12 @@
+uuid: 4c6029c9-3460-47c1-9a4f-053665a9fa91
+langcode: en
+status: true
+dependencies: {  }
+id: webinar_slider
+label: 'Webinar Slider'
+classes: webinar-slider
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

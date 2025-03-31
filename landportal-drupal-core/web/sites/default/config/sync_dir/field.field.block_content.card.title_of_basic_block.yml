@@ -1,0 +1,21 @@
+uuid: 9415ba39-efc3-4277-9594-cd80af492690
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.title_of_basic_block
+  module:
+    - text
+id: block_content.card.title_of_basic_block
+field_name: title_of_basic_block
+entity_type: block_content
+bundle: card
+label: 'Title of Basic Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

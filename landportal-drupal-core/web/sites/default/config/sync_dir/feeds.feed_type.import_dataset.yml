@@ -1,0 +1,168 @@
+uuid: 6dc70180-ca8b-4700-9281-c8bb4d2bb97a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.datasets.field_dataset_description
+    - field.field.taxonomy_term.datasets.field_doc_licencing
+    - field.field.taxonomy_term.datasets.field_id
+    - field.field.taxonomy_term.datasets.field_image
+    - field.field.taxonomy_term.datasets.field_license_text
+    - field.field.taxonomy_term.datasets.field_orgref
+    - field.field.taxonomy_term.datasets.field_type_of_data
+    - taxonomy.vocabulary.datasets
+  module:
+    - taxonomy
+label: 'Import Dataset'
+id: import_dataset
+description: 'Import Dataset Here'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: datasets
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  tid:
+    value: tid
+    label: tid
+    machine_name: tid
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  alt:
+    value: alt
+    label: alt
+    machine_name: alt
+    type: csv
+  dataset_description:
+    value: 'Dataset description'
+    label: 'Dataset description'
+    machine_name: dataset_description
+    type: csv
+  id:
+    value: ID
+    label: ID
+    machine_name: id
+    type: csv
+  copyright_details:
+    value: 'Copyright details'
+    label: 'Copyright details'
+    machine_name: copyright_details
+    type: csv
+  type_of_data:
+    value: 'Type of Data'
+    label: 'Type of Data'
+    machine_name: type_of_data
+    type: csv
+  acronym:
+    value: Acronym
+    label: Acronym
+    machine_name: acronym
+    type: csv
+  partners:
+    value: Partners
+    label: Partners
+    machine_name: partners
+    type: csv
+mappings:
+  -
+    target: tid
+    map:
+      value: tid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: alt
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_dataset_description
+    map:
+      value: dataset_description
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_id
+    map:
+      value: id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_license_text
+    map:
+      value: copyright_details
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_type_of_data
+    map:
+      target_id: type_of_data
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_licencing
+    map:
+      target_id: acronym
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_orgref
+    map:
+      target_id: partners
+    settings:
+      language: null
+      reference_by: title
+      autocreate: false
+      feeds_item: false

@@ -1,0 +1,14 @@
+uuid: bd18f64e-feba-4427-979d-1a95465b4002
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.landlibrary_resource_type
+  module:
+    - taxonomy
+id: taxonomy_term.landlibrary_resource_type
+targetEntityType: taxonomy_term
+bundle: landlibrary_resource_type
+types:
+  - ''
+fieldMappings: {  }

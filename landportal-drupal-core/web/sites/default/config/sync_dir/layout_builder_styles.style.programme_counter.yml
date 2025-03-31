@@ -1,0 +1,12 @@
+uuid: 1a324b79-1966-48a2-b91c-e03278eb622b
+langcode: en
+status: true
+dependencies: {  }
+id: programme_counter
+label: 'Programme Counter'
+classes: programme-counter-background
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

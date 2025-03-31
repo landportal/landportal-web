@@ -1,0 +1,24 @@
+uuid: 8def0a2a-9239-4b3f-916e-c873488db733
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.countries
+  module:
+    - facets
+  theme:
+    - landportal
+id: countries
+theme: landportal
+region: sidebar
+weight: -20
+provider: null
+plugin: 'facet_block:countries'
+settings:
+  id: 'facet_block:countries'
+  label: 'Filter by geographical focus:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: countries
+visibility: {  }

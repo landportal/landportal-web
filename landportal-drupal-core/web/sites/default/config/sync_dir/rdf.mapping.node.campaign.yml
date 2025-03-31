@@ -1,0 +1,14 @@
+uuid: 8435da97-dc4d-4984-bd16-5e875719ca60
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+  module:
+    - node
+id: node.campaign
+targetEntityType: node
+bundle: campaign
+types:
+  - ''
+fieldMappings: {  }

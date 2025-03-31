@@ -1,0 +1,12 @@
+uuid: c45f4ac4-95aa-45bc-87a4-9a22dafb2006
+langcode: en
+status: true
+dependencies: {  }
+id: organization_acronym_in_dataset
+label: 'Organization Acronym In Dataset'
+classes: organization-acronym-in-dataset
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

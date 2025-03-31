@@ -1,0 +1,10 @@
+display:
+  country_narratives_featured:
+    display_options:
+      use_more_text: 'Vea todos los últimos portafolios'
+      title: 'Últimos portafolios'
+  country_narratives_page:
+    display_options:
+      header:
+        result:
+          content: 'Mostrando @start - @end de <span class="views-results-total">@total</span>'

@@ -1,0 +1,23 @@
+uuid: fdd95306-2984-4701-a474-227a189b80c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+    - custom_pub.custom_publishing_option.promoted_to_thematic_page
+id: node.event.promoted_to_thematic_page
+field_name: promoted_to_thematic_page
+entity_type: node
+bundle: event
+label: Promoted
+description: 'custom promoted option.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

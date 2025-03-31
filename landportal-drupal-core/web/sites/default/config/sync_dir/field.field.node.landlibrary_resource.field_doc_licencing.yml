@@ -1,0 +1,29 @@
+uuid: 71888cf0-151e-4977-8dd4-ebec1b9c4409
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_licencing
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.licences
+id: node.landlibrary_resource.field_doc_licencing
+field_name: field_doc_licencing
+entity_type: node
+bundle: landlibrary_resource
+label: 'License of the resource'
+description: 'Please enter the license under which the resource is published. If no license is specified in the document, then this means the resource is ''All Rights Reserved''. Please note that this does not apply to the <b>metadata</b> of the resource. <a href="/page/terms-and-conditions-use"  target="_blank">Read more here</a>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licences: licences
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,12 @@
+uuid: dc5e860d-5add-4d7c-a9a6-02d7191c4613
+langcode: en
+status: true
+dependencies: {  }
+id: debate_status_closed
+label: 'Debate status-closed'
+classes: debate-status-closed
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

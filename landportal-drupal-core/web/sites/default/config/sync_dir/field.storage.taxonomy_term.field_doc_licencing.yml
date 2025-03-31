@@ -1,0 +1,19 @@
+uuid: aab7cf3d-2794-4a8f-97f0-f3a4fe405f10
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_doc_licencing
+field_name: field_doc_licencing
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

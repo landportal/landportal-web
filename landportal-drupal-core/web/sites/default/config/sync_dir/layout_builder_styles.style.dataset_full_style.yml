@@ -1,0 +1,12 @@
+uuid: 684ddda8-d4f4-43df-81a6-550b2b618e32
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_full_style
+label: 'Dataset Full Style'
+classes: dataset-full-style
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

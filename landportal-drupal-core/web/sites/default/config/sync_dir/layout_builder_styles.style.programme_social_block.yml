@@ -1,0 +1,12 @@
+uuid: 63fa69c5-a308-48fb-8813-45f3e7c52ee5
+langcode: en
+status: true
+dependencies: {  }
+id: programme_social_block
+label: 'Programme social block'
+classes: programme-social-block
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

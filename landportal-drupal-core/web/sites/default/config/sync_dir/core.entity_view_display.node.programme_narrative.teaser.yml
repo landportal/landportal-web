@@ -1,0 +1,54 @@
+uuid: 977a6d52-dd92-4b85-a4a1-9cfc1ec4c174
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.programme_narrative.additional
+    - field.field.node.programme_narrative.body
+    - field.field.node.programme_narrative.feeds_item
+    - field.field.node.programme_narrative.link_to_narrative
+    - field.field.node.programme_narrative.main_image
+    - field.field.node.programme_narrative.parent_programme
+    - field.field.node.programme_narrative.quote
+    - field.field.node.programme_narrative.sub_menu
+    - field.field.node.programme_narrative.sub_menu_children
+    - field.field.node.programme_narrative.sub_menu_parent
+    - node.type.programme_narrative
+  module:
+    - text
+    - user
+id: node.programme_narrative.teaser
+targetEntityType: node
+bundle: programme_narrative
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  additional: true
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  langcode: true
+  link_to_narrative: true
+  main_image: true
+  parent_programme: true
+  quote: true
+  search_api_excerpt: true
+  sub_menu: true
+  sub_menu_children: true
+  sub_menu_parent: true

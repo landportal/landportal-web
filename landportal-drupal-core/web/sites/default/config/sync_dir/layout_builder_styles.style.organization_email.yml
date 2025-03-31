@@ -1,0 +1,12 @@
+uuid: 220c541a-8ad7-410f-8946-566f9b6c204a
+langcode: en
+status: true
+dependencies: {  }
+id: organization_email
+label: 'Organization Email'
+classes: organization-email
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

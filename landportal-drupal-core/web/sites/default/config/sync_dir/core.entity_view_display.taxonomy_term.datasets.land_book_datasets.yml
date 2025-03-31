@@ -1,0 +1,182 @@
+uuid: 96e093f0-717e-4c13-9b8d-4a77d43a0b35
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - core.entity_view_mode.taxonomy_term.land_book_datasets
+    - field.field.taxonomy_term.datasets.feeds_item
+    - field.field.taxonomy_term.datasets.field_accordian
+    - field.field.taxonomy_term.datasets.field_dataset_banner
+    - field.field.taxonomy_term.datasets.field_dataset_description
+    - field.field.taxonomy_term.datasets.field_doc_licencing
+    - field.field.taxonomy_term.datasets.field_donors
+    - field.field.taxonomy_term.datasets.field_download_dataset
+    - field.field.taxonomy_term.datasets.field_id
+    - field.field.taxonomy_term.datasets.field_image
+    - field.field.taxonomy_term.datasets.field_indicators
+    - field.field.taxonomy_term.datasets.field_license_text
+    - field.field.taxonomy_term.datasets.field_orgref
+    - field.field.taxonomy_term.datasets.field_partners
+    - field.field.taxonomy_term.datasets.field_related_themes
+    - field.field.taxonomy_term.datasets.field_related_topic
+    - field.field.taxonomy_term.datasets.field_type_of_data
+    - taxonomy.vocabulary.datasets
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e1e6d868-736a-4c1b-a455-57d2a7a4917e:
+            uuid: e1e6d868-736a-4c1b-a455-57d2a7a4917e
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:datasets:field_image'
+              label: Logo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          fe0d7b60-84c3-40b4-932f-35af739e821c:
+            uuid: fe0d7b60-84c3-40b4-932f-35af739e821c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:datasets:field_dataset_description'
+              label: 'Dataset description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - data_description
+          db5796ed-3de8-4707-ad61-1406f8d3f07f:
+            uuid: db5796ed-3de8-4707-ad61-1406f8d3f07f
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:datasets:field_orgref'
+              label: 'Dataset provider'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - provider_in_data
+          a10feec4-27b2-4d4e-a9b9-807e1af302a5:
+            uuid: a10feec4-27b2-4d4e-a9b9-807e1af302a5
+            region: content
+            configuration:
+              id: 'inline_block:card'
+              label: 'Dataset provider:'
+              label_display: visible
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 49
+              block_serialized: null
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - data_landing_page_provider
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: taxonomy_term.datasets.land_book_datasets
+targetEntityType: taxonomy_term
+bundle: datasets
+mode: land_book_datasets
+content:
+  field_dataset_description:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 400
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_orgref:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_accordian: true
+  field_dataset_banner: true
+  field_doc_licencing: true
+  field_donors: true
+  field_download_dataset: true
+  field_id: true
+  field_indicators: true
+  field_license_text: true
+  field_partners: true
+  field_related_themes: true
+  field_related_topic: true
+  field_type_of_data: true
+  langcode: true
+  search_api_excerpt: true

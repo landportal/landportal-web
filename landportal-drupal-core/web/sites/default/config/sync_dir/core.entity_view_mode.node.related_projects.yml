@@ -1,0 +1,10 @@
+uuid: b49ea8e3-7538-4531-b503-ece38a063fea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.related_projects
+label: 'Related Projects'
+targetEntityType: node
+cache: true

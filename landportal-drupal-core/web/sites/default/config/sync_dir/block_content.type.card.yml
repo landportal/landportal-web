@@ -1,0 +1,8 @@
+uuid: bac80d55-c733-4797-8a28-c2a4b045276b
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: 'Basic block'
+revision: 0
+description: ''

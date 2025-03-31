@@ -1,0 +1,18 @@
+uuid: eda26d54-e990-4ffc-a970-dff1d3f646d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_relation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.organization_relation
+target_entity_type_id: taxonomy_term
+target_bundle: organization_relation
+default_langcode: site_default
+language_alterable: false

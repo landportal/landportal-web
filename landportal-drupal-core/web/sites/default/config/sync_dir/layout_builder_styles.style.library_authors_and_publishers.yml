@@ -1,0 +1,12 @@
+uuid: fa2292c3-15c2-4003-b435-3034693d3d1b
+langcode: en
+status: true
+dependencies: {  }
+id: library_authors_and_publishers
+label: 'Library Authors and Publishers'
+classes: library-authors-and-publishers
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

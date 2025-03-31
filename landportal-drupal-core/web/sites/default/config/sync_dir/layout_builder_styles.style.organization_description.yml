@@ -1,0 +1,12 @@
+uuid: 60872640-1b52-4fd8-840d-8b782c093361
+langcode: en
+status: true
+dependencies: {  }
+id: organization_description
+label: 'Organization Description'
+classes: organization_description
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

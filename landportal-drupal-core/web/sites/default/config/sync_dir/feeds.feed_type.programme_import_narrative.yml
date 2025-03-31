@@ -1,0 +1,139 @@
+uuid: 6a96b3fa-7edd-4e08-800e-30022d23469c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.programme_narrative.body
+    - field.field.node.programme_narrative.link_to_narrative
+    - field.field.node.programme_narrative.quote
+    - node.type.programme_narrative
+  module:
+    - node
+label: 'programme import narrative'
+id: programme_import_narrative
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: programme_narrative
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  link_to_narrative:
+    value: 'link to narrative'
+    label: 'link to narrative'
+    machine_name: link_to_narrative
+    type: csv
+  quote:
+    value: quote
+    label: quote
+    machine_name: quote
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  created:
+    value: created
+    label: created
+    machine_name: created
+    type: csv
+  language:
+    value: language
+    label: language
+    machine_name: language
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: link_to_narrative
+    map:
+      target_id: link_to_narrative
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: quote
+    map:
+      value: quote
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null

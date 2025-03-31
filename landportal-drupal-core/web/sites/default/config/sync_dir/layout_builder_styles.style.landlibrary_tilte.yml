@@ -1,0 +1,12 @@
+uuid: 022b979b-76ca-4220-97d9-1c65fd356f0b
+langcode: en
+status: true
+dependencies: {  }
+id: landlibrary_tilte
+label: 'LandLibrary Tilte'
+classes: library-tilte
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

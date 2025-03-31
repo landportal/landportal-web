@@ -1,0 +1,12 @@
+uuid: 7f1f3282-9eb8-48c7-91d2-9e42010d03fa
+langcode: en
+status: true
+dependencies: {  }
+id: geographical_focus
+label: 'Geographical focus'
+classes: geographical-focus
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

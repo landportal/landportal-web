@@ -1,0 +1,19 @@
+uuid: 5b4c42a4-7c6c-421f-acb2-17e628e6d46f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_acronym
+    - taxonomy.vocabulary.licences
+id: taxonomy_term.licences.field_acronym
+field_name: field_acronym
+entity_type: taxonomy_term
+bundle: licences
+label: Acronym
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

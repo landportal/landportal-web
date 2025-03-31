@@ -1,0 +1,564 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Views;
+use Drupal\views\ViewExecutable;
+//Connection Service
+use Drupal\Core\Site\Settings;
+use Solarium\Client;
+use Solarium\Core\Client\Adapter\Curl;
+use Symfony\Component\EventDispatcher\EventDispatcher;
+/**
+ * Implements hook_form_alter().
+ */
+function lp_related_contentedit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    $auth = base64_encode("landportal:landportal");
+    $context = stream_context_create([
+        "http" => [
+            "header" => "Authorization: Basic $auth"
+        ]
+    ]);
+
+
+    $swid_nids_str = "1111111111111";
+    $swid_nids_str_arr = array();
+
+  if (($form_id == 'node_project_edit_form') || ($form_id == 'taxonomy_term_programme_form')) {
+    // Do some stuff.
+    \Drupal::logger('lp_related_content_edit')->notice("workinga");
+    $swid_nid = $form['field_related_impact']['widget'][0]['swid']['#default_value'];
+
+    \Drupal::logger('lp_related_content_edit')->notice("workingb " . $swid_nid);
+
+
+
+    foreach($form['field_related_impact']['widget'] as $key => $field_related_impact_one){
+      if(isset($field_related_impact_one['swid']['#default_value'])){
+        $swid_nid = $field_related_impact_one['swid']['#default_value'];
+        \Drupal::logger('lp_related_content_edit')->notice("Working D " . $swid_nid);
+        if(is_numeric($swid_nid)){
+          $swid_nids_str = $swid_nids_str . "," . $swid_nid;
+          $swid_nids_str_arr['field_related_impact'][$key] = $swid_nid;
+        }
+      }
+    } 
+    foreach($form['field_related_organization']['widget'] as $key => $field_related_organization_one){
+      if(isset($field_related_organization_one['swid']['#default_value'])){
+        $swid_nid = $field_related_organization_one['swid']['#default_value'];
+        if(is_numeric($swid_nid)){
+          $swid_nids_str = $swid_nids_str . "," . $swid_nid;
+          $swid_nids_str_arr['field_related_organization'][$key] = $swid_nid;
+        }
+      }
+    }
+    foreach($form['field_related_resources']['widget'] as $key => $field_related_resources_one){
+      if(isset($field_related_resources_one['swid']['#default_value'])){
+        $swid_nid = $field_related_resources_one['swid']['#default_value'];
+        if(is_numeric($swid_nid)){
+          $swid_nids_str = $swid_nids_str . "," . $swid_nid;
+          $swid_nids_str_arr['field_related_resources'][$key] = $swid_nid;
+        }
+      }
+    }
+    foreach($form['field_related_donor']['widget'] as $key => $field_related_donor_one){
+      if(isset($field_related_donor_one['swid']['#default_value'])){
+        $swid_nid = $field_related_donor_one['swid']['#default_value'];
+        if(is_numeric($swid_nid)){
+          $swid_nids_str = $swid_nids_str . "," . $swid_nid;
+          $swid_nids_str_arr['field_related_donor'][$key] = $swid_nid;
+        }
+      }
+    }
+    foreach($form['field_related_provider']['widget'] as $key => $field_related_provider_one){
+      if(isset($field_related_provider_one['swid']['#default_value'])){
+        $swid_nid = $field_related_provider_one['swid']['#default_value'];
+        if(is_numeric($swid_nid)){
+          $swid_nids_str = $swid_nids_str . "," . $swid_nid;
+          $swid_nids_str_arr['field_related_provider'][$key] = $swid_nid;
+        }
+      }
+    }
+    \Drupal::logger('lp_related_content_edit')->notice("workingc " . $swid_nids_str);
+    $str_general_nids = str_replace(",", " OR item_id:", $swid_nids_str);
+    $str_general_nids = "item_id:" . $str_general_nids;
+
+    \Drupal::logger('str_general_nids')->notice("workingc " . $str_general_nids);
+    \Drupal::logger('lp_related_content_edit')->notice("workingc " . serialize($swid_nids_str_arr));
+
+    //Get Json Url for taxonomy select List.
+    //$country_url = file_get_contents('http://devd7test.landportal.org/view-for-ct-id/' . "113236,113235,113233,101664", false, $context);
+
+/**********************Solr code Start***************************/
+
+///Connecting solr
+
+    try {
+      $adapter = new Curl();
+      $eventDispatcher = new EventDispatcher();
+      $config = [
+        'endpoint' => [
+          'localhost' => [
+            'host' => 'localhost',
+            'port' => '8983',
+            'path' => '/',
+            'core' => 'countries',
+          ],
+        ],
+      ];
+      $client = new Client($adapter, $eventDispatcher, $config);
+    }
+    catch (\Exception $e) {
+      watchdog_exception('facets', $e);
+    }  
+
+//Get organizations record from solr d7 on the basis of node ids string
+    //$index = 'remote_news';
+    $conditions = [];  
+    $fields = []; 
+    $sorts = []; 
+    $num_rows = 400;
+    $items = [];
+
+    try {
+      $query = $client->createSelect();
+
+      // Add the base conditions (index and language), then add custom ones.
+      //$query->createFilterQuery('index')->setQuery('index_id:' . $index);
+
+      foreach ($conditions as $name => $value) {
+        $query->createFilterQuery($name)->setQuery($name . ':' . $value);
+      }
+
+
+      //$general_item_ids = $str_general_nids;
+      $query->createFilterQuery('item_id')->setQuery($str_general_nids);
+      //$query->createFilterQuery('item_id')->setQuery("item_id:112264");
+      // Set the projection of fields to retrieve.
+      if ($fields) {
+        $query->setFields($fields);
+      }
+
+      // The sorts are asc/desc.
+      foreach ($sorts as $name => $value) {
+        $query->addSort($name, $value);
+      }
+
+      // Limit the query.
+      $query->setRows($num_rows);
+
+      $resultsa = $client->select($query);
+      //\Drupal::logger('facetsnewsa')->notice(serialize($resultsa));
+      
+      foreach ($resultsa as $document) {
+        //\Drupal::logger('facetsnewsa_itema')->notice("iqbal is testing");
+        $item = [];
+        foreach ($document as $field => $value) {
+          $item[$field] = $value;
+        }
+        $items[] = $item;
+      }
+      \Drupal::logger('general_item_ids')->notice(serialize($items));
+    }
+    catch (\Exception $e) {
+      watchdog_exception('facetsnew1', $e);
+    }
+//////////Solr code end here    
+    //$object = json_decode($country_url, true);
+    //$content_bodies = $object['nodes'];
+      
+    $content_title_and_body = "test1";
+
+    foreach($items as $key => $content_body){
+      $content_nid = $content_body['item_id'];
+      //$content_nid = $content_body['node']['nid'];
+      foreach($swid_nids_str_arr['field_related_impact'] as $key_local => $swid_local_nid){
+        if($swid_local_nid == $content_nid){ 
+          $content_title_and_body = $content_body['ss_title_field'];
+          //$content_title_and_body = $content_body['node']['title_and_body'];
+          $form['field_related_impact']['widget'][$key_local]['data_container2'] = [
+            '#title' => "Container2",
+            '#type' => 'container',
+            '#attributes' => array(
+              'class' => 'accommodation2',
+            ),
+            '#markup' => '<h1>X</h1>'.$content_title_and_body,
+          ]; 
+        }
+      }     
+    }
+
+    foreach($items as $key => $content_body){
+      $content_nid = $content_body['item_id'];
+      foreach($swid_nids_str_arr['field_related_organization'] as $key_local => $swid_local_nid){
+        if($swid_local_nid == $content_nid){  
+          $content_title_and_body = $content_body['ss_title_field'];
+          $form['field_related_organization']['widget'][$key_local]['data_container2'] = [
+            '#title' => "Container2",
+            '#type' => 'container',
+            '#attributes' => array(
+              'class' => 'accommodation2',
+            ),
+            '#markup' => '<h1>X</h1>' .$content_title_and_body,
+          ]; 
+        }
+      }     
+    } 
+
+    foreach($items as $key => $content_body){
+      $content_nid = $content_body['item_id'];
+      foreach($swid_nids_str_arr['field_related_resources'] as $key_local => $swid_local_nid){
+        if($swid_local_nid == $content_nid){  
+          $content_title_and_body = $content_body['ss_title_field'];
+          $form['field_related_resources']['widget'][$key_local]['data_container2'] = [
+            '#title' => "Container2",
+            '#type' => 'container',
+            '#attributes' => array(
+              'class' => 'accommodation2',
+            ),
+            '#markup' => '<h1>X</h1>' .$content_title_and_body,
+          ]; 
+        }
+      }     
+    }
+    foreach($items as $key => $content_body){
+      $content_nid = $content_body['item_id'];
+      foreach($swid_nids_str_arr['field_related_donor'] as $key_local => $swid_local_nid){
+        if($swid_local_nid == $content_nid){  
+          $content_title_and_body = $content_body['ss_title_field'];
+          $form['field_related_donor']['widget'][$key_local]['data_container2'] = [
+            '#title' => "Container2",
+            '#type' => 'container',
+            '#attributes' => array(
+              'class' => 'accommodation2',
+            ),
+            '#markup' => '<h1>X</h1>' .$content_title_and_body,
+          ]; 
+        }
+      }     
+    }
+    foreach($items as $key => $content_body){
+      $content_nid = $content_body['item_id'];
+      foreach($swid_nids_str_arr['field_related_provider'] as $key_local => $swid_local_nid){
+        if($swid_local_nid == $content_nid){  
+          $content_title_and_body = $content_body['ss_title_field'];
+          $form['field_related_provider']['widget'][$key_local]['data_container2'] = [
+            '#title' => "Container2",
+            '#type' => 'container',
+            '#attributes' => array(
+              'class' => 'accommodation2',
+            ),
+            '#markup' => '<h1>X</h1>' .$content_title_and_body,
+          ]; 
+        }
+      }     
+    }
+  } 
+}
+
+/***************************View Alter Function****************************/
+
+function lp_related_contentedit_views_pre_render(ViewExecutable $view) {
+  if (($view->id() == "iqbal_testing_local_data" && $view->current_display == 'page_1') || ($view->id() == "search_projects_solr" && $view->current_display == 'page_1')) {
+
+    /***adding swid.js file**/
+     $view->element['#attached']['library'][] = 'lp_related_contentedit/swid';
+  }
+}
+
+
+
+
+/********Node Save function*********/
+function lp_related_contentedit_node_presave(\Drupal\Core\Entity\EntityInterface $node) {
+
+  /******Run Only On 'Project' Content Type******/
+  if($node->type->target_id == 'project'){
+
+    /*****this condition is run when node is created.****/
+    if($node->nid->value == null){ 
+
+      $project_country = serialize($node->project_regions->target_id);
+      $project_country_arr = unserialize($project_country);
+
+      $project_concepts = serialize($node->project_concepts->target_id);
+      $project_concepts_arr = unserialize($project_concepts);      
+      
+      $project_title = serialize($node->title->value);
+      $project_title_str = unserialize($project_title);
+
+      $project_body = serialize($node->body->value);
+      $project_body_str = unserialize($project_body);
+      $request_url = 'http://figover.com/djgdjapinms/user/login';
+
+      // User data
+      $user_data = array(
+        'username' => 'iqbaldev1',
+        'password' => 'a@g8ADEFBDMg5$dU8dmPABCD66666666666'
+      );
+
+      // cURL
+      $curl = curl_init();
+      $logged_user_token1 = "";
+      $logged_user_sessionid1 = "";
+      $logged_user_sessionname1 = "";
+      $delete_node_type = "";
+      curl_setopt($curl, CURLOPT_URL, $request_url);
+      curl_setopt($curl, CURLOPT_POST, 1); // Do a regular HTTP POST
+      curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+      curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($user_data)); // Set POST data
+      //curl_setopt($curl, CURLOPT_HEADER, FALSE);  // Ask to not return Header
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+
+      //$response = curl_exec($curl);
+      $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+      \Drupal::logger('Checking Response ')->notice(serialize($response));
+      \Drupal::logger('Checking http ')->notice(serialize($http_code));
+    
+
+      if ($http_code == 200) {
+        \Drupal::logger('Checking Response ')->notice(serialize($response));
+        $response_login_decoded = json_decode($response, true);
+        if(isset($response_login_decoded['sessid']))
+          $logged_user_sessionid1 = $response_login_decoded['sessid'];
+        if(isset($response_login_decoded['session_name']))
+          $logged_user_sessionname1 = $response_login_decoded['session_name'];
+        if(isset($response_login_decoded['token']))
+          $logged_user_token1 = $response_login_decoded['token'];
+      }
+      else {
+        $http_message = curl_error($curl);
+        \Drupal::logger('Checking die condition')->notice('die'. serialize($http_message));
+        //print "ddfg";
+        // Get error msg
+        
+        //die($http_message);
+        
+      }
+      
+///////Login Ends ///////////
+
+///////Node Create Start///////////
+
+      /*
+       * Server REST - nodee.create
+       */
+
+      // REST Server URL
+
+  //////Node Create Start Here /////////////////////
+
+      
+       $request_url = 'http://figover.com/djgdjapinms/node';
+
+      // nodee data
+      $nodee = (object) NULL;
+      //$nodee->title = 'A nodee created with services 3.x and REST server';
+      // $nodee->title_field = "my page 3 title";
+      // $nodee->type = 'page';
+      // $nodee->body['und'][0]['value'] = '<p>my page 3 body</p>';
+
+      $nodee->title_field['und'][0]['value'] = $project_title_str;
+      $nodee->type = 'project';
+
+      \Drupal::logger('project_country_arr ')->notice(serialize($project_country_arr));
+
+      \Drupal::logger('project_concepts_arr ')->notice(serialize($project_concepts_arr));
+
+      //$nodee->body['und'][0]['value'] = '<p>'.$project_body_str.'</p>';
+      $nodee->field_geographical_focus['und']['target_id'] = $project_country_arr;
+      $nodee->field_related_topics['und']['target_id'] = $project_concepts_arr;
+
+      $nodee_data = (array) $nodee;
+
+      $nodee_data_updated = json_encode($nodee_data);
+      //\Drupal::logger('Node Add Array ')->notice(serialize($nodee_data));
+      // Define cookie session
+      $cookie_session = $logged_user_sessionname1 . '=' . $logged_user_sessionid1;
+      // \Drupal::logger('Checking cookies ')->notice(serialize($cookie_session));
+
+      // cURL
+      $curl = curl_init();
+      curl_setopt($curl, CURLOPT_URL, $request_url);
+      curl_setopt($curl, CURLOPT_POST, TRUE); // Do a regular HTTP POST
+      $csrf_new_header = 'X-CSRF-Token: ' . $logged_user_token1;
+      curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json', $csrf_new_header)); // Accept
+      curl_setopt($curl, CURLOPT_POSTFIELDS, $nodee_data_updated); // Set POST data
+      curl_setopt($curl, CURLOPT_HEADER, 0);  // Ask to not return Header
+      curl_setopt($curl, CURLOPT_COOKIE, $cookie_session); // use the previously saved session
+      curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+      //curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+      //curl_setopt($curl, CURLOPT_FAILONERROR, FALSE); //True in prod, false for debugging
+
+      //$response = curl_exec($curl);
+      $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+      // Check if login was successful
+      $node_new_nid = "none";
+      if ($http_code == 200) {
+        // Convert json response as object
+        $nodee = json_decode($response);
+        if(is_object($nodee)){
+          $node_new_nid =  $nodee->nid;
+        }
+      }
+//////Node Create End Here  Here /////////////////////
+
+      if($node_new_nid == "none"){
+        // project not created at drupal 7
+      }
+      else{
+        // Check if drupal 7 node already exist in drupal 9
+        $values = \Drupal::entityQuery('node')->accessCheck(TRUE)->condition('nid', $node_new_nid)->execute();
+        $node_exists = !empty($values);
+        if($node_exists == true){
+          // drupal 7 Node id already exist in drupal 9 so delete the drupal 7 latest project
+  
+          /////////////////////// Start Get drupal 7 old druplicate node object which we will delete///
+          $request_url = 'http://figover.com/djgdjapinms/node/' . $node_new_nid;
+          // cURL
+          $curl = curl_init();
+          curl_setopt($curl, CURLOPT_URL, $request_url);
+          curl_setopt($curl, CURLOPT_POST, FALSE);
+          curl_setopt($curl, CURLOPT_HTTPGET, TRUE);
+          $csrf_new_header = 'X-CSRF-Token: ' . $logged_user_token1;
+          //curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json', $csrf_new_header)); // Accept
+          //curl_setopt($curl, CURLOPT_POSTFIELDS, $nodee_data_updated); // Set POST data
+          curl_setopt($curl, CURLOPT_HEADER, 0);  // Ask to not return Header
+          curl_setopt($curl, CURLOPT_COOKIE, $cookie_session); // use the previously saved session
+          curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+          //curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+          //curl_setopt($curl, CURLOPT_FAILONERROR, FALSE); //True in prod, false for debugging
+
+         // $response = curl_exec($curl);
+          //\Drupal::logger('get_project_node_object1')->notice(serialize($response));
+          $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+          //\Drupal::logger('get_project_node_object2')->notice(serialize($http_code));
+          // Check if login was successful
+          if ($http_code == 200) {
+            // Convert json response as object
+            $nodee = json_decode($response);
+            //\Drupal::logger('get_project_node_object3')->notice(serialize($nodee));
+            if(is_object($nodee)){
+              //$node_new_nid =  $nodee->nid;
+              //\Drupal::logger('get_project_node_object4')->notice(serialize($nodee));
+              $delete_node_type = $nodee->type;
+              \Drupal::logger('get_project_node_object1')->notice(serialize($delete_node_type));
+            }
+          }
+
+          //////////End Get drupal 7 old druplicate node object which we will delete/////////////////
+
+
+         // Check content type before node delete
+          if($delete_node_type == "project"){
+            //////////Node Delete code start here //////////////////
+            \Drupal::logger('project_DELETE_node')->notice(serialize($node_new_nid));
+           $request_url = 'http://figover.com/djgdjapinms/node/' . $node_new_nid;
+            // Define cookie session
+            //$cookie_session = $logged_user_sessionname1 . '=' . $logged_user_sessionid1;
+
+            // cURL
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_URL, $request_url);
+            curl_setopt($curl, CURLOPT_POST, FALSE);
+            curl_setopt($curl, CURLOPT_HTTPGET, FALSE);
+            curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
+            $csrf_new_header = 'X-CSRF-Token: ' . $logged_user_token1;
+            curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json', $csrf_new_header)); // Accept
+            curl_setopt($curl, CURLOPT_HEADER, 0);  // Ask to not return Header
+            curl_setopt($curl, CURLOPT_COOKIE, $cookie_session); // use the previously saved session
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+            //$response = curl_exec($curl);
+            $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+            \Drupal::logger('project_DELETE_response')->notice(serialize($response));
+            \Drupal::logger('project_http_code')->notice(serialize($http_code));
+            // Check if login was successful
+            //$node_new_nid = "none";
+            if ($http_code == 200) {
+
+            }
+            //////////Node Delete code end here //////////////////
+          }
+        
+        
+            
+        /// Get Next top node id in drupal 9 website 
+        
+          $database = \Drupal::database();
+          $query = $database->query("SELECT nid FROM {node} ORDER BY nid DESC LIMIT 1 OFFSET 0");
+          $result = $query->fetchAll();
+          if(is_array($result)){
+            $result_obj = $result[0];
+            if(is_object($result_obj)){
+              $top_drupal9_nid = $result_obj->nid;
+              if(is_numeric($top_drupal9_nid)){
+                $next_drupal9_nid = $top_drupal9_nid + 1;
+                // Create drupal 7 node with custom nid which is next_drupal9_nid in drupal 9 
+  //////Node Create with custom nid which is next_drupal9_nid in drupal 9 Start Here /////////////////////
+
+      
+                $request_url = 'http://figover.com/djgdjapinms/node';
+
+                // nodee data
+                $nodee = (object) NULL;
+
+                $nodee->title_field['und'][0]['value'] = $project_title_str;
+                $nodee->type = 'project';
+                $nodee->custom_project_nid_field = $next_drupal9_nid;
+                //$nodee->body['und'][0]['value'] = '<p>'.$project_body_str.'</p>';
+                $nodee->field_geographical_focus['und']['target_id'] = $project_country_arr;
+                $nodee->field_related_topics['und']['target_id'] = $project_concepts_arr;
+
+                $nodee_data = (array) $nodee;
+
+                $nodee_data_updated = json_encode($nodee_data);
+                //\Drupal::logger('Node Add Array ')->notice(serialize($nodee_data));
+                // Define cookie session
+                //$cookie_session = $logged_user_sessionname1 . '=' . $logged_user_sessionid1;
+                // \Drupal::logger('Checking cookies ')->notice(serialize($cookie_session));
+
+                // cURL
+                $curl = curl_init();
+                curl_setopt($curl, CURLOPT_URL, $request_url);
+                curl_setopt($curl, CURLOPT_POST, TRUE); // Do a regular HTTP POST
+                $csrf_new_header = 'X-CSRF-Token: ' . $logged_user_token1;
+                curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json', $csrf_new_header)); // Accept
+                curl_setopt($curl, CURLOPT_POSTFIELDS, $nodee_data_updated); // Set POST data
+                curl_setopt($curl, CURLOPT_HEADER, 0);  // Ask to not return Header
+                curl_setopt($curl, CURLOPT_COOKIE, $cookie_session); // use the previously saved session
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+                //$response = curl_exec($curl);
+                $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+                // Check if node creation was successful
+                if ($http_code == 200) {
+                  // Convert json response as object
+                  $nodee_drupal7 = json_decode($response);
+                  if(is_object($nodee_drupal7)){
+                    // Assign drupal 7 newly created node id to drupal 9
+                    $node->nid->value = $next_drupal9_nid;
+                  }
+                }
+//////Node Create with custom nid which is next_drupal9_nid in drupal 9  End Here  Here /////////////////////
+
+
+              }   
+            }  
+          }
+          
+          // Add project in drupal 7 with same node id as in drupal 9 new next nid 
+
+        }
+        else{
+          // drupal 7 Node id does not exist in drupal 9 so create project with drupal 7 nid
+          $node->nid->value = $node_new_nid;
+        }
+        // project created at drupal 7
+        
+        //\Drupal::logger('project_node_id')->notice(serialize($node_new_nid));
+      }
+/////Node Create End here ////////
+
+    }
+  }
+}

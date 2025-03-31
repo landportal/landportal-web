@@ -1,0 +1,24 @@
+uuid: 96dfb3f6-e803-415d-b977-ebec41d4bffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_languages
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrlanguages
+theme: landportal
+region: sidebar
+weight: -22
+provider: null
+plugin: 'facet_block:solr_languages'
+settings:
+  id: 'facet_block:solr_languages'
+  label: 'Filter by resource language:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrlanguages
+visibility: {  }

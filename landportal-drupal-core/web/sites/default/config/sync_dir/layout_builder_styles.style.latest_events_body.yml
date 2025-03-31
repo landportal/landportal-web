@@ -1,0 +1,12 @@
+uuid: 83442da2-b722-4373-b414-c4c34d5f170a
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_body
+label: 'Latest Events Body'
+classes: latest-events-body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

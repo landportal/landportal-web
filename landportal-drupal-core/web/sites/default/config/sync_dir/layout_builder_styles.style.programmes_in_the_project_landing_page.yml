@@ -1,0 +1,12 @@
+uuid: 9097d641-5795-4186-96e8-726aba5d54d1
+langcode: en
+status: true
+dependencies: {  }
+id: programmes_in_the_project_landing_page
+label: 'Programmes in the project landing page'
+classes: programmes-in-the-project-landing-page
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

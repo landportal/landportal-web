@@ -1,0 +1,19 @@
+uuid: 9a702b2e-ee2f-45d9-9885-4a2a14de971e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_value
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.programme_value
+field_name: programme_value
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme value'
+description: 'Please don''t add comma " , " between numbers.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

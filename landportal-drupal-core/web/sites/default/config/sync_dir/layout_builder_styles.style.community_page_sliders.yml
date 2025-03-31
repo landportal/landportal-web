@@ -1,0 +1,12 @@
+uuid: 4a9520de-1322-4204-bec7-b80c322a8179
+langcode: en
+status: true
+dependencies: {  }
+id: community_page_sliders
+label: 'Community Page Sliders'
+classes: community-page-sliders
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

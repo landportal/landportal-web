@@ -1,0 +1,11 @@
+views.field.node_type_flagger:
+  type: views_field
+  label: 'Node Type Flagger'
+  mapping:
+    node_type:
+      type: string
+      label: 'The node type'
+
+views.filter.lp_project_status_type_of_project:
+  type: views.filter.in_operator
+  label: 'Allowed node titles'

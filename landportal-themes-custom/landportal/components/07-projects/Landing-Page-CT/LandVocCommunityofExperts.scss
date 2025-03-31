@@ -1,0 +1,178 @@
+@mixin inherit-styles {
+    margin-top: inherit;
+    background: inherit;
+    position: inherit;
+}
+
+
+[about="/voc/landvoc/experts-community"]{
+	margin-left: auto;
+	margin-right: auto;
+	@media (min-width: $p-small){
+		width: 100%;
+	}
+	@media (min-width: $p-large){
+		width: 86%;
+	}
+	.text-long {
+		a[href="/landvoc"]{
+			img{
+				width: 100%;
+			}
+		}
+	}	
+	.section__sidebar__main{
+		a{
+			color: #06c;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+				color: #004080;
+			}
+		}
+		a[href="mailto:hello@landportal.info?subject=LandVoc%20Community%20of%20Experts"]{
+			&::after{
+				content: '';
+				background-image: url(../images/extlinks.jpg);
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				margin-left: 2px;
+				background-position: right;
+			}
+		}
+		.rteright{
+			text-align: right;
+		}
+		ul{
+			padding-left: 2em;
+			li{
+				padding-left: 0;
+			}
+		}
+		p{
+			line-height: 1.42857143;
+		}
+		.col-md-12{
+			p{
+				margin: 0 0 10px;
+			}
+			p[dir="ltr"]{
+				margin: 0;
+			}
+			.panel-panel-inner{
+				.panels-responsive-tabs-processed{
+					.resp-tabs-container{
+						h2{
+							border: 1px solid #c1c1c1;
+							font-size: 13px;
+							cursor: pointer;
+							background: #DBDBDB;
+							margin-bottom: 0;
+							padding: 10px 15px;
+							&::after{
+								width: 0;
+								height: 0;
+								float: right;
+								//margin-top: 3px; 
+								border-left: 6px solid transparent;
+								border-right: 6px solid transparent;
+								border-top: 12px solid #c1c1c1;
+								content: '';
+  								margin-top: 5px;
+							}
+						}
+						.active{
+							//background: #fff;
+							&::after{
+								border-left: 6px solid transparent;
+								border-right: 6px solid transparent;
+								border-bottom: 12px solid #9B9797;
+								border-top: indianred;
+							}
+						}
+						.resp-tab-content{
+							border: 1px solid #c1c1c1;
+							padding: 15px;
+							h3{
+								margin-top: 10px;
+								margin-bottom: 10px;
+								line-height: 1.1;
+							}
+							.row{
+								&::before{
+									content: " ";
+  									display: table;
+								}
+								.col-xs-3{
+									width: 25%;
+									float: left;
+									padding: 0 15px;
+									@media (min-width: $p-small){
+										padding: inherit;
+									}
+									@media (min-width: $p-large){
+										padding: 0 15px;
+									}
+								}
+								.col-xs-8{
+									float: left;
+									width: 66.66666667%;
+  									padding: 0 15px;
+  									a{
+  										&::after{
+  											content: '';
+											background-image: url(../images/extlinks.jpg);
+											width: 10px;
+											height: 10px;
+											display: inline-block;
+											margin-left: 2px;
+  										}
+  									}
+								}
+								.col-xs-1{
+									width: 8.33333333%;
+									float: left;
+									padding: 0 15px;
+								}
+								&::after{
+									clear: both;
+									content: " ";
+  									display: table;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.section__sidebar__aside{
+		.open-up-guide{
+			header{
+				h2{
+					font-size: 16px;
+				}
+			}
+			.views-row{
+				.views-field-type, .user-countries{
+					display: none;
+				}
+				.views-field-field-noderef{
+					article.landlibrary-resource{
+						border-top: 5px solid #906;
+						.library-resource-type{
+							margin-top: inherit;
+						}
+						.library-description{
+							color: #666;
+							max-height: 5em;
+  							overflow: hidden;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,14 @@
+uuid: 59bd5de6-327e-4d93-aac5-031436f26aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.debate
+  module:
+    - node
+id: node.debate
+targetEntityType: node
+bundle: debate
+types:
+  - ''
+fieldMappings: {  }

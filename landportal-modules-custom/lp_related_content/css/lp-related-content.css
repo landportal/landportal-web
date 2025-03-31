@@ -1,0 +1,74 @@
+
+.accommodation2 h1{
+	float: right;
+	color: red;
+	padding: 2px 8px 3px 7px;
+	cursor: pointer;
+}
+
+.accommodation h2{
+	float: right;
+	color: red;
+	padding: 2px 8px 3px 7px;
+	cursor: pointer;
+	display: none;
+	font-size: 1.8em;
+}
+
+
+/*field_impact code here*/
+.form-item--field-related-impact-0-fullname, .form-item--field-related-impact-1-fullname, .form-item--field-related-impact-2-fullname, .form-item--field-related-impact-3-fullname, .form-item--field-related-impact-4-fullname, .form-item--field-related-impact-5-fullname, .form-item--field-related-impact-6-fullname, .form-item--field-related-impact-7-fullname, .form-item--field-related-impact-8-fullname, .form-item--field-related-impact-9-fullname, .form-item--field-related-impact-10-fullname, .form-item--field-related-impact-11-fullname, .form-item--field-related-impact-12-fullname, .form-item--field-related-impact-13-fullname, .form-item--field-related-impact-14-fullname, .form-item--field-related-impact-15-fullname, .form-item--field-related-impact-16-fullname, .form-item--field-related-impact-17-fullname, .form-item--field-related-impact-18-fullname, .form-item--field-related-impact-19-fullname, .form-item--field-related-impact-20-fullname, .form-item--field-related-impact-21-fullname, .form-item--field-related-impact-22-fullname, .form-item--field-related-impact-23-fullname, .form-item--field-related-impact-24-fullname, .form-item--field-related-impact-25-fullname, .form-item--field-related-impact-26-fullname, .form-item--field-related-impact-27-fullname, .form-item--field-related-impact-28-fullname, .form-item--field-related-impact-29-fullname, .form-item--field-related-impact-30-fullname, .form-item--field-related-impact-31-fullname, .form-item--field-related-impact-32-fullname, .form-item--field-related-impact-33-fullname, .form-item--field-related-impact-34-fullname, .form-item--field-related-impact-35-fullname,  .form-item--field-related-impact-36-fullname, .form-item--field-related-impact-37-fullname, .form-item--field-related-impact-38-fullname, .form-item--field-related-impact-39-fullname, .form-item--field-related-impact-40-fullname, .form-item--field-related-impact-41-fullname, .form-item--field-related-impact-42-fullname, .form-item--field-related-impact-43-fullname, .form-item--field-related-impact-44-fullname, .form-item--field-related-impact-45-fullname, .form-item--field-related-impact-46-fullname, .form-item--field-related-impact-47-fullname, .form-item--field-related-impact-48-fullname, .form-item--field-related-impact-49-fullname, .form-item--field-related-impact-50-fullname{
+	display: none;
+}
+.form-item--field-related-impact-0-swid, .form-item--field-related-impact-1-swid, .form-item--field-related-impact-2-swid, .form-item--field-related-impact-3-swid, .form-item--field-related-impact-4-swid, .form-item--field-related-impact-5-swid, .form-item--field-related-impact-6-swid, .form-item--field-related-impact-7-swid, .form-item--field-related-impact-8-swid, .form-item--field-related-impact-9-swid, .form-item--field-related-impact-10-swid, .form-item--field-related-impact-11-swid, .form-item--field-related-impact-12-swid, .form-item--field-related-impact-13-swid, .form-item--field-related-impact-14-swid, .form-item--field-related-impact-15-swid, .form-item--field-related-impact-16-swid, .form-item--field-related-impact-17-swid, .form-item--field-related-impact-18-swid, .form-item--field-related-impact-19-swid, .form-item--field-related-impact-20-swid, .form-item--field-related-impact-21-swid, .form-item--field-related-impact-22-swid, .form-item--field-related-impact-23-swid, .form-item--field-related-impact-24-swid, .form-item--field-related-impact-25-swid, .form-item--field-related-impact-26-swid, .form-item--field-related-impact-27-swid, .form-item--field-related-impact-28-swid, .form-item--field-related-impact-29-swid, .form-item--field-related-impact-30-swid, .form-item--field-related-impact-31-swid, .form-item--field-related-impact-32-swid, .form-item--field-related-impact-33-swid, .form-item--field-related-impact-34-swid, .form-item--field-related-impact-35-swid, .form-item--field-related-impact-36-swid, .form-item--field-related-impact-37-swid, .form-item--field-related-impact-38-swid, .form-item--field-related-impact-39-swid, .form-item--field-related-impact-40-swid, .form-item--field-related-impact-41-swid, .form-item--field-related-impact-42-swid, .form-item--field-related-impact-43-swid, .form-item--field-related-impact-44-swid, .form-item--field-related-impact-45-swid, .form-item--field-related-impact-46-swid, .form-item--field-related-impact-47-swid, .form-item--field-related-impact-48-swid, .form-item--field-related-impact-49-swid, .form-item--field-related-impact-50-swid{
+	display: none;
+}
+
+/*field_organization code here*/
+.form-item--field-related-organization-0-fullname, .form-item--field-related-organization-1-fullname, .form-item--field-related-organization-2-fullname, .form-item--field-related-organization-3-fullname, .form-item--field-related-organization-4-fullname, .form-item--field-related-organization-5-fullname, .form-item--field-related-organization-6-fullname, .form-item--field-related-organization-7-fullname, .form-item--field-related-organization-8-fullname, .form-item--field-related-organization-9-fullname{
+	display: none;
+}
+.form-item--field-related-organization-0-swid, .form-item--field-related-organization-1-swid, .form-item--field-related-organization-2-swid, .form-item--field-related-organization-3-swid, .form-item--field-related-organization-4-swid, .form-item--field-related-organization-5-swid, .form-item--field-related-organization-6-swid, .form-item--field-related-organization-7-swid, .form-item--field-related-organization-8-swid, .form-item--field-related-organization-9-swid{
+	display: none;
+}
+
+/*field_related_resources code here*/
+.form-item--field-related-resources-0-fullname, .form-item--field-related-resources-1-fullname, .form-item--field-related-resources-2-fullname, .form-item--field-related-resources-3-fullname, .form-item--field-related-resources-4-fullname, .form-item--field-related-resources-5-fullname, .form-item--field-related-resources-6-fullname, .form-item--field-related-resources-7-fullname, .form-item--field-related-resources-8-fullname, .form-item--field-related-resources-9-fullname, .form-item--field-related-resources-10-fullname, .form-item--field-related-resources-11-fullname, .form-item--field-related-resources-12-fullname, .form-item--field-related-resources-13-fullname, .form-item--field-related-resources-14-fullname, .form-item--field-related-resources-15-fullname, .form-item--field-related-resources-16-fullname, .form-item--field-related-resources-17-fullname, .form-item--field-related-resources-18-fullname, .form-item--field-related-resources-19-fullname, .form-item--field-related-resources-20-fullname, .form-item--field-related-resources-21-fullname, .form-item--field-related-resources-22-fullname, .form-item--field-related-resources-23-fullname, .form-item--field-related-resources-24-fullname, .form-item--field-related-resources-25-fullname, .form-item--field-related-resources-26-fullname, .form-item--field-related-resources-27-fullname, .form-item--field-related-resources-28-fullname, .form-item--field-related-resources-29-fullname, .form-item--field-related-resources-30-fullname, .form-item--field-related-resources-31-fullname, .form-item--field-related-resources-32-fullname, .form-item--field-related-resources-33-fullname, .form-item--field-related-resources-34-fullname, .form-item--field-related-resources-35-fullname, .form-item--field-related-resources-36-fullname, .form-item--field-related-resources-37-fullname, .form-item--field-related-resources-38-fullname, .form-item--field-related-resources-39-fullname, .form-item--field-related-resources-40-fullname, .form-item--field-related-resources-41-fullname, .form-item--field-related-resources-42-fullname, .form-item--field-related-resources-43-fullname, .form-item--field-related-resources-44-fullname, .form-item--field-related-resources-45-fullname, .form-item--field-related-resources-46-fullname, .form-item--field-related-resources-47-fullname, .form-item--field-related-resources-48-fullname, .form-item--field-related-resources-49-fullname, .form-item--field-related-resources-50-fullname{
+	display: none;
+}
+.form-item--field-related-resources-0-swid, .form-item--field-related-resources-1-swid, .form-item--field-related-resources-2-swid, .form-item--field-related-resources-3-swid, .form-item--field-related-resources-4-swid, .form-item--field-related-resources-5-swid, .form-item--field-related-resources-6-swid, .form-item--field-related-resources-7-swid, .form-item--field-related-resources-8-swid, .form-item--field-related-resources-9-swid, .form-item--field-related-resources-10-swid, .form-item--field-related-resources-11-swid, .form-item--field-related-resources-12-swid, .form-item--field-related-resources-13-swid, .form-item--field-related-resources-14-swid, .form-item--field-related-resources-15-swid, .form-item--field-related-resources-16-swid, .form-item--field-related-resources-17-swid, .form-item--field-related-resources-18-swid, .form-item--field-related-resources-19-swid, .form-item--field-related-resources-20-swid, .form-item--field-related-resources-21-swid, .form-item--field-related-resources-22-swid,  .form-item--field-related-resources-23-swid,  .form-item--field-related-resources-24-swid,  .form-item--field-related-resources-25-swid,  .form-item--field-related-resources-26-swid,  .form-item--field-related-resources-27-swid,  .form-item--field-related-resources-28-swid,  .form-item--field-related-resources-29-swid,  .form-item--field-related-resources-30-swid,  .form-item--field-related-resources-31-swid,  .form-item--field-related-resources-32-swid,  .form-item--field-related-resources-33-swid,  .form-item--field-related-resources-34-swid,  .form-item--field-related-resources-35-swid,  .form-item--field-related-resources-36-swid,  .form-item--field-related-resources-37-swid,  .form-item--field-related-resources-38-swid,  .form-item--field-related-resources-39-swid,  .form-item--field-related-resources-40-swid,  .form-item--field-related-resources-41-swid,  .form-item--field-related-resources-42-swid,  .form-item--field-related-resources-43-swid,  .form-item--field-related-resources-44-swid,  .form-item--field-related-resources-45-swid,  .form-item--field-related-resources-46-swid,  .form-item--field-related-resources-47-swid,  .form-item--field-related-resources-48-swid,  .form-item--field-related-resources-49-swid,  .form-item--field-related-resources-50-swid{
+	display: none;
+}
+
+/*field_related_donor code here*/
+.form-item--field-related-donor-0-fullname, .form-item--field-related-donor-1-fullname, .form-item--field-related-donor-2-fullname, .form-item--field-related-donor-3-fullname, .form-item--field-related-donor-4-fullname, .form-item--field-related-donor-5-fullname, .form-item--field-related-donor-6-fullname, .form-item--field-related-donor-7-fullname, .form-item--field-related-donor-8-fullname, .form-item--field-related-donor-9-fullname{
+    display: none;
+}
+.form-item--field-related-donor-0-swid, .form-item--field-related-donor-1-swid, .form-item--field-related-donor-2-swid, .form-item--field-related-donor-3-swid, .form-item--field-related-donor-4-swid, .form-item--field-related-donor-5-swid, .form-item--field-related-donor-6-swid, .form-item--field-related-donor-7-swid, .form--item--field-related-donor-8-swid, .form-item--field-related-donor-9-swid{
+    display: none;
+}
+
+/*field_related_provider code here testing*/
+.form-item--field-related-provider-0-fullname, .form-item--field-related-provider-1-fullname, .form-item--field-related-provider-2-fullname, .form-item--field-related-provider-3-fullname, .form-item--field-related-provider-4-fullname, .form-item--field-related-provider-5-fullname, .form-item--field-related-provider-6-fullname, .form-item--field-related-provider-7-fullname, .form-item--field-related-provider-8-fullname, .form-item--field-related-provider-9-fullname{
+    display: none;
+}
+.form-item--field-related-provider-0-swid, .form-item--field-related-provider-1-swid, .form-item--field-related-provider-2-swid, .form-item--field-related-provider-3-swid, .form-item--field-related-provider-4-swid, .form-item--field-related-provider-5-swid, .form-item--field-related-provider-6-swid, .form-item--field-related-provider-7-swid, .form--item--field-related-provider-8-swid, .form-item--field-related-provider-9-swid{
+    display: none;
+}
+
+/*Scroll button css*/
+.scroll-top{
+	cursor: pointer;
+	background-image: url('https://landportal.org/sites/all/modules/back_to_top/backtotop.png');
+	border: 0;
+	bottom: 20px;
+	cursor: pointer;
+	display: none;
+	height: 70px;
+	position: fixed;
+	right: 20px;
+	text-indent: -9999px;
+	width: 70px;
+	z-index: 1;
+	border-radius: 50%;
+}

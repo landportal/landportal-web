@@ -1,0 +1,12 @@
+uuid: 7e7ae59f-fe66-41fd-98d5-b49732a670d2
+langcode: en
+status: true
+dependencies: {  }
+id: user_teaser_description_style
+label: 'User Teaser Description Style'
+classes: user-teaser-description-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

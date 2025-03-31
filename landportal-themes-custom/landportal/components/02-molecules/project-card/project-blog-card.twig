@@ -1,0 +1,93 @@
+{% set card__base_class = 'project-card' %}
+<div {{ bem(card__base_class, [], card__block_class) }}>
+  {% if external_image_src %}
+    <a {{ bem('link', [], card__base_class) }} href="{{ item_url }}">
+      {{ external_image_src }}
+    </a>
+  {% elseif image_src %}
+    <a {{ bem('link', [], card__base_class) }} href="{{ item_url }}">
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        output_image_tag: true,
+        image_src: image_src,
+        image_alt: image_alt,
+        picture_blockname: card__base_class,
+        picture_modifiers: []
+      } %}
+    </a>
+  {% endif %}
+  {% if item_title %}
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_base_class: 'heading',
+      heading_blockname: card__base_class,
+      heading_level: 4,
+      heading: item_title,
+      heading_url: item_url,
+      heading_link_base_class: 'link',
+    } %}
+  {% endif %}
+  {% if null_date is not empty %}
+    <div {{ bem('item_duration_from', [], card__base_class) }}>
+    {% include "@atoms/images/icons/_icon.twig" with {
+      icon_base_class: 'item_duration_from__icon',
+      icon_name: 'calendar',
+      icon_blockname: card__base_class,
+    } %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: 'item_duration_from',
+      paragraph_blockname: card__base_class,
+      paragraph_content: item_duration_from,
+    } %}
+    </div>
+
+    {% elseif published_date%}
+    <div {{ bem('published_date', [], card__base_class) }}>
+    {% include "@atoms/images/icons/_icon.twig" with {
+      icon_base_class: 'published_date__icon',
+      icon_name: 'calendar',
+      icon_blockname: card__base_class,
+    } %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: 'published_date__date',
+      paragraph_blockname: card__base_class,
+      paragraph_content: published_date,
+    } %}
+    </div>
+
+    {% endif %}
+
+  <div {{ bem('key_data', [], card__base_class) }}>
+
+
+
+
+
+
+
+
+  {% if item_value %}
+    {% set item_value_formatted = item_value|number_format(2, '.', ',') %}
+    {% set value = 'Value'|t ~ ': ' ~ item_value_currency ~ item_value_formatted %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: 'key',
+      paragraph_blockname: card__base_class,
+      paragraph_content: value,
+    } %}
+  {% endif %}
+  {% if item_donors %}
+    {% set donors = 'Donors'|t ~ ': ' ~ item_donors %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: 'key',
+      paragraph_blockname: card__base_class,
+      paragraph_content: donors,
+    } %}
+  {% endif %}
+  </div>
+
+  {% if item_summary %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_base_class: 'summary',
+      paragraph_blockname: card__base_class,
+      paragraph_content: item_summary,
+    } %}
+  {% endif %}
+</div>

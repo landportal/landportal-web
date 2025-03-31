@@ -1,0 +1,146 @@
+uuid: 6b883001-a9a1-4f6c-af3b-700712231d2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.user_profile_comment
+    - field.field.user.user.additional_interests
+    - field.field.user.user.city
+    - field.field.user.user.country
+    - field.field.user.user.country_code
+    - field.field.user.user.description
+    - field.field.user.user.feeds_item
+    - field.field.user.user.first_name
+    - field.field.user.user.geographical_focus
+    - field.field.user.user.hide_profile
+    - field.field.user.user.land_portal_newsletter
+    - field.field.user.user.land_portal_terms_and_conditions
+    - field.field.user.user.languages
+    - field.field.user.user.last_name
+    - field.field.user.user.location_name
+    - field.field.user.user.partners
+    - field.field.user.user.postal_code
+    - field.field.user.user.profile
+    - field.field.user.user.public_email
+    - field.field.user.user.related_concepts
+    - field.field.user.user.street
+    - field.field.user.user.themes
+    - field.field.user.user.title
+    - field.field.user.user.website
+  module:
+    - image
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout_builder_styles_style:
+            - ''
+        components:
+          6ad43862-0c6f-42a9-add5-33d484e82db0:
+            uuid: 6ad43862-0c6f-42a9-add5-33d484e82db0
+            region: content
+            configuration:
+              id: 'field_block:user:user:profile'
+              label: Profile
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: media_thumbnail_100x100_
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                - ''
+          c0367558-de4b-4965-a8a0-043a0d89291a:
+            uuid: c0367558-de4b-4965-a8a0-043a0d89291a
+            region: content
+            configuration:
+              id: 'field_block:user:user:name'
+              label: 'Submitted by'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - ''
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: user.user.user_profile_comment
+targetEntityType: user
+bundle: user
+mode: user_profile_comment
+content:
+  profile:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  additional_interests: true
+  city: true
+  country: true
+  country_code: true
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  first_name: true
+  geographical_focus: true
+  hide_profile: true
+  land_portal_newsletter: true
+  land_portal_terms_and_conditions: true
+  langcode: true
+  languages: true
+  last_name: true
+  location_name: true
+  member_for: true
+  partners: true
+  postal_code: true
+  public_email: true
+  related_concepts: true
+  search_api_excerpt: true
+  street: true
+  themes: true
+  title: true
+  website: true

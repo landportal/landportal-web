@@ -1,0 +1,24 @@
+uuid: f18d665e-6916-4b19-ae40-015767d0066d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_themes
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrthemes
+theme: landportal
+region: sidebar
+weight: -18
+provider: null
+plugin: 'facet_block:solr_themes'
+settings:
+  id: 'facet_block:solr_themes'
+  label: 'Filter by issues:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrthemes
+visibility: {  }

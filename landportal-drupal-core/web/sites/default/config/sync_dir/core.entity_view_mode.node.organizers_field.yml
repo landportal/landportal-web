@@ -1,0 +1,10 @@
+uuid: 0581b58a-39e3-4d48-857d-565f5ca96ddd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.organizers_field
+label: 'Organizers Field'
+targetEntityType: node
+cache: true

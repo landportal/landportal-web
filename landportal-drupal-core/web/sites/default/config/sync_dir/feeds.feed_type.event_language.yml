@@ -1,0 +1,146 @@
+uuid: 8ddf9fd6-b4a9-4cca-8115-657acfc29b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_language_of_the_event
+    - node.type.event
+  module:
+    - node
+label: 'Event Language'
+id: event_language
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: event
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  language_of_the_event1:
+    value: 'Language of the event1'
+    label: 'Language of the event1'
+    machine_name: language_of_the_event1
+    type: csv
+  language_of_the_event2:
+    value: 'Language of the event2'
+    label: 'Language of the event2'
+    machine_name: language_of_the_event2
+    type: csv
+  language_of_the_event3:
+    value: 'Language of the event3'
+    label: 'Language of the event3'
+    machine_name: language_of_the_event3
+    type: csv
+  language_of_the_event4:
+    value: 'Language of the event4'
+    label: 'Language of the event4'
+    machine_name: language_of_the_event4
+    type: csv
+  language_of_the_event5:
+    value: 'Language of the event5'
+    label: 'Language of the event5'
+    machine_name: language_of_the_event5
+    type: csv
+  language_of_the_event6:
+    value: 'Language of the event6'
+    label: 'Language of the event6'
+    machine_name: language_of_the_event6
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event5
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language_of_the_event
+    map:
+      target_id: language_of_the_event6
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

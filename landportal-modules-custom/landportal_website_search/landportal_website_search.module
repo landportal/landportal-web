@@ -1,0 +1,21 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * Set the view's argument as a value of the "title" filter.
+ */
+function landportal_website_search_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if ($view->id() == 'general_search' && $display_id == 'page_2') {   
+   // $filters = $view->getDisplay()->getOption('filters');
+  //  $filters['title']['value'] = 'programme';
+   // $view->display_handler->overrideOption('filters', $filters);
+
+
+    $exposed_input = $view->getExposedInput();
+    $exposed_input['search_api_fulltext'] = $args[0];
+    $view->setExposedInput($exposed_input);   
+  }
+}

@@ -1,0 +1,10 @@
+uuid: e772280a-1342-4e55-a4e3-1696bbaaa6c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.latest_event
+label: 'Latest Events'
+targetEntityType: node
+cache: true

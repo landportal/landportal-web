@@ -1,0 +1,3 @@
+third_party_settings:
+  entity_print:
+    pdf_label: 'Descargar PDF'

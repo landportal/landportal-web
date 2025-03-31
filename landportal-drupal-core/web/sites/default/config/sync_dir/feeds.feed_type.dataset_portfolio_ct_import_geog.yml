@@ -1,0 +1,132 @@
+uuid: d0b34d48-5098-4b8b-b665-ca86e4997590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_geographical_focus
+    - node.type.dataset
+  module:
+    - node
+label: 'Dataset Portfolio CT import Geoghraphical focus'
+id: dataset_portfolio_ct_import_geog
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: Nid
+    label: Nid
+    machine_name: nid
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  geofocus:
+    value: Geofocus
+    label: Geofocus
+    machine_name: geofocus
+    type: csv
+  geofocus1:
+    value: Geofocus1
+    label: Geofocus1
+    machine_name: geofocus1
+    type: csv
+  geofocus2:
+    value: Geofocus2
+    label: Geofocus2
+    machine_name: geofocus2
+    type: csv
+  geofocus3:
+    value: Geofocus3
+    label: Geofocus3
+    machine_name: geofocus3
+    type: csv
+  geofocus4:
+    value: Geofocus4
+    label: Geofocus4
+    machine_name: geofocus4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geofocus
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geofocus1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geofocus2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geofocus3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_geographical_focus
+    map:
+      target_id: geofocus4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

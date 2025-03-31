@@ -1,0 +1,23 @@
+uuid: fe03fffc-a0b7-4539-8ef5-787fe7d2e943
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.promoted_to_library
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.promoted_to_library
+field_name: promoted_to_library
+entity_type: node
+bundle: landlibrary_resource
+label: 'Promoted to Library'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

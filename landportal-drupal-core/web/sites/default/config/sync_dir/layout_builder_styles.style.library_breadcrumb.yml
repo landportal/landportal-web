@@ -1,0 +1,12 @@
+uuid: d4ecfb47-5d3a-48db-97d3-e250e7290c97
+langcode: en
+status: true
+dependencies: {  }
+id: library_breadcrumb
+label: 'Library Breadcrumb'
+classes: library-breadcrumb
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

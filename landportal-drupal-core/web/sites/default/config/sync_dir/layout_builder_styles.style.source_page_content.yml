@@ -1,0 +1,12 @@
+uuid: 010f921e-1722-4278-adf1-d63cdf692dc6
+langcode: en
+status: true
+dependencies: {  }
+id: source_page_content
+label: 'Source Page Content'
+classes: source-page-content
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,12 @@
+uuid: 3886a18e-173a-4b12-b4b9-04cced3cb4fa
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_banner_image
+label: 'Dataset Banner Image'
+classes: dataset-banner-image
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>Indicateurs importants: {{ name }} <a href=\"https://landportal.org/fr/book/indicators\">Tout parcourir</a></p>\r\n"
+            format: full_html

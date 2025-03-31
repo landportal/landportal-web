@@ -1,0 +1,122 @@
+uuid: 7b126978-1766-4342-abe9-eae531dc8f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.field_file
+    - node.type.debate
+  module:
+    - node
+label: 'Debate (Related materials)'
+id: debate_related_materials_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: debate
+  langcode: ru
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  related_materials:
+    value: 'Related materials'
+    label: 'Related materials'
+    machine_name: related_materials
+    type: csv
+  related_materials1:
+    value: 'Related materials1'
+    label: 'Related materials1'
+    machine_name: related_materials1
+    type: csv
+  related_materials2:
+    value: 'Related materials2'
+    label: 'Related materials2'
+    machine_name: related_materials2
+    type: csv
+  related_materials3:
+    value: 'Related materials3'
+    label: 'Related materials3'
+    machine_name: related_materials3
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_file
+    map:
+      target_id: related_materials
+      description: ''
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_file
+    map:
+      target_id: related_materials1
+      description: ''
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_file
+    map:
+      target_id: related_materials2
+      description: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_file
+    map:
+      target_id: related_materials3
+      description: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false

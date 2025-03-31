@@ -1,0 +1,5 @@
+settings:
+  label: 'Nossa Missão'
+  text:
+    value: "<p>A Land Portal Foundation acredita que o acesso à informação é crucial para alcançar uma boa governança da terra e assegurar os direitos à terra para as pessoas vulneráveis. Ajudamos parceiros a criar e disseminar dados e informações sobre governança fundiária por meio de tecnologias e vínculos de dados abertos.</p>\r\n\r\n<p><a class=\"link link--button link--button__subscribe\" href=\"/pt/envolva-se\">Assina</a> <a class=\"link link--button link--button__support\" href=\"/pt/doe\">Apoie-nos</a></p>\r\n\r\n<p><a href=\"https://creativecommons.org/licenses/by/4.0/\">Atribuições criativas comuns</a>, 2014-2022 Land Portal Foundation / RSIN 854330045</p>\r\n"
+    format: full_html

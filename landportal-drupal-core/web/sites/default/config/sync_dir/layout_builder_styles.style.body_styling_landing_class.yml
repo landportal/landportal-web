@@ -1,0 +1,12 @@
+uuid: a2f4f980-ec2f-40f5-a0f8-95c1ef810fe4
+langcode: en
+status: true
+dependencies: {  }
+id: body_styling_landing_class
+label: 'Body styling landing class'
+classes: body_styling_landing_class
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

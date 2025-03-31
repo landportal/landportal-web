@@ -1,0 +1,29 @@
+uuid: 15f5926d-3884-4aaf-b85d-b3a2a33c257f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orgref
+    - node.type.organization
+    - node.type.sdgi
+id: node.sdgi.field_orgref
+field_name: field_orgref
+entity_type: node
+bundle: sdgi
+label: 'Custodian agency'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

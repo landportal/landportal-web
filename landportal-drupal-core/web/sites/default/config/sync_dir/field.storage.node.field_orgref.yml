@@ -1,0 +1,19 @@
+uuid: c10d9ce9-f3da-40c4-b686-06c61435b8b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_orgref
+field_name: field_orgref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

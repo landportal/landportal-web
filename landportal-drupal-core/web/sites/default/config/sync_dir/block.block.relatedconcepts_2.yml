@@ -1,0 +1,24 @@
+uuid: bfd1229c-99c4-4bdb-b2b1-2c0a0b876745
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.related_concepts
+  module:
+    - facets
+  theme:
+    - landportal
+id: relatedconcepts_2
+theme: landportal
+region: content
+weight: -14
+provider: null
+plugin: 'facet_block:related_concepts'
+settings:
+  id: 'facet_block:related_concepts'
+  label: 'By concepts'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: relatedconcepts_2
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 5d5f99cf-9565-4968-892e-7d9a71e650ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.webinar_series
+  module:
+    - feeds
+id: node.webinar_series.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: webinar_series
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

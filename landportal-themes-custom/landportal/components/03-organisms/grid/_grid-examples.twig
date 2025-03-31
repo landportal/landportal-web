@@ -1,0 +1,40 @@
+{% if item_type == 'card' %}
+  {% include "@molecules/card/card.twig" with {
+    card__extra_classes: ['grid__item'],
+    card__blockname: item.card__blockname,
+    card__modifiers: item.card__modifiers,
+    card__image__src: item.card__image__src,
+    card__image__alt: item.card__image__alt,
+    card__heading: item.card__heading,
+    card__heading__link: item.card__heading__link,
+    card__subheading: item.card__subheading,
+    card__body: item.card__body,
+    card__links: item.card__links,
+    card__image__output_image_tag: item.card__image__output_image_tag,
+  } %}
+{% elseif item_type == 'project-card' %}
+  {% include "@molecules/project-card/project-card.twig" with {
+    card__extra_classes: ['grid__item'],
+    card__blockname: item.project__blockname,
+    card__modifiers: item.project__modifiers,
+    project__image__src: item.project__image__src,
+    project__image__alt: item.project__image__alt,
+    project__title: item.project__title,
+    project__title__link: item.project__title__link,
+    project__value_currency: item.project__value_currency,
+    project__value: item.project__value,
+    project__donors: item.project__donors,
+    project__duration_from: item.project__duration_from,
+    project__duration_to: item.project__duration_to,
+    project__body: item.project__body,
+    project__image__output_image_tag: item.card__image__output_image_tag,
+  } %}
+{% elseif item_type == 'cta' %}
+  {% include "@molecules/cta/cta.twig" with {
+    cta__extra_classes: ['grid__item'],
+    cta__heading: item.cta__heading,
+    cta__button_text: item.cta__button_text,
+  } %}
+{% else %}
+  <div class="grid__item grid__item--example"></div>
+{% endif %}

@@ -1,0 +1,12 @@
+uuid: c9e3dc18-15f9-4968-9e04-7231f71ea2d1
+langcode: en
+status: true
+dependencies: {  }
+id: event_location
+label: 'Event Location'
+classes: event-location
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

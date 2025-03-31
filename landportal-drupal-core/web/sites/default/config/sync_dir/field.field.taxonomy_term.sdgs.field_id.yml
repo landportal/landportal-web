@@ -1,0 +1,19 @@
+uuid: 7fbbb1b5-dd7d-4c93-8c6d-93923c42e3ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_id
+    - taxonomy.vocabulary.sdgs
+id: taxonomy_term.sdgs.field_id
+field_name: field_id
+entity_type: taxonomy_term
+bundle: sdgs
+label: ID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

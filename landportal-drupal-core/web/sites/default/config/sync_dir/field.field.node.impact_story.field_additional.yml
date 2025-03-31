@@ -1,0 +1,19 @@
+uuid: 001c5db2-9244-4d21-87a1-15c31f5c3d80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional
+    - node.type.impact_story
+id: node.impact_story.field_additional
+field_name: field_additional
+entity_type: node
+bundle: impact_story
+label: Additional
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

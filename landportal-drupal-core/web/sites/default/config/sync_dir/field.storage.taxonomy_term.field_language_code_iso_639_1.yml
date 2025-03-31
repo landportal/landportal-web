@@ -1,0 +1,21 @@
+uuid: 4ab5275c-ecab-434f-bca5-bcd632459818
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_language_code_iso_639_1
+field_name: field_language_code_iso_639_1
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 2
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

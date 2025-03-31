@@ -1,0 +1,44 @@
+# Migration configuration for 'Regions' vocabulary.
+id: regions
+label: 'Migrate - Regions'
+migration_group: landportal_migration
+migration_tags:
+  - landportal_migration
+source:
+  plugin: d7_taxonomy_term
+  bundle: regions
+process:
+  tid: tid
+  vid:
+    -
+      plugin: default_value
+      default_value: regions
+  name: name
+  'description/value': description
+  'description/format': format
+  field_area_code_un_m_49_: field_area_code_un_m_49
+  field_iso2: field_iso2
+  field_iso3: field_iso3
+  langcode: language
+  weight: weight
+  # Only attempt to stub real (non-zero) parents.
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: regions
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+destination:
+  plugin: entity:taxonomy_term
+
+dependencies:
+  enforced:
+    module:
+      - landportal_migration

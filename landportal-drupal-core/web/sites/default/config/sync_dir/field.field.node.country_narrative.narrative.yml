@@ -1,0 +1,23 @@
+uuid: f9fdea39-8d0e-4539-9c43-2ae5f5fcdd75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.narrative
+    - node.type.country_narrative
+  module:
+    - text
+id: node.country_narrative.narrative
+field_name: narrative
+entity_type: node
+bundle: country_narrative
+label: Narrative
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

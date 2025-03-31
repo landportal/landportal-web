@@ -1,0 +1,23 @@
+uuid: cd035a60-aea8-47c2-909a-b6f9214cb115
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block_with_title_as_link
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.basic_block_with_title_as_link.body
+field_name: body
+entity_type: block_content
+bundle: basic_block_with_title_as_link
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

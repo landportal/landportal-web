@@ -1,0 +1,33 @@
+uuid: ec8e60c1-6004-445b-8f7a-5e367fcef871
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: issues_overview_spanish
+label: 'Issues Overview Spanish'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'temáticas/[term:name]'
+selection_criteria:
+  90147785-f8ef-4955-9da9-028121690215:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 90147785-f8ef-4955-9da9-028121690215
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      theme: theme
+  9f49010a-b136-41d0-853c-1c499a9e039c:
+    id: language
+    negate: false
+    uuid: 9f49010a-b136-41d0-853c-1c499a9e039c
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

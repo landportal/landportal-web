@@ -1,0 +1,19 @@
+uuid: 197b9a86-540d-4ec0-96b6-6f2f8619621a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.additionals
+    - node.type.organization
+id: node.organization.additionals
+field_name: additionals
+entity_type: node
+bundle: organization
+label: Additional
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

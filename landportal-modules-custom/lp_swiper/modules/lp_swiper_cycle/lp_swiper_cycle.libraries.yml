@@ -1,0 +1,43 @@
+formoptions:
+  js:
+    js/formoptions.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+lp_swiper_cycle:
+  css:
+    component:
+      css/lp_swiper_cycle.css: {}
+  js:
+    js/lp_swiper_cycle.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+swiper_slide:
+  css:
+    component:
+      css/swiper_slide.css: {}
+      css/swiper_slide_custom.css: {}      
+  js:
+    js/swiper_slide.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+jquery_swiper:
+  remote: https://unpkg.com/swiper@7/swiper-bundle.min.js
+  version: 7.4.1
+  license:
+    name: Vladimir Kharlampidi
+    url: https://swiperjs.com
+    gpl-compatible: true
+  js:
+    js/swiper-local.min.js: {}
+  dependencies:
+    - core/jquery
+

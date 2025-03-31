@@ -1,0 +1,20 @@
+{% extends "@templates/section/threecol.twig" %}
+{% if content %}
+  {% block content_first %}
+    {% if content.first %}
+      {{ content.first }}
+    {% endif %}
+  {% endblock %}
+
+  {% block content_second %}
+    {% if content.second %}
+      {{ content.second }}
+    {% endif %}
+  {% endblock %}
+
+  {% block content_third %}
+    {% if content.third %}
+      {{ content.third }}
+    {% endif %}
+  {% endblock %}
+{% endif %}

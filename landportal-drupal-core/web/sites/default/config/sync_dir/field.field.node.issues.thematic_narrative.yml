@@ -1,0 +1,29 @@
+uuid: 335d23c0-cb44-4fb9-8fe7-b30146b2a333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.thematic_narrative
+    - node.type.issues
+    - taxonomy.vocabulary.theme
+id: node.issues.thematic_narrative
+field_name: thematic_narrative
+entity_type: node
+bundle: issues
+label: 'Thematic Narrative'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 959a740f-20eb-4ed3-8e9d-ed5f7559effb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_identifier
+    - node.type.landlibrary_resource
+id: node.landlibrary_resource.field_doc_identifier
+field_name: field_doc_identifier
+entity_type: node
+bundle: landlibrary_resource
+label: 'ISBN / Resource ID'
+description: 'An ISBN or another unique label that identifies the resource. (If your resource does not have a unique label, please enter the first six letters of the publisher - first six letters of the title - YYYYMM.E.g.: Landpo-Firsts-201607).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+{#
+/**
+* @file
+* Landportal Projects block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: Projects' title.
+*   - url: Projects' url.
+*   - date: Projects' publish date.
+*   - image_url: Projects' image url.
+*   - image_title: Projects' image title.
+*   - image_alt: Projects' image alt.
+* - more_news_url: More projects page url.
+*/
+#}
+<div>
+  {% for item in items %}
+    <div>
+      <a href="{{ item.ss_url }}">
+        <img src="{{ item['tm_field_image$file$url'].0 }}" title="{{ item['tm_field_image$file$field_file_image_title_text'].0 }}" alt="{{ item.image_alt }}">
+      </a>
+      <h3>
+        <a href="{{ item.ss_url }}">{{ item['ss_title_field'] }}</a>
+      </h3>
+      <div>{{ 'Durationa: '|t }}: {{ item['dm_field_date$value'].0|date(format='j F Y') }} - {{ item['dm_field_date$value2'].0|date(format='j F Y') }}</div>
+      <div>{{ 'Value: '|t }}: {{ item['tm_field_currency$field_currency_symbol'].0 }} {{ item['tm_field_value_decimal'].0|number_format(2, '.', ',') }}</div>
+      <div>{{ 'Donors: '|t }}: {{ item['tm_field_donors$title'].0 }}</div>
+      {% if item['tm_body$summary'].0 is not empty %}
+        <div>{{ item['tm_body$summary'].0|striptags }}</div>
+      {% else %}
+        <div>{{ item['tm_body$value'].0|striptags|slice(0, 300) }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+  <p><a href="{{ more_url }}">{{ more_label }}</a></p>
+</div>

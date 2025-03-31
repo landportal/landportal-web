@@ -1,0 +1,19 @@
+uuid: 54d91d8f-b7e8-4930-8b2d-b548ce71b499
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_unit
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.field_unit
+field_name: field_unit
+entity_type: taxonomy_term
+bundle: indicators
+label: 'Measurement unit'
+description: 'Measurement unit, like % or hectares'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

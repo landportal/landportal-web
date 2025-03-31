@@ -1,0 +1,63 @@
+# Migration configuration for 'Indicators' vocabulary.
+id: indicators
+label: 'Migrate - Indicators'
+migration_group: landportal_migration
+migration_tags:
+  - landportal_migration
+source:
+  plugin: d7_taxonomy_term
+  bundle: indicators
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: default_value
+      default_value: indicators
+  name:
+    -
+      plugin: get
+      source: name
+  id:
+    -
+      plugin: get
+      source: field_id
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - indicators
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: indicators

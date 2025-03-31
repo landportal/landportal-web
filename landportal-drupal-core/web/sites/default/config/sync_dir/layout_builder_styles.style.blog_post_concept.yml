@@ -1,0 +1,12 @@
+uuid: 575290be-e6c5-4641-a351-7f9321bf469c
+langcode: en
+status: true
+dependencies: {  }
+id: blog_post_concept
+label: 'Blog Post Concept'
+classes: blog-post-concept
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

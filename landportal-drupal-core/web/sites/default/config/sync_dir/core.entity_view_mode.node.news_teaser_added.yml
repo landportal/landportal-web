@@ -1,0 +1,10 @@
+uuid: 1df8193d-a906-457a-ad18-85fee625517c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_teaser_added
+label: 'News teaser added'
+targetEntityType: node
+cache: true

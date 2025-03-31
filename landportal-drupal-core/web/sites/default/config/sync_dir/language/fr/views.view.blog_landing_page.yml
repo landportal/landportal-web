@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            next: 'suivant ›'
+            previous: '‹ précédent'
+            first: '« premier'
+            last: 'dernier »'
+      header:
+        result:
+          content: 'Affichez @start - @end de <span class="badge">@total</span>'

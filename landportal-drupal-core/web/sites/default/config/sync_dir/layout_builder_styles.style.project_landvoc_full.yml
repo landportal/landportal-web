@@ -1,0 +1,12 @@
+uuid: 8bd072d2-e2b0-4369-ba7d-0390c276fa88
+langcode: en
+status: true
+dependencies: {  }
+id: project_landvoc_full
+label: 'Project Landvoc Full'
+classes: project-landvoc-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

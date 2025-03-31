@@ -1,0 +1,10 @@
+uuid: f5b3d8b2-62d3-44e3-aab3-a507a2b29a91
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.land_book_layers
+label: 'Land Book Layers'
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,24 @@
+uuid: 10727efd-fd98-4cd1-a80b-16170db86752
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.programme
+  module:
+    - facets
+  theme:
+    - landportal
+id: programme
+theme: landportal
+region: content
+weight: -17
+provider: null
+plugin: 'facet_block:programme'
+settings:
+  id: 'facet_block:programme'
+  label: Programme
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: programme
+visibility: {  }

@@ -1,0 +1,12 @@
+uuid: 26139462-be67-4b24-af01-ddac880bd57d
+langcode: en
+status: true
+dependencies: {  }
+id: event_latest_section_outer
+label: 'Event Latest Section outer'
+classes: event-latest-section-outer
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

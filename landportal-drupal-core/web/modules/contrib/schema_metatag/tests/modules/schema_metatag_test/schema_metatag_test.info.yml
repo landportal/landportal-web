@@ -1,0 +1,7 @@
+name: 'Schema Metatag Tests'
+type: module
+description: 'Support module for testing handling of all the base tags.'
+package: Testing
+hidden: true
+dependencies:
+  - schema_metatag:schema_metatag

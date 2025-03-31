@@ -1,0 +1,7 @@
+{% if content.blockquote.0 %}
+<div{{ content_attributes }}>
+  {% include "@molecules/quote-block/quote-block.twig" with {
+    blockquote_content: content.blockquote,
+  } %}
+</div>
+{% endif %}

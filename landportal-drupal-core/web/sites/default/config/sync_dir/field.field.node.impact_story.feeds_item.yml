@@ -1,0 +1,23 @@
+uuid: d844d649-a519-4a84-b162-abbdeaf2a154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.impact_story
+  module:
+    - feeds
+id: node.impact_story.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: impact_story
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

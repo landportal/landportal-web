@@ -1,0 +1,29 @@
+uuid: ce327748-6454-4747-833d-a9b7db29ebc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.test_ars_org_type_in_lib
+  module:
+    - system
+    - views
+  theme:
+    - landportal
+id: views_block__test_ars_org_type_in_lib_block_1
+theme: landportal
+region: content
+weight: 4
+provider: null
+plugin: 'views_block:test_ars_org_type_in_lib-block_1'
+settings:
+  id: 'views_block:test_ars_org_type_in_lib-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/3511101216

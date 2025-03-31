@@ -1,0 +1,32 @@
+.text-block {
+  padding: $space-triple 0;
+  font-size: .875rem;
+
+  &--background-dark {
+    background-color: clr(background-dark);
+    color: clr(text-light);
+  }
+
+  &__inner {
+
+    @include wrapper();
+
+    @include medium {
+      @include wrapper(95%);
+    }
+
+    @include large {
+      @include wrapper(90%);
+    }
+
+    @include xl {
+      @include wrapper(80%);
+    }
+
+    h4 {
+      color: clr(text-light);
+    }
+  }
+
+}
+

@@ -1,0 +1,131 @@
+uuid: ba7ea6fc-3851-455d-aef7-555d60f02b48
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.landlibrary_resource.created
+    - core.base_field_override.node.landlibrary_resource.title
+    - field.field.node.landlibrary_resource.field_doc_provider
+    - field.field.node.landlibrary_resource.title_field
+    - node.type.landlibrary_resource
+  module:
+    - node
+label: 'Import Library data provider'
+id: import_library_data_provider
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: landlibrary_resource
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  resouce_title:
+    value: Resouce_title
+    label: Resouce_title
+    machine_name: resouce_title
+    type: csv
+  created:
+    value: created
+    label: created
+    machine_name: created
+    type: csv
+  data_provider:
+    value: data-provider
+    label: data-provider
+    machine_name: data_provider
+    type: csv
+  data_provider1:
+    value: data-provider1
+    label: data-provider1
+    machine_name: data_provider1
+    type: csv
+  data_provider2:
+    value: data-provider2
+    label: data-provider2
+    machine_name: data_provider2
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title_field
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: resouce_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_doc_provider
+    map:
+      target_id: data_provider
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_provider
+    map:
+      target_id: data_provider1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_doc_provider
+    map:
+      target_id: data_provider2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

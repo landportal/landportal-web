@@ -1,0 +1,12 @@
+uuid: 37d4da67-90b8-4149-87aa-ac7a288bfe5a
+langcode: en
+status: true
+dependencies: {  }
+id: programme_narrative_quote_
+label: 'programme narrative quote '
+classes: 'programme-narrative-quote '
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

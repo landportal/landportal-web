@@ -1,0 +1,20 @@
+<section {{ attributes ? attributes.addClass(classes) : 'class="section__sidebar"' }}>
+<div class="container">
+    <div {{ region_attributes ? region_attributes.main.addClass('section__sidebar__main') : 'class="section__sidebar__main"' }}>
+      {% block content_main %}
+        {% include "@templates/placeholder/place-holder.twig" with {
+          "place_holder": "Main content",
+        } %}
+      {% endblock %}
+    </div>
+
+    <div {{ region_attributes ? region_attributes.aside.addClass('section__sidebar__aside') : 'class="section__sidebar__aside"' }}>
+      {% block content_aside %}
+        {% include "@templates/placeholder/place-holder.twig" with {
+          "place_holder": "Aside",
+        } %}
+      {% endblock %}
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,19 @@
+uuid: eae3710d-3eb4-4ef1-9d8b-c924804cebf6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MvQPTbQx0Vxwy0ordSHyixdZmLCMpvMdLD69dlwkrKc
+id: user
+label: User
+tags:
+  title: '[user:display-name] | [site:name]'
+  content_language: '[metatag:content-language]'
+  canonical_url: '[user:url]'
+  shortlink: '[current-page:url:unaliased]'
+  description: '[current-page]'
+  og_title: '[current-page:title] | [site:name]'
+  og_image: '[metatag:image_src]'
+  og_site_name: 'Land Portal'
+  og_type: website
+  schema_person_type: Person

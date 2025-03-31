@@ -1,0 +1,12 @@
+uuid: 3ea3c190-aabe-4dc8-9fac-d33b326882bb
+langcode: en
+status: true
+dependencies: {  }
+id: organization_themes
+label: 'Organization Themes'
+classes: organization-themes
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,12 @@
+uuid: e1419c7a-2d33-43b6-a3d0-737e92bd8523
+langcode: en
+status: true
+dependencies: {  }
+id: latest_events_organizers
+label: 'Latest Events Organizers'
+classes: latest-events-organizers
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,19 @@
+uuid: e2adb73d-1ba0-401a-bd05-7e943c3b7580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.longitude
+    - node.type.impact_story
+id: node.impact_story.longitude
+field_name: longitude
+entity_type: node
+bundle: impact_story
+label: Longitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: ee2900f0-9084-4351-9cf5-2ece967ccaef
+langcode: en
+status: true
+dependencies: {  }
+id: contact_field
+label: 'Contact Field'
+classes: contact-field
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

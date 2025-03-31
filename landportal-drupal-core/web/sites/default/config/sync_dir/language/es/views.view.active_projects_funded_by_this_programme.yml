@@ -1,0 +1,9 @@
+label: 'Proyectos activos financiados por este programa'
+display:
+  default:
+    display_options:
+      footer:
+        area:
+          content:
+            value: "<p><span>Proyectos activos financiados por este programa</span></p>\r\n"
+            format: full_html

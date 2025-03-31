@@ -1,0 +1,188 @@
+uuid: eeed31a8-5397-45bb-b17e-67a01f9f27bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.debate.field_orgref
+    - node.type.debate
+  module:
+    - node
+label: 'Debate (Partners) Export'
+id: _debate_partners_export
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: debate
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  partners:
+    value: Partners
+    label: Partners
+    machine_name: partners
+    type: csv
+  partners1:
+    value: Partners1
+    label: Partners1
+    machine_name: partners1
+    type: csv
+  partners2:
+    value: Partners2
+    label: Partners2
+    machine_name: partners2
+    type: csv
+  partners3:
+    value: Partners3
+    label: Partners3
+    machine_name: partners3
+    type: csv
+  partners4:
+    value: Partners4
+    label: Partners4
+    machine_name: partners4
+    type: csv
+  partners5:
+    value: Partners5
+    label: Partners5
+    machine_name: partners5
+    type: csv
+  partners6:
+    value: Partners6
+    label: Partners6
+    machine_name: partners6
+    type: csv
+  partners7:
+    value: Partners7
+    label: Partners7
+    machine_name: partners7
+    type: csv
+  partners8:
+    value: Partners8
+    label: Partners8
+    machine_name: partners8
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_orgref
+    map:
+      target_id: partners
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners5
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners6
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners7
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partners8
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

@@ -1,0 +1,12 @@
+<section {{ attributes ? attributes.addClass(classes) : 'class="section--onecol"' }}>
+  <div class="container">
+    <div {{ region_attributes ? region_attributes.content.addClass('grid__item') : 'class="grid__item"' }}>
+      {% block content %}
+        {% include "@templates/placeholder/place-holder.twig" with {
+          "place_holder": "Content",
+        } %}
+      {% endblock %}
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,11 @@
+block.settings.landportal_text_block:
+  type: block_settings
+  label: 'Text Block'
+  mapping:
+    text:
+      type: text_format
+      label: 'Body'
+      translatable: true
+    wrapper_class:
+      type: text
+      label: 'Wrapper classes'

@@ -1,0 +1,211 @@
+uuid: a5847928-bc43-449a-b0e9-05ce7d8f730f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programme.currency_of_programme_value
+    - field.field.taxonomy_term.programme.field_noderef
+    - field.field.taxonomy_term.programme.field_related_impact
+    - field.field.taxonomy_term.programme.field_related_organization
+    - field.field.taxonomy_term.programme.field_related_resources
+    - field.field.taxonomy_term.programme.programme_banner
+    - field.field.taxonomy_term.programme.programme_concepts
+    - field.field.taxonomy_term.programme.programme_duration
+    - field.field.taxonomy_term.programme.programme_logo
+    - field.field.taxonomy_term.programme.programme_organization
+    - field.field.taxonomy_term.programme.programme_regions
+    - field.field.taxonomy_term.programme.programme_resources
+    - field.field.taxonomy_term.programme.programme_themes
+    - field.field.taxonomy_term.programme.programme_value
+    - field.field.taxonomy_term.programme.projects_in_this_programme
+    - image.style.thumbnail
+    - taxonomy.vocabulary.programme
+  module:
+    - datetime_range
+    - field_layout
+    - image
+    - layout_discovery
+    - lp_related_content
+    - path
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.programme.default
+targetEntityType: taxonomy_term
+bundle: programme
+mode: default
+content:
+  currency_of_programme_value:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_noderef:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_related_impact:
+    type: lp_related_content_people_default
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_related_organization:
+    type: lp_related_content_people_default
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_related_resources:
+    type: lp_related_content_people_default
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  programme_banner:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  programme_concepts:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  programme_duration:
+    type: daterange_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  programme_logo:
+    type: image_image
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  programme_organization:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  programme_regions:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  programme_resources:
+    type: entity_reference_autocomplete
+    weight: 21
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  programme_themes:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  programme_value:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  projects_in_this_programme:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

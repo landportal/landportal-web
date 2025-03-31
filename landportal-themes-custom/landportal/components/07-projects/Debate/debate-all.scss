@@ -1,0 +1,178 @@
+.webinar-slider {
+    .join-debate-view-custom.online-discussion.debate-all {
+        header {
+            margin-bottom: 15px;
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        .views-row {
+            border-top: none;
+            display: flex;
+            gap: 25px;
+
+            @media (min-width: $p-small) {
+                display: inherit;
+            }
+
+            @media (min-width: $p-tablet) {
+                display: flex;
+                gap: 25px;
+            }
+
+            .views-col {
+                border-top: 5px solid #099;
+                margin-bottom: 15px;
+
+                .debate-wrapper {
+                    .debate-title {
+                        padding-top: 10px;
+                        padding-bottom: 0;
+                        font-size: 85%;
+                        line-height: 0.8;
+                    }
+
+                    .debate-status {
+                        display: inline;
+                        padding: .2em .6em .3em;
+                        font-size: 75%;
+                        font-weight: bold;
+                        line-height: 1;
+                        color: #fff;
+                        text-align: center;
+                        white-space: nowrap;
+                        vertical-align: baseline;
+                        border-radius: .25em;
+                        margin: 2px;
+                        text-transform: uppercase;
+                        background-color: #C33;
+                    }
+                }
+            }
+        }
+    }
+}
+.pager {
+    width: fit-content;
+    clear: both;
+    .pager__items {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: $p-small) {
+            display: inherit;
+            text-align: inherit;
+        }
+        @media (min-width: $p-tablet) {
+            text-align: center;
+        }
+        li:nth-of-type(1) {
+            .is-active {
+                border-bottom-left-radius: 1.3em !important;
+                border-top-left-radius: 1.3em !important;
+            }
+        }
+        li:last-child{
+            .is-active{
+                border-bottom-right-radius: 1.3em !important;
+                border-top-right-radius: 1.3em !important;
+            }
+        }
+        .pager__item {
+            margin: 0 0;
+
+            @media (min-width: $p-small) {
+                margin: 0 -2px;
+            }
+
+            @media (min-width: $p-tablet) {
+                margin: 0 -1px;
+            }
+        }
+
+        .pager__link {
+            display: inline-block;
+            padding: 6px 12px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            font-weight: inherit;
+            margin-left: -1px;
+
+            @media (min-width: $p-small) {
+                margin-left: 0;
+            }
+            @media (min-width: $p-tablet) {
+                margin-left: -1px;
+            }
+        }
+        .pager__link:hover,
+        .pager__link:focus {
+            background-color: #eee;
+        }
+        .pager__link.is-active {
+            background-color: #E58517;
+            color: #fff;
+            border-color: #E58517;
+            cursor: default;
+        }
+        .pager__item--ellipsis {
+            cursor: not-allowed;
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            color: #777;
+            margin-left: -1px;
+
+            @media (min-width: $p-small) {
+                margin-left: -2px;
+            }
+            @media (min-width: $p-tablet) {
+                //margin-left: -1px;
+            }
+        }
+    }
+    .pager__item--first {
+        .pager__link--prev {
+            border-bottom-left-radius: 1.3em !important;
+            border-top-left-radius: 1.3em !important;
+
+            span[aria-hidden="true"] {
+                display: block;
+            }
+            &::before {
+                content: none;
+            }
+        }
+    }
+    .pager__link--prev {
+        span[aria-hidden="true"] {
+            display: block;
+        }
+        &::before {
+            content: none;
+        }
+    }
+    .pager__link--next {
+        span[aria-hidden="true"] {
+            display: block;
+        }
+        &::before {
+            content: none;
+        }
+    }
+    .pager__item--last {
+        .pager__link--next {
+            border-bottom-right-radius: 1.3em !important;
+            border-top-right-radius: 1.3em !important;
+
+            span[aria-hidden="true"] {
+                display: block;
+            }
+            &::before {
+                content: none;
+            }
+        }
+    }
+}

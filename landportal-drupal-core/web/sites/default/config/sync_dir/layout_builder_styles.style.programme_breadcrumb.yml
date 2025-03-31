@@ -1,0 +1,12 @@
+uuid: f08c18a0-d53c-4ded-ac78-d6a064203605
+langcode: en
+status: true
+dependencies: {  }
+id: programme_breadcrumb
+label: 'Programme Breadcrumb'
+classes: programme-breadcrumb-background
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

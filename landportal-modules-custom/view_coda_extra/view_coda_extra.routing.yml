@@ -1,0 +1,7 @@
+view_coda_extra.indicator_autocomplete:
+  path: '/autocomplete/indicator'
+  defaults:
+    _controller: '\Drupal\view_coda_extra\Controller\JsonApiIndicatorController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'

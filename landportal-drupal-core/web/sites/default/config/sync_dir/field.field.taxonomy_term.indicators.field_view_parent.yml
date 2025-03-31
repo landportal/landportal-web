@@ -1,0 +1,23 @@
+uuid: 6def1ea2-a7dd-4357-8491-d3b4e4fbc87c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_view_parent
+    - taxonomy.vocabulary.indicators
+  module:
+    - options
+id: taxonomy_term.indicators.field_view_parent
+field_name: field_view_parent
+entity_type: taxonomy_term
+bundle: indicators
+label: 'View parent'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Yes'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

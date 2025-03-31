@@ -1,0 +1,18 @@
+uuid: 223a7b49-924e-4c48-8161-1355ea83f97c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.debate_status
+id: taxonomy_term.debate_status.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: debate_status
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,36 @@
+{#
+/**
+* @file
+* Landportal Issue organizations block's theme implementation.
+*
+* Available variables:
+* - items:
+*   - title: Organizations' title.
+*   - url: Organizations' url.
+*   - date: Organizations' publish date.
+*   - image_url: Organizations' image url.
+*   - image_title: Organizations' image title.
+*   - image_alt: Organizations' image alt.
+* - more_news_url: More Organizations page url.
+*/
+#}
+<div class="container project-value-duration">
+  <div class="row">
+    <div class="project-price">
+      {% if project_price == "" %}
+        <h2>-</h2>
+      {% else %}
+        <h2>{{ project_price }}</h2>
+      {% endif %}
+      <label>{{ 'value'|t }}</label>
+    </div>
+    <div class="project-duration">
+      <h2>{{ project_duration }}</h2>
+      <label>{{ 'duration'|t }}</label>
+    </div>
+    <div class="project-status">
+      <h2>{{ project_status }}</h2>
+      <label>{{ 'status'|t }}</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "drupal/schema_creativework",
+  "description": "Provides Schema.org CreativeWork metatag functionality.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/core": "^9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\schema_creativework\\": "src/"
+    }
+  },
+  "extra": {
+    "drupal": {
+      "module": {
+        "schema_creativework": {
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}

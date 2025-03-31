@@ -1,0 +1,45 @@
+uuid: c1369b4a-87c5-4135-8c09-b1fe002d7d03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_logo
+    - taxonomy.vocabulary.programme
+  module:
+    - content_translation
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: taxonomy_term.programme.programme_logo
+field_name: programme_logo
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme logo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: project-programs/program-logo
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

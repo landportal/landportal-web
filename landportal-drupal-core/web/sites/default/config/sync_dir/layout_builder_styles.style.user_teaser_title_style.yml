@@ -1,0 +1,12 @@
+uuid: 2fb77bab-2a21-41d3-8e8d-92ec69b6d70f
+langcode: en
+status: true
+dependencies: {  }
+id: user_teaser_title_style
+label: 'User Teaser Title Style'
+classes: user-teaser-title-style
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

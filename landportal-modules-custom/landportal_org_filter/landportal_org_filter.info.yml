@@ -1,0 +1,5 @@
+name: Landportal Organizations Filter
+description: 'Module that filter Organizations which are refered in Libraries'
+type: module
+core_version_requirement: ^9 || ^8 || ^10
+package: Custom

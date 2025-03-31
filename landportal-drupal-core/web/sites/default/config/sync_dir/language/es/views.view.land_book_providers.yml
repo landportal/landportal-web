@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reiniciar
+      filters:
+        combine:
+          expose:
+            label: Nombre
+        field_organization_type_target_id:
+          expose:
+            label: Tipo

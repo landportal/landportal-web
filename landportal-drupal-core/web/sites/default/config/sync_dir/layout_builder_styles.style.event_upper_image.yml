@@ -1,0 +1,12 @@
+uuid: 52607b60-884b-4d01-87d1-fa1fe9b7fed4
+langcode: en
+status: true
+dependencies: {  }
+id: event_upper_image
+label: 'Event upper image'
+classes: event-upper-image
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

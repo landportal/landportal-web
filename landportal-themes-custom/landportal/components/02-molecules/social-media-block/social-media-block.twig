@@ -1,0 +1,14 @@
+{{ attach_library('landportal/issues-narrative') }}
+
+<div class="share-page-header">{{ 'Share this page'|t }}</div>
+{% set block_base_class = 'social-media-block' %}
+<div {{ bem(block_base_class) }}>
+  <div {{ bem('header', [], block_base_class) }}>
+    {{ block_label }}
+  </div>
+  <div {{ bem('content', [], block_base_class) }}>
+    {% block block_content %}
+      {% include "@molecules/menus/social/social-menu.twig" %}
+    {% endblock %}
+  </div>
+</div>

@@ -1,0 +1,18 @@
+uuid: 3da1101a-e543-45b2-893e-24c65c560a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.licences
+id: taxonomy_term.licences.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: licences
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

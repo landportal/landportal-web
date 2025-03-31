@@ -1,0 +1,12 @@
+uuid: c090c09c-c444-4b66-a4ed-9e8fc80040da
+langcode: en
+status: true
+dependencies: {  }
+id: language_field
+label: 'Language Field'
+classes: language-field
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

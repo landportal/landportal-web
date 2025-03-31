@@ -1,0 +1,16 @@
+uuid: c8b21a56-087e-42e2-af90-2d2c3934bf0c
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - eu_cookie_compliance
+    - filter
+id: contributor
+label: Contributor
+weight: 3
+is_admin: false
+permissions:
+  - 'display eu cookie compliance popup'
+  - 'use text format filtered_html'

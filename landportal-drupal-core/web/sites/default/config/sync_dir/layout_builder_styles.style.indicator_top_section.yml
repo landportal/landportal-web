@@ -1,0 +1,12 @@
+uuid: aec6c0f9-3249-4d12-bc6d-34c13a120190
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_top_section
+label: 'Indicator Top Section'
+classes: indicator-top-section
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

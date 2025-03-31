@@ -1,0 +1,132 @@
+uuid: 5d929870-2265-48b5-8cb0-51d796da4593
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_orgref
+    - node.type.dataset
+  module:
+    - node
+label: ' Dataset Portfolio CT import Partners'
+id: _dataset_portfolio_ct_import_par
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: Nid
+    label: Nid
+    machine_name: nid
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  partner:
+    value: Partner
+    label: Partner
+    machine_name: partner
+    type: csv
+  partner1:
+    value: Partner1
+    label: Partner1
+    machine_name: partner1
+    type: csv
+  partner2:
+    value: Partner2
+    label: Partner2
+    machine_name: partner2
+    type: csv
+  partner3:
+    value: Partner3
+    label: Partner3
+    machine_name: partner3
+    type: csv
+  partner4:
+    value: Partner4
+    label: Partner4
+    machine_name: partner4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_orgref
+    map:
+      target_id: partner
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partner1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partner2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partner3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: partner4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

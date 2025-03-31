@@ -1,0 +1,29 @@
+uuid: 8dce5e3e-2ad3-4c13-9ec3-bf64f8e77c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_themes
+    - taxonomy.vocabulary.indicators
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.indicators.field_related_themes
+field_name: field_related_themes
+entity_type: taxonomy_term
+bundle: indicators
+label: Themes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      title: ''
+      fields:
+        view_node:
+          text: 'Mais sobre este tema'

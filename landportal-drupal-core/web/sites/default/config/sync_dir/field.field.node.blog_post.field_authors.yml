@@ -1,0 +1,29 @@
+uuid: af94c604-768a-4c88-a944-42dae62e59b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authors
+    - node.type.blog_post
+id: node.blog_post.field_authors
+field_name: field_authors
+entity_type: node
+bundle: blog_post
+label: Authors
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

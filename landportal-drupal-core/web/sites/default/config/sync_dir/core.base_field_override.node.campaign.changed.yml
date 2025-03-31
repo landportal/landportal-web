@@ -1,0 +1,18 @@
+uuid: bcdebee6-45f9-4a26-98cc-3ee3a5d5dad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.campaign
+id: node.campaign.changed
+field_name: changed
+entity_type: node
+bundle: campaign
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

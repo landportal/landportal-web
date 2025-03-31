@@ -1,0 +1,24 @@
+uuid: 778cc26a-9dd3-41f4-8355-caaf40edb37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.solr_resource_type
+  module:
+    - facets
+  theme:
+    - landportal
+id: solrresourcetype
+theme: landportal
+region: sidebar
+weight: -16
+provider: null
+plugin: 'facet_block:solr_resource_type'
+settings:
+  id: 'facet_block:solr_resource_type'
+  label: 'Filter by resource type:'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: solrresourcetype
+visibility: {  }

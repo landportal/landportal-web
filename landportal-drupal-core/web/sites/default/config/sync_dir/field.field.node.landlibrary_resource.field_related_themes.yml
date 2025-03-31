@@ -1,0 +1,29 @@
+uuid: 7ceeab6f-98cd-4012-8447-effaca4a9563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_themes
+    - node.type.landlibrary_resource
+    - taxonomy.vocabulary.theme
+id: node.landlibrary_resource.field_related_themes
+field_name: field_related_themes
+entity_type: node
+bundle: landlibrary_resource
+label: Themes
+description: 'Add one (or more) of the Land Portal''s <a href="/voc/landvoc">Themes</a> to classify the topical subject of the resource'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

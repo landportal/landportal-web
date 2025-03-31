@@ -1,0 +1,27 @@
+uuid: 027cd7ea-8e13-464f-b062-3cc3d4c2418d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_is_shown_by_file
+    - node.type.landlibrary_resource
+  module:
+    - file
+id: node.landlibrary_resource.field_doc_is_shown_by_file
+field_name: field_doc_is_shown_by_file
+entity_type: node
+bundle: landlibrary_resource
+label: 'File Upload'
+description: 'Upload the resource to the Land Portal''s server.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: library/resources
+  file_extensions: 'png gif jpg jpeg zip rar pdf doc xls mp3 wav tif xlsx docx pps ppsx ppt pptx dat txt csv'
+  max_filesize: '16 MB'
+  description_field: false
+field_type: file

@@ -1,0 +1,12 @@
+uuid: 7e868832-af08-47b3-b16b-67c2b92a823d
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_landing_page_full
+label: 'Indicator Landing Page Full'
+classes: indicator-landing-page-full
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

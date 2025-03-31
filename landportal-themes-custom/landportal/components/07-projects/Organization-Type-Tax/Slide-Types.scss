@@ -1,0 +1,260 @@
+@mixin date-icon {
+  content: "";
+  vertical-align: sub;
+  padding: 0 3px 3px;
+  background-image: url(../images/icons8-date-50.png);
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.new_page_term_languages{
+    border-bottom: inherit;
+}
+
+.slide-type-tax-class{
+    .views-row{
+        &::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .views-field-title{
+            display: block;
+            a{
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+        .views-field-body{
+            width: 50%;
+            float: right;
+            clear: right;
+            max-height: 5.5em;
+            overflow: hidden;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 1;
+            padding-bottom: 15px;
+            div{
+                h2{
+                    margin: 0;
+                    line-height: 0.7;
+                }
+                h2:nth-child(2){
+                    line-height: 0.7;
+                    margin: 0;
+                }
+                a{
+                    font-size: 13px;
+                    color: #06C;
+                    // line-height: 1;
+                    line-height: inherit;
+                    font-weight: normal;
+                    font-family: "Merriweather Sans",sans-serif;
+                }
+                p{
+                    font-size: 13px;
+                    color: #666;
+                    line-height: 1.42857143;
+                    margin: 5px 2px 0 10px;
+                }
+            }
+        }
+    }
+}
+
+//// work for language taxonomy view ////////////////////////
+
+.language-contents{
+    clear: both;
+    .views-row{
+        &:last-child{
+            margin-bottom: 30px;
+        }
+        &::after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .views-field-rendered-entity{
+            article.landlibrary-resource, article.organization{
+                .libaray-image{
+                    width: 25%;
+                    float: left;
+                    clear: left;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .library-tilte, .title{
+                    width: 75%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    margin-top: 5px;
+                    line-height: normal;
+                    span{
+                        font-size: 18px;
+                    }
+                    a{
+                        color: #06C;
+                        font-size: 18px;
+                        font-weight: bold;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .library-resource-type{
+                    width: 75%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    font-size: 13px;
+                    color: #444;
+                    margin-top: 5px;
+                }
+                .date{
+                    width: 75%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    font-size: 13px;
+                    color: #444;
+                    div::before{
+                        @include date-icon;
+                    }
+                }
+                .library-description, .dataset-description, .organizer-acronym{
+                    width: 75%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    font-size: 13px;
+                    color: #666;
+                    .text-long{
+                        h3, h1, h2, h4, strong{
+                            font-weight: bolder;
+                            font-size: 13px;
+                            color: #666;
+                        }
+                    }
+                }
+                .user-countries{
+                    display: none;
+                }
+            }
+            article.news{
+                border-top: 5px solid #339;
+                .libaray-image{
+                    width: 50%;
+                    float: left;
+                    clear: left;
+                    padding-right: 15px;
+                    @media (min-width: $p-small){
+                         width: 25%;
+                    }
+                    @media (min-width: $p-large){
+                         width: 50%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+                .title{
+                    width: 50%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    margin: 0;
+                    margin-top: 5px;
+                    line-height: normal;
+                    @media (min-width: $p-small){
+                         width: 75%;
+                    }
+                    @media (min-width: $p-large){
+                         width: 50%;
+                    }
+                    span{
+                        font-size: 18px !important;
+                    }
+                    a{
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .date{
+                    width: 50%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    font-size: 13px;
+                    color: #444;
+                    @media (min-width: $p-small){
+                         width: 75%;
+                    }
+                    @media (min-width: $p-large){
+                         width: 50%;
+                    }
+                    div::before{
+                        @include date-icon;
+                    }
+                }
+                .dataset-description{
+                    width: 50%;
+                    float: right;
+                    padding: 0 15px;
+                    clear: right;
+                    font-size: 13px;
+                    color: #666;
+                    @media (min-width: $p-small){
+                         width: 75%;
+                    }
+                    @media (min-width: $p-large){
+                         width: 50%;
+                    }
+                    .text-long{
+                        h3, h1, h2, h4, strong{
+                            font-weight: bolder;
+                            font-size: 13px;
+                            color: #666;
+                        }
+                    }
+                }
+                .user-countries{
+                    display: none;
+                }
+            }
+        }
+    }
+    .page-title{
+        display: none;
+    }
+    article.landlibrary-resource{
+        border-top: 5px solid #906;
+    }
+    article.organization{
+        border-top: 5px solid #033;
+    }
+}
+[about^="/voc/language"]{
+    .Organization-state{
+        >div{
+            div:first-child{
+                display: inline-block;
+                font-weight: bold;
+                &::after{
+                    content: ':';
+                    font-weight: bold;
+                }
+            }
+            div:last-child{
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+uuid: ee5b8e4c-a8ec-4cb6-9372-a8311a190fec
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - landportal_migration
+_core:
+  default_config_hash: gu1XN3fEeati9J9HLDM9fX3PClAyE19ojHZ7nCAoYug
+id: regions
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - landportal_migration
+migration_group: landportal_migration
+label: 'Migrate - Regions'
+source:
+  plugin: d7_taxonomy_term
+  bundle: regions
+process:
+  tid: tid
+  vid:
+    -
+      plugin: default_value
+      default_value: regions
+  name: name
+  description/value: description
+  description/format: format
+  field_area_code_un_m_49_: field_area_code_un_m_49
+  field_iso2: field_iso2
+  field_iso3: field_iso3
+  langcode: language
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: regions
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: null

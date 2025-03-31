@@ -1,0 +1,12 @@
+uuid: 9eabc595-c700-47d0-9ac6-302073711abd
+langcode: en
+status: true
+dependencies: {  }
+id: event_website
+label: 'Event website'
+classes: event-website
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

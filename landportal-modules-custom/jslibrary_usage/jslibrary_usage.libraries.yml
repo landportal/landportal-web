@@ -1,0 +1,103 @@
+custom:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/user-profile/custom-user-profile.js: {}
+  dependencies:
+    - core/jquery
+organization:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/organization-landing-page/organization-custom.js: {}
+indicator:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Indicators/indicators-custom.js: {}
+dataset:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/dataset-landing-page/dataset.js: {}
+  dependencies:
+    - core/jquery
+library_resource:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/LandLibrary-resource/Landlibrary-resource.js: {}
+library_search_page:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/LandLibrary-resource/Search-page.js: {}
+blog_post:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Blog-post/blog-post-page.js: {}
+event:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Event/event-page.js: {}
+webinar_series:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Webinar series/webinar-series.js: {}
+debate:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Debate/debate.js: {}
+dataset_portfolio:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Dataset-portfolio/dataset-portfolio.js: {}
+sdgi:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/SDGI/SDGI.js: {}
+landing-page:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Landing-Page-CT/Landing-page.js: {}
+concept-taxonomy-js:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/layers-landing-page/layer.js: {}
+Layers-landing-page:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/layers-landing-page/layer.js: {}
+user-register-page:
+  js:
+    /themes/custom/landportal/dist/js/07-projects/Landing-Page-CT/Landing-page.js: {}
+user-register-page-css-library:
+  css:
+    theme:
+      '/modules/custom/jslibrary_usage/css/jquery-ui.css': { defer: true, async: true }
+      '/modules/custom/jslibrary_usage/css/select2.min.css': { defer: true, async: true }
+  js:
+    '/modules/custom/jslibrary_usage/js/jquery-ui.js': { defer: true, async: true }
+    '/modules/custom/jslibrary_usage/js/select2.min.js': { defer: true, async: true }
+carousel_js_library:
+  css:
+    theme:
+      '/modules/custom/jslibrary_usage/css/bootstrap.min.css': { external: true, defer: true, async: true }
+  js:
+    # '/modules/custom/jslibrary_usage/js/jquery.slim.min.js': { external: true, defer: true, async: true }
+    '/modules/custom/jslibrary_usage/js/popper.min.js': { external: true, defer: true, async: true }
+    '/modules/custom/jslibrary_usage/js/bootstrap.bundle.min.js': { external: true, defer: true, async: true }
+cookie-slider:
+  version: 1.x
+  css:
+    theme:
+      css/cookies.css: {}
+  js:
+    js/cookies.js: {}
+node-add-edit:
+  version: 1.x
+  css:
+    theme:
+      css/node_add_edit.css: {}
+      css/select2.min.css: {}
+  js:
+    js/node_add_edit.js: {}
+    js/select2.min.js: {}
+custom-page:
+  version: 1.x
+  css:
+    theme:
+      css/custom-page.css: {}
+user-edit-page:
+  version: 1.x
+  css:
+    theme:
+     css/user-edit-page.css: {}
+  js:
+    js/user-edit-page.js: {}  
+taxonomy-edit-page:
+  version: 1.x
+  css:
+    theme:
+     css/taxonomy-edit-page.css: {}
+  js:
+    js/taxonomy-edit-page.js: {}

@@ -1,0 +1,29 @@
+uuid: 9b09bbbd-4a9d-4d69-b7be-2c418dd55597
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geographical_focus
+    - node.type.campaign
+    - taxonomy.vocabulary.regions
+id: node.campaign.field_geographical_focus
+field_name: field_geographical_focus
+entity_type: node
+bundle: campaign
+label: 'Geographical focus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

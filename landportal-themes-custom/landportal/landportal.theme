@@ -1,0 +1,511 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Unicode;
+
+/**
+ * Implements hook_preprocess_HOOK() for 'menu_social'.
+ */
+function landportal_preprocess_menu__social(array &$variables) {
+  // Use link class to specify the social media icon to display.
+  foreach ($variables['items'] as $index => $item) {
+    if (!empty($item['url']->getOptions()['attributes']['class'])) {
+      $variables['items'][$index]['icon'] = reset($item['url']->getOptions()['attributes']['class']);
+    }
+  }
+}
+
+/**
+ * Helper function for news, blog, events hook_preprocess_HOOK().
+ */
+function _landportal_preprocess_remote_blocks(array &$variables) {
+  // Prepare data to be passed to template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = $item['ss_title_field'];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $image_src = $item['tm_field_image$file$url'][0];
+        $image_alt = '';
+        if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+          $image_alt = $item['tm_field_image$file$field_file_image_alt_text'][0];
+        }
+        $variables['content']['#items'][$index]['image_src'] = $image_src;
+        print_r($image_src);
+        // If Imagecache External is enabled, use it instead of image_src.
+        if (\Drupal::moduleHandler()->moduleExists('imagecache_external')) {
+          $variables['content']['#items'][$index]['external_image_src'] = [
+            '#theme' => 'imagecache_external',
+            '#uri' => $image_src,
+            '#style_name' => 'country_overview_block',
+            '#alt' => $image_alt,
+          ];
+        }
+      }
+      if (isset($item['ds_field_pubdate'])) {
+        $variables['content']['#items'][$index]['published_date'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['ds_field_pubdate']), 'custom', 'j F Y');
+      }
+      // Show the body summary if exists, else show the truncated body.
+      if (!empty($item['tm_body$summary'][0])) {
+        $item_summary = Html::decodeEntities(strip_tags($item['tm_body$summary'][0]));
+      }
+      else {
+        $item_summary = Html::decodeEntities(strip_tags($item['tm_body$value'][0]));
+      }
+      $variables['content']['#items'][$index]['item_summary'] = Unicode::truncate($item_summary, 300, TRUE, TRUE);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__latest_news'.
+ */
+function landportal_preprocess_block__latest_news(array &$variables) {
+  // Prepare data to be passed to the news block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__issue_news'.
+ */
+function landportal_preprocess_block__issue_news(array &$variables) {
+  // Prepare data to be passed to the news block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__blog'.
+ */
+function landportal_preprocess_block__blog_posts(array &$variables) {
+  // Prepare data to be passed to the blog block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__issue_blogs'.
+ */
+function landportal_preprocess_block__issue_blog_posts(array &$variables) {
+  // Prepare data to be passed to the blog block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__events'.
+ */
+function landportal_preprocess_block__events(array &$variables) {
+  // Prepare data to be passed to the events block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__issue_events'.
+ */
+function landportal_preprocess_block__issue_events(array &$variables) {
+  // Prepare data to be passed to the events block template.
+  _landportal_preprocess_remote_blocks($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__library_resources'.
+ */
+function landportal_preprocess_block__library_resources(array &$variables) {
+  // Prepare data to be passed to the library block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = $item['ss_title_field'];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $variables['content']['#items'][$index]['image_src'] = $item['tm_field_image$file$url'][0];
+      }
+      else {
+        $variables['content']['#items'][$index]['image_src'] = base_path() . \Drupal::theme()
+          ->getActiveTheme()
+          ->getPath() . '/images/default-LLR-cover-image.png';
+      }
+      if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+        $variables['content']['#items'][$index]['image_title'] = $item['tm_field_image$file$field_file_image_title_text'][0];
+        $variables['content']['#items'][$index]['image_alt'] = $item['tm_field_image$file$field_file_image_alt_text'][0];
+      }
+      if (isset($item['ds_field_doc_creation_date'])) {
+        $variables['content']['#items'][$index]['published_date'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['ds_field_doc_creation_date']), 'custom', 'j F Y');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__issue_library_resources'.
+ */
+function landportal_preprocess_block__issue_library_resources(array &$variables) {
+  // Prepare data to be passed to the library block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = $item['ss_title_field'];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $variables['content']['#items'][$index]['image_src'] = $item['tm_field_image$file$url'][0];
+      }
+      else {
+        $variables['content']['#items'][$index]['image_src'] = base_path() . \Drupal::theme()
+          ->getActiveTheme()
+          ->getPath() . '/images/default-LLR-cover-image.png';
+      }
+      if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+        $variables['content']['#items'][$index]['image_title'] = $item['tm_field_image$file$field_file_image_title_text'][0];
+        $variables['content']['#items'][$index]['image_alt'] = $item['tm_field_image$file$field_file_image_alt_text'][0];
+      }
+      if (isset($item['ds_field_doc_creation_date'])) {
+        $variables['content']['#items'][$index]['published_date'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['ds_field_doc_creation_date']), 'custom', 'j F Y');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__projects'.
+ */
+function landportal_preprocess_block__projects(array &$variables) {
+  // Prepare data to be passed to the Projects block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = $item['ss_title_field'];
+      }
+      if (isset($item['tm_body$summary'])) {
+        $variables['content']['#items'][$index]['item_summary'] = $item['tm_body$summary'][0];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $image_src = $item['tm_field_image$file$url'][0];
+        $image_alt = '';
+        if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+          $image_alt = $item['tm_field_image$file$field_file_image_alt_text'][0];
+        }
+        $variables['content']['#items'][$index]['image_src'] = $image_src;
+        // If Imagecache External is enabled, use it instead of image_src.
+        if (\Drupal::moduleHandler()->moduleExists('imagecache_external')) {
+          $variables['content']['#items'][$index]['external_image_src'] = [
+            '#theme' => 'imagecache_external',
+            '#uri' => $image_src,
+            '#style_name' => 'country_overview_block',
+            '#alt' => $image_alt,
+          ];
+        }
+      }
+      if (isset($item['dm_field_date$value'])) {
+        $variables['content']['#items'][$index]['item_duration_from'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['dm_field_date$value'][0]), 'custom', 'j F Y');
+      }
+      if (isset($item['dm_field_date$value2'])) {
+        $variables['content']['#items'][$index]['item_duration_to'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['dm_field_date$value2'][0]), 'custom', 'j F Y');
+      }
+      if (isset($item['tm_field_currency$field_currency_symbol'])) {
+        $variables['content']['#items'][$index]['item_value_currency'] = $item['tm_field_currency$field_currency_symbol'][0];
+      }
+      if (isset($item['tm_field_value_decimal'])) {
+        $variables['content']['#items'][$index]['item_value'] = number_format($item['tm_field_value_decimal'][0], 2, '.', '');
+      }
+      if (isset($item['tm_field_donors$title'])) {
+        $variables['content']['#items'][$index]['item_donors'] = $item['tm_field_donors$title'][0];
+      }
+      // Display a maximum of 6 projects.
+      if ($index > 5) {
+        unset($variables['content']['#items'][$index]);
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block__issue_projects'.
+ */
+function landportal_preprocess_block__issue_projects(array &$variables) {
+  // Prepare data to be passed to the Projects block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = $item['ss_title_field'];
+      }
+      if (isset($item['tm_body$summary'])) {
+        $variables['content']['#items'][$index]['item_summary'] = $item['tm_body$summary'][0];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $image_src = $item['tm_field_image$file$url'][0];
+        $image_alt = '';
+        if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+          $image_alt = $item['tm_field_image$file$field_file_image_alt_text'][0];
+        }
+        $variables['content']['#items'][$index]['image_src'] = $image_src;
+        // If Imagecache External is enabled, use it instead of image_src.
+        if (\Drupal::moduleHandler()->moduleExists('imagecache_external')) {
+          $variables['content']['#items'][$index]['external_image_src'] = [
+            '#theme' => 'imagecache_external',
+            '#uri' => $image_src,
+            '#style_name' => 'country_overview_block',
+            '#alt' => $image_alt,
+          ];
+        }
+      }
+      if (isset($item['dm_field_date$value'])) {
+        $variables['content']['#items'][$index]['item_duration_from'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['dm_field_date$value'][0]), 'custom', 'j F Y');
+      }
+      if (isset($item['dm_field_date$value2'])) {
+        $variables['content']['#items'][$index]['item_duration_to'] = \Drupal::service('date.formatter')
+          ->format(strtotime($item['dm_field_date$value2'][0]), 'custom', 'j F Y');
+      }
+      if (isset($item['tm_field_currency$field_currency_symbol'])) {
+        $variables['content']['#items'][$index]['item_value_currency'] = $item['tm_field_currency$field_currency_symbol'][0];
+      }
+      if (isset($item['tm_field_value_decimal'])) {
+        $variables['content']['#items'][$index]['item_value'] = number_format($item['tm_field_value_decimal'][0], 2, '.', '');
+      }
+      if (isset($item['tm_field_donors$title'])) {
+        $variables['content']['#items'][$index]['item_donors'] = $item['tm_field_donors$title'][0];
+      }
+      // Display a maximum of 6 projects.
+      if ($index > 5) {
+        unset($variables['content']['#items'][$index]);
+      }
+    }
+  }
+}
+/**
+ * Implements hook_preprocess_HOOK() for 'block_organizations'.
+ */
+function landportal_preprocess_block__organizations(array &$variables) {
+  // Prepare data to be passed to the Organisations block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = ucwords($item['ss_title_field']);
+      }
+      if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+        $variables['content']['#items'][$index]['image_alt'] = $item['tm_field_image$file$field_file_image_alt_text'][0];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $variables['content']['#items'][$index]['image_src'] = $item['tm_field_image$file$url'][0];
+      }
+      else {
+        $variables['content']['#items'][$index]['image_src'] = '/' . \Drupal::service('extension.path.resolver')->getPath('theme', 'landportal') . '/images/no_image_available.jpg';
+        ;
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for 'block_issue_organizations'.
+ */
+function landportal_preprocess_block__issue_organizations(array &$variables) {
+  // Prepare data to be passed to the Organisations block template.
+  if (isset($variables['content']['#items'])) {
+    $items = $variables['content']['#items'];
+    foreach ($items as $index => $item) {
+      if (isset($item['ss_title_field'])) {
+        $variables['content']['#items'][$index]['item_title'] = ucwords($item['ss_title_field']);
+      }
+      if (isset($item['tm_field_image$file$field_file_image_alt_text'])) {
+        $variables['content']['#items'][$index]['image_alt'] = $item['tm_field_image$file$field_file_image_alt_text'][0];
+      }
+      if (isset($item['ss_url'])) {
+        $variables['content']['#items'][$index]['item_url'] = $item['ss_url'];
+      }
+      if (isset($item['tm_field_image$file$url'])) {
+        $variables['content']['#items'][$index]['image_src'] = $item['tm_field_image$file$url'][0];
+      }
+      else {
+        $variables['content']['#items'][$index]['image_src'] = '/' . \Drupal::service('extension.path.resolver')->getPath('theme', 'landportal') . '/images/no_image_available.jpg';
+        ;
+      }
+    }
+  }
+}
+
+/**
+ * Helper function to add container class to system blocks.
+ */
+function _landportal_add_container_class(array &$variables) {
+  // Add the container class for taxonomy & node pages that are full width.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name == 'entity.taxonomy_term.canonical' || $route_name == 'entity.node.canonical' || $route_name == 'layout_builder.overrides.node.view') {
+    $variables['attributes']['class'][] = 'container';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'page_title_block'.
+ */
+function landportal_preprocess_block__page_title_block(array &$variables) {
+  _landportal_add_container_class($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'system_messages_block'.
+ */
+function landportal_preprocess_block__system_messages_block(array &$variables) {
+  _landportal_add_container_class($variables);
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'local_tasks_block'.
+ */
+function landportal_preprocess_block__local_tasks_block(array &$variables) {
+  _landportal_add_container_class($variables);
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'system_breadcrumb_block'.
+ */
+function landportal_preprocess_block__system_breadcrumb_block(array &$variables) {
+  _landportal_add_container_class($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'breadcrumb'.
+ */
+function landportal_preprocess_breadcrumb(array &$variables) {
+  if ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    $taxonomyVocabulary = $taxonomy_term->bundle();
+  }  
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $node_content = \Drupal::routeMatch()->getParameter('node');
+  $node_content_type = "";
+  if(isset($node_content)){
+    if(is_numeric($node_content->id())){
+      $node_content_type = $node_content->bundle();
+    }
+  }
+  // Breadcrumb has position: absolute on the country term page.
+  if (($route_name == 'entity.taxonomy_term.canonical') && ($taxonomyVocabulary == 'theme')) {
+    $variables['breadcrumb_class'] = 'issue-overview';
+  }
+  else if (($route_name == 'entity.taxonomy_term.canonical') && ($taxonomyVocabulary == 'regions')) {
+    $variables['breadcrumb_class'] = 'country-overview';
+  }  
+  else if ($node_content_type == 'project') {
+    $variables['breadcrumb_class'] = 'project-overview';
+  }   
+  else {
+    $variables['breadcrumb_class'] = 'country-narrative';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'region__header'.
+ */
+function landportal_preprocess_region__header(array &$variables) {
+  $variables['new_page_node_type'] = 'new_page_node_test';
+  if ($node = \Drupal::routeMatch()->getParameters()->get('node')) {
+    if ($node && \Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {     
+      $variables['new_page_node_type'] = 'new_page_node_' . $node->bundle();
+      if($node->id() == "42574"){
+        $variables['new_page_node_type'] = 'issue_landing_page';
+      }
+      if($node->id() == "1"){
+        $variables['new_page_node_type'] = 'country_landing_page';
+      }   
+      if(($node->id() == "44023") || ($node->id() == "14171") || ($node->id() == "14172") || ($node->id() == "92737")){
+        $variables['new_page_node_type'] = 'data_landing_page';
+      }  
+      if(($node->id() == "51582") || ($node->id() == "10066")){
+        $variables['new_page_node_type'] = 'news_events_landing_page';
+      }               
+    }  
+  } 
+ 
+  if ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    if($taxonomy_term->bundle()) {
+      $variables['new_page_node_type'] = 'new_page_term_' . $taxonomy_term->bundle();    
+    }
+  }  
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for 'page'.
+ */
+function landportal_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add page templates for content types.
+  $node = \Drupal::routeMatch()->getParameters()->get('node');
+  if ($node && \Drupal::routeMatch()->getRouteName() == 'entity.node.canonical') {
+    $suggestions[] = 'page__node__' . $node->bundle();
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'search_block_form'.
+ */
+function landportal_form_landportal_search_block_form_alter(&$form, &$form_state) {
+  // Change the submit button to an image button.
+  $image = \Drupal::service('extension.path.resolver')->getPath('theme', 'landportal') . '/images/icons/search.svg';
+  $form['actions']['submit'] = [
+    '#type' => 'image_button',
+    '#src' => $image,
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'region'.
+ */
+function landportal_preprocess_region(array &$variables) {
+  if ($variables['region'] == 'footer') {
+    // Set the correct home page url for the site logo.
+    $prefixes = \Drupal::config('language.negotiation')->get('url.prefixes');
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if ($language == 'en') {
+      $variables['site_url'] = '/';
+    }
+    else {
+      $variables['site_url'] = '/' . $prefixes[$language];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'node'.
+ */
+function landportal_preprocess_node(array &$variables) {
+  // Add a class identifying the node type.
+  $variables['attributes']['class'][] = str_replace('_', '-', $variables['node']->bundle());
+}

@@ -1,0 +1,183 @@
+uuid: 0c9830b3-1cdc-442f-a4b2-a59a5309ead3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.impact_story.body
+    - field.field.node.impact_story.country
+    - field.field.node.impact_story.feeds_item
+    - field.field.node.impact_story.field_additional
+    - field.field.node.impact_story.field_doc_people
+    - field.field.node.impact_story.field_geographical_focus
+    - field.field.node.impact_story.field_image
+    - field.field.node.impact_story.field_pubdate
+    - field.field.node.impact_story.field_related_themes
+    - field.field.node.impact_story.field_related_topics
+    - field.field.node.impact_story.latitude
+    - field.field.node.impact_story.location_name
+    - field.field.node.impact_story.longitude
+    - field.field.node.impact_story.street
+    - node.type.impact_story
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          070e48a0-ba37-4fb1-a286-b8c443f139e0:
+            uuid: 070e48a0-ba37-4fb1-a286-b8c443f139e0
+            region: content
+            configuration:
+              id: 'field_block:node:impact_story:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                - dataset_description
+          e18d628f-8be0-45a4-907c-27116401b6fd:
+            uuid: e18d628f-8be0-45a4-907c-27116401b6fd
+            region: content
+            configuration:
+              id: 'field_block:node:impact_story:field_image'
+              label: Picture
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                - libaray_image
+          736ab1f2-7c35-42fa-bdab-1cf3cbf11327:
+            uuid: 736ab1f2-7c35-42fa-bdab-1cf3cbf11327
+            region: content
+            configuration:
+              id: 'field_block:node:impact_story:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                - title
+          8c944ab5-33ca-4e89-b6d8-e5a59a129453:
+            uuid: 8c944ab5-33ca-4e89-b6d8-e5a59a129453
+            region: content
+            configuration:
+              id: 'field_block:node:impact_story:field_pubdate'
+              label: 'Publication date'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_custom
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  date_format: 'j F Y'
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                - date
+          237d31d2-da1b-4820-aae1-b6c2c44cd654:
+            uuid: 237d31d2-da1b-4820-aae1-b6c2c44cd654
+            region: content
+            configuration:
+              id: 'field_block:node:impact_story:field_doc_people'
+              label: 'Author(s), editor(s), contributor(s)'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional:
+              layout_builder_styles_style:
+                - authors
+        third_party_settings: {  }
+id: node.impact_story.teaser
+targetEntityType: node
+bundle: impact_story
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  country: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_additional: true
+  field_doc_people: true
+  field_geographical_focus: true
+  field_image: true
+  field_pubdate: true
+  field_related_themes: true
+  field_related_topics: true
+  langcode: true
+  latitude: true
+  location_name: true
+  longitude: true
+  search_api_excerpt: true
+  street: true

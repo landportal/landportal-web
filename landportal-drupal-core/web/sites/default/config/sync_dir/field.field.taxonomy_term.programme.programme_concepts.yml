@@ -1,0 +1,29 @@
+uuid: ee43c2c3-ed5e-4153-a283-c9ba50e0eaf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.programme_concepts
+    - taxonomy.vocabulary.concepts
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.programme_concepts
+field_name: programme_concepts
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme concepts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

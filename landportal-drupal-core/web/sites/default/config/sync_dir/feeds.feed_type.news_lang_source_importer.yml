@@ -1,0 +1,204 @@
+uuid: 0b15a7af-f6d8-4593-8178-9a5a5158218e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_language
+    - field.field.node.news.field_link
+    - node.type.news
+  module:
+    - node
+label: 'News Source importer for multiple value'
+id: news_lang_source_importer
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: news
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  website_uri1:
+    value: 'Website uri1'
+    label: 'Website uri1'
+    machine_name: website_uri1
+    type: csv
+  website_text1:
+    value: 'Website text1'
+    label: 'Website text1'
+    machine_name: website_text1
+    type: csv
+  website_uri2:
+    value: 'Website uri2'
+    label: 'Website uri2'
+    machine_name: website_uri2
+    type: csv
+  website_text2:
+    value: 'Website text2'
+    label: 'Website text2'
+    machine_name: website_text2
+    type: csv
+  website_uri3:
+    value: 'Website uri3'
+    label: 'Website uri3'
+    machine_name: website_uri3
+    type: csv
+  website_text3:
+    value: 'Website text3'
+    label: 'Website text3'
+    machine_name: website_text3
+    type: csv
+  website_uri4:
+    value: 'Website uri4'
+    label: 'Website uri4'
+    machine_name: website_uri4
+    type: csv
+  website_text4:
+    value: 'Website text4'
+    label: 'Website text4'
+    machine_name: website_text4
+    type: csv
+  website_uri5:
+    value: 'Website uri5'
+    label: 'Website uri5'
+    machine_name: website_uri5
+    type: csv
+  website_text5:
+    value: 'Website text5'
+    label: 'Website text5'
+    machine_name: website_text5
+    type: csv
+  language_news1:
+    value: 'Language news1'
+    label: 'Language news1'
+    machine_name: language_news1
+    type: csv
+  language_news2:
+    value: 'Language news2'
+    label: 'Language news2'
+    machine_name: language_news2
+    type: csv
+  language_news3:
+    value: 'Language news3'
+    label: 'Language news3'
+    machine_name: language_news3
+    type: csv
+  language_news4:
+    value: 'Language news4'
+    label: 'Language news4'
+    machine_name: language_news4
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_link
+    map:
+      uri: website_uri1
+      title: website_text1
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: website_uri2
+      title: website_text2
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: website_uri3
+      title: website_text3
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: website_uri4
+      title: website_text4
+    settings:
+      language: null
+  -
+    target: field_link
+    map:
+      uri: website_uri5
+      title: website_text5
+    settings:
+      language: null
+  -
+    target: field_language
+    map:
+      target_id: language_news1
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: language_news2
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: language_news3
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_language
+    map:
+      target_id: language_news4
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0

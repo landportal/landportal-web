@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          label: fr
+      header:
+        area:
+          content:
+            value: "<p>Faits marquants: {{ name }}<a href=\"https://landportal.org/fr/book/indicators\">parcourir tout</a></p>\r\n"
+            format: filtered_html

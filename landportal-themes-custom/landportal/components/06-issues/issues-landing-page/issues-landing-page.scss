@@ -1,0 +1,178 @@
+$md: 320px;
+$mdd: 480px;
+$mdtab: 768px;
+$lg: 992px;
+$exlg: 1200px;
+$lpred: #C03; 
+
+.header {
+	.issue_landing_page{
+		border-bottom: 5px solid $lpred;
+	}
+}
+.layout-background--full{
+	
+	.background-light-red-full{
+			padding-bottom: 3%;
+			padding-top: 3%;
+			background: $lpred;
+
+			.text-long{
+				p{
+					color: #fff;
+				}
+			}
+		&:nth-child(1){
+			padding-bottom: 3%;
+			padding-top: 3%;
+			background: $lpred;
+
+			.container {
+				display: block;
+
+				 .grid__item{
+				 	.skin-default{
+						#lp_swiper_cycle_main_all_issues-block_1{
+							border-bottom: 4px solid #fff;
+							padding-bottom: 4%;
+
+							 .views-row{
+							 	.views-field-name{
+							 		span{
+							 			a{
+								 			color: #fff;
+								 			text-decoration: none;
+								 		}
+								 		a:hover{
+								 			text-decoration: underline;
+								 		}
+							 		}
+							 	}
+							 	.views-field-issue-overview{
+							 		img{
+							 			width: 100%;
+										height: 100%;
+							 		}
+							 	}
+							 }
+						}
+						.lp-swiper-controls-bottom{
+							.swiper-paginationb-bullets{
+								padding-top: inherit;
+
+								.swiper-paginationb-bullet{
+									border: 3px solid white;
+									background: white;
+								}
+							}
+						}
+					}
+					.text-long{
+						&:nth-child(1){
+							div{
+								&:nth-child(1){
+									display: none;
+								}
+							}
+						}
+						p{
+							color: #fff;
+						}
+					}
+					h2{
+						color: #fff;
+						font-size: 2.5rem;
+						padding: 14px 0;
+					}
+					.block{
+						&:nth-child(1) {
+							a{
+					 			color: #fff;
+					 			text-decoration: none;
+					 		}
+					 		a:hover{
+					 			text-decoration: underline;
+					 		}
+						}
+					}
+				 }
+			}
+		}
+	}
+	.layout-background--dark {
+		padding-bottom: 4%;
+		padding-top: 1%;
+		.container{
+			.grid__item{
+				.block{
+					h2{
+						color: #fff;
+						font-size: 2.5rem;
+						a{
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+				 .views-element-container{
+				 	.views-field-title-with-link{
+				 		a{
+				 			color: #fff;
+				 			text-decoration: none;
+				 		}
+				 		a:hover{
+				 			text-decoration: underline;
+				 		}
+				 	}
+				 	.views-row{
+				 		.views-col:hover{
+				 			box-shadow: 3px 5px 10px #666;
+				 		}
+				 		@media (min-width: $md) {
+							.views-col{
+								width: 100% !important;
+							}
+						}
+						@media (min-width: $lg) {
+							.views-col{
+								width: 49% !important;
+							}
+							.views-col.col-2{
+								margin-left: 1%;
+							}
+						}
+						.views-field-edit-block-content{
+							a{
+								color: black;
+								text-decoration: none;
+								background: silver;
+								padding: 2px 20px 2px 20px;
+								border-radius: 3px;
+								text-transform: capitalize;
+							}
+						}
+				 	}
+				 }
+			}
+		}
+	}
+}
+.landportal-menu__item--issues{
+	ul {
+	  li {
+	    a[data-drupal-link-system-path="node/52263"].is-active{
+	    	background-color: #E58517;
+	    	color: #fff;
+	    	&:hover{
+	    		text-decoration: none;
+	    	}
+	    }
+	  }
+	}
+	a{
+		&:hover{
+	    	text-decoration: none;
+	    }
+	}
+}

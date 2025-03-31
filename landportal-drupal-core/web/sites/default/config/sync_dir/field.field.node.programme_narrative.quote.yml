@@ -1,0 +1,21 @@
+uuid: ab3bd647-0332-4766-a98c-8578924df2c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.quote
+    - node.type.programme_narrative
+  module:
+    - text
+id: node.programme_narrative.quote
+field_name: quote
+entity_type: node
+bundle: programme_narrative
+label: Quote
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

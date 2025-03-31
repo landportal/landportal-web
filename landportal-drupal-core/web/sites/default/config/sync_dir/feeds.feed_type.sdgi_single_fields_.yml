@@ -1,0 +1,242 @@
+uuid: fe74d16e-6074-41c0-b189-8b426c5e4a83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sdgi.body
+    - field.field.node.sdgi.field_image
+    - field.field.node.sdgi.field_orgref
+    - field.field.node.sdgi.field_partners
+    - field.field.node.sdgi.field_sdgs_tier
+    - node.type.sdgi
+  module:
+    - node
+label: 'SDGi (single fields)'
+id: sdgi_single_fields_
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: sdgi
+  langcode: und
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  fid:
+    value: fid
+    label: fid
+    machine_name: fid
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+  post_date:
+    value: post_date
+    label: post_date
+    machine_name: post_date
+    type: csv
+  custodian1:
+    value: custodian1
+    label: custodian1
+    machine_name: custodian1
+    type: csv
+  custodian2:
+    value: custodian2
+    label: custodian2
+    machine_name: custodian2
+    type: csv
+  partners1:
+    value: partners1
+    label: partners1
+    machine_name: partners1
+    type: csv
+  partners2:
+    value: partners2
+    label: partners2
+    machine_name: partners2
+    type: csv
+  partners3:
+    value: partners3
+    label: partners3
+    machine_name: partners3
+    type: csv
+  partners4:
+    value: partners4
+    label: partners4
+    machine_name: partners4
+    type: csv
+  language:
+    value: language
+    label: language
+    machine_name: language
+    type: csv
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    settings: {  }
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_image
+    map:
+      target_id: fid
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_sdgs_tier
+    map:
+      target_id: status
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: path
+    map:
+      alias: path
+      pathauto: ''
+    settings:
+      language: null
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_orgref
+    map:
+      target_id: custodian1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_orgref
+    map:
+      target_id: custodian2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_partners
+    map:
+      target_id: partners1
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_partners
+    map:
+      target_id: partners2
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_partners
+    map:
+      target_id: partners3
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_partners
+    map:
+      target_id: partners4
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: ''

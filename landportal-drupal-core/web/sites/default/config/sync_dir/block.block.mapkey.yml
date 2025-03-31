@@ -1,0 +1,24 @@
+uuid: b1f3ada2-da87-41fc-959f-f06331b03e30
+langcode: en
+status: false
+dependencies:
+  module:
+    - landportal_common
+  theme:
+    - landportal
+id: mapkey
+theme: landportal
+region: content
+weight: 7
+provider: null
+plugin: landportal_text_block
+settings:
+  id: landportal_text_block
+  label: 'Map legend'
+  label_display: '0'
+  provider: landportal_common
+  text:
+    value: "<div class=\"country-map-key\">\r\n<ul>\r\n\t<li class=\"featured\">Featured country portfolios - edited with our local partners</li>\r\n\t<li class=\"other\">Other available country portfolios</li>\r\n\t<li class=\"none\">No portfolio available, but a collection of related resources</li>\r\n</ul>\r\n</div>\r\n"
+    format: full_html
+  wrapper_class: ''
+visibility: {  }

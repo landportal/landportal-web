@@ -1,0 +1,14 @@
+display:
+  block_4:
+    display_options:
+      filters:
+        field_this_is_a_podcasts_value:
+          expose:
+            description: ''
+      header:
+        area:
+          content:
+            value: "<h2>Episodes</h2>\r\n"
+            format: filtered_html
+        result:
+          content: "Exibindo @start - @end de <span class=\"total-counter\">@total</span>\r\n"

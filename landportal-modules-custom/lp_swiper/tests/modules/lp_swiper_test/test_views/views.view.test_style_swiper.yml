@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lp_swiper
+    - lp_swiper_cycle
+id: test_style_swiper
+label: ''
+module: views
+description: ''
+tag: ''
+base_table: views_test_data
+base_field: id
+core: 8.x
+display:
+  default:
+    display_plugin: page
+    id: default
+    display_title: Master
+    position: null
+    display_options:
+      path: test-style-swiper
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      exposed_form:
+        type: basic
+        options: {  }
+      pager:
+        type: full
+        options: {  }
+      style:
+        type: swiper
+        options:
+          row_class: ''
+          default_row_class: true
+          swiper_skin: default
+          swiper_type: lp_swiper_cycle
+      row:
+        type: fields
+        options: {  }
+      fields:
+        name:
+          id: name
+          table: views_test_data
+          field: name

@@ -1,0 +1,12 @@
+uuid: 7017e667-1870-4038-a058-aae05472b1d6
+langcode: en
+status: true
+dependencies: {  }
+id: indicator_highchart
+label: 'Indicator HighChart'
+classes: indicator-highChart
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

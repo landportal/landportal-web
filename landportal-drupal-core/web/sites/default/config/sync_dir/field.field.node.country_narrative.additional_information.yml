@@ -1,0 +1,21 @@
+uuid: 8fbf484a-31de-4bab-b547-f7e972e49365
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.additional_information
+    - node.type.country_narrative
+  module:
+    - landportal_country_narrative
+id: node.country_narrative.additional_information
+field_name: additional_information
+entity_type: node
+bundle: country_narrative
+label: 'Additional information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: additional_information

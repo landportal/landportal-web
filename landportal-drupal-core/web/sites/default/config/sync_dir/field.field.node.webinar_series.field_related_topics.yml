@@ -1,0 +1,29 @@
+uuid: b8ed29c8-cba7-43f3-af60-b79cbd4a4f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_topics
+    - node.type.webinar_series
+    - taxonomy.vocabulary.concepts
+id: node.webinar_series.field_related_topics
+field_name: field_related_topics
+entity_type: node
+bundle: webinar_series
+label: 'Related concepts'
+description: 'Enter a Topics term to classify your content. Those terms are in direct correlation with Agrovoc.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      concepts: concepts
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

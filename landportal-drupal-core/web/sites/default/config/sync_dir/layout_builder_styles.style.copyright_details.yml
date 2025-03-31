@@ -1,0 +1,12 @@
+uuid: b13f2311-adae-487c-a220-b98d3cb2adec
+langcode: en
+status: true
+dependencies: {  }
+id: copyright_details
+label: 'Copyright Details'
+classes: Copyright-details
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

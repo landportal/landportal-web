@@ -1,0 +1,21 @@
+uuid: 0ba09d7c-8a5d-4ea4-8c1e-f0d16cbd5660
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.key_lessons_parent
+field_name: key_lessons_parent
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,305 @@
+[about="/fr/landvoc"], [about="/pt/landvoc"], [about="/es/landvoc"]{
+	.launch-landvoc, .download-leaflet, .pane-title, .expert, a[href^="/developers"]{
+		display: none;
+	}
+	.section__sidebar__aside{
+		hr{
+			display: none;
+		}
+		.landvoc-related-content{
+			border-top: 1px solid #baaba3;
+  			margin-top: 15px;
+		}
+		.LandVoc-website{
+			border-bottom: 1px solid #baaba3;
+		}
+	}
+	.LandVoc-title{
+		display: block;
+	}
+}
+[about="/landvoc"], [about="/fr/landvoc"], [about="/pt/landvoc"], [about="/es/landvoc"]{
+	.container{
+		max-width: 82%;
+		@media (min-width: $p-small){
+			max-width: 100%;
+		}
+		@media (min-width: $p-large){
+			max-width: 92%;
+		}
+		@media (min-width: $p-xlarge){
+			max-width: 82%;
+		}
+	}
+	.title{
+		margin-bottom: 30px;
+	}
+	.section__sidebar__main{
+		flex: inherit;
+		@media (min-width: $p-small){
+			width: 100%;
+		}
+		@media (min-width: $p-large){
+			width: 66%;
+		}
+		iframe{
+			@media (min-width: $p-small){
+				width: 100% !important;
+			}
+			@media (min-width: $p-large){
+				width: 66% !important;
+			}
+		}
+		a{
+			&::after{
+				content: '';
+				background-image: url(../images/extlinks.jpg);
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				margin-left: 2px;
+			}
+		}
+	}
+	.section__sidebar__aside{
+		flex: inherit;
+		@media (min-width: $p-small){
+			width: 100%;
+		}
+		@media (min-width: $p-large){
+			width: 33%;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	hr{
+		margin-top: 20px;
+  		margin-bottom: 20px;
+	}
+	.embed-responsive{
+		margin-top: 15px;
+		position: relative;
+		padding-bottom: 56.25%;
+		iframe{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: #06c;
+		&:hover{
+			text-decoration: underline;
+			color: #004080;
+		}
+	}
+	p{
+		line-height: 1.42857143;
+		display: block !important;
+	}
+	.primary-underline{
+		border-bottom: inherit;
+		div{
+			font-size: 22px;
+		}
+	}
+}
+.LandVoc-website{
+	p{
+		&:nth-child(2){
+			margin: inherit;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: #06c;
+		&:hover{
+			text-decoration: underline;
+			color: #004080;
+		}
+		&::after{
+			content: '';
+			background-image: url(../images/extlinks.jpg);
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			margin-left: 2px;
+		}
+	}
+}
+#block-landvoctreeen, #block-landvoctreefr, #block-landvoctreept, #block-landvoctreees{
+	h2{
+		display: none;
+	}
+	#body-en, #body-fr, #body-pt, #body-es{
+		//overflow: scroll;
+		margin-left: auto;
+		margin-right: auto;
+		width: 82%;
+	}
+}
+.landvoc-related-content{
+	h2{
+		font-size: 22px;
+		margin-bottom: 2px;
+	}
+	.page-title{
+		display: none;
+	}
+	.skin-default{
+		position: relative;
+		.lp-swiper-controls-top{
+			position: absolute !important;
+			right: 0;
+  			top: -38px;
+			.widget_pager_top{
+				padding: 0;
+				text-align: end;
+				padding-right: 20px;
+				margin-bottom: 0;
+				bottom: inherit;
+				.swiper-paginationb-bullet{
+					width: 12px;
+  					height: 12px;
+  					margin-right: 0;
+  					background: inherit;
+  					border: 1px solid #666;
+  					opacity: inherit;
+				}
+				.swiper-paginationb-bullet-active{
+					background-color: #666;
+					border: inherit;
+				}
+			}
+		}
+	}
+	.title{
+		span{
+			font-size: 18px;
+		}
+	}
+	.dataset-description, .library-description, .user-countries{
+		display: none;
+	}
+	.date{
+		font-size: 13px;
+		div{
+			&::before{
+				content: "";
+				vertical-align: middle;
+				padding: 0 3px 3px;
+				background-image: url(../images/icons8-date-50.png);
+				height: 13px;
+  				width: 10px;
+				display: inline-block;
+				background-size: cover;
+				margin-right: 5px;
+			}
+		}
+	}
+	.authors, .library-resource-type{
+		font-size: 13px;
+	}
+	.location{
+		font-size: 13px;
+		div{
+			&::before{
+				content: '';
+				background-image: url(../images/location.jpg);
+				height: 17px;
+				width: 17px;
+				display: inline-block;
+				background-size: cover;
+				vertical-align: middle;
+			}
+		}
+	}
+	.provider-in-data{
+		font-size: 13px;
+		div{
+			div{
+				display: inline;
+				&:first-child{
+					&::before{
+						content: 'Organizers: ';
+						font-weight: bold;
+					}
+				}
+				&:not(:first-child){
+					&::before{
+						content: ', ';
+					}
+				}
+			}
+		}
+	}
+	.impact-story{
+		border-top: 5px solid #39C;
+		.title{
+			margin-bottom: 10px;
+		}
+	}
+	.landlibrary-resource{
+		border-top: 5px solid #906;
+		.title{
+			margin-bottom: 10px;
+		}
+	}
+	.blog-post{
+		border-top: 5px solid #396;
+		.title{
+			margin-bottom: 10px;
+		}
+	}
+	.event{
+		border-top: 5px solid #336; 
+		.title{
+			margin-bottom: 10px;
+		}
+	}
+}
+[about="/developers"], [about="/pt/desenvolvedores"], [about="/es/desarrolladores"]{
+	.text-long{
+		a{
+			overflow-wrap: break-word;
+			text-decoration: none;
+			color: #06c;
+			&:hover{
+				text-decoration: underline;
+				color: #004080;
+			}
+		}
+		a[href^="mailto:hello@landportal.info"]{
+			&::after{
+				content: '';
+				background-image: url(../images/extlinks.jpg);
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				margin-left: 2px;
+				background-position: right;
+			}
+		}
+		ul{
+			list-style-type: none;
+  			padding-left: 40px;
+			li{
+				margin-bottom: 0.5em;
+				padding: 0;
+				list-style: none;
+				position: relative;
+				&::before{
+					border-bottom: 3px solid #033;
+					content: " ";
+					width: 30px;
+					display: block;
+					position: absolute;
+					left: -40px;
+					top: .7em;
+				}
+			}
+		}
+	}
+}

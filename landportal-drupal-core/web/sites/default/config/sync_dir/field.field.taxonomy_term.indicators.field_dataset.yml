@@ -1,0 +1,29 @@
+uuid: 91e33b65-64a9-4ffb-8de4-7bf59001ea64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_dataset
+    - taxonomy.vocabulary.datasets
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.field_dataset
+field_name: field_dataset
+entity_type: taxonomy_term
+bundle: indicators
+label: Dataset
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      datasets: datasets
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 1462b11a-e236-4530-8a5b-d5939b3f92ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_people
+    - node.type.landlibrary_resource
+  module:
+    - text
+id: node.landlibrary_resource.field_doc_people
+field_name: field_doc_people
+entity_type: node
+bundle: landlibrary_resource
+label: 'Author(s), editor(s), contributor(s)'
+description: 'Please enter the names of the people who participated in the creation of this material. Please enter one name by line, preferably using the format: "[lastname], [firstname]" or "[firstname] [lastname]". In case an organization or institution is entered as the author of the resource, please enter them in the ''corporate author'' field instead of this one.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

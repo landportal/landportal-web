@@ -1,0 +1,12 @@
+uuid: fd7a6ea0-a311-4510-a56c-313500a8367f
+langcode: en
+status: true
+dependencies: {  }
+id: organization_heading_title
+label: 'Organization Heading Title'
+classes: organization-heading-title
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

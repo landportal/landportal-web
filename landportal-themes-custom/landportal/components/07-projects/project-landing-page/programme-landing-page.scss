@@ -1,0 +1,652 @@
+$p-sm: 320px;
+$p-mdd: 480px;
+$p-mdtab: 768px;
+$p-lg: 992px;
+$p-xlg: 1200px;
+
+
+.new_page_term_programe{
+	border-bottom: inherit;
+}
+.new_page_term_programme{
+	border-bottom: inherit;
+}
+
+
+#block-breadcrumbs{
+	display: none;
+}
+.programme-breadcrumb-background{
+	border-bottom: 4px solid #39c;
+	padding-top: 17px;
+	background: #39c;
+			@media (min-width: $p-sm){
+					padding-top: 10px;
+					}
+	.container{
+		.grid__item{
+			.share-page-header{
+				@media (min-width: $p-sm){
+					display: none;
+				}
+			}
+			.social-media-block{
+				@media (min-width: $p-sm){
+					display: none !important;
+				}
+			}
+			header{
+				span{
+					color: white;
+				}
+				a{
+					color: white;
+					text-decoration: none;
+				}
+				a::after{
+					content: ' /';
+				}
+			}
+			h1{
+				color: white;
+				@media (min-width: $p-sm){
+					margin-bottom: inherit;
+					font-size: 25px;
+				} 
+				@media (min-width: $p-lg){
+					font-size: 30px;
+				}
+			}
+			div{
+				&:nth-child(4){
+					display: none;
+				}
+			}
+		}
+	}
+}
+.programme-map-background{
+	border-top: 1px solid #39c;
+	background: #39c;
+	padding-bottom: 1px;
+	.container{
+		.grid__item{
+			.block{
+				.text-long{
+					p{
+						color: white;
+						padding-top: 2%;
+						margin-bottom: 3%;
+						@media (min-width: $p-sm){
+							text-align: justify;
+							margin-bottom: 8%;
+						}
+						@media (min-width: $p-mdtab){
+							margin-bottom: 4%; 
+						}
+						@media (min-width: $p-lg){
+							margin-bottom: 3%;
+						}
+					}  
+				}
+				&:nth-child(2){
+					span{
+						a{
+							text-decoration: none;
+							color: #39c;
+							background: white;
+							padding: 6px 20px 6px 8px;
+							border-radius: 8px;
+							&::before{
+								content: '\00BB   ';
+								white-space: pre;
+							}
+						}
+					}
+				}
+			}
+			h2{
+				color: white;
+				margin-top: 35px;
+				@media (min-width: $p-sm){
+					font-size: 18px;
+					line-height: 1.5;
+				}
+				@media (min-width: $p-mdd){
+					font-size: 25px;
+					line-height: inherit;
+				} 
+			}
+		}
+	}
+}
+
+.programme-counter-background{
+	overflow: hidden;
+	background: #333;
+	padding-bottom: 20px;
+	.container{
+		.grid__item{
+			.block{
+				&:nth-child(1){
+					width: 31%;
+					float: left;
+					padding-top: 12px;
+					
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+					}
+					@media (min-width: $p-mdtab){
+						width: 31%;
+						float: left;
+					}
+					.views-field-programme-value{
+						position: relative;
+						.field-content{
+							color: #39c;
+							padding-left: 18px;
+							font-size: 23px;
+						}
+						span{
+							top: 0;
+							color: #39c;
+							position: absolute;
+							font-size: 23px; 
+						}
+					} 
+					footer{
+						color: white;
+						border-top: 4px solid white;
+						p{
+							margin-top: 0;
+						}
+					}
+					.views-row{
+						.views-field-currency-of-programme-value{
+							display: none;
+						}
+					}
+				}
+				&:nth-child(2){
+					width: 31%;
+					float: left;
+					padding-left: 11px;
+					padding-top: 12px;
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+						padding-left: inherit;
+						padding-top: 25px;
+					}
+					@media (min-width: $p-mdtab){
+						width: 31%;
+						margin-left: 18px;
+						padding-top: 12px;
+						float: left;
+					}
+					@media (min-width: $p-lg){
+						width: 31%;
+						margin-left: 2.3%;  
+					}
+					div{
+						color: #39c;
+						font-size: 23px;
+						border-bottom: 4px solid white;
+					}
+					span{
+						color: white;
+					}
+				}
+				&:nth-child(4){
+					float: left;
+					width: 33%;
+					padding-top: 25px;
+
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+						margin-left: inherit;
+						padding-top: 12px;
+					}
+					@media (min-width: $p-mdtab){
+						width: 31.2%; 
+						float: left;
+						padding-top: 25px; 
+					}
+					@media (min-width: $p-lg){
+						width: 31%; 
+					}
+					p{
+						margin-top: 0;
+					}
+					.views-field-name{
+						span{
+							border-bottom: 4px solid white;
+							width: 100%;
+							display: inherit;
+							font-size: 23px;
+							color: #39c;
+						}
+					}
+					footer{
+						span{
+							color: white;
+							@media (min-width: $p-sm){
+								font-size: 15px;
+							}
+							@media (min-width: $p-mdd){
+								font-size: inherit;
+							}
+						}
+					}
+				}
+				&:nth-child(5){
+					padding-top: 25px;
+					float: left;
+					width: 32%;
+
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+						padding-top: 25px;
+					}
+					@media (min-width: $p-mdtab){
+						width: 31%; 
+						float: left;
+						margin-left: 2.3%;
+					}
+					header{
+						border-bottom: 4px solid white;
+						display: inherit;
+						font-size: 23px;
+						color: #39c;
+					}
+					.views-row{
+						display: none;
+					}
+					footer{
+						span{
+							color: white;
+							font-size: 15px;
+							@media (min-width: $p-sm){
+								font-size: 14px;
+							}
+							@media (min-width: $p-mdd){  
+								font-size: 15px;
+							}
+						}
+					}
+					p{
+						margin-top: inherit;
+					}
+				}
+				&:nth-child(6){
+					padding-top: 25px;
+					float: left;
+					width: 31%;
+					margin-left: 2.3%;
+
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+						margin-left: inherit;
+						padding-top: 25px;
+					}
+					@media (min-width: $p-mdtab){
+						float: left;
+						width: 31.2%;
+						margin-left: 2.3%;
+					}
+					.result-of-resource{
+						.views-field-delta{
+							display: none;
+						}
+						span{
+							color: #39c;
+							font-size: 23px;
+						}
+						p{
+							color: white;
+							border-top: 4px solid white;
+							margin-top: 0;
+						}
+					}
+				}
+				&:nth-child(3){
+					width: 31%;
+					float: left;
+					margin-left: 2.3%;
+					padding-top: 12px;
+					@media (min-width: $p-sm){
+						float: inherit;
+						width: 100%;
+						margin-left: inherit;
+						padding-top: 25px;
+					}
+					@media (min-width: $p-mdtab){
+						width: 31.2%; 
+						float: left;
+						padding-top: 12px; 
+						margin-left: 2.3%;
+					}
+
+					.views-field-project-regions{
+						display: none;
+					}
+					header{
+						color: #39c;
+						font-size: 23px;
+					}
+					p{
+						color: white;
+						border-top: 4px solid white;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}
+ 
+.programme-projects-background{
+	clear: both;
+	background: #333;
+	padding-top: 1px;
+	.container{
+		display: block;
+
+		.grid__item{
+			.block{
+				header{
+					p{
+						color: #39c;
+						border-bottom: 4px solid #39c;
+						font-size: 1.375rem;
+						width: 97.6%;
+						padding-bottom: 1px; 
+						@media (min-width: $p-sm){
+							width: 100%;
+						}
+						@media (min-width: $p-lg){
+							width: 97.6%; 
+						}
+					} 
+				}
+				.skin-default{
+					.views-field-title{
+						width: 93%;
+						margin-top: 15px;
+						@media (min-width: $p-sm){
+							width: 100%;
+						}
+						@media (min-width: $p-lg){
+							width: 93%;
+						}
+						a{
+							color: #39c;
+							text-decoration: none;
+							font-weight: bold;
+						}
+					}
+					.views-field-field-project-duration{
+						position: relative;
+						top: 15px;
+
+						span{
+							color: #777;
+						}
+						div{
+							color: #777;
+							margin-left: 77px;
+							bottom: 25px;
+							position: relative;
+						}
+					}
+					.views-field-field-value-decimal{
+						color: white;
+						position: relative;
+						bottom: 10px;
+						.field-content{
+							color: #777;
+							padding-left: 62px;
+							&::before{
+								content: ' ';
+								white-space: pre;
+							}
+						}
+					}
+					
+					.views-field-body{
+						color: white;
+						width: 93%;
+						@media (min-width: $p-sm){
+							width: 100%;
+						}
+						@media (min-width: $p-lg){
+							width: 93%;
+						}
+						p{
+							margin-top: 1px;
+						}
+						h2{
+							color: white;
+							font-size: 20px;
+							margin-bottom: inherit;
+							margin-top: inherit;
+						}
+						.media_embed{
+							display: none;
+						}
+						ul{
+							display: none;
+						}
+						h3{
+							color: white;
+						}
+					}
+					.lp-swiper-controls-bottom{
+						#widget_pager_bottom_programme_in_this_project-block_1{
+							border-top: 4px solid #39c;
+							padding-top: 10px;
+							position: inherit;
+							width: 97.6%;
+							@media (min-width: $p-sm){
+								width: 100%;
+							}
+							@media (min-width: $p-lg){
+								width: 97.6%;
+							}
+							span{
+								width: 18px;
+								height: 18px;
+								border: 1px solid #39c;
+								background: #39c;
+								margin-top: 6px;
+								margin-bottom: 11px
+							}
+						}
+					}
+					.views-field-project-image{
+						@media (min-width: $p-mdtab){
+							width: 100%;
+						}
+						@media (min-width: $p-lg){
+							width: 93%;
+						}
+					}
+				}
+				img{
+					@media (min-width: $p-mdd){
+						width: 100%;
+					}
+				} 
+			}
+		}
+	}
+}
+.project-in-this-programme{
+	position: relative;
+	bottom: 22px;
+	background: #333;
+	.container{
+		display: block;
+		header{
+			p{
+				color: #39c;
+				border-bottom: 4px solid #39c;
+				padding-top: 30px;
+				margin-bottom: 15px;
+				font-size: 1.375rem;
+				font-weight: bold;
+				padding-bottom: 5px;
+
+				@media (min-width: $p-sm){
+					width: 100%;
+					font-size: 1.3rem;
+				}
+				@media (min-width: $p-lg){
+					width: 97.6%;
+					font-size: 1.375rem;
+				}
+			}
+		}
+		.block{
+			.skin-default{
+				.views-field-title{
+					margin-top: 15px;
+					margin-bottom: 10px;
+
+					@media (min-width: $p-sm){
+						width: 100%;
+					}
+					@media (min-width: $p-lg){
+						width: 93%;
+					}
+					span{
+						a{
+							text-decoration: none;
+							color: var(--c-community);
+							font-weight: bold;
+						}
+					} 
+				}
+				.views-field-field-project-duration{
+					color: #777;
+				}
+				.views-field-field-value-decimal{
+					color: #777;
+					padding-left: 5px;
+					display: inline-block;
+				}
+				.views-field-body{
+					color: white;
+					@media (min-width: $p-sm){
+						width: 100%;
+					}
+					@media (min-width: $p-lg){
+						width: 93%;
+					}
+					p{
+						margin-top: inherit;
+					}
+					h2{ 
+						font-size: 20px;
+						margin-bottom: inherit;
+					}
+					.media_embed{
+						display: none;
+					}
+				}
+				.lp-swiper-controls-bottom{
+					#widget_pager_bottom_project_in_this_programme-block_1{
+						border-top: 4px solid #39c;
+						padding-top: 10px;
+						position: inherit;
+
+						@media (min-width: $p-sm){
+							width: 100%;
+						}
+						@media (min-width: $p-lg){
+							width: 97.6%;
+						}
+						span{
+							width: 18px;
+							height: 18px;
+							border: 1px solid #39c;
+							background: #39c;
+							margin-top: 6px;
+							margin-bottom: 11px;
+						}
+					}
+				}
+				.views-field-project-image{
+					@media (min-width: $p-sm){
+						width: 100%;
+					}
+					@media (min-width: $p-lg){
+						width: 93%;
+					}
+					img{
+						@media (min-width: $p-mdtab){
+							width: 100%;
+						}
+					}
+				}
+				.views-field-field-currency{
+					display: inline-block;
+					.field-content{
+						.container{
+							max-width: 100%;
+							padding: 0;
+							.block.views-element-container{
+								display: none;
+							}
+							div{
+								&:nth-child(3){
+									div{
+										&:nth-child(2){
+											color: #777;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}  
+	}	
+} 
+.project-landvoc-full{
+	.layout__region--second{
+	   .block{
+	   		div{
+	   		   div{
+	   		        a{
+	   		        @media (min-width: $p-sm){
+						font-size: 10px;
+						padding: 7px 5px 5px 5px !important;
+					   }
+					@media (min-width: $p-mdd){
+						font-size: smaller;
+						padding: 4px 5px 5px 5px !important;
+					   }
+					@media (min-width: $p-mdtab){
+						font-size: inherit;
+						padding: 2px 5px 5px 5px !important;
+					   }
+
+	   		       }
+	   		   }
+	   		}
+	   }
+	}
+}
+.programme-social-block{
+	.container{
+		.grid__item{
+				display: none;
+		}
+	}
+}

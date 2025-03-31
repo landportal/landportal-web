@@ -1,0 +1,18 @@
+uuid: c9048604-4e49-4de6-b351-317bad696e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.indicators
+id: taxonomy_term.indicators.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: indicators
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

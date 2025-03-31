@@ -1,0 +1,12 @@
+uuid: c9f2f2c5-59f6-4139-badc-e1e8c625ec7e
+langcode: en
+status: true
+dependencies: {  }
+id: landlibrary_body_section
+label: 'LandLibrary Body Section'
+classes: landLibrary-body-section
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

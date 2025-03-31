@@ -1,0 +1,12 @@
+uuid: 69ee475f-4419-4236-8b6e-19e6d31af861
+langcode: en
+status: true
+dependencies: {  }
+id: dataset_accordian
+label: 'Dataset Accordian'
+classes: dataset-accordian
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0
